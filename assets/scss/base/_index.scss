@@ -1,0 +1,12 @@
+@import "~normalize.css";
+@import "variables";
+@import "~bootstrap/scss/bootstrap.scss";
+
+button{
+	border: none;
+	box-shadow: none;
+	cursor: pointer;
+	&:focus{
+		outline: none;
+	}
+}
