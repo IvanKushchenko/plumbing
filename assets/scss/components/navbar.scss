@@ -1,0 +1,85 @@
+.c-navbar {
+	background-color: #ecf2f6;
+	display: flex;
+	height: 35px;
+	padding-right: 30px;
+
+	&__link {
+		font-size: 12px;
+	}
+
+	&__btn {
+		font-size: 12px !important;
+		display: flex;
+		align-items: center;
+		color: #222222;
+		box-shadow: none;
+		&:hover{
+			color: #222222;
+		}
+	}
+
+	&__btn-icon {
+		margin-right: 13px;
+	}
+	&__counter{
+		width: 23px;
+		height: 23px;
+		background-color: #f1ca49;
+		display: block;
+		border-radius: 50%;
+		color: #fff;
+		display: flex;
+		text-align: center;
+		justify-content: center;
+		text-align: center;
+		text-decoration: none;
+		margin: 0 5px;
+		line-height: 22px;
+		&.is-empty{
+			background-color: #d8e4ea;
+			color: #222222;
+		}
+	}
+	&__item {
+		color: #6493ad;
+		text-transform: uppercase;
+		font-size: 12px;
+		display: flex;
+		align-items: center;
+		background-image: linear-gradient(to right, rgba(114, 155, 178, 0.17) 0%, rgba(0, 0, 0, 0) 100%);
+		&:nth-child(1), &:nth-child(2) {
+			width: 19.5%;
+		}
+		&:nth-child(1) {
+			padding-left: 30px;
+			width: 19.5%;
+		}
+
+		&:nth-child(2) {
+			padding-left: 17px;
+			
+		}
+
+		
+		&:nth-child(4){
+			width: 17%;
+			padding-left: 15px;
+		}
+		&:nth-child(3),  &:nth-child(5) {
+			width: 17.8%;
+			padding-left: 15px;
+		}
+		&:nth-child(5){
+			width: 16%;
+		}
+		&:nth-child(5) .c-navbar__btn-icon{
+			margin: 0;
+		}
+		&:last-child {
+			background: none;
+		}
+
+	}
+
+}

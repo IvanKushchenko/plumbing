@@ -1,0 +1,32 @@
+.c-breadcrumbs{
+	font-size: 13px;
+	margin-bottom: 23px;
+	&__item{
+		text-transform: uppercase;
+		box-shadow: none;
+		&:not(:last-child){
+			&:after{
+				content: '/';
+				display: inline-block;
+				margin: 0 12px;
+			}
+		}
+		&:nth-child(3){
+			border-bottom: 1px dotted rgba(100, 147, 173, 0.3);
+			position: relative;
+			&:after{
+				content: '';
+				display: block;
+				width: 16px;
+				height: 16px;
+				border-radius: 50%;
+				position: absolute;
+				right: -22px;
+				top: 50%;
+				transform: translateY(-50%);
+				background: #f1ca49 url('../img/icons/arrow-down.svg') no-repeat center center;
+
+			}
+		}
+	}
+}

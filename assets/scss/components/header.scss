@@ -1,0 +1,42 @@
+.c-header {
+	padding: 0 30px;
+	margin-bottom: 14px;
+
+	&__logo {
+		width: 270px;
+		margin-right: 30px;
+	}
+
+	&__top {
+		padding: 21px 0;
+		display: flex;
+		align-items: center;
+	}
+
+	&__bottom {
+		display: flex;
+		align-items: center;
+	}
+
+	&__nav {
+		margin-right: 25px;
+		margin-top: 5px;
+	}
+	.c-catalog-menu{
+		margin-right: 30px;
+	}
+	&__actions {
+		margin-top: 3px;
+
+		.c-btn {
+			letter-spacing: 0.72px;
+			font-size: 12px;
+		}
+
+		.c-btn:first-child {
+			margin-right: 13px;
+		}
+
+	}
+
+}

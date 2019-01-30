@@ -1,0 +1,26 @@
+.c-catalog-menu{
+	&__toggle{
+		height: 48px;
+		width: 270px;
+		background-color: #8cafc2;
+		position: relative;
+		border-radius: 3px;
+		display: flex;
+		align-items: center;
+		padding-left: 20px;
+		text-transform: uppercase;
+		color: #fff;
+		font-size: 18px;
+		cursor: pointer;
+	}
+	&__toggle-icon{
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 15px;
+		width: 19px;
+		height: 19px;
+		border-radius: 50%;
+		background: rgba(255,255,255,.1) url('../img/icons/arrow-down.svg') no-repeat center center;
+	}
+}

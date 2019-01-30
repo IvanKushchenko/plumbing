@@ -1,0 +1,14 @@
+.c-phone{
+	color: #222222;
+	font-size: 21px;
+	font-weight: 700;
+	text-align: center;
+	box-shadow: none;
+	margin-top: 15px;
+	margin-right: auto;
+	&__text{
+		margin-top: 4px;
+		font-size: 13px;
+		font-weight: 400;
+	}
+}

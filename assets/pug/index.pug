@@ -4,9 +4,14 @@ html(lang="ru")
 		include templates/head.pug
 	body
 		.container
-			include templates/navbar.pug
-			include templates/header.pug
-			.
-				conteasda2222
-			include templates/footer.pug
-		
+			.o-page
+				include templates/navbar.pug
+				include templates/header.pug
+				main.o-page__content
+					.c-breadcrumbs
+						a(href="#!").c-breadcrumbs__item Главная
+						a(href="#!").c-breadcrumbs__item Смесители
+						a(href="#!").c-breadcrumbs__item смесители для раковины
+				h3 sadas
+				include templates/footer.pug
+			

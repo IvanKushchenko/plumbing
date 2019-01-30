@@ -1,0 +1,22 @@
+.c-btn{
+	text-transform: uppercase;
+	font-size: 13px;
+	border-radius: 3px;
+	height: 27px;
+	padding: 0 10px;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&_secondary{
+		background-color: #f1ca49;
+	}
+	&_primary{
+		background-color: #8cafc2;
+		&:hover{
+			color: #fff;
+			background-color: #f1ca49;
+		}
+	}
+}
