@@ -1,3 +1,110 @@
-.c-table{
+.c-table {
 	width: 100%;
+	position: relative;
+
+	&_product {
+		margin-bottom: 50px;
+	}
+	&_options {
+		margin-bottom: 45px;
+	}
+	&__header {
+		height: 32px;
+		padding-left: 30px;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		font-size: 15px;
+		text-transform: uppercase;
+		font-weight: 900;
+		background-color: #ecf2f6;
+		position: absolute;
+		font-family: "Open Sans";
+		top: 0;
+		width: 97.5%;
+		z-index: 3;
+
+		a {
+			margin-left: 15px;
+			font-family: "PT Sans";
+			font-size: 12px;
+			font-weight: 400;
+		}
+
+	}
+
+	&__body {
+		position: relative;
+		padding-top: 32px;
+		max-height: 660px;
+		overflow: auto;
+		padding-right: calc(2.5% - 7px);
+
+		&::-webkit-scrollbar {
+			width: 7px;
+		}
+
+		&::-webkit-scrollbar-track {
+			background-color: #e4edf2;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background-color: #8cafc2;
+		}
+
+	}
+
+	&__row {
+		padding: 12px 30px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border: 1px solid #ecf2f6;
+		border-top: none;
+	}
+
+	&__cell {
+		&:last-child {
+			flex-grow: 1;
+		}
+
+		&:not(:first-child) {
+			padding-left: 24px;
+		}
+
+		&:nth-child(3) {
+			padding-left: 65px;
+			margin-top: -26px;
+		}
+
+	}
+
+	&__notification {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 97.5%;
+		height: 47px;
+		background-color: #f1ca49;
+		box-shadow: 0 0 8px rgba(0, 0, 0, 0.18);
+		font-family: "Open Sans";
+		font-size: 14px;
+		color: #fff;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.28px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		&:hover {
+			color: #fff;
+		}
+
+	}
+
+	&__notification-icon {
+		margin-left: 15px;
+	}
+
 }

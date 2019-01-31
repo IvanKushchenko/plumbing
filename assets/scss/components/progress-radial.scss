@@ -1,6 +1,6 @@
 .c-progress-radial {
 	position: relative;
-	width: 37px;
+	width: 38px;
 	height: 37px;
 
 	&:after {
@@ -71,7 +71,7 @@
 		position: absolute;
 		left: 50%;
 		transform: translateX(-50%);
-		bottom: calc(-50%);
+		bottom: -45%;
 		font-size: 12px;
 	}
 

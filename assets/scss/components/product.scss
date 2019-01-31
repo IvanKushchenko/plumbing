@@ -1,78 +1,157 @@
 .c-product {
-	&__header{
+	&__header {
 		margin-bottom: 24px;
 	}
+
 	&__title {
 		font-family: "Roboto Slab";
 		font-size: 23px;
 	}
-	&__action{
+
+	&__action {
 		box-shadow: none;
 		color: #222222;
 		text-transform: uppercase;
 		font-size: 12px;
-		&:not(:last-child){
+
+		&:not(:last-child) {
 			margin-right: 30px;
 		}
+
 	}
-	&__action-icon{
+
+	&__action-icon {
 		max-width: 18px;
 		margin-right: 10px;
 	}
-	
-	&__order-info{
+
+	&__order-info {
 		padding: 17px 0;
-		padding-left: 33px;
+		padding-left: 32px;
 		padding-right: 23px;
 		border-radius: 3px;
 		background-color: #ecf2f6;
+		padding-bottom: 26px;
+		margin-bottom: 20px;
+		border: 2px solid #e4edf2;
 	}
-	&__choosen{
+
+	&__choosen {
 		margin-top: 3px;
 		font-family: "Roboto Slab";
 		text-transform: uppercase;
+		display: flex;
+		align-items: flex-end;
+		line-height: 1;
 	}
-	&__choosen-count{
+
+	&__choosen-count {
 		margin-left: 6px;
+		text-transform: none;
+		font-size: 18px;
+		line-height: 1.1;
 	}
-	&__price{
+
+	&__price {
 		margin-top: 3px;
-		    margin-left: -8px;
-    line-height: 27px;
+		margin-left: -12px;
+		line-height: 27px;
 		height: 27px;
 		display: flex;
 		align-items: flex-end;
+		font-size: 13px;
+		text-transform: uppercase;
+		line-height: 1.7;
 	}
-	&__price-number{
-		margin-left: 10px;
+
+	&__price-number {
+		margin-left: 11px;
 		font-family: "Roboto Slab";
-		&:after{
+		font-size: 16px;
+		text-transform: initial;
+
+		&:after {
 			content: 'a';
 			display: inline-block;
 			margin-left: 7px;
 			font-family: 'Rubl';
 		}
-		&_old{
+
+		&_old {
 			text-decoration: line-through;
-			&:after{
+
+			&:after {
 				display: none;
 			}
+
 		}
-		&_new{
+
+		&_new {
 			font-size: 30px;
-			line-height: 1.3;
+			line-height: 1.2;
 			color: #f3932c;
 		}
+
 	}
 
-	&__order-actions{
-		.c-btn{
+	&__order-actions {
+		.c-btn {
 			height: 34px;
 			padding: 0 12px;
-			&:not(:last-child){
-				margin-right: 18px;
+			font-weight: bold;
+
+			&:not(:last-child) {
+				margin-right: 20px;
 			}
+
 		}
+
+	}
+
+	&__order-checkout {
+		margin-bottom: 70px;
+		border-radius: 3px;
+		border: 2px solid #e4edf2;
+
+		.c-product__price {
+			margin-left: 0;
+		}
+
+		.c-product__choosen {
+			margin-top: 0;
+		}
+
+		.c-product__price-number {
+			margin-left: 8px;
+		}
+
+		.c-product__choosen-count {
+			margin-left: 15px;
+		}
+
+		.c-product__order-actions .c-btn:not(:last-child) {
+			margin-right: 15px;
+		}
+
+		.c-product__order-actions .c-btn {
+			height: 32px;
+		}
+
+	}
+
+	&__order-checkout &__price-number {
+		font-size: 26px;
+		line-height: 1.2;
+	}
+
+	&__order-checkout-top {
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		background-color: #ecf2f6;
+		height: 65px;
+		padding-left: 40px;
+		padding-right: 23px;
 	}
 
 }

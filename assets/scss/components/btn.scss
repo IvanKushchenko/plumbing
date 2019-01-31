@@ -11,6 +11,9 @@
 
 	&_secondary{
 		background-color: #f1ca49;
+		&:hover{
+			color: #fff;
+		}
 	}
 	&_primary{
 		background-color: #8cafc2;
