@@ -69,19 +69,19 @@
 	src: url('../fonts/ptSansRegular.woff2') format('woff2'),
 	url('../fonts/ptSansRegular.woff') format('woff');
 }
-// @font-face {
-// 	font-family: 'Roboto Slab';
-// 	src: url('../fonts/robotoSlab.woff2') format('woff2'),
-// 	url('../fonts/robotoSlab.woff') format('woff');
-// }
-// @font-face {
-// 	font-family: 'Roboto Slab';
-// 	src: url('../fonts/robotoSlab700.woff2') format('woff2'),
-// 	url('../fonts/robotoSlab700.woff') format('woff');
-// 	font-weight: bold;
-// }
-// @font-face {
-// 	font-family: 'Segoe UI';
-// 	src: url('../fonts/segoeuib.woff2') format('woff2'),
-// 	url('../fonts/segoeuib.woff') format('woff');
-// }
+@font-face {
+	font-family: 'Roboto Slab';
+	src: url('../fonts/robotoSlabRegular.woff2') format('woff2'),
+	url('../fonts/robotoSlabRegular.woff') format('woff');
+}
+@font-face {
+	font-family: 'Roboto Slab';
+	src: url('../fonts/robotoSlab700.woff2') format('woff2'),
+	url('../fonts/robotoSlab700.woff') format('woff');
+	font-weight: bold;
+}
+@font-face {
+	font-family: 'Segoe UI';
+	src: url('/fonts/segoeuib.woff2') format('woff2'),
+	url('../fonts/segoeuib.woff') format('woff');
+}

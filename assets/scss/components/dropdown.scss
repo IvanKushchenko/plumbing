@@ -1,0 +1,30 @@
+.c-dropdown{
+
+}
+.c-dropdown-toggle{
+	cursor: pointer;
+	&:after{
+		display: none;
+	}
+
+}
+.c-dropdown-toggle__link{
+	font-style: italic;
+	display: inline-block;
+	border-bottom: 1px solid #000;
+	position: relative;
+	&:after{
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: -16px;
+		content: '';
+		width: 13px;
+		height: 7px;
+		background: url('../img/icons/arrow-bottom-black.svg') no-repeat;
+		background-size: contain;
+		border: none;
+		opacity: .7;
+
+	}
+}

@@ -1,0 +1,21 @@
+.c-counter{
+	display: flex;
+	align-items: center;
+	&__timer{
+		display: flex;
+		align-items: center;
+		.c-progress-radial{
+			 &:not(:last-child){
+			 	margin-right: 6px;
+			 }
+		}
+	}
+	&__txt{
+		margin-left: 10px;
+		font-size: 13px;
+		font-weight: bold;
+		letter-spacing: 0.2px;
+		text-transform: uppercase;
+		color: #f14949;
+	}
+}

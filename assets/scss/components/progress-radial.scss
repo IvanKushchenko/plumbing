@@ -1,0 +1,78 @@
+.c-progress-radial {
+	position: relative;
+	width: 37px;
+	height: 37px;
+
+	&:after {
+		content: "";
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+		border: 2px solid #dee4e8;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	&__bar {
+		width: 100%;
+		height: 100%;
+		background: none;
+		border-width: 2px;
+		border-style: solid;
+		position: absolute;
+		top: 0;
+		border-color: #f14949;
+	}
+
+	&__left {
+		left: 0;
+	}
+
+	&__left &__bar {
+		left: 100%;
+		border-top-right-radius: 75px;
+		border-bottom-right-radius: 75px;
+		border-left: 0;
+		transform-origin: center left;
+	}
+
+	&__right {
+		right: 0;
+	}
+
+	&__right &__bar {
+		left: -100%;
+		border-top-left-radius: 75px;
+		border-bottom-left-radius: 75px;
+		border-right: 0;
+		transform-origin: center right;
+	}
+
+	&__left, &__right {
+		width: 50%;
+		position: absolute;
+		overflow: hidden;
+		height: 100%;
+		top: 0;
+		z-index: 1;
+	}
+
+	&__value {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-family: "Roboto Slab";
+		font-size: 18px;
+	}
+
+	&__footer {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: calc(-50%);
+		font-size: 12px;
+	}
+
+}
