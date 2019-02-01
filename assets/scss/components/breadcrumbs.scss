@@ -1,9 +1,21 @@
 .c-breadcrumbs{
 	font-size: 13px;
 	margin-bottom: 16px;
+	&__dropdown-menu{
+		flex-direction: column;
+		padding: 10px;
+		&.show{
+			display: flex !important;
+		}
+		a{
+			margin-bottom: 10px;
+			box-shadow: none;
+		}
+	}
 	&__item{
 		text-transform: uppercase;
 		box-shadow: none;
+		
 		&:not(:last-child){
 			&:after{
 				content: '/';
@@ -17,11 +29,12 @@
 			&:after{
 				content: '';
 				display: block;
+				border: none;
 				width: 16px;
 				height: 16px;
 				border-radius: 50%;
 				position: absolute;
-				right: -22px;
+				right: -32px;
 				top: 50%;
 				transform: translateY(-50%);
 				background: #f1ca49 url('../img/icons/arrow-down.svg') no-repeat center center;

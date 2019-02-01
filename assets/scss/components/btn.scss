@@ -16,6 +16,9 @@
 		}
 	}
 	&_primary{
+		&.is-active{
+			background-color: #f1ca49;
+		}
 		background-color: #8cafc2;
 		&:hover{
 			color: #fff;

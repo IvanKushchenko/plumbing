@@ -1,0 +1,44 @@
+.c-float-btn {
+	width: 200px;
+	border-radius: 9px;
+	letter-spacing: 0.28px;
+	font-style: italic;
+	font-family: "Open Sans";
+	font-size: 14px;
+	font-weight: 700;
+	position: fixed;
+	bottom: 40px;
+	background: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 13px 10px;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.18);
+	cursor: pointer;
+	padding-left: 23px;
+    letter-spacing: 0;
+    padding-right: 15px;
+    line-height: 18px;
+	p{
+		margin: 0;
+	}
+	&_options{
+		&:hover{
+			background-color: #f1ca49;
+			color: #fff;
+		}
+		&:hover:after{
+			background: url('../img/icons/arrow-yellow.png');
+			
+		}
+		&:after{
+			content: '';
+			display: block;
+			width: 28px;
+			height: 28px;
+			background-image: url('../img/icons/arrow-blue.png');
+			flex-shrink: 0;
+			margin-left: 10px;
+		}
+	}
+}

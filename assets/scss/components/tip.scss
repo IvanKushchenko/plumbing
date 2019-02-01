@@ -1,0 +1,30 @@
+.c-tip {
+	padding: 10px;
+	font-family: "Open Sans";
+	font-size: 14px;
+	font-style: italic;
+	line-height: 20px;
+	letter-spacing: 0.28px;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.33);
+	border: 1px solid #ecf2f6;
+	border-radius: 9px;
+	position: fixed;
+	background: #fff;
+	max-width: 230px;
+	text-align: center;
+	z-index: 222;
+	display: none;
+	&:after {
+		content: '';
+		border: 10px solid transparent;
+		border-bottom-color: #fff;
+		border-left-color: #fff;
+		position: absolute;
+		right: -9px;
+		top: 50%;
+		transform: rotate(-135deg) translate(30%, 30%);
+		box-shadow: -3px 2px 4px rgba(0, 0, 0, 0.18);
+		z-index: 2;
+	}
+
+}

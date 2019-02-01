@@ -3,6 +3,9 @@ import 'bootstrap';
 import $ from 'jquery';
 import lightGallery from 'lightgallery';
 
+require('./products');
+require('./tips');
+
 import Swiper from 'swiper';
 
 $(function() {
@@ -28,6 +31,19 @@ $(function() {
         },
     });
 
+    var watchEarlierSlider = new Swiper('.js-watch-earlier-slider', {
+        slidesPerView: 4,
+        spaceBetween: 25,
+        navigation: {
+            nextEl: '.js-watch-earlier .swiper-button-next',
+            prevEl: '.js-watch-earlier .swiper-button-prev'
+        },
+        pagination: {
+            clickable: true,
+            el: '.js-watch-earlier-slider .swiper-pagination'
+        }
+    });
+
     var checkoutProducts = new Swiper('.js-checkout-products', {
         slidesPerView: 5,
         spaceBetween: 20,
@@ -40,10 +56,7 @@ $(function() {
         }
     });
 
-    $('.c-checkout-product__remove').click(function() {
-        $(this).parents('.c-checkout-product').remove();
-        checkoutProducts.update();
-    })
+
 
     $('#order-checkout-products').on('shown.bs.collapse', function() {
         checkoutProducts.update();
@@ -67,15 +80,42 @@ $(function() {
             'left': orderInfo.offset().left + 'px',
             'width': orderInfo.parent().width() + 'px'
         })
-        $(window).scroll(function() {
-	    	if($(this).scrollTop() + $(this).height() >= productCheckoutStatic.offset().top){
-	    		productCheckoutFixed.hide();
-	    	}else{
-	    		productCheckoutFixed.show();
-	    	}
 
-	    })
+        function checkPosAndHide() {
+            if ($(window).scrollTop() + $(window).height() >= productCheckoutStatic.offset().top) {
+                productCheckoutFixed.hide();
+            } else {
+                productCheckoutFixed.show();
+            }
+        }
+        checkPosAndHide();
+        $(window).scroll(function() {
+            checkPosAndHide();
+
+        })
     }
     orderCheckoutInfo();
+
+    function floatBtnPos() {
+        var page = $('.js-page');
+
+        $('.c-float-btn_options').css({
+            'position': 'fixed',
+            'left': page.offset().left + page.width() + 10 + "px"
+        })
+    }
+    floatBtnPos();
+    $(window).resize(function() {
+    	orderCheckoutInfo();
+        floatBtnPos();
+    })
+
+    $('.js-float-btn-options, .js-scroll-to-options').click(function(e){
+    	e.preventDefault();
+    	$('body,html').animate({
+    		scrollTop: $('.js-options').offset().top
+    	})
+    })
+
 
 });

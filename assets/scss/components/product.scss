@@ -116,8 +116,11 @@
 			cursor: default;
 			position: fixed;
 			bottom: 0;
-			z-index: 220;
+			z-index: 240;
 			margin: 0;
+			.c-product__order-checkout-top{
+				cursor: default;
+			}
 		}
 		.c-product__price {
 			margin-left: 0;

@@ -4,14 +4,25 @@ html(lang="ru")
 		include templates/head.pug
 	body
 		.container
-			.o-page
+			.o-page.js-page
 				include templates/navbar.pug
 				include templates/header.pug
 				main.o-page__content
+					.c-float-btn.c-float-btn_options.js-float-btn-options
+						p Выберите опции к этому товару
+					.c-tip.c-tip_code Код товара
+					.c-tip.c-tip_products Вы можете выбрать дополнительные товары
+
 					.c-breadcrumbs
 						a(href="#!").c-breadcrumbs__item Главная
 						a(href="#!").c-breadcrumbs__item Смесители
-						a(href="#!").c-breadcrumbs__item смесители для раковины
+						a(href="#").c-breadcrumbs__item.dropdown-toggle(data-toggle="dropdown", aria-expanded="false") смесители для раковины
+						.dropdown-menu.c-breadcrumbs__dropdown-menu
+							a(href="#") Форсунки для душа
+							a(href="#") Девиаторы
+							a(href="#") Наборы
+							a(href="#") Смесители для душа
+
 					.c-product
 						.c-product__header.d-flex.justify-content-between.align-items-center
 							h1.c-product__title Смеситель для раковины Grohe Bauloop 23337 000
@@ -54,13 +65,13 @@ html(lang="ru")
 												.swiper-button-next
 										.c-product-info__code Код товара:  B22528
 										.c-product-info__showroom Модель бренда есть в шоуруме
-											.c-product-info__showroom-text
-												h4.c-product-info__showroom-text-title
-												h5 Можно посмотреть:
-												p text
-												a(href="#") Схема проезда
-												a(href="#") Адреса всех шоурумов
-												.c-product-info__showroom-close
+											//- .c-product-info__showroom-text
+											//- 	h4.c-product-info__showroom-text-title
+											//- 	h5 Можно посмотреть:
+											//- 	p text
+											//- 	a(href="#") Схема проезда
+											//- 	a(href="#") Адреса всех шоурумов
+											//- 	.c-product-info__showroom-close
 										.c-product-info__description
 											table.c-table
 												tbody
@@ -178,10 +189,10 @@ html(lang="ru")
 														.c-progress-radial__value 59
 														.c-progress-radial__footer минут
 												.c-counter__txt осталось до конца акции
-									.c-table.c-table_product
+									.c-table.c-table_product.js-table_product
 										.c-table__header ГИДРОМАССАЖ
 										.c-table__body
-											.c-table__row.c-product-card
+											.c-table__row.c-product-card(data-articul="23370001")
 												.c-table__cell
 													.c-product-card__img-wrap
 														.c-product-card__sale 15%
@@ -195,200 +206,203 @@ html(lang="ru")
 													.c-product-card__price.c-product-card__price_new 1 990
 												.c-table__cell
 													a(href="#").c-btn.c-btn_primary.c-product-card__btn выбрать
-											.c-table__row.c-product-card
+											.c-table__row.c-product-card(data-articul="23370002")
 												.c-table__cell
 													.c-product-card__img-wrap
 														.c-product-card__sale 15%
 														img(src=require("../img/content/option.jpg"), alt="").c-product-card__img
 												.c-table__cell
 													a(href="#!").c-product-card__title Гидромассаж название
-													.c-product-card__subtitle Арт.  23370001
+													.c-product-card__subtitle Арт.  23370002
 													.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
 												.c-table__cell
 													.c-product-card__price.c-product-card__price_old 2772
 													.c-product-card__price.c-product-card__price_new 1 990
 												.c-table__cell
 													a(href="#").c-btn.c-btn_primary.c-product-card__btn выбрать
-											.c-table__row.c-product-card
+											.c-table__row.c-product-card(data-articul="233700031")
 												.c-table__cell
 													.c-product-card__img-wrap
 														.c-product-card__sale 15%
 														img(src=require("../img/content/option.jpg"), alt="").c-product-card__img
 												.c-table__cell
 													a(href="#!").c-product-card__title Гидромассаж название
-													.c-product-card__subtitle Арт.  23370001
+													.c-product-card__subtitle Арт.  233700031
 													.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
 												.c-table__cell
 													.c-product-card__price.c-product-card__price_old 2772
 													.c-product-card__price.c-product-card__price_new 1 990
 												.c-table__cell
 													a(href="#").c-btn.c-btn_primary.c-product-card__btn выбрать
-											.c-table__row.c-product-card
+											.c-table__row.c-product-card(data-articul="233700041")
 												.c-table__cell
 													.c-product-card__img-wrap
 														.c-product-card__sale 15%
 														img(src=require("../img/content/option.jpg"), alt="").c-product-card__img
 												.c-table__cell
 													a(href="#!").c-product-card__title Гидромассаж название
-													.c-product-card__subtitle Арт.  23370001
+													.c-product-card__subtitle Арт.  233700041
 													.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
 												.c-table__cell
 													.c-product-card__price.c-product-card__price_old 2772
 													.c-product-card__price.c-product-card__price_new 1 990
 												.c-table__cell
 													a(href="#").c-btn.c-btn_primary.c-product-card__btn выбрать
-											.c-table__row.c-product-card
+											.c-table__row.c-product-card(data-articul="233700501")
 												.c-table__cell
 													.c-product-card__img-wrap
 														.c-product-card__sale 15%
 														img(src=require("../img/content/option.jpg"), alt="").c-product-card__img
 												.c-table__cell
 													a(href="#!").c-product-card__title Гидромассаж название
-													.c-product-card__subtitle Арт.  23370001
+													.c-product-card__subtitle Арт.  233700501
 													.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
 												.c-table__cell
 													.c-product-card__price.c-product-card__price_old 2772
 													.c-product-card__price.c-product-card__price_new 1 990
 												.c-table__cell
 													a(href="#").c-btn.c-btn_primary.c-product-card__btn выбрать
-										a(href="#").c-table__notification К этому товару мы рекомендуем выбрать опции
+										a(href="#").c-table__notification.js-scroll-to-options К этому товару мы рекомендуем выбрать опции
 											img(src=require("../img/icons/arrow.png"), alt="").c-table__notification-icon
-									.c-table.c-table_product
+									.c-table.c-table_product.js-table_product
 										.c-table__header Зеркала
 										.c-table__body
-											.c-table__row.c-product-card
+											.c-table__row.c-product-card(data-articul="233702001")
 												.c-table__cell
 													.c-product-card__img-wrap
 														img(src=require("../img/content/option.jpg"), alt="").c-product-card__img
 												.c-table__cell
 													a(href="#!").c-product-card__title Гидромассаж название
-													.c-product-card__subtitle Арт.  23370001
+													.c-product-card__subtitle Арт.  233702001
 													.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
 												.c-table__cell
 													.c-product-card__price 13 400
 												.c-table__cell
 													a(href="#").c-btn.c-btn_primary.c-product-card__btn выбрать
-											.c-table__row.c-product-card
+											.c-table__row.c-product-card(data-articul="233700301")
 												.c-table__cell
 													.c-product-card__img-wrap
 														img(src=require("../img/content/option.jpg"), alt="").c-product-card__img
 												.c-table__cell
 													a(href="#!").c-product-card__title Гидромассаж название
-													.c-product-card__subtitle Арт.  23370001
+													.c-product-card__subtitle Арт.  233700301
 													.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
 												.c-table__cell
 													.c-product-card__price 13 400
 												.c-table__cell
 													a(href="#").c-btn.c-btn_primary.c-product-card__btn выбрать
-											.c-table__row.c-product-card
+											.c-table__row.c-product-card(data-articul="233703001")
 												.c-table__cell
 													.c-product-card__img-wrap
 														img(src=require("../img/content/option.jpg"), alt="").c-product-card__img
 												.c-table__cell
 													a(href="#!").c-product-card__title Гидромассаж название
-													.c-product-card__subtitle Арт.  23370001
+													.c-product-card__subtitle Арт.  233703001
 													.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
 												.c-table__cell
 													.c-product-card__price 13 400
 												.c-table__cell
 													a(href="#").c-btn.c-btn_primary.c-product-card__btn выбрать
-											.c-table__row.c-product-card
+											.c-table__row.c-product-card(data-articul="233705001")
 												.c-table__cell
 													.c-product-card__img-wrap
 														img(src=require("../img/content/option.jpg"), alt="").c-product-card__img
 												.c-table__cell
 													a(href="#!").c-product-card__title Гидромассаж название
-													.c-product-card__subtitle Арт.  23370001
+													.c-product-card__subtitle Арт.  233705001
 													.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
 												.c-table__cell
 													.c-product-card__price 13 400
 												.c-table__cell
 													a(href="#").c-btn.c-btn_primary.c-product-card__btn выбрать
-											.c-table__row.c-product-card
+											.c-table__row.c-product-card(data-articul="233700601")
 												.c-table__cell
 													.c-product-card__img-wrap
 														img(src=require("../img/content/option.jpg"), alt="").c-product-card__img
 												.c-table__cell
 													a(href="#!").c-product-card__title Гидромассаж название
-													.c-product-card__subtitle Арт.  23370001
+													.c-product-card__subtitle Арт.  233700601
 													.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
 												.c-table__cell
 													.c-product-card__price 13 400
 												.c-table__cell
 													a(href="#").c-btn.c-btn_primary.c-product-card__btn выбрать
-									.c-table.c-table_options
-										.c-table__header ГИДРОМАССАЖ
-											a(href="#") Как выбрать ГИДРОМАССАЖ
-										.c-table__body
-											.c-table__row.c-product-card
-												.c-table__cell
-													.c-product-card__img-wrap
-														img(src=require("../img/content/option.jpg"), alt="").c-product-card__img
-												.c-table__cell
-													a(href="#!").c-product-card__title Гидромассаж название
-													.c-product-card__subtitle Арт.  23370001
-													.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
-												.c-table__cell
-													.c-product-card__price 13 400
-												.c-table__cell
-													a(href="#").c-btn.c-btn_primary.c-product-card__btn выбрать
-											.c-table__row.c-product-card
-												.c-table__cell
-													.c-product-card__img-wrap
-														img(src=require("../img/content/option.jpg"), alt="").c-product-card__img
-												.c-table__cell
-													a(href="#!").c-product-card__title Гидромассаж название
-													.c-product-card__subtitle Арт.  23370001
-													.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
-												.c-table__cell
-													.c-product-card__price 13 400
-												.c-table__cell
-													a(href="#").c-btn.c-btn_primary.c-product-card__btn выбрать
-											.c-table__row.c-product-card
-												.c-table__cell
-													.c-product-card__img-wrap
-														img(src=require("../img/content/option.jpg"), alt="").c-product-card__img
-												.c-table__cell
-													a(href="#!").c-product-card__title Гидромассаж название
-													.c-product-card__subtitle Арт.  23370001
-													.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
-												.c-table__cell
-													.c-product-card__price 13 400
-												.c-table__cell
-													a(href="#").c-btn.c-btn_primary.c-product-card__btn выбрать
-											.c-table__row.c-product-card
-												.c-table__cell
-													.c-product-card__img-wrap
-														img(src=require("../img/content/option.jpg"), alt="").c-product-card__img
-												.c-table__cell
-													a(href="#!").c-product-card__title Гидромассаж название
-													.c-product-card__subtitle Арт.  23370001
-													.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
-												.c-table__cell
-													.c-product-card__price 13 400
-												.c-table__cell
-													a(href="#").c-btn.c-btn_primary.c-product-card__btn выбрать
-											.c-table__row.c-product-card
-												.c-table__cell
-													.c-product-card__img-wrap
-														img(src=require("../img/content/option.jpg"), alt="").c-product-card__img
-												.c-table__cell
-													a(href="#!").c-product-card__title Гидромассаж название
-													.c-product-card__subtitle Арт.  23370001
-													.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
-												.c-table__cell
-													.c-product-card__price 13 400
-												.c-table__cell
-													a(href="#").c-btn.c-btn_primary.c-product-card__btn выбрать
+									.c-options.js-options.js-table_options
+										.c-options__header К этому товару мы рекомендуем выбрать опции:
+										.c-table.c-table_options
+
+											.c-table__header ГИДРОМАССАЖ
+												a(href="#") Как выбрать ГИДРОМАССАЖ
+											.c-table__body
+												.c-table__row.c-product-card(data-articul="233708001")
+													.c-table__cell
+														.c-product-card__img-wrap
+															img(src=require("../img/content/option.jpg"), alt="").c-product-card__img
+													.c-table__cell
+														a(href="#!").c-product-card__title Гидромассаж название
+														.c-product-card__subtitle Арт.  233708001
+														.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
+													.c-table__cell
+														.c-product-card__price 13 400
+													.c-table__cell
+														a(href="#").c-btn.c-btn_primary.c-product-card__btn выбрать
+												.c-table__row.c-product-card(data-articul="233700061")
+													.c-table__cell
+														.c-product-card__img-wrap
+															img(src=require("../img/content/option.jpg"), alt="").c-product-card__img
+													.c-table__cell
+														a(href="#!").c-product-card__title Гидромассаж название
+														.c-product-card__subtitle Арт.  233700061
+														.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
+													.c-table__cell
+														.c-product-card__price 13 400
+													.c-table__cell
+														a(href="#").c-btn.c-btn_primary.c-product-card__btn выбрать
+												.c-table__row.c-product-card(data-articul="233700501")
+													.c-table__cell
+														.c-product-card__img-wrap
+															img(src=require("../img/content/option.jpg"), alt="").c-product-card__img
+													.c-table__cell
+														a(href="#!").c-product-card__title Гидромассаж название
+														.c-product-card__subtitle Арт.  233700501
+														.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
+													.c-table__cell
+														.c-product-card__price 13 400
+													.c-table__cell
+														a(href="#").c-btn.c-btn_primary.c-product-card__btn выбрать
+												.c-table__row.c-product-card(data-articul="233700401")
+													.c-table__cell
+														.c-product-card__img-wrap
+															img(src=require("../img/content/option.jpg"), alt="").c-product-card__img
+													.c-table__cell
+														a(href="#!").c-product-card__title Гидромассаж название
+														.c-product-card__subtitle Арт.  233700401
+														.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
+													.c-table__cell
+														.c-product-card__price 13 400
+													.c-table__cell
+														a(href="#").c-btn.c-btn_primary.c-product-card__btn выбрать
+												.c-table__row.c-product-card(data-articul="2337005501")
+													.c-table__cell
+														.c-product-card__img-wrap
+															img(src=require("../img/content/option.jpg"), alt="").c-product-card__img
+													.c-table__cell
+														a(href="#!").c-product-card__title Гидромассаж название
+														.c-product-card__subtitle Арт.  2337005501
+														.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
+													.c-table__cell
+														.c-product-card__price 13 400
+													.c-table__cell
+														a(href="#").c-btn.c-btn_primary.c-product-card__btn выбрать
 									.c-product__order-checkout.c-product__order-checkout_fixed.js-product-order-checkout-fixed
 										.c-product__order-checkout-top
 											.d-flex.align-items-center.justify-content-between.w-100
 												.c-product__choosen
 													| Выбрано:
-													a(href="#").c-product__choosen-count 3 товара
+													a(href="#").c-product__choosen-count 0 товара
 												.c-product__price
 													| Стоимость:
-													.c-product__price-number 28 650
+													.c-product__price-number 0
 												.c-product__order-actions.d-flex
 													a(href="#").c-btn.c-btn_secondary В КОРЗИНУ
 													a(href="#").c-btn.c-btn_secondary КУПИТЬ В 1 КЛИК
@@ -397,76 +411,17 @@ html(lang="ru")
 											.d-flex.align-items-center.justify-content-between.w-100
 												.c-product__choosen
 													| Выбрано:
-													a(href="#").c-product__choosen-count 3 товара
+													a(href="#").c-product__choosen-count 0 товара
 												.c-product__price
 													| Стоимость:
-													.c-product__price-number 28 650
+													.c-product__price-number 0
 												.c-product__order-actions.d-flex
 													a(href="#").c-btn.c-btn_secondary В КОРЗИНУ
 													a(href="#").c-btn.c-btn_secondary КУПИТЬ В 1 КЛИК
 										.c-checkout-products.collapse#order-checkout-products
 											.swiper-container.js-checkout-products
 												.swiper-wrapper
-													.swiper-slide.c-checkout-product
-														a(href="#!").c-checkout-product__remove
-														.c-checkout-product__img
-															img(src=require("../img/content/option2.jpg"), alt="")
-														.c-checkout-product__title
-															.
-																Смеситель для 
-																раковины BelBagno
-																ADIGEADI -LVM25-CRM
-														.c-checkout-product__price 3 400
-													.swiper-slide.c-checkout-product
-														a(href="#!").c-checkout-product__remove
-														.c-checkout-product__img
-															img(src=require("../img/content/option3.jpg"), alt="")
-														.c-checkout-product__title
-															.
-																Смеситель для 
-																раковины BelBagno
-																ADIGEADI -LVM25-CRM
-														.c-checkout-product__price 3 400
-													.swiper-slide.c-checkout-product
-														a(href="#!").c-checkout-product__remove
-														.c-checkout-product__img
-															img(src=require("../img/content/option4.jpg"), alt="")
-														.c-checkout-product__title
-															.
-																Смеситель для 
-																раковины BelBagno
-																ADIGEADI -LVM25-CRM
-														.c-checkout-product__price 3 400
-													.swiper-slide.c-checkout-product
-														a(href="#!").c-checkout-product__remove
-														.c-checkout-product__img
-															img(src=require("../img/content/option5.jpg"), alt="")
-														.c-checkout-product__title
-															.
-																Смеситель для 
-																раковины BelBagno
-																ADIGEADI -LVM25-CRM
-														.c-checkout-product__price 3 400
-													.swiper-slide.c-checkout-product
-														a(href="#!").c-checkout-product__remove
-														.c-checkout-product__img
-															img(src=require("../img/content/option6.jpg"), alt="")
-														.c-checkout-product__title
-															.
-																Смеситель для 
-																раковины BelBagno
-																ADIGEADI -LVM25-CRM
-														.c-checkout-product__price 3 400
-													.swiper-slide.c-checkout-product
-														a(href="#!").c-checkout-product__remove
-														.c-checkout-product__img
-															img(src=require("../img/content/option.jpg"), alt="")
-														.c-checkout-product__title
-															.
-																Смеситель для 
-																раковины BelBagno
-																ADIGEADI -LVM25-CRM
-														.c-checkout-product__price 3 400
+													
 												.swiper-scrollbar
 											.swiper-button-prev
 											.swiper-button-next
@@ -483,7 +438,87 @@ html(lang="ru")
 												.
 													При очистке не применяйте абразивные чистящие средства, оставляющие царапины губки, чистящие средства с содержанием кислот или растворителей, средства для удаления извести, пищевой уксус и чистящие средства с содержанием уксусной кислоты.
 											h5 Гарантия:  5 лет.
+									.c-share
+										img(src=require("../img/content/installment.jpg"), alt="")
 											
-
+									.c-watch-earlier.js-watch-earlier
+										.c-watch-earlier__header Вы смотрели ранее
+											a(href="#").c-watch-earlier__header-link смотреть все
+										.c-checkout-products
+											.swiper-container.js-watch-earlier-slider 
+												.swiper-wrapper
+													.swiper-slide.c-checkout-product
+														.c-checkout-product__img
+															img(src=require("../img/content/option2.jpg"), alt="")
+														.c-checkout-product__title
+															.
+																Смеситель для 
+																раковины BelBagno
+																ADIGEADI -LVM25-CRM
+														.c-checkout-product__price 3 400
+														a(href="#").c-checkout-product__link к сравнению
+													.swiper-slide.c-checkout-product
+														.c-checkout-product__img
+															img(src=require("../img/content/option2.jpg"), alt="")
+														.c-checkout-product__title
+															.
+																Смеситель для 
+																раковины BelBagno
+																ADIGEADI -LVM25-CRM
+														.c-checkout-product__price 3 400
+														a(href="#").c-checkout-product__link к сравнению
+													.swiper-slide.c-checkout-product
+														.c-checkout-product__img
+															img(src=require("../img/content/option2.jpg"), alt="")
+														.c-checkout-product__title
+															.
+																Смеситель для 
+																раковины BelBagno
+																ADIGEADI -LVM25-CRM
+														.c-checkout-product__price 3 400
+														a(href="#").c-checkout-product__link к сравнению
+													.swiper-slide.c-checkout-product
+														.c-checkout-product__img
+															img(src=require("../img/content/option2.jpg"), alt="")
+														.c-checkout-product__title
+															.
+																Смеситель для 
+																раковины BelBagno
+																ADIGEADI -LVM25-CRM
+														.c-checkout-product__price 3 400
+														a(href="#").c-checkout-product__link к сравнению
+													.swiper-slide.c-checkout-product
+														.c-checkout-product__img
+															img(src=require("../img/content/option2.jpg"), alt="")
+														.c-checkout-product__title
+															.
+																Смеситель для 
+																раковины BelBagno
+																ADIGEADI -LVM25-CRM
+														.c-checkout-product__price 3 400
+														a(href="#").c-checkout-product__link к сравнению
+													.swiper-slide.c-checkout-product
+														.c-checkout-product__img
+															img(src=require("../img/content/option2.jpg"), alt="")
+														.c-checkout-product__title
+															.
+																Смеситель для 
+																раковины BelBagno
+																ADIGEADI -LVM25-CRM
+														.c-checkout-product__price 3 400
+														a(href="#").c-checkout-product__link к сравнению
+													.swiper-slide.c-checkout-product
+														.c-checkout-product__img
+															img(src=require("../img/content/option2.jpg"), alt="")
+														.c-checkout-product__title
+															.
+																Смеситель для 
+																раковины BelBagno
+																ADIGEADI -LVM25-CRM
+														.c-checkout-product__price 3 400
+														a(href="#").c-checkout-product__link к сравнению
+												.swiper-pagination
+											.swiper-button-prev
+											.swiper-button-next
 				include templates/footer.pug
 			

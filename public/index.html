@@ -7,7 +7,7 @@
   <link href="css/style.css" rel="stylesheet"></head>
   <body>
     <div class="container">
-      <div class="o-page">
+      <div class="o-page js-page">
 <div class="c-navbar">
   <div class="c-navbar__item"><a class="c-navbar__link" href="#">личный кабинет: User ID: 1</a></div>
   <div class="c-navbar__item">Ваш город:<a class="c-navbar__link" href="#"> Санкт-Петербург</a></div>
@@ -38,7 +38,14 @@
   </div>
 </header>
         <main class="o-page__content">
-          <div class="c-breadcrumbs"><a class="c-breadcrumbs__item" href="#!">Главная</a><a class="c-breadcrumbs__item" href="#!">Смесители</a><a class="c-breadcrumbs__item" href="#!">смесители для раковины</a></div>
+          <div class="c-float-btn c-float-btn_options js-float-btn-options">
+            <p>Выберите опции к этому товару</p>
+          </div>
+          <div class="c-tip c-tip_code">Код товара</div>
+          <div class="c-tip c-tip_products">Вы можете выбрать дополнительные товары</div>
+          <div class="c-breadcrumbs"><a class="c-breadcrumbs__item" href="#!">Главная</a><a class="c-breadcrumbs__item" href="#!">Смесители</a><a class="c-breadcrumbs__item dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">смесители для раковины</a>
+            <div class="dropdown-menu c-breadcrumbs__dropdown-menu"><a href="#">Форсунки для душа</a><a href="#">Девиаторы</a><a href="#">Наборы</a><a href="#">Смесители для душа</a></div>
+          </div>
           <div class="c-product">
             <div class="c-product__header d-flex justify-content-between align-items-center">
               <h1 class="c-product__title">Смеситель для раковины Grohe Bauloop 23337 000</h1>
@@ -77,14 +84,7 @@
                       </div>
                     </div>
                     <div class="c-product-info__code">Код товара:  B22528</div>
-                    <div class="c-product-info__showroom">Модель бренда есть в шоуруме
-                      <div class="c-product-info__showroom-text">
-                        <h4 class="c-product-info__showroom-text-title"></h4>
-                        <h5>Можно посмотреть:</h5>
-                        <p>text</p><a href="#">Схема проезда</a><a href="#">Адреса всех шоурумов</a>
-                        <div class="c-product-info__showroom-close"></div>
-                      </div>
-                    </div>
+                    <div class="c-product-info__showroom">Модель бренда есть в шоуруме</div>
                     <div class="c-product-info__description">
                       <table class="c-table">
                         <tbody>
@@ -216,10 +216,10 @@
                       </div>
                     </div>
                   </div>
-                  <div class="c-table c-table_product">
+                  <div class="c-table c-table_product js-table_product">
                     <div class="c-table__header">ГИДРОМАССАЖ</div>
                     <div class="c-table__body">
-                      <div class="c-table__row c-product-card">
+                      <div class="c-table__row c-product-card" data-articul="23370001">
                         <div class="c-table__cell">
                           <div class="c-product-card__img-wrap">
                             <div class="c-product-card__sale">15%</div><img class="c-product-card__img" src="img/content/option.jpg" alt="">
@@ -235,14 +235,14 @@
                         </div>
                         <div class="c-table__cell"><a class="c-btn c-btn_primary c-product-card__btn" href="#">выбрать</a></div>
                       </div>
-                      <div class="c-table__row c-product-card">
+                      <div class="c-table__row c-product-card" data-articul="23370002">
                         <div class="c-table__cell">
                           <div class="c-product-card__img-wrap">
                             <div class="c-product-card__sale">15%</div><img class="c-product-card__img" src="img/content/option.jpg" alt="">
                           </div>
                         </div>
                         <div class="c-table__cell"><a class="c-product-card__title" href="#!">Гидромассаж название</a>
-                          <div class="c-product-card__subtitle">Арт.  23370001</div>
+                          <div class="c-product-card__subtitle">Арт.  23370002</div>
                           <div class="c-product-card__size">Размер (ДxШxВ), см: (108-113) x (68-73) x 190</div>
                         </div>
                         <div class="c-table__cell">
@@ -251,14 +251,14 @@
                         </div>
                         <div class="c-table__cell"><a class="c-btn c-btn_primary c-product-card__btn" href="#">выбрать</a></div>
                       </div>
-                      <div class="c-table__row c-product-card">
+                      <div class="c-table__row c-product-card" data-articul="233700031">
                         <div class="c-table__cell">
                           <div class="c-product-card__img-wrap">
                             <div class="c-product-card__sale">15%</div><img class="c-product-card__img" src="img/content/option.jpg" alt="">
                           </div>
                         </div>
                         <div class="c-table__cell"><a class="c-product-card__title" href="#!">Гидромассаж название</a>
-                          <div class="c-product-card__subtitle">Арт.  23370001</div>
+                          <div class="c-product-card__subtitle">Арт.  233700031</div>
                           <div class="c-product-card__size">Размер (ДxШxВ), см: (108-113) x (68-73) x 190</div>
                         </div>
                         <div class="c-table__cell">
@@ -267,14 +267,14 @@
                         </div>
                         <div class="c-table__cell"><a class="c-btn c-btn_primary c-product-card__btn" href="#">выбрать</a></div>
                       </div>
-                      <div class="c-table__row c-product-card">
+                      <div class="c-table__row c-product-card" data-articul="233700041">
                         <div class="c-table__cell">
                           <div class="c-product-card__img-wrap">
                             <div class="c-product-card__sale">15%</div><img class="c-product-card__img" src="img/content/option.jpg" alt="">
                           </div>
                         </div>
                         <div class="c-table__cell"><a class="c-product-card__title" href="#!">Гидромассаж название</a>
-                          <div class="c-product-card__subtitle">Арт.  23370001</div>
+                          <div class="c-product-card__subtitle">Арт.  233700041</div>
                           <div class="c-product-card__size">Размер (ДxШxВ), см: (108-113) x (68-73) x 190</div>
                         </div>
                         <div class="c-table__cell">
@@ -283,14 +283,14 @@
                         </div>
                         <div class="c-table__cell"><a class="c-btn c-btn_primary c-product-card__btn" href="#">выбрать</a></div>
                       </div>
-                      <div class="c-table__row c-product-card">
+                      <div class="c-table__row c-product-card" data-articul="233700501">
                         <div class="c-table__cell">
                           <div class="c-product-card__img-wrap">
                             <div class="c-product-card__sale">15%</div><img class="c-product-card__img" src="img/content/option.jpg" alt="">
                           </div>
                         </div>
                         <div class="c-table__cell"><a class="c-product-card__title" href="#!">Гидромассаж название</a>
-                          <div class="c-product-card__subtitle">Арт.  23370001</div>
+                          <div class="c-product-card__subtitle">Арт.  233700501</div>
                           <div class="c-product-card__size">Размер (ДxШxВ), см: (108-113) x (68-73) x 190</div>
                         </div>
                         <div class="c-table__cell">
@@ -299,17 +299,17 @@
                         </div>
                         <div class="c-table__cell"><a class="c-btn c-btn_primary c-product-card__btn" href="#">выбрать</a></div>
                       </div>
-                    </div><a class="c-table__notification" href="#">К этому товару мы рекомендуем выбрать опции<img class="c-table__notification-icon" src="img/icons/arrow.png" alt=""></a>
+                    </div><a class="c-table__notification js-scroll-to-options" href="#">К этому товару мы рекомендуем выбрать опции<img class="c-table__notification-icon" src="img/icons/arrow.png" alt=""></a>
                   </div>
-                  <div class="c-table c-table_product">
+                  <div class="c-table c-table_product js-table_product">
                     <div class="c-table__header">Зеркала</div>
                     <div class="c-table__body">
-                      <div class="c-table__row c-product-card">
+                      <div class="c-table__row c-product-card" data-articul="233702001">
                         <div class="c-table__cell">
                           <div class="c-product-card__img-wrap"><img class="c-product-card__img" src="img/content/option.jpg" alt=""></div>
                         </div>
                         <div class="c-table__cell"><a class="c-product-card__title" href="#!">Гидромассаж название</a>
-                          <div class="c-product-card__subtitle">Арт.  23370001</div>
+                          <div class="c-product-card__subtitle">Арт.  233702001</div>
                           <div class="c-product-card__size">Размер (ДxШxВ), см: (108-113) x (68-73) x 190</div>
                         </div>
                         <div class="c-table__cell">
@@ -317,12 +317,12 @@
                         </div>
                         <div class="c-table__cell"><a class="c-btn c-btn_primary c-product-card__btn" href="#">выбрать</a></div>
                       </div>
-                      <div class="c-table__row c-product-card">
+                      <div class="c-table__row c-product-card" data-articul="233700301">
                         <div class="c-table__cell">
                           <div class="c-product-card__img-wrap"><img class="c-product-card__img" src="img/content/option.jpg" alt=""></div>
                         </div>
                         <div class="c-table__cell"><a class="c-product-card__title" href="#!">Гидромассаж название</a>
-                          <div class="c-product-card__subtitle">Арт.  23370001</div>
+                          <div class="c-product-card__subtitle">Арт.  233700301</div>
                           <div class="c-product-card__size">Размер (ДxШxВ), см: (108-113) x (68-73) x 190</div>
                         </div>
                         <div class="c-table__cell">
@@ -330,12 +330,12 @@
                         </div>
                         <div class="c-table__cell"><a class="c-btn c-btn_primary c-product-card__btn" href="#">выбрать</a></div>
                       </div>
-                      <div class="c-table__row c-product-card">
+                      <div class="c-table__row c-product-card" data-articul="233703001">
                         <div class="c-table__cell">
                           <div class="c-product-card__img-wrap"><img class="c-product-card__img" src="img/content/option.jpg" alt=""></div>
                         </div>
                         <div class="c-table__cell"><a class="c-product-card__title" href="#!">Гидромассаж название</a>
-                          <div class="c-product-card__subtitle">Арт.  23370001</div>
+                          <div class="c-product-card__subtitle">Арт.  233703001</div>
                           <div class="c-product-card__size">Размер (ДxШxВ), см: (108-113) x (68-73) x 190</div>
                         </div>
                         <div class="c-table__cell">
@@ -343,12 +343,12 @@
                         </div>
                         <div class="c-table__cell"><a class="c-btn c-btn_primary c-product-card__btn" href="#">выбрать</a></div>
                       </div>
-                      <div class="c-table__row c-product-card">
+                      <div class="c-table__row c-product-card" data-articul="233705001">
                         <div class="c-table__cell">
                           <div class="c-product-card__img-wrap"><img class="c-product-card__img" src="img/content/option.jpg" alt=""></div>
                         </div>
                         <div class="c-table__cell"><a class="c-product-card__title" href="#!">Гидромассаж название</a>
-                          <div class="c-product-card__subtitle">Арт.  23370001</div>
+                          <div class="c-product-card__subtitle">Арт.  233705001</div>
                           <div class="c-product-card__size">Размер (ДxШxВ), см: (108-113) x (68-73) x 190</div>
                         </div>
                         <div class="c-table__cell">
@@ -356,12 +356,12 @@
                         </div>
                         <div class="c-table__cell"><a class="c-btn c-btn_primary c-product-card__btn" href="#">выбрать</a></div>
                       </div>
-                      <div class="c-table__row c-product-card">
+                      <div class="c-table__row c-product-card" data-articul="233700601">
                         <div class="c-table__cell">
                           <div class="c-product-card__img-wrap"><img class="c-product-card__img" src="img/content/option.jpg" alt=""></div>
                         </div>
                         <div class="c-table__cell"><a class="c-product-card__title" href="#!">Гидромассаж название</a>
-                          <div class="c-product-card__subtitle">Арт.  23370001</div>
+                          <div class="c-product-card__subtitle">Арт.  233700601</div>
                           <div class="c-product-card__size">Размер (ДxШxВ), см: (108-113) x (68-73) x 190</div>
                         </div>
                         <div class="c-table__cell">
@@ -371,82 +371,85 @@
                       </div>
                     </div>
                   </div>
-                  <div class="c-table c-table_options">
-                    <div class="c-table__header">ГИДРОМАССАЖ<a href="#">Как выбрать ГИДРОМАССАЖ</a></div>
-                    <div class="c-table__body">
-                      <div class="c-table__row c-product-card">
-                        <div class="c-table__cell">
-                          <div class="c-product-card__img-wrap"><img class="c-product-card__img" src="img/content/option.jpg" alt=""></div>
+                  <div class="c-options js-options js-table_options">
+                    <div class="c-options__header">К этому товару мы рекомендуем выбрать опции:</div>
+                    <div class="c-table c-table_options">
+                      <div class="c-table__header">ГИДРОМАССАЖ<a href="#">Как выбрать ГИДРОМАССАЖ</a></div>
+                      <div class="c-table__body">
+                        <div class="c-table__row c-product-card" data-articul="233708001">
+                          <div class="c-table__cell">
+                            <div class="c-product-card__img-wrap"><img class="c-product-card__img" src="img/content/option.jpg" alt=""></div>
+                          </div>
+                          <div class="c-table__cell"><a class="c-product-card__title" href="#!">Гидромассаж название</a>
+                            <div class="c-product-card__subtitle">Арт.  233708001</div>
+                            <div class="c-product-card__size">Размер (ДxШxВ), см: (108-113) x (68-73) x 190</div>
+                          </div>
+                          <div class="c-table__cell">
+                            <div class="c-product-card__price">13 400</div>
+                          </div>
+                          <div class="c-table__cell"><a class="c-btn c-btn_primary c-product-card__btn" href="#">выбрать</a></div>
                         </div>
-                        <div class="c-table__cell"><a class="c-product-card__title" href="#!">Гидромассаж название</a>
-                          <div class="c-product-card__subtitle">Арт.  23370001</div>
-                          <div class="c-product-card__size">Размер (ДxШxВ), см: (108-113) x (68-73) x 190</div>
+                        <div class="c-table__row c-product-card" data-articul="233700061">
+                          <div class="c-table__cell">
+                            <div class="c-product-card__img-wrap"><img class="c-product-card__img" src="img/content/option.jpg" alt=""></div>
+                          </div>
+                          <div class="c-table__cell"><a class="c-product-card__title" href="#!">Гидромассаж название</a>
+                            <div class="c-product-card__subtitle">Арт.  233700061</div>
+                            <div class="c-product-card__size">Размер (ДxШxВ), см: (108-113) x (68-73) x 190</div>
+                          </div>
+                          <div class="c-table__cell">
+                            <div class="c-product-card__price">13 400</div>
+                          </div>
+                          <div class="c-table__cell"><a class="c-btn c-btn_primary c-product-card__btn" href="#">выбрать</a></div>
                         </div>
-                        <div class="c-table__cell">
-                          <div class="c-product-card__price">13 400</div>
+                        <div class="c-table__row c-product-card" data-articul="233700501">
+                          <div class="c-table__cell">
+                            <div class="c-product-card__img-wrap"><img class="c-product-card__img" src="img/content/option.jpg" alt=""></div>
+                          </div>
+                          <div class="c-table__cell"><a class="c-product-card__title" href="#!">Гидромассаж название</a>
+                            <div class="c-product-card__subtitle">Арт.  233700501</div>
+                            <div class="c-product-card__size">Размер (ДxШxВ), см: (108-113) x (68-73) x 190</div>
+                          </div>
+                          <div class="c-table__cell">
+                            <div class="c-product-card__price">13 400</div>
+                          </div>
+                          <div class="c-table__cell"><a class="c-btn c-btn_primary c-product-card__btn" href="#">выбрать</a></div>
                         </div>
-                        <div class="c-table__cell"><a class="c-btn c-btn_primary c-product-card__btn" href="#">выбрать</a></div>
-                      </div>
-                      <div class="c-table__row c-product-card">
-                        <div class="c-table__cell">
-                          <div class="c-product-card__img-wrap"><img class="c-product-card__img" src="img/content/option.jpg" alt=""></div>
+                        <div class="c-table__row c-product-card" data-articul="233700401">
+                          <div class="c-table__cell">
+                            <div class="c-product-card__img-wrap"><img class="c-product-card__img" src="img/content/option.jpg" alt=""></div>
+                          </div>
+                          <div class="c-table__cell"><a class="c-product-card__title" href="#!">Гидромассаж название</a>
+                            <div class="c-product-card__subtitle">Арт.  233700401</div>
+                            <div class="c-product-card__size">Размер (ДxШxВ), см: (108-113) x (68-73) x 190</div>
+                          </div>
+                          <div class="c-table__cell">
+                            <div class="c-product-card__price">13 400</div>
+                          </div>
+                          <div class="c-table__cell"><a class="c-btn c-btn_primary c-product-card__btn" href="#">выбрать</a></div>
                         </div>
-                        <div class="c-table__cell"><a class="c-product-card__title" href="#!">Гидромассаж название</a>
-                          <div class="c-product-card__subtitle">Арт.  23370001</div>
-                          <div class="c-product-card__size">Размер (ДxШxВ), см: (108-113) x (68-73) x 190</div>
+                        <div class="c-table__row c-product-card" data-articul="2337005501">
+                          <div class="c-table__cell">
+                            <div class="c-product-card__img-wrap"><img class="c-product-card__img" src="img/content/option.jpg" alt=""></div>
+                          </div>
+                          <div class="c-table__cell"><a class="c-product-card__title" href="#!">Гидромассаж название</a>
+                            <div class="c-product-card__subtitle">Арт.  2337005501</div>
+                            <div class="c-product-card__size">Размер (ДxШxВ), см: (108-113) x (68-73) x 190</div>
+                          </div>
+                          <div class="c-table__cell">
+                            <div class="c-product-card__price">13 400</div>
+                          </div>
+                          <div class="c-table__cell"><a class="c-btn c-btn_primary c-product-card__btn" href="#">выбрать</a></div>
                         </div>
-                        <div class="c-table__cell">
-                          <div class="c-product-card__price">13 400</div>
-                        </div>
-                        <div class="c-table__cell"><a class="c-btn c-btn_primary c-product-card__btn" href="#">выбрать</a></div>
-                      </div>
-                      <div class="c-table__row c-product-card">
-                        <div class="c-table__cell">
-                          <div class="c-product-card__img-wrap"><img class="c-product-card__img" src="img/content/option.jpg" alt=""></div>
-                        </div>
-                        <div class="c-table__cell"><a class="c-product-card__title" href="#!">Гидромассаж название</a>
-                          <div class="c-product-card__subtitle">Арт.  23370001</div>
-                          <div class="c-product-card__size">Размер (ДxШxВ), см: (108-113) x (68-73) x 190</div>
-                        </div>
-                        <div class="c-table__cell">
-                          <div class="c-product-card__price">13 400</div>
-                        </div>
-                        <div class="c-table__cell"><a class="c-btn c-btn_primary c-product-card__btn" href="#">выбрать</a></div>
-                      </div>
-                      <div class="c-table__row c-product-card">
-                        <div class="c-table__cell">
-                          <div class="c-product-card__img-wrap"><img class="c-product-card__img" src="img/content/option.jpg" alt=""></div>
-                        </div>
-                        <div class="c-table__cell"><a class="c-product-card__title" href="#!">Гидромассаж название</a>
-                          <div class="c-product-card__subtitle">Арт.  23370001</div>
-                          <div class="c-product-card__size">Размер (ДxШxВ), см: (108-113) x (68-73) x 190</div>
-                        </div>
-                        <div class="c-table__cell">
-                          <div class="c-product-card__price">13 400</div>
-                        </div>
-                        <div class="c-table__cell"><a class="c-btn c-btn_primary c-product-card__btn" href="#">выбрать</a></div>
-                      </div>
-                      <div class="c-table__row c-product-card">
-                        <div class="c-table__cell">
-                          <div class="c-product-card__img-wrap"><img class="c-product-card__img" src="img/content/option.jpg" alt=""></div>
-                        </div>
-                        <div class="c-table__cell"><a class="c-product-card__title" href="#!">Гидромассаж название</a>
-                          <div class="c-product-card__subtitle">Арт.  23370001</div>
-                          <div class="c-product-card__size">Размер (ДxШxВ), см: (108-113) x (68-73) x 190</div>
-                        </div>
-                        <div class="c-table__cell">
-                          <div class="c-product-card__price">13 400</div>
-                        </div>
-                        <div class="c-table__cell"><a class="c-btn c-btn_primary c-product-card__btn" href="#">выбрать</a></div>
                       </div>
                     </div>
                   </div>
                   <div class="c-product__order-checkout c-product__order-checkout_fixed js-product-order-checkout-fixed">
                     <div class="c-product__order-checkout-top">
                       <div class="d-flex align-items-center justify-content-between w-100">
-                        <div class="c-product__choosen">Выбрано:<a class="c-product__choosen-count" href="#">3 товара</a></div>
+                        <div class="c-product__choosen">Выбрано:<a class="c-product__choosen-count" href="#">0 товара</a></div>
                         <div class="c-product__price">Стоимость:
-                          <div class="c-product__price-number">28 650</div>
+                          <div class="c-product__price-number">0</div>
                         </div>
                         <div class="c-product__order-actions d-flex"><a class="c-btn c-btn_secondary" href="#">В КОРЗИНУ</a><a class="c-btn c-btn_secondary" href="#">КУПИТЬ В 1 КЛИК</a></div>
                       </div>
@@ -455,71 +458,16 @@
                   <div class="c-product__order-checkout js-product-order-checkout-static">
                     <div class="c-product__order-checkout-top collapsed" data-toggle="collapse" aria-expanded="false" href="#order-checkout-products">
                       <div class="d-flex align-items-center justify-content-between w-100">
-                        <div class="c-product__choosen">Выбрано:<a class="c-product__choosen-count" href="#">3 товара</a></div>
+                        <div class="c-product__choosen">Выбрано:<a class="c-product__choosen-count" href="#">0 товара</a></div>
                         <div class="c-product__price">Стоимость:
-                          <div class="c-product__price-number">28 650</div>
+                          <div class="c-product__price-number">0</div>
                         </div>
                         <div class="c-product__order-actions d-flex"><a class="c-btn c-btn_secondary" href="#">В КОРЗИНУ</a><a class="c-btn c-btn_secondary" href="#">КУПИТЬ В 1 КЛИК</a></div>
                       </div>
                     </div>
                     <div class="c-checkout-products collapse" id="order-checkout-products">
                       <div class="swiper-container js-checkout-products">
-                        <div class="swiper-wrapper">
-                          <div class="swiper-slide c-checkout-product"><a class="c-checkout-product__remove" href="#!"></a>
-                            <div class="c-checkout-product__img"><img src="img/content/option2.jpg" alt=""></div>
-                            <div class="c-checkout-product__title">
-                              Смеситель для 
-                              раковины BelBagno
-                              ADIGEADI -LVM25-CRM
-                            </div>
-                            <div class="c-checkout-product__price">3 400</div>
-                          </div>
-                          <div class="swiper-slide c-checkout-product"><a class="c-checkout-product__remove" href="#!"></a>
-                            <div class="c-checkout-product__img"><img src="img/content/option3.jpg" alt=""></div>
-                            <div class="c-checkout-product__title">
-                              Смеситель для 
-                              раковины BelBagno
-                              ADIGEADI -LVM25-CRM
-                            </div>
-                            <div class="c-checkout-product__price">3 400</div>
-                          </div>
-                          <div class="swiper-slide c-checkout-product"><a class="c-checkout-product__remove" href="#!"></a>
-                            <div class="c-checkout-product__img"><img src="img/content/option4.jpg" alt=""></div>
-                            <div class="c-checkout-product__title">
-                              Смеситель для 
-                              раковины BelBagno
-                              ADIGEADI -LVM25-CRM
-                            </div>
-                            <div class="c-checkout-product__price">3 400</div>
-                          </div>
-                          <div class="swiper-slide c-checkout-product"><a class="c-checkout-product__remove" href="#!"></a>
-                            <div class="c-checkout-product__img"><img src="img/content/option5.jpg" alt=""></div>
-                            <div class="c-checkout-product__title">
-                              Смеситель для 
-                              раковины BelBagno
-                              ADIGEADI -LVM25-CRM
-                            </div>
-                            <div class="c-checkout-product__price">3 400</div>
-                          </div>
-                          <div class="swiper-slide c-checkout-product"><a class="c-checkout-product__remove" href="#!"></a>
-                            <div class="c-checkout-product__img"><img src="img/content/option6.jpg" alt=""></div>
-                            <div class="c-checkout-product__title">
-                              Смеситель для 
-                              раковины BelBagno
-                              ADIGEADI -LVM25-CRM
-                            </div>
-                            <div class="c-checkout-product__price">3 400</div>
-                          </div>
-                          <div class="swiper-slide c-checkout-product"><a class="c-checkout-product__remove" href="#!"></a>
-                            <div class="c-checkout-product__img"><img src="img/content/option.jpg" alt=""></div>
-                            <div class="c-checkout-product__title">
-                              Смеситель для 
-                              раковины BelBagno
-                              ADIGEADI -LVM25-CRM
-                            </div>
-                            <div class="c-checkout-product__price">3 400</div>
-                          </div>
-                        </div>
+                        <div class="swiper-wrapper"></div>
                         <div class="swiper-scrollbar"></div>
                       </div>
                       <div class="swiper-button-prev"></div>
@@ -537,12 +485,122 @@
                       <h5>Гарантия:  5 лет.</h5>
                     </div>
                   </div>
+                  <div class="c-share"><img src="img/content/installment.jpg" alt=""></div>
+                  <div class="c-watch-earlier js-watch-earlier">
+                    <div class="c-watch-earlier__header">Вы смотрели ранее<a class="c-watch-earlier__header-link" href="#">смотреть все</a></div>
+                    <div class="c-checkout-products">
+                      <div class="swiper-container js-watch-earlier-slider"> 
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide c-checkout-product">
+                            <div class="c-checkout-product__img"><img src="img/content/option2.jpg" alt=""></div>
+                            <div class="c-checkout-product__title">
+                              Смеситель для 
+                              раковины BelBagno
+                              ADIGEADI -LVM25-CRM
+                            </div>
+                            <div class="c-checkout-product__price">3 400</div><a class="c-checkout-product__link" href="#">к сравнению</a>
+                          </div>
+                          <div class="swiper-slide c-checkout-product">
+                            <div class="c-checkout-product__img"><img src="img/content/option2.jpg" alt=""></div>
+                            <div class="c-checkout-product__title">
+                              Смеситель для 
+                              раковины BelBagno
+                              ADIGEADI -LVM25-CRM
+                            </div>
+                            <div class="c-checkout-product__price">3 400</div><a class="c-checkout-product__link" href="#">к сравнению</a>
+                          </div>
+                          <div class="swiper-slide c-checkout-product">
+                            <div class="c-checkout-product__img"><img src="img/content/option2.jpg" alt=""></div>
+                            <div class="c-checkout-product__title">
+                              Смеситель для 
+                              раковины BelBagno
+                              ADIGEADI -LVM25-CRM
+                            </div>
+                            <div class="c-checkout-product__price">3 400</div><a class="c-checkout-product__link" href="#">к сравнению</a>
+                          </div>
+                          <div class="swiper-slide c-checkout-product">
+                            <div class="c-checkout-product__img"><img src="img/content/option2.jpg" alt=""></div>
+                            <div class="c-checkout-product__title">
+                              Смеситель для 
+                              раковины BelBagno
+                              ADIGEADI -LVM25-CRM
+                            </div>
+                            <div class="c-checkout-product__price">3 400</div><a class="c-checkout-product__link" href="#">к сравнению</a>
+                          </div>
+                          <div class="swiper-slide c-checkout-product">
+                            <div class="c-checkout-product__img"><img src="img/content/option2.jpg" alt=""></div>
+                            <div class="c-checkout-product__title">
+                              Смеситель для 
+                              раковины BelBagno
+                              ADIGEADI -LVM25-CRM
+                            </div>
+                            <div class="c-checkout-product__price">3 400</div><a class="c-checkout-product__link" href="#">к сравнению</a>
+                          </div>
+                          <div class="swiper-slide c-checkout-product">
+                            <div class="c-checkout-product__img"><img src="img/content/option2.jpg" alt=""></div>
+                            <div class="c-checkout-product__title">
+                              Смеситель для 
+                              раковины BelBagno
+                              ADIGEADI -LVM25-CRM
+                            </div>
+                            <div class="c-checkout-product__price">3 400</div><a class="c-checkout-product__link" href="#">к сравнению</a>
+                          </div>
+                          <div class="swiper-slide c-checkout-product">
+                            <div class="c-checkout-product__img"><img src="img/content/option2.jpg" alt=""></div>
+                            <div class="c-checkout-product__title">
+                              Смеситель для 
+                              раковины BelBagno
+                              ADIGEADI -LVM25-CRM
+                            </div>
+                            <div class="c-checkout-product__price">3 400</div><a class="c-checkout-product__link" href="#">к сравнению</a>
+                          </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                      </div>
+                      <div class="swiper-button-prev"></div>
+                      <div class="swiper-button-next"></div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </main>
-<footer></footer>
+<footer class="c-footer">
+  <div class="c-footer__top">
+    <div class="f-dlex flex-column"><img class="c-footer__logo" src="img/icons/logo.svg" alt="">
+      <div class="c-footer__copyright">®SanBest, 2019</div>
+    </div>
+    <div class="c-footer__col c-footer__col_nav">
+      <ul>
+        <li><a href="#">Бренды</a></li>
+        <li><a href="#">Доставка и оплата</a></li>
+        <li><a href="#">Акции</a></li>
+        <li><a href="#">Контакты</a></li>
+      </ul>
+    </div>
+    <div class="c-footer__col c-footer__col_contacts d-flex flex-column justify-content-between">
+      <div><a href="tel:74955653588">+7 (495) 565 35 88</a><a href="mailto:sale@sanbest.ru">sale@sanbest.ru</a></div><a class="c-footer__privacy-link" href="#">Политика конфиденциальности</a>
+    </div>
+    <div class="c-footer__col c-footer__col_placement d-flex flex-column justify-content-between">
+      <p>
+        Посёлок Заречье, Торговая ул., с2, ТЦ "Элитстройматериалы", 1 этаж, место А-18
+        с 10.00 - 20.00 без выходных
+      </p><a href="#">Показать на карте</a>
+    </div>
+    <div class="c-footer__col c-footer__col_cards">
+      <div class="row">
+        <div class="col-md-6 c-footer__card"><img src="img/content/visa.png" alt=""></div>
+        <div class="col-md-6 c-footer__card"><img src="img/content/mastercard.png" alt=""></div>
+        <div class="col-md-6 c-footer__card"><img src="img/content/sberbank.png" alt=""></div>
+        <div class="col-md-6 c-footer__card"><img src="img/content/mir.png" alt=""></div>
+      </div>
+    </div>
+  </div>
+  <div class="c-footer__bottom">
+    <p>Сайт носит исключительно информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями статьи 437(2) ГК Российской федерации</p>
+  </div>
+</footer>
       </div>
     </div>
   <script type="text/javascript" src="js/script.js"></script></body>

@@ -1,0 +1,111 @@
+.c-footer {
+	margin-top: 86px;
+	background-color: #dce7ed;
+	padding: 40px 30px;
+	padding-bottom: 25px;
+
+	&__copyright {
+		font-size: 13px;
+		letter-spacing: 0.53px;
+		color: #8fa2ac;
+	}
+
+	a {
+		margin-bottom: 15px;
+		display: block;
+		text-decoration: none;
+		box-shadow: none;
+		font-size: 14px;
+		color: #8fa2ac;
+		display: block;
+		letter-spacing: 0.56px;
+	}
+
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 45px;
+	}
+
+	&__bottom {
+		text-align: center;
+		font-size: 12px;
+		color: #8fa2ac;
+		letter-spacing: 0.48px;
+		opacity: 0.68;
+
+		p {
+			margin: 0;
+		}
+
+	}
+
+	&__logo {
+		max-width: 120px;
+		margin-bottom: 36px;
+		margin-right: 60px;
+	}
+
+	&__privacy-link {
+		max-width: 200px;
+		line-height: 18px;
+	}
+
+	&__col {
+		&_nav {
+			width: 200px;
+			padding-top: 7px;
+
+			a {
+				margin-bottom: 16px;
+			}
+
+		}
+
+		&_contacts {
+			font-size: 14px;
+			letter-spacing: 0.57px;
+			color: #8fa2ac;
+			position: relative;
+			left: -20px;
+			margin-top: 7px;
+		}
+
+		&_placement {
+			width: 280px;
+			font-size: 14px;
+			letter-spacing: 0.57px;
+			color: #8fa2ac;
+			position: relative;
+			left: -40px;
+			margin-top: 4px;
+
+			p {
+				line-height: 24px;
+			}
+
+		}
+
+		&__card {
+			&:nth-child(2), &:nth-child(4) {
+				position: relative;
+				left: -10px;
+			}
+
+		}
+
+		&_cards {
+			margin-top: 6px;
+			position: relative;
+			left: 4px;
+			width: 230px;
+
+			img {
+				margin-bottom: 28px;
+			}
+
+		}
+
+	}
+
+}
