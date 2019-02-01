@@ -5,7 +5,9 @@
 		background-color: #ebeff4;
 		margin-bottom: 20px;
 		position: relative;
-
+		.swiper-slide{
+			pointer-events: none;
+		}
 		img {
 			margin: 0 auto;
 			display: block;
@@ -27,7 +29,7 @@
 			border-radius: 2px;
 			
 		}
-		.swiper-slide-active {
+		.swiper-slide-thumb-active {
 			border-color: #8cafc2;
 		}
 

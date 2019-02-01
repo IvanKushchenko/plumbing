@@ -49,24 +49,42 @@
                 <div class="col-md-4">
                   <div class="c-product-info">
                     <div class="c-product-preview">
-                      <div class="c-product-preview__main"><img src="img/content/product.jpg" alt="">
-                        <button class="c-product-preview__zoom"></button>
+                      <div class="c-product-preview__main">
+                        <div class="swiper-container js-product-preview-main" id="js-product-preview-main">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <div class="js-product-preview-item" data-src="../img/content/product.jpg"><img class="c-product-preview__thumbnail" src="img/content/product.jpg" alt=""></div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="js-product-preview-item" data-src="../img/content/product.jpg"><img class="c-product-preview__thumbnail" src="img/content/product.jpg" alt=""></div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="js-product-preview-item" data-src="../img/content/product.jpg"><img class="c-product-preview__thumbnail" src="img/content/product.jpg" alt=""></div>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="c-product-preview__zoom js-product-preview-btn"></button>
                       </div>
                       <div class="c-product-preview__thumbnails">
                         <div class="swiper-container js-product-preview-thumbnails">
                           <div class="swiper-wrapper">
                             <div class="swiper-slide"><img class="c-product-preview__thumbnail" src="img/content/product-thumbnail.jpg" alt=""></div>
                             <div class="swiper-slide"><img class="c-product-preview__thumbnail" src="img/content/product-thumbnail2.jpg" alt=""></div>
-                            <div class="swiper-slide"><img class="c-product-preview__thumbnail" src="img/content/product-thumbnail3.jpg" alt=""></div>
-                            <div class="swiper-slide"><img class="c-product-preview__thumbnail" src="img/content/product-thumbnail3.jpg" alt=""></div>
-                            <div class="swiper-slide"><img class="c-product-preview__thumbnail" src="img/content/product-thumbnail3.jpg" alt=""></div>
+                            <div class="swiper-slide"><img class="c-product-preview__thumbnail" src="img/content/product-thumbnail.jpg" alt=""></div>
                           </div>
                         </div>
                         <div class="swiper-button-next"></div>
                       </div>
                     </div>
                     <div class="c-product-info__code">Код товара:  B22528</div>
-                    <div class="c-product-info__showroom">Модель бренда есть в шоуруме</div>
+                    <div class="c-product-info__showroom">Модель бренда есть в шоуруме
+                      <div class="c-product-info__showroom-text">
+                        <h4 class="c-product-info__showroom-text-title"></h4>
+                        <h5>Можно посмотреть:</h5>
+                        <p>text</p><a href="#">Схема проезда</a><a href="#">Адреса всех шоурумов</a>
+                        <div class="c-product-info__showroom-close"></div>
+                      </div>
+                    </div>
                     <div class="c-product-info__description">
                       <table class="c-table">
                         <tbody>
@@ -126,7 +144,7 @@
                           </tr>
                           <tr>
                             <td>Размер(ДxШxВ), см:</td>
-                            <td> <a href="#">(108-113)x(68-73)x190</a></td>
+                            <td>(108-113)x(68-73)x190</td>
                           </tr>
                         </tbody>
                       </table>
@@ -423,7 +441,18 @@
                       </div>
                     </div>
                   </div>
-                  <div class="c-product__order-checkout">
+                  <div class="c-product__order-checkout c-product__order-checkout_fixed js-product-order-checkout-fixed">
+                    <div class="c-product__order-checkout-top">
+                      <div class="d-flex align-items-center justify-content-between w-100">
+                        <div class="c-product__choosen">Выбрано:<a class="c-product__choosen-count" href="#">3 товара</a></div>
+                        <div class="c-product__price">Стоимость:
+                          <div class="c-product__price-number">28 650</div>
+                        </div>
+                        <div class="c-product__order-actions d-flex"><a class="c-btn c-btn_secondary" href="#">В КОРЗИНУ</a><a class="c-btn c-btn_secondary" href="#">КУПИТЬ В 1 КЛИК</a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="c-product__order-checkout js-product-order-checkout-static">
                     <div class="c-product__order-checkout-top collapsed" data-toggle="collapse" aria-expanded="false" href="#order-checkout-products">
                       <div class="d-flex align-items-center justify-content-between w-100">
                         <div class="c-product__choosen">Выбрано:<a class="c-product__choosen-count" href="#">3 товара</a></div>

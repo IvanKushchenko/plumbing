@@ -112,7 +112,13 @@
 		margin-bottom: 70px;
 		border-radius: 3px;
 		border: 2px solid #e4edf2;
-
+		&_fixed{
+			cursor: default;
+			position: fixed;
+			bottom: 0;
+			z-index: 220;
+			margin: 0;
+		}
 		.c-product__price {
 			margin-left: 0;
 		}

@@ -28,8 +28,20 @@ html(lang="ru")
 									.c-product-info
 										.c-product-preview
 											.c-product-preview__main
-												img(src=require("../img/content/product.jpg"), alt="")
-												button.c-product-preview__zoom
+												.swiper-container.js-product-preview-main#js-product-preview-main
+													.swiper-wrapper
+														.swiper-slide
+															div(data-src="../img/content/product.jpg").js-product-preview-item
+																img(src=require("../img/content/product.jpg"), alt="").c-product-preview__thumbnail
+														.swiper-slide
+															div(data-src="../img/content/product.jpg").js-product-preview-item
+																img(src=require("../img/content/product.jpg"), alt="").c-product-preview__thumbnail
+														.swiper-slide
+															div(data-src="../img/content/product.jpg").js-product-preview-item
+																img(src=require("../img/content/product.jpg"), alt="").c-product-preview__thumbnail
+
+												button.c-product-preview__zoom.js-product-preview-btn
+
 											.c-product-preview__thumbnails
 												.swiper-container.js-product-preview-thumbnails
 													.swiper-wrapper
@@ -38,14 +50,17 @@ html(lang="ru")
 														.swiper-slide
 															img(src=require("../img/content/product-thumbnail2.jpg"), alt="").c-product-preview__thumbnail
 														.swiper-slide
-															img(src=require("../img/content/product-thumbnail3.jpg"), alt="").c-product-preview__thumbnail
-														.swiper-slide
-															img(src=require("../img/content/product-thumbnail3.jpg"), alt="").c-product-preview__thumbnail
-														.swiper-slide
-															img(src=require("../img/content/product-thumbnail3.jpg"), alt="").c-product-preview__thumbnail
+															img(src=require("../img/content/product-thumbnail.jpg"), alt="").c-product-preview__thumbnail
 												.swiper-button-next
 										.c-product-info__code Код товара:  B22528
 										.c-product-info__showroom Модель бренда есть в шоуруме
+											.c-product-info__showroom-text
+												h4.c-product-info__showroom-text-title
+												h5 Можно посмотреть:
+												p text
+												a(href="#") Схема проезда
+												a(href="#") Адреса всех шоурумов
+												.c-product-info__showroom-close
 										.c-product-info__description
 											table.c-table
 												tbody
@@ -97,8 +112,7 @@ html(lang="ru")
 																.dropdown-menu as
 													tr
 														td Размер(ДxШxВ), см:
-														td 
-															a(href="#") (108-113)x(68-73)x190
+														td (108-113)x(68-73)x190
 										.c-product-info__actions
 
 											a(href="#").c-product-info__action
@@ -366,7 +380,19 @@ html(lang="ru")
 													.c-product-card__price 13 400
 												.c-table__cell
 													a(href="#").c-btn.c-btn_primary.c-product-card__btn выбрать
-									.c-product__order-checkout
+									.c-product__order-checkout.c-product__order-checkout_fixed.js-product-order-checkout-fixed
+										.c-product__order-checkout-top
+											.d-flex.align-items-center.justify-content-between.w-100
+												.c-product__choosen
+													| Выбрано:
+													a(href="#").c-product__choosen-count 3 товара
+												.c-product__price
+													| Стоимость:
+													.c-product__price-number 28 650
+												.c-product__order-actions.d-flex
+													a(href="#").c-btn.c-btn_secondary В КОРЗИНУ
+													a(href="#").c-btn.c-btn_secondary КУПИТЬ В 1 КЛИК
+									.c-product__order-checkout.js-product-order-checkout-static
 										.c-product__order-checkout-top.collapsed(data-toggle="collapse", aria-expanded="false", href="#order-checkout-products")
 											.d-flex.align-items-center.justify-content-between.w-100
 												.c-product__choosen
