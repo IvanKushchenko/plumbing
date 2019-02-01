@@ -113,7 +113,7 @@ $(function() {
 
 
     function checkoutProducts() {
-        var orderCheckoutBl = $('.js-product-order-checkout-static, .js-product-order-checkout-fixed');
+        var orderCheckoutBl = $('.js-product-order-checkout-static, .js-product-order-checkout-fixed, .c-product__order-info');
         var resultCost = 0;
         $(products).each(function(i, item) {
             resultCost = resultCost + +item['price'].replace(/\D+/g, '');

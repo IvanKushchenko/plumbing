@@ -12252,6 +12252,13 @@ a:hover {
 
 .c-watch-earlier .c-checkout-product__img {
   margin-bottom: 37px;
+  width: 145px;
+  height: 135px;
+}
+
+.c-watch-earlier .c-checkout-product__img img {
+  object-fit: contain;
+  object-position: bottom;
 }
 
 .c-watch-earlier .c-checkout-product__title {

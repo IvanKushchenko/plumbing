@@ -50,6 +50,12 @@
 
 		&__img{
 			margin-bottom: 37px;
+		    width: 145px;
+		    height: 135px;
+			img{
+				object-fit: contain;
+			    object-position: bottom;
+			}
 		}
 		&__title{
 			padding: 0 10px;
