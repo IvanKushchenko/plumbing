@@ -1,35 +1,60 @@
 .c-table {
 	width: 100%;
 	position: relative;
+
 	@media (max-width:$bp-lg) {
 		width: calc(100% + 60px);
 		left: -20px;
 	}
-	&_width-notification &__body{
+	@media (max-width:$bp-md) {
+		width: calc(100% + 47px);
+	}
+	&_width-notification &__body {
 		padding-bottom: 47px;
+
 		@media (max-width:$bp-lg) {
 			padding-bottom: 0;
 		}
+
 	}
+
 	&_product {
 		margin-bottom: 50px;
 	}
-	&_product &__cell,
-	&_options &__cell{
+
+	&_product &__cell, &_options &__cell {
 		@media (max-width:$bp-xl) {
-			&:nth-child(2){
+			&:nth-child(2) {
 				max-width: 40%;
 				margin-right: 5%;
 			}
-			&:nth-child(3){
+
+			&:nth-child(3) {
 				padding-left: 0;
 			}
-			
+
 		}
+
+		@media (max-width:$bp-md) {
+			&:nth-child(2) {
+				max-width: 100%;
+				margin-right: 5%;
+			}
+
+		}
+		@media (max-width:$bp-sm-2) {
+			&:nth-child(2) {
+				margin-right: 0;
+				padding-left: 10px;
+			}
+		}
+
 	}
+
 	&_options {
 		margin-bottom: 45px;
 	}
+
 	&__header {
 		height: 32px;
 		padding-left: 30px;
@@ -45,7 +70,9 @@
 		top: 0;
 		width: 97.5%;
 		z-index: 3;
-
+		@media (max-width:$bp-md) {
+			width: 100%;
+		}
 		a {
 			margin-left: 15px;
 			font-family: "PT Sans";
@@ -61,7 +88,6 @@
 		max-height: 660px;
 		overflow: auto;
 		padding-right: calc(2.5% - 7px);
-		
 
 		&::-webkit-scrollbar {
 			width: 7px;
@@ -74,6 +100,9 @@
 		&::-webkit-scrollbar-thumb {
 			background-color: #8cafc2;
 		}
+		@media (max-width:$bp-md) {
+			padding-right: 0;
+		}
 
 	}
 
@@ -84,23 +113,35 @@
 		justify-content: space-between;
 		border: 1px solid #ecf2f6;
 		border-top: none;
+
 		@media (max-width:$bp-lg) {
 			padding: 12px 15px;
 		}
+
 	}
 
 	&__cell {
-		&:last-child {
-			flex-grow: 1;
-		}
+		
 
 		&:not(:first-child) {
 			padding-left: 24px;
 		}
+		&:last-child {
+			flex-grow: 1;
 
+			@media (max-width:$bp-md) {
+				padding-left: 0;
+			}
+
+		}
 		&:nth-child(3) {
 			padding-left: 65px;
 			margin-top: -26px;
+
+			@media (max-width:$bp-md) {
+				display: none;
+			}
+
 		}
 
 	}
@@ -122,9 +163,11 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+
 		@media (max-width:$bp-lg) {
 			display: none;
 		}
+
 		&:hover {
 			color: #fff;
 		}

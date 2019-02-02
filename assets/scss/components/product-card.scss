@@ -72,7 +72,7 @@
 		font-family: "Roboto Slab";
 		font-size: 15px;
 		line-height: 1.2;
-
+		
 		&:after {
 			content: 'a';
 			display: inline-block;
@@ -82,6 +82,9 @@
 
 		&_old {
 			text-decoration: line-through;
+			@media (max-width:$bp-md) {
+				margin-right: 10px;	
+		}
 		}
 
 		&_new {

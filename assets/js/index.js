@@ -75,6 +75,14 @@ $(function() {
     var checkoutProducts = new Swiper('.js-checkout-products', {
         slidesPerView: 5,
         spaceBetween: 20,
+        breakpoints: {
+        	992:{
+        		slidesPerView: 3
+        	},
+        	450:{
+        		slidesPerView: 2
+        	}
+        },
         navigation: {
             nextEl: '.c-checkout-products .swiper-button-next',
             prevEl: '.c-checkout-products .swiper-button-prev'

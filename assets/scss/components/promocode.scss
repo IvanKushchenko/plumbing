@@ -6,6 +6,10 @@
 	margin-right: 4px;
 	margin-top: 3px;
 
+	@media (max-width:$bp-sm-2) {
+		margin-bottom: 10px;
+	}
+
 	&__txt {
 		font-size: 13px;
 		letter-spacing: 0.2px;

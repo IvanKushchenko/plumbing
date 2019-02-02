@@ -1,6 +1,9 @@
 .c-counter{
 	display: flex;
 	align-items: center;
+	@media (max-width:$bp-sm-2) {
+		margin-bottom: 10px;
+	}
 	&__timer{
 		display: flex;
 		align-items: center;

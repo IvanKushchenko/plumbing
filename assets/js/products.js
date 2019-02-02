@@ -11,7 +11,7 @@ $(function() {
         var articul = currentProduct.find('.c-product-card__subtitle').text().replace(/^\D+/g, '');;
         var img = currentProduct.find('.c-product-card__img').attr('src');
         var name = currentProduct.find('.c-product-card__title').text();
-        var price = (currentProduct.find('.c-product-card__price_new').length) ? currentProduct.find('.c-product-card__price_new').text() : currentProduct.find('.c-product-card__price').text();
+        var price = (currentProduct.find('.c-product-card__price_new').eq(0).length) ? currentProduct.find('.c-product-card__price_new').eq(0).text() : currentProduct.find('.c-product-card__price').eq(0).text();
         var product = {
             articul: articul,
             img: img,
@@ -46,7 +46,7 @@ $(function() {
         var articul = currentProduct.find('.c-product-card__subtitle').text().replace(/^\D+/g, '');
         var img = currentProduct.find('.c-product-card__img').attr('src');
         var name = currentProduct.find('.c-product-card__title').text();
-        var price = (currentProduct.find('.c-product-card__price_new').length) ? currentProduct.find('.c-product-card__price_new').text() : currentProduct.find('.c-product-card__price').text();
+        var price = (currentProduct.find('.c-product-card__price_new').eq(0).length) ? currentProduct.find('.c-product-card__price_new').eq(0).text() : currentProduct.find('.c-product-card__price').eq(0).text();
         var product = {
             articul: articul,
             img: img,

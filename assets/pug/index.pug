@@ -154,7 +154,7 @@ html(lang="ru")
 																span.c-product-info__action-text оформить кредит online
 									.c-product-info__actions.d-lg-none
 										.row
-											.col-6
+											.col-6.c-product-info__action-container
 												a(href="#").c-product-info__action
 													.c-product-info__action-inner
 														.c-product-info__action-icon-wrap
@@ -165,7 +165,7 @@ html(lang="ru")
 														.c-product-info__action-icon-wrap
 															img(src=require("../img/icons/repair.png"), alt="").c-product-info__action-icon 
 														span.c-product-info__action-text установка от 5000
-											.col-6
+											.col-6.c-product-info__action-container
 												a(href="#").c-product-info__action
 													.c-product-info__action-inner
 														.c-product-info__action-icon-wrap
@@ -220,7 +220,7 @@ html(lang="ru")
 														.c-progress-radial__footer минут
 												.c-counter__txt осталось до конца акции
 									.c-product__order-info.c-product__order-info_mobile.d-lg-none.d-flex.align-items-center.flex-column.justify-content-between
-										.d-flex.w-100.justify-content-between.justify-content-md-center
+										.d-flex.w-100.justify-content-between.justify-content-md-center.c-product__order-info-inner
 											.c-product__choosen
 												| Выбрано:
 												a(href="#").c-product__choosen-count 0 товара
@@ -228,7 +228,7 @@ html(lang="ru")
 												| Итого:
 												.c-product__price-number.c-product__price-number_old 0
 												.c-product__price-number.c-product__price-number_new 0
-										.d-flex.w-100.justify-content-between.mb-4
+										.d-flex.w-100.justify-content-between.mb-4.c-product__order-info-inner
 											.c-promocode
 												.c-promocode__txt.d-md-none промокод 
 												.c-promocode__txt.d-none.d-md-block
@@ -278,8 +278,11 @@ html(lang="ru")
 												.c-table__cell
 													a(href="#!").c-product-card__title Гидромассаж название
 													.c-product-card__subtitle Арт.  23370001
+													.d-flex.align-items-center.d-md-none.mb-2
+														.c-product-card__price.c-product-card__price_old 2772
+														.c-product-card__price.c-product-card__price_new 1 990
 													.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
-												.c-table__cell
+												.c-table__cell.d-none.d-md-block
 													.c-product-card__price.c-product-card__price_old 2772
 													.c-product-card__price.c-product-card__price_new 1 990
 												.c-table__cell
@@ -292,8 +295,11 @@ html(lang="ru")
 												.c-table__cell
 													a(href="#!").c-product-card__title Гидромассаж название
 													.c-product-card__subtitle Арт.  23370002
+													.d-flex.align-items-center.d-md-none.mb-2
+														.c-product-card__price.c-product-card__price_old 2772
+														.c-product-card__price.c-product-card__price_new 1 990
 													.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
-												.c-table__cell
+												.c-table__cell.d-none.d-md-block
 													.c-product-card__price.c-product-card__price_old 2772
 													.c-product-card__price.c-product-card__price_new 1 990
 												.c-table__cell
@@ -306,8 +312,11 @@ html(lang="ru")
 												.c-table__cell
 													a(href="#!").c-product-card__title Гидромассаж название
 													.c-product-card__subtitle Арт.  233700031
+													.d-flex.align-items-center.d-md-none.mb-2
+														.c-product-card__price.c-product-card__price_old 2772
+														.c-product-card__price.c-product-card__price_new 1 990
 													.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
-												.c-table__cell
+												.c-table__cell.d-none.d-md-block
 													.c-product-card__price.c-product-card__price_old 2772
 													.c-product-card__price.c-product-card__price_new 1 990
 												.c-table__cell
@@ -320,8 +329,11 @@ html(lang="ru")
 												.c-table__cell
 													a(href="#!").c-product-card__title Гидромассаж название
 													.c-product-card__subtitle Арт.  233700041
+													.d-flex.align-items-center.d-md-none.mb-2
+														.c-product-card__price.c-product-card__price_old 2772
+														.c-product-card__price.c-product-card__price_new 1 990
 													.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
-												.c-table__cell
+												.c-table__cell.d-none.d-md-block
 													.c-product-card__price.c-product-card__price_old 2772
 													.c-product-card__price.c-product-card__price_new 1 990
 												.c-table__cell
@@ -334,8 +346,11 @@ html(lang="ru")
 												.c-table__cell
 													a(href="#!").c-product-card__title Гидромассаж название
 													.c-product-card__subtitle Арт.  233700501
+													.d-flex.align-items-center.d-md-none.mb-2
+														.c-product-card__price.c-product-card__price_old 2772
+														.c-product-card__price.c-product-card__price_new 1 990
 													.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
-												.c-table__cell
+												.c-table__cell.d-none.d-md-block
 													.c-product-card__price.c-product-card__price_old 2772
 													.c-product-card__price.c-product-card__price_new 1 990
 												.c-table__cell
@@ -352,8 +367,10 @@ html(lang="ru")
 												.c-table__cell
 													a(href="#!").c-product-card__title Гидромассаж название
 													.c-product-card__subtitle Арт.  233702001
+													.d-flex.align-items-center.d-md-none.mb-2
+														.c-product-card__price 13 400
 													.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
-												.c-table__cell
+												.c-table__cell.d-none.d-md-block
 													.c-product-card__price 13 400
 												.c-table__cell
 													a(href="#").c-btn.c-btn_primary.c-product-card__btn выбрать
@@ -364,8 +381,10 @@ html(lang="ru")
 												.c-table__cell
 													a(href="#!").c-product-card__title Гидромассаж название
 													.c-product-card__subtitle Арт.  233700301
+													.d-flex.align-items-center.d-md-none.mb-2
+														.c-product-card__price 13 400
 													.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
-												.c-table__cell
+												.c-table__cell.d-none.d-md-block
 													.c-product-card__price 13 400
 												.c-table__cell
 													a(href="#").c-btn.c-btn_primary.c-product-card__btn выбрать
@@ -376,8 +395,10 @@ html(lang="ru")
 												.c-table__cell
 													a(href="#!").c-product-card__title Гидромассаж название
 													.c-product-card__subtitle Арт.  233703001
+													.d-flex.align-items-center.d-md-none.mb-2
+														.c-product-card__price 13 400
 													.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
-												.c-table__cell
+												.c-table__cell.d-none.d-md-block
 													.c-product-card__price 13 400
 												.c-table__cell
 													a(href="#").c-btn.c-btn_primary.c-product-card__btn выбрать
@@ -388,8 +409,10 @@ html(lang="ru")
 												.c-table__cell
 													a(href="#!").c-product-card__title Гидромассаж название
 													.c-product-card__subtitle Арт.  233705001
+													.d-flex.align-items-center.d-md-none.mb-2
+														.c-product-card__price 13 400
 													.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
-												.c-table__cell
+												.c-table__cell.d-none.d-md-block
 													.c-product-card__price 13 400
 												.c-table__cell
 													a(href="#").c-btn.c-btn_primary.c-product-card__btn выбрать
@@ -400,8 +423,10 @@ html(lang="ru")
 												.c-table__cell
 													a(href="#!").c-product-card__title Гидромассаж название
 													.c-product-card__subtitle Арт.  233700601
+													.d-flex.align-items-center.d-md-none.mb-2
+														.c-product-card__price 13 400
 													.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
-												.c-table__cell
+												.c-table__cell.d-none.d-md-block
 													.c-product-card__price 13 400
 												.c-table__cell
 													a(href="#").c-btn.c-btn_primary.c-product-card__btn выбрать
@@ -419,8 +444,10 @@ html(lang="ru")
 													.c-table__cell
 														a(href="#!").c-product-card__title Гидромассаж название
 														.c-product-card__subtitle Арт.  233708001
+														.d-flex.align-items-center.d-md-none.mb-2
+															.c-product-card__price 13 400
 														.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
-													.c-table__cell
+													.c-table__cell.d-none.d-md-block
 														.c-product-card__price 13 400
 													.c-table__cell
 														a(href="#").c-btn.c-btn_primary.c-product-card__btn выбрать
@@ -431,8 +458,10 @@ html(lang="ru")
 													.c-table__cell
 														a(href="#!").c-product-card__title Гидромассаж название
 														.c-product-card__subtitle Арт.  233700061
+														.d-flex.align-items-center.d-md-none.mb-2
+															.c-product-card__price 13 400
 														.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
-													.c-table__cell
+													.c-table__cell.d-none.d-md-block
 														.c-product-card__price 13 400
 													.c-table__cell
 														a(href="#").c-btn.c-btn_primary.c-product-card__btn выбрать
@@ -443,8 +472,10 @@ html(lang="ru")
 													.c-table__cell
 														a(href="#!").c-product-card__title Гидромассаж название
 														.c-product-card__subtitle Арт.  233700501
+														.d-flex.align-items-center.d-md-none.mb-2
+															.c-product-card__price 13 400
 														.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
-													.c-table__cell
+													.c-table__cell.d-none.d-md-block
 														.c-product-card__price 13 400
 													.c-table__cell
 														a(href="#").c-btn.c-btn_primary.c-product-card__btn выбрать
@@ -455,8 +486,10 @@ html(lang="ru")
 													.c-table__cell
 														a(href="#!").c-product-card__title Гидромассаж название
 														.c-product-card__subtitle Арт.  233700401
+														.d-flex.align-items-center.d-md-none.mb-2
+															.c-product-card__price 13 400
 														.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
-													.c-table__cell
+													.c-table__cell.d-none.d-md-block
 														.c-product-card__price 13 400
 													.c-table__cell
 														a(href="#").c-btn.c-btn_primary.c-product-card__btn выбрать
@@ -467,8 +500,10 @@ html(lang="ru")
 													.c-table__cell
 														a(href="#!").c-product-card__title Гидромассаж название
 														.c-product-card__subtitle Арт.  2337005501
+														.d-flex.align-items-center.d-md-none.mb-2
+															.c-product-card__price 13 400
 														.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
-													.c-table__cell
+													.c-table__cell.d-none.d-md-block
 														.c-product-card__price 13 400
 													.c-table__cell
 														a(href="#").c-btn.c-btn_primary.c-product-card__btn выбрать
@@ -489,7 +524,7 @@ html(lang="ru")
 													.c-product__choosen
 														| Выбрано:
 														a(href="#").c-product__choosen-count 0 товара
-												.d-flex
+												.d-flex.c-product__order-checkout-inner
 													.c-product__price
 														| Стоимость:
 														.c-product__price-number 0
@@ -509,11 +544,11 @@ html(lang="ru")
 													a(href="#").c-btn.c-btn_secondary В КОРЗИНУ
 													a(href="#").c-btn.c-btn_secondary КУПИТЬ В 1 КЛИК
 											.d-flex.d-md-none.flex-column.align-items-center.justify-content-between.w-100
-												.d-flex.mb-3
+												.d-flex.mb-1.mb-sm-3
 													.c-product__choosen
 														| Выбрано:
 														a(href="#").c-product__choosen-count 0 товара
-												.d-flex
+												.d-flex.c-product__order-checkout-inner
 													.c-product__price
 														| Стоимость:
 														.c-product__price-number 0
