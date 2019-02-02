@@ -184,4 +184,12 @@ $(function() {
     	}
     })
 
+    $('#product-info-body').on('hide.bs.collapse', function () {
+		$('.js-product-info-collapse-toggle a').text('показать все характеристики');
+	})
+	$('#product-info-body').on('show.bs.collapse', function () {
+		$('.js-product-info-collapse-toggle a').text('Свернуть характеристики');
+	})
+
+
 });

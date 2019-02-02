@@ -3,7 +3,20 @@
 	background-color: #dce7ed;
 	padding: 40px 30px;
 	padding-bottom: 25px;
-
+	&__map{
+		position: relative;
+		left: -30px;
+		width: calc(100% + 60px);
+		margin-bottom: 15px;
+		@media (max-width:$bp-md) {
+				height: 310px;
+			}
+		& > ymaps{
+			@media (max-width:$bp-md) {
+				height: 100% !important;
+			}
+		}
+	}
 	&__copyright {
 		font-size: 13px;
 		letter-spacing: 0.53px;
@@ -27,10 +40,7 @@
 	&__top {
 		display: flex;
 		justify-content: space-between;
-		margin-bottom: 45px;
-		@media (max-width:$bp-lg) {
-			margin-bottom: 15px;
-		}
+		margin-bottom: 15px;
 	}
 
 	&__bottom {
@@ -182,9 +192,11 @@
 			}
 			img {
 				margin-bottom: 28px;
+				@media (max-width:$bp-xl) {
+					margin-bottom: 15px;
+				}
 				@media (max-width:$bp-md) {
 					max-width: 100%;
-					margin-bottom: 0;
 				}
 			}
 

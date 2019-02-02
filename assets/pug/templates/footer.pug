@@ -52,7 +52,7 @@ footer.c-footer
 							Посёлок Заречье, Торговая ул., с2, ТЦ "Элитстройматериалы", 1 этаж, место А-18
 							с 10.00 - 20.00 без выходных
 					a(href="#") Показать на карте
-		.d-flex
+		.d-none.d-xl-flex
 			.c-footer__col.c-footer__col_cards
 				.row
 					.col-3.col-xl-6.c-footer__card.text-center.text-md-left
@@ -64,7 +64,22 @@ footer.c-footer
 						img(src=require("../../img/content/sberbank.png"), alt="")
 					.col-3.col-xl-6.c-footer__card.text-center.text-md-left
 						img(src=require("../../img/content/mir.png"), alt="")
+	.c-footer__map
+		<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A2d83b20ffab53983a879aa5e747ccb35c97b85a0d0f19c104ff479d439f485eb&amp;width=100%25&amp;height=463&amp;lang=ru_RU&amp;scroll=false"></script>
+	.d-flex.d-xl-none
+		.c-footer__col.c-footer__col_cards
+			.row
+				.col-3.col-xl-6.c-footer__card.text-center.text-md-left
+					img(src=require("../../img/content/visa.png"), alt="")
+				.col-3.col-xl-6.c-footer__card.text-center.text-md-left
+					img(src=require("../../img/content/mastercard.png"), alt="")
+
+				.col-3.col-xl-6.c-footer__card.text-center.text-md-left
+					img(src=require("../../img/content/sberbank.png"), alt="")
+				.col-3.col-xl-6.c-footer__card.text-center.text-md-left
+					img(src=require("../../img/content/mir.png"), alt="")
 	.c-footer__bottom
+
 		p
 			.
 				Сайт носит исключительно информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями статьи 437(2) ГК Российской федерации

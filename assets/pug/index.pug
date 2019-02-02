@@ -79,7 +79,7 @@ html(lang="ru")
 												.c-product-info__body
 													.c-product-info__code Код товара:  B22528
 													.c-product-info__showroom Модель бренда есть в шоуруме
-													.c-product-info__description
+													.c-product-info__description.collapse.show#product-info-body
 														table.c-table
 															tbody
 																tr
@@ -131,6 +131,8 @@ html(lang="ru")
 																tr
 																	td Размер(ДxШxВ), см:
 																	td (108-113)x(68-73)x190
+													.d-md-none.c-product-info__collapse-toggle.js-product-info-collapse-toggle
+														a(href="#product-info-body" data-toggle="collapse" aria-expanded="true") Свернуть характеристики
 													.c-product-info__actions.d-none.d-lg-block
 														a(href="#").c-product-info__action
 															.c-product-info__action-inner
@@ -152,6 +154,7 @@ html(lang="ru")
 																.c-product-info__action-icon-wrap
 																	img(src=require("../img/icons/fast.png"), alt="").c-product-info__action-icon 
 																span.c-product-info__action-text оформить кредит online
+
 									.c-product-info__actions.d-lg-none
 										.row
 											.col-6.c-product-info__action-container
@@ -520,7 +523,7 @@ html(lang="ru")
 													a(href="#").c-btn.c-btn_secondary В КОРЗИНУ
 													a(href="#").c-btn.c-btn_secondary КУПИТЬ В 1 КЛИК
 											.d-flex.d-md-none.flex-column.align-items-center.justify-content-between.w-100
-												.d-flex.mb-3
+												.d-flex.mb-1
 													.c-product__choosen
 														| Выбрано:
 														a(href="#").c-product__choosen-count 0 товара

@@ -8,7 +8,9 @@
 		font-size: 14px;
 		font-weight: 400;
 		box-shadow: none;
-
+		@media (max-width:$bp-sm-2) {
+			white-space: nowrap;
+		}
 		&:not(:last-child) {
 			margin-right: 23px;
 
