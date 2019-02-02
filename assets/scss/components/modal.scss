@@ -1,0 +1,28 @@
+.c-modal{
+	&__header{
+		height: 0;
+		padding: 0;
+	}
+	&__dialog{
+		max-width: 1140px;
+	}
+	&__description{
+		margin-bottom: 0;
+	}
+	.close{
+		position: absolute;
+		top: -10px;
+		right: -10px;
+		width: 25px;
+		height: 25px;
+		border-radius: 50%;
+		padding: 0;
+		background: #ecf2f6 url('../img/icons/close.png') no-repeat center center;
+	}
+	&__body{
+		padding: 30px;
+		padding-bottom: 15px;
+	}
+
+
+}

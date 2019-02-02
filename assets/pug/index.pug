@@ -24,7 +24,7 @@ html(lang="ru")
 							a(href="#") Смесители для душа
 
 					.c-product
-						.c-product__header.d-flex.justify-content-between.align-items-center
+						.c-product__header.d-flex.justify-content-between.align-items-start.align-items-lg-center
 							h1.c-product__title Смеситель для раковины Grohe Bauloop 23337 000
 							.c-product__actionsd.d-flex.align-items-center
 								a(href="#!").c-product__action
@@ -35,119 +35,149 @@ html(lang="ru")
 									span версия для печати
 						.c-product__body
 							.row
-								.col-md-4
+								.col-lg-4
 									.c-product-info
-										.c-product-preview
-											.c-product-preview__main
-												.swiper-container.js-product-preview-main#js-product-preview-main
-													.swiper-wrapper
-														.swiper-slide
-															div(data-src="../img/content/product.jpg").js-product-preview-item
+										.row
+											.col-md-6.col-lg-12
+												.c-product-preview-mobile.d-md-none.js-product-preview-mobile
+													.swiper-container
+														.swiper-wrapper
+															.swiper-slide
 																img(src=require("../img/content/product.jpg"), alt="").c-product-preview__thumbnail
-														.swiper-slide
-															div(data-src="../img/content/product.jpg").js-product-preview-item
+															.swiper-slide
 																img(src=require("../img/content/product.jpg"), alt="").c-product-preview__thumbnail
-														.swiper-slide
-															div(data-src="../img/content/product.jpg").js-product-preview-item
+															.swiper-slide
 																img(src=require("../img/content/product.jpg"), alt="").c-product-preview__thumbnail
+														.swiper-pagination
+												.d-none.d-md-block.c-product-preview.js-product-preview-page
+													.c-product-preview__main
+														.swiper-container.js-product-preview-main#js-product-preview-main
+															.swiper-wrapper
+																.swiper-slide
+																	div(data-src="../img/content/product.jpg").js-product-preview-item
+																		img(src=require("../img/content/product.jpg"), alt="").c-product-preview__thumbnail
+																.swiper-slide
+																	div(data-src="../img/content/product.jpg").js-product-preview-item
+																		img(src=require("../img/content/product.jpg"), alt="").c-product-preview__thumbnail
+																.swiper-slide
+																	div(data-src="../img/content/product.jpg").js-product-preview-item
+																		img(src=require("../img/content/product.jpg"), alt="").c-product-preview__thumbnail
 
-												button.c-product-preview__zoom.js-product-preview-btn
+														button.c-product-preview__zoom.js-product-preview-btn
 
-											.c-product-preview__thumbnails
-												.swiper-container.js-product-preview-thumbnails
-													.swiper-wrapper
-														.swiper-slide
-															img(src=require("../img/content/product-thumbnail.jpg"), alt="").c-product-preview__thumbnail
-														.swiper-slide
-															img(src=require("../img/content/product-thumbnail2.jpg"), alt="").c-product-preview__thumbnail
-														.swiper-slide
-															img(src=require("../img/content/product-thumbnail.jpg"), alt="").c-product-preview__thumbnail
-												.swiper-button-next
-										.c-product-info__code Код товара:  B22528
-										.c-product-info__showroom Модель бренда есть в шоуруме
-											//- .c-product-info__showroom-text
-											//- 	h4.c-product-info__showroom-text-title
-											//- 	h5 Можно посмотреть:
-											//- 	p text
-											//- 	a(href="#") Схема проезда
-											//- 	a(href="#") Адреса всех шоурумов
-											//- 	.c-product-info__showroom-close
-										.c-product-info__description
-											table.c-table
-												tbody
-													tr
-														td Бренд:
-														td 
-															a(href="#") Vegas
-													tr
-														td Коллекция:
-														td 
-															a(href="#") ZP+ZPV
-													tr
-														td Страна:
-														td Россия
-													tr
-														td Материал витража:
-														td 
-															a(href="#") Стекло
-													tr
-														td Высота поддона:
-														td 
-															a(href="#") Низкий
-													tr
-														td Стиль:
-														td 
-															a(href="#") Современный
-													tr
-														td Тип дверей:
-														td 
-															a(href="#") Одна раздвижная
-													tr
-														td Форма:
-														td 
-															a(href="#") Прямоугольная
-													tr
-														td Цвет профиля:
-														td 
-															.dropdown.c-dropdown
-																.dropdown-toggle.c-dropdown-toggle
-																	.c-dropdown-toggle__link 2 варианта
-																.dropdown-menu as
+													.c-product-preview__thumbnails
+														.swiper-container.js-product-preview-thumbnails
+															.swiper-wrapper
+																.swiper-slide
+																	img(src=require("../img/content/product-thumbnail.jpg"), alt="").c-product-preview__thumbnail
+																.swiper-slide
+																	img(src=require("../img/content/product-thumbnail2.jpg"), alt="").c-product-preview__thumbnail
+																.swiper-slide
+																	img(src=require("../img/content/product-thumbnail.jpg"), alt="").c-product-preview__thumbnail
+														.swiper-button-next
+											.col-md-6.col-lg-12
+												.c-product-info__body
+													.c-product-info__code Код товара:  B22528
+													.c-product-info__showroom Модель бренда есть в шоуруме
+													.c-product-info__description
+														table.c-table
+															tbody
+																tr
+																	td Бренд:
+																	td 
+																		a(href="#") Vegas
+																tr
+																	td Коллекция:
+																	td 
+																		a(href="#") ZP+ZPV
+																tr
+																	td Страна:
+																	td Россия
+																tr
+																	td Материал витража:
+																	td 
+																		a(href="#") Стекло
+																tr
+																	td Высота поддона:
+																	td 
+																		a(href="#") Низкий
+																tr
+																	td Стиль:
+																	td 
+																		a(href="#") Современный
+																tr
+																	td Тип дверей:
+																	td 
+																		a(href="#") Одна раздвижная
+																tr
+																	td Форма:
+																	td 
+																		a(href="#") Прямоугольная
+																tr
+																	td Цвет профиля:
+																	td 
+																		.dropdown.c-dropdown
+																			.dropdown-toggle.c-dropdown-toggle
+																				.c-dropdown-toggle__link 2 варианта
+																			.dropdown-menu as
 
-													tr
-														td Витраж:
-														td 
-															.dropdown.c-dropdown
-																.dropdown-toggle.c-dropdown-toggle
-																	.c-dropdown-toggle__link 3 варианта
-																.dropdown-menu as
-													tr
-														td Размер(ДxШxВ), см:
-														td (108-113)x(68-73)x190
-										.c-product-info__actions
-
-											a(href="#").c-product-info__action
-												.c-product-info__action-inner
-													.c-product-info__action-icon-wrap
-														img(src=require("../img/icons/fav.png"), alt="").c-product-info__action-icon 
-													span.c-product-info__action-text поместить В закладкИ
-											a(href="#").c-product-info__action
-												.c-product-info__action-inner
-													.c-product-info__action-icon-wrap
-														img(src=require("../img/icons/repair.png"), alt="").c-product-info__action-icon 
-													span.c-product-info__action-text установка от 5000
-											a(href="#").c-product-info__action
-												.c-product-info__action-inner
-													.c-product-info__action-icon-wrap
-														img(src=require("../img/icons/vesi2.png"), alt="").c-product-info__action-icon 
-													span.c-product-info__action-text добавить к сравнениЮ
-											a(href="#").c-product-info__action
-												.c-product-info__action-inner
-													.c-product-info__action-icon-wrap
-														img(src=require("../img/icons/fast.png"), alt="").c-product-info__action-icon 
-													span.c-product-info__action-text оформить кредит online
-								.col-md-8
-									.c-product__order-info
+																tr
+																	td Витраж:
+																	td 
+																		.dropdown.c-dropdown
+																			.dropdown-toggle.c-dropdown-toggle
+																				.c-dropdown-toggle__link 3 варианта
+																			.dropdown-menu as
+																tr
+																	td Размер(ДxШxВ), см:
+																	td (108-113)x(68-73)x190
+													.c-product-info__actions.d-none.d-lg-block
+														a(href="#").c-product-info__action
+															.c-product-info__action-inner
+																.c-product-info__action-icon-wrap
+																	img(src=require("../img/icons/fav.png"), alt="").c-product-info__action-icon 
+																span.c-product-info__action-text поместить В закладкИ
+														a(href="#").c-product-info__action
+															.c-product-info__action-inner
+																.c-product-info__action-icon-wrap
+																	img(src=require("../img/icons/repair.png"), alt="").c-product-info__action-icon 
+																span.c-product-info__action-text установка от 5000
+														a(href="#").c-product-info__action
+															.c-product-info__action-inner
+																.c-product-info__action-icon-wrap
+																	img(src=require("../img/icons/vesi2.png"), alt="").c-product-info__action-icon 
+																span.c-product-info__action-text добавить к сравнениЮ
+														a(href="#").c-product-info__action
+															.c-product-info__action-inner
+																.c-product-info__action-icon-wrap
+																	img(src=require("../img/icons/fast.png"), alt="").c-product-info__action-icon 
+																span.c-product-info__action-text оформить кредит online
+									.c-product-info__actions.d-lg-none
+										.row
+											.col-6
+												a(href="#").c-product-info__action
+													.c-product-info__action-inner
+														.c-product-info__action-icon-wrap
+															img(src=require("../img/icons/fav.png"), alt="").c-product-info__action-icon 
+														span.c-product-info__action-text поместить В закладкИ
+												a(href="#").c-product-info__action
+													.c-product-info__action-inner
+														.c-product-info__action-icon-wrap
+															img(src=require("../img/icons/repair.png"), alt="").c-product-info__action-icon 
+														span.c-product-info__action-text установка от 5000
+											.col-6
+												a(href="#").c-product-info__action
+													.c-product-info__action-inner
+														.c-product-info__action-icon-wrap
+															img(src=require("../img/icons/vesi2.png"), alt="").c-product-info__action-icon 
+														span.c-product-info__action-text добавить к сравнениЮ
+												a(href="#").c-product-info__action
+													.c-product-info__action-inner
+														.c-product-info__action-icon-wrap
+															img(src=require("../img/icons/fast.png"), alt="").c-product-info__action-icon 
+														span.c-product-info__action-text оформить кредит online
+								.col-lg-8
+									.c-product__order-info.d-none.d-lg-block
 										.d-flex.align-items-center.justify-content-between.mb-3
 											.c-product__choosen
 												| Выбрано:
@@ -189,7 +219,55 @@ html(lang="ru")
 														.c-progress-radial__value 59
 														.c-progress-radial__footer минут
 												.c-counter__txt осталось до конца акции
-									.c-table.c-table_product.js-table_product
+									.c-product__order-info.c-product__order-info_mobile.d-lg-none.d-flex.align-items-center.flex-column.justify-content-between
+										.d-flex.w-100.justify-content-between.justify-content-md-center
+											.c-product__choosen
+												| Выбрано:
+												a(href="#").c-product__choosen-count 0 товара
+											.c-product__price.d-md-none
+												| Итого:
+												.c-product__price-number.c-product__price-number_old 0
+												.c-product__price-number.c-product__price-number_new 0
+										.d-flex.w-100.justify-content-between.mb-4
+											.c-promocode
+												.c-promocode__txt.d-md-none промокод 
+												.c-promocode__txt.d-none.d-md-block
+													.
+														При заказе сообщите менеджеру промокод 
+												.c-promocode__label CEZARES10
+											.c-counter
+												.c-counter__txt осталось
+												.c-counter__timer
+													.c-progress-radial
+														.c-progress-radial__left
+															.c-progress-radial__bar(style="transform:rotate(180deg)")
+														.c-progress-radial__right
+															.c-progress-radial__bar(style="transform:rotate(180deg)")
+														.c-progress-radial__value 5
+														.c-progress-radial__footer дней
+													.c-progress-radial
+														.c-progress-radial__left
+															.c-progress-radial__bar(style="transform:rotate(-135deg)")
+														.c-progress-radial__right
+															.c-progress-radial__bar
+														.c-progress-radial__value 16
+														.c-progress-radial__footer часов
+													.c-progress-radial
+														.c-progress-radial__left
+															.c-progress-radial__bar(style="transform:rotate(-180deg)")
+														.c-progress-radial__right
+															.c-progress-radial__bar(style="transform:rotate(-150deg)")
+														.c-progress-radial__value 59
+														.c-progress-radial__footer минут
+										.d-flex.align-items-center.justify-content-between
+											.c-product__price.d-none.d-md-flex
+												| Итого:
+												.c-product__price-number.c-product__price-number_old 0
+												.c-product__price-number.c-product__price-number_new 0
+											.c-product__order-actions.d-flex
+												a(href="#").c-btn.c-btn_primary В КОРЗИНУ
+												a(href="#").c-btn.c-btn_primary КУПИТЬ В 1 КЛИК
+									.c-table.c-table_product.js-table_product.c-table_width-notification
 										.c-table__header ГИДРОМАССАЖ
 										.c-table__body
 											.c-table__row.c-product-card(data-articul="23370001")
@@ -396,7 +474,7 @@ html(lang="ru")
 														a(href="#").c-btn.c-btn_primary.c-product-card__btn выбрать
 									.c-product__order-checkout.c-product__order-checkout_fixed.js-product-order-checkout-fixed
 										.c-product__order-checkout-top
-											.d-flex.align-items-center.justify-content-between.w-100
+											.d-none.d-md-flex.align-items-center.justify-content-between.w-100
 												.c-product__choosen
 													| Выбрано:
 													a(href="#").c-product__choosen-count 0 товара
@@ -406,9 +484,21 @@ html(lang="ru")
 												.c-product__order-actions.d-flex
 													a(href="#").c-btn.c-btn_secondary В КОРЗИНУ
 													a(href="#").c-btn.c-btn_secondary КУПИТЬ В 1 КЛИК
+											.d-flex.d-md-none.flex-column.align-items-center.justify-content-between.w-100
+												.d-flex.mb-3
+													.c-product__choosen
+														| Выбрано:
+														a(href="#").c-product__choosen-count 0 товара
+												.d-flex
+													.c-product__price
+														| Стоимость:
+														.c-product__price-number 0
+													.c-product__order-actions.d-flex
+														a(href="#").c-btn.c-btn_secondary В КОРЗИНУ
+														a(href="#").c-btn.c-btn_secondary КУПИТЬ В 1 КЛИК
 									.c-product__order-checkout.js-product-order-checkout-static
 										.c-product__order-checkout-top.collapsed(data-toggle="collapse", aria-expanded="false", href="#order-checkout-products")
-											.d-flex.align-items-center.justify-content-between.w-100
+											.d-none.d-md-flex.align-items-center.justify-content-between.w-100
 												.c-product__choosen
 													| Выбрано:
 													a(href="#").c-product__choosen-count 0 товара
@@ -418,6 +508,18 @@ html(lang="ru")
 												.c-product__order-actions.d-flex
 													a(href="#").c-btn.c-btn_secondary В КОРЗИНУ
 													a(href="#").c-btn.c-btn_secondary КУПИТЬ В 1 КЛИК
+											.d-flex.d-md-none.flex-column.align-items-center.justify-content-between.w-100
+												.d-flex.mb-3
+													.c-product__choosen
+														| Выбрано:
+														a(href="#").c-product__choosen-count 0 товара
+												.d-flex
+													.c-product__price
+														| Стоимость:
+														.c-product__price-number 0
+													.c-product__order-actions.d-flex
+														a(href="#").c-btn.c-btn_secondary В КОРЗИНУ
+														a(href="#").c-btn.c-btn_secondary КУПИТЬ В 1 КЛИК
 										.c-checkout-products.collapse#order-checkout-products
 											.swiper-container.js-checkout-products
 												.swiper-wrapper
@@ -521,4 +623,109 @@ html(lang="ru")
 											.swiper-button-prev
 											.swiper-button-next
 				include templates/footer.pug
-			
+
+		.modal.fade.show.c-modal#preview-product-modal.c-preview-product(aria-hidden="true")
+			.modal-dialog.modal-dialog-centered.c-modal__dialog
+				.modal-content.c-modal__content
+					.modal-header.c-modal__header
+						.modal-title.c-modal__title
+						button(data-dismiss="modal" aria-label="Close").close
+					.modal-body.c-modal__body
+						.row
+							.col-md-4
+								.c-product-preview.js-product-preview-modal
+									.c-product-preview__main
+										.swiper-container.js-product-preview-main#js-product-preview-main
+											.swiper-wrapper
+												.swiper-slide
+													div(data-src="../img/content/product.jpg").js-product-preview-item
+														img(src=require("../img/content/product.jpg"), alt="").c-product-preview__thumbnail
+												.swiper-slide
+													div(data-src="../img/content/product.jpg").js-product-preview-item
+														img(src=require("../img/content/product.jpg"), alt="").c-product-preview__thumbnail
+												.swiper-slide
+													div(data-src="../img/content/product.jpg").js-product-preview-item
+														img(src=require("../img/content/product.jpg"), alt="").c-product-preview__thumbnail
+
+										button.c-product-preview__zoom.js-product-preview-btn
+
+									.c-product-preview__thumbnails
+										.swiper-container.js-product-preview-thumbnails
+											.swiper-wrapper
+												.swiper-slide
+													img(src=require("../img/content/product-thumbnail.jpg"), alt="").c-product-preview__thumbnail
+												.swiper-slide
+													img(src=require("../img/content/product-thumbnail2.jpg"), alt="").c-product-preview__thumbnail
+												.swiper-slide
+													img(src=require("../img/content/product-thumbnail.jpg"), alt="").c-product-preview__thumbnail
+										.swiper-button-next
+							.col-md-5
+								.c-product-info__code Код товара:  B22528
+								.c-product-info__showroom Модель бренда есть в шоуруме
+								.c-product-info__description
+											table.c-table
+												tbody
+													tr
+														td Бренд:
+														td 
+															a(href="#") Vegas
+													tr
+														td Коллекция:
+														td 
+															a(href="#") ZP+ZPV
+													tr
+														td Страна:
+														td Россия
+													tr
+														td Материал витража:
+														td 
+															a(href="#") Стекло
+													tr
+														td Высота поддона:
+														td 
+															a(href="#") Низкий
+													tr
+														td Стиль:
+														td 
+															a(href="#") Современный
+													tr
+														td Тип дверей:
+														td 
+															a(href="#") Одна раздвижная
+													tr
+														td Форма:
+														td 
+															a(href="#") Прямоугольная
+													tr
+														td Цвет профиля:
+														td 
+															.dropdown.c-dropdown
+																.dropdown-toggle.c-dropdown-toggle
+																	.c-dropdown-toggle__link 2 варианта
+																.dropdown-menu as
+
+													tr
+														td Витраж:
+														td 
+															.dropdown.c-dropdown
+																.dropdown-toggle.c-dropdown-toggle
+																	.c-dropdown-toggle__link 3 варианта
+																.dropdown-menu as
+													tr
+														td Размер(ДxШxВ), см:
+														td (108-113)x(68-73)x190
+							.col-md-3
+								.c-preview-product__description
+									h4.c-preview-product__description-title Описание товара
+									.c-preview-product__description-body.c-read-more.js-read-more-container
+										p Смеситель для раковины Bauloop 23337 000 от немецкой компании GROHE.
+										h5 Особенности:
+										p
+											.
+												монтаж на 1 отверстие без донного клапана и без цепочки  высота до излива 87 мм,  вынос 90 мм  однорычажный  гибкая подводка с накидной гайкой 3/8  керамический картридж 28 мм  аэратор система быстрого монтажа 
+										h5 Уход:
+										p
+											.
+												При очистке не применяйте абразивные чистящие средства, оставляющие царапины губки, чистящие средства с содержанием кислот или растворителей, средства для удаления извести, пищевой уксус и чистящие средства с содержанием уксусной кислоты.
+										h5 Гарантия:  5 лет.
+									a(href="#").c-preview-product__read-more.js-read-more-btn Читать полностью

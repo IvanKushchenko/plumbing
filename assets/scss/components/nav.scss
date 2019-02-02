@@ -1,15 +1,23 @@
-.c-nav{
+.c-nav {
 	display: flex;
-	&__item{
-		
+
+	&__item {
 		text-transform: uppercase;
 		color: #222222;
 		font-family: "PT Sans";
 		font-size: 14px;
 		font-weight: 400;
 		box-shadow: none;
-		&:not(:last-child){
+
+		&:not(:last-child) {
 			margin-right: 23px;
+
+			@media (max-width:$bp-sm) {
+				margin-right: 13px;
+			}
+
 		}
+
 	}
+
 }

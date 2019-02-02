@@ -11,7 +11,7 @@ import Swiper from 'swiper';
 $(function() {
 
 
-    var previewThumbnails = new Swiper('.js-product-preview-thumbnails', {
+    var previewThumbnails = new Swiper('.js-product-preview-page .js-product-preview-thumbnails', {
         slidesPerView: 3,
         spaceBetween: 15,
         shortSwipes: false,
@@ -20,14 +20,42 @@ $(function() {
         watchSlidesVisibility: true,
         watchSlidesProgress: true,
         navigation: {
-            nextEl: '.c-product-preview__thumbnails .swiper-button-next'
+            nextEl: '.js-product-preview-page .c-product-preview__thumbnails .swiper-button-next'
         }
     });
 
-    var previewMain = new Swiper('.js-product-preview-main', {
+     var previewMainMobile = new Swiper('.js-product-preview-mobile .swiper-container', {
+        pagination: {
+            clickable: true,
+            el: '.js-product-preview-mobile .swiper-pagination'
+        }
+    });
+
+    var previewMain = new Swiper('.js-product-preview-page .js-product-preview-main', {
         simulateTouch: false,
         thumbs: {
             swiper: previewThumbnails,
+        },
+    });
+
+
+    var previewThumbnailsModal = new Swiper('.js-product-preview-modal .js-product-preview-thumbnails', {
+        slidesPerView: 3,
+        spaceBetween: 15,
+        shortSwipes: false,
+        longSwipes: false,
+        slideToClickedSlide: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        navigation: {
+            nextEl: '.js-product-preview-page .c-product-preview__thumbnails .swiper-button-next'
+        }
+    });
+
+    var previewMainModal = new Swiper('.js-product-preview-modal .js-product-preview-main', {
+        simulateTouch: false,
+        thumbs: {
+            swiper: previewThumbnailsModal,
         },
     });
 
@@ -56,29 +84,43 @@ $(function() {
         }
     });
 
+    $('.c-product-card .c-product-card__title').click(function(){
+    	$('#preview-product-modal').modal('show');
+    })
+    $('#preview-product-modal').on('shown.bs.modal', function(){
+    	previewThumbnailsModal.update();
+    	previewMainModal.update();
+    })
 
 
     $('#order-checkout-products').on('shown.bs.collapse', function() {
         checkoutProducts.update();
     })
-    var productPreviewGallery = $('#js-product-preview-thumbnails');
 
-    $('#js-product-preview-main').lightGallery({
+    $('.js-product-preview-page #js-product-preview-main').lightGallery({
         selector: '.js-product-preview-item'
     })
 
-    $('.js-product-preview-btn').on('click', function() {
-        $('.js-product-preview-item').trigger('click');
+    $('.js-product-preview-page .js-product-preview-btn').on('click', function() {
+        $('.js-product-preview-page .js-product-preview-item').trigger('click');
+    })
+
+    $('.js-product-preview-modal #js-product-preview-main').lightGallery({
+        selector: '.js-product-preview-item'
+    })
+
+    $('.js-product-preview-modal .js-product-preview-btn').on('click', function() {
+        $('.js-product-preview-modal .js-product-preview-item').trigger('click');
     })
 
 
     function orderCheckoutInfo() {
-        var orderInfo = $('.c-product__order-info');
+        var orderInfo = $('.c-product__order-info') || $('.c-product__order-info_mobile');
         var productCheckoutStatic = $('.js-product-order-checkout-static');
         var productCheckoutFixed = $('.js-product-order-checkout-fixed');
         productCheckoutFixed.css({
-            'left': orderInfo.offset().left + 'px',
-            'width': orderInfo.parent().width() + 'px'
+            'left': orderInfo.offset().left || orderInfo.eq(1).offset().left + 'px',
+            'width': ($(window).width() <= 768) ? orderInfo.parent().width() + 40 + 'px' : orderInfo.parent().width() + 'px'
         })
 
         function checkPosAndHide() {
@@ -117,5 +159,13 @@ $(function() {
     	})
     })
 
+    $('.js-read-more-btn').click(function(e){
+    	e.preventDefault();
+    	if($(this).parent().find('.js-read-more-container').hasClass('is-active')){
+    		$(this).parent().find('.js-read-more-container').removeClass('is-active')
+    	}else{
+    		$(this).parent().find('.js-read-more-container').addClass('is-active')
+    	}
+    })
 
 });

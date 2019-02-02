@@ -14,6 +14,9 @@
 	text-align: center;
 	z-index: 222;
 	display: none;
+	@media (max-width: $bp-lg) {
+		display: none !important;		
+	}
 	&:after {
 		content: '';
 		border: 10px solid transparent;

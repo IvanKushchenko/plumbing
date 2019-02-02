@@ -8,32 +8,35 @@
   <body>
     <div class="container">
       <div class="o-page js-page">
-<div class="c-navbar">
-  <div class="c-navbar__item"><a class="c-navbar__link" href="#">личный кабинет: User ID: 1</a></div>
+<div class="c-navbar"><a class="c-navbar__catalog-btn" href="#">каталог</a>
+  <div class="c-navbar__item"><a class="c-navbar__link" href="#">личный кабинет </a><span>: User ID: 1</span></div>
   <div class="c-navbar__item">Ваш город:<a class="c-navbar__link" href="#"> Санкт-Петербург</a></div>
-  <div class="c-navbar__item"><a class="c-navbar__btn" href="#!"><img class="c-navbar__btn-icon" src="img/icons/vesi.png" alt="">В сравнении <span class="c-navbar__counter">3</span>тов.</a></div>
-  <div class="c-navbar__item"><a class="c-navbar__btn" href="#!"><img class="c-navbar__btn-icon" src="img/icons/fav.png" alt="">В закладках<span class="c-navbar__counter is-empty">0</span>тов.</a></div>
-  <div class="c-navbar__item"><a class="c-navbar__btn" href="#!"><img class="c-navbar__btn-icon" src="img/icons/cart.png" alt="">В корзине <span class="c-navbar__counter">3</span>тов.</a></div>
+  <div class="c-navbar__item"><a class="c-navbar__btn" href="#!"><img class="c-navbar__btn-icon" src="img/icons/vesi.png" alt=""><span class="c-navbar__txt">В сравнении </span><span class="c-navbar__counter">3</span><span class="c-navbar__txt">тов.</span></a></div>
+  <div class="c-navbar__item"><a class="c-navbar__btn" href="#!"><img class="c-navbar__btn-icon" src="img/icons/fav.png" alt=""><span class="c-navbar__txt">В закладках</span><span class="c-navbar__counter is-empty">0</span><span class="c-navbar__txt">тов.</span></a></div>
+  <div class="c-navbar__item"><a class="c-navbar__btn" href="#!"><img class="c-navbar__btn-icon" src="img/icons/cart.png" alt=""><span class="c-navbar__txt">В корзине </span><span class="c-navbar__counter">3</span><span class="c-navbar__txt">тов.</span></a></div>
   <div class="c-navbar__item"><a class="c-btn c-btn_secondary c-navbar__btn" href="#!">оформить заказ</a></div>
 </div>
 <header class="c-header">
   <div class="c-header__top"><a class="c-header__logo c-logo" href="/"><img class="c-logo__img" src="img/icons/logo.svg" alt=""><span class="c-logo__letter">Салон сантехники</span></a>
     <nav class="c-nav c-header__nav"><a class="c-nav__item" href="#">Бренды</a><a class="c-nav__item" href="#">Доставка и оплата</a><a class="c-nav__item" href="#">Акции</a><a class="c-nav__item" href="#">Контакты</a></nav><a class="c-phone" href="tel:99999">+7 (495) 565 35 88
       <div class="c-phone__text">Работаем круглосуточно</div></a>
-    <div class="c-header__actions d-flex align-items-center"><a class="c-btn c-btn_primary" href="#">обратный звонок</a><a class="c-btn c-btn_primary" href="#">написать нам</a></div>
+    <div class="c-header__actions d-flex align-items-center"><a class="c-btn c-btn_primary d-none d-md-flex" href="#">обратный звонок</a><a class="c-btn c-btn_primary" href="#">написать нам</a></div>
   </div>
   <div class="c-header__bottom">
-    <div class="c-catalog-menu">
+    <div class="c-catalog-menu d-none d-md-block">
       <div class="c-catalog-menu__toggle">каталог
         <div class="c-catalog-menu__toggle-icon"></div>
       </div>
       <div class="c-catalog-menu__nav"></div>
     </div>
-    <div class="c-search">
-      <form class="c-form">
-        <input class="c-search__field" type="search" placeholder="Поиск по сайту">
-        <button class="c-search__btn"></button>
-      </form>
+    <div class="c-search-wrap w-100">
+      <nav class="c-nav c-header__nav_mobile"><a class="c-nav__item" href="#">Бренды</a><a class="c-nav__item" href="#">Доставка и оплата</a><a class="c-nav__item" href="#">Акции</a><a class="c-nav__item" href="#">Контакты</a></nav>
+      <div class="c-search">
+        <form class="c-form">
+          <input class="c-search__field" type="search" placeholder="Поиск по сайту">
+          <button class="c-search__btn"></button>
+        </form>
+      </div>
     </div>
   </div>
 </header>
@@ -47,125 +50,161 @@
             <div class="dropdown-menu c-breadcrumbs__dropdown-menu"><a href="#">Форсунки для душа</a><a href="#">Девиаторы</a><a href="#">Наборы</a><a href="#">Смесители для душа</a></div>
           </div>
           <div class="c-product">
-            <div class="c-product__header d-flex justify-content-between align-items-center">
+            <div class="c-product__header d-flex justify-content-between align-items-start align-items-lg-center">
               <h1 class="c-product__title">Смеситель для раковины Grohe Bauloop 23337 000</h1>
               <div class="c-product__actionsd d-flex align-items-center"><a class="c-product__action" href="#!"><img class="c-product__action-icon" src="img/icons/share.svg" alt=""><span>поделиться</span></a><a class="c-product__action" href="#!"><img class="c-product__action-icon" src="img/icons/print.png" alt=""><span>версия для печати</span></a></div>
             </div>
             <div class="c-product__body">
               <div class="row">
-                <div class="col-md-4">
+                <div class="col-lg-4">
                   <div class="c-product-info">
-                    <div class="c-product-preview">
-                      <div class="c-product-preview__main">
-                        <div class="swiper-container js-product-preview-main" id="js-product-preview-main">
-                          <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                              <div class="js-product-preview-item" data-src="../img/content/product.jpg"><img class="c-product-preview__thumbnail" src="img/content/product.jpg" alt=""></div>
+                    <div class="row">
+                      <div class="col-md-6 col-lg-12">
+                        <div class="c-product-preview-mobile d-md-none js-product-preview-mobile">
+                          <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide"><img class="c-product-preview__thumbnail" src="img/content/product.jpg" alt=""></div>
+                              <div class="swiper-slide"><img class="c-product-preview__thumbnail" src="img/content/product.jpg" alt=""></div>
+                              <div class="swiper-slide"><img class="c-product-preview__thumbnail" src="img/content/product.jpg" alt=""></div>
                             </div>
-                            <div class="swiper-slide">
-                              <div class="js-product-preview-item" data-src="../img/content/product.jpg"><img class="c-product-preview__thumbnail" src="img/content/product.jpg" alt=""></div>
-                            </div>
-                            <div class="swiper-slide">
-                              <div class="js-product-preview-item" data-src="../img/content/product.jpg"><img class="c-product-preview__thumbnail" src="img/content/product.jpg" alt=""></div>
-                            </div>
+                            <div class="swiper-pagination"></div>
                           </div>
                         </div>
-                        <button class="c-product-preview__zoom js-product-preview-btn"></button>
-                      </div>
-                      <div class="c-product-preview__thumbnails">
-                        <div class="swiper-container js-product-preview-thumbnails">
-                          <div class="swiper-wrapper">
-                            <div class="swiper-slide"><img class="c-product-preview__thumbnail" src="img/content/product-thumbnail.jpg" alt=""></div>
-                            <div class="swiper-slide"><img class="c-product-preview__thumbnail" src="img/content/product-thumbnail2.jpg" alt=""></div>
-                            <div class="swiper-slide"><img class="c-product-preview__thumbnail" src="img/content/product-thumbnail.jpg" alt=""></div>
+                        <div class="d-none d-md-block c-product-preview js-product-preview-page">
+                          <div class="c-product-preview__main">
+                            <div class="swiper-container js-product-preview-main" id="js-product-preview-main">
+                              <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                  <div class="js-product-preview-item" data-src="../img/content/product.jpg"><img class="c-product-preview__thumbnail" src="img/content/product.jpg" alt=""></div>
+                                </div>
+                                <div class="swiper-slide">
+                                  <div class="js-product-preview-item" data-src="../img/content/product.jpg"><img class="c-product-preview__thumbnail" src="img/content/product.jpg" alt=""></div>
+                                </div>
+                                <div class="swiper-slide">
+                                  <div class="js-product-preview-item" data-src="../img/content/product.jpg"><img class="c-product-preview__thumbnail" src="img/content/product.jpg" alt=""></div>
+                                </div>
+                              </div>
+                            </div>
+                            <button class="c-product-preview__zoom js-product-preview-btn"></button>
+                          </div>
+                          <div class="c-product-preview__thumbnails">
+                            <div class="swiper-container js-product-preview-thumbnails">
+                              <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img class="c-product-preview__thumbnail" src="img/content/product-thumbnail.jpg" alt=""></div>
+                                <div class="swiper-slide"><img class="c-product-preview__thumbnail" src="img/content/product-thumbnail2.jpg" alt=""></div>
+                                <div class="swiper-slide"><img class="c-product-preview__thumbnail" src="img/content/product-thumbnail.jpg" alt=""></div>
+                              </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
                           </div>
                         </div>
-                        <div class="swiper-button-next"></div>
+                      </div>
+                      <div class="col-md-6 col-lg-12">
+                        <div class="c-product-info__body">
+                          <div class="c-product-info__code">Код товара:  B22528</div>
+                          <div class="c-product-info__showroom">Модель бренда есть в шоуруме</div>
+                          <div class="c-product-info__description">
+                            <table class="c-table">
+                              <tbody>
+                                <tr>
+                                  <td>Бренд:</td>
+                                  <td> <a href="#">Vegas</a></td>
+                                </tr>
+                                <tr>
+                                  <td>Коллекция:</td>
+                                  <td> <a href="#">ZP+ZPV</a></td>
+                                </tr>
+                                <tr>
+                                  <td>Страна:</td>
+                                  <td>Россия</td>
+                                </tr>
+                                <tr>
+                                  <td>Материал витража:</td>
+                                  <td> <a href="#">Стекло</a></td>
+                                </tr>
+                                <tr>
+                                  <td>Высота поддона:</td>
+                                  <td> <a href="#">Низкий</a></td>
+                                </tr>
+                                <tr>
+                                  <td>Стиль:</td>
+                                  <td> <a href="#">Современный</a></td>
+                                </tr>
+                                <tr>
+                                  <td>Тип дверей:</td>
+                                  <td> <a href="#">Одна раздвижная</a></td>
+                                </tr>
+                                <tr>
+                                  <td>Форма:</td>
+                                  <td> <a href="#">Прямоугольная</a></td>
+                                </tr>
+                                <tr>
+                                  <td>Цвет профиля:</td>
+                                  <td> 
+                                    <div class="dropdown c-dropdown">
+                                      <div class="dropdown-toggle c-dropdown-toggle">
+                                        <div class="c-dropdown-toggle__link">2 варианта</div>
+                                      </div>
+                                      <div class="dropdown-menu">as</div>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>Витраж:</td>
+                                  <td> 
+                                    <div class="dropdown c-dropdown">
+                                      <div class="dropdown-toggle c-dropdown-toggle">
+                                        <div class="c-dropdown-toggle__link">3 варианта</div>
+                                      </div>
+                                      <div class="dropdown-menu">as</div>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>Размер(ДxШxВ), см:</td>
+                                  <td>(108-113)x(68-73)x190</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="c-product-info__actions d-none d-lg-block"><a class="c-product-info__action" href="#">
+                              <div class="c-product-info__action-inner">
+                                <div class="c-product-info__action-icon-wrap"><img class="c-product-info__action-icon" src="img/icons/fav.png" alt=""></div><span class="c-product-info__action-text">поместить В закладкИ</span>
+                              </div></a><a class="c-product-info__action" href="#">
+                              <div class="c-product-info__action-inner">
+                                <div class="c-product-info__action-icon-wrap"><img class="c-product-info__action-icon" src="img/icons/repair.png" alt=""></div><span class="c-product-info__action-text">установка от 5000</span>
+                              </div></a><a class="c-product-info__action" href="#">
+                              <div class="c-product-info__action-inner">
+                                <div class="c-product-info__action-icon-wrap"><img class="c-product-info__action-icon" src="img/icons/vesi2.png" alt=""></div><span class="c-product-info__action-text">добавить к сравнениЮ</span>
+                              </div></a><a class="c-product-info__action" href="#">
+                              <div class="c-product-info__action-inner">
+                                <div class="c-product-info__action-icon-wrap"><img class="c-product-info__action-icon" src="img/icons/fast.png" alt=""></div><span class="c-product-info__action-text">оформить кредит online</span>
+                              </div></a></div>
+                        </div>
                       </div>
                     </div>
-                    <div class="c-product-info__code">Код товара:  B22528</div>
-                    <div class="c-product-info__showroom">Модель бренда есть в шоуруме</div>
-                    <div class="c-product-info__description">
-                      <table class="c-table">
-                        <tbody>
-                          <tr>
-                            <td>Бренд:</td>
-                            <td> <a href="#">Vegas</a></td>
-                          </tr>
-                          <tr>
-                            <td>Коллекция:</td>
-                            <td> <a href="#">ZP+ZPV</a></td>
-                          </tr>
-                          <tr>
-                            <td>Страна:</td>
-                            <td>Россия</td>
-                          </tr>
-                          <tr>
-                            <td>Материал витража:</td>
-                            <td> <a href="#">Стекло</a></td>
-                          </tr>
-                          <tr>
-                            <td>Высота поддона:</td>
-                            <td> <a href="#">Низкий</a></td>
-                          </tr>
-                          <tr>
-                            <td>Стиль:</td>
-                            <td> <a href="#">Современный</a></td>
-                          </tr>
-                          <tr>
-                            <td>Тип дверей:</td>
-                            <td> <a href="#">Одна раздвижная</a></td>
-                          </tr>
-                          <tr>
-                            <td>Форма:</td>
-                            <td> <a href="#">Прямоугольная</a></td>
-                          </tr>
-                          <tr>
-                            <td>Цвет профиля:</td>
-                            <td> 
-                              <div class="dropdown c-dropdown">
-                                <div class="dropdown-toggle c-dropdown-toggle">
-                                  <div class="c-dropdown-toggle__link">2 варианта</div>
-                                </div>
-                                <div class="dropdown-menu">as</div>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>Витраж:</td>
-                            <td> 
-                              <div class="dropdown c-dropdown">
-                                <div class="dropdown-toggle c-dropdown-toggle">
-                                  <div class="c-dropdown-toggle__link">3 варианта</div>
-                                </div>
-                                <div class="dropdown-menu">as</div>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>Размер(ДxШxВ), см:</td>
-                            <td>(108-113)x(68-73)x190</td>
-                          </tr>
-                        </tbody>
-                      </table>
+                  </div>
+                  <div class="c-product-info__actions d-lg-none">
+                    <div class="row">
+                      <div class="col-6"><a class="c-product-info__action" href="#">
+                          <div class="c-product-info__action-inner">
+                            <div class="c-product-info__action-icon-wrap"><img class="c-product-info__action-icon" src="img/icons/fav.png" alt=""></div><span class="c-product-info__action-text">поместить В закладкИ</span>
+                          </div></a><a class="c-product-info__action" href="#">
+                          <div class="c-product-info__action-inner">
+                            <div class="c-product-info__action-icon-wrap"><img class="c-product-info__action-icon" src="img/icons/repair.png" alt=""></div><span class="c-product-info__action-text">установка от 5000</span>
+                          </div></a></div>
+                      <div class="col-6"><a class="c-product-info__action" href="#">
+                          <div class="c-product-info__action-inner">
+                            <div class="c-product-info__action-icon-wrap"><img class="c-product-info__action-icon" src="img/icons/vesi2.png" alt=""></div><span class="c-product-info__action-text">добавить к сравнениЮ</span>
+                          </div></a><a class="c-product-info__action" href="#">
+                          <div class="c-product-info__action-inner">
+                            <div class="c-product-info__action-icon-wrap"><img class="c-product-info__action-icon" src="img/icons/fast.png" alt=""></div><span class="c-product-info__action-text">оформить кредит online</span>
+                          </div></a></div>
                     </div>
-                    <div class="c-product-info__actions"><a class="c-product-info__action" href="#">
-                        <div class="c-product-info__action-inner">
-                          <div class="c-product-info__action-icon-wrap"><img class="c-product-info__action-icon" src="img/icons/fav.png" alt=""></div><span class="c-product-info__action-text">поместить В закладкИ</span>
-                        </div></a><a class="c-product-info__action" href="#">
-                        <div class="c-product-info__action-inner">
-                          <div class="c-product-info__action-icon-wrap"><img class="c-product-info__action-icon" src="img/icons/repair.png" alt=""></div><span class="c-product-info__action-text">установка от 5000</span>
-                        </div></a><a class="c-product-info__action" href="#">
-                        <div class="c-product-info__action-inner">
-                          <div class="c-product-info__action-icon-wrap"><img class="c-product-info__action-icon" src="img/icons/vesi2.png" alt=""></div><span class="c-product-info__action-text">добавить к сравнениЮ</span>
-                        </div></a><a class="c-product-info__action" href="#">
-                        <div class="c-product-info__action-inner">
-                          <div class="c-product-info__action-icon-wrap"><img class="c-product-info__action-icon" src="img/icons/fast.png" alt=""></div><span class="c-product-info__action-text">оформить кредит online</span>
-                        </div></a></div>
                   </div>
                 </div>
-                <div class="col-md-8">
-                  <div class="c-product__order-info">
+                <div class="col-lg-8">
+                  <div class="c-product__order-info d-none d-lg-block">
                     <div class="d-flex align-items-center justify-content-between mb-3">
                       <div class="c-product__choosen">Выбрано:<a class="c-product__choosen-count" href="#">0 товара</a></div>
                       <div class="c-product__price">Итого:
@@ -216,7 +255,65 @@
                       </div>
                     </div>
                   </div>
-                  <div class="c-table c-table_product js-table_product">
+                  <div class="c-product__order-info c-product__order-info_mobile d-lg-none d-flex align-items-center flex-column justify-content-between">
+                    <div class="d-flex w-100 justify-content-between justify-content-md-center">
+                      <div class="c-product__choosen">Выбрано:<a class="c-product__choosen-count" href="#">0 товара</a></div>
+                      <div class="c-product__price d-md-none">Итого:
+                        <div class="c-product__price-number c-product__price-number_old">0</div>
+                        <div class="c-product__price-number c-product__price-number_new">0</div>
+                      </div>
+                    </div>
+                    <div class="d-flex w-100 justify-content-between mb-4">
+                      <div class="c-promocode">
+                        <div class="c-promocode__txt d-md-none">промокод </div>
+                        <div class="c-promocode__txt d-none d-md-block">При заказе сообщите менеджеру промокод </div>
+                        <div class="c-promocode__label">CEZARES10</div>
+                      </div>
+                      <div class="c-counter">
+                        <div class="c-counter__txt">осталось</div>
+                        <div class="c-counter__timer">
+                          <div class="c-progress-radial">
+                            <div class="c-progress-radial__left">
+                              <div class="c-progress-radial__bar" style="transform:rotate(180deg)"></div>
+                            </div>
+                            <div class="c-progress-radial__right">
+                              <div class="c-progress-radial__bar" style="transform:rotate(180deg)"></div>
+                            </div>
+                            <div class="c-progress-radial__value">5</div>
+                            <div class="c-progress-radial__footer">дней</div>
+                          </div>
+                          <div class="c-progress-radial">
+                            <div class="c-progress-radial__left">
+                              <div class="c-progress-radial__bar" style="transform:rotate(-135deg)"></div>
+                            </div>
+                            <div class="c-progress-radial__right">
+                              <div class="c-progress-radial__bar"></div>
+                            </div>
+                            <div class="c-progress-radial__value">16</div>
+                            <div class="c-progress-radial__footer">часов</div>
+                          </div>
+                          <div class="c-progress-radial">
+                            <div class="c-progress-radial__left">
+                              <div class="c-progress-radial__bar" style="transform:rotate(-180deg)"></div>
+                            </div>
+                            <div class="c-progress-radial__right">
+                              <div class="c-progress-radial__bar" style="transform:rotate(-150deg)"></div>
+                            </div>
+                            <div class="c-progress-radial__value">59</div>
+                            <div class="c-progress-radial__footer">минут</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between">
+                      <div class="c-product__price d-none d-md-flex">Итого:
+                        <div class="c-product__price-number c-product__price-number_old">0</div>
+                        <div class="c-product__price-number c-product__price-number_new">0</div>
+                      </div>
+                      <div class="c-product__order-actions d-flex"><a class="c-btn c-btn_primary" href="#">В КОРЗИНУ</a><a class="c-btn c-btn_primary" href="#">КУПИТЬ В 1 КЛИК</a></div>
+                    </div>
+                  </div>
+                  <div class="c-table c-table_product js-table_product c-table_width-notification">
                     <div class="c-table__header">ГИДРОМАССАЖ</div>
                     <div class="c-table__body">
                       <div class="c-table__row c-product-card" data-articul="23370001">
@@ -446,23 +543,45 @@
                   </div>
                   <div class="c-product__order-checkout c-product__order-checkout_fixed js-product-order-checkout-fixed">
                     <div class="c-product__order-checkout-top">
-                      <div class="d-flex align-items-center justify-content-between w-100">
+                      <div class="d-none d-md-flex align-items-center justify-content-between w-100">
                         <div class="c-product__choosen">Выбрано:<a class="c-product__choosen-count" href="#">0 товара</a></div>
                         <div class="c-product__price">Стоимость:
                           <div class="c-product__price-number">0</div>
                         </div>
                         <div class="c-product__order-actions d-flex"><a class="c-btn c-btn_secondary" href="#">В КОРЗИНУ</a><a class="c-btn c-btn_secondary" href="#">КУПИТЬ В 1 КЛИК</a></div>
                       </div>
+                      <div class="d-flex d-md-none flex-column align-items-center justify-content-between w-100">
+                        <div class="d-flex mb-3">
+                          <div class="c-product__choosen">Выбрано:<a class="c-product__choosen-count" href="#">0 товара</a></div>
+                        </div>
+                        <div class="d-flex">
+                          <div class="c-product__price">Стоимость:
+                            <div class="c-product__price-number">0</div>
+                          </div>
+                          <div class="c-product__order-actions d-flex"><a class="c-btn c-btn_secondary" href="#">В КОРЗИНУ</a><a class="c-btn c-btn_secondary" href="#">КУПИТЬ В 1 КЛИК</a></div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div class="c-product__order-checkout js-product-order-checkout-static">
                     <div class="c-product__order-checkout-top collapsed" data-toggle="collapse" aria-expanded="false" href="#order-checkout-products">
-                      <div class="d-flex align-items-center justify-content-between w-100">
+                      <div class="d-none d-md-flex align-items-center justify-content-between w-100">
                         <div class="c-product__choosen">Выбрано:<a class="c-product__choosen-count" href="#">0 товара</a></div>
                         <div class="c-product__price">Стоимость:
                           <div class="c-product__price-number">0</div>
                         </div>
                         <div class="c-product__order-actions d-flex"><a class="c-btn c-btn_secondary" href="#">В КОРЗИНУ</a><a class="c-btn c-btn_secondary" href="#">КУПИТЬ В 1 КЛИК</a></div>
+                      </div>
+                      <div class="d-flex d-md-none flex-column align-items-center justify-content-between w-100">
+                        <div class="d-flex mb-3">
+                          <div class="c-product__choosen">Выбрано:<a class="c-product__choosen-count" href="#">0 товара</a></div>
+                        </div>
+                        <div class="d-flex">
+                          <div class="c-product__price">Стоимость:
+                            <div class="c-product__price-number">0</div>
+                          </div>
+                          <div class="c-product__order-actions d-flex"><a class="c-btn c-btn_secondary" href="#">В КОРЗИНУ</a><a class="c-btn c-btn_secondary" href="#">КУПИТЬ В 1 КЛИК</a></div>
+                        </div>
                       </div>
                     </div>
                     <div class="c-checkout-products collapse" id="order-checkout-products">
@@ -567,33 +686,61 @@
           </div>
         </main>
 <footer class="c-footer">
-  <div class="c-footer__top">
-    <div class="f-dlex flex-column"><img class="c-footer__logo" src="img/icons/logo.svg" alt="">
-      <div class="c-footer__copyright">®SanBest, 2019</div>
+  <div class="c-footer__top d-flex flex-column flex-xl-row">
+    <div class="d-flex flex-column flex-md-row">
+      <div class="d-flex flex-column align-items-center align-items-md-start"><img class="c-footer__logo" src="img/icons/logo.svg" alt="">
+        <div class="c-footer__copyright">®SanBest, 2019</div>
+      </div>
+      <div class="d-flex d-lg-none flex-wrap flex-md-nowrap flex-row align-items-center align-md-items-start">
+        <div class="c-footer__col w-100">
+          <div class="c-footer__col_nav">
+            <ul class="d-flex align-items-center flex-wrap justify-content-center d-md-block">
+              <li><a href="#">Бренды</a></li>
+              <li><a href="#">Доставка и оплата</a></li>
+              <li><a href="#">Акции</a></li>
+              <li><a href="#">Контакты</a></li>
+              <li><a href="#">Политика конфиденциальности</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="c-footer__col">
+          <div class="c-footer__col_contacts d-flex flex-row flex-lg-column justify-content-center justify-content-md-between align-items-center align-items-md-start"><a href="tel:74955653588">+7 (495) 565 35 88</a><a href="mailto:sale@sanbest.ru">sale@sanbest.ru</a></div>
+          <div class="c-footer__col_placement d-flex flex-column justify-content-between align-items-center align-items-md-start">
+            <p>
+              Посёлок Заречье, Торговая ул., с2, ТЦ "Элитстройматериалы", 1 этаж, место А-18
+              с 10.00 - 20.00 без выходных
+            </p><a href="#">Показать на карте</a>
+          </div>
+        </div>
+      </div>
+      <div class="d-none d-lg-flex">
+        <div class="c-footer__col c-footer__col_nav">
+          <ul>
+            <li><a href="#">Бренды</a></li>
+            <li><a href="#">Доставка и оплата</a></li>
+            <li><a href="#">Акции</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="c-footer__col c-footer__col_contacts d-flex flex-column justify-content-between">
+          <div><a href="tel:74955653588">+7 (495) 565 35 88</a><a href="mailto:sale@sanbest.ru">sale@sanbest.ru</a></div><a class="c-footer__privacy-link" href="#">Политика конфиденциальности</a>
+        </div>
+        <div class="c-footer__col c-footer__col_placement d-flex flex-column justify-content-between">
+          <p>
+            Посёлок Заречье, Торговая ул., с2, ТЦ "Элитстройматериалы", 1 этаж, место А-18
+            с 10.00 - 20.00 без выходных
+          </p><a href="#">Показать на карте</a>
+        </div>
+      </div>
     </div>
-    <div class="c-footer__col c-footer__col_nav">
-      <ul>
-        <li><a href="#">Бренды</a></li>
-        <li><a href="#">Доставка и оплата</a></li>
-        <li><a href="#">Акции</a></li>
-        <li><a href="#">Контакты</a></li>
-      </ul>
-    </div>
-    <div class="c-footer__col c-footer__col_contacts d-flex flex-column justify-content-between">
-      <div><a href="tel:74955653588">+7 (495) 565 35 88</a><a href="mailto:sale@sanbest.ru">sale@sanbest.ru</a></div><a class="c-footer__privacy-link" href="#">Политика конфиденциальности</a>
-    </div>
-    <div class="c-footer__col c-footer__col_placement d-flex flex-column justify-content-between">
-      <p>
-        Посёлок Заречье, Торговая ул., с2, ТЦ "Элитстройматериалы", 1 этаж, место А-18
-        с 10.00 - 20.00 без выходных
-      </p><a href="#">Показать на карте</a>
-    </div>
-    <div class="c-footer__col c-footer__col_cards">
-      <div class="row">
-        <div class="col-md-6 c-footer__card"><img src="img/content/visa.png" alt=""></div>
-        <div class="col-md-6 c-footer__card"><img src="img/content/mastercard.png" alt=""></div>
-        <div class="col-md-6 c-footer__card"><img src="img/content/sberbank.png" alt=""></div>
-        <div class="col-md-6 c-footer__card"><img src="img/content/mir.png" alt=""></div>
+    <div class="d-flex">
+      <div class="c-footer__col c-footer__col_cards">
+        <div class="row">
+          <div class="col-3 col-xl-6 c-footer__card text-center text-md-left"><img src="img/content/visa.png" alt=""></div>
+          <div class="col-3 col-xl-6 c-footer__card text-center text-md-left"><img src="img/content/mastercard.png" alt=""></div>
+          <div class="col-3 col-xl-6 c-footer__card text-center text-md-left"><img src="img/content/sberbank.png" alt=""></div>
+          <div class="col-3 col-xl-6 c-footer__card text-center text-md-left"><img src="img/content/mir.png" alt=""></div>
+        </div>
       </div>
     </div>
   </div>
@@ -601,6 +748,131 @@
     <p>Сайт носит исключительно информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями статьи 437(2) ГК Российской федерации</p>
   </div>
 </footer>
+      </div>
+    </div>
+    <div class="modal fade show c-modal c-preview-product" id="preview-product-modal" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered c-modal__dialog">
+        <div class="modal-content c-modal__content">
+          <div class="modal-header c-modal__header">
+            <div class="modal-title c-modal__title"></div>
+            <button class="close" data-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body c-modal__body">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="c-product-preview js-product-preview-modal">
+                  <div class="c-product-preview__main">
+                    <div class="swiper-container js-product-preview-main" id="js-product-preview-main">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="js-product-preview-item" data-src="../img/content/product.jpg"><img class="c-product-preview__thumbnail" src="img/content/product.jpg" alt=""></div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="js-product-preview-item" data-src="../img/content/product.jpg"><img class="c-product-preview__thumbnail" src="img/content/product.jpg" alt=""></div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="js-product-preview-item" data-src="../img/content/product.jpg"><img class="c-product-preview__thumbnail" src="img/content/product.jpg" alt=""></div>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="c-product-preview__zoom js-product-preview-btn"></button>
+                  </div>
+                  <div class="c-product-preview__thumbnails">
+                    <div class="swiper-container js-product-preview-thumbnails">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img class="c-product-preview__thumbnail" src="img/content/product-thumbnail.jpg" alt=""></div>
+                        <div class="swiper-slide"><img class="c-product-preview__thumbnail" src="img/content/product-thumbnail2.jpg" alt=""></div>
+                        <div class="swiper-slide"><img class="c-product-preview__thumbnail" src="img/content/product-thumbnail.jpg" alt=""></div>
+                      </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-5">
+                <div class="c-product-info__code">Код товара:  B22528</div>
+                <div class="c-product-info__showroom">Модель бренда есть в шоуруме</div>
+                <div class="c-product-info__description">
+                  <table class="c-table">
+                    <tbody>
+                      <tr>
+                        <td>Бренд:</td>
+                        <td> <a href="#">Vegas</a></td>
+                      </tr>
+                      <tr>
+                        <td>Коллекция:</td>
+                        <td> <a href="#">ZP+ZPV</a></td>
+                      </tr>
+                      <tr>
+                        <td>Страна:</td>
+                        <td>Россия</td>
+                      </tr>
+                      <tr>
+                        <td>Материал витража:</td>
+                        <td> <a href="#">Стекло</a></td>
+                      </tr>
+                      <tr>
+                        <td>Высота поддона:</td>
+                        <td> <a href="#">Низкий</a></td>
+                      </tr>
+                      <tr>
+                        <td>Стиль:</td>
+                        <td> <a href="#">Современный</a></td>
+                      </tr>
+                      <tr>
+                        <td>Тип дверей:</td>
+                        <td> <a href="#">Одна раздвижная</a></td>
+                      </tr>
+                      <tr>
+                        <td>Форма:</td>
+                        <td> <a href="#">Прямоугольная</a></td>
+                      </tr>
+                      <tr>
+                        <td>Цвет профиля:</td>
+                        <td> 
+                          <div class="dropdown c-dropdown">
+                            <div class="dropdown-toggle c-dropdown-toggle">
+                              <div class="c-dropdown-toggle__link">2 варианта</div>
+                            </div>
+                            <div class="dropdown-menu">as</div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Витраж:</td>
+                        <td> 
+                          <div class="dropdown c-dropdown">
+                            <div class="dropdown-toggle c-dropdown-toggle">
+                              <div class="c-dropdown-toggle__link">3 варианта</div>
+                            </div>
+                            <div class="dropdown-menu">as</div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Размер(ДxШxВ), см:</td>
+                        <td>(108-113)x(68-73)x190</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="c-preview-product__description">
+                  <h4 class="c-preview-product__description-title">Описание товара</h4>
+                  <div class="c-preview-product__description-body c-read-more js-read-more-container">
+                    <p>Смеситель для раковины Bauloop 23337 000 от немецкой компании GROHE.</p>
+                    <h5>Особенности:</h5>
+                    <p>монтаж на 1 отверстие без донного клапана и без цепочки  высота до излива 87 мм,  вынос 90 мм  однорычажный  гибкая подводка с накидной гайкой 3/8  керамический картридж 28 мм  аэратор система быстрого монтажа </p>
+                    <h5>Уход:</h5>
+                    <p>При очистке не применяйте абразивные чистящие средства, оставляющие царапины губки, чистящие средства с содержанием кислот или растворителей, средства для удаления извести, пищевой уксус и чистящие средства с содержанием уксусной кислоты.</p>
+                    <h5>Гарантия:  5 лет.</h5>
+                  </div><a class="c-preview-product__read-more js-read-more-btn" href="#">Читать полностью</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   <script type="text/javascript" src="js/script.js"></script></body>

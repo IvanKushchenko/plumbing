@@ -1,9 +1,31 @@
 .c-table {
 	width: 100%;
 	position: relative;
-
+	@media (max-width:$bp-lg) {
+		width: calc(100% + 60px);
+		left: -20px;
+	}
+	&_width-notification &__body{
+		padding-bottom: 47px;
+		@media (max-width:$bp-lg) {
+			padding-bottom: 0;
+		}
+	}
 	&_product {
 		margin-bottom: 50px;
+	}
+	&_product &__cell,
+	&_options &__cell{
+		@media (max-width:$bp-xl) {
+			&:nth-child(2){
+				max-width: 40%;
+				margin-right: 5%;
+			}
+			&:nth-child(3){
+				padding-left: 0;
+			}
+			
+		}
 	}
 	&_options {
 		margin-bottom: 45px;
@@ -39,7 +61,7 @@
 		max-height: 660px;
 		overflow: auto;
 		padding-right: calc(2.5% - 7px);
-		padding-bottom: 47px;
+		
 
 		&::-webkit-scrollbar {
 			width: 7px;
@@ -62,6 +84,9 @@
 		justify-content: space-between;
 		border: 1px solid #ecf2f6;
 		border-top: none;
+		@media (max-width:$bp-lg) {
+			padding: 12px 15px;
+		}
 	}
 
 	&__cell {
@@ -97,7 +122,9 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-
+		@media (max-width:$bp-lg) {
+			display: none;
+		}
 		&:hover {
 			color: #fff;
 		}

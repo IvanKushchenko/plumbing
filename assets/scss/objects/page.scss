@@ -2,5 +2,9 @@
 	background-color: #fff;
 	&__content{
 		padding: 0 30px;
+		overflow-x: hidden;
+		@media (max-width:$bp-lg) {
+			padding: 0 20px;
+		}
 	}
 }

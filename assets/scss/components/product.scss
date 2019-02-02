@@ -6,6 +6,15 @@
 	&__title {
 		font-family: "Roboto Slab";
 		font-size: 23px;
+
+		@media (max-width:$bp-lg) {
+			width: 50%;
+		}
+		@media (max-width:$bp-md) {
+			width: auto;
+			margin-right: 10px;
+		}
+
 	}
 
 	&__action {
@@ -16,6 +25,15 @@
 
 		&:not(:last-child) {
 			margin-right: 30px;
+			@media (max-width:$bp-md) {
+				margin-right: 5px;
+			}
+		}
+		span{
+			@media (max-width:$bp-md) {
+				display: none;
+			}
+			
 		}
 
 	}
@@ -34,6 +52,24 @@
 		padding-bottom: 26px;
 		margin-bottom: 20px;
 		border: 2px solid #e4edf2;
+
+		@media (max-width:$bp-xl) {
+			padding-left: 22px;
+			padding-right: 13px;
+		}
+
+		@media (max-width:$bp-lg) {
+			padding-bottom: 15px;
+			padding-left: 13px;
+		}
+
+		.c-product__choosen {
+			@media (max-width:$bp-lg) {
+				margin-bottom: 20px;
+			}
+
+		}
+
 	}
 
 	&__choosen {
@@ -43,6 +79,11 @@
 		display: flex;
 		align-items: flex-end;
 		line-height: 1;
+
+		@media (max-width:$bp-lg) {
+			margin-top: 0;
+		}
+
 	}
 
 	&__choosen-count {
@@ -62,6 +103,11 @@
 		font-size: 13px;
 		text-transform: uppercase;
 		line-height: 1.7;
+
+		@media (max-width:$bp-lg) {
+			margin-right: 15px;
+		}
+
 	}
 
 	&__price-number {
@@ -102,6 +148,11 @@
 
 			&:not(:last-child) {
 				margin-right: 20px;
+
+				@media (max-width:$bp-xl) {
+					margin-right: 10px;
+				}
+
 			}
 
 		}
@@ -112,22 +163,39 @@
 		margin-bottom: 70px;
 		border-radius: 3px;
 		border: 2px solid #e4edf2;
-		&_fixed{
+		@media (max-width:$bp-md) {
+			margin-left: -20px;
+			width: calc(100% + 40px);
+		}
+
+		&_fixed {
 			cursor: default;
 			position: fixed;
 			bottom: 0;
 			z-index: 240;
 			margin: 0;
-			.c-product__order-checkout-top{
+
+			@media (max-width:$bp-md) {
+				margin-left: -20px;
+			}
+
+			.c-product__order-checkout-top {
 				cursor: default;
 			}
+
 		}
+
 		.c-product__price {
 			margin-left: 0;
 		}
 
 		.c-product__choosen {
 			margin-top: 0;
+
+			@media (max-width:$bp-xl) {
+				font-size: 15px;
+			}
+
 		}
 
 		.c-product__price-number {
@@ -136,10 +204,20 @@
 
 		.c-product__choosen-count {
 			margin-left: 15px;
+
+			@media (max-width:$bp-xl) {
+				font-size: 16px;
+			}
+
 		}
 
 		.c-product__order-actions .c-btn:not(:last-child) {
 			margin-right: 15px;
+
+			@media (max-width:$bp-xl) {
+				margin-right: 10px;
+			}
+
 		}
 
 		.c-product__order-actions .c-btn {
@@ -161,6 +239,16 @@
 		height: 65px;
 		padding-left: 40px;
 		padding-right: 23px;
+
+		@media (max-width:$bp-xl) {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+
+		@media (max-width:$bp-md) {
+			height: 100px;
+		}
+
 	}
 
 }

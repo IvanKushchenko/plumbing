@@ -1,26 +1,28 @@
 .c-navbar
+	a(href="#").c-navbar__catalog-btn каталог
 	.c-navbar__item
-		a(href="#").c-navbar__link личный кабинет: User ID: 1
+		a(href="#").c-navbar__link личный кабинет 
+		span : User ID: 1
 	.c-navbar__item
 		| Ваш город:
 		a(href="#").c-navbar__link  Санкт-Петербург
 	.c-navbar__item
 		a(href="#!").c-navbar__btn
 			img(src=require("../../img/icons/vesi.png"), alt="").c-navbar__btn-icon
-			| В сравнении 
+			span.c-navbar__txt В сравнении 
 			span.c-navbar__counter 3
-			| тов.
+			span.c-navbar__txt тов.
 	.c-navbar__item
 		a(href="#!").c-navbar__btn
 			img(src=require("../../img/icons/fav.png"), alt="").c-navbar__btn-icon
-			| В закладках
+			span.c-navbar__txt В закладках
 			span.c-navbar__counter.is-empty 0
-			| тов.
+			span.c-navbar__txt тов.
 	.c-navbar__item
 		a(href="#!").c-navbar__btn
 			img(src=require("../../img/icons/cart.png"), alt="").c-navbar__btn-icon
-			| В корзине 
+			span.c-navbar__txt В корзине 
 			span.c-navbar__counter 3
-			| тов.
+			span.c-navbar__txt тов.
 	.c-navbar__item
 		a(href="#!").c-btn.c-btn_secondary.c-navbar__btn оформить заказ

@@ -19,6 +19,9 @@
     letter-spacing: 0;
     padding-right: 15px;
     line-height: 18px;
+    @media (max-width:$bp-xl) {
+    	display: none !important;
+    }
 	p{
 		margin: 0;
 	}

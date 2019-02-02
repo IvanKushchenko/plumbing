@@ -11,7 +11,7 @@
 		margin-bottom: 10px;
 
 	}
-
+	
 	&__showroom{
 		background-color: #ecf2f6;
 		height: 36px;
@@ -47,6 +47,9 @@
 		padding-left: 30px;
 		font-size: 14px;
 		margin-bottom: 30px;
+		@media (max-width:$bp-lg) {
+			margin-bottom: 10px;
+		}
 		td{
 			&:first-child{
 				width: 51%;
@@ -62,6 +65,10 @@
 	}
 	&__actions{
 		padding-left: 30px;
+		@media (max-width:$bp-lg) {
+			padding-left: 0;
+			margin-bottom: 10px;
+		}
 	}
 	&__action{
 		height: 37px;
@@ -75,14 +82,33 @@
 		font-size: 12px;
 		color: #222222;
 		padding-left: 14%;
+		@media (max-width:$bp-xl) {
+			padding-left: 0;
+		}
+		@media (max-width:$bp-lg) {
+			width: 100%;
+			padding-left: 15%;
+		}
+		@media (max-width:$bp-md) {
+			padding-left: 0;
+		}
+		@media (max-width:$bp-sm) {
+			font-size: 10px;
+		}
 	}
 	&__action-icon{
 		margin: 0 auto;
 		display: block;
+		@media (max-width:$bp-sm) {
+			max-width: 100%;
+		}
 	}
 	&__action-icon-wrap{
 		width: 50px;
 		margin-right: 9px;
+		@media (max-width:$bp-sm) {
+			width: 30px;
+		}
 	}
 	&__action-text{
 		white-space: nowrap;

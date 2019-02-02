@@ -11,14 +11,20 @@ header.c-header
 		a(href="tel:99999").c-phone +7 (495) 565 35 88
 			.c-phone__text Работаем круглосуточно
 		.c-header__actions.d-flex.align-items-center
-			a(href="#").c-btn.c-btn_primary обратный звонок
+			a(href="#").c-btn.c-btn_primary.d-none.d-md-flex обратный звонок
 			a(href="#").c-btn.c-btn_primary написать нам
 	.c-header__bottom
-		.c-catalog-menu
+		.c-catalog-menu.d-none.d-md-block
 			.c-catalog-menu__toggle каталог
 				.c-catalog-menu__toggle-icon
 			.c-catalog-menu__nav
-		.c-search
-			form.c-form
-				input(type="search" placeholder="Поиск по сайту").c-search__field
-				button.c-search__btn
+		.c-search-wrap.w-100
+			nav.c-nav.c-header__nav_mobile
+				a(href="#").c-nav__item Бренды
+				a(href="#").c-nav__item Доставка и оплата
+				a(href="#").c-nav__item Акции
+				a(href="#").c-nav__item Контакты
+			.c-search
+				form.c-form
+					input(type="search" placeholder="Поиск по сайту").c-search__field
+					button.c-search__btn

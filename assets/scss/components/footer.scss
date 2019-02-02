@@ -8,6 +8,9 @@
 		font-size: 13px;
 		letter-spacing: 0.53px;
 		color: #8fa2ac;
+		@media (max-width:$bp-md) {
+			margin-bottom: 20px;
+		}
 	}
 
 	a {
@@ -25,6 +28,9 @@
 		display: flex;
 		justify-content: space-between;
 		margin-bottom: 45px;
+		@media (max-width:$bp-lg) {
+			margin-bottom: 15px;
+		}
 	}
 
 	&__bottom {
@@ -44,6 +50,16 @@
 		max-width: 120px;
 		margin-bottom: 36px;
 		margin-right: 60px;
+		@media (max-width:$bp-xl) {
+			margin-right: 20px;
+		}
+		@media (max-width:$bp-lg) {
+			margin-right: 40px;
+		}
+		@media (max-width:$bp-md) {
+			margin-right: 0;
+			margin-bottom: 10px;
+		}
 	}
 
 	&__privacy-link {
@@ -55,9 +71,18 @@
 		&_nav {
 			width: 200px;
 			padding-top: 7px;
-
+			@media (max-width:$bp-lg) {
+				width: auto;
+			}
+			@media (max-width:$bp-md) {
+				text-align: center;
+				margin-bottom: 20px;
+			}
 			a {
 				margin-bottom: 16px;
+				@media (max-width:$bp-md) {
+					margin: 5px 10px;
+				}
 			}
 
 		}
@@ -69,6 +94,25 @@
 			position: relative;
 			left: -20px;
 			margin-top: 7px;
+			@media (max-width:$bp-lg) {
+				left: 0;
+				padding-left: 30px;
+			}
+			@media (max-width:$bp-md) {
+				padding-left: 0;
+			}
+			a{
+				
+				@media (max-width:$bp-lg) {
+					margin-bottom: 25px;
+				}
+				@media (max-width:$bp-md) {
+					white-space: nowrap;
+					margin: 0 10px;
+					margin-bottom: 25px;
+				}
+
+			}
 		}
 
 		&_placement {
@@ -79,9 +123,35 @@
 			position: relative;
 			left: -40px;
 			margin-top: 4px;
-
+			@media (max-width:$bp-lg) {
+				width: auto;
+				left: 0;
+				padding-left: 30px;
+			}
+			@media (max-width:$bp-md) {
+				padding-left: 0;
+				text-align: center;
+				padding: 0 18%;
+				margin-bottom: 10px;
+			}
+			@media (max-width:$bp-sm) {
+				padding: 0;
+			}
+		
 			p {
 				line-height: 24px;
+				@media (max-width:$bp-lg) {
+					margin-bottom: 25px;
+				}
+				@media (max-width:$bp-md) {
+					margin-bottom: 15px;
+				}
+			}
+			a{
+				@media (max-width:$bp-md) {
+				    text-decoration: underline;
+				}
+
 			}
 
 		}
@@ -99,9 +169,23 @@
 			position: relative;
 			left: 4px;
 			width: 230px;
-
+			@media (max-width:$bp-xl) {
+				width: 100%;
+				left: 0;
+				padding-left: 140px;
+			}
+			@media (max-width:$bp-lg) {
+				padding-left: 160px;
+			}
+			@media (max-width:$bp-md) {
+				padding-left: 0;
+			}
 			img {
 				margin-bottom: 28px;
+				@media (max-width:$bp-md) {
+					max-width: 100%;
+					margin-bottom: 0;
+				}
 			}
 
 		}

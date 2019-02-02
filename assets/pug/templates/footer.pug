@@ -1,41 +1,69 @@
 footer.c-footer
-	.c-footer__top
-		.f-dlex.flex-column
-			img(src=require("../../img/icons/logo.svg"), alt="").c-footer__logo
-			.c-footer__copyright ®SanBest, 2019
-		.c-footer__col.c-footer__col_nav
-			ul
-				li
-					a(href="#") Бренды
-				li
-					a(href="#") Доставка и оплата
-				li
-					a(href="#") Акции
-				li
-					a(href="#") Контакты
-		.c-footer__col.c-footer__col_contacts.d-flex.flex-column.justify-content-between
-			div
-				a(href="tel:74955653588") +7 (495) 565 35 88
-				a(href="mailto:sale@sanbest.ru") sale@sanbest.ru
-			a(href="#").c-footer__privacy-link Политика конфиденциальности
-		.c-footer__col.c-footer__col_placement.d-flex.flex-column.justify-content-between
-			p
-				.
-					Посёлок Заречье, Торговая ул., с2, ТЦ "Элитстройматериалы", 1 этаж, место А-18
-					с 10.00 - 20.00 без выходных
-			a(href="#") Показать на карте
+	.c-footer__top.d-flex.flex-column.flex-xl-row
+		.d-flex.flex-column.flex-md-row
+			.d-flex.flex-column.align-items-center.align-items-md-start
+				img(src=require("../../img/icons/logo.svg"), alt="").c-footer__logo
+				.c-footer__copyright ®SanBest, 2019
+			
+			.d-flex.d-lg-none.flex-wrap.flex-md-nowrap.flex-row.align-items-center.align-md-items-start
+				.c-footer__col.w-100
+					.c-footer__col_nav
+						ul.d-flex.align-items-center.flex-wrap.justify-content-center.d-md-block
+							li
+								a(href="#") Бренды
+							li
+								a(href="#") Доставка и оплата
+							li
+								a(href="#") Акции
+							li
+								a(href="#") Контакты
+							li
+								a(href="#") Политика конфиденциальности
+				.c-footer__col
+					.c-footer__col_contacts.d-flex.flex-row.flex-lg-column.justify-content-center.justify-content-md-between.align-items-center.align-items-md-start
+						a(href="tel:74955653588") +7 (495) 565 35 88
+						a(href="mailto:sale@sanbest.ru") sale@sanbest.ru
+					.c-footer__col_placement.d-flex.flex-column.justify-content-between.align-items-center.align-items-md-start
+						p
+							.
+								Посёлок Заречье, Торговая ул., с2, ТЦ "Элитстройматериалы", 1 этаж, место А-18
+								с 10.00 - 20.00 без выходных
+						a(href="#") Показать на карте
+					
+			.d-none.d-lg-flex
+				.c-footer__col.c-footer__col_nav
+					ul
+						li
+							a(href="#") Бренды
+						li
+							a(href="#") Доставка и оплата
+						li
+							a(href="#") Акции
+						li
+							a(href="#") Контакты
+				.c-footer__col.c-footer__col_contacts.d-flex.flex-column.justify-content-between
+					div
+						a(href="tel:74955653588") +7 (495) 565 35 88
+						a(href="mailto:sale@sanbest.ru") sale@sanbest.ru
+					a(href="#").c-footer__privacy-link Политика конфиденциальности
+				.c-footer__col.c-footer__col_placement.d-flex.flex-column.justify-content-between
+					p
+						.
+							Посёлок Заречье, Торговая ул., с2, ТЦ "Элитстройматериалы", 1 этаж, место А-18
+							с 10.00 - 20.00 без выходных
+					a(href="#") Показать на карте
+		.d-flex
+			.c-footer__col.c-footer__col_cards
+				.row
+					.col-3.col-xl-6.c-footer__card.text-center.text-md-left
+						img(src=require("../../img/content/visa.png"), alt="")
+					.col-3.col-xl-6.c-footer__card.text-center.text-md-left
+						img(src=require("../../img/content/mastercard.png"), alt="")
 
-		.c-footer__col.c-footer__col_cards
-			.row
-				.col-md-6.c-footer__card
-					img(src=require("../../img/content/visa.png"), alt="")
-				.col-md-6.c-footer__card
-					img(src=require("../../img/content/mastercard.png"), alt="")
-
-				.col-md-6.c-footer__card
-					img(src=require("../../img/content/sberbank.png"), alt="")
-				.col-md-6.c-footer__card
-					img(src=require("../../img/content/mir.png"), alt="")
+					.col-3.col-xl-6.c-footer__card.text-center.text-md-left
+						img(src=require("../../img/content/sberbank.png"), alt="")
+					.col-3.col-xl-6.c-footer__card.text-center.text-md-left
+						img(src=require("../../img/content/mir.png"), alt="")
 	.c-footer__bottom
 		p
 			.

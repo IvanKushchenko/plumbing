@@ -40,3 +40,18 @@ a{
 		color: #f1ca49;
 	}
 }
+
+
+
+/* Rewrite */
+.lg-backdrop{
+	z-index: 1050;
+}
+[class^="col-"]{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.row{
+	margin-left: -10px;
+	margin-right: -10px;
+}
