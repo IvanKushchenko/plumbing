@@ -1,7 +1,9 @@
 .c-checkout-products {
 	position: relative;
 	padding: 16px 30px;
-
+		@media (max-width:$bp-md) {
+			padding: 16px 20px;
+}
 	.swiper-container {
 		padding: 10px 4px;
 		padding-bottom: 20px;
@@ -21,6 +23,9 @@
 		border: 1px solid #ecf2f6;
 		border-radius: 50%;
 		background: #fff url('../img/icons/arrow-right.png') no-repeat center center;
+		@media (max-width:$bp-md) {
+			display: none;
+		}
 	}
 
 	.swiper-button-prev {
@@ -75,13 +80,19 @@
 			overflow: hidden;
 			margin: 0 auto;
 			margin-bottom: 11px;
-
+			@media (max-width:$bp-md) {
+				width: 100%;
+				padding: 10px;
+			}
 			img {
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
 				margin: 0 auto;
 				display: block;
+				@media (max-width:$bp-md) {
+					object-fit: contain;
+				}
 			}
 
 		}

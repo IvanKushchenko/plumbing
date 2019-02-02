@@ -4,6 +4,8 @@
 		font-size: 23px;
 		margin-bottom: 15px;
 		text-align: center;
-		
+		@media (max-width:$bp-sm-2) {
+			font-size: 20px;
+		}
 	}
 }

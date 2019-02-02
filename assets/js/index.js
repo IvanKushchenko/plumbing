@@ -62,6 +62,14 @@ $(function() {
     var watchEarlierSlider = new Swiper('.js-watch-earlier-slider', {
         slidesPerView: 4,
         spaceBetween: 25,
+        breakpoints: {
+        	992:{
+        		slidesPerView: 3
+        	},
+        	450:{
+        		slidesPerView: 2
+        	}
+        },
         navigation: {
             nextEl: '.js-watch-earlier .swiper-button-next',
             prevEl: '.js-watch-earlier .swiper-button-prev'

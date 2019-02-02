@@ -1,5 +1,8 @@
 .c-share{
 	margin-bottom: 72px;
+	@media (max-width:$bp-sm) {
+		margin-bottom: 40px;
+	}
 	img{
 		max-width: 100%;
 	}

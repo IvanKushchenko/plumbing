@@ -12711,6 +12711,12 @@ a:hover {
   padding: 16px 30px;
 }
 
+@media (max-width: 768px) {
+  .c-checkout-products {
+    padding: 16px 20px;
+  }
+}
+
 .c-checkout-products .swiper-container {
   padding: 10px 4px;
   padding-bottom: 20px;
@@ -12730,6 +12736,12 @@ a:hover {
   border: 1px solid #ecf2f6;
   border-radius: 50%;
   background: #fff url(../img/icons/arrow-right.png) no-repeat center center;
+}
+
+@media (max-width: 768px) {
+  .c-checkout-products .swiper-button-prev, .c-checkout-products .swiper-button-next {
+    display: none;
+  }
 }
 
 .c-checkout-products .swiper-button-prev {
@@ -12784,12 +12796,25 @@ a:hover {
   margin-bottom: 11px;
 }
 
+@media (max-width: 768px) {
+  .c-checkout-products .c-checkout-product__img {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
 .c-checkout-products .c-checkout-product__img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   margin: 0 auto;
   display: block;
+}
+
+@media (max-width: 768px) {
+  .c-checkout-products .c-checkout-product__img img {
+    object-fit: contain;
+  }
 }
 
 .c-checkout-products .c-checkout-product__link {
@@ -12828,6 +12853,12 @@ a:hover {
   margin-bottom: 48px;
 }
 
+@media (max-width: 450px) {
+  .c-product-description {
+    margin-bottom: 30px;
+  }
+}
+
 .c-product-description__title {
   font-family: "Roboto Slab";
   font-size: 23px;
@@ -12859,12 +12890,39 @@ a:hover {
   position: absolute;
 }
 
+@media (max-width: 768px) {
+  .c-product-description__title {
+    width: 60%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 450px) {
+  .c-product-description__title {
+    width: 70%;
+    font-size: 19px;
+  }
+}
+
 .c-product-description__body {
   padding: 46px 60px;
   text-align: center;
   font-family: "Open Sans";
   font-size: 15px;
   padding-bottom: 37px;
+}
+
+@media (max-width: 768px) {
+  .c-product-description__body {
+    padding: 35px 30px;
+  }
+}
+
+@media (max-width: 450px) {
+  .c-product-description__body {
+    padding: 35px 15px;
+    font-size: 13px;
+  }
 }
 
 .c-product-description__body p {
@@ -12879,6 +12937,12 @@ a:hover {
   font-size: 15px;
   font-weight: bold;
   margin-bottom: 3px;
+}
+
+@media (max-width: 450px) {
+  .c-product-description__body h5 {
+    font-size: 13px;
+  }
 }
 
 .c-float-btn {
@@ -12940,8 +13004,20 @@ a:hover {
   text-align: center;
 }
 
+@media (max-width: 450px) {
+  .c-options__header {
+    font-size: 20px;
+  }
+}
+
 .c-share {
   margin-bottom: 72px;
+}
+
+@media (max-width: 576px) {
+  .c-share {
+    margin-bottom: 40px;
+  }
 }
 
 .c-share img {
@@ -12956,6 +13032,12 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .c-watch-earlier__header {
+    flex-direction: column;
+  }
 }
 
 .c-watch-earlier .swiper-container {
@@ -12983,6 +13065,12 @@ a:hover {
   top: 30%;
 }
 
+@media (max-width: 768px) {
+  .c-watch-earlier .swiper-button-next, .c-watch-earlier .swiper-button-prev {
+    display: none;
+  }
+}
+
 .c-watch-earlier__header-link {
   position: absolute;
   right: -2px;
@@ -12991,9 +13079,22 @@ a:hover {
   text-transform: uppercase;
 }
 
+@media (max-width: 576px) {
+  .c-watch-earlier__header-link {
+    position: static;
+    margin-top: 12px;
+  }
+}
+
 .c-watch-earlier .c-checkout-products {
   padding: 0;
   padding-top: 45px;
+}
+
+@media (max-width: 576px) {
+  .c-watch-earlier .c-checkout-products {
+    padding-top: 15px;
+  }
 }
 
 .c-watch-earlier .c-checkout-product:after {
@@ -13006,6 +13107,16 @@ a:hover {
   height: 135px;
 }
 
+@media (max-width: 768px) {
+  .c-watch-earlier .c-checkout-product__img {
+    width: 100%;
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid #ecf2f6;
+    margin-bottom: 20px;
+  }
+}
+
 .c-watch-earlier .c-checkout-product__img img {
   object-fit: contain;
   object-position: bottom;
@@ -13013,6 +13124,12 @@ a:hover {
 
 .c-watch-earlier .c-checkout-product__title {
   padding: 0 10px;
+}
+
+@media (max-width: 768px) {
+  .c-watch-earlier .c-checkout-product__title {
+    display: none;
+  }
 }
 
 .c-footer {

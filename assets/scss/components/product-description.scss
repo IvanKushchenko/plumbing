@@ -3,6 +3,9 @@
 	border: 2px solid #e4edf2;
 	position: relative;
 	margin-bottom: 48px;
+	 @media (max-width:$bp-sm-2) {
+	 	margin-bottom: 30px;
+	 }
 
 	&__title {
 		font-family: "Roboto Slab";
@@ -31,6 +34,14 @@
 			border-radius: 50%;
 			position: absolute;
 		}
+		@media (max-width:$bp-md) {
+			width: 60%;
+			justify-content: center;
+		}
+		@media (max-width:$bp-sm-2) {
+			width: 70%;
+			font-size: 19px;
+		}
 	}
 
 	&__body {
@@ -39,6 +50,13 @@
 		font-family: "Open Sans";
 		font-size: 15px;
 	    padding-bottom: 37px;
+	    @media (max-width:$bp-md) {
+	    	padding: 35px 30px;
+	    }
+	    @media (max-width:$bp-sm-2) {
+	    	padding: 35px 15px;
+	    	font-size: 13px;
+	    }
 		p{
 			margin-bottom: 26px;
 			&:last-child{
@@ -49,6 +67,9 @@
 			font-size: 15px;
 			font-weight: bold;
 			margin-bottom: 3px;
+			 @media (max-width:$bp-sm-2) {
+			 	font-size: 13px;
+			 }
 
 		}
 	}
