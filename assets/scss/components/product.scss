@@ -50,7 +50,7 @@
 		border-radius: 3px;
 		background-color: #ecf2f6;
 		padding-bottom: 26px;
-		margin-bottom: 20px;
+		margin-bottom: 10px;
 		border: 2px solid #e4edf2;
 
 		@media (max-width:$bp-xl) {
@@ -64,7 +64,7 @@
 		}
 
 		.c-product__choosen {
-			@media (max-width:$bp-lg) {
+			@media (max-width:$bp-xl) {
 				margin-bottom: 20px;
 			}
 			@media (max-width:$bp-sm-2) {
@@ -113,7 +113,7 @@
 		text-transform: uppercase;
 		line-height: 1.7;
 
-		@media (max-width:$bp-lg) {
+		@media (max-width:$bp-xl) {
 			margin-right: 15px;
 		}
 		@media (max-width:$bp-sm-2) {

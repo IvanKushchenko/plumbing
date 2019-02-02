@@ -8,6 +8,9 @@
 		font-size: 14px;
 		font-weight: 400;
 		box-shadow: none;
+		&:hover{
+			color: #222;
+		}
 		@media (max-width:$bp-sm-2) {
 			white-space: nowrap;
 		}

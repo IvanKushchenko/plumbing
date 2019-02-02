@@ -1,42 +1,59 @@
 import $ from 'jquery';
 
 $(function() {
+    var codeHiden = false,
+        productsHidden = false;
+
     function checkPosCodeTip() {
+        if (codeHiden) return;
+        var bottomPos = $(window).scrollTop() + $(window).height();
         var codeContainer = $('.c-product-info__code');
         $('.c-tip_code').css({
             'top': ((codeContainer.offset().top - $(window).scrollTop()) - (codeContainer.height() / 2) + 10) + 'px',
-            'left': (codeContainer.offset().left - $('.c-tip_code').width()) + 'px'
+            'left': (codeContainer.offset().left - $('.c-tip_code').width() * 1.7) + 'px'
         })
-        $('.c-tip_code').show();
+        if (bottomPos >= codeContainer.offset().top) {
+            if ($('.c-tip_code').is(':hidden')) {
+                $('.c-tip_code').show();
+                setTimeout(function() {
+                    $('.c-tip_code').fadeOut(300);
+                    codeHiden = true;
+                }, 10000);
+            }
+        }
     }
-    checkPosCodeTip();
+    setTimeout(function() {
+        checkPosCodeTip();
+    }, 200)
 
     function checkPosProductsTip() {
-        var productsContainer = $('.js-scroll-to-options');
+        if (productsHidden) return;
+        var bottomPos = $(window).scrollTop() + $(window).height();
+        var productsContainer = $('.js-options');
         $('.c-tip_products').css({
-            'top': ((productsContainer.offset().top - $(window).scrollTop()) - (productsContainer.height()) - 20) + 'px',
-            'left': (productsContainer.offset().left - $('.c-tip_products').width() - 20) + 'px'
+            'top': ((productsContainer.offset().top - $(window).scrollTop()) + 50) + 'px',
+            'left': (productsContainer.offset().left - $('.c-tip_products').width() * 1.3) + 'px'
         })
-        $('.c-tip_products').show();
+        if (bottomPos >= productsContainer.offset().top) {
+            if ($('.c-tip_products').is(':hidden')) {
+                $('.c-tip_products').show();
+                setTimeout(function() {
+                    $('.c-tip_products').fadeOut(300);
+                    productsHidden = true;
+                }, 10000);
+            }
+
+        }
+
     }
     checkPosProductsTip();
     $(window).scroll(function() {
-        var codeContainer = $('.c-product-info__code');
-        var productsContainer = $('.js-scroll-to-options');
-        var bottomPos = $(window).scrollTop() + $(window).height();
         checkPosProductsTip();
         checkPosCodeTip();
-        if (bottomPos >= codeContainer.offset().top) {
-            if(!$('.c-tip_code').show()) $('.c-tip_code').show();
-        }
-         if (bottomPos >= productsContainer.offset().top) {
-         	if(!$('.c-tip_products').show()) $('.c-tip_products').show();
-            
-        }
     })
 
-    $(window).resize(function(){
-    	checkPosCodeTip();
-    	checkPosProductsTip();
+    $(window).resize(function() {
+        checkPosCodeTip();
+        checkPosProductsTip();
     })
 })

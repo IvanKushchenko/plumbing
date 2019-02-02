@@ -102,7 +102,14 @@
                       <div class="col-md-6 col-lg-12">
                         <div class="c-product-info__body">
                           <div class="c-product-info__code">Код товара:  B22528</div>
-                          <div class="c-product-info__showroom">Модель бренда есть в шоуруме</div>
+                          <div class="c-product-info__showroom c-showroom js-showroom">Модель бренда есть в шоуруме
+                            <div class="c-showroom__menu"><a class="c-showroom__close" href="#"></a><a class="c-showroom__title" href="#">Мебель для ванной belgano</a>
+                              <div class="c-showroom__text">
+                                <h5>Можно посмотреть</h5>
+                                <p>Ассиметричная ванна Венеция подобна современному искусству в сочетании геометрических форм. </p><a class="mb-2" href="#">Схема проезда</a>
+                              </div><a href="#">Адреса всех шоурумов</a>
+                            </div>
+                          </div>
                           <div class="c-product-info__description collapse show" id="product-info-body">
                             <table class="c-table">
                               <tbody>
@@ -141,22 +148,32 @@
                                 <tr>
                                   <td>Цвет профиля:</td>
                                   <td> 
-                                    <div class="dropdown c-dropdown">
-                                      <div class="dropdown-toggle c-dropdown-toggle">
+                                    <div class="dropdown c-dropdown c-dropdown_link">
+                                      <div class="dropdown-toggle c-dropdown-toggle" data-toggle="dropdown">
                                         <div class="c-dropdown-toggle__link">2 варианта</div>
                                       </div>
-                                      <div class="dropdown-menu">as</div>
+                                      <div class="dropdown-menu c-dropdown__menu">
+                                        <ul>
+                                          <li>Серый </li>
+                                          <li>Розовый </li>
+                                        </ul>
+                                      </div>
                                     </div>
                                   </td>
                                 </tr>
                                 <tr>
                                   <td>Витраж:</td>
                                   <td> 
-                                    <div class="dropdown c-dropdown">
-                                      <div class="dropdown-toggle c-dropdown-toggle">
+                                    <div class="dropdown c-dropdown c-dropdown_link">
+                                      <div class="dropdown-toggle c-dropdown-toggle" data-toggle="dropdown">
                                         <div class="c-dropdown-toggle__link">3 варианта</div>
                                       </div>
-                                      <div class="dropdown-menu">as</div>
+                                      <div class="dropdown-menu c-dropdown__menu">
+                                        <ul>
+                                          <li>Витраж 1 </li>
+                                          <li>Витраж 2</li>
+                                        </ul>
+                                      </div>
                                     </div>
                                   </td>
                                 </tr>
@@ -205,9 +222,9 @@
                   </div>
                 </div>
                 <div class="col-lg-8">
-                  <div class="c-product__order-info d-none d-lg-block">
+                  <div class="c-product__order-info d-none d-xl-block">
                     <div class="d-flex align-items-center justify-content-between mb-3">
-                      <div class="c-product__choosen">Выбрано:<a class="c-product__choosen-count" href="#">0 товара</a></div>
+                      <div class="c-product__choosen">Выбрано:<a class="c-product__choosen-count" href="#!">0 товара</a></div>
                       <div class="c-product__price">Итого:
                         <div class="c-product__price-number c-product__price-number_old">0</div>
                         <div class="c-product__price-number c-product__price-number_new">0</div>
@@ -256,9 +273,9 @@
                       </div>
                     </div>
                   </div>
-                  <div class="c-product__order-info c-product__order-info_mobile d-lg-none d-flex align-items-center flex-column justify-content-between">
+                  <div class="c-product__order-info c-product__order-info_mobile d-xl-none d-flex align-items-center flex-column justify-content-between">
                     <div class="d-flex w-100 justify-content-between justify-content-md-center c-product__order-info-inner">
-                      <div class="c-product__choosen">Выбрано:<a class="c-product__choosen-count" href="#">0 товара</a></div>
+                      <div class="c-product__choosen">Выбрано:<a class="c-product__choosen-count" href="#!">0 товара</a></div>
                       <div class="c-product__price d-md-none">Итого:
                         <div class="c-product__price-number c-product__price-number_old">0</div>
                         <div class="c-product__price-number c-product__price-number_new">0</div>
@@ -313,6 +330,10 @@
                       </div>
                       <div class="c-product__order-actions d-flex"><a class="c-btn c-btn_primary" href="#">В КОРЗИНУ</a><a class="c-btn c-btn_primary" href="#">КУПИТЬ В 1 КЛИК</a></div>
                     </div>
+                  </div>
+                  <div class="c-offer">
+                    При покупке от 20 000 c вы получите скидку 3 000 c на следующую покупку! 
+                    + бесплатную доставку по москве!
                   </div>
                   <div class="c-table c-table_product js-table_product c-table_width-notification">
                     <div class="c-table__header">ГИДРОМАССАЖ</div>
@@ -523,7 +544,7 @@
                           <div class="c-table__cell d-none d-md-block">
                             <div class="c-product-card__price">13 400</div>
                           </div>
-                          <div class="c-table__cell"><a class="c-btn c-btn_primary c-product-card__btn" href="#">выбрать</a></div>
+                          <div class="c-table__cell"><a class="c-btn c-btn_primary c-product-card__btn" href="#">Добавить</a></div>
                         </div>
                         <div class="c-table__row c-product-card" data-articul="233700061">
                           <div class="c-table__cell">
@@ -539,7 +560,7 @@
                           <div class="c-table__cell d-none d-md-block">
                             <div class="c-product-card__price">13 400</div>
                           </div>
-                          <div class="c-table__cell"><a class="c-btn c-btn_primary c-product-card__btn" href="#">выбрать</a></div>
+                          <div class="c-table__cell"><a class="c-btn c-btn_primary c-product-card__btn" href="#">Добавить</a></div>
                         </div>
                         <div class="c-table__row c-product-card" data-articul="233700501">
                           <div class="c-table__cell">
@@ -555,7 +576,7 @@
                           <div class="c-table__cell d-none d-md-block">
                             <div class="c-product-card__price">13 400</div>
                           </div>
-                          <div class="c-table__cell"><a class="c-btn c-btn_primary c-product-card__btn" href="#">выбрать</a></div>
+                          <div class="c-table__cell"><a class="c-btn c-btn_primary c-product-card__btn" href="#">Добавить</a></div>
                         </div>
                         <div class="c-table__row c-product-card" data-articul="233700401">
                           <div class="c-table__cell">
@@ -571,7 +592,7 @@
                           <div class="c-table__cell d-none d-md-block">
                             <div class="c-product-card__price">13 400</div>
                           </div>
-                          <div class="c-table__cell"><a class="c-btn c-btn_primary c-product-card__btn" href="#">выбрать</a></div>
+                          <div class="c-table__cell"><a class="c-btn c-btn_primary c-product-card__btn" href="#">Добавить</a></div>
                         </div>
                         <div class="c-table__row c-product-card" data-articul="2337005501">
                           <div class="c-table__cell">
@@ -587,23 +608,23 @@
                           <div class="c-table__cell d-none d-md-block">
                             <div class="c-product-card__price">13 400</div>
                           </div>
-                          <div class="c-table__cell"><a class="c-btn c-btn_primary c-product-card__btn" href="#">выбрать</a></div>
+                          <div class="c-table__cell"><a class="c-btn c-btn_primary c-product-card__btn" href="#">Добавить</a></div>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="c-product__order-checkout c-product__order-checkout_fixed js-product-order-checkout-fixed">
                     <div class="c-product__order-checkout-top">
-                      <div class="d-none d-md-flex align-items-center justify-content-between w-100">
-                        <div class="c-product__choosen">Выбрано:<a class="c-product__choosen-count" href="#">0 товара</a></div>
+                      <div class="d-none d-md-flex d-lg-none d-xl-flex align-items-center justify-content-between w-100">
+                        <div class="c-product__choosen">Выбрано:<a class="c-product__choosen-count" href="#!">0 товара</a></div>
                         <div class="c-product__price">Стоимость:
                           <div class="c-product__price-number">0</div>
                         </div>
                         <div class="c-product__order-actions d-flex"><a class="c-btn c-btn_secondary" href="#">В КОРЗИНУ</a><a class="c-btn c-btn_secondary" href="#">КУПИТЬ В 1 КЛИК</a></div>
                       </div>
-                      <div class="d-flex d-md-none flex-column align-items-center justify-content-between w-100">
+                      <div class="d-flex d-md-none d-lg-flex d-xl-none flex-column align-items-center justify-content-between w-100">
                         <div class="d-flex mb-1">
-                          <div class="c-product__choosen">Выбрано:<a class="c-product__choosen-count" href="#">0 товара</a></div>
+                          <div class="c-product__choosen mb-1">Выбрано:<a class="c-product__choosen-count" href="#!">0 товара</a></div>
                         </div>
                         <div class="d-flex c-product__order-checkout-inner">
                           <div class="c-product__price">Стоимость:
@@ -617,7 +638,7 @@
                   <div class="c-product__order-checkout js-product-order-checkout-static">
                     <div class="c-product__order-checkout-top collapsed" data-toggle="collapse" aria-expanded="false" href="#order-checkout-products">
                       <div class="d-none d-md-flex align-items-center justify-content-between w-100">
-                        <div class="c-product__choosen">Выбрано:<a class="c-product__choosen-count" href="#">0 товара</a></div>
+                        <div class="c-product__choosen">Выбрано:<a class="c-product__choosen-count" href="#!">0 товара</a></div>
                         <div class="c-product__price">Стоимость:
                           <div class="c-product__price-number">0</div>
                         </div>
@@ -625,7 +646,7 @@
                       </div>
                       <div class="d-flex d-md-none flex-column align-items-center justify-content-between w-100">
                         <div class="d-flex mb-1 mb-sm-3">
-                          <div class="c-product__choosen">Выбрано:<a class="c-product__choosen-count" href="#">0 товара</a></div>
+                          <div class="c-product__choosen">Выбрано:<a class="c-product__choosen-count" href="#!">0 товара</a></div>
                         </div>
                         <div class="d-flex c-product__order-checkout-inner">
                           <div class="c-product__price">Стоимость:
@@ -853,7 +874,7 @@
               </div>
               <div class="col-md-5">
                 <div class="c-product-info__code">Код товара:  B22528</div>
-                <div class="c-product-info__showroom">Модель бренда есть в шоуруме</div>
+                <div class="c-product-info__showroom c-showroom">Модель бренда есть в шоуруме</div>
                 <div class="c-product-info__description">
                   <table class="c-table">
                     <tbody>
@@ -892,22 +913,32 @@
                       <tr>
                         <td>Цвет профиля:</td>
                         <td> 
-                          <div class="dropdown c-dropdown">
-                            <div class="dropdown-toggle c-dropdown-toggle">
+                          <div class="dropdown c-dropdown c-dropdown_link">
+                            <div class="dropdown-toggle c-dropdown-toggle" data-toggle="dropdown">
                               <div class="c-dropdown-toggle__link">2 варианта</div>
                             </div>
-                            <div class="dropdown-menu">as</div>
+                            <div class="dropdown-menu c-dropdown__menu">
+                              <ul>
+                                <li>Серый </li>
+                                <li>Розовый </li>
+                              </ul>
+                            </div>
                           </div>
                         </td>
                       </tr>
                       <tr>
                         <td>Витраж:</td>
                         <td> 
-                          <div class="dropdown c-dropdown">
-                            <div class="dropdown-toggle c-dropdown-toggle">
+                          <div class="dropdown c-dropdown c-dropdown_link">
+                            <div class="dropdown-toggle c-dropdown-toggle" data-toggle="dropdown">
                               <div class="c-dropdown-toggle__link">3 варианта</div>
                             </div>
-                            <div class="dropdown-menu">as</div>
+                            <div class="dropdown-menu c-dropdown__menu">
+                              <ul>
+                                <li>Серый </li>
+                                <li>Розовый </li>
+                              </ul>
+                            </div>
                           </div>
                         </td>
                       </tr>

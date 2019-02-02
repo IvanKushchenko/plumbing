@@ -40,7 +40,10 @@
 		@media (max-width:$bp-sm) {
 			font-size: 12px;
 		}
-
+		&:hover:after,
+		&.is-active:after{
+			background-image: url('../img/icons/exclamation-white.png');	
+		}
 		&:after {
 			content: '';
 			display: block;

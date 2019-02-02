@@ -192,4 +192,10 @@ $(function() {
 	})
 
 
+	$('.js-showroom').click(function(e){
+		e.preventDefault();
+		if($(e.target).hasClass('c-showroom__close') || $(e.target).hasClass('js-showroom')){
+			$(this).toggleClass('is-active');
+		}
+	})
 });

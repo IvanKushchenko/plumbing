@@ -6,6 +6,9 @@
 	box-shadow: none;
 	margin-top: 15px;
 	margin-right: auto;
+	&:hover{
+		color: #222;
+	}
 	@media (max-width: $bp-xl) {
 		margin-left: 20px;
 	}

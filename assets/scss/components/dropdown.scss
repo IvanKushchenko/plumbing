@@ -1,5 +1,7 @@
 .c-dropdown{
-
+	&_link &__menu{
+		padding: 5px;
+	}
 }
 .c-dropdown-toggle{
 	cursor: pointer;

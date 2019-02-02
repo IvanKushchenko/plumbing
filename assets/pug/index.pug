@@ -78,7 +78,17 @@ html(lang="ru")
 											.col-md-6.col-lg-12
 												.c-product-info__body
 													.c-product-info__code Код товара:  B22528
-													.c-product-info__showroom Модель бренда есть в шоуруме
+													.c-product-info__showroom.c-showroom.js-showroom Модель бренда есть в шоуруме
+														.c-showroom__menu
+															a(href="#").c-showroom__close
+															a(href="#").c-showroom__title Мебель для ванной belgano
+															.c-showroom__text
+																h5 Можно посмотреть
+																p
+																	.
+																		Ассиметричная ванна Венеция подобна современному искусству в сочетании геометрических форм. 
+																a(href="#").mb-2 Схема проезда
+															a(href="#") Адреса всех шоурумов
 													.c-product-info__description.collapse.show#product-info-body
 														table.c-table
 															tbody
@@ -116,18 +126,24 @@ html(lang="ru")
 																tr
 																	td Цвет профиля:
 																	td 
-																		.dropdown.c-dropdown
-																			.dropdown-toggle.c-dropdown-toggle
+																		.dropdown.c-dropdown.c-dropdown_link
+																			.dropdown-toggle.c-dropdown-toggle(data-toggle="dropdown")
 																				.c-dropdown-toggle__link 2 варианта
-																			.dropdown-menu as
+																			.dropdown-menu.c-dropdown__menu
+																				ul
+																					li Серый 
+																					li Розовый 
 
 																tr
 																	td Витраж:
 																	td 
-																		.dropdown.c-dropdown
-																			.dropdown-toggle.c-dropdown-toggle
+																		.dropdown.c-dropdown.c-dropdown_link
+																			.dropdown-toggle.c-dropdown-toggle(data-toggle="dropdown")
 																				.c-dropdown-toggle__link 3 варианта
-																			.dropdown-menu as
+																			.dropdown-menu.c-dropdown__menu
+																				ul
+																					li Витраж 1 
+																					li Витраж 2
 																tr
 																	td Размер(ДxШxВ), см:
 																	td (108-113)x(68-73)x190
@@ -180,11 +196,11 @@ html(lang="ru")
 															img(src=require("../img/icons/fast.png"), alt="").c-product-info__action-icon 
 														span.c-product-info__action-text оформить кредит online
 								.col-lg-8
-									.c-product__order-info.d-none.d-lg-block
+									.c-product__order-info.d-none.d-xl-block
 										.d-flex.align-items-center.justify-content-between.mb-3
 											.c-product__choosen
 												| Выбрано:
-												a(href="#").c-product__choosen-count 0 товара
+												a(href="#!").c-product__choosen-count 0 товара
 											.c-product__price
 												| Итого:
 												.c-product__price-number.c-product__price-number_old 0
@@ -222,11 +238,11 @@ html(lang="ru")
 														.c-progress-radial__value 59
 														.c-progress-radial__footer минут
 												.c-counter__txt осталось до конца акции
-									.c-product__order-info.c-product__order-info_mobile.d-lg-none.d-flex.align-items-center.flex-column.justify-content-between
+									.c-product__order-info.c-product__order-info_mobile.d-xl-none.d-flex.align-items-center.flex-column.justify-content-between
 										.d-flex.w-100.justify-content-between.justify-content-md-center.c-product__order-info-inner
 											.c-product__choosen
 												| Выбрано:
-												a(href="#").c-product__choosen-count 0 товара
+												a(href="#!").c-product__choosen-count 0 товара
 											.c-product__price.d-md-none
 												| Итого:
 												.c-product__price-number.c-product__price-number_old 0
@@ -270,6 +286,10 @@ html(lang="ru")
 											.c-product__order-actions.d-flex
 												a(href="#").c-btn.c-btn_primary В КОРЗИНУ
 												a(href="#").c-btn.c-btn_primary КУПИТЬ В 1 КЛИК
+									.c-offer
+										.
+											При покупке от 20 000 c вы получите скидку 3 000 c на следующую покупку! 
+											+ бесплатную доставку по москве!
 									.c-table.c-table_product.js-table_product.c-table_width-notification
 										.c-table__header ГИДРОМАССАЖ
 										.c-table__body
@@ -453,7 +473,7 @@ html(lang="ru")
 													.c-table__cell.d-none.d-md-block
 														.c-product-card__price 13 400
 													.c-table__cell
-														a(href="#").c-btn.c-btn_primary.c-product-card__btn выбрать
+														a(href="#").c-btn.c-btn_primary.c-product-card__btn Добавить
 												.c-table__row.c-product-card(data-articul="233700061")
 													.c-table__cell
 														.c-product-card__img-wrap
@@ -467,7 +487,7 @@ html(lang="ru")
 													.c-table__cell.d-none.d-md-block
 														.c-product-card__price 13 400
 													.c-table__cell
-														a(href="#").c-btn.c-btn_primary.c-product-card__btn выбрать
+														a(href="#").c-btn.c-btn_primary.c-product-card__btn Добавить
 												.c-table__row.c-product-card(data-articul="233700501")
 													.c-table__cell
 														.c-product-card__img-wrap
@@ -481,7 +501,7 @@ html(lang="ru")
 													.c-table__cell.d-none.d-md-block
 														.c-product-card__price 13 400
 													.c-table__cell
-														a(href="#").c-btn.c-btn_primary.c-product-card__btn выбрать
+														a(href="#").c-btn.c-btn_primary.c-product-card__btn Добавить
 												.c-table__row.c-product-card(data-articul="233700401")
 													.c-table__cell
 														.c-product-card__img-wrap
@@ -495,7 +515,7 @@ html(lang="ru")
 													.c-table__cell.d-none.d-md-block
 														.c-product-card__price 13 400
 													.c-table__cell
-														a(href="#").c-btn.c-btn_primary.c-product-card__btn выбрать
+														a(href="#").c-btn.c-btn_primary.c-product-card__btn Добавить
 												.c-table__row.c-product-card(data-articul="2337005501")
 													.c-table__cell
 														.c-product-card__img-wrap
@@ -509,24 +529,24 @@ html(lang="ru")
 													.c-table__cell.d-none.d-md-block
 														.c-product-card__price 13 400
 													.c-table__cell
-														a(href="#").c-btn.c-btn_primary.c-product-card__btn выбрать
+														a(href="#").c-btn.c-btn_primary.c-product-card__btn Добавить
 									.c-product__order-checkout.c-product__order-checkout_fixed.js-product-order-checkout-fixed
 										.c-product__order-checkout-top
-											.d-none.d-md-flex.align-items-center.justify-content-between.w-100
+											.d-none.d-md-flex.d-lg-none.d-xl-flex.align-items-center.justify-content-between.w-100
 												.c-product__choosen
 													| Выбрано:
-													a(href="#").c-product__choosen-count 0 товара
+													a(href="#!").c-product__choosen-count 0 товара
 												.c-product__price
 													| Стоимость:
 													.c-product__price-number 0
 												.c-product__order-actions.d-flex
 													a(href="#").c-btn.c-btn_secondary В КОРЗИНУ
 													a(href="#").c-btn.c-btn_secondary КУПИТЬ В 1 КЛИК
-											.d-flex.d-md-none.flex-column.align-items-center.justify-content-between.w-100
+											.d-flex.d-md-none.d-lg-flex.d-xl-none.flex-column.align-items-center.justify-content-between.w-100
 												.d-flex.mb-1
-													.c-product__choosen
+													.c-product__choosen.mb-1
 														| Выбрано:
-														a(href="#").c-product__choosen-count 0 товара
+														a(href="#!").c-product__choosen-count 0 товара
 												.d-flex.c-product__order-checkout-inner
 													.c-product__price
 														| Стоимость:
@@ -539,7 +559,7 @@ html(lang="ru")
 											.d-none.d-md-flex.align-items-center.justify-content-between.w-100
 												.c-product__choosen
 													| Выбрано:
-													a(href="#").c-product__choosen-count 0 товара
+													a(href="#!").c-product__choosen-count 0 товара
 												.c-product__price
 													| Стоимость:
 													.c-product__price-number 0
@@ -550,7 +570,7 @@ html(lang="ru")
 												.d-flex.mb-1.mb-sm-3
 													.c-product__choosen
 														| Выбрано:
-														a(href="#").c-product__choosen-count 0 товара
+														a(href="#!").c-product__choosen-count 0 товара
 												.d-flex.c-product__order-checkout-inner
 													.c-product__price
 														| Стоимость:
@@ -699,7 +719,8 @@ html(lang="ru")
 										.swiper-button-next
 							.col-md-5
 								.c-product-info__code Код товара:  B22528
-								.c-product-info__showroom Модель бренда есть в шоуруме
+								.c-product-info__showroom.c-showroom Модель бренда есть в шоуруме
+									
 								.c-product-info__description
 											table.c-table
 												tbody
@@ -737,18 +758,24 @@ html(lang="ru")
 													tr
 														td Цвет профиля:
 														td 
-															.dropdown.c-dropdown
-																.dropdown-toggle.c-dropdown-toggle
+															.dropdown.c-dropdown.c-dropdown_link
+																.dropdown-toggle.c-dropdown-toggle(data-toggle="dropdown")
 																	.c-dropdown-toggle__link 2 варианта
-																.dropdown-menu as
+																.dropdown-menu.c-dropdown__menu
+																	ul
+																		li Серый 
+																		li Розовый 
 
 													tr
 														td Витраж:
 														td 
-															.dropdown.c-dropdown
-																.dropdown-toggle.c-dropdown-toggle
+															.dropdown.c-dropdown.c-dropdown_link
+																.dropdown-toggle.c-dropdown-toggle(data-toggle="dropdown")
 																	.c-dropdown-toggle__link 3 варианта
-																.dropdown-menu as
+																.dropdown-menu.c-dropdown__menu
+																	ul
+																		li Серый 
+																		li Розовый 
 													tr
 														td Размер(ДxШxВ), см:
 														td (108-113)x(68-73)x190

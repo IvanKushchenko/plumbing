@@ -6,7 +6,6 @@ $(function() {
     $('.js-table_product .c-product-card__btn').click(function(e) {
         e.preventDefault();
         var table = $(this).parents('.c-table__body');
-
         var currentProduct = $(this).parents('.c-product-card');
         var articul = currentProduct.find('.c-product-card__subtitle').text().replace(/^\D+/g, '');;
         var img = currentProduct.find('.c-product-card__img').attr('src');
@@ -55,14 +54,14 @@ $(function() {
         };
         if ($(this).hasClass('is-active')) {
             $(this).removeClass('is-active');
-            $(this).text('Выбрать');
+            $(this).text('Добавить');
             $(products).each(function(i, item) {
                 if (item.articul == articul) products.splice(i, 1);
             })
             removeProductFromSlider(product);
         } else {
             $(this).addClass('is-active');
-            $(this).text('Выбрано');
+            $(this).text('Добавлено');
 
             products.push(product)
             addProductToSlider(product);
@@ -81,7 +80,8 @@ $(function() {
         $(this).parents('.c-checkout-product').remove();
         $('.c-product-card[data-articul="'+$(this).parents('.c-checkout-product').attr('data-articul')+'"]').find('.c-product-card__btn.is-active').removeClass('is-active').text('Выбрать');
         checkoutProducts();
-        $('.js-checkout-products')[0].swiper.update();
+       
+        	$('.js-checkout-products')[0].swiper.update();
     })
 
 
@@ -108,7 +108,9 @@ $(function() {
 			<div class="c-checkout-product__price">` + product.price + `</div>
 		`);
         sliderContainer.append(slide);
-        $('.js-checkout-products')[0].swiper.update();
+         setTimeout(function(){
+        	$('.js-checkout-products')[0].swiper.update();
+        }, 100)
     }
 
 

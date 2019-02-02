@@ -1,0 +1,57 @@
+.c-showroom {
+	cursor: pointer;
+	&:hover,
+	&.is-active{
+	    background-color: #3e7ce3;
+		color: #fff;
+	}
+	&.is-active &__menu{
+		display: block;
+	}
+	&__menu {
+		cursor: default;
+		color: #222;
+		position: absolute;
+		top: 0;
+		transform: translateY(-100%);
+		padding: 20px;
+		z-index: 22;
+		background: #fff;
+		box-shadow: 0 0px 7px 0px rgba(0, 0, 0, .3);
+		font-size: 13px;
+		text-transform: initial;
+		display: none;
+	}
+
+	&__title {
+		margin-bottom: 10px;
+		text-transform: uppercase;
+	}
+
+	&__close{
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		background: #ecf2f6 url('../img/icons/close.png') no-repeat center center;
+		position: absolute;
+		right: 10px;
+		top: 10px;
+	}
+
+	&__text {
+		margin-top: 20px;
+		margin-bottom: 10px;
+
+		h5 {
+			font-size: 13px;
+			font-weight: bold;
+		}
+
+		p {
+			margin: 0;
+			width: 80%;
+		}
+
+	}
+
+}
