@@ -11397,6 +11397,12 @@ a:hover {
   }
 }
 
+@media (max-width: 450px) {
+  .c-header__actions .c-btn {
+    padding: 0 5px;
+  }
+}
+
 .c-header__actions .c-btn:first-child {
   margin-right: 13px;
 }
@@ -11495,6 +11501,12 @@ a:hover {
     margin: 0 10px;
     white-space: nowrap;
     font-size: 14px;
+  }
+}
+
+@media (max-width: 450px) {
+  .c-phone {
+    margin: 0 5px;
   }
 }
 

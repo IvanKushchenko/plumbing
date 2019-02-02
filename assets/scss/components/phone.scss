@@ -19,6 +19,9 @@
 		white-space: nowrap;
 		font-size: 14px;
 	}
+	@media (max-width:$bp-sm-2) {
+		margin: 0 5px;
+	}
 	&__text{
 		margin-top: 4px;
 		font-size: 13px;

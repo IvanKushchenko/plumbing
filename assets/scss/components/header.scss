@@ -93,6 +93,9 @@
 			@media (max-width:$bp-sm) {
 				font-size: 10px;
 			}
+			@media (max-width:$bp-sm-2) {
+				padding: 0 5px;
+			}
 		}
 
 		.c-btn:first-child {
