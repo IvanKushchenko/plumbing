@@ -20,14 +20,14 @@ $(function() {
         if ($(this).hasClass('is-active')) {
             $(this).removeClass('is-active');
             $(this).text('Выбрать');
-            table.find('.c-product-card__btn').show();
+            table.find('.c-product-card__btn').removeClass('is-disabled');
             $(products).each(function(i, item) {
                 if (item.articul == articul) products.splice(i, 1);
             })
             removeProductFromSlider(product);
         } else {
-            table.find('.c-product-card__btn').hide();
-            $(this).show().addClass('is-active');
+            table.find('.c-product-card__btn').addClass('is-disabled');
+            $(this).removeClass('is-disabled').addClass('is-active');
             $(this).text('Выбрано');
             products.push(product)
             addProductToSlider(product);
