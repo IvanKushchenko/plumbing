@@ -1,4 +1,22 @@
-.c-read-more{
+.c-read-more {
 	overflow: hidden;
 	transition: .3s;
+
+	&:after {
+		content: '';
+		display: block;
+		width: 100%;
+		height: 80px;
+		box-shadow: inset 0 -92px 42px -35px rgba(255, 255, 255, 0.95);
+		position: absolute;
+		bottom: 0;
+		z-index: 22;
+	}
+
+	&.is-active {
+		&:after {
+			display: none;
+		}
+
+	}
 }

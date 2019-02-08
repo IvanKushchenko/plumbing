@@ -42,7 +42,7 @@
 </header>
         <main class="o-page__content">
           <div class="c-float-btn c-float-btn_options js-float-btn-options">
-            <p>Выберите опции к этому товару</p>
+            <p>Выберите опции к этому товару</p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490.4 490.4"><g fill="#3e7ce3"><path d="M490.4 245.2C490.4 110 380.4 0 245.2 0S0 110 0 245.2s110 245.2 245.2 245.2 245.2-110 245.2-245.2zm-465.9 0c0-121.7 99-220.7 220.7-220.7s220.7 99 220.7 220.7-99 220.7-220.7 220.7-220.7-99-220.7-220.7z"/><path d="M253.9 360.4l68.9-68.9c4.8-4.8 4.8-12.5 0-17.3s-12.5-4.8-17.3 0l-48 48V138.7c0-6.8-5.5-12.3-12.3-12.3s-12.3 5.5-12.3 12.3v183.4l-48-48c-4.8-4.8-12.5-4.8-17.3 0s-4.8 12.5 0 17.3l68.9 68.9c2.4 2.4 5.5 3.6 8.7 3.6s6.3-1.1 8.7-3.5z"/></g></svg>
           </div>
           <div class="c-tip c-tip_code">Код товара</div>
           <div class="c-tip c-tip_products">Вы можете выбрать дополнительные товары</div>
@@ -226,8 +226,8 @@
                     <div class="d-flex align-items-center justify-content-between mb-3">
                       <div class="c-product__choosen">Выбрано:<a class="c-product__choosen-count" href="#!">0 товара</a></div>
                       <div class="c-product__price">Итого:
-                        <div class="c-product__price-number c-product__price-number_old">0</div>
-                        <div class="c-product__price-number c-product__price-number_new">0</div>
+                        <div class="c-product__price-number c-product__price-number_old" id="c-product__price-number_old">0</div>
+                        <div class="c-product__price-number c-product__price-number_new" id="c-product__price-number_new">0</div>
                       </div>
                       <div class="c-product__order-actions d-flex"><a class="c-btn c-btn_primary" href="#">В КОРЗИНУ</a><a class="c-btn c-btn_primary" href="#">КУПИТЬ В 1 КЛИК</a></div>
                     </div>
@@ -277,8 +277,8 @@
                     <div class="d-flex w-100 justify-content-between justify-content-md-center c-product__order-info-inner">
                       <div class="c-product__choosen">Выбрано:<a class="c-product__choosen-count" href="#!">0 товара</a></div>
                       <div class="c-product__price d-md-none">Итого:
-                        <div class="c-product__price-number c-product__price-number_old">0</div>
-                        <div class="c-product__price-number c-product__price-number_new">0</div>
+                        <div class="c-product__price-number c-product__price-number_old" id="c-product__price-mobile-number_old">0</div>
+                        <div class="c-product__price-number c-product__price-number_new" id="c-product__price-mobile-number_new">0</div>
                       </div>
                     </div>
                     <div class="d-flex w-100 justify-content-between mb-4 c-product__order-info-inner">
@@ -325,8 +325,8 @@
                     </div>
                     <div class="d-flex align-items-center justify-content-between">
                       <div class="c-product__price d-none d-md-flex">Итого:
-                        <div class="c-product__price-number c-product__price-number_old">0</div>
-                        <div class="c-product__price-number c-product__price-number_new">0</div>
+                        <div class="c-product__price-number c-product__price-number_old" id="c-product__price-mobile-bottom-number_old">0</div>
+                        <div class="c-product__price-number c-product__price-number_new" id="c-product__price-mobile-bottom-number_new">0</div>
                       </div>
                       <div class="c-product__order-actions d-flex"><a class="c-btn c-btn_primary" href="#">В КОРЗИНУ</a><a class="c-btn c-btn_primary" href="#">КУПИТЬ В 1 КЛИК</a></div>
                     </div>
@@ -335,7 +335,7 @@
                     При покупке от 20 000 c вы получите скидку 3 000 c на следующую покупку! 
                     + бесплатную доставку по москве!
                   </div>
-                  <div class="c-table c-table_product js-table_product c-table_width-notification">
+                  <div class="c-table c-table_product js-table_product">
                     <div class="c-table__header">ГИДРОМАССАЖ</div>
                     <div class="c-table__body">
                       <div class="c-table__row c-product-card" data-articul="23370001">
@@ -438,11 +438,6 @@
                         </div>
                         <div class="c-table__cell"><a class="c-btn c-btn_primary c-product-card__btn" href="#">выбрать</a></div>
                       </div>
-                    </div><a class="c-table__notification js-scroll-to-options" href="#">К этому товару мы рекомендуем выбрать опции<img class="c-table__notification-icon" src="img/icons/arrow.png" alt=""></a>
-                  </div>
-                  <div class="c-table c-table_product js-table_product">
-                    <div class="c-table__header">Зеркала</div>
-                    <div class="c-table__body">
                       <div class="c-table__row c-product-card" data-articul="233702001">
                         <div class="c-table__cell">
                           <div class="c-product-card__img-wrap"><img class="c-product-card__img" src="img/content/option.jpg" alt=""></div>
@@ -614,11 +609,11 @@
                     </div>
                   </div>
                   <div class="c-product__order-checkout c-product__order-checkout_fixed js-product-order-checkout-fixed">
-                    <div class="c-product__order-checkout-top">
+                    <div class="c-product__order-checkout-top collapsed" data-toggle="collapse" aria-expanded="false" href="#order-checkout-products-fixed">
                       <div class="d-none d-md-flex d-lg-none d-xl-flex align-items-center justify-content-between w-100">
                         <div class="c-product__choosen">Выбрано:<a class="c-product__choosen-count" href="#!">0 товара</a></div>
-                        <div class="c-product__price">Стоимость:
-                          <div class="c-product__price-number">0</div>
+                        <div class="c-product__price">Итого:
+                          <div class="c-product__price-number" id="c-product__price-number-fixed">0</div>
                         </div>
                         <div class="c-product__order-actions d-flex"><a class="c-btn c-btn_secondary" href="#">В КОРЗИНУ</a><a class="c-btn c-btn_secondary" href="#">КУПИТЬ В 1 КЛИК</a></div>
                       </div>
@@ -627,20 +622,28 @@
                           <div class="c-product__choosen mb-1">Выбрано:<a class="c-product__choosen-count" href="#!">0 товара</a></div>
                         </div>
                         <div class="d-flex c-product__order-checkout-inner">
-                          <div class="c-product__price">Стоимость:
-                            <div class="c-product__price-number">0</div>
+                          <div class="c-product__price">Итого:
+                            <div class="c-product__price-number" id="c-product__price-number-fixed-mobile">0</div>
                           </div>
                           <div class="c-product__order-actions d-flex"><a class="c-btn c-btn_secondary" href="#">В КОРЗИНУ</a><a class="c-btn c-btn_secondary" href="#">КУПИТЬ В 1 КЛИК</a></div>
                         </div>
                       </div>
+                    </div>
+                    <div class="c-checkout-products collapse" id="order-checkout-products-fixed">
+                      <div class="swiper-container js-checkout-products-fixed">
+                        <div class="swiper-wrapper"></div>
+                        <div class="swiper-scrollbar"></div>
+                      </div>
+                      <div class="swiper-button-prev"></div>
+                      <div class="swiper-button-next"></div>
                     </div>
                   </div>
                   <div class="c-product__order-checkout js-product-order-checkout-static">
                     <div class="c-product__order-checkout-top collapsed" data-toggle="collapse" aria-expanded="false" href="#order-checkout-products">
                       <div class="d-none d-md-flex align-items-center justify-content-between w-100">
                         <div class="c-product__choosen">Выбрано:<a class="c-product__choosen-count" href="#!">0 товара</a></div>
-                        <div class="c-product__price">Стоимость:
-                          <div class="c-product__price-number">0</div>
+                        <div class="c-product__price">Итого:
+                          <div class="c-product__price-number" id="c-product__price-number-static">0</div>
                         </div>
                         <div class="c-product__order-actions d-flex"><a class="c-btn c-btn_secondary" href="#">В КОРЗИНУ</a><a class="c-btn c-btn_secondary" href="#">КУПИТЬ В 1 КЛИК</a></div>
                       </div>
@@ -649,15 +652,15 @@
                           <div class="c-product__choosen">Выбрано:<a class="c-product__choosen-count" href="#!">0 товара</a></div>
                         </div>
                         <div class="d-flex c-product__order-checkout-inner">
-                          <div class="c-product__price">Стоимость:
-                            <div class="c-product__price-number">0</div>
+                          <div class="c-product__price">Итого:
+                            <div class="c-product__price-number" id="c-product__price-number-static-mobile">0</div>
                           </div>
                           <div class="c-product__order-actions d-flex"><a class="c-btn c-btn_secondary" href="#">В КОРЗИНУ</a><a class="c-btn c-btn_secondary" href="#">КУПИТЬ В 1 КЛИК</a></div>
                         </div>
                       </div>
                     </div>
                     <div class="c-checkout-products collapse" id="order-checkout-products">
-                      <div class="swiper-container js-checkout-products">
+                      <div class="swiper-container js-checkout-products-static">
                         <div class="swiper-wrapper"></div>
                         <div class="swiper-scrollbar"></div>
                       </div>
@@ -667,14 +670,18 @@
                   </div>
                   <div class="c-product-description">
                     <div class="c-product-description__title">Описание товара</div>
-                    <div class="c-product-description__body">
+                    <div class="c-product-description__body c-read-more js-read-more-container">
                       <p>Смеситель для раковины Bauloop 23337 000 от немецкой компании GROHE.</p>
                       <h5>Особенности:</h5>
                       <p>монтаж на 1 отверстие без донного клапана и без цепочки  высота до излива 87 мм,  вынос 90 мм  однорычажный  гибкая подводка с накидной гайкой 3/8  керамический картридж 28 мм  аэратор система быстрого монтажа </p>
                       <h5>Уход:</h5>
                       <p>При очистке не применяйте абразивные чистящие средства, оставляющие царапины губки, чистящие средства с содержанием кислот или растворителей, средства для удаления извести, пищевой уксус и чистящие средства с содержанием уксусной кислоты.</p>
+                      <p>При очистке не применяйте абразивные чистящие средства, оставляющие царапины губки, чистящие средства с содержанием кислот или растворителей, средства для удаления извести, пищевой уксус и чистящие средства с содержанием уксусной кислоты.</p>
+                      <p>При очистке не применяйте абразивные чистящие средства, оставляющие царапины губки, чистящие средства с содержанием кислот или растворителей, средства для удаления извести, пищевой уксус и чистящие средства с содержанием уксусной кислоты.</p>
+                      <p>При очистке не применяйте абразивные чистящие средства, оставляющие царапины губки, чистящие средства с содержанием кислот или растворителей, средства для удаления извести, пищевой уксус и чистящие средства с содержанием уксусной кислоты.</p>
                       <h5>Гарантия:  5 лет.</h5>
                     </div>
+                    <div class="d-flex justify-content-center mb-3"><a class="js-read-more-btn" href="#">Читать полностью</a></div>
                   </div>
                   <div class="c-share"><img src="img/content/installment.jpg" alt=""></div>
                   <div class="c-watch-earlier js-watch-earlier">
@@ -781,7 +788,7 @@
             <p>
               Посёлок Заречье, Торговая ул., с2, ТЦ "Элитстройматериалы", 1 этаж, место А-18
               с 10.00 - 20.00 без выходных
-            </p><a href="#">Показать на карте</a>
+            </p><a href="#map" data-toggle="collapse" aria-expanded="false">Показать на карте</a>
           </div>
         </div>
       </div>
@@ -801,7 +808,7 @@
           <p>
             Посёлок Заречье, Торговая ул., с2, ТЦ "Элитстройматериалы", 1 этаж, место А-18
             с 10.00 - 20.00 без выходных
-          </p><a href="#">Показать на карте</a>
+          </p><a href="#map" data-toggle="collapse" aria-expanded="true">Показать на карте</a>
         </div>
       </div>
     </div>
@@ -816,7 +823,7 @@
       </div>
     </div>
   </div>
-  <div class="c-footer__map"><script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A2d83b20ffab53983a879aa5e747ccb35c97b85a0d0f19c104ff479d439f485eb&amp;width=100%25&amp;height=463&amp;lang=ru_RU&amp;scroll=false"></script></div>
+  <div class="c-footer__map collapse" id="map"><script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A2d83b20ffab53983a879aa5e747ccb35c97b85a0d0f19c104ff479d439f485eb&amp;width=100%25&amp;height=463&amp;lang=ru_RU&amp;scroll=false"></script></div>
   <div class="d-flex d-xl-none">
     <div class="c-footer__col c-footer__col_cards">
       <div class="row">
@@ -842,7 +849,7 @@
           </div>
           <div class="modal-body c-modal__body">
             <div class="row">
-              <div class="col-md-4">
+              <div class="col-md-6 col-lg-4">
                 <div class="c-product-preview js-product-preview-modal">
                   <div class="c-product-preview__main">
                     <div class="swiper-container js-product-preview-main" id="js-product-preview-main">
@@ -872,7 +879,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-5">
+              <div class="col-md-6 col-lg-5">
                 <div class="c-product-info__code">Код товара:  B22528</div>
                 <div class="c-product-info__showroom c-showroom">Модель бренда есть в шоуруме</div>
                 <div class="c-product-info__description">
@@ -950,7 +957,7 @@
                   </table>
                 </div>
               </div>
-              <div class="col-md-3">
+              <div class="col-lg-3">
                 <div class="c-preview-product__description">
                   <h4 class="c-preview-product__description-title">Описание товара</h4>
                   <div class="c-preview-product__description-body c-read-more js-read-more-container">

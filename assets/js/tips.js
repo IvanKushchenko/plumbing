@@ -1,11 +1,9 @@
 import $ from 'jquery';
 
 $(function() {
-    var codeHiden = false,
-        productsHidden = false;
+    var productsHidden = false;
 
     function checkPosCodeTip() {
-        if (codeHiden) return;
         var bottomPos = $(window).scrollTop() + $(window).height();
         var codeContainer = $('.c-product-info__code');
         $('.c-tip_code').css({
@@ -15,9 +13,9 @@ $(function() {
         if (bottomPos >= codeContainer.offset().top) {
             if ($('.c-tip_code').is(':hidden')) {
                 $('.c-tip_code').show();
+                
                 setTimeout(function() {
-                    $('.c-tip_code').fadeOut(300);
-                    codeHiden = true;
+                    $('.c-tip_code').css('opacity', 0);
                 }, 10000);
             }
         }

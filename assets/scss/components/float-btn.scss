@@ -2,10 +2,8 @@
 	width: 200px;
 	border-radius: 9px;
 	letter-spacing: 0.28px;
-	font-style: italic;
 	font-family: "Open Sans";
 	font-size: 14px;
-	font-weight: 700;
 	position: fixed;
 	bottom: 40px;
 	background: #fff;
@@ -26,22 +24,24 @@
 		margin: 0;
 	}
 	&_options{
+		svg{
+			flex-shrink: 0;
+		    width: 30px;
+		    margin-left: 10px;
+		}
 		&:hover{
 			background-color: #f1ca49;
 			color: #fff;
-		}
-		&:hover:after{
-			background: url('../img/icons/arrow-yellow.png');
-			
-		}
-		&:after{
-			content: '';
-			display: block;
-			width: 28px;
-			height: 28px;
-			background-image: url('../img/icons/arrow-blue.png');
-			flex-shrink: 0;
-			margin-left: 10px;
+			svg{
+				background: #fff;
+    			border-radius: 50%;
+    			path{
+    				fill: #fff;
+    			}
+    			path:nth-child(2){
+    				fill: #f1cb4e;
+    			}
+			}
 		}
 	}
 }

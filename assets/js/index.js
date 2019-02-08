@@ -80,7 +80,7 @@ $(function() {
         }
     });
 
-    var checkoutProducts = new Swiper('.js-checkout-products', {
+    var checkoutProductsStatic = new Swiper('.js-checkout-products-static', {
         slidesPerView: 5,
         spaceBetween: 20,
         breakpoints: {
@@ -96,7 +96,27 @@ $(function() {
             prevEl: '.c-checkout-products .swiper-button-prev'
         },
         scrollbar: {
-            el: '.js-checkout-products .swiper-scrollbar'
+            el: '.js-checkout-products-static .swiper-scrollbar'
+        }
+    });
+
+    var checkoutProductsFixed = new Swiper('.js-checkout-products-fixed', {
+        slidesPerView: 5,
+        spaceBetween: 20,
+        breakpoints: {
+        	992:{
+        		slidesPerView: 3
+        	},
+        	450:{
+        		slidesPerView: 2
+        	}
+        },
+        navigation: {
+            nextEl: '.c-checkout-products .swiper-button-next',
+            prevEl: '.c-checkout-products .swiper-button-prev'
+        },
+        scrollbar: {
+            el: '.js-checkout-products-fixed .swiper-scrollbar'
         }
     });
 
@@ -110,7 +130,11 @@ $(function() {
 
 
     $('#order-checkout-products').on('shown.bs.collapse', function() {
-        checkoutProducts.update();
+        checkoutProductsStatic.update();
+    })
+
+     $('#order-checkout-products-fixed').on('shown.bs.collapse', function() {
+        checkoutProductsFixed.update();
     })
 
     $('.js-product-preview-page #js-product-preview-main').lightGallery({
@@ -177,10 +201,10 @@ $(function() {
 
     $('.js-read-more-btn').click(function(e){
     	e.preventDefault();
-    	if($(this).parent().find('.js-read-more-container').hasClass('is-active')){
-    		$(this).parent().find('.js-read-more-container').removeClass('is-active')
+    	if($(this).parent().parent().find('.js-read-more-container').hasClass('is-active')){
+    		$(this).parent().parent().find('.js-read-more-container').removeClass('is-active')
     	}else{
-    		$(this).parent().find('.js-read-more-container').addClass('is-active')
+    		$(this).parent().parent().find('.js-read-more-container').addClass('is-active')
     	}
     })
 
@@ -197,5 +221,11 @@ $(function() {
 		if($(e.target).hasClass('c-showroom__close') || $(e.target).hasClass('js-showroom')){
 			$(this).toggleClass('is-active');
 		}
+	})
+
+	$('.c-product-info .c-product-info__code').hover(function(){
+		$('.c-tip_code').css('opacity', 1);
+	}, function(){
+		$('.c-tip_code').css('opacity', 0);
 	})
 });

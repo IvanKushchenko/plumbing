@@ -5,9 +5,6 @@
 		background-color: #ebeff4;
 		margin-bottom: 20px;
 		position: relative;
-		.swiper-slide{
-			pointer-events: none;
-		}
 		img {
 			margin: 0 auto;
 			display: block;
@@ -17,12 +14,14 @@
 
 	&__thumbnail {
 		max-width: 100%;
+		display: block;
+		margin: 0 auto;
 	}
 
 	&__thumbnails {
 		position: relative;
 		.swiper-container{
-			margin-right: 80px;
+			padding: 0 40px;
 		}
 		.swiper-slide{
 			border: 2px solid transparent;

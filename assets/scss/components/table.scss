@@ -30,7 +30,7 @@
 			}
 
 			&:nth-child(3) {
-				padding-left: 0;
+				padding-left: 4%;
 			}
 
 		}
@@ -88,6 +88,7 @@
 		max-height: 660px;
 		overflow: auto;
 		padding-right: calc(2.5% - 7px);
+		padding-left: 2px;
 
 		&::-webkit-scrollbar {
 			width: 7px;
@@ -107,15 +108,20 @@
 	}
 
 	&__row {
-		padding: 12px 30px;
+		padding: 12px 15px;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		border: 1px solid #ecf2f6;
 		border-top: none;
-
+		transition: .3s;
+		&:hover{
+			background-color: #ecf2f6;
+		    box-shadow: 0 0 4px 1px rgba(0,0,0,.2);
+		}
 		@media (max-width:$bp-lg) {
 			padding: 12px 15px;
+			padding-right: 30px;
 		}
 
 	}
@@ -135,8 +141,9 @@
 
 		}
 		&:nth-child(3) {
-			padding-left: 65px;
 			margin-top: -26px;
+			flex-basis: 20%;
+			text-align: right;
 
 			@media (max-width:$bp-md) {
 				display: none;

@@ -2,6 +2,9 @@
 	&_link &__menu{
 		padding: 5px;
 	}
+	&_link &__menu{
+		min-width: initial;
+	}
 }
 .c-dropdown-toggle{
 	cursor: pointer;
@@ -15,6 +18,7 @@
 	display: inline-block;
 	border-bottom: 1px solid #000;
 	position: relative;
+
 	&:after{
 		position: absolute;
 		top: 50%;

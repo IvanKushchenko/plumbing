@@ -10,6 +10,7 @@ html(lang="ru")
 				main.o-page__content
 					.c-float-btn.c-float-btn_options.js-float-btn-options
 						p Выберите опции к этому товару
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490.4 490.4"><g fill="#3e7ce3"><path d="M490.4 245.2C490.4 110 380.4 0 245.2 0S0 110 0 245.2s110 245.2 245.2 245.2 245.2-110 245.2-245.2zm-465.9 0c0-121.7 99-220.7 220.7-220.7s220.7 99 220.7 220.7-99 220.7-220.7 220.7-220.7-99-220.7-220.7z"/><path d="M253.9 360.4l68.9-68.9c4.8-4.8 4.8-12.5 0-17.3s-12.5-4.8-17.3 0l-48 48V138.7c0-6.8-5.5-12.3-12.3-12.3s-12.3 5.5-12.3 12.3v183.4l-48-48c-4.8-4.8-12.5-4.8-17.3 0s-4.8 12.5 0 17.3l68.9 68.9c2.4 2.4 5.5 3.6 8.7 3.6s6.3-1.1 8.7-3.5z"/></g></svg>
 					.c-tip.c-tip_code Код товара
 					.c-tip.c-tip_products Вы можете выбрать дополнительные товары
 
@@ -203,8 +204,8 @@ html(lang="ru")
 												a(href="#!").c-product__choosen-count 0 товара
 											.c-product__price
 												| Итого:
-												.c-product__price-number.c-product__price-number_old 0
-												.c-product__price-number.c-product__price-number_new 0
+												.c-product__price-number.c-product__price-number_old#c-product__price-number_old 0
+												.c-product__price-number.c-product__price-number_new#c-product__price-number_new 0
 											.c-product__order-actions.d-flex
 												a(href="#").c-btn.c-btn_primary В КОРЗИНУ
 												a(href="#").c-btn.c-btn_primary КУПИТЬ В 1 КЛИК
@@ -245,8 +246,8 @@ html(lang="ru")
 												a(href="#!").c-product__choosen-count 0 товара
 											.c-product__price.d-md-none
 												| Итого:
-												.c-product__price-number.c-product__price-number_old 0
-												.c-product__price-number.c-product__price-number_new 0
+												.c-product__price-number.c-product__price-number_old#c-product__price-mobile-number_old 0
+												.c-product__price-number.c-product__price-number_new#c-product__price-mobile-number_new 0
 										.d-flex.w-100.justify-content-between.mb-4.c-product__order-info-inner
 											.c-promocode
 												.c-promocode__txt.d-md-none промокод 
@@ -281,8 +282,8 @@ html(lang="ru")
 										.d-flex.align-items-center.justify-content-between
 											.c-product__price.d-none.d-md-flex
 												| Итого:
-												.c-product__price-number.c-product__price-number_old 0
-												.c-product__price-number.c-product__price-number_new 0
+												.c-product__price-number.c-product__price-number_old#c-product__price-mobile-bottom-number_old 0
+												.c-product__price-number.c-product__price-number_new#c-product__price-mobile-bottom-number_new 0
 											.c-product__order-actions.d-flex
 												a(href="#").c-btn.c-btn_primary В КОРЗИНУ
 												a(href="#").c-btn.c-btn_primary КУПИТЬ В 1 КЛИК
@@ -290,7 +291,7 @@ html(lang="ru")
 										.
 											При покупке от 20 000 c вы получите скидку 3 000 c на следующую покупку! 
 											+ бесплатную доставку по москве!
-									.c-table.c-table_product.js-table_product.c-table_width-notification
+									.c-table.c-table_product.js-table_product
 										.c-table__header ГИДРОМАССАЖ
 										.c-table__body
 											.c-table__row.c-product-card(data-articul="23370001")
@@ -378,11 +379,6 @@ html(lang="ru")
 													.c-product-card__price.c-product-card__price_new 1 990
 												.c-table__cell
 													a(href="#").c-btn.c-btn_primary.c-product-card__btn выбрать
-										a(href="#").c-table__notification.js-scroll-to-options К этому товару мы рекомендуем выбрать опции
-											img(src=require("../img/icons/arrow.png"), alt="").c-table__notification-icon
-									.c-table.c-table_product.js-table_product
-										.c-table__header Зеркала
-										.c-table__body
 											.c-table__row.c-product-card(data-articul="233702001")
 												.c-table__cell
 													.c-product-card__img-wrap
@@ -531,14 +527,14 @@ html(lang="ru")
 													.c-table__cell
 														a(href="#").c-btn.c-btn_primary.c-product-card__btn Добавить
 									.c-product__order-checkout.c-product__order-checkout_fixed.js-product-order-checkout-fixed
-										.c-product__order-checkout-top
+										.c-product__order-checkout-top.collapsed(data-toggle="collapse", aria-expanded="false", href="#order-checkout-products-fixed")
 											.d-none.d-md-flex.d-lg-none.d-xl-flex.align-items-center.justify-content-between.w-100
 												.c-product__choosen
 													| Выбрано:
 													a(href="#!").c-product__choosen-count 0 товара
 												.c-product__price
-													| Стоимость:
-													.c-product__price-number 0
+													| Итого:
+													.c-product__price-number#c-product__price-number-fixed 0
 												.c-product__order-actions.d-flex
 													a(href="#").c-btn.c-btn_secondary В КОРЗИНУ
 													a(href="#").c-btn.c-btn_secondary КУПИТЬ В 1 КЛИК
@@ -549,11 +545,18 @@ html(lang="ru")
 														a(href="#!").c-product__choosen-count 0 товара
 												.d-flex.c-product__order-checkout-inner
 													.c-product__price
-														| Стоимость:
-														.c-product__price-number 0
+														| Итого:
+														.c-product__price-number#c-product__price-number-fixed-mobile 0
 													.c-product__order-actions.d-flex
 														a(href="#").c-btn.c-btn_secondary В КОРЗИНУ
 														a(href="#").c-btn.c-btn_secondary КУПИТЬ В 1 КЛИК
+										.c-checkout-products.collapse#order-checkout-products-fixed
+											.swiper-container.js-checkout-products-fixed
+												.swiper-wrapper
+													
+												.swiper-scrollbar
+											.swiper-button-prev
+											.swiper-button-next
 									.c-product__order-checkout.js-product-order-checkout-static
 										.c-product__order-checkout-top.collapsed(data-toggle="collapse", aria-expanded="false", href="#order-checkout-products")
 											.d-none.d-md-flex.align-items-center.justify-content-between.w-100
@@ -561,8 +564,8 @@ html(lang="ru")
 													| Выбрано:
 													a(href="#!").c-product__choosen-count 0 товара
 												.c-product__price
-													| Стоимость:
-													.c-product__price-number 0
+													| Итого:
+													.c-product__price-number#c-product__price-number-static 0
 												.c-product__order-actions.d-flex
 													a(href="#").c-btn.c-btn_secondary В КОРЗИНУ
 													a(href="#").c-btn.c-btn_secondary КУПИТЬ В 1 КЛИК
@@ -573,13 +576,13 @@ html(lang="ru")
 														a(href="#!").c-product__choosen-count 0 товара
 												.d-flex.c-product__order-checkout-inner
 													.c-product__price
-														| Стоимость:
-														.c-product__price-number 0
+														| Итого:
+														.c-product__price-number#c-product__price-number-static-mobile 0
 													.c-product__order-actions.d-flex
 														a(href="#").c-btn.c-btn_secondary В КОРЗИНУ
 														a(href="#").c-btn.c-btn_secondary КУПИТЬ В 1 КЛИК
 										.c-checkout-products.collapse#order-checkout-products
-											.swiper-container.js-checkout-products
+											.swiper-container.js-checkout-products-static
 												.swiper-wrapper
 													
 												.swiper-scrollbar
@@ -587,7 +590,7 @@ html(lang="ru")
 											.swiper-button-next
 									.c-product-description
 										.c-product-description__title Описание товара
-										.c-product-description__body
+										.c-product-description__body.c-read-more.js-read-more-container
 											p Смеситель для раковины Bauloop 23337 000 от немецкой компании GROHE.
 											h5 Особенности:
 											p
@@ -597,7 +600,18 @@ html(lang="ru")
 											p
 												.
 													При очистке не применяйте абразивные чистящие средства, оставляющие царапины губки, чистящие средства с содержанием кислот или растворителей, средства для удаления извести, пищевой уксус и чистящие средства с содержанием уксусной кислоты.
+											p
+												.
+													При очистке не применяйте абразивные чистящие средства, оставляющие царапины губки, чистящие средства с содержанием кислот или растворителей, средства для удаления извести, пищевой уксус и чистящие средства с содержанием уксусной кислоты.
+											p
+												.
+													При очистке не применяйте абразивные чистящие средства, оставляющие царапины губки, чистящие средства с содержанием кислот или растворителей, средства для удаления извести, пищевой уксус и чистящие средства с содержанием уксусной кислоты.
+											p
+												.
+													При очистке не применяйте абразивные чистящие средства, оставляющие царапины губки, чистящие средства с содержанием кислот или растворителей, средства для удаления извести, пищевой уксус и чистящие средства с содержанием уксусной кислоты.
 											h5 Гарантия:  5 лет.
+										.d-flex.justify-content-center.mb-3
+											a(href="#").js-read-more-btn Читать полностью
 									.c-share
 										img(src=require("../img/content/installment.jpg"), alt="")
 											
@@ -690,7 +704,7 @@ html(lang="ru")
 						button(data-dismiss="modal" aria-label="Close").close
 					.modal-body.c-modal__body
 						.row
-							.col-md-4
+							.col-md-6.col-lg-4
 								.c-product-preview.js-product-preview-modal
 									.c-product-preview__main
 										.swiper-container.js-product-preview-main#js-product-preview-main
@@ -717,7 +731,7 @@ html(lang="ru")
 												.swiper-slide
 													img(src=require("../img/content/product-thumbnail.jpg"), alt="").c-product-preview__thumbnail
 										.swiper-button-next
-							.col-md-5
+							.col-md-6.col-lg-5
 								.c-product-info__code Код товара:  B22528
 								.c-product-info__showroom.c-showroom Модель бренда есть в шоуруме
 									
@@ -779,7 +793,7 @@ html(lang="ru")
 													tr
 														td Размер(ДxШxВ), см:
 														td (108-113)x(68-73)x190
-							.col-md-3
+							.col-lg-3
 								.c-preview-product__description
 									h4.c-preview-product__description-title Описание товара
 									.c-preview-product__description-body.c-read-more.js-read-more-container

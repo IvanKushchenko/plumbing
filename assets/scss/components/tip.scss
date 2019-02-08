@@ -2,7 +2,6 @@
 	padding: 10px;
 	font-family: "Open Sans";
 	font-size: 14px;
-	font-style: italic;
 	line-height: 20px;
 	letter-spacing: 0.28px;
 	box-shadow: 0 0 8px rgba(0, 0, 0, 0.33);
@@ -13,6 +12,7 @@
 	max-width: 230px;
 	text-align: center;
 	z-index: 222;
+	transition: opacity .3s;
 	display: none;
 	@media (max-width: $bp-lg) {
 		display: none !important;		

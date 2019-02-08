@@ -57,6 +57,13 @@
 	    	padding: 35px 15px;
 	    	font-size: 13px;
 	    }
+	    &.c-read-more{
+	    	max-height: 400px;
+	    	position: relative;
+	    	&.is-active{
+	    		max-height: 800px;
+	    	}
+	    }
 		p{
 			margin-bottom: 26px;
 			&:last-child{
