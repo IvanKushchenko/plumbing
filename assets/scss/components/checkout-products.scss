@@ -23,9 +23,8 @@
 	.swiper-button-prev, .swiper-button-next {
 		width: 36px;
 		height: 36px;
-		border: 1px solid #333;
 		border-radius: 50%;
-		background: #fff url('../img/icons/right-arrow.svg') no-repeat center center;
+		background:#333 url('../img/icons/right-arrow-white.svg') no-repeat center center;
 		background-size: 50%;
 
 		@media (max-width:$bp-md) {
