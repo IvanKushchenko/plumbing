@@ -1,18 +1,30 @@
 import $ from 'jquery';
 import CountUp from 'countup.js';
-$(function() {
+import lightGallery from 'lightgallery';
 
+$(function() {
+	var CountUpOptions = {
+		separator: ' '
+	};
     var products = [];
-    var productsNewCostCounter = new CountUp("c-product__price-number_new", 0, 0);
-    var productsOldCostCounter = new CountUp("c-product__price-number_old", 0, 0);
-    var productsMobileOldCostCounter = new CountUp("c-product__price-mobile-number_old", 0, 0);
-    var productsMobileNewCostCounter = new CountUp("c-product__price-mobile-number_new", 0, 0);
-    var productsMobileBottomOldCostCounter = new CountUp("c-product__price-mobile-bottom-number_old", 0, 0);
-    var productsMobileBottomNewCostCounter = new CountUp("c-product__price-mobile-bottom-number_new", 0, 0);
-    var productsFixedCostCounter = new CountUp("c-product__price-number-fixed", 0, 0);
-    var productsFixedMobileCostCounter = new CountUp("c-product__price-number-fixed-mobile", 0, 0);
-    var productsStaticCostCounter = new CountUp("c-product__price-number-static", 0, 0);
-    var productsStaticMobileCostCounter = new CountUp("c-product__price-number-static-mobile", 0, 0);
+    var productsNewCostCounter = new CountUp("c-product__price-number_new", 0, 0, 0, 0, CountUpOptions);
+    var productsOldCostCounter = new CountUp("c-product__price-number_old", 0, 0, 0, 0, CountUpOptions);
+    var productsMobileOldCostCounter = new CountUp("c-product__price-mobile-number_old", 0, 0, 0, 0, CountUpOptions);
+    var productsMobileNewCostCounter = new CountUp("c-product__price-mobile-number_new", 0, 0, 0, 0, CountUpOptions);
+    var productsMobileBottomOldCostCounter = new CountUp("c-product__price-mobile-bottom-number_old", 0, 0, 0, 0, CountUpOptions);
+    var productsMobileBottomNewCostCounter = new CountUp("c-product__price-mobile-bottom-number_new", 0, 0, 0, 0, CountUpOptions);
+    var productsFixedCostCounter = new CountUp("c-product__price-number-fixed", 0, 0, 0, 0, CountUpOptions);
+    var productsFixedMobileCostCounter = new CountUp("c-product__price-number-fixed-mobile", 0, 0, 0, 0, CountUpOptions);
+    var productsStaticCostCounter = new CountUp("c-product__price-number-static", 0, 0, 0, 0, CountUpOptions);
+    var productsStaticMobileCostCounter = new CountUp("c-product__price-number-static-mobile", 0, 0, 0, 0, CountUpOptions);
+    var productsFixedOldCostCounter = new CountUp("c-product__price-number-fixed_old", 0, 0, 0, 0, CountUpOptions);
+    var productsFixedNewCostCounter = new CountUp("c-product__price-number-fixed_new", 0, 0, 0, 0, CountUpOptions);
+    var productsFixedMobileNewCostCounter = new CountUp("c-product__price-number-fixed-mobile_new", 0, 0, 0, 0, CountUpOptions);
+    var productsFixedMobileOldCostCounter = new CountUp("c-product__price-number-fixed-mobile_old", 0, 0, 0, 0, CountUpOptions);
+    var productsStaticOldCostCounter = new CountUp("c-product__price-number-static_old", 0, 0, 0, 0, CountUpOptions);
+    var productsStaticNewCostCounter = new CountUp("c-product__price-number-static_new", 0, 0, 0, 0, CountUpOptions);
+    var productsStaticMobileNewCostCounter = new CountUp("c-product__price-number-static-mobile_new", 0, 0, 0, 0, CountUpOptions);
+    var productsStaticMobileOldCostCounter = new CountUp("c-product__price-number-static-mobile_old", 0, 0, 0, 0, CountUpOptions);
 
     $('.js-table_product .c-product-card__btn').click(function(e) {
         e.preventDefault();
@@ -104,7 +116,6 @@ $(function() {
             if (item.articul == product.articul) products.splice(i, 1);
         })
         checkoutProducts();
-        console.log( $('.js-product-order-checkout-fixed .js-checkout-products'));
         $('.js-checkout-products-fixed')[0].swiper.update();
         $('.js-checkout-products-static')[0].swiper.update();
     }
@@ -128,6 +139,16 @@ $(function() {
         }, 100)
     }
 
+    $('.js-product-lightbox').each(function(index, item){
+    	$(item).lightGallery({
+    		controls: false,
+    		download: false,
+    		counter: false,
+    		enableDrag: false,
+    		enableSwipe: false
+    	});
+    })
+
 
     function checkoutProducts() {
         var orderCheckoutBl = $('.js-product-order-checkout-static, .js-product-order-checkout-fixed, .c-product__order-info');
@@ -147,5 +168,13 @@ $(function() {
         productsFixedMobileCostCounter.update(+resultCost);
         productsStaticCostCounter.update(+resultCost);
         productsStaticMobileCostCounter.update(+resultCost);
+        productsFixedOldCostCounter.update(+resultCost);
+		productsFixedNewCostCounter.update(+resultCost);
+		productsFixedMobileNewCostCounter.update(+resultCost);
+		productsFixedMobileOldCostCounter.update(+resultCost);
+		productsStaticOldCostCounter.update(+resultCost);
+		productsStaticNewCostCounter.update(+resultCost);
+		productsStaticMobileNewCostCounter.update(+resultCost);
+		productsStaticMobileOldCostCounter.update(+resultCost);
     }
 });

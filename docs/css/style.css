@@ -11953,11 +11953,6 @@ a:hover {
   height: 32px;
 }
 
-.c-product__order-checkout .c-product__price-number {
-  font-size: 26px;
-  line-height: 1.2;
-}
-
 .c-product__order-checkout-top {
   cursor: pointer;
   display: flex;
@@ -13631,6 +13626,7 @@ a:hover {
 }
 
 .c-showroom__menu {
+  width: 100%;
   cursor: default;
   color: #222;
   position: absolute;

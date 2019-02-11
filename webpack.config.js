@@ -20,7 +20,8 @@ module.exports = {
 		}),
 		new HtmlWebpackPlugin({
 			template: './assets/pug/index.pug',
-			minify: false
+			minify: false,
+			hash: true
 		}),
 		/* Other pages */
 		// new HtmlWebpackPlugin({
