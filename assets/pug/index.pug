@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 html(lang="ru")
 	head
 		include templates/head.pug
@@ -17,7 +16,7 @@ html(lang="ru")
 					.c-breadcrumbs
 						a(href="#!").c-breadcrumbs__item Главная
 						a(href="#!").c-breadcrumbs__item Смесители
-						a(href="#").c-breadcrumbs__item.dropdown-toggle(data-toggle="dropdown", aria-expanded="false") смесители для раковины
+						a(href="#", data-toggle="dropdown", aria-expanded="false").c-breadcrumbs__item.dropdown-toggle смесители для раковины
 						.dropdown-menu.c-breadcrumbs__dropdown-menu
 							a(href="#") Форсунки для душа
 							a(href="#") Девиаторы

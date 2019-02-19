@@ -1,0 +1,25 @@
+.o-section{
+	&__header{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 40px;
+	}
+	&__title{
+		font-size: 23px;
+		color: #222222;
+		font-family: "Roboto Slab";
+		margin: 0;
+	}
+	&__navigation{
+		font-family: "PT Sans";
+		font-style: italic;
+		font-size: 16px;
+		color: #6493ad;
+	}
+	&__navigation-item{
+		&:not(:last-child){
+			margin-right: 20px;
+		}
+	}
+}

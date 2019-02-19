@@ -1,0 +1,89 @@
+html(lang="ru")
+	head
+		include templates/head.pug
+	body
+		.container
+			.o-page.js-page
+				include templates/navbar.pug
+				include templates/header.pug
+				main.o-page__content
+					.o-page__container
+						.o-page__sidebar
+							.c-catalog-menu.d-none.d-md-block
+								ul.c-catalog-menu__nav
+									li.c-catalog-menu__item
+										a(href="#").c-catalog-menu__link Ванны
+									li.c-catalog-menu__item
+										a(href="#").c-catalog-menu__link Ванны
+									li.c-catalog-menu__item.c-catalog-menu__item_dropdown
+										a(href="#submenu1" data-toggle="collapse").c-catalog-menu__link Ванны
+										ul.collapse.c-catalog-menu__submenu#submenu1
+											li.c-catalog-menu__item
+												a(href="#").c-catalog-menu__link Мебель для ванной
+											li.c-catalog-menu__item
+												a(href="#").c-catalog-menu__link Мебель для ванной
+											li.c-catalog-menu__item
+												a(href="#").c-catalog-menu__link Мебель для ванной
+									li.c-catalog-menu__item
+										a(href="#").c-catalog-menu__link Ванны
+									li.c-catalog-menu__item
+										a(href="#").c-catalog-menu__link Ванны
+									li.c-catalog-menu__item
+										a(href="#").c-catalog-menu__link Ванны
+						.o-page__body
+							.c-breadcrumbs
+								a(href="#!").c-breadcrumbs__item Главная
+								a(href="#!").c-breadcrumbs__item Акции
+							section.o-section
+								.o-section__header
+									h3.o-section__title Акции
+									.o-section__navigation
+										a(href="#").o-section__navigation-item Действующие
+										a(href="#").o-section__navigation-item Прошедшие
+								.o-section__body
+									-
+										var shares = [
+											{
+												date: '21.06.2018',
+												image: require("../img/content/share-image.jpg"),
+												title: 'Гидромассажные СПА-ванны со скидкой с 5 по 16 мая',
+												description: 'На пике моды в домашней SPA-индустрии (да, есть и такая) – гидромассажные СПА-ванны. Это очень удобно wellness- оборудование – идеальное решение для тех, кто, не выходя из дома, хочет получить расслабляющий сеанс гидромассажа.',
+											},
+											{
+												date: '21.06.2018',
+												image: require("../img/content/share-image-2.jpg"),
+												title: 'До -15%! Скидка на покупку комплекта сантехники. ',
+												description: 'На пике моды в домашней SPA-индустрии (да, есть и такая) – гидромассажные СПА-ванны. Это очень удобно wellness- оборудование – идеальное решение для тех, кто, не выходя из дома, хочет получить расслабляющий сеанс гидромассажа.',
+											},
+											{
+												date: '21.06.2018',
+												title: 'Гидромассажные СПА-ванны со скидкой с 5 по 16 мая',
+												description: 'На пике моды в домашней SPA-индустрии (да, есть и такая) – гидромассажные СПА-ванны. Это очень удобно wellness- оборудование – идеальное решение для тех, кто, не выходя из дома, хочет получить расслабляющий сеанс гидромассажа.',
+											},
+											{
+												date: '21.06.2018',
+												image: require("../img/content/share-image-3.jpg"),
+												title: 'До -15%! Скидка на покупку комплекта сантехники. ',
+												description: 'На пике моды в домашней SPA-индустрии (да, есть и такая) – гидромассажные СПА-ванны. Это очень удобно wellness- оборудование – идеальное решение для тех, кто, не выходя из дома, хочет получить расслабляющий сеанс гидромассажа.',
+											},
+										];
+									each share in shares
+										article.c-article
+											.c-article__date
+												span.c-article__date-txt=share.date
+											if(share.image)
+												.c-article__thumbnail
+													img(src=share.image, alt="")
+											.c-article__title=share.title
+											.c-article__description=share.description
+											a(href="#").c-article__read-more Читать полностью
+								.o-section__footer
+									.c-posts-showed
+										.c-posts-showed__title Показать:
+										form
+											.c-posts-showed__count
+												input(type="radio" name="posts-showed" value="24").c-posts-showed__count-input
+											.c-posts-showed__count
+												input(type="radio" name="posts-showed" value="48").c-posts-showed__count-input
+
+				include templates/footer.pug
