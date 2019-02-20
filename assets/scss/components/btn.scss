@@ -30,4 +30,13 @@
 			background-color: #f1ca49;
 		}
 	}
+	&_blue{
+		background-color: #3e7ce3;
+		height: 40px;
+		display: inline-flex;
+		padding: 0 25px;
+		&:hover{
+			color: #fff;
+		}
+	}
 }

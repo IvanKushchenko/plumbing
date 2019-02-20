@@ -1,0 +1,36 @@
+.c-pagination{
+	display: flex;
+	align-items: center;
+	&__nav{
+		display: block;
+		width: 20px;
+		height: 20px;
+		background: url('../img/icons/right-arrow.svg') center center no-repeat;
+		background-size: 60%;
+		box-shadow: none;
+		&_left{
+			transform: scaleX(-1);
+		}
+	}
+	&__pages{
+		display: flex;
+		align-items: center;
+		margin: 0 12px;
+	}
+	&__page{
+		width: 30px;
+		height: 30px;
+		color: #222;
+		display: block;
+		text-align: center;
+		line-height: 30px;
+		font-size: 14px;
+		box-shadow: none;
+		margin: 0 7px;
+		border-radius: 50%;
+		&.is-active{
+			background-color: #8cafc2;
+			color: #fff;
+		}
+	}
+}

@@ -1,0 +1,17 @@
+.s-shares{
+	margin-top: 30px;
+	&__body{
+		margin-bottom: 50px;
+	}
+	&__footer{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@media (max-width: $bp-md) {
+			flex-direction: column;
+			.c-pagination{
+				margin-top: 20px;
+			}
+		}
+	}
+}

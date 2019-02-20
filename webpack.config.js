@@ -29,6 +29,18 @@ module.exports = {
 			minify: false,
 			hash: true
 		}),
+		new HtmlWebpackPlugin({
+			filename: 'share.html',
+			template: './assets/pug/share.pug',
+			minify: false,
+			hash: true
+		}),
+		new HtmlWebpackPlugin({
+			filename: 'adjustable-page.html',
+			template: './assets/pug/adjustable-page.pug',
+			minify: false,
+			hash: true
+		}),
 		/* Other pages */
 		// new HtmlWebpackPlugin({
 		// 	filename: 'contacts.html',

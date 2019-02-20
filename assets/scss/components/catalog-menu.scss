@@ -1,5 +1,11 @@
 .c-catalog-menu{
-
+	position: relative;
+	&:hover &__nav{
+		display: block;
+	}
+	&:hover &__toggle-icon{
+		transform: translateY(-50%) rotate(180deg);
+	}
 	&__item_dropdown > &__link[aria-expanded="true"]{
 		background: #8cafc2;
 		color: #fff;
@@ -57,5 +63,13 @@
 		height: 19px;
 		border-radius: 50%;
 		background: rgba(255,255,255,.1) url('../img/icons/arrow-down.svg') no-repeat center center;
+	}
+
+	
+
+	&__nav{
+		z-index: 22;
+		width: 100%;
+		background-color: #fff;
 	}
 }

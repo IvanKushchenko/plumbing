@@ -29,35 +29,59 @@ $(function() {
     $('.js-table_product .c-product-card__btn').click(function(e) {
         e.preventDefault();
         var table = $(this).parents('.c-table__body');
-        var currentProduct = $(this).parents('.c-product-card');
-        var articul = currentProduct.find('.c-product-card__subtitle').text().replace(/^\D+/g, '');;
-        var img = currentProduct.find('.c-product-card__img').attr('src');
-        var name = currentProduct.find('.c-product-card__title').text();
-        var price = (currentProduct.find('.c-product-card__price_new').eq(0).length) ? currentProduct.find('.c-product-card__price_new').eq(0).text() : currentProduct.find('.c-product-card__price').eq(0).text();
-        var product = {
-            articul: articul,
-            img: img,
-            name: name,
-            price: price
-        };
-        if ($(this).hasClass('is-active')) {
-            $(this).removeClass('is-active');
-            $(this).text('Выбрать');
-            table.find('.c-product-card__btn').removeClass('is-disabled');
-            $(products).each(function(i, item) {
-                if (item.articul == articul) products.splice(i, 1);
-            })
-            removeProductFromSlider(product);
-        } else {
-            table.find('.c-product-card__btn').addClass('is-disabled');
-            $(this).removeClass('is-disabled').addClass('is-active');
-            $(this).text('Выбрано');
-            products.push(product)
-            addProductToSlider(product);
-        }
-        checkoutProducts();
+        
+        var currentActiveProduct = table.find('.c-product-card__btn.is-active').parents('.c-product-card');
+	    
+	    if(currentActiveProduct.length){
+	        var currentActiveProductArticul = currentActiveProduct.find('.c-product-card__subtitle').text().replace(/^\D+/g, '');
+	        var currentActiveProductImg = currentActiveProduct.find('.c-product-card__img img').attr('src');
+	        var currentActiveProductName = currentActiveProduct.find('.c-product-card__title').text();
+	        var currentActiveProductPrice = (currentActiveProduct.find('.c-product-card__price_new').eq(0).length) ? currentActiveProduct.find('.c-product-card__price_new').eq(0).text() : currentActiveProduct.find('.c-product-card__price').eq(0).text();
+	    	if(products.length){
+		        $(products).each(function(i, item) {
+		        	if (item.articul == currentActiveProductArticul) products.splice(i, 1);
+		        });
+	       }
+	        var currentActiveProductData = {
+	            articul: currentActiveProductArticul,
+	            img: currentActiveProductImg,
+	            name: currentActiveProductName,
+	            price: currentActiveProductPrice
+	        };
+	        removeProductFromSlider(currentActiveProductData);
+		     
+	    }
+
+	    
+
+    	if(!$(this).hasClass('is-active')){
+    		console.log("Not has");
+	    	var currentProduct = $(this).parents('.c-product-card');
+	        var articul = currentProduct.find('.c-product-card__subtitle').text().replace(/^\D+/g, '');;
+	        var img = currentProduct.find('.c-product-card__img img').attr('src');
+	        var name = currentProduct.find('.c-product-card__title').text();
+	        var price = (currentProduct.find('.c-product-card__price_new').eq(0).length) ? currentProduct.find('.c-product-card__price_new').eq(0).text() : currentProduct.find('.c-product-card__price').eq(0).text();
+
+	        var product = {
+	            articul: articul,
+	            img: img,
+	            name: name,
+	            price: price
+	        };
 
 
+		    $(this).text('Выбрано');
+		    $(this).addClass('is-active');
+		    products.push(product)
+		    addProductToSlider(product);
+		    setTimeout(function(){
+		    	checkoutProducts();
+
+		    }, 100)
+	    }
+
+	    currentActiveProduct.find('.c-product-card__btn').text('Выбрать');
+	    currentActiveProduct.find('.c-product-card__btn').removeClass('is-active');
     })
 
     $('.js-table_options .c-product-card__btn').click(function(e) {
@@ -158,23 +182,24 @@ $(function() {
         })
         orderCheckoutBl.find('.c-product__choosen-count').text(products.length + " товара");
         // orderCheckoutBl.find('.c-product__price-number').text(resultCost);
-        productsNewCostCounter.update(+resultCost);
-        productsOldCostCounter.update(+resultCost);
-        productsMobileOldCostCounter.update(+resultCost);
-        productsMobileNewCostCounter.update(+resultCost);
-        productsMobileBottomOldCostCounter.update(+resultCost);
-        productsMobileBottomNewCostCounter.update(+resultCost);
-        productsFixedCostCounter.update(+resultCost);
-        productsFixedMobileCostCounter.update(+resultCost);
-        productsStaticCostCounter.update(+resultCost);
-        productsStaticMobileCostCounter.update(+resultCost);
-        productsFixedOldCostCounter.update(+resultCost);
-		productsFixedNewCostCounter.update(+resultCost);
-		productsFixedMobileNewCostCounter.update(+resultCost);
-		productsFixedMobileOldCostCounter.update(+resultCost);
-		productsStaticOldCostCounter.update(+resultCost);
-		productsStaticNewCostCounter.update(+resultCost);
-		productsStaticMobileNewCostCounter.update(+resultCost);
-		productsStaticMobileOldCostCounter.update(+resultCost);
+        	productsNewCostCounter.update(+resultCost);
+	        productsOldCostCounter.update(+resultCost);
+	        productsMobileOldCostCounter.update(+resultCost);
+	        productsMobileNewCostCounter.update(+resultCost);
+	        productsMobileBottomOldCostCounter.update(+resultCost);
+	        productsMobileBottomNewCostCounter.update(+resultCost);
+	        productsFixedCostCounter.update(+resultCost);
+	        productsFixedMobileCostCounter.update(+resultCost);
+	        productsStaticCostCounter.update(+resultCost);
+	        productsStaticMobileCostCounter.update(+resultCost);
+	        productsFixedOldCostCounter.update(+resultCost);
+			productsFixedNewCostCounter.update(+resultCost);
+			productsFixedMobileNewCostCounter.update(+resultCost);
+			productsFixedMobileOldCostCounter.update(+resultCost);
+			productsStaticOldCostCounter.update(+resultCost);
+			productsStaticNewCostCounter.update(+resultCost);
+			productsStaticMobileNewCostCounter.update(+resultCost);
+			productsStaticMobileOldCostCounter.update(+resultCost);
+        
     }
 });

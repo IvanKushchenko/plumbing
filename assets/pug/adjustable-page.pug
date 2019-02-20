@@ -1,0 +1,59 @@
+html(lang="ru")
+	head
+		include templates/head.pug
+	body
+		.container
+			.o-page.js-page
+				include templates/navbar.pug
+				include templates/header.pug
+				main.o-page__content
+					.o-page__container
+						.o-page__sidebar
+						.o-page__body
+							.c-breadcrumbs
+								a(href="#!").c-breadcrumbs__item Главная
+								a(href="#!").c-breadcrumbs__item Каталог
+								a(href="#!").c-breadcrumbs__item Мебель для ванной
+					.row.mt-4
+						.col-md-6.col-lg-4
+							.c-adjustable-block
+								.c-adjustable-block__thumbnail
+									img(src=require("../img/content/adjustable-image.jpg"), alt="")
+								.c-adjustable-block__title Зеркала
+								a(href="#").c-adjustable-block__count 42 товара в наличии
+						.col-md-6.col-lg-4
+							.c-adjustable-block
+								.c-adjustable-block__thumbnail
+									img(src=require("../img/content/adjustable-image2.jpg"), alt="")
+								.c-adjustable-block__title тумбы с раковинами
+								a(href="#").c-adjustable-block__count 42 товара в наличии
+						.col-md-6.col-lg-4
+							.c-adjustable-block
+								.c-adjustable-block__thumbnail
+									img(src=require("../img/content/adjustable-image3.jpg"), alt="")
+								.c-adjustable-block__title Пеналы, шкафы
+								a(href="#").c-adjustable-block__count 42 товара в наличии
+						.col-md-6.col-lg-4
+							.c-adjustable-block
+								.c-adjustable-block__thumbnail
+									img(src=require("../img/content/adjustable-image4.jpg"), alt="")
+								.c-adjustable-block__title Зеркала
+								a(href="#").c-adjustable-block__count 42 товара в наличии
+						.col-md-6.col-lg-4
+							.c-adjustable-block
+								.c-adjustable-block__thumbnail
+									img(src=require("../img/content/adjustable-image5.jpg"), alt="")
+								.c-adjustable-block__title тумбы с раковинами
+								a(href="#").c-adjustable-block__count 42 товара в наличии
+						.col-md-6.col-lg-4
+							.c-adjustable-block
+								.c-adjustable-block__thumbnail
+									img(src=require("../img/content/adjustable-image6.jpg"), alt="")
+								.c-adjustable-block__title Пеналы, шкафы
+								a(href="#").c-adjustable-block__count 42 товара в наличии
+						.col-md-6.col-lg-4
+							.c-adjustable-block
+								.c-adjustable-block__thumbnail
+									img(src=require("../img/content/adjustable-image7.jpg"), alt="")
+								.c-adjustable-block__title нижние тумбы
+								a(href="#").c-adjustable-block__count 42 товара в наличии

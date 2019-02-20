@@ -1,0 +1,76 @@
+html(lang="ru")
+	head
+		include templates/head.pug
+	body
+		.container
+			.o-page.js-page
+				include templates/navbar.pug
+				include templates/header.pug
+				main.o-page__content
+					.o-page__body
+						.c-breadcrumbs
+							a(href="#!").c-breadcrumbs__item Главная
+							a(href="#!").c-breadcrumbs__item Акции
+							a(href="#!").c-breadcrumbs__item СПА-ванны со скидкой 30% 
+						.o-section.s-share
+							.o-section__header
+								h3.o-section__title Гидромассажные СПА-ванны со скидкой с 5 по 16 мая
+							.o-section__body
+								article.c-article
+									.c-article__date
+										span.c-article__date-txt 21.06.2018
+									.c-article__thumbnail
+										img(src=require("../img/content/share-image.jpg"), alt="")
+									.c-article__text
+										h4.mb-6
+											b
+												.
+													Собственные материально-технические ресурсы позволяют нам выполнять заказы  
+													в четко обозначенное время. А также предлагать нашим клиентам прекрасное качество без посреднических наценок.
+										.row.d-flex.flex-column.flex-lg-row.mb-5
+											.col-lg-5.mb-4.mb-lg-0
+												h4.text-uppercase.mb-3.font-weight-bold Душевые в нишу
+												div.h-text-blue
+													| Предложим 
+													b более 27 вариантов 
+													| под ваш дизайн!
+												div.h-text-blue
+													| Изготовим за 7 дней - 
+													b от 18 600 ₽
+												div.h-text-blue
+													| Установим - 
+													b за 1 день
+
+												p.mb-3.mt-3 Мы не говорим, что мы и наш продукт самый лучшие... <br> Просто мы выделяемся по нескольким важным параметрам:
+												ul.mb-4
+													li высокая герметичность наших душевых
+													li установка по немецким технологиям
+													li подробные консультации и ответы на вопросы
+													li замена деталей в течение 15 лет по звонку!
+													li платим вам деньги, если задержим заказ по срокам
+												a(href="#").c-btn.c-btn_blue Рассчитать мой проект за 15 минут
+											.col-lg-6.offset-lg-1
+												img(src=require("../img/content/share-content-image.jpg"), alt="")
+										.row.d-flex.flex-column-reverse.flex-lg-row
+											.col-lg-6
+												img(src=require("../img/content/share-content-image.jpg"), alt="")
+											.col-lg-5.mb-4.mb-lg-0
+												h4.text-uppercase.mb-3.font-weight-bold Угловые душевые
+												div.h-text-blue
+													| Предложим 
+													b более 38 вариантов 
+													| под ваш дизайн!
+												div.h-text-blue
+													| Изготовим за 7 дней - 
+													b от 29 700 ₽
+												div.h-text-blue
+													| Установим - 
+													b за 1 день
+
+												p.mb-4.mt-3
+													.
+														Изготовим и установим душевые уголки, лаконично повторяющие дизайнерские "штуки" в интерьере. Отсутствие широченных профилей придает нашим конструкциям "легкость" и гармоничное сочетание элементов санузла.
+												a(href="#").c-btn.c-btn_blue Рассчитать мой проект за 15 минут
+											
+
+				include templates/footer.pug

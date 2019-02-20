@@ -10,37 +10,36 @@ html(lang="ru")
 					.o-page__container
 						.o-page__sidebar
 							.c-catalog-menu.d-none.d-md-block
-								ul.c-catalog-menu__nav
-									li.c-catalog-menu__item
-										a(href="#").c-catalog-menu__link Ванны
-									li.c-catalog-menu__item
-										a(href="#").c-catalog-menu__link Ванны
-									li.c-catalog-menu__item.c-catalog-menu__item_dropdown
-										a(href="#submenu1" data-toggle="collapse").c-catalog-menu__link Ванны
-										ul.collapse.c-catalog-menu__submenu#submenu1
-											li.c-catalog-menu__item
-												a(href="#").c-catalog-menu__link Мебель для ванной
-											li.c-catalog-menu__item
-												a(href="#").c-catalog-menu__link Мебель для ванной
-											li.c-catalog-menu__item
-												a(href="#").c-catalog-menu__link Мебель для ванной
-									li.c-catalog-menu__item
-										a(href="#").c-catalog-menu__link Ванны
-									li.c-catalog-menu__item
-										a(href="#").c-catalog-menu__link Ванны
-									li.c-catalog-menu__item
-										a(href="#").c-catalog-menu__link Ванны
+								include templates/catalog-menu.pug
+							.c-all-shares
+								.c-all-shares__body
+									.c-all-shares__title Все товары по акциям
+									a(href="#").c-all-shares__link Смотреть
+							.c-watch-earlier-widget
+								h3.c-watch-earlier-widget__title Вы смотрели ранее:
+								.c-watch-earlier-widget__body
+									.c-watch-earlier-widget__img
+										img(src=require("../img/content/option.jpg"), alt="")
+									.c-watch-earlier-widget__img
+										img(src=require("../img/content/option6.jpg"), alt="")
+									.c-watch-earlier-widget__img
+										img(src=require("../img/content/option7.jpg"), alt="")
+									.c-watch-earlier-widget__img
+										img(src=require("../img/content/option8.jpg"), alt="")
+									.c-watch-earlier-widget__img
+										img(src=require("../img/content/option9.jpg"), alt="")
+								a(href="#").c-watch-earlier-widget__link смотреть все
 						.o-page__body
 							.c-breadcrumbs
 								a(href="#!").c-breadcrumbs__item Главная
 								a(href="#!").c-breadcrumbs__item Акции
-							section.o-section
+							section.o-section.s-shares
 								.o-section__header
 									h3.o-section__title Акции
 									.o-section__navigation
 										a(href="#").o-section__navigation-item Действующие
 										a(href="#").o-section__navigation-item Прошедшие
-								.o-section__body
+								.o-section__body.s-shares__body
 									-
 										var shares = [
 											{
@@ -77,13 +76,21 @@ html(lang="ru")
 											.c-article__title=share.title
 											.c-article__description=share.description
 											a(href="#").c-article__read-more Читать полностью
-								.o-section__footer
+								.o-section__footer.s-shares__footer
 									.c-posts-showed
 										.c-posts-showed__title Показать:
-										form
-											.c-posts-showed__count
-												input(type="radio" name="posts-showed" value="24").c-posts-showed__count-input
-											.c-posts-showed__count
+										form.c-posts-showed__body
+											.c-posts-showed__count.is-active 24
+												input(type="radio" name="posts-showed" value="24" checked).c-posts-showed__count-input
+											.c-posts-showed__count 48
 												input(type="radio" name="posts-showed" value="48").c-posts-showed__count-input
+									.c-pagination
+										a(href="#").c-pagination__nav.c-pagination__nav_left
+										.c-pagination__pages
+											a(href="#").c-pagination__page 1
+											a(href="#").c-pagination__page.is-active 2
+											a(href="#").c-pagination__page 3
+											a(href="#").c-pagination__page 4
+										a(href="#").c-pagination__nav.c-pagination__nav_right
 
 				include templates/footer.pug

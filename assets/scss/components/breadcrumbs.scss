@@ -27,7 +27,11 @@
 	&__item {
 		text-transform: uppercase;
 		box-shadow: none;
-
+	    max-width: 170px;
+	    display: inline-block;
+	    overflow: hidden;
+	    white-space: nowrap;
+	    text-overflow: ellipsis;
 		&:not(:last-child) {
 			&:after {
 				content: '/';
@@ -39,8 +43,12 @@
 			}
 
 		}
-
-		&:nth-child(3) {
+		&:nth-child(3){
+			&:after{
+				content: '';
+			}
+		}
+		&_dropdown {
 			border-bottom: 1px dotted rgba(100, 147, 173, 0.3);
 			position: relative;
 

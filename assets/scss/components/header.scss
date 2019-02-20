@@ -33,10 +33,7 @@
 
 	&__bottom {
 		display: flex;
-		align-items: center;
-		@media (max-width:$bp-lg) {
-			align-items: flex-end;
-		}
+		align-items: flex-end;
 	}
 
 	&__nav {
@@ -77,6 +74,12 @@
 
 	.c-catalog-menu {
 		margin-right: 30px;
+		&__nav{
+			display: none;
+			position: absolute;
+		    box-shadow: 0 1px 4px 0 rgba(0,0,0,.4);
+	        padding-top: 10px;
+		}
 	}
 
 	&__actions {
