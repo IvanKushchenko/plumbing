@@ -12495,7 +12495,7 @@ a:hover {
   transition: .3s;
 }
 
-.c-table__row:hover {
+.c-table__row:hover, .c-table__row.is-active {
   background-color: #ecf2f6;
   box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.2);
 }

@@ -115,7 +115,8 @@
 		border: 1px solid #ecf2f6;
 		border-top: none;
 		transition: .3s;
-		&:hover{
+		&:hover,
+		&.is-active{
 			background-color: #ecf2f6;
 		    box-shadow: 0 0 4px 1px rgba(0,0,0,.2);
 		}

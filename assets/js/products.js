@@ -55,7 +55,6 @@ $(function() {
 	    
 
     	if(!$(this).hasClass('is-active')){
-    		console.log("Not has");
 	    	var currentProduct = $(this).parents('.c-product-card');
 	        var articul = currentProduct.find('.c-product-card__subtitle').text().replace(/^\D+/g, '');;
 	        var img = currentProduct.find('.c-product-card__img img').attr('src');
@@ -72,6 +71,7 @@ $(function() {
 
 		    $(this).text('Выбрано');
 		    $(this).addClass('is-active');
+		    currentProduct.addClass('is-active');
 		    products.push(product)
 		    addProductToSlider(product);
 		    setTimeout(function(){
@@ -82,6 +82,7 @@ $(function() {
 
 	    currentActiveProduct.find('.c-product-card__btn').text('Выбрать');
 	    currentActiveProduct.find('.c-product-card__btn').removeClass('is-active');
+	    currentActiveProduct.removeClass('is-active');
     })
 
     $('.js-table_options .c-product-card__btn').click(function(e) {
@@ -101,6 +102,8 @@ $(function() {
         };
         if ($(this).hasClass('is-active')) {
             $(this).removeClass('is-active');
+            currentProduct.removeClass('is-active');
+            
             $(this).text('Добавить');
             $(products).each(function(i, item) {
                 if (item.articul == articul) products.splice(i, 1);
@@ -109,6 +112,7 @@ $(function() {
         } else {
             $(this).addClass('is-active');
             $(this).text('Добавлено');
+            currentProduct.addClass('is-active');
 
             products.push(product)
             addProductToSlider(product);
