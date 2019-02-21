@@ -6,6 +6,7 @@ $(function() {
     function checkPosCodeTip() {
         var bottomPos = $(window).scrollTop() + $(window).height();
         var codeContainer = $('.c-product-info__code');
+        if(!codeContainer.length) return;
         $('.c-tip_code').css({
             'top': ((codeContainer.offset().top - $(window).scrollTop()) - (codeContainer.height() / 2) + 10) + 'px',
             'left': (codeContainer.offset().left - $('.c-tip_code').width() * 1.7) + 'px'
@@ -28,6 +29,7 @@ $(function() {
         if (productsHidden) return;
         var bottomPos = $(window).scrollTop() + $(window).height();
         var productsContainer = $('.js-options');
+        if(!productsContainer.length) return;
         $('.c-tip_products').css({
             'top': ((productsContainer.offset().top - $(window).scrollTop()) + 50) + 'px',
             'left': (productsContainer.offset().left - $('.c-tip_products').width() * 1.3) + 'px'

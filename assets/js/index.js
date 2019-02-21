@@ -120,6 +120,14 @@ $(function() {
         }
     });
 
+
+    var mainBanner = new Swiper('.js-main-banner-slider', {
+        pagination: {
+            clickable: true,
+            el: '.js-main-banner-slider .swiper-pagination'
+        }
+    });
+
     $('.c-product-card .c-product-card__title').click(function(){
     	$('#preview-product-modal').modal('show');
     })
@@ -156,6 +164,7 @@ $(function() {
 
     function orderCheckoutInfo() {
         var orderInfo = $('.c-product__order-info') || $('.c-product__order-info_mobile');
+        if(!orderInfo.length) return true;
         var productCheckoutStatic = $('.js-product-order-checkout-static');
         var productCheckoutFixed = $('.js-product-order-checkout-fixed');
         productCheckoutFixed.css({

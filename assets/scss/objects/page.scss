@@ -1,21 +1,36 @@
-.o-page{
+.o-page {
 	background-color: #fff;
-	&__container{
+
+	&__container {
 		display: flex;
 	}
-	&__content{
+
+	&__body{
+		width: calc(100% - 300px);
+		@media (max-width: 1200px) {
+			width: 100%;
+		}
+	}
+
+	&__content {
 		padding: 0 30px;
 		overflow-x: hidden;
+
 		@media (max-width:$bp-lg) {
 			padding: 0 20px;
 		}
+
 	}
-	&__sidebar{
+
+	&__sidebar {
 		width: 270px;
 		margin-right: 30px;
 		flex-shrink: 0;
-		@media (max-width: $bp-xl) {
+
+		@media (max-width:$bp-xl) {
 			display: none;
 		}
+
 	}
+
 }

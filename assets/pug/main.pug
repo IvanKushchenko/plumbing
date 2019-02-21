@@ -1,0 +1,22 @@
+html(lang="ru")
+	head
+		include templates/head.pug
+	body
+		.container
+			.o-page.js-page
+				include templates/navbar.pug
+				include templates/header.pug
+				main.o-page__content
+					.o-page__container
+						.o-page__sidebar
+							.c-catalog-menu.d-none.d-md-block
+								include templates/catalog-menu.pug
+						.o-page__body
+							.swiper-container.js-main-banner-slider.c-main-banner
+								.swiper-wrapper
+									.swiper-slide
+										img.main-banner-image(src=require("../img/content/main-banner-image.jpg"), alt="")
+									.swiper-slide Slide 2
+									.swiper-slide Slide 3
+								.swiper-pagination
+				include templates/footer.pug

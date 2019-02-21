@@ -14007,6 +14007,26 @@ a:hover {
   font-style: italic;
 }
 
+.c-main-banner img {
+  max-width: 100%;
+}
+
+.c-main-banner .swiper-pagination-bullet {
+  width: 14px;
+  height: 14px;
+  background-color: #e9e9e6;
+  opacity: 1;
+  margin: 0 7px !important;
+}
+
+.c-main-banner .swiper-pagination {
+  bottom: 0;
+}
+
+.c-main-banner .swiper-pagination-bullet-active {
+  background-color: #8cafc2;
+}
+
 .s-shares {
   margin-top: 30px;
 }
@@ -14041,6 +14061,16 @@ a:hover {
 
 .o-page__container {
   display: flex;
+}
+
+.o-page__body {
+  width: calc(100% - 300px);
+}
+
+@media (max-width: 1200px) {
+  .o-page__body {
+    width: 100%;
+  }
 }
 
 .o-page__content {
