@@ -1,0 +1,16 @@
+.c-contacts-section {
+	font-size: 16px;
+	line-height: 34px;
+	margin-bottom: 40px;
+
+	&_how-to-find &__body {
+		border: 1px solid #c3d6df;
+	}
+
+	&__title {
+		font-family: "Roboto Slab";
+		font-size: 23px;
+		margin-bottom: 20px;
+	}
+
+}

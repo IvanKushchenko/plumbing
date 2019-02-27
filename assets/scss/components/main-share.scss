@@ -1,0 +1,25 @@
+.c-main-share{
+	border: 1px solid #ecf2f6;
+	padding: 20px;
+	display: flex;
+	&__count{
+		flex-shrink: 0;
+		margin-right: 16px;
+		width: 45px;
+		height: 45px;
+		background-color: #f14949;
+		font-family: "Roboto Slab";
+		font-size: 18px;
+		line-height: 45px;
+		text-align: center;
+		color: #fff;
+		border-radius: 50%;
+	}
+	&__title{
+		font-weight: 700;
+		font-size: 16px;
+	}
+	&__txt{
+		font-size: 14px;
+	}
+}

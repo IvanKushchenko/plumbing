@@ -1,0 +1,27 @@
+html(lang="ru")
+	head
+		include templates/head.pug
+	body
+		.container
+			.o-page.js-page
+				include templates/navbar.pug
+				include templates/header.pug
+				main.o-page__content
+					.o-page__container
+						.o-page__sidebar
+							.c-catalog-menu.d-none.d-md-block
+								include templates/catalog-menu.pug
+						.o-page__body
+							.c-breadcrumbs
+								a(href="#!").c-breadcrumbs__item Главная
+								a(href="#!").c-breadcrumbs__item Смесители
+								.c-breadcrumbs__item.c-breadcrumbs__item_dropdown-wrap
+									a(href="#", data-toggle="dropdown", aria-expanded="false").c-breadcrumbs__item_dropdown.dropdown-toggle Душевые ограждения
+									.dropdown-menu.c-breadcrumbs__dropdown-menu
+										a(href="#") Форсунки для душа
+										a(href="#") Девиаторы
+										a(href="#") Наборы
+										a(href="#") Смесители для душа
+								a(href="#!").c-breadcrumbs__item Душевые углы
+				
+				include templates/footer.pug

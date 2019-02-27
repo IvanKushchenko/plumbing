@@ -35,6 +35,7 @@
 		&:not(:last-child) {
 			&:after {
 				content: '/';
+				color: #6493ad;
 				display: inline-block;
 				margin: 0 12px;
 				@media (max-width:$bp-sm) {
@@ -43,10 +44,10 @@
 			}
 
 		}
-		&:nth-child(3){
-			&:after{
-				content: '';
-			}
+		&_dropdown-wrap{
+			max-width: initial;
+	    	overflow: visible;
+
 		}
 		&_dropdown {
 			border-bottom: 1px dotted rgba(100, 147, 173, 0.3);
@@ -54,15 +55,13 @@
 
 			&:after {
 				content: '';
-				display: block;
+				display: inline-block;
 				border: none;
 				width: 16px;
 				height: 16px;
 				border-radius: 50%;
-				position: absolute;
-				right: -32px;
-				top: 50%;
-				transform: translateY(-50%);
+				position: relative;
+				top: 5px;
 				background: #f1ca49 url('../img/icons/arrow-down.svg') no-repeat center center;
 			}
 

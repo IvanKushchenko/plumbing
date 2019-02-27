@@ -1,0 +1,28 @@
+.c-main-shares{
+	position: relative;
+	margin-bottom: 35px;
+	&_mobile{
+		.c-main-share{
+			margin-bottom: 15px;
+		}
+	}
+	.swiper-button-prev{
+		&.swiper-button-disabled{
+			display: none;
+		}
+		left: -20px;
+   		transform: scaleX(-1);
+
+	}
+	.swiper-button-prev,
+	.swiper-button-next{
+	    width: 36px;
+	    height: 36px;
+	    border-radius: 50%;
+	    background: #fff url(../img/icons/right-arrow.svg) no-repeat center center;
+	    background-size: 50%;
+	    border: 2px solid #ecf2f6;
+	    right: -15px;
+	}
+}
+

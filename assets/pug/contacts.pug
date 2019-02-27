@@ -1,0 +1,87 @@
+html(lang="ru")
+	head
+		include templates/head.pug
+	body
+		.container
+			.o-page.js-page
+				include templates/navbar.pug
+				include templates/header.pug
+				main.o-page__content
+					.o-page__container
+						.o-page__sidebar
+							.c-catalog-menu.d-none.d-md-block
+								include templates/catalog-menu.pug
+						.o-page__body
+							.c-breadcrumbs.mb-4
+								a(href="#!").c-breadcrumbs__item Главная
+								a(href="#!").c-breadcrumbs__item Контакты
+							.c-contacts-section.c-contacts-section_contacts
+								h2.c-contacts-section__title Наши контакты
+								.c-contacts-section__body
+									.row.d-flex.justify-content-between
+										.col-md-12.col-lg-5
+											p
+												.
+													Адрес:  Посёлок Заречье, Торговая ул., стр. 2, <br>
+													ТЦ "Элитстройматериалы", 1 этаж, 
+												a(href="#!").js-scroll-to-map место А-18 <br>
+												| Время работы салона:  10.00 - 20.00 без вых.
+										.col-md-6.col-lg-4
+											p
+												.
+													Юридическая информация: <br>
+													ООО «Электро-комфорт.ру» <br>
+													ОГРН: 1137746420558
+
+										.col-md-6.col-lg-3
+											p
+												.
+													Телефон: +7(495)565-35-88 <br>
+													E-mail: sale@sanbest.ru
+							.c-contacts-section.c-contacts-section_our-showroom
+								h2.c-contacts-section__title Наш шоу-рум
+								.c-contacts-section__body
+									.c-our-showroom-slider
+										.c-our-showroom-slider__main
+											.swiper-container.js-our-showroom-gallery
+												.swiper-wrapper
+													.swiper-slide
+														img(src=require("../img/content/showroom-gallery.jpg"), alt="")
+													.swiper-slide
+														img(src=require("../img/content/showroom-gallery.jpg"), alt="")
+										.c-our-showroom-slider__thumbnails
+											.swiper-container.js-our-showroom-thumbnails
+												.swiper-wrapper
+													.swiper-slide
+														img(src=require("../img/content/showroom-thumbnail.jpg"), alt="")
+													.swiper-slide
+														img(src=require("../img/content/showroom-thumbnail.jpg"), alt="")
+											.swiper-button-prev
+											.swiper-button-next
+							.c-contacts-section.c-contacts-section_how-to-find
+								h2.c-contacts-section__title Как найти наш шоу-рум
+								.c-contacts-section__body
+									img(src=require("../img/content/showroom-map.jpg"), alt="")
+								b Ждём Вас в нашем уютном шоу руме!
+							.c-contacts-section.c-contacts-section_how-to-get
+								h2.c-contacts-section__title Как добраться к нам на общественном транспорте:
+								.c-contacts-section__body
+									div.mb-4
+										b от ст. м. "Киевская" , "Кутузовская", "Парк Победы":
+										p.mb-0 1. Автобус №205 – остановка «Торговый центр «ЭлитСтрой Материалы», конечная
+									div.mb-4
+										b от ст. м. «Филёвский парк»:
+										p.mb-0 1. Микроавтобус №883 – остановка «Торговый центр «ЭлитСтрой Материалы», конечная
+										p.mb-0 2. Автобус №818 – остановка «Поселок Заречье» – далее пешком (15 мин.)
+									div
+										b от ст. м. «Филёвский парк»:
+										p.mb-0 1. Микроавтобус №883 – остановка «Торговый центр «ЭлитСтрой Материалы», конечная
+										p.mb-0 2. Автобус №818 – остановка «Поселок Заречье» – далее пешком (15 мин.)
+							.c-contacts-section.c-contacts-section_map#map
+								h2.c-contacts-section__title Мы на карте
+								.c-contacts-section__body
+									<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A2d83b20ffab53983a879aa5e747ccb35c97b85a0d0f19c104ff479d439f485eb&amp;width=100%25&amp;height=370&amp;lang=ru_RU&amp;scroll=true"></script>
+
+									
+
+				include templates/footer.pug

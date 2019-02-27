@@ -1,0 +1,34 @@
+.c-our-showroom-slider{
+	&__thumbnails{
+		position: relative;
+		margin-top: 25px;
+		.swiper-container{
+			width: 90%;
+			margin: 0 auto;
+		}
+		.swiper-button-prev{
+			transform: scaleX(-1);
+		}
+		.swiper-slide{
+		    border: 2px solid transparent;
+		    border-radius: 2px;
+		    img{
+		    	width: 100%;
+		    	height: 100%;
+		    	display: block;
+		    	obj-fit: cover;
+		    }
+		}
+		.swiper-slide-thumb-active{
+			border-color: #8cafc2;
+		}
+		.swiper-button-prev,
+		.swiper-button-next{
+			width: 23px;
+			height: 23px;
+			border-radius: 50%;
+			background: #ecf2f6 url(../img/icons/right-arrow.svg) no-repeat center center;
+			background-size: 50%;
+		}
+	}
+}
