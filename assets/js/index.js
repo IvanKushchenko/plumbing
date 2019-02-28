@@ -2,14 +2,14 @@ import '../scss/index.scss';
 import 'bootstrap';
 import $ from 'jquery';
 import lightGallery from 'lightgallery';
-
+import selectric from 'selectric';
 require('./products');
 require('./tips');
 
 import Swiper from 'swiper';
 
 $(function() {
-
+	$('select').selectric();
 
     var previewThumbnails = new Swiper('.js-product-preview-page .js-product-preview-thumbnails', {
         slidesPerView: 3,

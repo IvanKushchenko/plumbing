@@ -1,0 +1,42 @@
+.c-sort{
+	display: flex;
+	align-items: center;
+	&__txt{
+		font-size: 12px;
+		text-transform: uppercase;
+		margin-right: 10px;
+	}
+	.selectric-wrapper{
+		max-width: 190px;
+		.selectric-items {
+			background: none;
+		    border: 2px solid #f2f6f9;
+		    border-top: none;
+			li{
+				font-size: 12px;
+				color: #222;
+				text-transform: uppercase;
+				&.highlighted,
+				&:hover{
+				    background: #ecf2f6;
+				    color: #222;
+				}
+			}
+		}
+		.selectric{
+			border-radius: 3px;
+			border: 2px solid #f2f6f9;
+			background: none;
+		}
+		.label{
+			height: 32px;
+			line-height: 32px;
+			font-size: 12px;
+			text-transform: uppercase;
+		}
+		.button{
+			background: none;
+			height: 32px;
+		}
+	}
+}

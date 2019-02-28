@@ -38,6 +38,7 @@
     "normalize.css": "^8.0.1",
     "popper": "^1.0.1",
     "popper.js": "^1.14.7",
+    "selectric": "^1.13.0",
     "swiper": "^4.4.6"
   },
   "repository": {
