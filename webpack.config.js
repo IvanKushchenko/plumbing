@@ -18,41 +18,41 @@ module.exports = {
 		new MiniCssExtractPlugin({
 			filename: 'css/style.css'
 		}),
-		new HtmlWebpackPlugin({
-			template: './assets/pug/index.pug',
-			minify: false,
-			hash: true
-		}),
-		new HtmlWebpackPlugin({
-			filename: 'shares.html',
-			template: './assets/pug/shares.pug',
-			minify: false,
-			hash: true
-		}),
-		new HtmlWebpackPlugin({
-			filename: 'share.html',
-			template: './assets/pug/share.pug',
-			minify: false,
-			hash: true
-		}),
-		new HtmlWebpackPlugin({
-			filename: 'adjustable-page.html',
-			template: './assets/pug/adjustable-page.pug',
-			minify: false,
-			hash: true
-		}),
-		new HtmlWebpackPlugin({
-			filename: 'main.html',
-			template: './assets/pug/main.pug',
-			minify: false,
-			hash: true
-		}),
-		new HtmlWebpackPlugin({
-			filename: 'contacts.html',
-			template: './assets/pug/contacts.pug',
-			minify: false,
-			hash: true
-		}),
+		// new HtmlWebpackPlugin({
+		// 	template: './assets/pug/index.pug',
+		// 	minify: false,
+		// 	hash: true
+		// }),
+		// new HtmlWebpackPlugin({
+		// 	filename: 'shares.html',
+		// 	template: './assets/pug/shares.pug',
+		// 	minify: false,
+		// 	hash: true
+		// }),
+		// new HtmlWebpackPlugin({
+		// 	filename: 'share.html',
+		// 	template: './assets/pug/share.pug',
+		// 	minify: false,
+		// 	hash: true
+		// }),
+		// new HtmlWebpackPlugin({
+		// 	filename: 'adjustable-page.html',
+		// 	template: './assets/pug/adjustable-page.pug',
+		// 	minify: false,
+		// 	hash: true
+		// }),
+		// new HtmlWebpackPlugin({
+		// 	filename: 'main.html',
+		// 	template: './assets/pug/main.pug',
+		// 	minify: false,
+		// 	hash: true
+		// }),
+		// new HtmlWebpackPlugin({
+		// 	filename: 'contacts.html',
+		// 	template: './assets/pug/contacts.pug',
+		// 	minify: false,
+		// 	hash: true
+		// }),
 		new HtmlWebpackPlugin({
 			filename: 'catalog.html',
 			template: './assets/pug/catalog.pug',

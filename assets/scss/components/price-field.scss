@@ -1,0 +1,31 @@
+.c-price-field{
+	height: 31px;
+	width: 107px;
+	overflow: hidden;
+	border-radius: 3px;
+	border: 1px solid #e4edf2;
+	padding: 5px 10px;
+	font-size: 14px;
+	display: inline-block;
+	flex:1;
+	&__inner{
+		display: flex;
+		align-items: center;
+	}
+	&__prefix,
+	&__postfix{
+		user-select: none;
+		pointer-events: none;
+	}
+	&__postfix{
+	    font-family: 'Rubl';
+	    margin-top: -2px;
+	}
+	&__input{
+		margin: 0 5px;
+		flex-shrink: 0;
+		&:focus{
+			outline: none;
+		}
+	}
+}

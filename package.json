@@ -30,6 +30,7 @@
     "bootstrap": "^4.2.1",
     "countup.js": "^1.9.3",
     "jquery": "^3.3.1",
+    "jquery-mask-plugin": "^1.14.15",
     "lg-fullscreen": "^1.0.1",
     "lg-pager": "^1.0.2",
     "lg-thumbnail": "^1.1.0",

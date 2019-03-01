@@ -3,6 +3,16 @@
 	border: 2px solid #e4edf2;
 	position: relative;
 	margin-bottom: 48px;
+	&_catalog &__title{
+	    font-size: 18px;
+	    width: 70%;
+	    justify-content: center;
+	}
+	&_catalog &__body{
+		font-size: 13px;
+		text-align: left;
+		padding: 46px 20px;
+	}
 	 @media (max-width:$bp-sm-2) {
 	 	margin-bottom: 30px;
 	 }

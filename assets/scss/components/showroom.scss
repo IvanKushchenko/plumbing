@@ -9,13 +9,21 @@
     font-size: 14px;
     letter-spacing: 0.35px;
     position: relative;
+    @media (max-width: $bp-lg) {
+    	font-size: 11px;
+    }
     &:after{
 	    content: '';
 	    display: block;
 	    width: 18px;
 	    height: 18px;
 	    background: url(../img/icons/exclamation.png) no-repeat center center;
+	    background-size: cover;
 	    margin-left: 10px;
+	    @media (max-width: $bp-lg) {
+	    	width: 14px;
+	    	height: 14px;
+	    }
     }
 	&:hover,
 	&.is-active{

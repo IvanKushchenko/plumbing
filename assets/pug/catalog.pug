@@ -9,8 +9,213 @@ html(lang="ru")
 				main.o-page__content
 					.o-page__container
 						.o-page__sidebar
-							.c-catalog-menu.d-none.d-md-block
-								include templates/catalog-menu.pug
+							.c-filters.mb-5
+								.c-filter.c-filter_choosed-filters
+									.c-filter__header
+										.c-filter__title Вы выбрали
+									.c-filter__body
+										.c-choosed-tag BURLINGTON
+											.c-choosed-tag__close
+										.c-choosed-tag cezared
+											.c-choosed-tag__close
+										.c-choosed-tag edelform
+											.c-choosed-tag__close
+										.c-choosed-tag eleganza
+											.c-choosed-tag__close
+										.c-choosed-tag Цена от 3000 до 15000
+											.c-choosed-tag__close
+									.c-filter__footer
+										a(href="#").c-btn.c-filter__btn сбросить фильтр
+								.c-filter
+									.c-filter__body
+										.c-checkbox.c-checkbox_theme-yellow
+											input(type="checkbox").c-checkbox__input
+											.c-checkbox__label товары со скидкой %
+								.c-filter
+									.c-filter__header
+										a(href="#choosed-filters" data-toggle="collapse" aria-expanded="false").c-filter__title Бренд
+									.c-filter__body.collapse#choosed-filters
+										.c-checkbox
+											input(type="checkbox").c-checkbox__input
+											.c-checkbox__label Grohe
+										.c-checkbox
+											input(type="checkbox").c-checkbox__input
+											.c-checkbox__label Grohe
+										.c-checkbox
+											input(type="checkbox").c-checkbox__input
+											.c-checkbox__label Grohe
+										.c-checkbox
+											input(type="checkbox").c-checkbox__input
+											.c-checkbox__label Grohe
+								.c-filter
+									.c-filter__header
+										.c-filter__title Цена
+									.c-filter__body
+										.d-flex.align-items-center.justify-content-between
+											.c-price-field
+												.c-price-field__inner
+													span.c-price-field__prefix от
+													span(contenteditable="true" maxlength="3").c-price-field__input.js-price-field 4000
+													span.c-price-field__postfix a
+											span.ml-1.mr-1 -
+											.c-price-field
+												.c-price-field__inner
+													span.c-price-field__prefix от
+													span(contenteditable="true" maxlength="3").c-price-field__input.js-price-field 150000
+													span.c-price-field__postfix a
+								.c-filter.c-filter_sizes
+									.c-filter__header
+										a(href="#filter-sizes" data-toggle="collapse" aria-expanded="false").c-filter__title По размеру
+									.c-filter__body.collapse#filter-sizes
+										.c-filter__body-inner.collapse#more-filter-sizes.mb-2
+											.d-flex.flex-wrap.mb-3
+												.c-tag-checkbox
+													input(type="checkbox").c-tag-checkbox__input
+													.c-tag-checkbox__label 70 x 70
+												.c-tag-checkbox
+													input(type="checkbox").c-tag-checkbox__input
+													.c-tag-checkbox__label 70 x 70
+											.d-flex.flex-wrap.mb-3
+												.c-tag-checkbox
+													input(type="checkbox").c-tag-checkbox__input
+													.c-tag-checkbox__label 80 x 80
+												.c-tag-checkbox
+													input(type="checkbox").c-tag-checkbox__input
+													.c-tag-checkbox__label 80 x 80
+											.d-flex.flex-wrap.mb-3
+												.c-tag-checkbox
+													input(type="checkbox").c-tag-checkbox__input
+													.c-tag-checkbox__label 90 x 90
+												.c-tag-checkbox
+													input(type="checkbox").c-tag-checkbox__input
+													.c-tag-checkbox__label 90 x 90
+												.c-tag-checkbox
+													input(type="checkbox").c-tag-checkbox__input
+													.c-tag-checkbox__label 90 x 90
+												.c-tag-checkbox
+													input(type="checkbox").c-tag-checkbox__input
+													.c-tag-checkbox__label 90 x 90
+											.d-flex.flex-wrap.mb-3
+												.c-tag-checkbox
+													input(type="checkbox").c-tag-checkbox__input
+													.c-tag-checkbox__label 100 x 100
+												.c-tag-checkbox
+													input(type="checkbox").c-tag-checkbox__input
+													.c-tag-checkbox__label 100 x 100
+												.c-tag-checkbox
+													input(type="checkbox").c-tag-checkbox__input
+													.c-tag-checkbox__label 100 x 100
+										a(href="#more-filter-sizes" data-toggle="collapse" aria-expanded="false") показать еще
+								.c-filter
+									.c-filter__header
+										.c-filter__title По размеру
+									.c-filter__body
+										.d-block.mb-3
+											span.d-block.mb-1 Длина, см
+											.d-flex.align-items-center.justify-content-between
+												.c-price-field
+													.c-price-field__inner
+														span.c-price-field__prefix от
+														span(contenteditable="true" maxlength="3").c-price-field__input.js-price-field 120
+												span.ml-1.mr-1 -
+												.c-price-field
+													.c-price-field__inner
+														span.c-price-field__prefix от
+														span(contenteditable="true" maxlength="3").c-price-field__input.js-price-field 180
+										.d-block.mb-3
+											span.d-block.mb-1 Ширина, см
+											.d-flex.align-items-center.justify-content-between
+												.c-price-field
+													.c-price-field__inner
+														span.c-price-field__prefix от
+														span(contenteditable="true" maxlength="3").c-price-field__input.js-price-field 120
+												span.ml-1.mr-1 -
+												.c-price-field
+													.c-price-field__inner
+														span.c-price-field__prefix от
+														span(contenteditable="true" maxlength="3").c-price-field__input.js-price-field 180
+								.c-filter
+									.c-filter__header
+										a(href="#filter-shape" data-toggle="collapse" aria-expanded="false").c-filter__title По форме
+									.c-filter__body.collapse.c-filter__body_scrolled#filter-shape
+										.c-checkbox.mb-1
+											input(type="checkbox").c-checkbox__input
+											.c-checkbox__label Прямоугольные
+										.c-checkbox.mb-1
+											input(type="checkbox").c-checkbox__input
+											.c-checkbox__label Прямоугольные
+										.c-checkbox.mb-1
+											input(type="checkbox").c-checkbox__input
+											.c-checkbox__label Прямоугольные
+										.c-checkbox.mb-1
+											input(type="checkbox").c-checkbox__input
+											.c-checkbox__label Прямоугольные
+										.c-checkbox.mb-1
+											input(type="checkbox").c-checkbox__input
+											.c-checkbox__label Прямоугольные
+										.c-checkbox.mb-1
+											input(type="checkbox").c-checkbox__input
+											.c-checkbox__label Прямоугольные
+										.c-checkbox.mb-1
+											input(type="checkbox").c-checkbox__input
+											.c-checkbox__label Прямоугольные
+										.c-checkbox.mb-1
+											input(type="checkbox").c-checkbox__input
+											.c-checkbox__label Прямоугольные
+										.c-checkbox.mb-1
+											input(type="checkbox").c-checkbox__input
+											.c-checkbox__label Прямоугольные
+								.c-filter
+									.c-filter__header
+										a(href="#filter-shape" data-toggle="collapse" aria-expanded="false").c-filter__title Материал
+									.c-filter__body.collapse.c-filter__body_scrolled#filter-shape
+										.c-checkbox.mb-1
+											input(type="checkbox").c-checkbox__input
+											.c-checkbox__label Акрил
+							.c-watch-earlier-widget
+								h3.c-watch-earlier-widget__title Вы смотрели ранее:
+								.c-watch-earlier-widget__body
+									.c-watch-earlier-widget__item
+										.c-watch-earlier-widget__img
+											img(src=require("../img/content/option.jpg"), alt="")
+										.c-watch-earlier-widget__info
+											a(href="#") кран верхний Aquanet Palma хром
+											.c-watch-earlier-widget__price 180 000
+
+									.c-watch-earlier-widget__item
+										.c-watch-earlier-widget__img
+											img(src=require("../img/content/option6.jpg"), alt="")
+										.c-watch-earlier-widget__info
+											a(href="#") кран верхний Aquanet Palma хром
+											.c-watch-earlier-widget__price 180 000
+									.c-watch-earlier-widget__item
+										.c-watch-earlier-widget__img
+											img(src=require("../img/content/option7.jpg"), alt="")
+										.c-watch-earlier-widget__info
+											a(href="#") кран верхний Aquanet Palma хром
+											.c-watch-earlier-widget__price 180 000
+									.c-watch-earlier-widget__item
+										.c-watch-earlier-widget__img
+											img(src=require("../img/content/option8.jpg"), alt="")
+										.c-watch-earlier-widget__info
+											a(href="#") кран верхний Aquanet Palma хром
+											.c-watch-earlier-widget__price 180 000
+									.c-watch-earlier-widget__item
+										.c-watch-earlier-widget__img
+											img(src=require("../img/content/option9.jpg"), alt="")
+										.c-watch-earlier-widget__info
+											a(href="#") кран верхний Aquanet Palma хром
+											.c-watch-earlier-widget__price 180 000
+									.c-watch-earlier-widget__item
+										.c-watch-earlier-widget__img
+											img(src=require("../img/content/option3.jpg"), alt="")
+										.c-watch-earlier-widget__info
+											a(href="#") кран верхний Aquanet Palma хром
+											.c-watch-earlier-widget__price 180 000
+								a(href="#").c-watch-earlier-widget__link смотреть все
+
+										
+
 						.o-page__body
 							.c-breadcrumbs
 								a(href="#!").c-breadcrumbs__item Главная
@@ -31,7 +236,7 @@ html(lang="ru")
 								ul.nav.nav-tabs
 									li.nav-item
 										a(href="#popular-property-content" data-toggle="tab").nav-link.active#popular-property-tab популярное
-									li.nav-item
+									li.nav-item.d-none.d-lg-block
 										a(href="#size-property-content" data-toggle="tab").nav-link#size-property-tab Размер
 									li.nav-item
 										a(href="#size-property-content" data-toggle="tab").nav-link#size-property-tab Форма
@@ -41,9 +246,9 @@ html(lang="ru")
 										a(href="#size-property-content" data-toggle="tab").nav-link#size-property-tab Бренд
 									li.nav-item
 										a(href="#size-property-content" data-toggle="tab").nav-link#size-property-tab Тип дверей
-									li.nav-item
+									li.nav-item.d-none.d-lg-block
 										a(href="#size-property-content" data-toggle="tab").nav-link#size-property-tab Высота поддона
-									li.nav-item
+									li.nav-item.d-none.d-lg-block
 										a(href="#size-property-content" data-toggle="tab").nav-link#size-property-tab Цена
 								.tab-content
 									.tab-pane.fade.show.active#popular-property-content
@@ -118,14 +323,14 @@ html(lang="ru")
 										select.c-sort__select
 											option Цена по возрастанию
 											option Цена по возрастанию
-									.c-posts-showed.d-none.d-md-flex
+									.c-posts-showed.d-none.d-lg-flex
 										.c-posts-showed__title Показать:
 										form.c-posts-showed__body
 											.c-posts-showed__count.is-active 24
 												input(type="radio" name="posts-showed" value="24" checked).c-posts-showed__count-input
 											.c-posts-showed__count 48
 												input(type="radio" name="posts-showed" value="48").c-posts-showed__count-input
-									.c-pagination
+									.c-pagination.d-none.d-lg-flex
 										a(href="#").c-pagination__nav.c-pagination__nav_left
 										.c-pagination__pages
 											a(href="#").c-pagination__page 1
@@ -135,10 +340,10 @@ html(lang="ru")
 										a(href="#").c-pagination__nav.c-pagination__nav_right
 								.c-filtered-products__body
 									.row
-										.col-md-4
+										.col-6.col-lg-4
 											.c-filtered-product
 												.c-filtered-product__image
-													img(src=require("../img/content/option4.jpg"), alt="")
+													img(src=require("../img/content/filtered-product.jpg"), alt="")
 													.c-filtered-product__label
 														span.c-filtered-product__label-txt 5 вариантов модели
 												.c-filtered-product__body
@@ -153,7 +358,8 @@ html(lang="ru")
 													.d-flex.flex-column.align-items-center
 														.mb-2 Размер: 1500х700
 														.d-flex.align-items-center.mb-2 Цвет профиля:
-															.dropdown.c-dropdown.c-dropdown_link.c-filtered-product__dropdown
+															.d-inline.d-lg-none.ml-2 черный, серый
+															.d-none.d-lg-block.dropdown.c-dropdown.c-dropdown_link.c-filtered-product__dropdown
 																.dropdown-toggle.c-dropdown-toggle(data-toggle="dropdown" data-flip="false")
 																	.c-dropdown-toggle__link 2 варианта
 																.dropdown-menu.c-dropdown__menu
@@ -163,7 +369,8 @@ html(lang="ru")
 																		li 
 																			a(href="#") Розовый
 														.d-flex.align-items-center.mb-2 Цвет стекла:
-															.dropdown.c-dropdown.c-dropdown_link.c-filtered-product__dropdown
+															.d-inline.d-lg-none.ml-2 черный, серый
+															.d-none.d-lg-block.dropdown.c-dropdown.c-dropdown_link.c-filtered-product__dropdown
 																.dropdown-toggle.c-dropdown-toggle(data-toggle="dropdown" data-flip="false")
 																	.c-dropdown-toggle__link 3 варианта
 																.dropdown-menu.c-dropdown__menu
@@ -177,10 +384,10 @@ html(lang="ru")
 																a(href="#").ml-1 Grohe
 															.d-inline-block Страна: Германия
 
-										.col-md-4
+										.col-6.col-lg-4
 											.c-filtered-product
 												.c-filtered-product__image
-													img(src=require("../img/content/option4.jpg"), alt="")
+													img(src=require("../img/content/filtered-product.jpg"), alt="")
 													.c-filtered-product__label
 														span.c-filtered-product__label-txt 5 вариантов модели
 												.c-filtered-product__body
@@ -195,7 +402,8 @@ html(lang="ru")
 													.d-flex.flex-column.align-items-center
 														.mb-2 Размер: 1500х700
 														.d-flex.align-items-center.mb-2 Цвет профиля:
-															.dropdown.c-dropdown.c-dropdown_link.c-filtered-product__dropdown
+															.d-inline.d-lg-none.ml-2 черный, серый
+															.d-none.d-lg-block.dropdown.c-dropdown.c-dropdown_link.c-filtered-product__dropdown
 																.dropdown-toggle.c-dropdown-toggle(data-toggle="dropdown" data-flip="false")
 																	.c-dropdown-toggle__link 2 варианта
 																.dropdown-menu.c-dropdown__menu
@@ -205,7 +413,8 @@ html(lang="ru")
 																		li 
 																			a(href="#") Розовый
 														.d-flex.align-items-center.mb-2 Цвет стекла:
-															.dropdown.c-dropdown.c-dropdown_link.c-filtered-product__dropdown
+															.d-inline.d-lg-none.ml-2 черный, серый
+															.d-none.d-lg-block.dropdown.c-dropdown.c-dropdown_link.c-filtered-product__dropdown
 																.dropdown-toggle.c-dropdown-toggle(data-toggle="dropdown" data-flip="false")
 																	.c-dropdown-toggle__link 3 варианта
 																.dropdown-menu.c-dropdown__menu
@@ -218,10 +427,10 @@ html(lang="ru")
 															.d-inline-block Бренд:
 																a(href="#").ml-1 Grohe
 															.d-inline-block Страна: Германия
-										.col-md-4
+										.col-6.col-lg-4
 											.c-filtered-product
 												.c-filtered-product__image
-													img(src=require("../img/content/option4.jpg"), alt="")
+													img(src=require("../img/content/filtered-product.jpg"), alt="")
 													.c-filtered-product__label
 														span.c-filtered-product__label-txt 5 вариантов модели
 												.c-filtered-product__body
@@ -236,7 +445,8 @@ html(lang="ru")
 													.d-flex.flex-column.align-items-center
 														.mb-2 Размер: 1500х700
 														.d-flex.align-items-center.mb-2 Цвет профиля:
-															.dropdown.c-dropdown.c-dropdown_link.c-filtered-product__dropdown
+															.d-inline.d-lg-none.ml-2 черный, серый
+															.d-none.d-lg-block.dropdown.c-dropdown.c-dropdown_link.c-filtered-product__dropdown
 																.dropdown-toggle.c-dropdown-toggle(data-toggle="dropdown" data-flip="false")
 																	.c-dropdown-toggle__link 2 варианта
 																.dropdown-menu.c-dropdown__menu
@@ -246,7 +456,8 @@ html(lang="ru")
 																		li 
 																			a(href="#") Розовый
 														.d-flex.align-items-center.mb-2 Цвет стекла:
-															.dropdown.c-dropdown.c-dropdown_link.c-filtered-product__dropdown
+															.d-inline.d-lg-none.ml-2 черный, серый
+															.d-none.d-lg-block.dropdown.c-dropdown.c-dropdown_link.c-filtered-product__dropdown
 																.dropdown-toggle.c-dropdown-toggle(data-toggle="dropdown" data-flip="false")
 																	.c-dropdown-toggle__link 3 варианта
 																.dropdown-menu.c-dropdown__menu
@@ -259,13 +470,12 @@ html(lang="ru")
 															.d-inline-block Бренд:
 																a(href="#").ml-1 Grohe
 															.d-inline-block Страна: Германия
-									.c-share.mb-5
-										img(src=require("../img/content/installment.jpg"), alt="").w-100
-									.row
-										.col-md-4
+										.col-12.c-share.mb-5.d-none.d-lg-block
+											img(src=require("../img/content/installment.jpg"), alt="").w-100
+										.col-6.col-lg-4
 											.c-filtered-product
 												.c-filtered-product__image
-													img(src=require("../img/content/option4.jpg"), alt="")
+													img(src=require("../img/content/filtered-product.jpg"), alt="")
 													.c-filtered-product__label
 														span.c-filtered-product__label-txt 5 вариантов модели
 												.c-filtered-product__body
@@ -280,7 +490,8 @@ html(lang="ru")
 													.d-flex.flex-column.align-items-center
 														.mb-2 Размер: 1500х700
 														.d-flex.align-items-center.mb-2 Цвет профиля:
-															.dropdown.c-dropdown.c-dropdown_link.c-filtered-product__dropdown
+															.d-inline.d-lg-none.ml-2 черный, серый
+															.d-none.d-lg-block.dropdown.c-dropdown.c-dropdown_link.c-filtered-product__dropdown
 																.dropdown-toggle.c-dropdown-toggle(data-toggle="dropdown" data-flip="false")
 																	.c-dropdown-toggle__link 2 варианта
 																.dropdown-menu.c-dropdown__menu
@@ -290,7 +501,8 @@ html(lang="ru")
 																		li 
 																			a(href="#") Розовый
 														.d-flex.align-items-center.mb-2 Цвет стекла:
-															.dropdown.c-dropdown.c-dropdown_link.c-filtered-product__dropdown
+															.d-inline.d-lg-none.ml-2 черный, серый
+															.d-none.d-lg-block.dropdown.c-dropdown.c-dropdown_link.c-filtered-product__dropdown
 																.dropdown-toggle.c-dropdown-toggle(data-toggle="dropdown" data-flip="false")
 																	.c-dropdown-toggle__link 3 варианта
 																.dropdown-menu.c-dropdown__menu
@@ -303,10 +515,11 @@ html(lang="ru")
 															.d-inline-block Бренд:
 																a(href="#").ml-1 Grohe
 															.d-inline-block Страна: Германия
-										.col-md-4
+										
+										.col-6.col-lg-4
 											.c-filtered-product
 												.c-filtered-product__image
-													img(src=require("../img/content/option4.jpg"), alt="")
+													img(src=require("../img/content/filtered-product.jpg"), alt="")
 													.c-filtered-product__label
 														span.c-filtered-product__label-txt 5 вариантов модели
 												.c-filtered-product__showroom.c-showroom.js-showroom Модель бренда есть в шоуруме
@@ -332,7 +545,8 @@ html(lang="ru")
 													.d-flex.flex-column.align-items-center
 														.mb-2 Размер: 1500х700
 														.d-flex.align-items-center.mb-2 Цвет профиля:
-															.dropdown.c-dropdown.c-dropdown_link.c-filtered-product__dropdown
+															.d-inline.d-lg-none.ml-2 черный, серый
+															.d-none.d-lg-block.dropdown.c-dropdown.c-dropdown_link.c-filtered-product__dropdown
 																.dropdown-toggle.c-dropdown-toggle(data-toggle="dropdown" data-flip="false")
 																	.c-dropdown-toggle__link 2 варианта
 																.dropdown-menu.c-dropdown__menu
@@ -342,7 +556,8 @@ html(lang="ru")
 																		li 
 																			a(href="#") Розовый
 														.d-flex.align-items-center.mb-2 Цвет стекла:
-															.dropdown.c-dropdown.c-dropdown_link.c-filtered-product__dropdown
+															.d-inline.d-lg-none.ml-2 черный, серый
+															.d-none.d-lg-block.dropdown.c-dropdown.c-dropdown_link.c-filtered-product__dropdown
 																.dropdown-toggle.c-dropdown-toggle(data-toggle="dropdown" data-flip="false")
 																	.c-dropdown-toggle__link 3 варианта
 																.dropdown-menu.c-dropdown__menu
@@ -355,5 +570,103 @@ html(lang="ru")
 															.d-inline-block Бренд:
 																a(href="#").ml-1 Grohe
 															.d-inline-block Страна: Германия
-										
+										.col-6.col-lg-4
+											.c-filtered-product
+												.c-filtered-product__image
+													img(src=require("../img/content/filtered-product.jpg"), alt="")
+													.c-filtered-product__label
+														span.c-filtered-product__label-txt 5 вариантов модели
+													.c-filtered-product__sale 15%
+													.c-filtered-product__delivery доставка 0
+												.c-filtered-product__showroom.c-showroom.js-showroom Модель бренда есть в шоуруме
+													.c-showroom__menu
+														a(href="#").c-showroom__close
+														a(href="#").c-showroom__title Мебель для ванной belgano
+														.c-showroom__text
+															h5 Можно посмотреть
+															p
+																.
+																	Ассиметричная ванна Венеция подобна современному искусству в сочетании геометрических форм. 
+															a(href="#").mb-2 Схема проезда
+														a(href="#") Адреса всех шоурумов
+												.c-filtered-product__body
+													.d-block.text-center.pr-3.pl-3.mb-3
+														a(href="#").c-filtered-product__link ванна акриловая riho Line ADIGE ADI -LVM25-CRM
+													.d-flex.justify-content-between.mb-2
+														.c-filtered-product__availability.c-filtered-product__availability_true.d-flex.align-items-center
+															img(src=require("../img/icons/check-success.png"), alt="")
+															span В наличии
+														.c-filtered-product__price 13 400
+													.c-filtered-product__code.mb-2 Код товара: 1234566JL
+													.d-flex.flex-column.align-items-center
+														.mb-2 Размер: 1500х700
+														.d-flex.align-items-center.mb-2 Цвет профиля:
+															.d-inline.d-lg-none.ml-2 черный, серый
+															.d-none.d-lg-block.dropdown.c-dropdown.c-dropdown_link.c-filtered-product__dropdown
+																.dropdown-toggle.c-dropdown-toggle(data-toggle="dropdown" data-flip="false")
+																	.c-dropdown-toggle__link 2 варианта
+																.dropdown-menu.c-dropdown__menu
+																	ul
+																		li 
+																			a(href="#") Серый 
+																		li 
+																			a(href="#") Розовый
+														.d-flex.align-items-center.mb-2 Цвет стекла:
+															.d-inline.d-lg-none.ml-2 черный, серый
+															.d-none.d-lg-block.dropdown.c-dropdown.c-dropdown_link.c-filtered-product__dropdown
+																.dropdown-toggle.c-dropdown-toggle(data-toggle="dropdown" data-flip="false")
+																	.c-dropdown-toggle__link 3 варианта
+																.dropdown-menu.c-dropdown__menu
+																	ul
+																		li 
+																			a(href="#") Серый 
+																		li 
+																			a(href="#") Розовый
+														.d-block
+															.d-inline-block Бренд:
+																a(href="#").ml-1 Grohe
+															.d-inline-block Страна: Германия
+												.c-filtered-product__footer
+													a(href="#").c-filtered-product__action
+														img(src=require("../img/icons/vesi.png"), alt="")
+														| К сравнению
+													a(href="#").c-filtered-product__action
+														img(src=require("../img/icons/fav.png"), alt="")
+														| В закладки
+									a(href="#").c-filtered-products__load-more
+										span.c-filtered-products__load-more-txt показать еще 18
+								.c-filtered-products__footer.d-flex.justify-content-center.justify-content-lg-between.align-items-center
+									.c-posts-showed.d-none.d-lg-flex
+										.c-posts-showed__title Показать:
+										form.c-posts-showed__body
+											.c-posts-showed__count.is-active 24
+												input(type="radio" name="posts-showed" value="24" checked).c-posts-showed__count-input
+											.c-posts-showed__count 48
+												input(type="radio" name="posts-showed" value="48").c-posts-showed__count-input
+									.c-pagination
+										a(href="#").c-pagination__nav.c-pagination__nav_left
+										.c-pagination__pages
+											a(href="#").c-pagination__page 1
+											a(href="#").c-pagination__page.is-active 2
+											a(href="#").c-pagination__page 3
+											a(href="#").c-pagination__page 4
+										a(href="#").c-pagination__nav.c-pagination__nav_right
+							.c-product-description.c-product-description_catalog
+								.c-product-description__title Мебель для ванных комнат — мы знаем, как купить проще
+								.c-product-description__body.c-read-more.js-read-more-container
+									p
+										.
+											Как лучше купить мебель для ванной комнаты? Иногда ее специально заказывают под конкретные параметры и дизайнерские предпочтения, но чаще всего люди просто едут в мебельные магазины, на посещение которых тратится не один день. Мы предлагаем вам более удобный вариант. Santehnika Online — это интернет-магазин, в котором можно купить мебель для ванной комнаты быстро и не выходя из дома.
+									p
+										.
+											В нашем магазине есть вся необходимая мебель для ванны — от раковины с тумбой до многофункциональных гарнитуров. Широкий ассортимент позволит вам купить, например, идеальный шкаф для ванной комнаты или красивое зеркало с подсветкой. Кроме самостоятельных единиц у нас представлены готовые комплекты, выполненные в едином гармоничном стиле. Такие наборы мебели включают зеркало, пенал, мойдодыр для ванной комнаты и могут быть дополнены теми или иными предметами интерьера.
+									p
+										.
+											У нас вы можете легко купить красивую и эргономичную мебель в ванную комнату. Мы собрали в одном месте предложения лучших производителей специально для тех людей, которые ценят свое время и привыкли выбирать мобильность и рациональные решения. Покупка мебели для ванной комнаты — ответственный процесс. Мы предлагаем вам сосредоточиться на ее выборе, а все остальные заботы наша компания возьмет на себя. Мы ориентируемся на удобство наших клиентов и избегаем сложных схем взаимодействия.
+
+									p
+										.
+											Для вас — прозрачная навигация по каталогу, простая система оплаты-доставки и оперативная реакция наших менеджеров. Чтобы получить дополнительную информацию о продукции или подробную консультацию по доставке, позвоните нам или оставьте заявку            на сайте —   мы с вами свяжемся в течение одного часа.
+								.d-flex.justify-content-center.mb-3
+									a(href="#").js-read-more-btn Развернуть
 				include templates/footer.pug

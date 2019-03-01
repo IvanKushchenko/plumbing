@@ -2,12 +2,26 @@
 	border-radius: 3px 3px 0 0;
 	border: 2px solid #ecf2f6;
 	margin-bottom: 35px;
+	@media (max-height: $bp-lg) {
+		border-right: none;
+		border-left: none;
+	    width: calc(100% + 40px);
+	    margin-left: -20px;
+	}
 	&__list{
 		display: flex;
 		justify-content: space-between;
+		@media (max-height: $bp-lg) {
+			flex-wrap: wrap;
+		}
 	}
 	&__item{
 		max-width: 120px;
+		@media (max-height: $bp-lg) {
+			max-width: initial;
+			width: 50%;
+			margin-bottom: 10px;
+		}
 	}
 	&__image{
 		display: block;
@@ -15,6 +29,9 @@
 		width: 100%;
 		height: 140px;
 		overflow: hidden;
+		@media (max-height: $bp-lg) {
+			display: none;
+		}
 		img{
 			width: 100%;
 			height: 100%;
@@ -25,6 +42,9 @@
 		font-size: 12px;
 		text-transform: uppercase;
 		text-align: center;
+		@media (max-height: $bp-lg) {
+			text-align: left;
+		}
 	}
 	&__more-btn{
 		font-size: 12px;
@@ -39,6 +59,9 @@
 		justify-content: center;
 		margin: 10px auto;
 		margin-top: 20px;
+		@media (max-height: $bp-lg) {
+			display: none;
+		}
 	}
 	.nav-tabs{ 
 		border: none;

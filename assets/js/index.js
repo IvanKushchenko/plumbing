@@ -5,11 +5,19 @@ import lightGallery from 'lightgallery';
 import selectric from 'selectric';
 require('./products');
 require('./tips');
+require('jquery-mask-plugin');
 
 import Swiper from 'swiper';
 
 $(function() {
 	$('select').selectric();
+	$('.js-price-field').mask("# ##0 000", {reverse: true})
+	$('.js-price-field').on('input', function(e){
+		var number = $(e.target).text();
+		if(!number.length){
+			$(e.target).text('0');
+		}
+	})
 
     var previewThumbnails = new Swiper('.js-product-preview-page .js-product-preview-thumbnails', {
         slidesPerView: 3,
