@@ -1,0 +1,27 @@
+.c-filters-mobile{
+	.dropdown-toggle{
+		height: 48px;
+		border-radius: 3px;
+		background-color: #8cafc2;
+		text-transform: uppercase;
+		font-size: 16px;
+		color: #ffffff;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		&:after{
+			content: '';
+			display: inline-block;
+			border: none;
+			width: 15px;
+			height: 15px;
+			margin-left: 5px;
+			background: url('../img/icons/filter-icon.png') no-repeat;
+			background-size: contain;
+			opacity: .7;
+		}
+	}
+	.dropdown-menu{
+		padding: 10px;
+	}
+}

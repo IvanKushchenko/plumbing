@@ -15506,6 +15506,117 @@ a:hover {
   background-color: #8cafc2;
 }
 
+.c-sort-mobile .dropdown-toggle {
+  height: 48px;
+  border-radius: 3px;
+  background-color: #8cafc2;
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.c-sort-mobile .dropdown-toggle:after {
+  content: '';
+  display: inline-block;
+  border: none;
+  width: 15px;
+  height: 15px;
+  margin-left: 5px;
+  background: url(../img/icons/sort-down-white.png) no-repeat;
+  background-size: contain;
+  opacity: .7;
+}
+
+.c-sort-mobile__choosed-sort {
+  display: none;
+}
+
+.dropdown-toggle[aria-expanded="true"] .c-sort-mobile__title {
+  display: none;
+}
+
+.dropdown-toggle[aria-expanded="true"] .c-sort-mobile__choosed-sort {
+  display: block;
+}
+
+.c-sort-mobile .c-dropdown__menu {
+  margin: 0;
+  box-shadow: 0 0 16px rgba(2, 0, 0, 0.34);
+  border-radius: 3px;
+  background-color: #eef3f7;
+  padding: 0;
+  width: 100%;
+}
+
+.c-sort-mobile__item {
+  padding: 10px;
+  position: relative;
+}
+
+.c-sort-mobile__item:after {
+  content: '';
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.c-sort-mobile__item_down:after {
+  background: url(../img/icons/sort-down.png) no-repeat;
+}
+
+.c-sort-mobile__item_up:after {
+  background: url(../img/icons/sort-up.png) no-repeat;
+}
+
+.c-sort-mobile__item:hover {
+  background-color: #f1ca49;
+  color: #fff;
+}
+
+.c-sort-mobile__input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.c-filters-mobile .dropdown-toggle {
+  height: 48px;
+  border-radius: 3px;
+  background-color: #8cafc2;
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.c-filters-mobile .dropdown-toggle:after {
+  content: '';
+  display: inline-block;
+  border: none;
+  width: 15px;
+  height: 15px;
+  margin-left: 5px;
+  background: url(../img/icons/filter-icon.png) no-repeat;
+  background-size: contain;
+  opacity: .7;
+}
+
+.c-filters-mobile .dropdown-menu {
+  padding: 10px;
+}
+
 .s-shares {
   margin-top: 30px;
 }
