@@ -2,7 +2,9 @@
 	font-size: 16px;
 	line-height: 34px;
 	margin-bottom: 40px;
-
+	img{
+		max-width: 100%;
+	}
 	&_how-to-find &__body {
 		border: 1px solid #c3d6df;
 	}

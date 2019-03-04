@@ -13,7 +13,7 @@
 		text-transform: uppercase;
 		font-size: 14px;
 		display: block;
-		@media (max-height: $bp-lg) {
+		@media (max-width: $bp-lg) {
 			display: none;
 		}
 	}

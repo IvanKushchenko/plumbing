@@ -2,9 +2,13 @@
 	border-radius: 3px;
 	border: 1px solid #ecf2f6;
 	margin-bottom: 35px;
+	opacity: 0;
 	transition: .3s;
 	&:hover{
 		box-shadow: 0 0 15px 1px rgba(2, 0, 0, 0.33);
+	}
+	&.is-active{
+		opacity: 1;
 	}
 	&__sale{
 		background-color: #f3932c;

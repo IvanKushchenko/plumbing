@@ -89,122 +89,50 @@ html(lang="ru")
 												6 и 7 октября скидка 10% 
 												на все! Выбирайте, звоните, покупайте!
 							.c-main-categories
-								.c-main-categories__item
-									.c-main-categories__info(style="background-image: url('img/content/adjustable-image5.jpg')")
-										.c-main-categories__title Ванны
-									.c-main-categories__body
-										.row
-											.col-6.col-md-4
-												.c-main-categories__link
-													a(href="#") Акриловые ванны
-												.c-main-categories__link
-													a(href="#") Акриловые ванны
-												.c-main-categories__link
-													a(href="#") Акриловые ванны
-												.c-main-categories__link
-													a(href="#") Акриловые ванны
-												.c-main-categories__link
-													a(href="#") Акриловые ванны
-											.col-6.col-md-4
-												.c-main-categories__link
-													a(href="#") Акриловые ванны
-												.c-main-categories__link
-													a(href="#") Акриловые ванны
-												.c-main-categories__link
-													a(href="#") Акриловые ванны
-												.c-main-categories__link
-													a(href="#") Акриловые ванны
-												.c-main-categories__link
-													a(href="#") Акриловые ванны
-											.col-6.col-md-4
-												.c-main-categories__link
-													a(href="#") Акриловые ванны
-												.c-main-categories__link
-													a(href="#") Акриловые ванны
-												.c-main-categories__link
-													a(href="#") Акриловые ванны
-												.c-main-categories__link
-													a(href="#") Акриловые ванны
-												.c-main-categories__link
-													a(href="#") Акриловые ванны
-								.c-main-categories__item
-									.c-main-categories__info(style="background-image: url('img/content/adjustable-image5.jpg')")
-										.c-main-categories__title Ванны
-									.c-main-categories__body
-										.row
-											.col-6.col-md-4
-												.c-main-categories__link
-													a(href="#") Акриловые ванны
-												.c-main-categories__link
-													a(href="#") Акриловые ванны
-												.c-main-categories__link
-													a(href="#") Акриловые ванны
-												.c-main-categories__link
-													a(href="#") Акриловые ванны
-												.c-main-categories__link
-													a(href="#") Акриловые ванны
-											.col-6.col-md-4
-												.c-main-categories__link
-													a(href="#") Акриловые ванны
-												.c-main-categories__link
-													a(href="#") Акриловые ванны
-												.c-main-categories__link
-													a(href="#") Акриловые ванны
-												.c-main-categories__link
-													a(href="#") Акриловые ванны
-												.c-main-categories__link
-													a(href="#") Акриловые ванны
-											.col-6.col-md-4
-												.c-main-categories__link
-													a(href="#") Акриловые ванны
-												.c-main-categories__link
-													a(href="#") Акриловые ванны
-												.c-main-categories__link
-													a(href="#") Акриловые ванны
-												.c-main-categories__link
-													a(href="#") Акриловые ванны
-												.c-main-categories__link
-													a(href="#") Акриловые ванны
-								.c-main-categories__item
-									.c-main-categories__info(style="background-image: url('img/content/adjustable-image5.jpg')")
-										.c-main-categories__title Ванны
-									.c-main-categories__body
-										.row
-											.col-6.col-md-4
-												.c-main-categories__link
-													a(href="#") Акриловые ванны
-												.c-main-categories__link
-													a(href="#") Акриловые ванны
-												.c-main-categories__link
-													a(href="#") Акриловые ванны
-												.c-main-categories__link
-													a(href="#") Акриловые ванны
-												.c-main-categories__link
-													a(href="#") Акриловые ванны
-											.col-6.col-md-4
-												.c-main-categories__link
-													a(href="#") Акриловые ванны
-												.c-main-categories__link
-													a(href="#") Акриловые ванны
-												.c-main-categories__link
-													a(href="#") Акриловые ванны
-												.c-main-categories__link
-													a(href="#") Акриловые ванны
-												.c-main-categories__link
-													a(href="#") Акриловые ванны
-											.col-6.col-md-4
-												.c-main-categories__link
-													a(href="#") Акриловые ванны
-												.c-main-categories__link
-													a(href="#") Акриловые ванны
-												.c-main-categories__link
-													a(href="#") Акриловые ванны
-												.c-main-categories__link
-													a(href="#") Акриловые ванны
-												.c-main-categories__link
-													a(href="#") Акриловые ванны
-								.d-flex.justify-content-center.align-items-center
-									a(href="#").font-italic Посмотреть все категории
+								-
+									var categories = [
+										{
+											'name': 'Ванны',
+											'image': 'background-image: url(img/content/adjustable-image5.jpg)',
+											'links': ['Акриловые ванны', 'Классические ванны', 'Прямоугольные ванны', 'Угловые равносторонние ванны', 'Стальные ванны', 'Чугунные ванны','Мраморные ванны', 'Ассиметричные ванны']
+										},
+										{
+											'name': 'Душевые кабины',
+											'image': 'background-image: url(img/content/share-content-image.jpg)',
+											'links': ['Душевые кабины прямоугольные', 'Душевые боксы', 'Душевые кабины без гидромассажа', 'Душевые кабины с гидромассажем', 'Душевые кабины с глубоким поддоном', 'Душевые кабины с низмим поддоном','Душевые кабины средний поддон', 'Душевые кабины полукруглые','Душевые кабины ассиметричные',"Душевые кабины квадратные","Душевые кабины с турецой баней"]
+										},
+										{
+											'name': 'Душевые углы',
+											'image': 'background-image: url(img/content/share-content-image-2.jpg)',
+											'links': ['Душевые углы 90х90', 'Душевые углы 120х80', 'Душевые углы 70х75', 'Душевые углы полукруглые']
+										},
+										{
+											'name': 'Мебель для ванной',
+											'image': 'background-image: url(img/content/category.jpg)',
+											'links': ['Нижние тумбы', 'Тумбы с раковинами', 'Зеркала', 'Пеналы, шкафы', 'комоды']
+										},
+										{
+											'name': 'Шторки для ванны',
+											'image': 'background-image: url(img/content/category.jpg)',
+											'links': ['Шторки для ванны 120х140', 'Шторки для ванны 75', 'Шторки для ванны 80']
+										},
+										{
+											'name': 'Душевые двери',
+											'image': 'background-image: url(img/content/category3.jpg)',
+											'links': ['Душевые двери 125х185', 'Шторки для ванны 128х195', 'Шторки для ванны 119х195']
+										},
+									]
+								each category in categories 
+									.c-main-categories__item
+										.c-main-categories__info(style=category.image)
+											.c-main-categories__title=category.name
+										.c-main-categories__body
+											.row
+												each link in category.links
+													.col-6.col-md-4
+														.c-main-categories__link
+															a(href="#")=link
+								
 							.c-checkout-products.c-sale-day
 								.c-sale-day__header
 									h4.c-sale-day__title Скидка выходного дня

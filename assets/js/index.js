@@ -10,7 +10,77 @@ require('jquery-mask-plugin');
 import Swiper from 'swiper';
 
 $(function() {
+
+	$('.c-filters .js-price-field, .c-filters input').on('change', function(e){
+		// $.ajax({
+		// 	url: '',
+		// 	data: ''
+		// })
+		$('.c-filtered-products__body .row').html('');
+		var products = '';
+		var product = $('<div>').addClass('col-6 col-lg-4');
+		product.html(`<div class="c-filtered-product"><div class="c-filtered-product__image"><img src="img/content/filtered-product.jpg" alt="">
+              <div class="c-filtered-product__label"><span class="c-filtered-product__label-txt">5 вариантов модели</span></div>
+            </div>
+            <div class="c-filtered-product__body">
+              <div class="d-block text-center pr-3 pl-3 mb-3"><a class="c-filtered-product__link" href="#">ванна акриловая riho Line ADIGE ADI -LVM25-CRM</a></div>
+              <div class="d-flex justify-content-between mb-2">
+                <div class="c-filtered-product__availability c-filtered-product__availability_true d-flex align-items-center"><img src="img/icons/check-success.png" alt=""><span>В наличии</span></div>
+                <div class="c-filtered-product__price">13 400</div>
+              </div>
+              <div class="c-filtered-product__code mb-2">Код товара: 1234566JL</div>
+              <div class="d-flex flex-column align-items-center">
+                <div class="mb-2">Размер: 1500х700</div>
+                <div class="d-flex align-items-center mb-2">Цвет профиля:
+                  <div class="d-inline d-lg-none ml-2">черный, серый</div>
+                  <div class="d-none d-lg-block dropdown c-dropdown c-dropdown_link c-filtered-product__dropdown">
+                    <div class="dropdown-toggle c-dropdown-toggle" data-toggle="dropdown" data-flip="false">
+                      <div class="c-dropdown-toggle__link">2 варианта</div>
+                    </div>
+                    <div class="dropdown-menu c-dropdown__menu">
+                      <ul>
+                        <li> <a href="#">Серый </a></li>
+                        <li> <a href="#">Розовый</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center mb-2">Цвет стекла:
+                  <div class="d-inline d-lg-none ml-2">черный, серый</div>
+                  <div class="d-none d-lg-block dropdown c-dropdown c-dropdown_link c-filtered-product__dropdown">
+                    <div class="dropdown-toggle c-dropdown-toggle" data-toggle="dropdown" data-flip="false">
+                      <div class="c-dropdown-toggle__link">3 варианта</div>
+                    </div>
+                    <div class="dropdown-menu c-dropdown__menu">
+                      <ul>
+                        <li> <a href="#">Серый </a></li>
+                        <li> <a href="#">Розовый</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-block">
+                  <div class="d-inline-block">Бренд:<a class="ml-1" href="#">Grohe</a></div>
+                  <div class="d-inline-block">Страна: Германия</div>
+                </div>
+              </div>
+            </div></div>`);
+		for (var i = 0; i < 10; i++) {
+			var productNode = product.clone();
+			$('.c-filtered-products__body .row').append(productNode);
+			(function(i) {
+			setTimeout(function(){
+				$('.c-filtered-products__body .row').children().eq(i).find('.c-filtered-product').addClass('is-active');
+			}, 180 * i);
+			 }(i));
+		}
+	})
+
+
 	$('select').selectric();
+	$('.c-price-field__inner').click(function(){
+		$(this).find('.js-price-field').focus();
+	})
 	$('.js-price-field').mask("# ##0 000", {reverse: true})
 	$('.js-price-field').on('input', function(e){
 		var number = $(e.target).text();
