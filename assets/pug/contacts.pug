@@ -22,9 +22,11 @@ html(lang="ru")
 										.col-md-12.col-lg-5
 											p
 												b Адрес: 
-												| Посёлок Заречье, Торговая ул., стр. 2, <br>
-												| ТЦ "Элитстройматериалы", 1 этаж, 
-												a(href="#!").js-scroll-to-map место А-18 <br>
+												a(href="#!").js-scroll-to-map
+													.
+														Посёлок Заречье, Торговая ул., стр. 2, <br>
+														ТЦ "Элитстройматериалы", 1 этаж, 
+												a(href="#!").js-scroll-to-schema  место А-18 <br>
 												| Время работы салона:  10.00 - 20.00 без вых.
 
 										.col-md-6.col-lg-4
@@ -56,6 +58,8 @@ html(lang="ru")
 														img(src=require("../img/content/showroom (5).jpg"), alt="")
 													.swiper-slide
 														img(src=require("../img/content/showroom (6).jpg"), alt="")
+											.swiper-button-prev
+											.swiper-button-next
 										.c-our-showroom-slider__thumbnails
 											.swiper-container.js-our-showroom-thumbnails
 												.swiper-wrapper
@@ -71,9 +75,8 @@ html(lang="ru")
 														img(src=require("../img/content/showroom (5).jpg"), alt="")
 													.swiper-slide
 														img(src=require("../img/content/showroom (6).jpg"), alt="")
-											.swiper-button-prev
-											.swiper-button-next
-							.c-contacts-section.c-contacts-section_how-to-find
+											
+							.c-contacts-section.c-contacts-section_how-to-find#scheme
 								h2.c-contacts-section__title Как найти наш шоу-рум
 								.c-contacts-section__body
 									img(src=require("../img/content/showroom-map.jpg"), alt="")

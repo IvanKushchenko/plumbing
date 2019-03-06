@@ -1,0 +1,57 @@
+.c-load-more{
+	&.is-loading{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&.is-loading &__preloader{
+		display: flex;
+	}
+	&.is-loading &__txt{
+		display: none;
+	}
+	&__preloader{
+		width: 30px;
+		height: 30px;
+		display: none;
+		flex-wrap: wrap;
+	}
+	&__preloader-square{
+		width: 10px;
+		height: 10px;
+		margin: 1px;
+		opacity: 1;
+		background: rgba(100,147,173,.2);
+		animation: focusfade 2.8s infinite;
+		&:nth-child(2){
+			animation-delay: .7s;
+		}
+		&:nth-child(3){
+			animation-delay: 2.1s;
+		}
+		&:nth-child(4){
+			animation-delay: 1.4s;
+		}
+	}
+
+	@keyframes focusfade {
+	  0% {
+	    opacity: 0.5;
+	    background: #6493ad;
+	  }
+	  30% {
+	    opacity: 0.5;
+	    background: rgba(100,147,173,.2);
+	  }
+	  60% {
+	    opacity: 0;
+	  }
+	  75% {
+	    opacity: 0;
+	  }
+	  100% {
+	    opacity: 0.5;
+	    background: #6493ad;
+	  }
+	}
+}

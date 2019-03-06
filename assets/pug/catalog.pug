@@ -815,8 +815,13 @@ html(lang="ru")
 													a(href="#").c-filtered-product__action
 														img(src=require("../img/icons/fav.png"), alt="")
 														| В закладки
-									a(href="#").c-filtered-products__load-more
-										span.c-filtered-products__load-more-txt показать еще 18
+									a(href="#").c-filtered-products__load-more.c-load-more
+										span.c-filtered-products__load-more-txt.c-load-more__txt показать еще 18
+										.c-load-more__preloader
+											.c-load-more__preloader-square
+											.c-load-more__preloader-square
+											.c-load-more__preloader-square
+											.c-load-more__preloader-square
 								.c-filtered-products__footer.d-flex.justify-content-center.justify-content-lg-between.align-items-center
 									.c-posts-showed.d-none.d-lg-flex
 										.c-posts-showed__title Показать:

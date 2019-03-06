@@ -11,6 +11,11 @@ import Swiper from 'swiper';
 
 $(function() {
 
+	$('.c-load-more').on('click', function(e){
+		e.preventDefault();
+		$(this).addClass('is-loading');
+	})
+
 	$('.c-filters .js-price-field, .c-filters input').on('change', function(e){
 		// $.ajax({
 		// 	url: '',
@@ -357,6 +362,13 @@ $(function() {
     	})
     })
 
+    $('.js-scroll-to-schema').click(function(e){
+    	e.preventDefault();
+    	$('body,html').animate({
+    		scrollTop: $('#scheme').offset().top
+    	})
+    })
+
     $('.js-read-more-btn').click(function(e){
     	e.preventDefault();
     	if($(this).parent().parent().find('.js-read-more-container').hasClass('is-active')){
@@ -410,10 +422,6 @@ $(function() {
         slideToClickedSlide: true,
         watchSlidesVisibility: true,
         watchSlidesProgress: true,
-        navigation: {
-            nextEl: '.c-our-showroom-slider__thumbnails .swiper-button-next',
-            prevEl: '.c-our-showroom-slider__thumbnails .swiper-button-prev'
-        }
     });
 
 
@@ -422,6 +430,10 @@ $(function() {
         thumbs: {
             swiper: ourShowroomThumbnails,
         },
+        navigation: {
+            nextEl: '.c-our-showroom-slider__main .swiper-button-next',
+            prevEl: '.c-our-showroom-slider__main .swiper-button-prev'
+        }
     });
 
 

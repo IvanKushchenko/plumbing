@@ -47,12 +47,12 @@ module.exports = {
 		// 	minify: false,
 		// 	hash: true
 		// }),
-		// new HtmlWebpackPlugin({
-		// 	filename: 'contacts.html',
-		// 	template: './assets/pug/contacts.pug',
-		// 	minify: false,
-		// 	hash: true
-		// }),
+		new HtmlWebpackPlugin({
+			filename: 'contacts.html',
+			template: './assets/pug/contacts.pug',
+			minify: false,
+			hash: true
+		}),
 		new HtmlWebpackPlugin({
 			filename: 'catalog.html',
 			template: './assets/pug/catalog.pug',
