@@ -14811,6 +14811,7 @@ a:hover {
 .c-choose-by-property {
   border-radius: 3px 3px 0 0;
   border: 2px solid #ecf2f6;
+  border-bottom: none;
   margin-bottom: 35px;
 }
 
