@@ -23,7 +23,9 @@
 	}
 	&__input{
 		margin: 0 5px;
-		flex-shrink: 0;
+	    flex-shrink: 0;
+	    flex-grow: 1;
+	    text-align: center;
 		&:focus{
 			outline: none;
 		}

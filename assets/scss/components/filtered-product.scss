@@ -57,13 +57,14 @@
 	&__showroom{
 		position: absolute;
 		top: 240px;
-		width: calc(100% - 20px);
+		width: 100%;
 	}
 	&__image{
 		height: 270px;
 		overflow: hidden;
 		margin-bottom: 20px;
 		position: relative;
+		display: block;
 		img{
 			width: 100%;
 			height: 100%;

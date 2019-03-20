@@ -15060,7 +15060,7 @@ a:hover {
 .c-filtered-product__showroom {
   position: absolute;
   top: 240px;
-  width: calc(100% - 20px);
+  width: 100%;
 }
 
 .c-filtered-product__image {
@@ -15068,6 +15068,7 @@ a:hover {
   overflow: hidden;
   margin-bottom: 20px;
   position: relative;
+  display: block;
 }
 
 .c-filtered-product__image img {
@@ -15449,7 +15450,7 @@ a:hover {
   width: 24px;
   height: 24px;
   border-radius: 3px;
-  border: 1px solid #e4edf2;
+  border: 1px solid #9cb9ca;
   position: absolute;
   left: 0;
   top: 50%;
@@ -15499,6 +15500,8 @@ a:hover {
 .c-price-field__input {
   margin: 0 5px;
   flex-shrink: 0;
+  flex-grow: 1;
+  text-align: center;
 }
 
 .c-price-field__input:focus {
