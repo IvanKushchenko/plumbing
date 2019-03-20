@@ -11,6 +11,15 @@ import Swiper from 'swiper';
 
 $(function() {
 
+	 $(window).scroll(function() {
+	 	if($(window).scrollTop() > $('.c-navbar-unscrolled').height()){
+	 		if(!$('.c-navbar-scrolled').show()) $('.c-navbar-scrolled').show(); 
+	 	}else{
+	 		$('.c-navbar-scrolled').hide(); 
+	 	}
+	 	
+	 })
+
 	$('.c-load-more').on('click', function(e){
 		e.preventDefault();
 		$(this).addClass('is-loading');

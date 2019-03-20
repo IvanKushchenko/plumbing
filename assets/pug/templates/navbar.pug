@@ -1,4 +1,4 @@
-.c-navbar
+.c-navbar.c-navbar-unscrolled
 	a(href="#").c-navbar__catalog-btn каталог
 	.c-navbar__item
 		a(href="#").c-navbar__link личный кабинет 
@@ -26,3 +26,30 @@
 			span.c-navbar__txt тов.
 	.c-navbar__item
 		a(href="#!").c-btn.c-btn_secondary.c-navbar__btn оформить заказ
+.c-navbar-wrap.c-navbar-scrolled
+	.container
+		.c-navbar
+			img(src=require("../../img/icons/logo.svg"), alt="").c-navbar__logo
+			.c-navbar__item-phone +7 (495) 565 35 88
+			a(href="#").c-navbar__item-call бесплатный звонок
+			.d-flex.justify-content-between.c-navbar__actions-container
+				.c-navbar__item
+					a(href="#" data-toggle="dropdown", aria-expanded="false").c-navbar__btn.dropdown-toggle
+						img(src=require("../../img/icons/vesi.png"), alt="").c-navbar__btn-icon
+						span.c-navbar__txt В сравнении 
+						span.c-navbar__counter 3
+						span.c-navbar__txt тов.
+					.dropdown-menu menu
+
+				.c-navbar__item
+					a(href="#!").c-navbar__btn
+						img(src=require("../../img/icons/fav.png"), alt="").c-navbar__btn-icon
+						span.c-navbar__txt В закладках
+						span.c-navbar__counter.is-empty 0
+						span.c-navbar__txt тов.
+				.c-navbar__item
+					a(href="#!").c-navbar__btn
+						img(src=require("../../img/icons/cart.png"), alt="").c-navbar__btn-icon
+						span.c-navbar__txt В корзине 
+						span.c-navbar__counter 3
+						span.c-navbar__txt тов.

@@ -1,3 +1,23 @@
+.c-navbar-wrap{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 99999;
+}
+.c-navbar-scrolled{
+	.c-navbar{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-right: 0;
+		&__item{
+		    height: 100%;
+		    width: 33.33% !important;
+		}
+	}
+	// display: none;
+}
 .c-navbar {
 	background-color: #ecf2f6;
 	display: flex;
@@ -106,7 +126,30 @@
 			font-size: 11px;
 		}
 	}
-
+	
+	&__item-phone {
+		font-size: 17px;
+		font-weight: 700;
+		margin-right: 40px;
+	}
+	&__logo{
+		max-width: 95px;
+		margin-left: 30px;
+		margin-right: 30px;
+	}
+	&__actions-container{
+		flex-grow: 1;
+		margin-left: 100px;
+		height: 100%;
+	}
+	&__item-call{
+		border-radius: 3px;
+		border: 1px solid #6493ad;
+		font-size: 12px;
+		text-transform: uppercase;
+		color: #6493ad;
+	    padding: 6px 20px;
+	}
 	&__item {
 		color: #6493ad;
 		text-transform: uppercase;
