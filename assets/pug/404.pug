@@ -1,0 +1,23 @@
+html(lang="ru")
+	head
+		include templates/head.pug
+	body
+		.container
+			.o-page.js-page
+				include templates/navbar.pug
+				include templates/header.pug
+				main.o-page__content
+					img(src=require("../img/content/404.jpg"), alt="").mt-4.mb-4
+					.c-back-call
+						h3.c-back-call__title Вы можете написать нам или заказать обратный звонок
+
+						.c-back-call__body
+							ul.nav.nav-tabs
+								li.nav-item
+									a(href="#message-us-content" data-toggle="tab").nav-link.active#message-us-tab Написать нам
+									a(href="#back-call-content" data-toggle="tab").nav-link#back-call-tab Обратный звонок
+							.tab-content
+								.tab-pane.fade.show.active#message-us-content asd
+								.tab-pane.fade.show#back-call-content asd
+
+				include templates/footer.pug

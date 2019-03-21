@@ -54,6 +54,12 @@ module.exports = {
 			hash: true
 		}),
 		new HtmlWebpackPlugin({
+			filename: '404.html',
+			template: './assets/pug/404.pug',
+			minify: false,
+			hash: true
+		}),
+		new HtmlWebpackPlugin({
 			filename: 'catalog.html',
 			template: './assets/pug/catalog.pug',
 			minify: false,
