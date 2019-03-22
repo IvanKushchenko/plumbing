@@ -1,0 +1,98 @@
+.c-form{
+	&__field{
+		width: 100%;
+		height: 40px;
+		border-radius: 3px;
+		border: 1px solid #d9e3e9;
+		margin-bottom: 20px;
+		font-size: 14px;
+		padding-left: 15px;
+		font-size: 15px;
+		&::-webkit-input-placeholder{
+			color: #222222;
+			font-size: 15px;
+		}
+		&_textarea{
+			padding-top: 10px;
+			resize-x:none;
+			height: 85px;
+		}
+		&_phone{
+			display: flex;
+			align-items: center;
+			input{
+			    flex-grow: 1;
+			    border: none;
+			    margin-left: 15px;
+			    width: 100%;
+			    &::-webkit-input-placeholder{
+			    	color: #bac5cb;
+			    }
+			    &:focus{
+			    	outline: none;
+			    }
+			}
+		}
+
+	}
+	&__field-flag{
+		width: 24px;
+		height: 17px;
+		background: url('../img/icons/flag-russia.png');
+		flex-shrink: 0;
+	}
+	&__action{
+		&_attachment{
+			display: flex;
+			align-items: center;
+			position: relative;
+			overflow: hidden;
+			input{
+				position: absolute;
+				width: 2000px;
+				left: -1000px;
+				cursor: pointer; 
+			}
+			&:before{
+				content: '';
+				display: block;
+				width: 15px;
+				height: 16px;
+				background: url('../img/icons/attach.png');
+				margin-right: 10px;
+			}
+		}
+	}
+	&__btn{
+		margin-top: 20px;
+		width: 275px;
+		height: 42px;
+		font-size: 17px;
+	}
+	&__dropdown{
+		.selectric{
+			border-radius: 3px;
+			border: 1px solid #d9e3e9;
+			background: none;
+			.button{
+				background: none;
+				&:before{
+				    content: " ";
+				    position: absolute;
+				    top: -15px;
+				    right: 0;
+				    bottom: 0;
+				    left: 0;
+				    margin: auto;
+				    width: 0;
+				    height: 0;
+				    border: 4px solid transparent;
+				    border-bottom-color: #BBB;
+				}
+				&:after{
+					top: 15px;
+				}
+			}
+		}
+	}
+}

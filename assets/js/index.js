@@ -96,6 +96,8 @@ $(function() {
 		$(this).find('.js-price-field').focus();
 	})
 	$('.js-price-field').mask("# ##0 000", {reverse: true})
+	$('.js-phone-field').mask("+7 (000) 000-00-00");
+
 	$('.js-price-field').on('input', function(e){
 		var number = $(e.target).text();
 		if(!number.length){

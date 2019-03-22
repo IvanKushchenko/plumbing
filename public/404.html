@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>Template</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="css/style.css?4553654e54e0bdd7d905" rel="stylesheet"></head>
+  <link href="css/style.css?e7663f8f12ebbdb4665f" rel="stylesheet"></head>
   <body>
     <div class="container">
       <div class="o-page js-page">
@@ -218,19 +218,92 @@
     </div>
   </div>
 </header>
-        <main class="o-page__content"><img class="mt-4 mb-4" src="img/content/404.jpg" alt="">
-          <div class="c-back-call">
-            <h3 class="c-back-call__title">Вы можете написать нам или заказать обратный звонок</h3>
-            <div class="c-back-call__body">
-              <ul class="nav nav-tabs">
-                <li class="nav-item"><a class="nav-link active" href="#message-us-content" data-toggle="tab" id="message-us-tab">Написать нам</a><a class="nav-link" href="#back-call-content" data-toggle="tab" id="back-call-tab">Обратный звонок</a></li>
-              </ul>
-              <div class="tab-content">
-                <div class="tab-pane fade show active" id="message-us-content">asd</div>
-                <div class="tab-pane fade show" id="back-call-content">asd</div>
+        <main class="o-page__content">
+          <section class="s-404"><img class="mt-4 mb-4 s-404__img" src="img/content/404.jpg" alt="">
+            <div class="c-back-call">
+              <h3 class="c-back-call__title">Вы можете написать нам или заказать обратный звонок</h3>
+              <div class="c-back-call__body">
+                <ul class="nav nav-tabs">
+                  <li class="nav-item"><a class="nav-link active" href="#message-us-content" data-toggle="tab" id="message-us-tab">Написать нам</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#back-call-content" data-toggle="tab" id="back-call-tab">Обратный звонок</a></li>
+                </ul>
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="message-us-content">
+                    <form class="c-form">
+                      <div class="row">
+                        <div class="col-md-4">
+                          <input class="c-form__field" type="text" placeholder="Ваше имя*" required>
+                        </div>
+                        <div class="col-md-4">
+                          <input class="c-form__field" type="text" placeholder="Ваш телефон*" required>
+                        </div>
+                        <div class="col-md-4">
+                          <input class="c-form__field" type="text" placeholder="Ваш e-mail">
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <textarea class="c-form__field c-form__field_textarea" name="" cols="30" rows="10" placeholder="Ваш вопрос*" required></textarea>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6 mb-3 mb-md-0">Обязательно для заполнения* </div>
+                        <div class="col-md-6 d-flex justify-content-start justify-content-md-end">
+                          <div class="c-form__action c-form__action_attachment">
+                            <input type="file"><a href="#">Добавить вложение</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-5">
+                          <button class="c-btn c-btn_secondary c-form__btn">Отправить</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="tab-pane fade show" id="back-call-content">
+                    <form class="c-form">
+                      <div class="row">
+                        <div class="col-sm-6 col-md-4 mb-3">
+                          <div class="c-form__dropdown">
+                            <select>
+                              <option>сегодня</option>
+                              <option>завтра</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4 mb-3">
+                          <div class="d-flex align-items-center"><span class="mr-2">в</span>
+                            <div class="c-form__dropdown w-100">
+                              <select>
+                                <option>10:00</option>
+                                <option>11:00</option>
+                                <option>12:00</option>
+                                <option>13:00</option>
+                                <option>14:00</option>
+                                <option>15:00</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="c-form__field c-form__field_phone">
+                            <div class="c-form__field-flag c-form__field-flag_russia"></div>
+                            <input class="js-phone-field" type="tel" placeholder="+7 (___) ___-__-__">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-5">
+                          <button class="c-btn c-btn_secondary c-form__btn">жду звонка</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
+          </section>
         </main>
 <footer class="c-footer">
   <div class="c-footer__top d-flex flex-column flex-xl-row">
@@ -308,5 +381,5 @@
 </footer>
       </div>
     </div>
-  <script type="text/javascript" src="js/script.js?4553654e54e0bdd7d905"></script></body>
+  <script type="text/javascript" src="js/script.js?e7663f8f12ebbdb4665f"></script></body>
 </html>
