@@ -70,10 +70,14 @@
 		font-size: 17px;
 	}
 	&__dropdown{
+
 		.selectric{
 			border-radius: 3px;
 			border: 1px solid #d9e3e9;
 			background: none;
+			.label{
+				font-size: 16px;
+			}
 			.button{
 				background: none;
 				&:before{

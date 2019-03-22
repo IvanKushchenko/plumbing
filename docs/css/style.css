@@ -16042,6 +16042,10 @@ a:hover {
   background: none;
 }
 
+.c-form__dropdown .selectric .label {
+  font-size: 16px;
+}
+
 .c-form__dropdown .selectric .button {
   background: none;
 }
