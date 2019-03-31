@@ -11330,6 +11330,17 @@ a:hover {
   align-items: center;
   color: #222222;
   box-shadow: none;
+  width: 100%;
+  height: 100%;
+  padding-left: 10px !important;
+}
+
+.c-navbar__btn:after {
+  display: none;
+}
+
+.c-navbar__btn[aria-expanded="true"] {
+  box-shadow: -2px -2px 9px rgba(2, 0, 0, 0.34);
 }
 
 .c-navbar__btn:hover {
@@ -11483,6 +11494,43 @@ a:hover {
   display: flex;
   align-items: center;
   background-image: linear-gradient(to right, rgba(114, 155, 178, 0.17) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.c-navbar__item .dropdown-menu {
+  background-color: #e9f0f4;
+  border: none;
+  border-radius: 0;
+  margin-top: 0;
+  padding: 10px;
+  padding-left: 20px;
+  box-shadow: 1px 4px 16px rgba(2, 0, 0, 0.34);
+}
+
+.c-navbar__item .dropdown-menu__body {
+  max-height: 310px;
+  overflow: auto;
+}
+
+.c-navbar__item .dropdown-menu__body::-webkit-scrollbar {
+  width: 7px;
+}
+
+.c-navbar__item .dropdown-menu__body::-webkit-scrollbar-track {
+  background-color: #e4edf2;
+}
+
+.c-navbar__item .dropdown-menu__body::-webkit-scrollbar-thumb {
+  background-color: #8cafc2;
+}
+
+.c-navbar__item .dropdown-menu__footer {
+  padding: 15px 0;
+}
+
+.c-navbar__item .dropdown-menu__footer .c-btn {
+  height: 39px;
+  font-weight: 700;
+  font-size: 14px;
 }
 
 .c-navbar__item:nth-of-type(1), .c-navbar__item:nth-of-type(2) {
