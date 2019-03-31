@@ -15,7 +15,7 @@
 	&__sale{
 		background-color: #f3932c;
 		font-family: "Roboto Slab";
-		font-size: 18px;
+		font-size: 1.125rem;
 		font-weight: 700;
 		width: 48px;
 		height: 48px;
@@ -31,7 +31,7 @@
 		display: flex;
 		align-items: center;
 		font-family: "Roboto Slab";
-		font-size: 17px;
+		font-size: 1.0625rem;
 		font-weight: 700;
 		font-style: italic;
 		position: absolute;
@@ -74,7 +74,7 @@
 	&__link{
 		text-transform: uppercase;
 		text-align: center;
-		font-size: 13px;
+		font-size: 0.8125rem;
 		line-height: 22px;
 	}
 	&__label{
@@ -89,7 +89,7 @@
 	    display: flex;
 	    justify-content: center;
 	    align-items: center;
-	    font-size: 12px;
+	    font-size: 0.75rem;
 	    color: #fff;
 	    font-style: italic;
 	}
@@ -100,13 +100,13 @@
 	}
 
 	&__availability{
-		font-size: 13px;
+		font-size: 0.8125rem;
 		img{
 			margin-right: 10px;
 		}
 	}
 	&__price{
-		font-size: 18px;
+		font-size: 1.125rem;
 		font-weight: 700;
 		font-family: "Roboto Slab";
 		&:after{
@@ -117,7 +117,7 @@
 		}
 	}
 	&__code{
-		font-size: 16px;
+		font-size: 1rem;
 		font-weight: 700;
 		text-align: center;
 	}
@@ -162,11 +162,11 @@
 		}
 	}
 	&__body{
-		font-size: 14px;
+		font-size: 0.875rem;
 		padding: 0 20px;
 		padding-bottom: 30px;
 		@media (max-height: $bp-lg) {
-			font-size: 12px;
+			font-size: 0.75rem;
 		}
 		@media (max-height: $bp-sm) {
 			padding: 0 10px;
@@ -189,7 +189,7 @@
 	&__action{
 		display: flex;
 		align-items: center;
-		font-size: 13px;
+		font-size: 0.8125rem;
 		box-shadow: none;
 		img{
 			margin-right: 5px;

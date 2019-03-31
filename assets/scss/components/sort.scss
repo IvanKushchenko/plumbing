@@ -2,7 +2,7 @@
 	display: flex;
 	align-items: center;
 	&__txt{
-		font-size: 12px;
+		font-size: 0.75rem;
 		text-transform: uppercase;
 		margin-right: 10px;
 	}
@@ -13,7 +13,7 @@
 		    border: 2px solid #f2f6f9;
 		    border-top: none;
 			li{
-				font-size: 12px;
+				font-size: 0.75rem;
 				color: #222;
 				text-transform: uppercase;
 				&.highlighted,
@@ -31,7 +31,7 @@
 		.label{
 			height: 32px;
 			line-height: 32px;
-			font-size: 12px;
+			font-size: 0.75rem;
 			text-transform: uppercase;
 		}
 		.button{

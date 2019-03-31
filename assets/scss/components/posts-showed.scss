@@ -2,7 +2,7 @@
 	display: flex;
 	align-items: center;
 	&__title{
-		font-size: 12px;
+		font-size: 0.75rem;
 		text-transform: uppercase;
 		margin-right: 10px;
 	}
@@ -15,7 +15,7 @@
 		width: 30px;
 		height: 30px;
 		border-radius: 50%;
-		font-size: 14px;
+		font-size: 0.875rem;
 		text-transform: uppercase;
 		line-height: 27px;
 		border: 2px solid #ecf2f6;

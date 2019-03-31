@@ -11142,13 +11142,13 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 html,
 body {
   height: 100%;
+  font-size: 14px;
 }
 
 body {
   background: linear-gradient(to top, #e4edf2 0%, #a2c4d3 100%) no-repeat;
   background-color: #e4edf2;
   font-family: "PT Sans", "Open Sans", Arial, sans-serif;
-  font-size: 16px;
   color: #222222;
 }
 
@@ -11233,6 +11233,14 @@ a:hover {
   padding-right: 0;
 }
 
+@media (max-width: 450px) {
+  .c-navbar-scrolled .c-navbar__logo {
+    max-width: 65px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
+
 .c-navbar-scrolled .c-navbar__item {
   white-space: normal !important;
   height: 100%;
@@ -11278,7 +11286,7 @@ a:hover {
 .c-navbar-scrolled .c-navbar__item .dropdown-menu__footer .c-btn {
   height: 39px;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .c-navbar-scrolled .c-navbar__btn {
@@ -11308,6 +11316,12 @@ a:hover {
   }
 }
 
+@media (max-width: 450px) {
+  .c-navbar {
+    padding-right: 5px;
+  }
+}
+
 @media (max-width: 1200px) {
   .c-navbar__txt {
     display: none;
@@ -11315,17 +11329,17 @@ a:hover {
 }
 
 .c-navbar__link {
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 @media (max-width: 576px) {
   .c-navbar__link {
-    font-size: 10px;
+    font-size: 0.625rem;
   }
 }
 
 .c-navbar__btn {
-  font-size: 12px !important;
+  font-size: 0.75rem !important;
   display: flex;
   align-items: center;
   color: #222222;
@@ -11349,13 +11363,13 @@ a:hover {
 
 @media (max-width: 992px) {
   .c-navbar__btn {
-    font-size: 11px !important;
+    font-size: 0.6875rem !important;
   }
 }
 
 @media (max-width: 576px) {
   .c-navbar__btn {
-    font-size: 9px !important;
+    font-size: 0.5625rem !important;
   }
 }
 
@@ -11412,7 +11426,7 @@ a:hover {
 
 .c-navbar__catalog-btn {
   display: none;
-  font-size: 16px;
+  font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.64px;
   line-height: 35px;
@@ -11431,19 +11445,25 @@ a:hover {
 @media (max-width: 576px) {
   .c-navbar__catalog-btn {
     width: 22%;
-    font-size: 11px;
+    font-size: 0.6875rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .c-navbar__catalog-btn {
+    width: 35%;
   }
 }
 
 .c-navbar__item-phone {
-  font-size: 17px;
+  font-size: 1.0625rem;
   font-weight: 700;
   margin-right: 40px;
 }
 
 @media (max-width: 768px) {
   .c-navbar__item-phone {
-    font-size: 15px;
+    font-size: 0.9375rem;
     margin-right: 10px;
   }
 }
@@ -11475,7 +11495,7 @@ a:hover {
 .c-navbar__item-call {
   border-radius: 3px;
   border: 1px solid #6493ad;
-  font-size: 12px;
+  font-size: 0.75rem;
   text-transform: uppercase;
   color: #6493ad;
   padding: 6px 20px;
@@ -11490,7 +11510,7 @@ a:hover {
 .c-navbar__item {
   color: #6493ad;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 0.75rem;
   display: flex;
   align-items: center;
   background-image: linear-gradient(to right, rgba(114, 155, 178, 0.17) 0%, rgba(0, 0, 0, 0) 100%);
@@ -11530,7 +11550,7 @@ a:hover {
 .c-navbar__item .dropdown-menu__footer .c-btn {
   height: 39px;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .c-navbar__item:nth-of-type(1), .c-navbar__item:nth-of-type(2) {
@@ -11568,6 +11588,12 @@ a:hover {
     padding-left: 0;
     justify-content: center;
     width: 36%;
+  }
+}
+
+@media (max-width: 450px) {
+  .c-navbar__item:nth-of-type(1) {
+    width: 45%;
   }
 }
 
@@ -11639,6 +11665,12 @@ a:hover {
   }
 }
 
+@media (max-width: 450px) {
+  .c-navbar__item:nth-of-type(5) {
+    width: 30%;
+  }
+}
+
 .c-navbar__item:nth-of-type(5) .c-navbar__btn-icon {
   margin: 0;
 }
@@ -11685,9 +11717,15 @@ a:hover {
   }
 }
 
+@media (max-width: 450px) {
+  .c-navbar__item:last-child {
+    display: none;
+  }
+}
+
 .c-btn {
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: 0.8125rem;
   border-radius: 5px;
   height: 27px;
   padding: 0 10px;
@@ -11699,7 +11737,7 @@ a:hover {
 
 @media (max-width: 450px) {
   .c-btn {
-    font-size: 11px;
+    font-size: 0.6875rem;
   }
 }
 
@@ -11774,6 +11812,18 @@ a:hover {
   }
 }
 
+@media (max-width: 450px) {
+  .c-header__logo {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 450px) {
+  .c-header .c-phone {
+    margin-bottom: 10px;
+  }
+}
+
 .c-header__top {
   padding: 21px 0;
   display: flex;
@@ -11783,6 +11833,12 @@ a:hover {
 @media (max-width: 576px) {
   .c-header__top {
     justify-content: space-between;
+  }
+}
+
+@media (max-width: 450px) {
+  .c-header__top {
+    flex-direction: column;
   }
 }
 
@@ -11809,18 +11865,18 @@ a:hover {
 }
 
 .c-header__nav_mobile .c-nav__item {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 @media (max-width: 992px) {
   .c-header__nav_mobile .c-nav__item {
-    font-size: 13px;
+    font-size: 0.8125rem;
   }
 }
 
 @media (max-width: 576px) {
   .c-header__nav_mobile .c-nav__item {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 
@@ -11845,9 +11901,15 @@ a:hover {
   margin-top: 3px;
 }
 
+@media (max-width: 450px) {
+  .c-header__actions {
+    width: 100%;
+  }
+}
+
 .c-header__actions .c-btn {
   letter-spacing: 0.72px;
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 @media (max-width: 992px) {
@@ -11860,7 +11922,7 @@ a:hover {
 
 @media (max-width: 768px) {
   .c-header__actions .c-btn {
-    font-size: 13px;
+    font-size: 0.8125rem;
     line-height: 1.3;
     max-width: 80px;
   }
@@ -11868,13 +11930,15 @@ a:hover {
 
 @media (max-width: 576px) {
   .c-header__actions .c-btn {
-    font-size: 10px;
+    font-size: 0.625rem;
   }
 }
 
 @media (max-width: 450px) {
   .c-header__actions .c-btn {
     padding: 0 5px;
+    max-width: 100%;
+    width: 100%;
   }
 }
 
@@ -11899,7 +11963,7 @@ a:hover {
 .c-logo__letter {
   color: #222222;
   font-family: "Open Sans";
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
   display: block;
   margin-top: 10px;
@@ -11908,13 +11972,13 @@ a:hover {
 
 @media (max-width: 768px) {
   .c-logo__letter {
-    font-size: 13px;
+    font-size: 0.8125rem;
   }
 }
 
 @media (max-width: 576px) {
   .c-logo__letter {
-    font-size: 11px;
+    font-size: 0.6875rem;
     white-space: nowrap;
   }
 }
@@ -11923,11 +11987,17 @@ a:hover {
   display: flex;
 }
 
+@media (max-width: 450px) {
+  .c-nav {
+    flex-wrap: wrap;
+  }
+}
+
 .c-nav__item {
   text-transform: uppercase;
   color: #222222;
   font-family: "PT Sans";
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 400;
   box-shadow: none;
 }
@@ -11939,6 +12009,7 @@ a:hover {
 @media (max-width: 450px) {
   .c-nav__item {
     white-space: nowrap;
+    margin-bottom: 10px;
   }
 }
 
@@ -11954,7 +12025,7 @@ a:hover {
 
 .c-phone {
   color: #222222;
-  font-size: 21px;
+  font-size: 1.3125rem;
   font-weight: 700;
   text-align: center;
   box-shadow: none;
@@ -11975,7 +12046,7 @@ a:hover {
 @media (max-width: 992px) {
   .c-phone {
     margin-top: 0;
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 }
 
@@ -11983,7 +12054,7 @@ a:hover {
   .c-phone {
     margin: 0 10px;
     white-space: nowrap;
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 
@@ -11995,13 +12066,13 @@ a:hover {
 
 .c-phone__text {
   margin-top: 4px;
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-weight: 400;
 }
 
 @media (max-width: 576px) {
   .c-phone__text {
-    font-size: 10px;
+    font-size: 0.625rem;
   }
 }
 
@@ -12064,7 +12135,7 @@ a:hover {
   padding-left: 20px;
   text-transform: uppercase;
   color: #fff;
-  font-size: 18px;
+  font-size: 1.125rem;
   cursor: pointer;
 }
 
@@ -12138,16 +12209,22 @@ a:hover {
 }
 
 .c-breadcrumbs {
-  font-size: 13px;
+  font-size: 0.8125rem;
   margin-bottom: 16px;
 }
 
 @media (max-width: 576px) {
   .c-breadcrumbs {
-    font-size: 11px;
+    font-size: 0.6875rem;
     display: flex;
     flex-wrap: wrap;
     padding: 5px 0;
+  }
+}
+
+@media (max-width: 450px) {
+  .c-breadcrumbs {
+    align-items: center;
   }
 }
 
@@ -12175,7 +12252,7 @@ a:hover {
 .c-breadcrumbs__item {
   text-transform: uppercase;
   box-shadow: none;
-  max-width: 170px;
+  max-width: 150px;
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
@@ -12192,6 +12269,12 @@ a:hover {
 @media (max-width: 576px) {
   .c-breadcrumbs__item:not(:last-child):after {
     margin: 0 5px;
+  }
+}
+
+@media (max-width: 450px) {
+  .c-breadcrumbs__item {
+    max-width: 110px;
   }
 }
 
@@ -12229,7 +12312,7 @@ a:hover {
 
 .c-product__title {
   font-family: "Roboto Slab";
-  font-size: 23px;
+  font-size: 1.4375rem;
 }
 
 @media (max-width: 992px) {
@@ -12249,7 +12332,7 @@ a:hover {
   box-shadow: none;
   color: #222222;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 .c-product__action:not(:last-child) {
@@ -12336,7 +12419,7 @@ a:hover {
 .c-product__choosen-count {
   margin-left: 6px;
   text-transform: none;
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 1.1;
 }
 
@@ -12367,7 +12450,7 @@ a:hover {
 .c-product__price-number {
   margin-left: 11px;
   font-family: "Roboto Slab";
-  font-size: 16px;
+  font-size: 1rem;
   text-transform: initial;
 }
 
@@ -12387,7 +12470,7 @@ a:hover {
 }
 
 .c-product__price-number_new {
-  font-size: 30px;
+  font-size: 1.875rem;
   line-height: 1.1;
   color: #f3932c;
 }
@@ -12463,7 +12546,7 @@ a:hover {
 
 @media (max-width: 1200px) {
   .c-product__order-checkout .c-product__choosen {
-    font-size: 15px;
+    font-size: 0.9375rem;
   }
 }
 
@@ -12477,7 +12560,7 @@ a:hover {
 
 @media (max-width: 1200px) {
   .c-product__order-checkout .c-product__choosen-count {
-    font-size: 16px;
+    font-size: 1rem;
   }
 }
 
@@ -12632,7 +12715,7 @@ a:hover {
   height: 36px;
   background-color: #ecf2f6;
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: bold;
   display: flex;
   align-items: center;
@@ -12651,7 +12734,7 @@ a:hover {
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
-  font-size: 14px;
+  font-size: 0.875rem;
   margin-top: 10px;
 }
 
@@ -12662,14 +12745,14 @@ a:hover {
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 0.875rem;
   letter-spacing: 0.35px;
   position: relative;
 }
 
 @media (max-width: 576px) {
   .c-product-info__showroom {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 
@@ -12700,7 +12783,7 @@ a:hover {
 
 .c-product-info__description {
   padding-left: 30px;
-  font-size: 14px;
+  font-size: 0.875rem;
   margin-bottom: 30px;
 }
 
@@ -12765,7 +12848,7 @@ a:hover {
   align-items: center;
   text-transform: uppercase;
   box-shadow: none;
-  font-size: 12px;
+  font-size: 0.75rem;
   color: #222222;
   padding-left: 14%;
 }
@@ -12791,7 +12874,7 @@ a:hover {
 
 @media (max-width: 576px) {
   .c-product-info__action {
-    font-size: 10px;
+    font-size: 0.625rem;
   }
 }
 
@@ -12893,7 +12976,7 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  font-size: 15px;
+  font-size: 0.9375rem;
   text-transform: uppercase;
   font-weight: 900;
   background-color: #ecf2f6;
@@ -12913,7 +12996,7 @@ a:hover {
 .c-table__header a {
   margin-left: 15px;
   font-family: "PT Sans";
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 400;
 }
 
@@ -12966,6 +13049,13 @@ a:hover {
   }
 }
 
+@media (max-width: 450px) {
+  .c-table__row {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+}
+
 .c-table__cell:not(:first-child) {
   padding-left: 24px;
 }
@@ -13001,7 +13091,7 @@ a:hover {
   background-color: #f1ca49;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.18);
   font-family: "Open Sans";
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #fff;
   font-weight: 700;
   text-transform: uppercase;
@@ -13078,7 +13168,7 @@ a:hover {
 }
 
 .c-promocode__txt {
-  font-size: 13px;
+  font-size: 0.8125rem;
   letter-spacing: 0.2px;
   margin-right: 4px;
 }
@@ -13087,7 +13177,7 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 15px;
+  font-size: 0.9375rem;
   letter-spacing: 0.3px;
   border-radius: 10px;
   background-color: #f14949;
@@ -13120,7 +13210,7 @@ a:hover {
 
 .c-counter__txt {
   margin-left: 11px;
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-weight: bold;
   letter-spacing: 0.2px;
   text-transform: uppercase;
@@ -13216,7 +13306,7 @@ a:hover {
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: "Roboto Slab";
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 .c-progress-radial__footer {
@@ -13224,7 +13314,7 @@ a:hover {
   left: 50%;
   transform: translateX(-50%);
   bottom: -45%;
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 .c-product-card__info {
@@ -13251,8 +13341,14 @@ a:hover {
   }
 }
 
+@media (max-width: 450px) {
+  .c-product-card__img-wrap {
+    width: 75px;
+  }
+}
+
 .c-product-card__title {
-  font-size: 15px;
+  font-size: 0.9375rem;
   text-transform: uppercase;
   color: #6493ad;
   font-family: "Open Sans";
@@ -13271,11 +13367,11 @@ a:hover {
 }
 
 .c-product-card__subtitle {
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 .c-product-card__size {
-  font-size: 13px;
+  font-size: 0.8125rem;
 }
 
 .c-product-card__btn {
@@ -13292,7 +13388,7 @@ a:hover {
   right: 4px;
   top: 7px;
   font-family: "Roboto Slab";
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 700;
   letter-spacing: 0.59px;
   color: #fff;
@@ -13306,7 +13402,7 @@ a:hover {
 
 .c-product-card__price {
   font-family: "Roboto Slab";
-  font-size: 15px;
+  font-size: 0.9375rem;
   line-height: 1.2;
 }
 
@@ -13335,7 +13431,7 @@ a:hover {
 
 .c-product-card__price_new {
   color: #f3932c;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: bold;
 }
 
@@ -13398,7 +13494,7 @@ a:hover {
   width: 16px;
   height: 16px;
   background: url(../img/icons/plus.png) no-repeat center center;
-  font-size: 50px;
+  font-size: 3.125rem;
   color: #8cafc2;
   position: absolute;
   right: -24px;
@@ -13450,11 +13546,11 @@ a:hover {
   margin-top: 10px;
   text-align: center;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 .c-checkout-products .c-checkout-product__title {
-  font-size: 12px;
+  font-size: 0.75rem;
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 0;
@@ -13463,7 +13559,7 @@ a:hover {
 
 .c-checkout-products .c-checkout-product__price {
   text-align: center;
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-family: "Roboto Slab";
 }
 
@@ -13482,13 +13578,13 @@ a:hover {
 }
 
 .c-product-description_catalog .c-product-description__title {
-  font-size: 18px;
+  font-size: 1.125rem;
   width: 70%;
   justify-content: center;
 }
 
 .c-product-description_catalog .c-product-description__body {
-  font-size: 13px;
+  font-size: 0.8125rem;
   text-align: left;
   padding: 46px 20px;
 }
@@ -13501,7 +13597,7 @@ a:hover {
 
 .c-product-description__title {
   font-family: "Roboto Slab";
-  font-size: 23px;
+  font-size: 1.4375rem;
   text-align: center;
   position: absolute;
   left: 50%;
@@ -13540,7 +13636,7 @@ a:hover {
 @media (max-width: 450px) {
   .c-product-description__title {
     width: 70%;
-    font-size: 19px;
+    font-size: 1.1875rem;
   }
 }
 
@@ -13548,7 +13644,7 @@ a:hover {
   padding: 46px 60px;
   text-align: center;
   font-family: "Open Sans";
-  font-size: 15px;
+  font-size: 0.9375rem;
   padding-bottom: 37px;
 }
 
@@ -13561,7 +13657,7 @@ a:hover {
 @media (max-width: 450px) {
   .c-product-description__body {
     padding: 35px 15px;
-    font-size: 13px;
+    font-size: 0.8125rem;
   }
 }
 
@@ -13583,14 +13679,14 @@ a:hover {
 }
 
 .c-product-description__body h5 {
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-weight: bold;
   margin-bottom: 3px;
 }
 
 @media (max-width: 450px) {
   .c-product-description__body h5 {
-    font-size: 13px;
+    font-size: 0.8125rem;
   }
 }
 
@@ -13599,7 +13695,7 @@ a:hover {
   border-radius: 9px;
   letter-spacing: 0.28px;
   font-family: "Open Sans";
-  font-size: 14px;
+  font-size: 0.875rem;
   position: fixed;
   bottom: 40px;
   background: #fff;
@@ -13651,14 +13747,14 @@ a:hover {
 
 .c-options__header {
   font-family: "Roboto Slab";
-  font-size: 23px;
+  font-size: 1.4375rem;
   margin-bottom: 15px;
   text-align: center;
 }
 
 @media (max-width: 450px) {
   .c-options__header {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 }
 
@@ -13678,7 +13774,7 @@ a:hover {
 
 .c-watch-earlier__header {
   font-family: "Roboto Slab";
-  font-size: 23px;
+  font-size: 1.4375rem;
   text-align: center;
   position: relative;
   display: flex;
@@ -13727,7 +13823,7 @@ a:hover {
   position: absolute;
   right: -2px;
   margin-top: 2px;
-  font-size: 11px;
+  font-size: 0.6875rem;
   text-transform: uppercase;
 }
 
@@ -13811,7 +13907,7 @@ a:hover {
 }
 
 .c-footer__copyright {
-  font-size: 13px;
+  font-size: 0.8125rem;
   letter-spacing: 0.53px;
   color: #8fa2ac;
 }
@@ -13827,7 +13923,7 @@ a:hover {
   display: block;
   text-decoration: none;
   box-shadow: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #8fa2ac;
   display: block;
   letter-spacing: 0.56px;
@@ -13841,7 +13937,7 @@ a:hover {
 
 .c-footer__bottom {
   text-align: center;
-  font-size: 12px;
+  font-size: 0.75rem;
   color: #8fa2ac;
   letter-spacing: 0.48px;
   opacity: 0.68;
@@ -13910,7 +14006,7 @@ a:hover {
 }
 
 .c-footer__col_contacts {
-  font-size: 14px;
+  font-size: 0.875rem;
   letter-spacing: 0.57px;
   color: #8fa2ac;
   position: relative;
@@ -13947,11 +14043,11 @@ a:hover {
 
 .c-footer__col_placement {
   width: 280px;
-  font-size: 14px;
+  font-size: 0.875rem;
   letter-spacing: 0.57px;
   color: #8fa2ac;
   position: relative;
-  left: -40px;
+  left: -10px;
   margin-top: 4px;
 }
 
@@ -14051,7 +14147,7 @@ a:hover {
 .c-tip {
   padding: 10px;
   font-family: "Open Sans";
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 20px;
   letter-spacing: 0.28px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.33);
@@ -14116,14 +14212,14 @@ a:hover {
 
 .c-preview-product__description-body {
   font-family: "Open Sans";
-  font-size: 13px;
+  font-size: 0.8125rem;
   line-height: 23px;
 }
 
 .c-preview-product__description-body h5 {
   font-weight: bold;
   margin-bottom: 5px;
-  font-size: 13px;
+  font-size: 0.8125rem;
 }
 
 .c-preview-product__description-body p {
@@ -14141,7 +14237,7 @@ a:hover {
 
 .c-preview-product__description-title {
   font-family: "Roboto Slab";
-  font-size: 19px;
+  font-size: 1.1875rem;
   margin-bottom: 16px;
 }
 
@@ -14172,11 +14268,17 @@ a:hover {
   font-weight: 700;
   letter-spacing: 0.28px;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #fff;
   margin: 10px 0;
   text-align: center;
   padding: 13px 65px;
+}
+
+@media (max-width: 450px) {
+  .c-offer {
+    padding: 13px 15px;
+  }
 }
 
 .c-showroom {
@@ -14187,14 +14289,14 @@ a:hover {
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 0.875rem;
   letter-spacing: 0.35px;
   position: relative;
 }
 
 @media (max-width: 992px) {
   .c-showroom {
-    font-size: 11px;
+    font-size: 0.6875rem;
   }
 }
 
@@ -14240,7 +14342,7 @@ a:hover {
   z-index: 22;
   background: #fff;
   box-shadow: 0 0px 7px 0px rgba(0, 0, 0, 0.3);
-  font-size: 13px;
+  font-size: 0.8125rem;
   text-transform: initial;
   display: none;
 }
@@ -14266,7 +14368,7 @@ a:hover {
 }
 
 .c-showroom__text h5 {
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-weight: bold;
 }
 
@@ -14283,7 +14385,7 @@ a:hover {
   color: #8cafc2;
   border-top: 1px solid rgba(140, 175, 194, 0.4);
   position: relative;
-  font-size: 14px;
+  font-size: 0.875rem;
   margin-bottom: 25px;
 }
 
@@ -14307,7 +14409,7 @@ a:hover {
 .c-article__title {
   color: #222222;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 1.5rem;
   margin-bottom: 5px;
 }
 
@@ -14336,7 +14438,7 @@ a:hover {
 }
 
 .c-posts-showed__title {
-  font-size: 12px;
+  font-size: 0.75rem;
   text-transform: uppercase;
   margin-right: 10px;
 }
@@ -14351,7 +14453,7 @@ a:hover {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  font-size: 14px;
+  font-size: 0.875rem;
   text-transform: uppercase;
   line-height: 27px;
   border: 2px solid #ecf2f6;
@@ -14411,7 +14513,7 @@ a:hover {
   display: block;
   text-align: center;
   line-height: 27px;
-  font-size: 14px;
+  font-size: 0.875rem;
   border: 2px solid #ecf2f6;
   box-shadow: none;
   margin: 0 7px;
@@ -14445,7 +14547,7 @@ a:hover {
 
 .c-all-shares__title {
   font-family: "Roboto Slab";
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 700;
   line-height: 27.99px;
   text-transform: uppercase;
@@ -14456,7 +14558,7 @@ a:hover {
 }
 
 .c-all-shares__link {
-  font-size: 12px;
+  font-size: 0.75rem;
   text-transform: uppercase;
 }
 
@@ -14466,7 +14568,7 @@ a:hover {
 
 .c-watch-earlier-widget__title {
   font-family: "Roboto Slab";
-  font-size: 18px;
+  font-size: 1.125rem;
   margin-bottom: 25px;
 }
 
@@ -14512,7 +14614,7 @@ a:hover {
 .c-watch-earlier-widget__link {
   margin-top: 15px;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 .c-adjustable-block {
@@ -14542,6 +14644,12 @@ a:hover {
   }
 }
 
+@media (max-width: 576px) {
+  .c-adjustable-block__thumbnail {
+    height: 200px;
+  }
+}
+
 .c-adjustable-block__thumbnail img {
   width: 100%;
   height: 100%;
@@ -14549,7 +14657,7 @@ a:hover {
 }
 
 .c-adjustable-block__title {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 700;
   margin-bottom: 5px;
   text-transform: uppercase;
@@ -14558,7 +14666,7 @@ a:hover {
 
 .c-adjustable-block__count {
   margin-top: 15px;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-style: italic;
 }
 
@@ -14632,7 +14740,7 @@ a:hover {
   height: 45px;
   background-color: #f14949;
   font-family: "Roboto Slab";
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 45px;
   text-align: center;
   color: #fff;
@@ -14641,11 +14749,11 @@ a:hover {
 
 .c-main-share__title {
   font-weight: 700;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .c-main-share__txt {
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .c-main-categories {
@@ -14699,7 +14807,7 @@ a:hover {
 .c-main-categories__title {
   border: 2px solid #f1f5f8;
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 700;
   color: #fff;
   position: relative;
@@ -14745,7 +14853,7 @@ a:hover {
 
 .c-sale-day__title {
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 700;
 }
 
@@ -14770,12 +14878,12 @@ a:hover {
 
 .c-sale-day__price_old {
   text-decoration: line-through;
-  font-size: 14px;
+  font-size: 0.875rem;
   display: block;
 }
 
 .c-sale-day__price_new {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 700;
   color: #f14949;
   line-height: 1;
@@ -14832,7 +14940,7 @@ a:hover {
 
 .c-top-product__title {
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 700;
 }
 
@@ -14899,7 +15007,7 @@ a:hover {
 
 .c-our-brands__title {
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 700;
 }
 
@@ -14932,7 +15040,7 @@ a:hover {
 }
 
 .c-contacts-section {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 34px;
   margin-bottom: 40px;
 }
@@ -14947,7 +15055,7 @@ a:hover {
 
 .c-contacts-section__title {
   font-family: "Roboto Slab";
-  font-size: 23px;
+  font-size: 1.4375rem;
   margin-bottom: 20px;
 }
 
@@ -14993,6 +15101,12 @@ a:hover {
   border-color: #8cafc2;
 }
 
+@media (max-width: 450px) {
+  .c-our-showroom-slider__thumbnails {
+    margin-top: 10px;
+  }
+}
+
 .c-choose-by-property {
   border-radius: 3px 3px 0 0;
   border: 2px solid #ecf2f6;
@@ -15000,7 +15114,7 @@ a:hover {
   margin-bottom: 35px;
 }
 
-@media (max-height: 992px) {
+@media (max-width: 992px) {
   .c-choose-by-property {
     border-right: none;
     border-left: none;
@@ -15014,7 +15128,7 @@ a:hover {
   justify-content: space-between;
 }
 
-@media (max-height: 992px) {
+@media (max-width: 992px) {
   .c-choose-by-property__list {
     flex-wrap: wrap;
   }
@@ -15024,11 +15138,17 @@ a:hover {
   max-width: 120px;
 }
 
-@media (max-height: 992px) {
+@media (max-width: 992px) {
   .c-choose-by-property__item {
     max-width: initial;
     width: 33.33%;
     margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 450px) {
+  .c-choose-by-property__item {
+    width: 50%;
   }
 }
 
@@ -15040,7 +15160,7 @@ a:hover {
   overflow: hidden;
 }
 
-@media (max-height: 992px) {
+@media (max-width: 992px) {
   .c-choose-by-property__image {
     display: none;
   }
@@ -15053,19 +15173,19 @@ a:hover {
 }
 
 .c-choose-by-property__footer {
-  font-size: 12px;
+  font-size: 0.75rem;
   text-transform: uppercase;
   text-align: center;
 }
 
-@media (max-height: 992px) {
+@media (max-width: 992px) {
   .c-choose-by-property__footer {
     text-align: left;
   }
 }
 
 .c-choose-by-property__more-btn {
-  font-size: 12px;
+  font-size: 0.75rem;
   text-transform: uppercase;
   border-radius: 3px;
   background-color: #ecf2f6;
@@ -15079,7 +15199,7 @@ a:hover {
   margin-top: 20px;
 }
 
-@media (max-height: 992px) {
+@media (max-width: 992px) {
   .c-choose-by-property__more-btn {
     display: none;
   }
@@ -15135,7 +15255,7 @@ a:hover {
 }
 
 .c-sort__txt {
-  font-size: 12px;
+  font-size: 0.75rem;
   text-transform: uppercase;
   margin-right: 10px;
 }
@@ -15151,7 +15271,7 @@ a:hover {
 }
 
 .c-sort .selectric-wrapper .selectric-items li {
-  font-size: 12px;
+  font-size: 0.75rem;
   color: #222;
   text-transform: uppercase;
 }
@@ -15170,7 +15290,7 @@ a:hover {
 .c-sort .selectric-wrapper .label {
   height: 32px;
   line-height: 32px;
-  font-size: 12px;
+  font-size: 0.75rem;
   text-transform: uppercase;
 }
 
@@ -15200,7 +15320,7 @@ a:hover {
 .c-filtered-product__sale {
   background-color: #f3932c;
   font-family: "Roboto Slab";
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 700;
   width: 48px;
   height: 48px;
@@ -15217,7 +15337,7 @@ a:hover {
   display: flex;
   align-items: center;
   font-family: "Roboto Slab";
-  font-size: 17px;
+  font-size: 1.0625rem;
   font-weight: 700;
   font-style: italic;
   position: absolute;
@@ -15265,7 +15385,7 @@ a:hover {
 .c-filtered-product__link {
   text-transform: uppercase;
   text-align: center;
-  font-size: 13px;
+  font-size: 0.8125rem;
   line-height: 22px;
 }
 
@@ -15281,7 +15401,7 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 12px;
+  font-size: 0.75rem;
   color: #fff;
   font-style: italic;
 }
@@ -15293,7 +15413,7 @@ a:hover {
 }
 
 .c-filtered-product__availability {
-  font-size: 13px;
+  font-size: 0.8125rem;
 }
 
 .c-filtered-product__availability img {
@@ -15301,7 +15421,7 @@ a:hover {
 }
 
 .c-filtered-product__price {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 700;
   font-family: "Roboto Slab";
 }
@@ -15314,7 +15434,7 @@ a:hover {
 }
 
 .c-filtered-product__code {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 700;
   text-align: center;
 }
@@ -15364,14 +15484,14 @@ a:hover {
 }
 
 .c-filtered-product__body {
-  font-size: 14px;
+  font-size: 0.875rem;
   padding: 0 20px;
   padding-bottom: 30px;
 }
 
 @media (max-height: 992px) {
   .c-filtered-product__body {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 
@@ -15403,7 +15523,7 @@ a:hover {
 .c-filtered-product__action {
   display: flex;
   align-items: center;
-  font-size: 13px;
+  font-size: 0.8125rem;
   box-shadow: none;
 }
 
@@ -15431,7 +15551,7 @@ a:hover {
   text-align: center;
   line-height: 50px;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 0.875rem;
   display: block;
 }
 
@@ -15471,7 +15591,7 @@ a:hover {
   padding: 30px 20px;
   max-width: 175px;
   padding: 0 20px;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 700;
   color: #fff;
   display: flex;
@@ -15489,7 +15609,7 @@ a:hover {
 }
 
 .c-filter__title {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 700;
   color: #8cafc2;
   text-transform: uppercase;
@@ -15502,7 +15622,7 @@ a:hover {
 .c-filter__title[aria-expanded="false"]:after {
   content: '+';
   margin-left: 30px;
-  font-size: 30px;
+  font-size: 1.875rem;
   font-weight: 400;
   line-height: 0;
   position: absolute;
@@ -15513,7 +15633,7 @@ a:hover {
 .c-filter__title[aria-expanded="true"]:after {
   content: '-';
   margin-left: 30px;
-  font-size: 30px;
+  font-size: 1.875rem;
   font-weight: 400;
   line-height: 0;
   position: absolute;
@@ -15571,7 +15691,7 @@ a:hover {
   display: inline-block;
   background-color: #ecf2f6;
   border-radius: 3px;
-  font-size: 12px;
+  font-size: 0.75rem;
   text-transform: uppercase;
   margin: 3px 0;
 }
@@ -15662,7 +15782,7 @@ a:hover {
   border-radius: 3px;
   border: 1px solid #e4edf2;
   padding: 5px 10px;
-  font-size: 14px;
+  font-size: 0.875rem;
   display: inline-block;
   flex: 1;
 }
@@ -15695,7 +15815,7 @@ a:hover {
 
 .c-tag-checkbox {
   height: 30px;
-  font-size: 14px;
+  font-size: 0.875rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15731,7 +15851,7 @@ a:hover {
   border-radius: 3px;
   background-color: #8cafc2;
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 1rem;
   color: #ffffff;
   display: flex;
   align-items: center;
@@ -15748,6 +15868,12 @@ a:hover {
   background: url(../img/icons/sort-down-white.png) no-repeat;
   background-size: contain;
   opacity: .7;
+}
+
+@media (max-width: 450px) {
+  .c-sort-mobile .dropdown-toggle {
+    font-size: 0.8rem;
+  }
 }
 
 .c-sort-mobile__choosed-sort {
@@ -15814,7 +15940,7 @@ a:hover {
   border-radius: 3px;
   background-color: #8cafc2;
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 1rem;
   color: #ffffff;
   display: flex;
   align-items: center;
@@ -15831,6 +15957,12 @@ a:hover {
   background: url(../img/icons/filter-icon.png) no-repeat;
   background-size: contain;
   opacity: .7;
+}
+
+@media (max-width: 450px) {
+  .c-filters-mobile .dropdown-toggle {
+    font-size: 0.8rem;
+  }
 }
 
 .c-filters-mobile .dropdown-menu {
@@ -15930,15 +16062,21 @@ a:hover {
   object-fit: cover;
 }
 
+@media (max-width: 450px) {
+  .c-navbar-product__img {
+    height: 65px;
+  }
+}
+
 .c-navbar-product__title {
-  font-size: 13px;
+  font-size: 0.8125rem;
   color: #6493ad;
   line-height: 22px;
   text-transform: uppercase;
 }
 
 .c-navbar-product__price {
-  font-size: 16px;
+  font-size: 1rem;
   margin-right: 5px;
 }
 
@@ -15957,10 +16095,11 @@ a:hover {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+  flex-shrink: 0;
 }
 
 .c-back-call__title {
-  font-size: 23px;
+  font-size: 1.4375rem;
   font-family: 'Roboto Slab';
   text-align: center;
   margin-bottom: 45px;
@@ -15988,7 +16127,7 @@ a:hover {
   padding: 0;
   padding-left: 10%;
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #8cafc2;
   font-weight: 700;
   border-bottom: 0;
@@ -16001,8 +16140,23 @@ a:hover {
   background-color: #fff;
 }
 
+@media (max-width: 450px) {
+  .c-back-call .nav-link {
+    height: 40px;
+    line-height: 40px;
+    font-size: .8rem;
+  }
+}
+
 .c-back-call .tab-content {
   padding: 30px 50px 40px 50px;
+}
+
+@media (max-width: 450px) {
+  .c-back-call .tab-content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .c-form__field {
@@ -16011,14 +16165,14 @@ a:hover {
   border-radius: 3px;
   border: 1px solid #d9e3e9;
   margin-bottom: 20px;
-  font-size: 14px;
+  font-size: 0.875rem;
   padding-left: 15px;
-  font-size: 15px;
+  font-size: 0.9375rem;
 }
 
 .c-form__field::-webkit-input-placeholder {
   color: #222222;
-  font-size: 15px;
+  font-size: 0.9375rem;
 }
 
 .c-form__field_textarea {
@@ -16081,7 +16235,13 @@ a:hover {
   margin-top: 20px;
   width: 275px;
   height: 42px;
-  font-size: 17px;
+  font-size: 1.0625rem;
+}
+
+@media (max-width: 450px) {
+  .c-form__btn {
+    width: 100%;
+  }
 }
 
 .c-form__dropdown .selectric {
@@ -16091,7 +16251,7 @@ a:hover {
 }
 
 .c-form__dropdown .selectric .label {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .c-form__dropdown .selectric .button {
@@ -16196,7 +16356,7 @@ a:hover {
 }
 
 .o-section__title {
-  font-size: 23px;
+  font-size: 1.4375rem;
   color: #222222;
   font-family: "Roboto Slab";
   margin: 0;
@@ -16205,7 +16365,7 @@ a:hover {
 .o-section__navigation {
   font-family: "PT Sans";
   font-style: italic;
-  font-size: 16px;
+  font-size: 1rem;
   color: #6493ad;
 }
 

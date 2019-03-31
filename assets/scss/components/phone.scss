@@ -1,6 +1,6 @@
 .c-phone{
 	color: #222222;
-	font-size: 21px;
+	font-size: 1.3125rem;
 	font-weight: 700;
 	text-align: center;
 	box-shadow: none;
@@ -14,23 +14,23 @@
 	}
 	@media (max-width: $bp-lg) {
 		margin-top: 0;
-		font-size: 18px;
+		font-size: 1.125rem;
 
 	}
 	@media (max-width:$bp-sm) {
 		margin: 0 10px;
 		white-space: nowrap;
-		font-size: 14px;
+		font-size: 0.875rem;
 	}
 	@media (max-width:$bp-sm-2) {
 		margin: 0 5px;
 	}
 	&__text{
 		margin-top: 4px;
-		font-size: 13px;
+		font-size: 0.8125rem;
 		font-weight: 400;
 		@media (max-width:$bp-sm) {
-			font-size: 10px;
+			font-size: 0.625rem;
 		}
 	}
 }

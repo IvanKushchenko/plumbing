@@ -433,6 +433,14 @@ $(function() {
         slideToClickedSlide: true,
         watchSlidesVisibility: true,
         watchSlidesProgress: true,
+        breakpoints: {
+        	992: {
+        		slidesPerView: 8
+        	},
+        	450: {
+        		slidesPerView: 3
+        	}
+        }
     });
 
 

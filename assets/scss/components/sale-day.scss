@@ -24,7 +24,7 @@
 	}
 	&__title{
 		text-transform: uppercase;
-		font-size: 18px;
+		font-size: 1.125rem;
 		font-weight: 700;
 	}
 	&__header{
@@ -46,11 +46,11 @@
 	&__price{
 		&_old{
 			text-decoration: line-through;
-			font-size: 14px;
+			font-size: 0.875rem;
 			display: block;
 		}
 		&_new{
-			font-size: 18px;
+			font-size: 1.125rem;
 			font-weight: 700;
 			color: #f14949;
 			line-height: 1;

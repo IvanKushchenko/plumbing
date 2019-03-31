@@ -5,7 +5,7 @@
 
 	&__title {
 		font-family: "Roboto Slab";
-		font-size: 23px;
+		font-size: 1.4375rem;
 
 		@media (max-width:$bp-lg) {
 			width: 50%;
@@ -21,7 +21,7 @@
 		box-shadow: none;
 		color: #222222;
 		text-transform: uppercase;
-		font-size: 12px;
+		font-size: 0.75rem;
 
 		&:not(:last-child) {
 			margin-right: 30px;
@@ -98,7 +98,7 @@
 	&__choosen-count {
 		margin-left: 6px;
 		text-transform: none;
-		font-size: 18px;
+		font-size: 1.125rem;
 		line-height: 1.1;
 	}
 
@@ -125,7 +125,7 @@
 	&__price-number {
 		margin-left: 11px;
 		font-family: "Roboto Slab";
-		font-size: 16px;
+		font-size: 1rem;
 		text-transform: initial;
 
 		&:after {
@@ -145,7 +145,7 @@
 		}
 
 		&_new {
-			font-size: 30px;
+			font-size: 1.875rem;
 			line-height: 1.1;
 			color: #f3932c;
 		}
@@ -214,7 +214,7 @@
 			margin-top: 0;
 
 			@media (max-width:$bp-xl) {
-				font-size: 15px;
+				font-size: 0.9375rem;
 			}
 
 		}
@@ -227,7 +227,7 @@
 			margin-left: 15px;
 
 			@media (max-width:$bp-xl) {
-				font-size: 16px;
+				font-size: 1rem;
 			}
 
 		}

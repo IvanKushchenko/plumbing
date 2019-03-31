@@ -18,11 +18,14 @@
 			width: 95px;
 			height: 95px;
 		}
+		@media (max-width:$bp-sm-2) {
+			width: 75px;
+		}
 
 	}
 
 	&__title {
-		font-size: 15px;
+		font-size: 0.9375rem;
 		text-transform: uppercase;
 		color: #6493ad;
 		font-family: "Open Sans";
@@ -40,11 +43,11 @@
 	}
 
 	&__subtitle {
-		font-size: 12px;
+		font-size: 0.75rem;
 	}
 
 	&__size {
-		font-size: 13px;
+		font-size: 0.8125rem;
 	}
 
 	&__btn {
@@ -61,7 +64,7 @@
 		right: 4px;
 		top: 7px;
 		font-family: "Roboto Slab";
-		font-size: 14px;
+		font-size: 0.875rem;
 		font-weight: 700;
 		letter-spacing: 0.59px;
 		color: #fff;
@@ -75,7 +78,7 @@
 
 	&__price {
 		font-family: "Roboto Slab";
-		font-size: 15px;
+		font-size: 0.9375rem;
 		line-height: 1.2;
 
 		&:after {
@@ -98,7 +101,7 @@
 
 		&_new {
 			color: #f3932c;
-			font-size: 18px;
+			font-size: 1.125rem;
 			font-weight: bold;
 		}
 

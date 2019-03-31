@@ -61,7 +61,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: flex-start;
-		font-size: 15px;
+		font-size: 0.9375rem;
 		text-transform: uppercase;
 		font-weight: 900;
 		background-color: #ecf2f6;
@@ -76,7 +76,7 @@
 		a {
 			margin-left: 15px;
 			font-family: "PT Sans";
-			font-size: 12px;
+			font-size: 0.75rem;
 			font-weight: 400;
 		}
 
@@ -124,6 +124,10 @@
 			padding: 12px 15px;
 			padding-right: 30px;
 		}
+		@media (max-width:$bp-sm-2) {
+			padding-right: 5px;
+			padding-left: 5px;
+		}
 
 	}
 
@@ -163,7 +167,7 @@
 		background-color: #f1ca49;
 		box-shadow: 0 0 8px rgba(0, 0, 0, 0.18);
 		font-family: "Open Sans";
-		font-size: 14px;
+		font-size: 0.875rem;
 		color: #fff;
 		font-weight: 700;
 		text-transform: uppercase;

@@ -1,11 +1,11 @@
 .c-options {
 	&__header{
 		font-family: "Roboto Slab";
-		font-size: 23px;
+		font-size: 1.4375rem;
 		margin-bottom: 15px;
 		text-align: center;
 		@media (max-width:$bp-sm-2) {
-			font-size: 20px;
+			font-size: 1.25rem;
 		}
 	}
 }

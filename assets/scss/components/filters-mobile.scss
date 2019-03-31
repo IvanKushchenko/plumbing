@@ -4,7 +4,7 @@
 		border-radius: 3px;
 		background-color: #8cafc2;
 		text-transform: uppercase;
-		font-size: 16px;
+		font-size: 1rem;
 		color: #ffffff;
 		display: flex;
 		align-items: center;
@@ -19,6 +19,9 @@
 			background: url('../img/icons/filter-icon.png') no-repeat;
 			background-size: contain;
 			opacity: .7;
+		}
+		@media (max-width: $bp-sm-2) {
+		    font-size: 0.8rem;
 		}
 	}
 	.dropdown-menu{

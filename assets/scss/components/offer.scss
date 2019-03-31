@@ -5,9 +5,12 @@
 	font-weight: 700;
 	letter-spacing: 0.28px;
 	text-transform: uppercase;
-	font-size: 14px;
+	font-size: 0.875rem;
 	color: #fff;
 	margin: 10px 0;
 	text-align: center;
 	padding: 13px 65px;
+	@media (max-width:$bp-sm-2) {
+		padding: 13px 15px;
+	}
 }

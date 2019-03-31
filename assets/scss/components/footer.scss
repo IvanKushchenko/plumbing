@@ -18,7 +18,7 @@
 		}
 	}
 	&__copyright {
-		font-size: 13px;
+		font-size: 0.8125rem;
 		letter-spacing: 0.53px;
 		color: #8fa2ac;
 		@media (max-width:$bp-md) {
@@ -31,7 +31,7 @@
 		display: block;
 		text-decoration: none;
 		box-shadow: none;
-		font-size: 14px;
+		font-size: 0.875rem;
 		color: #8fa2ac;
 		display: block;
 		letter-spacing: 0.56px;
@@ -45,7 +45,7 @@
 
 	&__bottom {
 		text-align: center;
-		font-size: 12px;
+		font-size: 0.75rem;
 		color: #8fa2ac;
 		letter-spacing: 0.48px;
 		opacity: 0.68;
@@ -98,7 +98,7 @@
 		}
 
 		&_contacts {
-			font-size: 14px;
+			font-size: 0.875rem;
 			letter-spacing: 0.57px;
 			color: #8fa2ac;
 			position: relative;
@@ -127,11 +127,11 @@
 
 		&_placement {
 			width: 280px;
-			font-size: 14px;
+			font-size: 0.875rem;
 			letter-spacing: 0.57px;
 			color: #8fa2ac;
 			position: relative;
-			left: -40px;
+			left: -10px;
 			margin-top: 4px;
 			@media (max-width:$bp-lg) {
 				width: auto;

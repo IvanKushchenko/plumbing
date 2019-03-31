@@ -1,11 +1,13 @@
 .c-nav {
 	display: flex;
-
+	@media (max-width:$bp-sm-2) {
+		flex-wrap: wrap;
+	}
 	&__item {
 		text-transform: uppercase;
 		color: #222222;
 		font-family: "PT Sans";
-		font-size: 14px;
+		font-size: 0.875rem;
 		font-weight: 400;
 		box-shadow: none;
 		&:hover{
@@ -13,6 +15,7 @@
 		}
 		@media (max-width:$bp-sm-2) {
 			white-space: nowrap;
+			margin-bottom: 10px;
 		}
 		&:not(:last-child) {
 			margin-right: 23px;

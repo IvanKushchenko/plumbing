@@ -39,6 +39,10 @@
 		.swiper-slide-thumb-active{
 			border-color: #8cafc2;
 		}
+
+		@media (max-width: $bp-sm-2) {
+			margin-top: 10px;
+		}
 		
 	}
 }

@@ -5,12 +5,12 @@
 		border-radius: 3px;
 		border: 1px solid #d9e3e9;
 		margin-bottom: 20px;
-		font-size: 14px;
+		font-size: 0.875rem;
 		padding-left: 15px;
-		font-size: 15px;
+		font-size: 0.9375rem;
 		&::-webkit-input-placeholder{
 			color: #222222;
-			font-size: 15px;
+			font-size: 0.9375rem;
 		}
 		&_textarea{
 			padding-top: 10px;
@@ -67,7 +67,10 @@
 		margin-top: 20px;
 		width: 275px;
 		height: 42px;
-		font-size: 17px;
+		font-size: 1.0625rem;
+		@media (max-width: $bp-sm-2) {
+			width: 100%;
+		}
 	}
 	&__dropdown{
 
@@ -76,7 +79,7 @@
 			border: 1px solid #d9e3e9;
 			background: none;
 			.label{
-				font-size: 16px;
+				font-size: 1rem;
 			}
 			.button{
 				background: none;

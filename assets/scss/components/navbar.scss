@@ -12,7 +12,13 @@
 		align-items: center;
 		justify-content: space-between;
 		padding-right: 0;
-		
+		&__logo{
+			@media (max-width: $bp-sm-2) {
+				max-width: 65px;
+				margin-right: 10px;
+				margin-left: 10px;
+			}
+		}
 		&__item{
 		    white-space: normal !important;
 		    height: 100%;
@@ -50,7 +56,7 @@
 		    		.c-btn{
 	    			    height: 39px;
 	    			    font-weight: 700;
-	    			    font-size: 14px;
+	    			    font-size: 0.875rem;
 		    		}
 		    	}
 		    }
@@ -78,7 +84,9 @@
 	@media (max-width:$bp-lg) {
 		padding-right: 20px;
 	}
-
+	@media (max-width:$bp-sm-2) {
+		padding-right: 5px;
+	}
 	&__txt {
 		@media (max-width:$bp-xl) {
 			display: none;
@@ -87,14 +95,14 @@
 	}
 
 	&__link {
-		font-size: 12px;
+		font-size: 0.75rem;
 		@media (max-width: $bp-sm) {
-			font-size: 10px;
+			font-size: 0.625rem;
 		}
 	}
 
 	&__btn {
-		font-size: 12px !important;
+		font-size: 0.75rem !important;
 		display: flex;
 		align-items: center;
 		color: #222222;
@@ -113,10 +121,10 @@
 		}
 
 		@media (max-width:$bp-lg) {
-			font-size: 11px !important;
+			font-size: 0.6875rem !important;
 		}
 		@media (max-width: $bp-sm) {
-				font-size: 9px !important;
+				font-size: 0.5625rem !important;
 			}
 
 	}
@@ -168,7 +176,7 @@
 	
 	&__catalog-btn{
 		display: none;
-		font-size: 16px;
+		font-size: 1rem;
 		text-transform: uppercase;
 		letter-spacing: 0.64px;
 		line-height: 35px;
@@ -182,16 +190,20 @@
 			}
 		@media (max-width: $bp-sm) {
 			width: 22%;
-			font-size: 11px;
+			font-size: 0.6875rem;
+		}
+
+		@media (max-width: $bp-sm-2) {
+			width: 35%;
 		}
 	}
 	
 	&__item-phone {
-		font-size: 17px;
+		font-size: 1.0625rem;
 		font-weight: 700;
 		margin-right: 40px;
 		@media (max-width: $bp-md) {
-			font-size: 15px;
+			font-size: 0.9375rem;
 			margin-right: 10px;
 		}
 		@media (max-width: $bp-sm) {
@@ -214,7 +226,7 @@
 	&__item-call{
 		border-radius: 3px;
 		border: 1px solid #6493ad;
-		font-size: 12px;
+		font-size: 0.75rem;
 		text-transform: uppercase;
 		color: #6493ad;
 	    padding: 6px 20px;
@@ -225,7 +237,7 @@
 	&__item {
 		color: #6493ad;
 		text-transform: uppercase;
-		font-size: 12px;
+		font-size: 0.75rem;
 		display: flex;
 		align-items: center;
 		background-image: linear-gradient(to right, rgba(114, 155, 178, 0.17) 0%, rgba(0, 0, 0, 0) 100%);
@@ -257,7 +269,7 @@
 	    		.c-btn{
     			    height: 39px;
     			    font-weight: 700;
-    			    font-size: 14px;
+    			    font-size: 0.875rem;
 	    		}
 	    	}
 	    }
@@ -286,6 +298,10 @@
 				padding-left: 0;
 				justify-content: center;
 				width: 36%;
+			}
+
+			@media (max-width: $bp-sm-2) {
+				width: 45%;
 			}
 
 
@@ -342,6 +358,9 @@
 				justify-content: center;
 				width: 20%;
 			}
+			@media (max-width: $bp-sm-2) {
+				width: 30%;
+			}
 
 		}
 
@@ -372,6 +391,9 @@
 			}
 			@media (max-width: $bp-sm) {
 				width: 32%;
+			}
+			@media (max-width:$bp-sm-2) {
+				display: none;
 			}
 
 		}
