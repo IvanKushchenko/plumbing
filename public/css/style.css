@@ -11219,7 +11219,7 @@ a:hover {
   left: 0;
   top: 0;
   width: 100%;
-  z-index: 99999;
+  z-index: 999;
 }
 
 .c-navbar-scrolled {
@@ -11361,6 +11361,10 @@ a:hover {
   color: #222222;
 }
 
+.c-navbar__btn:hover .dropdown-menu {
+  display: block;
+}
+
 @media (max-width: 992px) {
   .c-navbar__btn {
     font-size: 0.6875rem !important;
@@ -11445,7 +11449,7 @@ a:hover {
 @media (max-width: 576px) {
   .c-navbar__catalog-btn {
     width: 22%;
-    font-size: 0.6875rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -11930,7 +11934,7 @@ a:hover {
 
 @media (max-width: 576px) {
   .c-header__actions .c-btn {
-    font-size: 0.625rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -15123,11 +15127,6 @@ a:hover {
   }
 }
 
-.c-choose-by-property__list {
-  display: flex;
-  justify-content: space-between;
-}
-
 @media (max-width: 992px) {
   .c-choose-by-property__list {
     flex-wrap: wrap;
@@ -15135,21 +15134,7 @@ a:hover {
 }
 
 .c-choose-by-property__item {
-  max-width: 120px;
-}
-
-@media (max-width: 992px) {
-  .c-choose-by-property__item {
-    max-width: initial;
-    width: 33.33%;
-    margin-bottom: 10px;
-  }
-}
-
-@media (max-width: 450px) {
-  .c-choose-by-property__item {
-    width: 50%;
-  }
+  margin-bottom: 10px;
 }
 
 .c-choose-by-property__image {
@@ -15176,12 +15161,6 @@ a:hover {
   font-size: 0.75rem;
   text-transform: uppercase;
   text-align: center;
-}
-
-@media (max-width: 992px) {
-  .c-choose-by-property__footer {
-    text-align: left;
-  }
 }
 
 .c-choose-by-property__more-btn {
@@ -16085,6 +16064,7 @@ a:hover {
   display: inline-block;
   margin-left: 5px;
   font-family: 'Rubl';
+  text-transform: lowercase;
 }
 
 .c-navbar-product__close {

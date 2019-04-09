@@ -11,6 +11,18 @@ import Swiper from 'swiper';
 
 $(function() {
 
+
+	$('.js-navbar-product-remove').click(function(){
+		$(this).parents('.c-navbar-product').remove();
+	})
+
+	$('.js-navbar-btn').hover(function(){
+		$(this).dropdown('toggle');
+	}, function(){
+		$(this).dropdown('toggle');
+	})
+
+
 	 $(window).scroll(function() {
 	 	if($(window).scrollTop() > $('.c-navbar-unscrolled').height()){
 	 		if(!$('.c-navbar-scrolled').show()) $('.c-navbar-scrolled').show(); 
@@ -161,7 +173,8 @@ $(function() {
         		slidesPerView: 3
         	},
         	450:{
-        		slidesPerView: 2
+        		slidesPerView: 2,
+        		slidesPerGroup: 2
         	}
         },
         navigation: {
@@ -321,20 +334,22 @@ $(function() {
 
 
     function orderCheckoutInfo() {
-        var orderInfo = $('.c-product__order-info') || $('.c-product__order-info_mobile');
+        var orderInfo = ($('.c-product__order-info_desktop').is(":visible")) ? $('.c-product__order-info_desktop') : $('.c-product__order-info_mobile');
+        console.log($('.c-product__order-info_desktop').css('display'));
+        console.log("orderInfo", orderInfo);
         if(!orderInfo.length) return true;
         var productCheckoutStatic = $('.js-product-order-checkout-static');
         var productCheckoutFixed = $('.js-product-order-checkout-fixed');
         productCheckoutFixed.css({
-            'left': orderInfo.offset().left || orderInfo.eq(1).offset().left + 'px',
+            'left': orderInfo.offset().left + 'px',
             'width': ($(window).width() <= 768) ? orderInfo.parent().width() + 40 + 'px' : orderInfo.parent().width() + 'px'
         })
 
         function checkPosAndHide() {
-            if ($(window).scrollTop() + $(window).height() >= productCheckoutStatic.offset().top) {
-                productCheckoutFixed.hide();
-            } else {
+            if ($(window).scrollTop() + $(window).height() < productCheckoutStatic.offset().top && $(window).scrollTop() > orderInfo.offset().top) {
                 productCheckoutFixed.show();
+            } else {
+                productCheckoutFixed.hide();
             }
         }
         checkPosAndHide();

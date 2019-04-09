@@ -3,7 +3,7 @@
 	left: 0;
 	top: 0;
 	width: 100%;
-	z-index: 99999;
+	z-index: 999;
 }
 .c-navbar-scrolled{
 	display: none;
@@ -118,8 +118,11 @@
 		}
 		&:hover {
 			color: #222222;
+			.dropdown-menu{
+				display: block;
+			}
 		}
-
+		
 		@media (max-width:$bp-lg) {
 			font-size: 0.6875rem !important;
 		}
@@ -190,7 +193,7 @@
 			}
 		@media (max-width: $bp-sm) {
 			width: 22%;
-			font-size: 0.6875rem;
+			font-size: 0.9rem;
 		}
 
 		@media (max-width: $bp-sm-2) {
