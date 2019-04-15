@@ -398,8 +398,10 @@ $(function() {
     $('.js-read-more-btn').click(function(e){
     	e.preventDefault();
     	if($(this).parent().parent().find('.js-read-more-container').hasClass('is-active')){
+    		$(this).text('Развернуть');
     		$(this).parent().parent().find('.js-read-more-container').removeClass('is-active')
     	}else{
+    		$(this).text('Свернуть');
     		$(this).parent().parent().find('.js-read-more-container').addClass('is-active')
     	}
     })

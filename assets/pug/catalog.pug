@@ -220,11 +220,13 @@ html(lang="ru")
 							.c-share.mb-3.d-lg-none
 								img(src=require("../img/content/installment.jpg"), alt="").w-100
 							.c-breadcrumbs
-								a(href="#!").c-breadcrumbs__item Главная
-								a(href="#!").c-breadcrumbs__item Смесители
+								.c-breadcrumbs__list
+									a(href="#!").c-breadcrumbs__item Главная
+									a(href="#!").c-breadcrumbs__item Смесители
+									a(href="dropdown", data-toggle="dropdown", aria-expanded="false", id="dropdown").c-breadcrumbs__item_dropdown.dropdown-toggle Душевые ограждения
+									a(href="#!").c-breadcrumbs__item Душевые углы
 								.c-breadcrumbs__item.c-breadcrumbs__item_dropdown-wrap
-									a(href="#", data-toggle="dropdown", aria-expanded="false").c-breadcrumbs__item_dropdown.dropdown-toggle Душевые ограждения
-									.dropdown-menu.c-breadcrumbs__dropdown-menu
+									.dropdown-menu.c-breadcrumbs__dropdown-menu(aria-labelledby="dropdown")
 										li
 											a(href="#") Форсунки для душа
 										li
@@ -233,7 +235,6 @@ html(lang="ru")
 											a(href="#") Наборы
 										li
 											a(href="#") Смесители для душа
-								a(href="#!").c-breadcrumbs__item Душевые углы
 							.c-choose-by-property
 								ul.nav.nav-tabs
 									li.nav-item

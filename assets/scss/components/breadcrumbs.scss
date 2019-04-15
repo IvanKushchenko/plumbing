@@ -1,11 +1,10 @@
 .c-breadcrumbs {
 	font-size: 0.8125rem;
 	margin-bottom: 16px;
-
+	overflow: auto;
 	@media (max-width:$bp-sm) {
 		font-size: 0.6875rem;
 		display: flex;
-		flex-wrap: wrap;
 		padding: 5px 0;
 	}
 	@media (max-width:$bp-sm-2) {
@@ -38,9 +37,7 @@
 		box-shadow: none;
 	    max-width: 150px;
 	    display: inline-block;
-	    overflow: hidden;
 	    white-space: nowrap;
-	    text-overflow: ellipsis;
 		&:not(:last-child) {
 			&:after {
 				content: '/';
@@ -60,7 +57,9 @@
 			max-width: initial;
 	    	overflow: visible;
 			position: relative;
-			top: -2px;
+			&:after{
+				margin-left: 20px !important;
+			}
 		}
 		&_dropdown {
 			// border-bottom: 1px dotted rgba(100, 147, 173, 0.3);
@@ -76,8 +75,9 @@
 				width: 16px;
 				height: 16px;
 				border-radius: 50%;
-				position: relative;
-				top: 5px;
+				position: absolute;
+			    transform: translateY(-50%);
+				top: 50%;
 				background: #f1ca49 url('../img/icons/arrow-down.svg') no-repeat center center;
 			}
 

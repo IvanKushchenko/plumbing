@@ -11206,6 +11206,14 @@ a:hover {
   box-shadow: none;
 }
 
+.h-price:after {
+  content: 'a';
+  display: inline-block;
+  margin-left: 5px;
+  font-family: 'Rubl';
+  text-transform: lowercase;
+}
+
 .mb-6 {
   margin-bottom: 4rem !important;
 }
@@ -11818,13 +11826,17 @@ a:hover {
 
 @media (max-width: 450px) {
   .c-header__logo {
+    width: 50%;
     margin-bottom: 10px;
   }
 }
 
 @media (max-width: 450px) {
   .c-header .c-phone {
+    width: 100%;
     margin-bottom: 10px;
+    margin-top: 10px;
+    order: 2;
   }
 }
 
@@ -11842,7 +11854,7 @@ a:hover {
 
 @media (max-width: 450px) {
   .c-header__top {
-    flex-direction: column;
+    flex-wrap: wrap;
   }
 }
 
@@ -11907,7 +11919,8 @@ a:hover {
 
 @media (max-width: 450px) {
   .c-header__actions {
-    width: 100%;
+    width: 50%;
+    padding: 0 10px;
   }
 }
 
@@ -12215,13 +12228,13 @@ a:hover {
 .c-breadcrumbs {
   font-size: 0.8125rem;
   margin-bottom: 16px;
+  overflow: auto;
 }
 
 @media (max-width: 576px) {
   .c-breadcrumbs {
     font-size: 0.6875rem;
     display: flex;
-    flex-wrap: wrap;
     padding: 5px 0;
   }
 }
@@ -12258,9 +12271,7 @@ a:hover {
   box-shadow: none;
   max-width: 150px;
   display: inline-block;
-  overflow: hidden;
   white-space: nowrap;
-  text-overflow: ellipsis;
 }
 
 .c-breadcrumbs__item:not(:last-child):after {
@@ -12286,7 +12297,10 @@ a:hover {
   max-width: initial;
   overflow: visible;
   position: relative;
-  top: -2px;
+}
+
+.c-breadcrumbs__item_dropdown-wrap:after {
+  margin-left: 20px !important;
 }
 
 .c-breadcrumbs__item_dropdown {
@@ -12305,8 +12319,9 @@ a:hover {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  position: relative;
-  top: 5px;
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
   background: #f1ca49 url(../img/icons/arrow-down.svg) no-repeat center center;
 }
 
@@ -12469,20 +12484,17 @@ a:hover {
   text-decoration: line-through;
 }
 
-.c-product__price-number_old:after {
-  display: none;
-}
-
 .c-product__price-number_new {
   font-size: 1.875rem;
-  line-height: 1.1;
+  line-height: 1;
   color: #f3932c;
 }
 
 .c-product__order-actions .c-btn {
   height: 34px;
   padding: 0 12px;
-  font-weight: bold;
+  letter-spacing: 0.72px;
+  font-size: 0.75rem;
 }
 
 .c-product__order-actions .c-btn:not(:last-child) {
@@ -13075,8 +13087,7 @@ a:hover {
 }
 
 .c-table__cell:nth-child(3) {
-  margin-top: -26px;
-  flex-basis: 20%;
+  flex-basis: 30%;
   text-align: right;
 }
 
@@ -13384,7 +13395,8 @@ a:hover {
   border-radius: 3px;
   background-color: #8cafc2;
   padding: 0 15px;
-  font-weight: bold;
+  letter-spacing: 0.72px;
+  font-size: 0.75rem;
 }
 
 .c-product-card__sale {
@@ -13406,7 +13418,7 @@ a:hover {
 
 .c-product-card__price {
   font-family: "Roboto Slab";
-  font-size: 0.9375rem;
+  font-size: 1rem;
   line-height: 1.2;
 }
 
@@ -13435,7 +13447,7 @@ a:hover {
 
 .c-product-card__price_new {
   color: #f3932c;
-  font-size: 1.125rem;
+  font-size: 1.3rem;
   font-weight: bold;
 }
 
