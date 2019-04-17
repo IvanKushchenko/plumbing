@@ -5,6 +5,22 @@
 	&_link &__menu{
 		min-width: initial;
 	}
+
+	&__close{
+		display: block;
+		width: 15px;
+		height: 15px;
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		background: url('../img/icons/close.png') no-repeat;
+		background-size: contain;
+		cursor: pointer;
+	}
+
+	&__menu{
+		position: relative;
+	}
 }
 .c-dropdown-toggle{
 	cursor: pointer;

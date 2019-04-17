@@ -223,10 +223,10 @@ html(lang="ru")
 								.c-breadcrumbs__list
 									a(href="#!").c-breadcrumbs__item Главная
 									a(href="#!").c-breadcrumbs__item Смесители
-									a(href="dropdown", data-toggle="dropdown", aria-expanded="false", id="dropdown").c-breadcrumbs__item_dropdown.dropdown-toggle Душевые ограждения
+									a(href="breadcrumb-dropdown-1", data-toggle="dropdown", aria-expanded="false").c-breadcrumbs__item.c-breadcrumbs__item_dropdown.js-breadcrumb-dropdown.dropdown-toggle Душевые ограждения
 									a(href="#!").c-breadcrumbs__item Душевые углы
-								.c-breadcrumbs__item.c-breadcrumbs__item_dropdown-wrap
-									.dropdown-menu.c-breadcrumbs__dropdown-menu(aria-labelledby="dropdown")
+								.c-breadcrumbs__dropdown
+									.dropdown-menu.c-breadcrumbs__dropdown-menu(aria-labelledby="dropdown")#breadcrumb-dropdown-1
 										li
 											a(href="#") Форсунки для душа
 										li
@@ -350,8 +350,9 @@ html(lang="ru")
 									.row
 										.col-6
 											.c-filters-mobile.dropdown.c-dropdown.d-lg-none
-												.dropdown-toggle.c-dropdown-toggle(data-toggle="dropdown" data-flip="false") фильтр
+												.dropdown-toggle.c-dropdown-toggle.js-dropdown-filters(data-toggle="dropdown" data-flip="false") фильтр
 												.dropdown-menu.c-dropdown__menu
+													.c-dropdown__close.js-dropdown-filters-close
 													.c-filters.mb-5
 														.c-filter.c-filter_choosed-filters
 															.c-filter__header

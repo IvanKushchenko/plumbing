@@ -176,7 +176,20 @@
 			align-items: center;
 		}
 	}
+	&__order-checkout-top-close{
+		position: absolute;
+		display: none;
+		width: 15px;
+		height: 15px;
+		position: absolute;
+		right: 5px;
+		top: 5px;
+		background: url('../img/icons/close.png') no-repeat;
+		background-size: contain;
+		cursor: pointer;
+	}
 	&__order-checkout {
+		position: relative;
 		margin-bottom: 70px;
 		border-radius: 3px;
 		border: 2px solid #e4edf2;
@@ -184,7 +197,7 @@
 			margin-left: -20px;
 			width: calc(100% + 40px);
 		}
-
+	
 		&_fixed {
 			cursor: default;
 			position: fixed;
@@ -255,8 +268,10 @@
 		background-color: #ecf2f6;
 		height: 65px;
 		padding-left: 40px;
-		padding-right: 23px;
-
+		padding-right: 32px;
+		&[aria-expanded="true"] > &-close{
+			display: block;
+		}
 		@media (max-width:$bp-xl) {
 			padding-left: 15px;
 			padding-right: 15px;

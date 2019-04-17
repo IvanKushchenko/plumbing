@@ -1,7 +1,7 @@
 .c-breadcrumbs {
 	font-size: 0.8125rem;
 	margin-bottom: 16px;
-	overflow: auto;
+	position: relative;
 	@media (max-width:$bp-sm) {
 		font-size: 0.6875rem;
 		display: flex;
@@ -9,6 +9,13 @@
 	}
 	@media (max-width:$bp-sm-2) {
 		align-items: center;
+	}
+	
+	&__list{
+		display: flex;
+		padding: 5px 0;
+		overflow: hidden;
+		overflow-x: auto;
 	}
 
 	&__dropdown-menu {
@@ -38,7 +45,7 @@
 	    max-width: 150px;
 	    display: inline-block;
 	    white-space: nowrap;
-		&:not(:last-child) {
+		&:not(.c-breadcrumbs__item_dropdown):not(:last-of-type) {
 			&:after {
 				content: '/';
 				color: #6493ad;
@@ -64,6 +71,7 @@
 		&_dropdown {
 			// border-bottom: 1px dotted rgba(100, 147, 173, 0.3);
 			position: relative;
+			margin-right: 25px;
 			&[aria-expanded="true"]{
 				border-bottom: none;
 				box-shadow: none;

@@ -11,6 +11,42 @@ import Swiper from 'swiper';
 
 $(function() {
 
+	$('.js-order-checkout-expand-close').click(function(e){
+		e.preventDefault();
+		$('.js-product-order-checkout-static .c-product__order-checkout-top').collapse({
+		  toggle: false
+		})
+	})
+
+
+	$('.c-filters-mobile .dropdown-menu').click(function(e) {
+	    e.stopPropagation();
+	});
+
+	$('.js-dropdown-filters-close').click(function(){
+		$('.js-dropdown-filters').dropdown('toggle');
+	})
+
+	/* Breadcrumbs dropdown */
+	$(function(){
+		var dropdownToggled = false;
+		$('.js-breadcrumb-dropdown').click(function(e){
+			e.preventDefault()
+			var parent = $(this).parents('.c-breadcrumbs');
+			var dropdownId = $(this).attr("href");
+			var dropdownMenu = parent.find('#' + dropdownId);
+			if(dropdownToggled){
+				dropdownToggled = false;
+				dropdownMenu.removeClass('show');
+				return true;
+			}
+			dropdownMenu.addClass('show');
+			dropdownToggled = true;
+			var leftPos = $(this).position().left;
+			dropdownMenu.css({'left': leftPos + "px"});
+		})
+	})
+
 
 	$('.js-navbar-product-remove').click(function(){
 		$(this).parents('.c-navbar-product').remove();

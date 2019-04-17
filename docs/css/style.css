@@ -12228,7 +12228,7 @@ a:hover {
 .c-breadcrumbs {
   font-size: 0.8125rem;
   margin-bottom: 16px;
-  overflow: auto;
+  position: relative;
 }
 
 @media (max-width: 576px) {
@@ -12243,6 +12243,13 @@ a:hover {
   .c-breadcrumbs {
     align-items: center;
   }
+}
+
+.c-breadcrumbs__list {
+  display: flex;
+  padding: 5px 0;
+  overflow: hidden;
+  overflow-x: auto;
 }
 
 .c-breadcrumbs__dropdown-menu {
@@ -12274,7 +12281,7 @@ a:hover {
   white-space: nowrap;
 }
 
-.c-breadcrumbs__item:not(:last-child):after {
+.c-breadcrumbs__item:not(.c-breadcrumbs__item_dropdown):not(:last-of-type):after {
   content: '/';
   color: #6493ad;
   display: inline-block;
@@ -12282,7 +12289,7 @@ a:hover {
 }
 
 @media (max-width: 576px) {
-  .c-breadcrumbs__item:not(:last-child):after {
+  .c-breadcrumbs__item:not(.c-breadcrumbs__item_dropdown):not(:last-of-type):after {
     margin: 0 5px;
   }
 }
@@ -12305,6 +12312,7 @@ a:hover {
 
 .c-breadcrumbs__item_dropdown {
   position: relative;
+  margin-right: 25px;
 }
 
 .c-breadcrumbs__item_dropdown[aria-expanded="true"] {
@@ -12514,7 +12522,21 @@ a:hover {
   }
 }
 
+.c-product__order-checkout-top-close {
+  position: absolute;
+  display: none;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  background: url(../img/icons/close.png) no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
 .c-product__order-checkout {
+  position: relative;
   margin-bottom: 70px;
   border-radius: 3px;
   border: 2px solid #e4edf2;
@@ -12601,7 +12623,11 @@ a:hover {
   background-color: #ecf2f6;
   height: 65px;
   padding-left: 40px;
-  padding-right: 23px;
+  padding-right: 32px;
+}
+
+.c-product__order-checkout-top[aria-expanded="true"] > .c-product__order-checkout-top-close {
+  display: block;
 }
 
 @media (max-width: 1200px) {
@@ -13136,6 +13162,22 @@ a:hover {
 
 .c-dropdown_link .c-dropdown__menu {
   min-width: initial;
+}
+
+.c-dropdown__close {
+  display: block;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: url(../img/icons/close.png) no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.c-dropdown__menu {
+  position: relative;
 }
 
 .c-dropdown-toggle {
@@ -15958,6 +16000,13 @@ a:hover {
 
 .c-filters-mobile .dropdown-menu {
   padding: 10px;
+  overflow: auto;
+  position: fixed !important;
+  width: 100% !important;
+  height: 100% !important;
+  left: 0 !important;
+  top: 0 !important;
+  transform: none !important;
 }
 
 .c-load-more.is-loading {
