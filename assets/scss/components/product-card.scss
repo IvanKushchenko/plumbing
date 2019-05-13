@@ -23,13 +23,19 @@
 		}
 
 	}
+	
+	&__show-description{
+		font-style: italic;
+		display: inline-block;
+	}
 
 	&__title {
 		font-size: 0.9375rem;
 		text-transform: uppercase;
 		color: #6493ad;
 		font-family: "Open Sans";
-
+		display: inline-block;
+		margin-bottom: 10px;
 		@media (max-width:$bp-md) {
 			pointer-events: none;
 		}
@@ -38,16 +44,15 @@
 
 	&__subtitle {
 		margin-top: 1px;
-		margin-bottom: 11px;
+		margin-bottom: 2px;
 		text-transform: uppercase;
-	}
-
-	&__subtitle {
 		font-size: 0.75rem;
 	}
 
 	&__size {
 		font-size: 0.8125rem;
+		display: inline-block;
+		margin-bottom: 10px;
 	}
 
 	&__btn {
@@ -57,7 +62,8 @@
 		background-color: #8cafc2;
 		padding: 0 15px;
 	    letter-spacing: 0.72px;
-	    font-size: 0.75rem;
+	    font-size: 0.9375rem;
+	    font-weight: bold;
 	}
 
 	&__sale {
@@ -79,7 +85,7 @@
 
 	&__price {
 		font-family: "Roboto Slab";
-		font-size: 1rem;
+		font-size: 1.375rem;
 		line-height: 1.2;
 
 		&:after {
@@ -90,8 +96,18 @@
 		}
 
 		&_old {
-			text-decoration: line-through;
-
+			position: relative;
+			font-size: 1.1rem;
+			&:before{
+				content: '';
+				display: block;
+				position: absolute;
+				width: 100%;
+				height: 3px;
+				background: #f3932c;
+				transform: rotate(10deg);
+				top: 9px;
+			}
 			@media (max-width:$bp-md) {
 				margin-right: 10px;
 			}
@@ -102,7 +118,7 @@
 
 		&_new {
 			color: #f3932c;
-			font-size: 1.3rem;
+			font-size: 1.375rem;
 			font-weight: bold;
 		}
 

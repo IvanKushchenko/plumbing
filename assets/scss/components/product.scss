@@ -4,8 +4,7 @@
 	}
 
 	&__title {
-		font-family: "Roboto Slab";
-		font-size: 1.4375rem;
+		font-size: 1.5625rem;
 
 		@media (max-width:$bp-lg) {
 			width: 50%;
@@ -44,12 +43,12 @@
 	}
 
 	&__order-info {
-		padding: 17px 0;
+		padding: 13px 0;
 		padding-left: 32px;
 		padding-right: 23px;
 		border-radius: 3px;
 		background-color: #ecf2f6;
-		padding-bottom: 26px;
+		padding-bottom: 23px;
 		margin-bottom: 10px;
 		border: 2px solid #e4edf2;
 
@@ -157,7 +156,8 @@
 			height: 34px;
 			padding: 0 12px;
 		    letter-spacing: 0.72px;
-		    font-size: 0.75rem;
+		    font-size: 0.875rem;
+		    font-weight: bold;
 			&:not(:last-child) {
 				margin-right: 20px;
 

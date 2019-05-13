@@ -27,10 +27,11 @@
 	}
 	.c-phone{
 		@media (max-width:$bp-sm-2) {
-			width: 100%;
+			width: 50%;
 			margin-bottom: 10px;
 			margin-top: 10px;
-			order: 2;
+			text-align: right;
+			font-size: 1.125rem;
 		}
 	}
 
@@ -40,9 +41,6 @@
 		align-items: center;
 		@media (max-width:$bp-sm) {
 			justify-content: space-between;
-		}
-		@media (max-width:$bp-sm-2) {
-			flex-wrap: wrap;
 		}
 	}
 
@@ -100,8 +98,7 @@
 	&__actions {
 		margin-top: 3px;
 		@media (max-width:$bp-sm-2) {
-			width: 50%;
-			padding: 0 10px;
+			display: none !important;
 		}
 		.c-btn {
 			letter-spacing: 0.72px;

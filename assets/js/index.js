@@ -335,7 +335,8 @@ $(function() {
         }
     });
 
-    $('.c-product-card .c-product-card__title').click(function(){
+    $('.c-product-card .c-product-card__title, .c-product-card .c-product-card__show-description').click(function(e){
+    	e.preventDefault();
     	$('#preview-product-modal').modal('show');
     })
     $('#preview-product-modal').on('shown.bs.modal', function(){
