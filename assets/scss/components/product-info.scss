@@ -68,8 +68,7 @@
 	}
 
 	&__description {
-		padding-left: 30px;
-		font-size: 1rem;
+		font-size: 0.875rem;
 		margin-bottom: 30px;
 
 		@media (max-width:$bp-lg) {
@@ -87,10 +86,16 @@
 			}
 
 		}
-
+		tr{
+			border-bottom: 1px solid #ecf2f6;
+		}
 		td {
 			&:first-child {
 				width: 51%;
+				padding-left: 30px;
+			}
+			&:last-child {
+				font-style: italic;
 			}
 
 			padding: 7px 0;
