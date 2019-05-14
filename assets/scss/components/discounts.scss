@@ -1,0 +1,22 @@
+.c-discounts{
+	&__item{
+		display: flex;
+		align-items: center;
+		font-size: 0.875rem;
+	}
+	&__percent{
+		flex-basis: 60px;
+		text-align: center;
+	}
+	&__price{
+		flex-basis: 70px;
+		text-decoration: line-through;
+		font-family: "Roboto Slab";
+		&:after{
+			content: 'a';
+			display: inline-block;
+			margin-left: 5px;
+			font-family: 'Rubl';
+		}
+	}
+}

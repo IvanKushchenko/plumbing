@@ -11754,6 +11754,14 @@ a:hover {
   }
 }
 
+.c-btn_lg {
+  height: 48px;
+  width: 100%;
+  max-height: 270px;
+  font-size: 1.0625rem;
+  font-weight: bold;
+}
+
 .c-btn_bordered {
   box-shadow: inset 0 0 0 3px #f1ca49;
 }
@@ -12983,6 +12991,24 @@ a:hover {
   }
 }
 
+.c-table_basket .c-table__cell {
+  flex-grow: 1;
+}
+
+.c-table_basket .c-table__body {
+  padding-right: 0;
+}
+
+.c-table_basket .c-table__header {
+  padding-left: 20px;
+  font-weight: 400;
+  width: 100%;
+}
+
+.c-table_basket .c-table__header-cell {
+  flex-grow: 1;
+}
+
 .c-table_product {
   margin-bottom: 50px;
 }
@@ -13129,28 +13155,28 @@ a:hover {
   }
 }
 
-.c-table__cell:not(:first-child) {
+.c-table:not(.c-table_basket) .c-table__cell:not(:first-child) {
   padding-left: 24px;
 }
 
-.c-table__cell:last-child {
+.c-table:not(.c-table_basket) .c-table__cell:last-child {
   flex-grow: 1;
 }
 
 @media (max-width: 768px) {
-  .c-table__cell:last-child {
+  .c-table:not(.c-table_basket) .c-table__cell:last-child {
     padding-left: 0;
   }
 }
 
-.c-table__cell:nth-child(3) {
+.c-table:not(.c-table_basket) .c-table__cell:nth-child(3) {
   flex-basis: 30%;
   text-align: right;
   padding-left: 10%;
 }
 
 @media (max-width: 768px) {
-  .c-table__cell:nth-child(3) {
+  .c-table:not(.c-table_basket) .c-table__cell:nth-child(3) {
     display: none;
   }
 }
@@ -16464,6 +16490,54 @@ a:hover {
   top: 15px;
 }
 
+.c-total-price {
+  display: flex;
+  align-items: flex-end;
+}
+
+.c-total-price__txt {
+  font-size: 1.125rem;
+  line-height: 1.125rem;
+  margin-right: 10px;
+}
+
+.c-total-price__number {
+  font-family: "Roboto Slab";
+  font-size: 1.875rem;
+  line-height: 1.8rem;
+}
+
+.c-total-price__number:after {
+  content: 'a';
+  display: inline-block;
+  margin-left: 5px;
+  font-family: 'Rubl';
+}
+
+.c-discounts__item {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+}
+
+.c-discounts__percent {
+  flex-basis: 60px;
+  text-align: center;
+}
+
+.c-discounts__price {
+  flex-basis: 70px;
+  text-decoration: line-through;
+  font-family: "Roboto Slab";
+}
+
+.c-discounts__price:after {
+  content: 'a';
+  display: inline-block;
+  margin-left: 5px;
+  font-family: 'Rubl';
+}
+
 .s-shares {
   margin-top: 30px;
 }
@@ -16494,6 +16568,14 @@ a:hover {
 
 .s-404__img {
   max-width: 100%;
+}
+
+.s-basket__total-price {
+  margin-bottom: 20px;
+}
+
+.s-basket__coupon {
+  font-size: 1.125rem;
 }
 
 .o-page {

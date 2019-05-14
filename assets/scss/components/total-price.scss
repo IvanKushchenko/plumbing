@@ -1,0 +1,21 @@
+.c-total-price{
+	display: flex;
+	align-items: flex-end;
+	&__txt{
+		font-size: 1.125rem;
+		line-height: 1.125rem;
+		margin-right: 10px;
+	}
+	&__number{
+		font-family: "Roboto Slab";
+		font-size: 1.875rem;
+		line-height: 1.8rem;
+		&:after{
+			content: 'a';
+			display: inline-block;
+			margin-left: 5px;
+			font-family: 'Rubl';
+		}
+	}
+
+}
