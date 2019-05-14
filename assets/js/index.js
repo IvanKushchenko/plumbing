@@ -11,6 +11,31 @@ import Swiper from 'swiper';
 
 $(function() {
 
+	$(".c-number-counter__field").on('input', function(e){
+		console.log("val", $(this).val());
+		if(!$(this).val()) {
+			console.log("false");
+			$(this).val(0);
+			return;
+		}else if(+$(this).val() > 99){
+			console.log("> 99");
+			$(this).val(99);
+			return;
+		}
+	})
+
+
+	$(".c-number-counter__action_down").click(function(){
+		var field = $(this).parent().find('.c-number-counter__field');
+		if(+field.val() <= 0) return;
+		field.val(+field.val() - 1);
+	})
+
+	$(".c-number-counter__action_up").click(function(){
+		var field = $(this).parent().find('.c-number-counter__field');
+		field.val(+field.val() + 1);
+	})
+
 	$('.js-order-checkout-expand-close').click(function(e){
 		e.preventDefault();
 		$('.js-product-order-checkout-static .c-product__order-checkout-top').collapse({

@@ -1,5 +1,5 @@
-.c-form{
-	&__field{
+.c-form {
+	&__field {
 		width: 100%;
 		height: 40px;
 		border-radius: 3px;
@@ -8,52 +8,114 @@
 		font-size: 0.875rem;
 		padding-left: 15px;
 		font-size: 0.9375rem;
-		&::-webkit-input-placeholder{
+
+		&::-webkit-input-placeholder {
 			color: #222222;
 			font-size: 0.9375rem;
 		}
-		&_textarea{
+
+		&_textarea {
 			padding-top: 10px;
-			resize-x:none;
+			resize-x: none;
 			height: 85px;
 		}
-		&_phone{
+
+		&_phone {
 			display: flex;
 			align-items: center;
-			input{
-			    flex-grow: 1;
-			    border: none;
-			    margin-left: 15px;
-			    width: 100%;
-			    &::-webkit-input-placeholder{
-			    	color: #bac5cb;
-			    }
-			    &:focus{
-			    	outline: none;
-			    }
+
+			input {
+				flex-grow: 1;
+				border: none;
+				margin-left: 15px;
+				width: 100%;
+
+				&::-webkit-input-placeholder {
+					color: #bac5cb;
+				}
+
+				&:focus {
+					outline: none;
+				}
+
 			}
+
 		}
 
 	}
-	&__field-flag{
+	
+	&__group-title{
+		font-size: 1.125rem;
+		font-weight: 700;
+		margin-bottom: 30px;
+	}
+
+	&__radio{
+		position: relative;
+		margin-bottom: 15px;
+	}
+
+	&__radio-input{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		opacity: 0;
+		cursor: pointer;
+	}
+	&__radio-input:checked + &__radio-label:after{
+		opacity: 1;
+	}
+	&__radio-label{
+		padding-left: 40px;
+		&:before{
+			content: '';
+			width: 20px;
+			height: 20px;
+			border: 1px solid #f1ca49;
+			position: absolute;
+			border-radius: 50%;
+			left: 0;
+			top: 5px;
+		}
+		&:after{
+			opacity: 0;
+			content: '';
+			display: block;
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			background: #f1ca49;
+			position: absolute;
+			left: 5px;
+			top: 10px;
+		}
+	}
+
+
+	&__field-flag {
 		width: 24px;
 		height: 17px;
 		background: url('../img/icons/flag-russia.png');
 		flex-shrink: 0;
 	}
-	&__action{
-		&_attachment{
+
+	&__action {
+		&_attachment {
 			display: flex;
 			align-items: center;
 			position: relative;
 			overflow: hidden;
-			input{
+
+			input {
 				position: absolute;
 				width: 2000px;
 				left: -1000px;
-				cursor: pointer; 
+				cursor: pointer;
 			}
-			&:before{
+
+			&:before {
 				content: '';
 				display: block;
 				width: 15px;
@@ -61,45 +123,58 @@
 				background: url('../img/icons/attach.png');
 				margin-right: 10px;
 			}
+
 		}
+
 	}
-	&__btn{
+
+	&__btn {
 		margin-top: 20px;
 		width: 275px;
 		height: 42px;
 		font-size: 1.0625rem;
-		@media (max-width: $bp-sm-2) {
+
+		@media (max-width:$bp-sm-2) {
 			width: 100%;
 		}
-	}
-	&__dropdown{
 
-		.selectric{
+	}
+
+	&__dropdown {
+		.selectric {
 			border-radius: 3px;
 			border: 1px solid #d9e3e9;
 			background: none;
-			.label{
+
+			.label {
 				font-size: 1rem;
 			}
-			.button{
+
+			.button {
 				background: none;
-				&:before{
-				    content: " ";
-				    position: absolute;
-				    top: -15px;
-				    right: 0;
-				    bottom: 0;
-				    left: 0;
-				    margin: auto;
-				    width: 0;
-				    height: 0;
-				    border: 4px solid transparent;
-				    border-bottom-color: #BBB;
+
+				&:before {
+					content: " ";
+					position: absolute;
+					top: -15px;
+					right: 0;
+					bottom: 0;
+					left: 0;
+					margin: auto;
+					width: 0;
+					height: 0;
+					border: 4px solid transparent;
+					border-bottom-color: #BBB;
 				}
-				&:after{
+
+				&:after {
 					top: 15px;
 				}
+
 			}
+
 		}
+
 	}
+
 }

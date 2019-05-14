@@ -255,6 +255,7 @@
   padding-left: 25px;
 }
 
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -12995,6 +12996,98 @@ a:hover {
   flex-grow: 1;
 }
 
+.c-table_basket .c-table__cell:nth-child(1) {
+  margin-right: 30px;
+  flex-grow: 0;
+  width: 150px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.c-table_basket .c-table__cell:nth-child(2) {
+  width: 200px;
+}
+
+.c-table_basket .c-table__cell:nth-child(3) {
+  width: 120px;
+}
+
+.c-table_basket .c-table__cell:nth-child(4) {
+  width: 110px;
+  display: flex;
+  justify-content: center;
+}
+
+.c-table_basket .c-table__cell:nth-child(5) {
+  width: 30px;
+}
+
+.c-table_basket .c-table__cell:last-child {
+  flex-grow: 0;
+  width: 70px;
+}
+
+.c-table__row-wrap_kit {
+  position: relative;
+}
+
+.c-table__row-wrap_kit:before {
+  content: '';
+  display: block;
+  width: 2px;
+  height: calc(100% - 163px);
+  position: absolute;
+  top: 87px;
+  left: 5px;
+  background: #f1ca49;
+  z-index: 2;
+}
+
+.c-table__row-wrap_kit:after {
+  content: 'комплект';
+  font-size: 0.75rem;
+  color: #f1ca49;
+  text-transform: uppercase;
+  position: absolute;
+  writing-mode: vertical-rl;
+  transform: scale(-1) translateY(-50%);
+  left: -16px;
+  top: 50%;
+  margin-top: -50px;
+}
+
+.c-table_basket .c-table__body {
+  overflow: visible;
+  max-height: initial;
+}
+
+.c-table_basket .c-table__row {
+  padding-right: 0;
+  padding-left: 20px;
+  border: none;
+  border-bottom: 1px solid #ecf2f6;
+}
+
+.c-table_basket .c-table__row:hover {
+  background: none;
+  box-shadow: none;
+}
+
+.c-table__row-wrap_kit .c-table__row {
+  border-bottom: none;
+}
+
+.c-table__row-wrap_kit .c-table__row:before {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 2px;
+  background: #f1ca49;
+  position: absolute;
+  left: 7px;
+  top: 50%;
+}
+
 .c-table_basket .c-table__body {
   padding-right: 0;
 }
@@ -13003,10 +13096,39 @@ a:hover {
   padding-left: 20px;
   font-weight: 400;
   width: 100%;
+  font-size: 0.8125rem;
 }
 
 .c-table_basket .c-table__header-cell {
   flex-grow: 1;
+}
+
+.c-table_basket .c-table__header-cell:nth-child(1) {
+  margin-right: 30px;
+  flex-grow: 0;
+  width: 150px;
+}
+
+.c-table_basket .c-table__header-cell:nth-child(2) {
+  width: 200px;
+}
+
+.c-table_basket .c-table__header-cell:nth-child(3) {
+  width: 120px;
+}
+
+.c-table_basket .c-table__header-cell:nth-child(4) {
+  width: 110px;
+  text-align: center;
+}
+
+.c-table_basket .c-table__header-cell:nth-child(5) {
+  width: 30px;
+}
+
+.c-table_basket .c-table__header-cell:last-child {
+  flex-grow: 0;
+  width: 70px;
 }
 
 .c-table_product {
@@ -13475,6 +13597,44 @@ a:hover {
   .c-product-card__img-wrap {
     width: 75px;
   }
+}
+
+.c-product-card__remove-btn {
+  width: 13px;
+  height: 13px;
+  background: url(../img/icons/close.png) center center no-repeat;
+  background-size: contain;
+  display: block;
+}
+
+.c-product-card_basket .c-product-card__img-wrap {
+  width: 150px;
+  height: 150px;
+}
+
+.c-product-card_kit .c-product-card__img-wrap {
+  width: 130px;
+  height: 130px;
+}
+
+.c-product-card_basket .c-product-card__price {
+  font-size: 1.25rem;
+}
+
+.c-product-card_kit .c-product-card__price {
+  font-size: 1rem;
+}
+
+.c-product-card_basket .c-discounts {
+  margin-top: 10px;
+}
+
+.c-product-card_basket .c-discounts__price {
+  flex-basis: 60px;
+}
+
+.c-product-card_basket .c-discounts__percent {
+  flex-basis: 40px;
 }
 
 .c-product-card__input {
@@ -16415,6 +16575,59 @@ a:hover {
   outline: none;
 }
 
+.c-form__group-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.c-form__radio {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.c-form__radio-input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.c-form__radio-input:checked + .c-form__radio-label:after {
+  opacity: 1;
+}
+
+.c-form__radio-label {
+  padding-left: 40px;
+}
+
+.c-form__radio-label:before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  border: 1px solid #f1ca49;
+  position: absolute;
+  border-radius: 50%;
+  left: 0;
+  top: 5px;
+}
+
+.c-form__radio-label:after {
+  opacity: 0;
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #f1ca49;
+  position: absolute;
+  left: 5px;
+  top: 10px;
+}
+
 .c-form__field-flag {
   width: 24px;
   height: 17px;
@@ -16538,6 +16751,70 @@ a:hover {
   font-family: 'Rubl';
 }
 
+.c-number-counter {
+  display: flex;
+  align-items: center;
+}
+
+.c-number-counter__field {
+  max-width: 44px;
+  min-width: initial;
+  margin: 0 10px;
+  font-size: 1.125rem;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.c-number-counter__field::-webkit-outer-spin-button, .c-number-counter__field::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.c-number-counter__action {
+  width: 15px;
+  height: 15px;
+  display: block;
+  cursor: pointer;
+}
+
+.c-number-counter__action_up {
+  position: relative;
+}
+
+.c-number-counter__action_up:after {
+  content: '';
+  width: 15px;
+  height: 1px;
+  background: #000;
+  position: absolute;
+  transform: rotate(90deg) translate(0, -50%);
+  top: 50%;
+}
+
+.c-number-counter__action_up:before {
+  content: '';
+  width: 15px;
+  height: 2px;
+  background: #000;
+  position: absolute;
+  transform: translate(0, -50%);
+  top: 50%;
+}
+
+.c-number-counter__action_down {
+  position: relative;
+}
+
+.c-number-counter__action_down:after {
+  content: '';
+  width: 15px;
+  height: 1px;
+  background: #000;
+  position: absolute;
+  transform: translate(0, -50%);
+  top: 50%;
+}
+
 .s-shares {
   margin-top: 30px;
 }
@@ -16576,6 +16853,37 @@ a:hover {
 
 .s-basket__coupon {
   font-size: 1.125rem;
+}
+
+.s-basket__info {
+  margin-bottom: 40px;
+}
+
+.s-basket__section {
+  border-bottom: 1px solid #ecf2f6;
+  margin-bottom: 50px;
+}
+
+.s-basket__section .c-form__radio {
+  font-size: 1.125rem;
+}
+
+.s-basket__section .c-form__radio-label {
+  max-width: 800px;
+}
+
+.s-basket__section .c-form__group {
+  margin-bottom: 80px;
+}
+
+.s-basket__title {
+  font-family: 'Roboto Slab';
+  font-size: 1.4375rem;
+  margin-bottom: 50px;
+}
+
+.s-basket__content {
+  padding-left: 100px;
 }
 
 .o-page {

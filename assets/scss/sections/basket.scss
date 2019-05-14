@@ -1,9 +1,46 @@
-.s-basket{
-	&__total-price{
+.s-basket {
+	&__total-price {
 		margin-bottom: 20px;
 	}
 
-	&__coupon{
+	&__coupon {
 		font-size: 1.125rem;
 	}
+
+	&__info {
+		margin-bottom: 40px;
+	}
+
+	&__section {
+		border-bottom: 1px solid #ecf2f6;
+		margin-bottom: 50px;
+
+		.c-form {
+			&__radio {
+				font-size: 1.125rem;
+			}
+
+			&__radio-label {
+				max-width: 800px;
+
+			}
+
+			&__group {
+				margin-bottom: 80px;
+			}
+
+		}
+
+	}
+
+	&__title {
+		font-family: 'Roboto Slab';
+		font-size: 1.4375rem;
+		margin-bottom: 50px;
+	}
+
+	&__content {
+		padding-left: 100px;
+	}
+
 }

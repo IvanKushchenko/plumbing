@@ -1,0 +1,55 @@
+.c-number-counter{
+	display: flex;
+	align-items: center;
+	&__field{
+		max-width: 44px;
+		min-width: initial;
+		margin: 0 10px;
+		font-size: 1.125rem;
+		padding: 0 10px;
+		text-align: center;
+		&::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+		    -webkit-appearance: none;
+		    margin: 0;
+		}
+	}
+	&__action{
+		width: 15px;
+		height: 15px;
+		display: block;
+		cursor: pointer;
+		&_up{
+			position: relative;
+			&:after{
+				content: '';
+				width: 15px;
+				height: 1px;
+				background: #000;
+				position: absolute;
+				transform: rotate(90deg) translate(0, -50%);
+				top: 50%;
+			}
+			&:before{
+				content: '';
+				width: 15px;
+				height: 2px;
+				background: #000;
+				position: absolute;
+				transform: translate(0, -50%);
+				top: 50%;
+			}
+		}
+		&_down{
+			position: relative;
+			&:after{
+				content: '';
+				width: 15px;
+				height: 1px;
+				background: #000;
+				position: absolute;
+				transform: translate(0, -50%);
+				top: 50%;
+			}
+		}
+	}
+}

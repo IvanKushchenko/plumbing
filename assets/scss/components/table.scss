@@ -20,7 +20,89 @@
 
 	&_basket &__cell{
 		flex-grow: 1;
+		&:nth-child(1){
+			margin-right: 30px;
+			flex-grow: 0;
+			width: 150px;
+			display: flex;
+			justify-content: flex-end;
+		}
+		&:nth-child(2){
+			width: 200px;
+		}
+		&:nth-child(3){
+			width: 120px;
+		}
+		&:nth-child(4){
+			width: 110px;
+			display: flex;
+			justify-content: center;
+		}
+		&:nth-child(5){
+			width: 30px;
+		}
+		&:last-child{
+			flex-grow: 0;
+			width: 70px;
+		}
 	}
+	&__row-wrap_kit {
+		position: relative;
+		&:before{
+			content: '';
+			display: block;
+			width: 2px;
+			height: calc(100% - 163px);
+			position: absolute;
+			top: 87px;
+			left: 5px;
+			background: #f1ca49;
+			z-index: 2;
+		}
+		&:after{
+			content: 'комплект';
+			font-size: 0.75rem;
+			color: #f1ca49;
+			text-transform: uppercase;
+			position: absolute;
+		    writing-mode: vertical-rl;
+		    transform: scale(-1) translateY(-50%);
+		    left: -16px;
+		    top: 50%;
+		    margin-top: -50px;
+		}
+	}
+
+	&_basket &__body{
+		overflow: visible;
+		max-height: initial;
+	}
+	&_basket &__row{
+		padding-right: 0;
+		padding-left: 20px;
+		border: none;
+		border-bottom: 1px solid #ecf2f6;
+		&:hover{
+			background: none;
+			box-shadow: none;
+		}
+	}
+
+	&__row-wrap_kit &__row{
+		border-bottom: none;
+		&:before{
+			content: '';
+			display: block;
+			width: 50px;
+			height: 2px;
+			background: #f1ca49;
+			position: absolute;
+			left: 7px;
+			top: 50%;
+		}
+	}
+
+
 	&_basket &__body{
 		padding-right: 0;
 	}
@@ -28,10 +110,33 @@
 		padding-left: 20px;
 		font-weight: 400;
 		width: 100%;
+		font-size: 0.8125rem;
 	}
 
 	&_basket &__header-cell{
-		flex-grow: 1; 
+		flex-grow: 1;
+		&:nth-child(1){
+			margin-right: 30px;
+			flex-grow: 0;
+			width: 150px;
+		}
+		&:nth-child(2){
+			width: 200px;
+		}
+		&:nth-child(3){
+			width: 120px;
+		}
+		&:nth-child(4){
+			width: 110px;
+			text-align: center;
+		}
+		&:nth-child(5){
+			width: 30px;
+		}
+		&:last-child{
+			flex-grow: 0;
+			width: 70px;
+		}
 	}
 
 	&_product {
@@ -39,7 +144,7 @@
 	}
 
 	&_product &__cell, &_options &__cell {
-		@media (max-width:$bp-xl) {
+		@media (max-width: $bp-xl) {
 			&:nth-child(2) {
 				max-width: 40%;
 				margin-right: 5%;
