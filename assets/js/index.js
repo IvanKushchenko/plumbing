@@ -12,13 +12,10 @@ import Swiper from 'swiper';
 $(function() {
 
 	$(".c-number-counter__field").on('input', function(e){
-		console.log("val", $(this).val());
 		if(!$(this).val()) {
-			console.log("false");
 			$(this).val(0);
 			return;
 		}else if(+$(this).val() > 99){
-			console.log("> 99");
 			$(this).val(99);
 			return;
 		}

@@ -1,0 +1,537 @@
+html(lang="ru")
+	head
+		include templates/head.pug
+	body
+		.container
+			.o-page.js-page
+				include templates/navbar.pug
+				include templates/header.pug
+				main.o-page__content
+					.c-breadcrumbs
+						a(href="#!").c-breadcrumbs__item Главная
+						a(href="#!").c-breadcrumbs__item Кабинет
+					.o-section.s-kabinet
+						.o-section__header
+							h3.o-section__title Кабинет
+						.o-section__body
+							.c-kabinet-navigation
+								ul.nav.nav-tabs
+									li.nav-item
+										a(href="#personal-info-content" data-toggle="tab").nav-link#personal-info-tab
+											<svg class="nav-item__icon" width="39" height="39"><path d="M19.579 26.968c-6.075 0-11.018-4.86-11.018-10.834v-5.3C8.56 4.86 13.504-.001 19.579-.001c6.076 0 11.02 4.861 11.02 10.835v5.3c0 5.973-4.944 10.834-11.02 10.834zm0-25.252c-5.113 0-9.272 4.09-9.272 9.118v5.3c0 5.026 4.16 9.116 9.272 9.116 5.113 0 9.273-4.09 9.273-9.117v-5.3c0-5.026-4.16-9.117-9.273-9.117zM34.322 39H4.677C2.098 39 0 36.936 0 34.4v-4.038c0-1.504.769-3.516 4.433-4.566L8.87 24.59a.874.874 0 0 1 1.074.599.857.857 0 0 1-.608 1.056L4.91 27.448C1.746 28.355 2 29.504 2 30v5c0 1.59 1.384 2 3 2h29c1.616 0 3-.41 3-2l.253-4.638c0-1.34-1.067-2.321-3.173-2.916l-4.219-1.16a.857.857 0 0 1-.606-1.057.875.875 0 0 1 1.076-.596l4.226 1.161C38.23 26.833 39 28.851 39 30.362V34.4c0 2.536-2.099 4.6-4.678 4.6z"/></svg>
+											.nav-item__txt личные данные
+									li.nav-item
+										a(href="basket.html").nav-link
+											<svg class="nav-item__icon" width="43" height="39"><defs><clipPath id="a"><path fill="#fff" d="M15.5 30a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9z"/></clipPath><clipPath id="b"><path fill="#fff" d="M32.5 30a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9z"/></clipPath></defs><path fill="none" stroke="#000" stroke-miterlimit="50" stroke-width="4" d="M15.5 30a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9z" clip-path="url(&quot;#a&quot;)"/><path fill="none" stroke="#000" stroke-miterlimit="50" stroke-width="4" d="M32.5 30a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9z" clip-path="url(&quot;#b&quot;)"/><path d="M43 6.204l-3.583 14.182c0 .355-.359.709-.717.709L13 24c.717 1.24 1.567 2 3 2h21c.537 0 .446.945.446 1.477 0 .532-.908.523-1.446.523H15c-2.867 0-4.608-1.764-5.146-4.6l-4.3-21.628H.896C.358 1.772 0 1.418 0 .886S.358 0 .896 0H6.27C6.629 0 8 .645 8 1l1 4h33c.358 0 .642.495.82.672.18.178.18.532.18.532zM40 7H9l3 15 25-3z"/></svg>
+											.nav-item__txt корзина
+									li.nav-item
+										a(href="#viewed-products-content" data-toggle="tab").nav-link#viewed-products-tab
+											<svg class="nav-item__icon" width="46" height="45"><path d="M46 22.5l-.351.52c-.323.476-8.053 11.667-22.649 11.667S.673 23.497.351 23.02L0 22.5l.351-.52C.673 21.503 8.404 10.312 23 10.312S45.326 21.503 45.649 21.98zm-31.528 8.797c-2.352-2.22-3.827-5.34-3.827-8.797 0-3.463 1.479-6.586 3.837-8.806-6.767 2.457-10.928 7.224-12.161 8.805 1.235 1.577 5.401 6.337 12.151 8.798zM33.454 22.5c0-5.687-4.69-10.313-10.454-10.313S12.546 16.813 12.546 22.5c0 5.686 4.69 10.312 10.454 10.312S33.454 28.186 33.454 22.5zm10.225 0c-1.235-1.577-5.401-6.336-12.151-8.797 2.352 2.22 3.826 5.339 3.826 8.797 0 3.463-1.478 6.585-3.837 8.806 6.768-2.458 10.929-7.225 12.162-8.805zm-15.927 0c0 2.584-2.132 4.687-4.752 4.687-2.62 0-4.752-2.103-4.752-4.687 0-2.585 2.132-4.688 4.752-4.688 2.62 0 4.752 2.103 4.752 4.688zm-1.901 0c0-1.551-1.279-2.813-2.851-2.813s-2.851 1.262-2.851 2.813c0 1.55 1.279 2.812 2.851 2.812s2.85-1.261 2.85-2.812zM22 0h2v7h-2zm13.481 9.609l3.326-5.684 1.646.938-3.326 5.683zM5.545 4.864l1.646-.937 3.327 5.683-1.646.937zM22 38h2v7h-2zm13.482-2.61l1.647-.937 3.325 5.684-1.646.937zm-29.94 4.744l3.326-5.684 1.647.938-3.326 5.683z"/></svg>
+											.nav-item__txt Просмотренные товары
+									li.nav-item
+										a(href="#favourites-content" data-toggle="tab").nav-link#favourites-tab
+											<svg class="nav-item__icon" xmlns="http://www.w3.org/2000/svg" width="30" height="38" viewBox="0 0 30 38"><defs><clipPath id="vu09a"><path fill="#fff" d="M2.28 37.99a2.214 2.214 0 0 1-1.785-.862C.17 36.7.004 36.165.004 35.537V3.262c0-1.803 1.57-3.27 3.5-3.27h23c1.93 0 3.5 1.467 3.5 3.27v32.275c0 1.668-1.155 2.43-2.228 2.43-.416 0-1.06-.115-1.77-.655l-9.898-7.527c-.299-.23-.99-.238-1.295-.023l-10.81 7.635c-.55.388-1.147.593-1.723.593z"/></clipPath></defs><g><g><path fill="none" stroke="#222" stroke-miterlimit="50" stroke-width="4" d="M2.28 37.99a2.214 2.214 0 0 1-1.785-.862C.17 36.7.004 36.165.004 35.537V3.262c0-1.803 1.57-3.27 3.5-3.27h23c1.93 0 3.5 1.467 3.5 3.27v32.275c0 1.668-1.155 2.43-2.228 2.43-.416 0-1.06-.115-1.77-.655l-9.898-7.527c-.299-.23-.99-.238-1.295-.023l-10.81 7.635c-.55.388-1.147.593-1.723.593z" clip-path="url(&quot;#vu09a&quot;)"/></g></g></svg>
+											.nav-item__txt избранное
+									li.nav-item
+										a(href="#order-history-content" data-toggle="tab").nav-link.active#order-history-tab
+											<svg class="nav-item__icon" xmlns="http://www.w3.org/2000/svg" width="35" height="38"><path d="M6.2 6.498l2.836-2.782a4.169 4.169 0 0 0-2.978-1.262c-2.274 0-4.123 1.823-4.123 4.067s1.849 4.067 4.123 4.067c1.801 0 3.428-1.192 3.95-2.89a.976.976 0 0 1 1.208-.64.952.952 0 0 1 .648 1.193c-.782 2.54-3.112 4.246-5.806 4.246C2.717 12.497 0 9.817 0 6.521S2.717.545 6.058.545c1.651 0 3.223.662 4.353 1.816L12.535.28a.973.973 0 0 1 1.367 0 .948.948 0 0 1-.008 1.347L6.872 8.516a.97.97 0 0 1-1.366 0l-2.307-2.29a.934.934 0 0 1 .008-1.349.98.98 0 0 1 1.366.008zm5.917 12.77c0 3.296-2.718 5.977-6.059 5.977S0 22.565 0 19.268c0-3.295 2.717-5.976 6.058-5.976 3.341 0 6.059 2.68 6.059 5.976zm-1.935 0c0-2.244-1.849-4.067-4.124-4.067-2.274 0-4.123 1.823-4.123 4.067 0 2.245 1.849 4.068 4.123 4.068 2.275 0 4.124-1.823 4.124-4.068zM6.058 38C2.717 38 0 35.32 0 32.023c0-3.295 2.717-5.976 6.058-5.976 3.341 0 6.059 2.68 6.059 5.976S9.399 38 6.058 38zm4.124-5.969c0-2.244-1.849-4.067-4.124-4.067-2.274 0-4.123 1.823-4.123 4.067S3.784 36.1 6.058 36.1c2.275 0 4.124-1.824 4.124-4.068zM15 6h20v2H15zM15 18h20v2H15zM15 31h20v2H15z"/></svg>
+											.nav-item__txt история заказов
+							.tab-content
+								.tab-pane.fade.show#personal-info-content
+									.s-kabinet__section
+										.s-kabinet__title Личные данные
+										.s-kabinet__content
+											.s-kabinet__personal-info.mb-6
+												.d-flex.align-items-center.mb-4
+													.text-muted.mr-2 ФИО:
+													.mr-3 Алексеев Николай Олегович
+													a(href="#personal-info-change-fio" data-toggle="collapse" aria-expanded="false") изменить
+												.collapse#personal-info-change-fio
+													form.c-form.s-kabinet__form.s-kabinet__form_change-info.mb-5
+														.c-form__label
+															.c-form__label-txt Фамилия
+															input(type="text").c-form__field
+														.c-form__label
+															.c-form__label-txt Имя
+															input(type="text").c-form__field
+														.c-form__label
+															.c-form__label-txt Отчество
+															input(type="text").c-form__field
+														button.c-btn.c-btn_secondary сохранить
+												.d-flex.align-items-center.mb-4
+													.text-muted.mr-2 E-mail:
+													.mr-3 alekseev@inbox.ru
+													a(href="#personal-info-change-email" data-toggle="collapse" aria-expanded="false") изменить
+												.collapse#personal-info-change-email
+													form.c-form.s-kabinet__form.s-kabinet__form_change-info.mb-5
+														.c-form__label
+															.c-form__label-txt E-mail
+															input(type="email").c-form__field
+														button.c-btn.c-btn_secondary сохранить
+												.d-flex.align-items-center.mb-4
+													.text-muted.mr-2 Телефон:
+													.mr-3 +7 910 944-44-55
+													a(href="#personal-info-change-phone" data-toggle="collapse" aria-expanded="false") изменить
+												.collapse#personal-info-change-phone
+													form.c-form.s-kabinet__form.s-kabinet__form_change-info.mb-5
+														.c-form__label
+															.c-form__label-txt Телефон
+															input(type="tel").c-form__field
+														button.c-btn.c-btn_secondary сохранить
+											
+								.tab-pane.fade#viewed-products-content
+									.s-kabinet__section
+										.s-kabinet__title Просмотренные товары
+										.s-kabinet__content
+											.row
+												.col-sm-6.col-lg-3
+													.c-filtered-product.is-active
+														a(href="#").c-filtered-product__image
+															img(src=require("../img/content/filtered-product.jpg"), alt="")
+															.c-filtered-product__label
+																span.c-filtered-product__label-txt 5 вариантов модели
+														.c-filtered-product__body
+															.d-block.text-center.pr-3.pl-3.mb-3
+																a(href="#").c-filtered-product__link ванна акриловая riho Line ADIGE ADI -LVM25-CRM
+															.d-flex.justify-content-between.mb-2
+																.c-filtered-product__availability.c-filtered-product__availability_true.d-flex.align-items-center
+																	img(src=require("../img/icons/check-success.png"), alt="")
+																	span В наличии
+																.c-filtered-product__price 13 400
+															.c-filtered-product__code.mb-2 Код товара: 1234566JL
+															.d-flex.flex-column.align-items-center
+																.mb-2 Размер: 1500х700
+																.d-flex.align-items-center.mb-2 Цвет профиля:
+																	.d-inline.d-lg-none.ml-2 черный, серый
+																	.d-none.d-lg-block.dropdown.c-dropdown.c-dropdown_link.c-filtered-product__dropdown
+																		.dropdown-toggle.c-dropdown-toggle(data-toggle="dropdown" data-flip="false")
+																			.c-dropdown-toggle__link 2 варианта
+																		.dropdown-menu.c-dropdown__menu
+																			ul
+																				li 
+																					a(href="#") Серый 
+																				li 
+																					a(href="#") Розовый
+																.d-flex.align-items-center.mb-2 Цвет стекла:
+																	.d-inline.d-lg-none.ml-2 черный, серый
+																	.d-none.d-lg-block.dropdown.c-dropdown.c-dropdown_link.c-filtered-product__dropdown
+																		.dropdown-toggle.c-dropdown-toggle(data-toggle="dropdown" data-flip="false")
+																			.c-dropdown-toggle__link 3 варианта
+																		.dropdown-menu.c-dropdown__menu
+																			ul
+																				li 
+																					a(href="#") Серый 
+																				li 
+																					a(href="#") Розовый
+																.d-block
+																	.d-inline-block Бренд:
+																		a(href="#").ml-1 Grohe
+																	.d-inline-block Страна: Германия
+												.col-sm-6.col-lg-3
+													.c-filtered-product.is-active
+														a(href="#").c-filtered-product__image
+															img(src=require("../img/content/filtered-product.jpg"), alt="")
+															.c-filtered-product__label
+																span.c-filtered-product__label-txt 5 вариантов модели
+														.c-filtered-product__body
+															.d-block.text-center.pr-3.pl-3.mb-3
+																a(href="#").c-filtered-product__link ванна акриловая riho Line ADIGE ADI -LVM25-CRM
+															.d-flex.justify-content-between.mb-2
+																.c-filtered-product__availability.c-filtered-product__availability_true.d-flex.align-items-center
+																	img(src=require("../img/icons/check-success.png"), alt="")
+																	span В наличии
+																.c-filtered-product__price 13 400
+															.c-filtered-product__code.mb-2 Код товара: 1234566JL
+															.d-flex.flex-column.align-items-center
+																.mb-2 Размер: 1500х700
+																.d-flex.align-items-center.mb-2 Цвет профиля:
+																	.d-inline.d-lg-none.ml-2 черный, серый
+																	.d-none.d-lg-block.dropdown.c-dropdown.c-dropdown_link.c-filtered-product__dropdown
+																		.dropdown-toggle.c-dropdown-toggle(data-toggle="dropdown" data-flip="false")
+																			.c-dropdown-toggle__link 2 варианта
+																		.dropdown-menu.c-dropdown__menu
+																			ul
+																				li 
+																					a(href="#") Серый 
+																				li 
+																					a(href="#") Розовый
+																.d-flex.align-items-center.mb-2 Цвет стекла:
+																	.d-inline.d-lg-none.ml-2 черный, серый
+																	.d-none.d-lg-block.dropdown.c-dropdown.c-dropdown_link.c-filtered-product__dropdown
+																		.dropdown-toggle.c-dropdown-toggle(data-toggle="dropdown" data-flip="false")
+																			.c-dropdown-toggle__link 3 варианта
+																		.dropdown-menu.c-dropdown__menu
+																			ul
+																				li 
+																					a(href="#") Серый 
+																				li 
+																					a(href="#") Розовый
+																.d-block
+																	.d-inline-block Бренд:
+																		a(href="#").ml-1 Grohe
+																	.d-inline-block Страна: Германия
+												.col-sm-6.col-lg-3
+													.c-filtered-product.is-active
+														a(href="#").c-filtered-product__image
+															img(src=require("../img/content/filtered-product.jpg"), alt="")
+															.c-filtered-product__label
+																span.c-filtered-product__label-txt 5 вариантов модели
+														.c-filtered-product__body
+															.d-block.text-center.pr-3.pl-3.mb-3
+																a(href="#").c-filtered-product__link ванна акриловая riho Line ADIGE ADI -LVM25-CRM
+															.d-flex.justify-content-between.mb-2
+																.c-filtered-product__availability.c-filtered-product__availability_true.d-flex.align-items-center
+																	img(src=require("../img/icons/check-success.png"), alt="")
+																	span В наличии
+																.c-filtered-product__price 13 400
+															.c-filtered-product__code.mb-2 Код товара: 1234566JL
+															.d-flex.flex-column.align-items-center
+																.mb-2 Размер: 1500х700
+																.d-flex.align-items-center.mb-2 Цвет профиля:
+																	.d-inline.d-lg-none.ml-2 черный, серый
+																	.d-none.d-lg-block.dropdown.c-dropdown.c-dropdown_link.c-filtered-product__dropdown
+																		.dropdown-toggle.c-dropdown-toggle(data-toggle="dropdown" data-flip="false")
+																			.c-dropdown-toggle__link 2 варианта
+																		.dropdown-menu.c-dropdown__menu
+																			ul
+																				li 
+																					a(href="#") Серый 
+																				li 
+																					a(href="#") Розовый
+																.d-flex.align-items-center.mb-2 Цвет стекла:
+																	.d-inline.d-lg-none.ml-2 черный, серый
+																	.d-none.d-lg-block.dropdown.c-dropdown.c-dropdown_link.c-filtered-product__dropdown
+																		.dropdown-toggle.c-dropdown-toggle(data-toggle="dropdown" data-flip="false")
+																			.c-dropdown-toggle__link 3 варианта
+																		.dropdown-menu.c-dropdown__menu
+																			ul
+																				li 
+																					a(href="#") Серый 
+																				li 
+																					a(href="#") Розовый
+																.d-block
+																	.d-inline-block Бренд:
+																		a(href="#").ml-1 Grohe
+																	.d-inline-block Страна: Германия
+												.col-sm-6.col-lg-3
+													.c-filtered-product.is-active
+														a(href="#").c-filtered-product__image
+															img(src=require("../img/content/filtered-product.jpg"), alt="")
+															.c-filtered-product__label
+																span.c-filtered-product__label-txt 5 вариантов модели
+														.c-filtered-product__body
+															.d-block.text-center.pr-3.pl-3.mb-3
+																a(href="#").c-filtered-product__link ванна акриловая riho Line ADIGE ADI -LVM25-CRM
+															.d-flex.justify-content-between.mb-2
+																.c-filtered-product__availability.c-filtered-product__availability_true.d-flex.align-items-center
+																	img(src=require("../img/icons/check-success.png"), alt="")
+																	span В наличии
+																.c-filtered-product__price 13 400
+															.c-filtered-product__code.mb-2 Код товара: 1234566JL
+															.d-flex.flex-column.align-items-center
+																.mb-2 Размер: 1500х700
+																.d-flex.align-items-center.mb-2 Цвет профиля:
+																	.d-inline.d-lg-none.ml-2 черный, серый
+																	.d-none.d-lg-block.dropdown.c-dropdown.c-dropdown_link.c-filtered-product__dropdown
+																		.dropdown-toggle.c-dropdown-toggle(data-toggle="dropdown" data-flip="false")
+																			.c-dropdown-toggle__link 2 варианта
+																		.dropdown-menu.c-dropdown__menu
+																			ul
+																				li 
+																					a(href="#") Серый 
+																				li 
+																					a(href="#") Розовый
+																.d-flex.align-items-center.mb-2 Цвет стекла:
+																	.d-inline.d-lg-none.ml-2 черный, серый
+																	.d-none.d-lg-block.dropdown.c-dropdown.c-dropdown_link.c-filtered-product__dropdown
+																		.dropdown-toggle.c-dropdown-toggle(data-toggle="dropdown" data-flip="false")
+																			.c-dropdown-toggle__link 3 варианта
+																		.dropdown-menu.c-dropdown__menu
+																			ul
+																				li 
+																					a(href="#") Серый 
+																				li 
+																					a(href="#") Розовый
+																.d-block
+																	.d-inline-block Бренд:
+																		a(href="#").ml-1 Grohe
+																	.d-inline-block Страна: Германия
+
+											a(href="#").c-filtered-products__load-more.c-load-more
+												span.c-filtered-products__load-more-txt.c-load-more__txt показать еще 18
+												.c-load-more__preloader
+													.c-load-more__preloader-square
+													.c-load-more__preloader-square
+													.c-load-more__preloader-square
+													.c-load-more__preloader-square
+								.tab-pane.fade#favourites-content
+									.s-kabinet__section
+										.s-kabinet__title Избранное
+										.s-kabinet__content
+											.row
+												.col-sm-6.col-lg-3
+													.c-filtered-product.is-active
+														a(href="#").c-filtered-product__image
+															img(src=require("../img/content/filtered-product.jpg"), alt="")
+															.c-filtered-product__label
+																span.c-filtered-product__label-txt 5 вариантов модели
+														.c-filtered-product__body
+															.d-block.text-center.pr-3.pl-3.mb-3
+																a(href="#").c-filtered-product__link ванна акриловая riho Line ADIGE ADI -LVM25-CRM
+															.d-flex.justify-content-between.mb-2
+																.c-filtered-product__availability.c-filtered-product__availability_true.d-flex.align-items-center
+																	img(src=require("../img/icons/check-success.png"), alt="")
+																	span В наличии
+																.c-filtered-product__price 13 400
+															.c-filtered-product__code.mb-2 Код товара: 1234566JL
+															.d-flex.flex-column.align-items-center
+																.mb-2 Размер: 1500х700
+																.d-flex.align-items-center.mb-2 Цвет профиля:
+																	.d-inline.d-lg-none.ml-2 черный, серый
+																	.d-none.d-lg-block.dropdown.c-dropdown.c-dropdown_link.c-filtered-product__dropdown
+																		.dropdown-toggle.c-dropdown-toggle(data-toggle="dropdown" data-flip="false")
+																			.c-dropdown-toggle__link 2 варианта
+																		.dropdown-menu.c-dropdown__menu
+																			ul
+																				li 
+																					a(href="#") Серый 
+																				li 
+																					a(href="#") Розовый
+																.d-flex.align-items-center.mb-2 Цвет стекла:
+																	.d-inline.d-lg-none.ml-2 черный, серый
+																	.d-none.d-lg-block.dropdown.c-dropdown.c-dropdown_link.c-filtered-product__dropdown
+																		.dropdown-toggle.c-dropdown-toggle(data-toggle="dropdown" data-flip="false")
+																			.c-dropdown-toggle__link 3 варианта
+																		.dropdown-menu.c-dropdown__menu
+																			ul
+																				li 
+																					a(href="#") Серый 
+																				li 
+																					a(href="#") Розовый
+																.d-block
+																	.d-inline-block Бренд:
+																		a(href="#").ml-1 Grohe
+																	.d-inline-block Страна: Германия
+												.col-sm-6.col-lg-3
+													.c-filtered-product.is-active
+														a(href="#").c-filtered-product__image
+															img(src=require("../img/content/filtered-product.jpg"), alt="")
+															.c-filtered-product__label
+																span.c-filtered-product__label-txt 5 вариантов модели
+														.c-filtered-product__body
+															.d-block.text-center.pr-3.pl-3.mb-3
+																a(href="#").c-filtered-product__link ванна акриловая riho Line ADIGE ADI -LVM25-CRM
+															.d-flex.justify-content-between.mb-2
+																.c-filtered-product__availability.c-filtered-product__availability_true.d-flex.align-items-center
+																	img(src=require("../img/icons/check-success.png"), alt="")
+																	span В наличии
+																.c-filtered-product__price 13 400
+															.c-filtered-product__code.mb-2 Код товара: 1234566JL
+															.d-flex.flex-column.align-items-center
+																.mb-2 Размер: 1500х700
+																.d-flex.align-items-center.mb-2 Цвет профиля:
+																	.d-inline.d-lg-none.ml-2 черный, серый
+																	.d-none.d-lg-block.dropdown.c-dropdown.c-dropdown_link.c-filtered-product__dropdown
+																		.dropdown-toggle.c-dropdown-toggle(data-toggle="dropdown" data-flip="false")
+																			.c-dropdown-toggle__link 2 варианта
+																		.dropdown-menu.c-dropdown__menu
+																			ul
+																				li 
+																					a(href="#") Серый 
+																				li 
+																					a(href="#") Розовый
+																.d-flex.align-items-center.mb-2 Цвет стекла:
+																	.d-inline.d-lg-none.ml-2 черный, серый
+																	.d-none.d-lg-block.dropdown.c-dropdown.c-dropdown_link.c-filtered-product__dropdown
+																		.dropdown-toggle.c-dropdown-toggle(data-toggle="dropdown" data-flip="false")
+																			.c-dropdown-toggle__link 3 варианта
+																		.dropdown-menu.c-dropdown__menu
+																			ul
+																				li 
+																					a(href="#") Серый 
+																				li 
+																					a(href="#") Розовый
+																.d-block
+																	.d-inline-block Бренд:
+																		a(href="#").ml-1 Grohe
+																	.d-inline-block Страна: Германия
+												.col-sm-6.col-lg-3
+													.c-filtered-product.is-active
+														a(href="#").c-filtered-product__image
+															img(src=require("../img/content/filtered-product.jpg"), alt="")
+															.c-filtered-product__label
+																span.c-filtered-product__label-txt 5 вариантов модели
+														.c-filtered-product__body
+															.d-block.text-center.pr-3.pl-3.mb-3
+																a(href="#").c-filtered-product__link ванна акриловая riho Line ADIGE ADI -LVM25-CRM
+															.d-flex.justify-content-between.mb-2
+																.c-filtered-product__availability.c-filtered-product__availability_true.d-flex.align-items-center
+																	img(src=require("../img/icons/check-success.png"), alt="")
+																	span В наличии
+																.c-filtered-product__price 13 400
+															.c-filtered-product__code.mb-2 Код товара: 1234566JL
+															.d-flex.flex-column.align-items-center
+																.mb-2 Размер: 1500х700
+																.d-flex.align-items-center.mb-2 Цвет профиля:
+																	.d-inline.d-lg-none.ml-2 черный, серый
+																	.d-none.d-lg-block.dropdown.c-dropdown.c-dropdown_link.c-filtered-product__dropdown
+																		.dropdown-toggle.c-dropdown-toggle(data-toggle="dropdown" data-flip="false")
+																			.c-dropdown-toggle__link 2 варианта
+																		.dropdown-menu.c-dropdown__menu
+																			ul
+																				li 
+																					a(href="#") Серый 
+																				li 
+																					a(href="#") Розовый
+																.d-flex.align-items-center.mb-2 Цвет стекла:
+																	.d-inline.d-lg-none.ml-2 черный, серый
+																	.d-none.d-lg-block.dropdown.c-dropdown.c-dropdown_link.c-filtered-product__dropdown
+																		.dropdown-toggle.c-dropdown-toggle(data-toggle="dropdown" data-flip="false")
+																			.c-dropdown-toggle__link 3 варианта
+																		.dropdown-menu.c-dropdown__menu
+																			ul
+																				li 
+																					a(href="#") Серый 
+																				li 
+																					a(href="#") Розовый
+																.d-block
+																	.d-inline-block Бренд:
+																		a(href="#").ml-1 Grohe
+																	.d-inline-block Страна: Германия
+												.col-sm-6.col-lg-3
+													.c-filtered-product.is-active
+														a(href="#").c-filtered-product__image
+															img(src=require("../img/content/filtered-product.jpg"), alt="")
+															.c-filtered-product__label
+																span.c-filtered-product__label-txt 5 вариантов модели
+														.c-filtered-product__body
+															.d-block.text-center.pr-3.pl-3.mb-3
+																a(href="#").c-filtered-product__link ванна акриловая riho Line ADIGE ADI -LVM25-CRM
+															.d-flex.justify-content-between.mb-2
+																.c-filtered-product__availability.c-filtered-product__availability_true.d-flex.align-items-center
+																	img(src=require("../img/icons/check-success.png"), alt="")
+																	span В наличии
+																.c-filtered-product__price 13 400
+															.c-filtered-product__code.mb-2 Код товара: 1234566JL
+															.d-flex.flex-column.align-items-center
+																.mb-2 Размер: 1500х700
+																.d-flex.align-items-center.mb-2 Цвет профиля:
+																	.d-inline.d-lg-none.ml-2 черный, серый
+																	.d-none.d-lg-block.dropdown.c-dropdown.c-dropdown_link.c-filtered-product__dropdown
+																		.dropdown-toggle.c-dropdown-toggle(data-toggle="dropdown" data-flip="false")
+																			.c-dropdown-toggle__link 2 варианта
+																		.dropdown-menu.c-dropdown__menu
+																			ul
+																				li 
+																					a(href="#") Серый 
+																				li 
+																					a(href="#") Розовый
+																.d-flex.align-items-center.mb-2 Цвет стекла:
+																	.d-inline.d-lg-none.ml-2 черный, серый
+																	.d-none.d-lg-block.dropdown.c-dropdown.c-dropdown_link.c-filtered-product__dropdown
+																		.dropdown-toggle.c-dropdown-toggle(data-toggle="dropdown" data-flip="false")
+																			.c-dropdown-toggle__link 3 варианта
+																		.dropdown-menu.c-dropdown__menu
+																			ul
+																				li 
+																					a(href="#") Серый 
+																				li 
+																					a(href="#") Розовый
+																.d-block
+																	.d-inline-block Бренд:
+																		a(href="#").ml-1 Grohe
+																	.d-inline-block Страна: Германия
+
+											a(href="#").c-filtered-products__load-more.c-load-more
+												span.c-filtered-products__load-more-txt.c-load-more__txt показать еще 18
+												.c-load-more__preloader
+													.c-load-more__preloader-square
+													.c-load-more__preloader-square
+													.c-load-more__preloader-square
+													.c-load-more__preloader-square
+								.tab-pane.fade.active.show#order-history-content
+									.s-kabinet__section
+										.s-kabinet__title История заказов
+										.s-kabinet__content
+											.c-linked-navigation
+												ul.nav.nav-tabs
+													li.nav-item
+														a(href="#order-history-active-content" data-toggle="tab").nav-link.active Активные
+													li.nav-item
+														a(href="#order-history-finish-content" data-toggle="tab").nav-link Выполенные
+													li.nav-item
+														a(href="#order-history-cancel-content" data-toggle="tab").nav-link Отмененные
+											.tab-content
+												.tab-pane.fade.active.show#order-history-active-content
+													.c-table.c-table_order-history.mt-4.mb-3
+														.c-table__header
+															.c-table__header-cell Номер заказа
+															.c-table__header-cell Дата заказа
+															.c-table__header-cell Состояние
+															.c-table__header-cell Вид оплаты
+															.c-table__header-cell сумма заказа
+															.c-table__header-cell
+														.c-table__body
+															.c-table__row.c-history-order-item
+																.c-table__cell 26558966
+																.c-table__cell 30.04.2019  16:30
+																.c-table__cell Выполнен
+																.c-table__cell Наличные
+																.c-table__cell 
+																	.h-price 7 695
+																.c-table__cell
+																	a(href="#").c-history-order-item__add
+															.c-table__row.c-history-order-item
+																.c-table__cell 26558966
+																.c-table__cell 30.04.2019  15:22
+																.c-table__cell Выполнен
+																.c-table__cell Банковский перевод
+																.c-table__cell 
+																	.h-price 107 695
+																.c-table__cell
+																	a(href="#").c-history-order-item__add
+													a(href="#").text-uppercase Показать еще 18
+												.tab-pane.fade#order-history-finish-content
+													.c-table.c-table_order-history.mt-4.mb-3
+														.c-table__header
+															.c-table__header-cell Номер заказа
+															.c-table__header-cell Дата заказа
+															.c-table__header-cell Состояние
+															.c-table__header-cell Вид оплаты
+															.c-table__header-cell сумма заказа
+															.c-table__header-cell
+														.c-table__body
+															.c-table__row.c-history-order-item
+																.c-table__cell 26558966
+																.c-table__cell 30.04.2019  15:22
+																.c-table__cell Выполнен
+																.c-table__cell Банковский перевод
+																.c-table__cell 
+																	.h-price 107 695
+																.c-table__cell
+																	a(href="#").c-history-order-item__add
+													a(href="#").text-uppercase Показать еще 18
+												.tab-pane.fade#order-history-cancel-content
+													.c-table.c-table_order-history.mt-4.mb-3
+														.c-table__header
+															.c-table__header-cell Номер заказа
+															.c-table__header-cell Дата заказа
+															.c-table__header-cell Состояние
+															.c-table__header-cell Вид оплаты
+															.c-table__header-cell сумма заказа
+															.c-table__header-cell
+														.c-table__body
+															.c-table__row.c-history-order-item
+																.c-table__cell 26558966
+																.c-table__cell 30.04.2019  16:30
+																.c-table__cell Выполнен
+																.c-table__cell Наличные
+																.c-table__cell 
+																	.h-price 7 695
+																.c-table__cell
+																	a(href="#").c-history-order-item__add
+													a(href="#").text-uppercase Показать еще 18
+
+
+
+				include templates/footer.pug

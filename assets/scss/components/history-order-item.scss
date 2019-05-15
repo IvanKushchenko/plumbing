@@ -1,0 +1,27 @@
+.c-history-order-item{
+	&__add{
+		width: 15px;
+		height: 15px;
+		display: block;
+		cursor: pointer;
+		position: relative;
+		&:after{
+			content: '';
+			width: 15px;
+			height: 1px;
+			background: #000;
+			position: absolute;
+			transform: rotate(90deg) translate(0, -50%);
+			top: 50%;
+		}
+		&:before{
+			content: '';
+			width: 15px;
+			height: 2px;
+			background: #000;
+			position: absolute;
+			transform: translate(0, -50%);
+			top: 50%;
+		}
+	}
+}

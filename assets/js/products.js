@@ -206,4 +206,15 @@ $(function() {
 			productsStaticMobileOldCostCounter.update(+resultCost);
         
     }
+
+
+
+    $('.c-product-card__remove-btn').click(function(){
+    	if($(this).parents('.c-table__row-wrap_kit').length){
+    		$(this).parents('.c-table__row-wrap_kit').remove();
+    	}else{
+    		$(this).parents('.c-product-card').remove();
+    	}
+    })
+
 });

@@ -12,7 +12,9 @@
 	}
 
 	&__section {
-		border-bottom: 1px solid #ecf2f6;
+		&:not(:last-child){
+			border-bottom: 1px solid #ecf2f6;
+		}
 		margin-bottom: 50px;
 
 		.c-form {

@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>Template</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="css/style.css?5d001d82f7420c57e255" rel="stylesheet"></head>
+  <link href="css/style.css?1848363d17e3cb9e3f83" rel="stylesheet"></head>
   <body>
     <div class="container">
       <div class="o-page js-page">
@@ -485,7 +485,8 @@
                         <div class="c-table__cell">
                           <div class="c-product-card__img-wrap js-product-lightbox"><a class="c-product-card__img" href="../img/content/option.jpg"><img src="img/content/option.jpg" alt=""></a></div>
                         </div>
-                        <div class="c-table__cell"><a class="c-product-card__title" href="#!">Гидромассаж название</a>
+                        <div class="c-table__cell">
+                          <div class="c-product-card__title">Гидромассаж название</div>
                           <div class="c-product-card__subtitle">Арт.  23370001</div>
                         </div>
                         <div class="c-table__cell">
@@ -505,7 +506,8 @@
                         <div class="c-table__cell">
                           <div class="c-product-card__img-wrap js-product-lightbox"><a class="c-product-card__img" href="../img/content/option.jpg"><img src="img/content/option.jpg" alt=""></a></div>
                         </div>
-                        <div class="c-table__cell"><a class="c-product-card__title" href="#!">Гидромассаж название</a>
+                        <div class="c-table__cell">
+                          <div class="c-product-card__title">Гидромассаж название</div>
                           <div class="c-product-card__subtitle">Арт.  23370001</div>
                         </div>
                         <div class="c-table__cell">
@@ -545,7 +547,7 @@
                       </div>
                     </div>
                     <div class="c-form__group">
-                      <div class="c-form__group-title">Оплата физ.лица</div>
+                      <div class="c-form__group-title">Оплата юр.лица</div>
                       <div class="c-form__radio">
                         <input class="c-form__radio-input" type="radio" name="payment-method" checked>
                         <div class="c-form__radio-label"> <b>Наличными </b>(скидка от общей стоимости 5%)</div>
@@ -563,22 +565,55 @@
                 </div>
               </div>
               <div class="s-basket__section">
-                <h3 class="s-basket__title">Способ получения товара:</h3>
+                <h3 class="s-basket__title">Способ получения товара</h3>
                 <div class="s-basket__content">
                   <form class="c-form" action="#">
                     <div class="c-form__group">
-                      <div class="c-form__radio">
-                        <input class="c-form__radio-input" type="radio" name="payment-method" checked>
-                        <div class="c-form__radio-label"> <b>Самовывоз </b>
-                          <p>
-                            Адрес:  Посёлок Заречье, Торговая ул., стр. 2, ТЦ "Элитстройматериалы", 1 этаж, место А-18 <br>
-                            Время работы салона:  10.00 - 20.00 без выходных<br><a href="#">Смотреть на карте</a>
-                          </p>
+                      <div class="mb-4">
+                        <div class="c-form__radio">
+                          <input class="c-form__radio-input" type="radio" name="payment-method" checked>
+                          <div class="c-form__radio-label"> <b>Самовывоз </b>
+                            <p class="c-form__radio-txt">
+                              Адрес:  Посёлок Заречье, Торговая ул., стр. 2, ТЦ "Элитстройматериалы", 1 этаж, место А-18 <br>
+                              Время работы салона:  10.00 - 20.00 без выходных<br><a href="#">Смотреть на карте</a>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="c-form__radio">
+                          <input class="c-form__radio-input" type="radio" name="payment-method">
+                          <div class="c-form__radio-label"> <b>Доставка по адресу  </b></div>
                         </div>
                       </div>
-                      <div class="c-form__radio">
-                        <input class="c-form__radio-input" type="radio" name="payment-method">
-                        <div class="c-form__radio-label"> <b>Доставка по адресу  </b></div>
+                      <label class="c-form__label">Адрес доставки
+                        <input class="form-control c-form__field" type="text">
+                      </label>
+                      <label class="c-form__label">Комментарии
+                        <textarea class="form-control c-form__field c-form__field_textarea" name="" rows="7"></textarea>
+                      </label>
+                      <div class="c-form__action c-form__action_attachment">
+                        <input type="file"><a href="#">Прикрепить файл</a>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="s-basket__section">
+                <h3 class="s-basket__title">Личные данные</h3>
+                <div class="s-basket__content">
+                  <form class="c-form" action="#">
+                    <label class="c-form__label">ФИО
+                      <input class="form-control c-form__field" type="text">
+                    </label>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label class="c-form__label">E-mail
+                          <input class="form-control c-form__field" type="email">
+                        </label>
+                      </div>
+                      <div class="col-md-6">
+                        <label class="c-form__label">Телефон
+                          <input class="form-control c-form__field js-phone-field" type="text" value="7">
+                        </label>
                       </div>
                     </div>
                   </form>
@@ -663,5 +698,5 @@
 </footer>
       </div>
     </div>
-  <script type="text/javascript" src="js/script.js?5d001d82f7420c57e255"></script></body>
+  <script type="text/javascript" src="js/script.js?1848363d17e3cb9e3f83"></script></body>
 </html>

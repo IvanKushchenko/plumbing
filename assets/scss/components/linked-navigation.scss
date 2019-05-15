@@ -1,0 +1,21 @@
+.c-linked-navigation{
+	.nav-tabs{
+		border-bottom: none;
+	}
+	.nav-item{
+		margin-bottom: 0;
+		&:not(:last-child){
+			margin-right: 45px;
+		}
+	}
+	.nav-link{
+		font-size: 24px;
+		box-shadow: none;
+		border-bottom: 1px dashed #6493ad;
+		padding: 0;
+		&.active,
+		&:hover{
+			border-color: transparent;
+		}
+	}
+}

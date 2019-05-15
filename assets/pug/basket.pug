@@ -107,7 +107,7 @@ html(lang="ru")
 														a(href="../img/content/option.jpg").c-product-card__img
 															img(src=require("../img/content/option.jpg"), alt="")
 												.c-table__cell
-													a(href="#!").c-product-card__title Гидромассаж название
+													.c-product-card__title Гидромассаж название
 													.c-product-card__subtitle Арт.  23370001
 												.c-table__cell
 													.c-product-card__price 2772
@@ -123,7 +123,7 @@ html(lang="ru")
 														a(href="../img/content/option.jpg").c-product-card__img
 															img(src=require("../img/content/option.jpg"), alt="")
 												.c-table__cell
-													a(href="#!").c-product-card__title Гидромассаж название
+													.c-product-card__title Гидромассаж название
 													.c-product-card__subtitle Арт.  23370001
 												.c-table__cell
 													.c-product-card__price 2772
@@ -158,7 +158,7 @@ html(lang="ru")
 													.
 														(скидка от общей стоимости 5%)
 										.c-form__group
-											.c-form__group-title Оплата физ.лица
+											.c-form__group-title Оплата юр.лица
 											.c-form__radio
 												input(type="radio" name="payment-method" checked).c-form__radio-input
 												.c-form__radio-label 
@@ -178,22 +178,43 @@ html(lang="ru")
 													.
 														(скидка от общей стоимости 5%)
 							.s-basket__section
-								h3.s-basket__title Способ получения товара:
+								h3.s-basket__title Способ получения товара
 								.s-basket__content
 									form(action="#").c-form
 										.c-form__group
-											.c-form__radio
-												input(type="radio" name="payment-method" checked).c-form__radio-input
-												.c-form__radio-label 
-													b Самовывоз 
-													p
-														.
-															Адрес:  Посёлок Заречье, Торговая ул., стр. 2, ТЦ "Элитстройматериалы", 1 этаж, место А-18 <br>
-															Время работы салона:  10.00 - 20.00 без выходных<br>
-														a(href="#") Смотреть на карте
+											.mb-4
+												.c-form__radio
+													input(type="radio" name="payment-method" checked).c-form__radio-input
+													.c-form__radio-label 
+														b Самовывоз 
+														p.c-form__radio-txt
+															.
+																Адрес:  Посёлок Заречье, Торговая ул., стр. 2, ТЦ "Элитстройматериалы", 1 этаж, место А-18 <br>
+																Время работы салона:  10.00 - 20.00 без выходных<br>
+															a(href="#") Смотреть на карте
 
-											.c-form__radio
-												input(type="radio" name="payment-method").c-form__radio-input
-												.c-form__radio-label 
-													b Доставка по адресу  
+												.c-form__radio
+													input(type="radio" name="payment-method").c-form__radio-input
+													.c-form__radio-label 
+														b Доставка по адресу  
+											label.c-form__label Адрес доставки
+												input(type="text").form-control.c-form__field
+											label.c-form__label Комментарии
+												textarea(name="", rows="7").form-control.c-form__field.c-form__field_textarea
+											.c-form__action.c-form__action_attachment
+												input(type="file")
+												a(href="#") Прикрепить файл
+							.s-basket__section
+								h3.s-basket__title Личные данные
+								.s-basket__content
+									form(action="#").c-form
+										label.c-form__label ФИО
+											input(type="text").form-control.c-form__field
+										.row
+											.col-md-6
+												label.c-form__label E-mail
+													input(type="email").form-control.c-form__field
+											.col-md-6
+												label.c-form__label Телефон
+													input(type="text" value="7").form-control.c-form__field.js-phone-field
 				include templates/footer.pug
