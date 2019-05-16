@@ -72,6 +72,8 @@
 			// border-bottom: 1px dotted rgba(100, 147, 173, 0.3);
 			position: relative;
 			margin-right: 25px;
+			border-bottom: 1px dotted;
+			display: inline;
 			&[aria-expanded="true"]{
 				border-bottom: none;
 				box-shadow: none;

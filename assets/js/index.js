@@ -226,6 +226,7 @@ $(function() {
     var watchEarlierSlider = new Swiper('.js-watch-earlier-slider', {
         slidesPerView: 4,
         spaceBetween: 25,
+        slidesPerGroup: 4,
         breakpoints: {
         	992:{
         		slidesPerView: 3
@@ -394,8 +395,6 @@ $(function() {
 
     function orderCheckoutInfo() {
         var orderInfo = ($('.c-product__order-info_desktop').is(":visible")) ? $('.c-product__order-info_desktop') : $('.c-product__order-info_mobile');
-        console.log($('.c-product__order-info_desktop').css('display'));
-        console.log("orderInfo", orderInfo);
         if(!orderInfo.length) return true;
         var productCheckoutStatic = $('.js-product-order-checkout-static');
         var productCheckoutFixed = $('.js-product-order-checkout-fixed');

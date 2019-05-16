@@ -200,9 +200,8 @@ html(lang="ru")
 										.d-flex.align-items-center.justify-content-between.mb-3
 											.c-product__choosen
 												| Выбрано:
-												a(href="#!").c-product__choosen-count 0 товара
+												a(data-toggle="collapse", aria-expanded="false", href="#order-checkout-products-chosen").c-product__choosen-count.collapsed 0 товара
 											.c-product__price
-												| Итого:
 												.c-product__price-number.c-product__price-number_old#c-product__price-number_old 0
 												.c-product__price-number.c-product__price-number_new#c-product__price-number_new 0
 											.c-product__order-actions.d-flex
@@ -238,13 +237,19 @@ html(lang="ru")
 														.c-progress-radial__value 59
 														.c-progress-radial__footer минут
 												.c-counter__txt осталось до конца акции
+									.c-checkout-products.collapse#order-checkout-products-chosen.js-product-order-checkout-static
+										.swiper-container.js-checkout-products-fixed
+											.swiper-wrapper
+												
+											.swiper-scrollbar
+										.swiper-button-prev
+										.swiper-button-next
 									.c-product__order-info.c-product__order-info_mobile.d-xl-none.d-flex.align-items-center.flex-column.justify-content-between
 										.d-flex.w-100.justify-content-between.justify-content-md-center.c-product__order-info-inner
 											.c-product__choosen
 												| Выбрано:
 												a(href="#!").c-product__choosen-count 0 товара
 											.c-product__price.d-md-none
-												| Итого:
 												.c-product__price-number.c-product__price-number_old#c-product__price-mobile-number_old 0
 												.c-product__price-number.c-product__price-number_new#c-product__price-mobile-number_new 0
 										.d-flex.w-100.justify-content-between.mb-4.c-product__order-info-inner
@@ -280,7 +285,6 @@ html(lang="ru")
 														.c-progress-radial__footer минут
 										.d-flex.align-items-center.justify-content-between
 											.c-product__price.d-none.d-md-flex
-												| Итого:
 												.c-product__price-number.c-product__price-number_old#c-product__price-mobile-bottom-number_old 0
 												.c-product__price-number.c-product__price-number_new#c-product__price-mobile-bottom-number_new 0
 											.c-product__order-actions.d-flex
@@ -326,7 +330,7 @@ html(lang="ru")
 															.c-product-card__price.c-product-card__price_old 2772
 															.c-product-card__price.c-product-card__price_new 1 990
 														.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
-													.c-table__cell.d-none.d-md-flex.align-items-start.flex-column
+													.c-table__cell.d-none.d-md-flex.align-items-end.flex-column
 														.c-product-card__price.c-product-card__price_old 2772
 														.c-product-card__price.c-product-card__price_new 1 990
 													.c-table__cell
@@ -344,7 +348,7 @@ html(lang="ru")
 															.c-product-card__price.c-product-card__price_old 2772
 															.c-product-card__price.c-product-card__price_new 1 990
 														.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
-													.c-table__cell.d-none.d-md-flex.align-items-start.flex-column
+													.c-table__cell.d-none.d-md-flex.align-items-end.flex-column
 														.c-product-card__price.c-product-card__price_old 2772
 														.c-product-card__price.c-product-card__price_new 1 990
 													.c-table__cell
@@ -362,7 +366,7 @@ html(lang="ru")
 															.c-product-card__price.c-product-card__price_old 2772
 															.c-product-card__price.c-product-card__price_new 1 990
 														.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
-													.c-table__cell.d-none.d-md-flex.align-items-start.flex-column
+													.c-table__cell.d-none.d-md-flex.align-items-end.flex-column
 														.c-product-card__price.c-product-card__price_old 2772
 														.c-product-card__price.c-product-card__price_new 1 990
 													.c-table__cell
@@ -380,7 +384,7 @@ html(lang="ru")
 															.c-product-card__price.c-product-card__price_old 2772
 															.c-product-card__price.c-product-card__price_new 1 990
 														.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
-													.c-table__cell.d-none.d-md-flex.align-items-start.flex-column
+													.c-table__cell.d-none.d-md-flex.align-items-end.flex-column
 														.c-product-card__price.c-product-card__price_old 2772
 														.c-product-card__price.c-product-card__price_new 1 990
 													.c-table__cell
@@ -400,7 +404,7 @@ html(lang="ru")
 													.d-flex.flex-column.flex-sm-row.align-items-start.align-items-md-center.d-md-none.mb-2
 														.c-product-card__price 13 400
 													.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
-												.c-table__cell.d-none.d-md-flex.align-items-start.flex-column
+												.c-table__cell.d-none.d-md-flex.align-items-end.flex-column
 													.c-product-card__price 13 400
 												.c-table__cell
 													a(href="#").c-btn.c-btn_primary.c-product-card__btn выбрать
@@ -415,7 +419,7 @@ html(lang="ru")
 													.d-flex.flex-column.flex-sm-row.align-items-start.align-items-md-center.d-md-none.mb-2
 														.c-product-card__price 13 400
 													.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
-												.c-table__cell.d-none.d-md-flex.align-items-start.flex-column
+												.c-table__cell.d-none.d-md-flex.align-items-end.flex-column
 													.c-product-card__price 13 400
 												.c-table__cell
 													a(href="#").c-btn.c-btn_primary.c-product-card__btn выбрать
@@ -430,7 +434,7 @@ html(lang="ru")
 													.d-flex.flex-column.flex-sm-row.align-items-start.align-items-md-center.d-md-none.mb-2
 														.c-product-card__price 13 400
 													.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
-												.c-table__cell.d-none.d-md-flex.align-items-start.flex-column
+												.c-table__cell.d-none.d-md-flex.align-items-end.flex-column
 													.c-product-card__price 13 400
 												.c-table__cell
 													a(href="#").c-btn.c-btn_primary.c-product-card__btn выбрать
@@ -445,7 +449,7 @@ html(lang="ru")
 													.d-flex.flex-column.flex-sm-row.align-items-start.align-items-md-center.d-md-none.mb-2
 														.c-product-card__price 13 400
 													.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
-												.c-table__cell.d-none.d-md-flex.align-items-start.flex-column
+												.c-table__cell.d-none.d-md-flex.align-items-end.flex-column
 													.c-product-card__price 13 400
 												.c-table__cell
 													a(href="#").c-btn.c-btn_primary.c-product-card__btn выбрать
@@ -460,7 +464,7 @@ html(lang="ru")
 													.d-flex.flex-column.flex-sm-row.align-items-start.align-items-md-center.d-md-none.mb-2
 														.c-product-card__price 13 400
 													.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
-												.c-table__cell.d-none.d-md-flex.align-items-start.flex-column
+												.c-table__cell.d-none.d-md-flex.align-items-end.flex-column
 													.c-product-card__price 13 400
 												.c-table__cell
 													a(href="#").c-btn.c-btn_primary.c-product-card__btn выбрать
@@ -483,7 +487,6 @@ html(lang="ru")
 														.c-table__cell
 															.c-product-card__header
 																a(href="#!").c-product-card__title Гидромассаж название
-																.c-product-card__showroom-label Eсть в шоуруме
 															.c-product-card__subtitle Арт.  233708001
 															.d-flex.flex-column.flex-sm-row.align-items-start.align-items-md-center.d-md-none.mb-2
 																.c-product-card__price 13 400
@@ -522,7 +525,7 @@ html(lang="ru")
 																.c-product-card__price 13 400
 															.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
 															a(href="#").c-product-card__show-description Показать описание
-														.c-table__cell.d-none.d-md-flex.align-items-start.flex-column
+														.c-table__cell.d-none.d-md-flex.align-items-end.flex-column
 															.c-product-card__price 13 400
 														.c-table__cell
 															a(href="#").c-btn.c-btn_primary.c-product-card__btn Добавить
@@ -539,7 +542,7 @@ html(lang="ru")
 																.c-product-card__price 13 400
 															.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
 															a(href="#").c-product-card__show-description Показать описание
-														.c-table__cell.d-none.d-md-flex.align-items-start.flex-column
+														.c-table__cell.d-none.d-md-flex.align-items-end.flex-column
 															.c-product-card__price 13 400
 														.c-table__cell
 															a(href="#").c-btn.c-btn_primary.c-product-card__btn Добавить
@@ -556,7 +559,7 @@ html(lang="ru")
 																.c-product-card__price 13 400
 															.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
 															a(href="#").c-product-card__show-description Показать описание
-														.c-table__cell.d-none.d-md-flex.align-items-start.flex-column
+														.c-table__cell.d-none.d-md-flex.align-items-end.flex-column
 															.c-product-card__price 13 400
 														.c-table__cell
 															a(href="#").c-btn.c-btn_primary.c-product-card__btn Добавить
@@ -568,7 +571,6 @@ html(lang="ru")
 													| Выбрано:
 													a(href="#!").c-product__choosen-count 0 товара
 												.c-product__price
-													| Итого:
 													.c-product__price-number.c-product__price-number_old#c-product__price-number-fixed_old 0
 													.c-product__price-number.c-product__price-number_new#c-product__price-number-fixed_new 0
 
@@ -583,7 +585,6 @@ html(lang="ru")
 														a(href="#!").c-product__choosen-count 0 товара
 												.d-flex.c-product__order-checkout-inner
 													.c-product__price
-														| Итого:
 														.c-product__price-number.c-product__price-number_old#c-product__price-number-fixed-mobile_old 0
 														.c-product__price-number.c-product__price-number_new#c-product__price-number-fixed-mobile_new 0
 
@@ -600,12 +601,11 @@ html(lang="ru")
 									.c-product__order-checkout.js-product-order-checkout-static
 										.c-product__order-checkout-top.collapsed(data-toggle="collapse", aria-expanded="false", href="#order-checkout-products")
 											a(href="#").c-product__order-checkout-top-close.js-order-checkout-expand-close
-											.d-none.d-md-flex.align-items-center.justify-content-between.w-100
-												.c-product__choosen
+											.d-none.d-md-flex.flex-column.flex-xl-row.align-items-center.justify-content-between.w-100
+												.c-product__choosen.mb-2.mb-xl-0
 													| Выбрано:
 													a(href="#!").c-product__choosen-count 0 товара
-												.c-product__price
-													| Итого:
+												.c-product__price.mb-2.mb-xl-0
 													.c-product__price-number.c-product__price-number_old#c-product__price-number-static_old 0
 													.c-product__price-number.c-product__price-number_new#c-product__price-number-static_new 0
 												.c-product__order-actions.d-flex
@@ -618,7 +618,6 @@ html(lang="ru")
 														a(href="#!").c-product__choosen-count 0 товара
 												.d-flex.c-product__order-checkout-inner
 													.c-product__price
-														| Итого:
 														.c-product__price-number.c-product__price-number_old#c-product__price-number-static-mobile_old 0
 														.c-product__price-number.c-product__price-number_new#c-product__price-number-static-mobile_new 0
 													.c-product__order-actions.d-flex

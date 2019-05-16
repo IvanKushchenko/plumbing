@@ -1,16 +1,20 @@
-.c-catalog-menu{
+.c-catalog-menu {
 	position: relative;
-	&:hover &__nav{
+
+	&:hover &__nav {
 		display: block;
 	}
-	&:hover &__toggle-icon{
+
+	&:hover &__toggle-icon {
 		transform: translateY(-50%) rotate(180deg);
 	}
-	&__item_dropdown > &__link[aria-expanded="true"]{
+
+	&__item_dropdown > &__link[aria-expanded="true"] {
 		background: #8cafc2;
 		color: #fff;
 	}
-	&__item_dropdown > &__link:after{
+
+	&__item_dropdown > &__link:after {
 		content: '';
 		display: block;
 		position: absolute;
@@ -22,22 +26,27 @@
 		background: url('../img/icons/right-arrow.svg');
 		transform: rotate(90deg) translateY(-50%);
 	}
-	&__link{
+
+	&__link {
 		display: block;
 		color: #333;
 		box-shadow: none;
 		padding: 10px 20px;
 		position: relative;
-		&:hover{
+
+		&:hover {
 			color: #fff;
 			background: #8cafc2;
 		}
+
 	}
-	&__submenu{
+
+	&__submenu {
 		padding: 5px 0;
 		padding-left: 30px;
 	}
-	&__toggle{
+
+	&__toggle {
 		height: 48px;
 		width: 270px;
 		background-color: #8cafc2;
@@ -50,11 +59,19 @@
 		color: #fff;
 		font-size: 1.125rem;
 		cursor: pointer;
+		font-weight: bold;
+
 		@media (max-width:$bp-lg) {
 			width: 240px;
 		}
+
 	}
-	&__toggle-icon{
+	&__toggle-menu-icon{
+		width: 20px;
+		margin-right: 10px;
+		fill: #fff;
+	}
+	&__toggle-icon {
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
@@ -62,14 +79,13 @@
 		width: 19px;
 		height: 19px;
 		border-radius: 50%;
-		background: rgba(255,255,255,.1) url('../img/icons/arrow-down.svg') no-repeat center center;
+		background: rgba(255, 255, 255, .1) url('../img/icons/arrow-down.svg') no-repeat center center;
 	}
 
-	
-
-	&__nav{
+	&__nav {
 		z-index: 22;
 		width: 100%;
 		background-color: #fff;
 	}
+
 }

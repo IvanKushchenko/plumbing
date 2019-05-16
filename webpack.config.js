@@ -18,17 +18,17 @@ module.exports = {
 		new MiniCssExtractPlugin({
 			filename: 'css/style.css'
 		}),
-		// new HtmlWebpackPlugin({
-		// 	template: './assets/pug/index.pug',
-		// 	minify: false,
-		// 	hash: true
-		// }),
-		// new HtmlWebpackPlugin({
-		// 	filename: 'basket.html',
-		// 	template: './assets/pug/basket.pug',
-		// 	minify: false,
-		// 	hash: true
-		// }),
+		new HtmlWebpackPlugin({
+			template: './assets/pug/index.pug',
+			minify: false,
+			hash: true
+		}),
+		new HtmlWebpackPlugin({
+			filename: 'basket.html',
+			template: './assets/pug/basket.pug',
+			minify: false,
+			hash: true
+		}),
 		new HtmlWebpackPlugin({
 			filename: 'kabinet.html',
 			template: './assets/pug/kabinet.pug',

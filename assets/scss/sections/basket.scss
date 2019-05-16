@@ -16,7 +16,7 @@
 			border-bottom: 1px solid #ecf2f6;
 		}
 		margin-bottom: 50px;
-
+		
 		.c-form {
 			&__radio {
 				font-size: 1.125rem;
@@ -43,6 +43,9 @@
 
 	&__content {
 		padding-left: 100px;
+		@media (max-width: $bp-lg) {
+			padding-left: 0;
+		}
 	}
 
 }

@@ -44,8 +44,8 @@
 
 	&__order-info {
 		padding: 13px 0;
-		padding-left: 32px;
-		padding-right: 23px;
+		padding-left: 16px;
+		padding-right: 11px;
 		border-radius: 3px;
 		background-color: #ecf2f6;
 		padding-bottom: 23px;
@@ -157,7 +157,6 @@
 			padding: 0 12px;
 		    letter-spacing: 0.72px;
 		    font-size: 0.875rem;
-		    font-weight: bold;
 			&:not(:last-child) {
 				margin-right: 20px;
 
@@ -275,6 +274,8 @@
 		@media (max-width:$bp-xl) {
 			padding-left: 15px;
 			padding-right: 15px;
+			height: auto;
+			padding: 10px 0;
 		}
 
 		@media (max-width:$bp-md) {
