@@ -5,7 +5,8 @@
   "main": "index.js",
   "private": "true",
   "scripts": {
-    "watch": "webpack --watch"
+    "watch": "webpack --watch",
+    "dev": "webpack"
   },
   "author": "",
   "license": "ISC",
