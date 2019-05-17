@@ -24,7 +24,7 @@ html(lang="ru")
 								.col-lg-3.mb-3.mb-lg-0
 									.s-basket__total-price.c-total-price
 										.c-total-price__txt Итого:
-										.c-total-price__number 40423
+										.c-total-price__number#main-total-price 0
 									.c-discounts
 										ul.c-discounts__list
 											li.c-discounts__item
@@ -178,6 +178,19 @@ html(lang="ru")
 													.
 														(скидка от общей стоимости 5%)
 							.s-basket__section
+								h3.s-basket__title Личные данные
+								.s-basket__content
+									form(action="#").c-form
+										label.c-form__label ФИО
+											input(type="text").form-control.c-form__field
+										.row
+											.col-md-6
+												label.c-form__label E-mail
+													input(type="email").form-control.c-form__field
+											.col-md-6
+												label.c-form__label Телефон
+													input(type="text" value="7").form-control.c-form__field.js-phone-field
+							.s-basket__section
 								h3.s-basket__title Способ получения товара
 								.s-basket__content
 									form(action="#").c-form
@@ -198,23 +211,11 @@ html(lang="ru")
 													.c-form__radio-label 
 														b Доставка по адресу  
 											label.c-form__label Адрес доставки
-												input(type="text").form-control.c-form__field
+												textarea.form-control.c-form__field
 											label.c-form__label Комментарии
 												textarea(name="", rows="7").form-control.c-form__field.c-form__field_textarea
 											.c-form__action.c-form__action_attachment
 												input(type="file")
 												a(href="#") Прикрепить файл
-							.s-basket__section
-								h3.s-basket__title Личные данные
-								.s-basket__content
-									form(action="#").c-form
-										label.c-form__label ФИО
-											input(type="text").form-control.c-form__field
-										.row
-											.col-md-6
-												label.c-form__label E-mail
-													input(type="email").form-control.c-form__field
-											.col-md-6
-												label.c-form__label Телефон
-													input(type="text" value="7").form-control.c-form__field.js-phone-field
+							
 				include templates/footer.pug

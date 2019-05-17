@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>Template</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="css/style.css?20a99091d7ed31449604" rel="stylesheet"></head>
+  <link href="css/style.css?a756392de4a6d047cbc6" rel="stylesheet"></head>
   <body>
     <div class="container">
       <div class="o-page js-page">
@@ -386,7 +386,7 @@
                 <div class="col-lg-3 mb-3 mb-lg-0">
                   <div class="s-basket__total-price c-total-price">
                     <div class="c-total-price__txt">Итого:</div>
-                    <div class="c-total-price__number">40423</div>
+                    <div class="c-total-price__number" id="main-total-price">0</div>
                   </div>
                   <div class="c-discounts">
                     <ul class="c-discounts__list">
@@ -566,6 +566,28 @@
                 </div>
               </div>
               <div class="s-basket__section">
+                <h3 class="s-basket__title">Личные данные</h3>
+                <div class="s-basket__content">
+                  <form class="c-form" action="#">
+                    <label class="c-form__label">ФИО
+                      <input class="form-control c-form__field" type="text">
+                    </label>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label class="c-form__label">E-mail
+                          <input class="form-control c-form__field" type="email">
+                        </label>
+                      </div>
+                      <div class="col-md-6">
+                        <label class="c-form__label">Телефон
+                          <input class="form-control c-form__field js-phone-field" type="text" value="7">
+                        </label>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="s-basket__section">
                 <h3 class="s-basket__title">Способ получения товара</h3>
                 <div class="s-basket__content">
                   <form class="c-form" action="#">
@@ -586,35 +608,13 @@
                         </div>
                       </div>
                       <label class="c-form__label">Адрес доставки
-                        <input class="form-control c-form__field" type="text">
+                        <textarea class="form-control c-form__field"></textarea>
                       </label>
                       <label class="c-form__label">Комментарии
                         <textarea class="form-control c-form__field c-form__field_textarea" name="" rows="7"></textarea>
                       </label>
                       <div class="c-form__action c-form__action_attachment">
                         <input type="file"><a href="#">Прикрепить файл</a>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-              <div class="s-basket__section">
-                <h3 class="s-basket__title">Личные данные</h3>
-                <div class="s-basket__content">
-                  <form class="c-form" action="#">
-                    <label class="c-form__label">ФИО
-                      <input class="form-control c-form__field" type="text">
-                    </label>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <label class="c-form__label">E-mail
-                          <input class="form-control c-form__field" type="email">
-                        </label>
-                      </div>
-                      <div class="col-md-6">
-                        <label class="c-form__label">Телефон
-                          <input class="form-control c-form__field js-phone-field" type="text" value="7">
-                        </label>
                       </div>
                     </div>
                   </form>
@@ -699,5 +699,5 @@
 </footer>
       </div>
     </div>
-  <script type="text/javascript" src="js/script.js?20a99091d7ed31449604"></script></body>
+  <script type="text/javascript" src="js/script.js?a756392de4a6d047cbc6"></script></body>
 </html>

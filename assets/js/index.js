@@ -20,6 +20,10 @@ $(function() {
 	 })
 
 
+	var mainTotalPrice = new CountUp('main-total-price', 0,0,0,0, CountUpOptions);
+
+
+
 	$(".c-number-counter__field").on('input', function(e){
 		if(!$(this).val()) {
 			$(this).val(0);
@@ -35,7 +39,14 @@ $(function() {
 		var parent = $(this).parents('.c-product-card');
 		var field = $(this);
 		var price = +parent.find('.c-product-card__cost').text();
+		parent.find('.c-product-card__total').attr('data-total', +field.val() * price);
 		totalPrices[parent.find('.c-product-card__total').attr('id').replace('#', '')].update(+field.val() * price);
+		var totalPrice = 0;
+		$('.c-table_basket .c-product-card__total').each(function(index, item){
+			if(!$(item).attr('data-total')) return;
+			totalPrice += +$(item).attr('data-total');
+		});
+		mainTotalPrice.update(totalPrice);
 	});
 
 
@@ -45,8 +56,15 @@ $(function() {
 		field.val(+field.val() - 1);
 		var parent = $(this).parents('.c-product-card');
 		var price = +parent.find('.c-product-card__cost').text();
-		parent.find('.c-product-card__total').text( +field.val() * price);
+		parent.find('.c-product-card__total').attr('data-total', +field.val() * price);
 		totalPrices[parent.find('.c-product-card__total').attr('id').replace('#', '')].update(+field.val() * price);
+		var totalPrice = 0;
+		$('.c-table_basket .c-product-card__total').each(function(index, item){
+			if(!$(item).attr('data-total')) return;
+			totalPrice += +$(item).attr('data-total');
+		})
+		console.log("totalPrice", totalPrice);
+		mainTotalPrice.update(totalPrice);
 	})
 
 	$(".c-number-counter__action_up").click(function(){
@@ -54,8 +72,14 @@ $(function() {
 		field.val(+field.val() + 1);
 		var parent = $(this).parents('.c-product-card');
 		var price = +parent.find('.c-product-card__cost').text();
-		parent.find('.c-product-card__total').text( +field.val() * price);
+		parent.find('.c-product-card__total').attr('data-total', +field.val() * price);
 		totalPrices[parent.find('.c-product-card__total').attr('id').replace('#', '')].update(+field.val() * price);
+		var totalPrice = 0;
+		$('.c-table_basket .c-product-card__total').each(function(index, item){
+			if(!$(item).attr('data-total')) return;
+			totalPrice += +$(item).attr('data-total');
+		})
+		mainTotalPrice.update(totalPrice);
 	})
 
 	$('.js-order-checkout-expand-close').click(function(e){
