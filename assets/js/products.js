@@ -144,6 +144,7 @@ $(function() {
             if (item.articul == product.articul) products.splice(i, 1);
         })
         checkoutProducts();
+
         $('.js-checkout-products-fixed')[0].swiper.update();
         $('.js-checkout-products-static')[0].swiper.update();
     }
@@ -162,9 +163,13 @@ $(function() {
 		`);
         sliderContainer.append(slide);
          setTimeout(function(){
-        	$('.js-checkout-products-fixed')[0].swiper.update();
-        	$('.js-checkout-products-static')[0].swiper.update();
-        }, 100)
+         	$('.js-checkout-products-static').each(function(index, item){
+	        	item.swiper.update();
+	        })
+	        $('.js-checkout-products-fixed').each(function(index, item){
+	        	item.swiper.update();
+	        })
+        }, 200)
     }
 
     $('.js-product-lightbox').each(function(index, item){

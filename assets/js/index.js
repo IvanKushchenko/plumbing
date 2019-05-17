@@ -6,10 +6,19 @@ import selectric from 'selectric';
 require('./products');
 require('./tips');
 require('jquery-mask-plugin');
-
+import CountUp from 'countup.js';
 import Swiper from 'swiper';
 
 $(function() {
+	var totalPrices = [];
+	var CountUpOptions = {
+		separator: ' '
+	};
+	 $('.c-table_basket .c-product-card').each(function(index, item){
+	 	var elName = "product-card-total-" + (index + 1);
+	 	totalPrices[elName] = new CountUp(elName, 0, 0, 0, 0, CountUpOptions);
+	 })
+
 
 	$(".c-number-counter__field").on('input', function(e){
 		if(!$(this).val()) {
@@ -22,15 +31,31 @@ $(function() {
 	})
 
 
+	$('.c-number-counter__field').change(function(){
+		var parent = $(this).parents('.c-product-card');
+		var field = $(this);
+		var price = +parent.find('.c-product-card__cost').text();
+		totalPrices[parent.find('.c-product-card__total').attr('id').replace('#', '')].update(+field.val() * price);
+	});
+
+
 	$(".c-number-counter__action_down").click(function(){
 		var field = $(this).parent().find('.c-number-counter__field');
 		if(+field.val() <= 0) return;
 		field.val(+field.val() - 1);
+		var parent = $(this).parents('.c-product-card');
+		var price = +parent.find('.c-product-card__cost').text();
+		parent.find('.c-product-card__total').text( +field.val() * price);
+		totalPrices[parent.find('.c-product-card__total').attr('id').replace('#', '')].update(+field.val() * price);
 	})
 
 	$(".c-number-counter__action_up").click(function(){
 		var field = $(this).parent().find('.c-number-counter__field');
 		field.val(+field.val() + 1);
+		var parent = $(this).parents('.c-product-card');
+		var price = +parent.find('.c-product-card__cost').text();
+		parent.find('.c-product-card__total').text( +field.val() * price);
+		totalPrices[parent.find('.c-product-card__total').attr('id').replace('#', '')].update(+field.val() * price);
 	})
 
 	$('.js-order-checkout-expand-close').click(function(e){
@@ -368,12 +393,17 @@ $(function() {
     })
 
 
-    $('#order-checkout-products').on('shown.bs.collapse', function() {
-        checkoutProductsStatic.update();
+    $('#order-checkout-products, #order-checkout-products-chosen').on('shown.bs.collapse', function() {
+    	$('.js-checkout-products-static').each(function(index, item){
+	        	item.swiper.update();
+	        })
+	        
     })
 
      $('#order-checkout-products-fixed').on('shown.bs.collapse', function() {
-        checkoutProductsFixed.update();
+     	$('.js-checkout-products-fixed').each(function(index, item){
+	        	item.swiper.update();
+	        })
     })
 
     $('.js-product-preview-page #js-product-preview-main').lightGallery({

@@ -13218,7 +13218,7 @@ a:hover {
   position: relative;
   padding-top: 32px;
   max-height: 660px;
-  overflow: auto;
+  overflow-y: scroll;
   padding-right: calc(2.5% - 7px);
   padding-left: 2px;
 }
@@ -13845,7 +13845,6 @@ a:hover {
   padding: 0 8px;
   letter-spacing: 0.72px;
   font-size: 0.9375rem;
-  font-weight: bold;
 }
 
 .c-product-card__sale {
