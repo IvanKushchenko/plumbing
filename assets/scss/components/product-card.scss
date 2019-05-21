@@ -66,6 +66,9 @@
 	&_basket &__img{
 		width: 100%;
 		height: 100%;
+		display: flex;
+	    justify-content: center;
+	    align-items: center;
 		@media (max-width: $bp-sm-2) {
 			object-fit: contain;
 			img{
