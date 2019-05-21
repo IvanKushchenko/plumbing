@@ -16,7 +16,9 @@ $(function() {
 	};
 	 $('.c-table_basket .c-product-card').each(function(index, item){
 	 	var elName = "product-card-total-" + (index + 1);
+	 	var elNameMobile = "product-card-total-mobile-" + (index + 1);
 	 	totalPrices[elName] = new CountUp(elName, 0, 0, 0, 0, CountUpOptions);
+	 	totalPrices[elNameMobile] = new CountUp(elNameMobile, 0, 0, 0, 0, CountUpOptions);
 	 })
 
 
@@ -450,7 +452,7 @@ $(function() {
     function orderCheckoutInfo() {
         var orderInfo = ($('.c-product__order-info_desktop').is(":visible")) ? $('.c-product__order-info_desktop') : $('.c-product__order-info_mobile');
         if(!orderInfo.length) return true;
-        var productCheckoutStatic = $('.js-product-order-checkout-static');
+        var productCheckoutStatic = $('.c-product__order-checkout.js-product-order-checkout-static');
         var productCheckoutFixed = $('.js-product-order-checkout-fixed');
         productCheckoutFixed.css({
             'left': orderInfo.offset().left + 'px',

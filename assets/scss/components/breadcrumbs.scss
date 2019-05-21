@@ -42,7 +42,7 @@
 	&__item {
 		text-transform: uppercase;
 		box-shadow: none;
-	    max-width: 150px;
+	    // max-width: 150px;
 	    display: inline-block;
 	    white-space: nowrap;
 		&:not(.c-breadcrumbs__item_dropdown):not(:last-of-type) {
@@ -58,7 +58,7 @@
 
 		}
 		@media (max-width:$bp-sm-2) {
-			max-width: 110px;
+			// max-width: 110px;
 		}
 		&_dropdown-wrap{
 			max-width: initial;

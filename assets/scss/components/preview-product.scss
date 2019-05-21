@@ -1,4 +1,16 @@
 .c-preview-product {
+	.c-modal{
+		&__header{
+			position: relative;
+			z-index: 200;
+		}
+	}
+	.close{
+		@media (max-width: $bp-sm) {
+		    top: 20px;
+		    right: 20px;
+		}
+	}
 	&__description-body {
 		font-family: "Open Sans";
 		font-size: 0.8125rem;

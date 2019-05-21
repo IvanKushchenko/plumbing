@@ -1,14 +1,21 @@
 .c-kabinet-navigation{
 	margin-bottom: 70px;
+	margin-left: -10px;
+	margin-right: -10px;
 	.nav-tabs{
 		display: flex;
 		border-bottom: none;
 		justify-content: space-between;
+		
+		@media (max-width: $bp-lg) {
+			justify-content: flex-start;
+		}
 		@media (max-width: $bp-sm) {
 			justify-content: center;
 		}
 	}
 	.nav-item{
+		margin: 10px;
 		margin-bottom: 30px;
 		&__icon{
 			margin-bottom: 20px;

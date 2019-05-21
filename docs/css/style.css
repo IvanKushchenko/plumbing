@@ -12299,7 +12299,6 @@ a:hover {
 .c-breadcrumbs__item {
   text-transform: uppercase;
   box-shadow: none;
-  max-width: 150px;
   display: inline-block;
   white-space: nowrap;
 }
@@ -12314,12 +12313,6 @@ a:hover {
 @media (max-width: 576px) {
   .c-breadcrumbs__item:not(.c-breadcrumbs__item_dropdown):not(:last-of-type):after {
     margin: 0 5px;
-  }
-}
-
-@media (max-width: 450px) {
-  .c-breadcrumbs__item {
-    max-width: 110px;
   }
 }
 
@@ -13014,6 +13007,12 @@ a:hover {
   }
 }
 
+@media (max-width: 992px) {
+  .c-table_basket {
+    width: calc(100% + 40px);
+  }
+}
+
 .c-table_basket .c-table__cell {
   flex-grow: 1;
 }
@@ -13026,12 +13025,31 @@ a:hover {
   justify-content: flex-end;
 }
 
+@media (max-width: 768px) {
+  .c-table_basket .c-table__cell:nth-child(1) {
+    width: 100px;
+    margin-right: 10px;
+  }
+}
+
 .c-table_basket .c-table__cell:nth-child(2) {
   width: 200px;
 }
 
+@media (max-width: 768px) {
+  .c-table_basket .c-table__cell:nth-child(2) {
+    width: 130px;
+  }
+}
+
 .c-table_basket .c-table__cell:nth-child(3) {
   width: 120px;
+}
+
+@media (max-width: 992px) {
+  .c-table_basket .c-table__cell:nth-child(3) {
+    display: none;
+  }
 }
 
 .c-table_basket .c-table__cell:nth-child(4) {
@@ -13044,9 +13062,29 @@ a:hover {
   width: 30px;
 }
 
+@media (max-width: 1200px) {
+  .c-table_basket .c-table__cell:nth-child(5) {
+    width: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .c-table_basket .c-table__cell:nth-child(5) {
+    display: none;
+  }
+}
+
 .c-table_basket .c-table__cell:last-child {
   flex-grow: 0;
   width: 70px;
+}
+
+@media (max-width: 768px) {
+  .c-table_basket .c-table__cell:last-child {
+    width: 60px;
+    justify-content: center;
+    display: flex;
+  }
 }
 
 .c-table__row-wrap_kit {
@@ -13063,6 +13101,13 @@ a:hover {
   left: 5px;
   background: #f1ca49;
   z-index: 2;
+}
+
+@media (max-width: 450px) {
+  .c-table__row-wrap_kit:before {
+    height: calc(100% - 122px);
+    top: 64px;
+  }
 }
 
 .c-table__row-wrap_kit:after {
@@ -13131,12 +13176,31 @@ a:hover {
   width: 150px;
 }
 
+@media (max-width: 768px) {
+  .c-table_basket .c-table__header-cell:nth-child(1) {
+    width: 100px;
+    margin-right: 10px;
+  }
+}
+
 .c-table_basket .c-table__header-cell:nth-child(2) {
   width: 200px;
 }
 
+@media (max-width: 768px) {
+  .c-table_basket .c-table__header-cell:nth-child(2) {
+    width: 130px;
+  }
+}
+
 .c-table_basket .c-table__header-cell:nth-child(3) {
   width: 120px;
+}
+
+@media (max-width: 992px) {
+  .c-table_basket .c-table__header-cell:nth-child(3) {
+    display: none;
+  }
 }
 
 .c-table_basket .c-table__header-cell:nth-child(4) {
@@ -13148,9 +13212,27 @@ a:hover {
   width: 30px;
 }
 
+@media (max-width: 1200px) {
+  .c-table_basket .c-table__header-cell:nth-child(5) {
+    width: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .c-table_basket .c-table__header-cell:nth-child(5) {
+    display: none;
+  }
+}
+
 .c-table_basket .c-table__header-cell:last-child {
   flex-grow: 0;
   width: 70px;
+}
+
+@media (max-width: 768px) {
+  .c-table_basket .c-table__header-cell:last-child {
+    width: 60px;
+  }
 }
 
 .c-table_product {
@@ -13325,7 +13407,7 @@ a:hover {
 
 @media (max-width: 768px) {
   .c-table_options .c-table__cell:nth-of-type(4) {
-    display: none;
+    padding-right: 0;
   }
 }
 
@@ -13641,6 +13723,12 @@ a:hover {
   align-items: center;
 }
 
+@media (max-width: 768px) {
+  .c-product-card__header {
+    display: block;
+  }
+}
+
 .c-product-card__img-wrap {
   width: 115px;
   height: 115px;
@@ -13679,9 +13767,52 @@ a:hover {
   height: 150px;
 }
 
+@media (max-width: 768px) {
+  .c-product-card_basket .c-product-card__img-wrap {
+    height: 100px;
+    width: 100px;
+  }
+}
+
+@media (max-width: 450px) {
+  .c-product-card_basket .c-product-card__img-wrap {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.c-product-card_basket .c-product-card__img {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 450px) {
+  .c-product-card_basket .c-product-card__img {
+    object-fit: contain;
+  }
+  .c-product-card_basket .c-product-card__img img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
 .c-product-card_kit .c-product-card__img-wrap {
   width: 130px;
   height: 130px;
+}
+
+@media (max-width: 768px) {
+  .c-product-card_kit .c-product-card__img-wrap {
+    height: 100px;
+    width: 100px;
+  }
+}
+
+@media (max-width: 450px) {
+  .c-product-card_kit .c-product-card__img-wrap {
+    width: 80px;
+    height: 80px;
+  }
 }
 
 .c-product-card_kit .c-product-card__title {
@@ -13800,12 +13931,20 @@ a:hover {
   margin-right: 10px;
 }
 
+.c-product-card__total_mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .c-product-card__total_mobile {
+    display: block;
+  }
+}
+
 .c-product-card__show-description {
   font-style: italic;
-  display: inline-block;
   position: relative;
   z-index: 3;
-  display: inline-block;
 }
 
 .c-product-card__title {
@@ -13816,12 +13955,6 @@ a:hover {
   margin-bottom: 0;
   position: relative;
   z-index: 3;
-}
-
-@media (max-width: 768px) {
-  .c-product-card__title {
-    pointer-events: none;
-  }
 }
 
 .c-product-card__subtitle {
@@ -14684,6 +14817,18 @@ a:hover {
 .c-modal__body {
   padding: 30px;
   padding-bottom: 15px;
+}
+
+.c-preview-product .c-modal__header {
+  position: relative;
+  z-index: 200;
+}
+
+@media (max-width: 576px) {
+  .c-preview-product .close {
+    top: 20px;
+    right: 20px;
+  }
 }
 
 .c-preview-product__description-body {
@@ -16687,6 +16832,7 @@ a:hover {
 
 .c-form__radio-input {
   position: absolute;
+  z-index: 5;
   width: 100%;
   height: 100%;
   left: 0;
@@ -16916,12 +17062,20 @@ a:hover {
 
 .c-kabinet-navigation {
   margin-bottom: 70px;
+  margin-left: -10px;
+  margin-right: -10px;
 }
 
 .c-kabinet-navigation .nav-tabs {
   display: flex;
   border-bottom: none;
   justify-content: space-between;
+}
+
+@media (max-width: 992px) {
+  .c-kabinet-navigation .nav-tabs {
+    justify-content: flex-start;
+  }
 }
 
 @media (max-width: 576px) {
@@ -16931,6 +17085,7 @@ a:hover {
 }
 
 .c-kabinet-navigation .nav-item {
+  margin: 10px;
   margin-bottom: 30px;
 }
 

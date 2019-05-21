@@ -18,6 +18,12 @@
 
 	}
 
+	&_basket{
+		@media (max-width:$bp-lg) {
+		    width: calc(100% + 40px);
+		}
+	}
+
 	&_basket &__cell{
 		flex-grow: 1;
 		&:nth-child(1){
@@ -26,12 +32,22 @@
 			width: 150px;
 			display: flex;
 			justify-content: flex-end;
+			@media (max-width:$bp-md) {
+				width: 100px;
+				margin-right: 10px;
+			}
 		}
 		&:nth-child(2){
 			width: 200px;
+			@media (max-width:$bp-md) {
+				width: 130px;
+			}
 		}
 		&:nth-child(3){
 			width: 120px;
+			@media (max-width: $bp-lg ) {
+				display: none;
+			}
 		}
 		&:nth-child(4){
 			width: 110px;
@@ -40,12 +56,25 @@
 		}
 		&:nth-child(5){
 			width: 30px;
+			@media (max-width:$bp-xl) {
+				width: 60px;
+			}
+			@media (max-width:$bp-md) {
+				display: none;
+			}
 		}
 		&:last-child{
 			flex-grow: 0;
 			width: 70px;
+			@media (max-width:$bp-md) {
+				width: 60px;
+				justify-content: center;
+    			display: flex;
+			}
+
 		}
 	}
+
 	&__row-wrap_kit {
 		position: relative;
 		&:before{
@@ -58,6 +87,10 @@
 			left: 5px;
 			background: #f1ca49;
 			z-index: 2;
+			@media (max-width: $bp-sm-2) {
+			    height: calc(100% - 122px);
+			    top: 64px;
+			}
 		}
 		&:after{
 			content: 'комплект';
@@ -119,12 +152,22 @@
 			margin-right: 30px;
 			flex-grow: 0;
 			width: 150px;
+			@media (max-width:$bp-md) {
+				width: 100px;
+				margin-right: 10px;
+			}
 		}
 		&:nth-child(2){
 			width: 200px;
+			@media (max-width:$bp-md) {
+				width: 130px;
+			}
 		}
 		&:nth-child(3){
 			width: 120px;
+			@media (max-width: $bp-lg ) {
+				display: none;
+			}
 		}
 		&:nth-child(4){
 			width: 110px;
@@ -132,10 +175,19 @@
 		}
 		&:nth-child(5){
 			width: 30px;
+			@media (max-width:$bp-xl) {
+				width: 60px;
+			}
+			@media (max-width:$bp-md) {
+				display: none;
+			}
 		}
 		&:last-child{
 			flex-grow: 0;
 			width: 70px;
+			@media (max-width:$bp-md) {
+				width: 60px;
+			}
 		}
 	}
 
@@ -310,7 +362,7 @@
 			text-align: right;
 			padding-right: 20px;
 			@media (max-width:$bp-md) {
-				display: none;
+				padding-right: 0;
 			}
 
 		}
