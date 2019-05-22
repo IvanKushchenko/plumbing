@@ -13,8 +13,17 @@
 	&__list{
 		// display: flex;
 		// justify-content: space-between;
-		@media (max-width: $bp-lg) {
-			flex-wrap: wrap;
+		position: relative;
+		@media (max-width: $bp-sm) {
+			max-height: 180px;
+		}
+		&.is-active{
+			max-height: 800px;
+		}
+		&:after{
+			@media (min-width: $bp-sm) {
+				display: none;
+			}
 		}
 	}
 	&__item{

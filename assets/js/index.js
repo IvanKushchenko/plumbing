@@ -10,6 +10,8 @@ import CountUp from 'countup.js';
 import Swiper from 'swiper';
 
 $(function() {
+	$('.c-breadcrumbs__list').scrollLeft(1000);
+
 	var totalPrices = [];
 	var CountUpOptions = {
 		separator: ' '

@@ -15747,9 +15747,23 @@ a:hover {
   }
 }
 
-@media (max-width: 992px) {
+.c-choose-by-property__list {
+  position: relative;
+}
+
+@media (max-width: 576px) {
   .c-choose-by-property__list {
-    flex-wrap: wrap;
+    max-height: 180px;
+  }
+}
+
+.c-choose-by-property__list.is-active {
+  max-height: 800px;
+}
+
+@media (min-width: 576px) {
+  .c-choose-by-property__list:after {
+    display: none;
   }
 }
 
