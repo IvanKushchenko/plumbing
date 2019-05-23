@@ -35,12 +35,12 @@ module.exports = {
 		// 	minify: false,
 		// 	hash: true
 		// }),
-		// new HtmlWebpackPlugin({
-		// 	filename: 'kabinet.html',
-		// 	template: './assets/pug/kabinet.pug',
-		// 	minify: false,
-		// 	hash: true
-		// }),
+		new HtmlWebpackPlugin({
+			filename: 'kabinet.html',
+			template: './assets/pug/kabinet.pug',
+			minify: false,
+			hash: true
+		}),
 		// new HtmlWebpackPlugin({
 		// 	filename: 'shares.html',
 		// 	template: './assets/pug/shares.pug',
