@@ -12328,7 +12328,7 @@ a:hover {
 
 .c-breadcrumbs__item_dropdown {
   position: relative;
-  margin-right: 25px;
+  margin-right: 35px;
   border-bottom: 1px dotted;
   display: inline;
 }
@@ -12339,6 +12339,16 @@ a:hover {
 }
 
 .c-breadcrumbs__item_dropdown:after {
+  content: '/';
+  color: #6493ad;
+  display: inline-block;
+  margin: 0 12px;
+  position: absolute;
+  right: -40px;
+  border: none;
+}
+
+.c-breadcrumbs__item_dropdown:before {
   content: '';
   display: inline-block;
   border: none;
@@ -12349,6 +12359,8 @@ a:hover {
   transform: translateY(-50%);
   top: 50%;
   background: #f1ca49 url(../img/icons/arrow-down.svg) no-repeat center center;
+  position: absolute;
+  right: -20px;
 }
 
 .c-product__header {
@@ -13850,6 +13862,7 @@ a:hover {
   height: 100%;
   opacity: 0;
   cursor: pointer;
+  z-index: 5;
 }
 
 .c-product-card__input:checked + .c-table__cell .c-product-card__radio:after {
@@ -16979,7 +16992,7 @@ a:hover {
 .c-total-price__number {
   font-family: "Roboto Slab";
   font-size: 1.875rem;
-  line-height: 1.8rem;
+  line-height: 1.7rem;
 }
 
 .c-total-price__number:after {

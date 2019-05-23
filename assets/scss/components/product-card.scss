@@ -122,6 +122,7 @@
 		height: 100%;
 		opacity: 0;
 		cursor: pointer;
+		z-index: 5;
 	}
 
 	&__input:checked + .c-table__cell &__radio:after {

@@ -71,7 +71,7 @@
 		&_dropdown {
 			// border-bottom: 1px dotted rgba(100, 147, 173, 0.3);
 			position: relative;
-			margin-right: 25px;
+			margin-right: 35px;
 			border-bottom: 1px dotted;
 			display: inline;
 			&[aria-expanded="true"]{
@@ -79,6 +79,15 @@
 				box-shadow: none;
 			}
 			&:after {
+				content: '/';
+				color: #6493ad;
+				display: inline-block;
+				margin: 0 12px;
+				position: absolute;
+				right: -40px;
+				border: none;
+			}
+			&:before {
 				content: '';
 				display: inline-block;
 				border: none;
@@ -89,6 +98,8 @@
 			    transform: translateY(-50%);
 				top: 50%;
 				background: #f1ca49 url('../img/icons/arrow-down.svg') no-repeat center center;
+				position: absolute;
+				right: -20px;
 			}
 
 		}

@@ -140,7 +140,7 @@ $(function() {
 
 
 	 $(window).scroll(function() {
-	 	if($(window).scrollTop() > ($('.s-basket__total-info_static').height() + $('.s-basket__total-info_static').offset().top)){
+	 	if($('.s-basket__total-info_static').length && $(window).scrollTop() > ($('.s-basket__total-info_static').height() + $('.s-basket__total-info_static').offset().top)){
 	 		$('.s-basket__total-info_fixed').show();
 	 	}else{
 	 		$('.s-basket__total-info_fixed').hide();

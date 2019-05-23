@@ -23,24 +23,24 @@ module.exports = {
 			minify: false,
 			hash: true
 		}),
-		new HtmlWebpackPlugin({
-			filename: 'basket.html',
-			template: './assets/pug/basket.pug',
-			minify: false,
-			hash: true
-		}),
 		// new HtmlWebpackPlugin({
-		// 	filename: 'index-radio.html',
-		// 	template: './assets/pug/index-radio.pug',
+		// 	filename: 'basket.html',
+		// 	template: './assets/pug/basket.pug',
 		// 	minify: false,
 		// 	hash: true
 		// }),
 		new HtmlWebpackPlugin({
-			filename: 'kabinet.html',
-			template: './assets/pug/kabinet.pug',
+			filename: 'index-radio.html',
+			template: './assets/pug/index-radio.pug',
 			minify: false,
 			hash: true
 		}),
+		// new HtmlWebpackPlugin({
+		// 	filename: 'kabinet.html',
+		// 	template: './assets/pug/kabinet.pug',
+		// 	minify: false,
+		// 	hash: true
+		// }),
 		// new HtmlWebpackPlugin({
 		// 	filename: 'shares.html',
 		// 	template: './assets/pug/shares.pug',
@@ -77,12 +77,12 @@ module.exports = {
 		// 	minify: false,
 		// 	hash: true
 		// }),
-		// new HtmlWebpackPlugin({
-		// 	filename: 'catalog.html',
-		// 	template: './assets/pug/catalog.pug',
-		// 	minify: false,
-		// 	hash: true
-		// }),
+		new HtmlWebpackPlugin({
+			filename: 'catalog.html',
+			template: './assets/pug/catalog.pug',
+			minify: false,
+			hash: true
+		}),
 		new FileManagerPlugin({
 			onEnd: {
 				copy: [

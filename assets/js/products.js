@@ -29,7 +29,7 @@ $(function() {
 
     $('.c-product-card__input:checked').parents('.c-product-card_radio').addClass('is-active');
 
-    $('.c-table_product').each(function(index, item){
+    $('.c-table_product, .c-table_options').each(function(index, item){
     	var currentProduct = $(this).find('.c-product-card_radio.is-active');
         var articul = currentProduct.attr('data-articul');
         var img = currentProduct.find('.c-product-card__img img').attr('src');
@@ -52,7 +52,7 @@ $(function() {
     })
 
 
-     $('.js-table_product .c-product-card_radio .c-product-card__input').on('change', function(e) {
+     $('.js-table_product .c-product-card_radio .c-product-card__input, .js-table_options .c-product-card_radio .c-product-card__input').on('change', function(e) {
      	e.preventDefault();
      	var table = $(this).parents('.c-table__body');
         
