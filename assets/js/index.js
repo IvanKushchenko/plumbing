@@ -10,6 +10,7 @@ import CountUp from 'countup.js';
 import Swiper from 'swiper';
 
 $(function() {
+
 	$('.c-breadcrumbs__list').scrollLeft(1000);
 
 	var totalPrices = [];
@@ -25,6 +26,7 @@ $(function() {
 
 
 	var mainTotalPrice = new CountUp('main-total-price', 0,0,0,0, CountUpOptions);
+	var mainTotalPriceFixed = new CountUp('main-total-price-fixed', 0,0,0,0, CountUpOptions);
 
 
 
@@ -51,6 +53,7 @@ $(function() {
 			totalPrice += +$(item).attr('data-total');
 		});
 		mainTotalPrice.update(totalPrice);
+		mainTotalPriceFixed.update(totalPrice);
 	});
 
 
@@ -69,6 +72,7 @@ $(function() {
 		})
 		console.log("totalPrice", totalPrice);
 		mainTotalPrice.update(totalPrice);
+		mainTotalPriceFixed.update(totalPrice);
 	})
 
 	$(".c-number-counter__action_up").click(function(){
@@ -84,6 +88,7 @@ $(function() {
 			totalPrice += +$(item).attr('data-total');
 		})
 		mainTotalPrice.update(totalPrice);
+		mainTotalPriceFixed.update(totalPrice);
 	})
 
 	$('.js-order-checkout-expand-close').click(function(e){
@@ -135,6 +140,11 @@ $(function() {
 
 
 	 $(window).scroll(function() {
+	 	if($(window).scrollTop() > ($('.s-basket__total-info_static').height() + $('.s-basket__total-info_static').offset().top)){
+	 		$('.s-basket__total-info_fixed').show();
+	 	}else{
+	 		$('.s-basket__total-info_fixed').hide();
+	 	}
 	 	if($(window).scrollTop() > $('.c-navbar-unscrolled').height()){
 	 		if(!$('.c-navbar-scrolled').show()) $('.c-navbar-scrolled').show(); 
 	 	}else{

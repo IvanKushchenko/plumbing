@@ -1,4 +1,24 @@
 .s-basket {
+	&__total-info{
+		&_fixed{
+			display: none;
+			position: fixed;
+			z-index: 999;
+			left: 0;
+			top: 35px;
+			width: 100%;
+			.c-btn{
+				max-width: 280px;
+				@media (max-width: $bp-sm) {
+					max-width: initial;
+				}
+			}
+		}
+	}
+	&__total-info-inner{
+		background-color: #fff;
+		padding: 10px 20px;
+	}
 	&__total-price {
 		margin-bottom: 20px;
 	}

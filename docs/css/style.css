@@ -17241,6 +17241,30 @@ a:hover {
   max-width: 100%;
 }
 
+.s-basket__total-info_fixed {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 35px;
+  width: 100%;
+}
+
+.s-basket__total-info_fixed .c-btn {
+  max-width: 280px;
+}
+
+@media (max-width: 576px) {
+  .s-basket__total-info_fixed .c-btn {
+    max-width: initial;
+  }
+}
+
+.s-basket__total-info-inner {
+  background-color: #fff;
+  padding: 10px 20px;
+}
+
 .s-basket__total-price {
   margin-bottom: 20px;
 }
