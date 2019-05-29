@@ -250,7 +250,7 @@ html(lang="ru")
 										.d-flex.w-100.justify-content-between.justify-content-md-center.c-product__order-info-inner
 											.c-product__choosen
 												| Выбрано:
-												a(href="#!").c-product__choosen-count 0 товара
+												a(data-toggle="collapse", aria-expanded="false", href="#order-checkout-products-chosen-mobile").c-product__choosen-count.collapsed 0 товара
 											.c-product__price.d-md-none
 												.c-product__price-number.c-product__price-number_old#c-product__price-mobile-number_old 0
 												.c-product__price-number.c-product__price-number_new#c-product__price-mobile-number_new 0
@@ -292,6 +292,13 @@ html(lang="ru")
 											.c-product__order-actions.d-flex
 												a(href="#").c-btn.c-btn_primary.c-btn_bordered В КОРЗИНУ
 												a(href="#").c-btn.c-btn_primary.c-btn_bordered КУПИТЬ В 1 КЛИК
+									.c-checkout-products.collapse#order-checkout-products-chosen-mobile.js-product-order-checkout-static
+										.swiper-container.js-checkout-products-static
+											.swiper-wrapper
+												
+											.swiper-scrollbar
+										.swiper-button-prev
+										.swiper-button-next
 									.c-offer
 										.
 											При покупке от 20 000 c вы получите скидку 3 000 c на следующую покупку! 

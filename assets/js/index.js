@@ -26,7 +26,9 @@ $(function() {
 
 
 	var mainTotalPrice = new CountUp('main-total-price', 0,0,0,0, CountUpOptions);
+	var mainTotalPriceNew = new CountUp('main-total-price-new', 0,0,0,0, CountUpOptions);
 	var mainTotalPriceFixed = new CountUp('main-total-price-fixed', 0,0,0,0, CountUpOptions);
+	var mainTotalPriceFixedNew = new CountUp('main-total-price-fixed-new', 0,0,0,0, CountUpOptions);
 
 
 
@@ -44,6 +46,7 @@ $(function() {
 	$('.c-number-counter__field').change(function(){
 		var parent = $(this).parents('.c-product-card');
 		var field = $(this);
+		var discountPercents = $('.js-basket-discount').attr('data-discount-percent');
 		var price = +parent.find('.c-product-card__cost').text();
 		parent.find('.c-product-card__total').attr('data-total', +field.val() * price);
 		totalPrices[parent.find('.c-product-card__total').attr('id').replace('#', '')].update(+field.val() * price);
@@ -53,7 +56,9 @@ $(function() {
 			totalPrice += +$(item).attr('data-total');
 		});
 		mainTotalPrice.update(totalPrice);
+		mainTotalPriceNew.update(totalPrice - ((totalPrice * discountPercents) / 100));
 		mainTotalPriceFixed.update(totalPrice);
+		mainTotalPriceFixedNew.update(totalPrice - ((totalPrice * discountPercents) / 100));
 	});
 
 
@@ -62,6 +67,7 @@ $(function() {
 		if(+field.val() <= 0) return;
 		field.val(+field.val() - 1);
 		var parent = $(this).parents('.c-product-card');
+		var discountPercents = $('.js-basket-discount').attr('data-discount-percent');
 		var price = +parent.find('.c-product-card__cost').text();
 		parent.find('.c-product-card__total').attr('data-total', +field.val() * price);
 		totalPrices[parent.find('.c-product-card__total').attr('id').replace('#', '')].update(+field.val() * price);
@@ -70,15 +76,17 @@ $(function() {
 			if(!$(item).attr('data-total')) return;
 			totalPrice += +$(item).attr('data-total');
 		})
-		console.log("totalPrice", totalPrice);
 		mainTotalPrice.update(totalPrice);
+		mainTotalPriceNew.update(totalPrice - ((totalPrice * discountPercents) / 100));
 		mainTotalPriceFixed.update(totalPrice);
+		mainTotalPriceFixedNew.update(totalPrice - ((totalPrice * discountPercents) / 100));
 	})
 
 	$(".c-number-counter__action_up").click(function(){
 		var field = $(this).parent().find('.c-number-counter__field');
 		field.val(+field.val() + 1);
 		var parent = $(this).parents('.c-product-card');
+		var discountPercents = $('.js-basket-discount').attr('data-discount-percent');
 		var price = +parent.find('.c-product-card__cost').text();
 		parent.find('.c-product-card__total').attr('data-total', +field.val() * price);
 		totalPrices[parent.find('.c-product-card__total').attr('id').replace('#', '')].update(+field.val() * price);
@@ -88,7 +96,9 @@ $(function() {
 			totalPrice += +$(item).attr('data-total');
 		})
 		mainTotalPrice.update(totalPrice);
+		mainTotalPriceNew.update(totalPrice - ((totalPrice * discountPercents) / 100));
 		mainTotalPriceFixed.update(totalPrice);
+		mainTotalPriceFixedNew.update(totalPrice - ((totalPrice * discountPercents) / 100));
 	})
 
 	$('.js-order-checkout-expand-close').click(function(e){
@@ -431,7 +441,7 @@ $(function() {
     })
 
 
-    $('#order-checkout-products, #order-checkout-products-chosen').on('shown.bs.collapse', function() {
+    $('#order-checkout-products, #order-checkout-products-chosen, #order-checkout-products-chosen-mobile').on('shown.bs.collapse', function() {
     	$('.js-checkout-products-static').each(function(index, item){
 	        	item.swiper.update();
 	        })
@@ -468,7 +478,7 @@ $(function() {
         var productCheckoutFixed = $('.js-product-order-checkout-fixed');
         productCheckoutFixed.css({
             'left': orderInfo.offset().left + 'px',
-            'width': ($(window).width() <= 768) ? orderInfo.parent().width() + 40 + 'px' : orderInfo.parent().width() + 'px'
+            'width': ($(window).width() <= 992) ? orderInfo.parent().width() + 40 + 'px' : orderInfo.parent().width() + 'px'
         })
 
         function checkPosAndHide() {

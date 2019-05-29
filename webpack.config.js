@@ -23,12 +23,12 @@ module.exports = {
 			minify: false,
 			hash: true
 		}),
-		// new HtmlWebpackPlugin({
-		// 	filename: 'basket.html',
-		// 	template: './assets/pug/basket.pug',
-		// 	minify: false,
-		// 	hash: true
-		// }),
+		new HtmlWebpackPlugin({
+			filename: 'basket.html',
+			template: './assets/pug/basket.pug',
+			minify: false,
+			hash: true
+		}),
 		new HtmlWebpackPlugin({
 			filename: 'index-radio.html',
 			template: './assets/pug/index-radio.pug',
@@ -77,12 +77,12 @@ module.exports = {
 		// 	minify: false,
 		// 	hash: true
 		// }),
-		new HtmlWebpackPlugin({
-			filename: 'catalog.html',
-			template: './assets/pug/catalog.pug',
-			minify: false,
-			hash: true
-		}),
+		// new HtmlWebpackPlugin({
+		// 	filename: 'catalog.html',
+		// 	template: './assets/pug/catalog.pug',
+		// 	minify: false,
+		// 	hash: true
+		// }),
 		new FileManagerPlugin({
 			onEnd: {
 				copy: [

@@ -3,7 +3,7 @@
 	align-items: flex-end;
 	&__txt{
 		font-size: 1.125rem;
-		line-height: 1.125rem;
+		line-height: 0.925rem;
 		margin-right: 10px;
 	}
 	&__number{
@@ -15,6 +15,26 @@
 			display: inline-block;
 			margin-left: 5px;
 			font-family: 'Rubl';
+		}
+		&_old{
+		    font-size: 1.3rem;
+		    margin-right: 10px;
+	        line-height: 1rem;
+		    position: relative;
+		    &:before{
+	    	    content: '';
+			    display: block;
+			    position: absolute;
+			    width: 100%;
+			    height: 3px;
+			    background: #f3932c;
+			    transform: rotate(10deg);
+			    top: 9px;
+		    }
+		}
+		&_new{
+		    color: #f3932c;
+	        line-height: 1.4rem;
 		}
 	}
 

@@ -87,7 +87,7 @@
 			left: 5px;
 			background: #f1ca49;
 			z-index: 2;
-			@media (max-width: $bp-sm-2) {
+			@media (max-width: $bp-md) {
 			    height: calc(100% - 122px);
 			    top: 64px;
 			}

@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>Template</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="css/style.css?a1251f49d8d2e1d21068" rel="stylesheet"></head>
+  <link href="css/style.css?878fc907b517f65234ba" rel="stylesheet"></head>
   <body>
     <div class="container">
       <div class="o-page js-page">
@@ -375,7 +375,7 @@
             <div class="o-section__body">
               <div class="row s-basket__info">
                 <div class="col-lg-6">
-                  <form class="c-form s-basket__coupon" action="">
+                  <form class="c-form s-basket__coupon js-basket-discount" action="" data-discount-percent="20">
                     <label class="row d-flex align-items-center">
                       <div class="col-md-6">Введите код купона для скидки:</div>
                       <div class="col-md-5">
@@ -387,39 +387,20 @@
                 <div class="s-basket__total-info s-basket__total-info_fixed">
                   <div class="container">
                     <div class="s-basket__total-info-inner d-flex justify-content-between flex-wrap">
-                      <div class="w-50">
-                        <div class="s-basket__total-price c-total-price">
-                          <div class="c-total-price__txt">Итого:</div>
-                          <div class="c-total-price__number" id="main-total-price-fixed">0</div>
-                        </div>
-                        <div class="c-discounts">
-                          <ul class="c-discounts__list">
-                            <li class="c-discounts__item">
-                              <div class="c-discounts__price">40612</div>
-                              <div class="c-discounts__percent">10%</div>
-                              <div class="c-discounts__info">промокод</div>
-                            </li>
-                            <li class="c-discounts__item">
-                              <div class="c-discounts__price">45125</div>
-                              <div class="c-discounts__percent">5%</div>
-                              <div class="c-discounts__info">скидка на товар</div>
-                            </li>
-                            <li class="c-discounts__item">
-                              <div class="c-discounts__price">47500</div>
-                              <div class="c-discounts__percent">5%</div>
-                              <div class="c-discounts__info">скидка по типу оплаты</div>
-                            </li>
-                          </ul>
-                        </div>
+                      <div class="s-basket__total-price c-total-price mb-0">
+                        <div class="c-total-price__txt">Итого:</div>
+                        <div class="c-total-price__number c-total-price__number_old" id="main-total-price-fixed">0</div>
+                        <div class="c-total-price__number c-total-price__number_new" id="main-total-price-fixed-new">0</div>
                       </div>
-                      <button class="c-btn c-btn_lg c-btn_secondary mt-2">оформить заказ</button>
+                      <button class="c-btn c-btn_secondary mt-2">оформить заказ</button>
                     </div>
                   </div>
                 </div>
                 <div class="col-lg-3 mb-3 mb-lg-0 s-basket__total-info s-basket__total-info_static">
                   <div class="s-basket__total-price c-total-price">
                     <div class="c-total-price__txt">Итого:</div>
-                    <div class="c-total-price__number" id="main-total-price">0</div>
+                    <div class="c-total-price__number c-total-price__number_old" id="main-total-price">0</div>
+                    <div class="c-total-price__number c-total-price__number_new" id="main-total-price-new">0</div>
                   </div>
                   <div class="c-discounts">
                     <ul class="c-discounts__list">
@@ -736,5 +717,5 @@
 </footer>
       </div>
     </div>
-  <script type="text/javascript" src="js/script.js?a1251f49d8d2e1d21068"></script></body>
+  <script type="text/javascript" src="js/script.js?878fc907b517f65234ba"></script></body>
 </html>

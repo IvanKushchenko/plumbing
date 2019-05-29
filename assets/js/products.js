@@ -28,34 +28,89 @@ $(function() {
 
 
     $('.c-product-card__input:checked').parents('.c-product-card_radio').addClass('is-active');
+    $('.c-product-card__input:checked').parents('.c-product-card_checkbox').addClass('is-active');
 
     $('.c-table_product, .c-table_options').each(function(index, item){
-    	var currentProduct = $(this).find('.c-product-card_radio.is-active');
-        var articul = currentProduct.attr('data-articul');
-        var img = currentProduct.find('.c-product-card__img img').attr('src');
-        var name = currentProduct.find('.c-product-card__title').text();
-        var price = (currentProduct.find('.c-product-card__price_new').eq(0).length) ? currentProduct.find('.c-product-card__price_new').eq(0).text() : currentProduct.find('.c-product-card__price').eq(0).text();
+    	var currentProducts = $(this).find('.c-product-card_radio.is-active, .c-product-card_checkbox.is-active');
+    	console.log(currentProducts);
+    	if(!currentProducts.length) return;
+    	currentProducts.each(function(index, item){
+	        var articul = $(item).attr('data-articul');
+	        var img = $(item).find('.c-product-card__img img').attr('src');
+	        var name = $(item).find('.c-product-card__title').text();
+	        var price = ($(item).find('.c-product-card__price_new').eq(0).length) ? $(item).find('.c-product-card__price_new').eq(0).text() : $(item).find('.c-product-card__price').eq(0).text();
 
-        var product = {
-            articul: articul,
-            img: img,
-            name: name,
-            price: price
-        };
-        $(this).parents('.c-product-card_radio').addClass('is-active');
-	    products.push(product)
-	    addProductToSlider(product);
-	    setTimeout(function(){
-	    	checkoutProducts();
+	        var product = {
+	            articul: articul,
+	            img: img,
+	            name: name,
+	            price: price
+	        };
+	        if($(this).parents('.c-product-card_checkbox').length){
+	        	$(this).parents('.c-product-card_checkbox').addClass('is-active');
+	        }else if($(this).parents('.c-product-card_radio').length){
+	        	$(this).parents('.c-product-card_radio').addClass('is-active');
+	        }
 
-	    }, 100)
+		    products.push(product)
+		    addProductToSlider(product);
+		    setTimeout(function(){
+		    	checkoutProducts();
+
+		    }, 100)
+    		
+    	})
     })
 
 
-     $('.js-table_product .c-product-card_radio .c-product-card__input, .js-table_options .c-product-card_radio .c-product-card__input').on('change', function(e) {
+     $('.js-table_product .c-product-card_radio .c-product-card__input, .js-table_options .c-product-card_checkbox .c-product-card__input').on('change', function(e) {
      	e.preventDefault();
      	var table = $(this).parents('.c-table__body');
         
+        
+        if($(this).parents('.c-product-card_checkbox').hasClass('is-active')){
+        	var product = $(this).parents('.c-product-card_checkbox');
+        	var currentActiveProductArticul = product.attr('data-articul');
+	        var currentActiveProductImg = product.find('.c-product-card__img img').attr('src');
+	        var currentActiveProductName = product.find('.c-product-card__title').text();
+	        var currentActiveProductPrice = (product.find('.c-product-card__price_new').eq(0).length) ? product.find('.c-product-card__price_new').eq(0).text() : currentActiveProduct.find('.c-product-card__price').eq(0).text();
+	    	if(products.length){
+		        $(products).each(function(i, item) {
+		        	if (item.articul == currentActiveProductArticul) products.splice(i, 1);
+		        });
+	       }
+	        var currentActiveProductData = {
+	            articul: currentActiveProductArticul,
+	            img: currentActiveProductImg,
+	            name: currentActiveProductName,
+	            price: currentActiveProductPrice
+	        };
+	        console.log(currentActiveProductData);
+	        console.log(products);
+	        removeProductFromSlider(currentActiveProductData);
+	        console.log(products);
+		    product.removeClass('is-active');
+        }else{
+        	var currentProduct = $(this).parents('.c-product-card');
+	        var articul = currentProduct.attr('data-articul');
+	        var img = currentProduct.find('.c-product-card__img img').attr('src');
+	        var name = currentProduct.find('.c-product-card__title').text();
+	        var price = (currentProduct.find('.c-product-card__price_new').eq(0).length) ? currentProduct.find('.c-product-card__price_new').eq(0).text() : currentProduct.find('.c-product-card__price').eq(0).text();
+
+	        var product = {
+	            articul: articul,
+	            img: img,
+	            name: name,
+	            price: price
+	        };
+	        $(this).parents('.c-product-card_checkbox').addClass('is-active');
+		    products.push(product)
+		    addProductToSlider(product);
+		    setTimeout(function(){
+		    	checkoutProducts();
+
+		    }, 100)
+        }
         var currentActiveProduct = table.find('.c-product-card_radio.is-active');
         if(currentActiveProduct.length){
 	        // var currentActiveProductArticul = currentActiveProduct.find('.c-product-card__subtitle').text().replace(/^\D+/g, '');
@@ -76,8 +131,7 @@ $(function() {
 	        };
 	        removeProductFromSlider(currentActiveProductData);
 		     currentActiveProduct.removeClass('is-active');
-	    }
-	    if(!$(this).parents('.c-product-card_radio').hasClass('is-active')){
+	    }else if(!$(this).parents('.c-product-card_radio').hasClass('is-active') && !$(this).parents('.c-product-card_checkbox').length){
 	    	var currentProduct = $(this).parents('.c-product-card');
 	        var articul = currentProduct.attr('data-articul');
 	        var img = currentProduct.find('.c-product-card__img img').attr('src');
@@ -98,7 +152,6 @@ $(function() {
 
 		    }, 100)
 	    }
-
 
      })
 
