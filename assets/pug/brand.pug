@@ -1,0 +1,671 @@
+html(lang="ru")
+	head
+		include templates/head.pug
+	body
+		.container
+			.o-page.js-page
+				include templates/navbar.pug
+				include templates/header.pug
+				main.o-page__content
+					.o-page__container
+						.o-page__sidebar
+							.c-brand-logo
+								img(src=require("../img/content/brand-ghore.jpg"), alt="")
+							.c-filters.mb-5
+								.c-filter.c-filter_catalog
+									.c-filter__body.collapse#brand-products-filter
+										.c-catalog-menu__item.c-catalog-menu__item_dropdown
+											a(href="#brand-products1"  data-toggle="collapse").c-catalog-menu__link-wrap
+												span.c-catalog-menu__link Душевые ограждения
+											ul.collapse.c-catalog-menu__submenu#brand-products1
+												li.c-catalog-menu__item
+													a(href="#").c-catalog-menu__link Душевые углы
+												li.c-catalog-menu__item
+													a(href="#").c-catalog-menu__link Душевые двери
+												li.c-catalog-menu__item
+													a(href="#").c-catalog-menu__link Душевые ограждения
+												li.c-catalog-menu__item
+													a(href="#").c-catalog-menu__link Шторки для ванны
+												li.c-catalog-menu__item
+													a(href="#").c-catalog-menu__link Душевые стенки
+										.c-catalog-menu__item.c-catalog-menu__item_dropdown
+											a(href="#brand-products2"  data-toggle="collapse").c-catalog-menu__link-wrap
+												span.c-catalog-menu__link Душевые поддоны, каналы, плиты
+											ul.collapse.c-catalog-menu__submenu#brand-products2
+												li.c-catalog-menu__item
+													a(href="#").c-catalog-menu__link Душевые углы
+												li.c-catalog-menu__item
+													a(href="#").c-catalog-menu__link Душевые двери
+												li.c-catalog-menu__item
+													a(href="#").c-catalog-menu__link Душевые ограждения
+												li.c-catalog-menu__item
+													a(href="#").c-catalog-menu__link Шторки для ванны
+												li.c-catalog-menu__item
+													a(href="#").c-catalog-menu__link Душевые стенки
+										.c-catalog-menu__item.c-catalog-menu__item_dropdown
+											a(href="#brand-products3"  data-toggle="collapse").c-catalog-menu__link-wrap
+												span.c-catalog-menu__link Душевые кабины и боксы
+											ul.collapse.c-catalog-menu__submenu#brand-products3
+												li.c-catalog-menu__item
+													a(href="#").c-catalog-menu__link Душевые углы
+												li.c-catalog-menu__item
+													a(href="#").c-catalog-menu__link Душевые двери
+												li.c-catalog-menu__item
+													a(href="#").c-catalog-menu__link Душевые ограждения
+												li.c-catalog-menu__item
+													a(href="#").c-catalog-menu__link Шторки для ванны
+												li.c-catalog-menu__item
+										.c-catalog-menu__item.c-catalog-menu__item_dropdown
+											a(href="#brand-products4"  data-toggle="collapse").c-catalog-menu__link-wrap
+												span.c-catalog-menu__link Мебель для ванной
+											ul.collapse.c-catalog-menu__submenu#brand-products4
+												li.c-catalog-menu__item
+													a(href="#").c-catalog-menu__link Душевые углы
+												li.c-catalog-menu__item
+													a(href="#").c-catalog-menu__link Душевые двери
+												li.c-catalog-menu__item
+													a(href="#").c-catalog-menu__link Душевые ограждения
+												li.c-catalog-menu__item
+													a(href="#").c-catalog-menu__link Шторки для ванны
+												li.c-catalog-menu__item
+										.c-catalog-menu__item.c-catalog-menu__item_dropdown
+											a(href="#brand-products5"  data-toggle="collapse").c-catalog-menu__link-wrap
+												span.c-catalog-menu__link Унитазы
+											ul.collapse.c-catalog-menu__submenu#brand-products5
+												li.c-catalog-menu__item
+													a(href="#").c-catalog-menu__link Душевые углы
+												li.c-catalog-menu__item
+													a(href="#").c-catalog-menu__link Душевые углы
+										.c-catalog-menu__item.c-catalog-menu__item_dropdown
+											a(href="#brand-products6"  data-toggle="collapse").c-catalog-menu__link-wrap
+												span.c-catalog-menu__link Душевые ограждения
+											ul.collapse.c-catalog-menu__submenu#brand-products6
+												li.c-catalog-menu__item
+													a(href="#").c-catalog-menu__link Душевые углы
+												li.c-catalog-menu__item
+													a(href="#").c-catalog-menu__link Душевые углы
+										.c-catalog-menu__item.c-catalog-menu__item_dropdown
+											a(href="#brand-products7"  data-toggle="collapse").c-catalog-menu__link-wrap
+												span.c-catalog-menu__link Душевые ограждения
+											ul.collapse.c-catalog-menu__submenu#brand-products7
+												li.c-catalog-menu__item
+													a(href="#").c-catalog-menu__link Душевые углы
+												li.c-catalog-menu__item
+													a(href="#").c-catalog-menu__link Душевые углы
+									a(href="#brand-products-filter" data-toggle="collapse" aria-expanded="false") показать еще
+								.c-filter
+									.c-filter__header
+										a(href="#choosed-filters" data-toggle="collapse" aria-expanded="false").c-filter__title По коллекциям
+									.c-filter__body.collapse.c-filter__body_scrolled.d-flex.align-items-start.flex-column#choosed-filters
+										a(href="#").mb-2 Alira
+										a(href="#").mb-2 Allure
+										a(href="#").mb-2 Allure Brilliant
+										a(href="#").mb-2 Allure E
+										a(href="#").mb-2 Alira
+										a(href="#").mb-2 Allure
+										a(href="#").mb-2 Allure Brilliant
+										a(href="#").mb-2 Allure E
+										a(href="#").mb-2 Alira
+										a(href="#").mb-2 Allure
+										a(href="#").mb-2 Allure Brilliant
+										a(href="#").mb-2 Allure E
+										a(href="#").mb-2 Alira
+										a(href="#").mb-2 Allure
+										a(href="#").mb-2 Allure Brilliant
+										a(href="#").mb-2 Allure E
+								.c-filter
+									.c-filter__header
+										.c-filter__title Цена
+									.c-filter__body
+										.d-flex.align-items-center.justify-content-between
+											.c-price-field
+												.c-price-field__inner
+													span.c-price-field__prefix от
+													span(contenteditable="true" maxlength="3").c-price-field__input.js-price-field 4000
+													span.c-price-field__postfix a
+											span.ml-1.mr-1 -
+											.c-price-field
+												.c-price-field__inner
+													span.c-price-field__prefix от
+													span(contenteditable="true" maxlength="3").c-price-field__input.js-price-field 150000
+													span.c-price-field__postfix a
+								.c-filter.c-filter_sizes
+									.c-filter__header
+										a(href="#filter-sizes" data-toggle="collapse" aria-expanded="false").c-filter__title По размеру
+									.c-filter__body.collapse#filter-sizes
+										.c-filter__body-inner.collapse#more-filter-sizes.mb-2
+											.d-flex.flex-wrap.mb-3
+												.c-tag-checkbox
+													input(type="checkbox").c-tag-checkbox__input
+													.c-tag-checkbox__label 70 x 70
+												.c-tag-checkbox
+													input(type="checkbox").c-tag-checkbox__input
+													.c-tag-checkbox__label 70 x 70
+											.d-flex.flex-wrap.mb-3
+												.c-tag-checkbox
+													input(type="checkbox").c-tag-checkbox__input
+													.c-tag-checkbox__label 80 x 80
+												.c-tag-checkbox
+													input(type="checkbox").c-tag-checkbox__input
+													.c-tag-checkbox__label 80 x 80
+											.d-flex.flex-wrap.mb-3
+												.c-tag-checkbox
+													input(type="checkbox").c-tag-checkbox__input
+													.c-tag-checkbox__label 90 x 90
+												.c-tag-checkbox
+													input(type="checkbox").c-tag-checkbox__input
+													.c-tag-checkbox__label 90 x 90
+												.c-tag-checkbox
+													input(type="checkbox").c-tag-checkbox__input
+													.c-tag-checkbox__label 90 x 90
+												.c-tag-checkbox
+													input(type="checkbox").c-tag-checkbox__input
+													.c-tag-checkbox__label 90 x 90
+											.d-flex.flex-wrap.mb-3
+												.c-tag-checkbox
+													input(type="checkbox").c-tag-checkbox__input
+													.c-tag-checkbox__label 100 x 100
+												.c-tag-checkbox
+													input(type="checkbox").c-tag-checkbox__input
+													.c-tag-checkbox__label 100 x 100
+												.c-tag-checkbox
+													input(type="checkbox").c-tag-checkbox__input
+													.c-tag-checkbox__label 100 x 100
+										a(href="#more-filter-sizes" data-toggle="collapse" aria-expanded="false") показать еще
+						.o-page__body
+							.c-breadcrumbs
+								.c-breadcrumbs__list
+									a(href="#!").c-breadcrumbs__item Главная
+									a(href="#!").c-breadcrumbs__item Бренды
+									a(href="#!").c-breadcrumbs__item Ghore
+							.c-brand-info
+								h2.c-brand-info__title Ghore
+								p.c-brand-info__description.c-read-more.js-read-more-container
+									.
+										GROHE – удобство, комфорт, высокое качество! Технологии GROHE – это изделия, которые не имеют никаких аналогов, они успешно сочетают в себе дизайн, технологии и качество самого высокого уровня. Продукция GROHE – это совершенно маленький расход воды при сохранении безупречного потока, комфортное использование без надобности технического обслуживания почти на все время срока службы и великолепный блеск поверхности на всю жизнь.
+										и качество самого высокого уровня. Продукция GROHE – это совершенно маленький расход воды при сохранении безупречного потока, комфортное использование без надобности технического обслуживания почти на все время срока службы и великолепный блеск поверхности на всю жизнь.
+										и качество самого высокого уровня. Продукция GROHE – это совершенно маленький расход воды при сохранении безупречного потока, комфортное использование без надобности технического обслуживания почти на все время срока службы и великолепный блеск поверхности на всю жизнь.
+										и качество самого высокого уровня. Продукция GROHE – это совершенно маленький расход воды при сохранении безупречного потока, комфортное использование без надобности технического обслуживания почти на все время срока службы и великолепный блеск поверхности на всю жизнь.
+								a(href="#").js-read-more-btn показать еще
+							.c-filtered-products
+								.c-filtered-products__header.d-block.d-lg-flex.justify-content-between.mb-5
+									.c-sort.d-none.d-lg-flex
+										.c-sort__txt сортировка:
+										select.c-sort__select
+											option Цена по возрастанию 
+											option Цена по возрастанию
+									.row
+										.col-6
+											.c-filters-mobile.dropdown.c-dropdown.d-lg-none
+												.dropdown-toggle.c-dropdown-toggle.js-dropdown-filters фильтр
+												.dropdown-menu.c-dropdown__menu
+													.c-dropdown__close.js-dropdown-filters-close
+													.c-filters.mb-5.mt-4
+														.c-filter.c-filter_catalog
+															.c-filter__body.collapse#brand-products-filter
+																.c-catalog-menu__item.c-catalog-menu__item_dropdown
+																	a(href="#brand-products1"  data-toggle="collapse").c-catalog-menu__link-wrap
+																		span.c-catalog-menu__link Душевые ограждения
+																	ul.collapse.c-catalog-menu__submenu#brand-products1
+																		li.c-catalog-menu__item
+																			a(href="#").c-catalog-menu__link Душевые углы
+																		li.c-catalog-menu__item
+																			a(href="#").c-catalog-menu__link Душевые двери
+																		li.c-catalog-menu__item
+																			a(href="#").c-catalog-menu__link Душевые ограждения
+																		li.c-catalog-menu__item
+																			a(href="#").c-catalog-menu__link Шторки для ванны
+																		li.c-catalog-menu__item
+																			a(href="#").c-catalog-menu__link Душевые стенки
+																.c-catalog-menu__item.c-catalog-menu__item_dropdown
+																	a(href="#brand-products2"  data-toggle="collapse").c-catalog-menu__link-wrap
+																		span.c-catalog-menu__link Душевые поддоны, каналы, плиты
+																	ul.collapse.c-catalog-menu__submenu#brand-products2
+																		li.c-catalog-menu__item
+																			a(href="#").c-catalog-menu__link Душевые углы
+																		li.c-catalog-menu__item
+																			a(href="#").c-catalog-menu__link Душевые двери
+																		li.c-catalog-menu__item
+																			a(href="#").c-catalog-menu__link Душевые ограждения
+																		li.c-catalog-menu__item
+																			a(href="#").c-catalog-menu__link Шторки для ванны
+																		li.c-catalog-menu__item
+																			a(href="#").c-catalog-menu__link Душевые стенки
+																.c-catalog-menu__item.c-catalog-menu__item_dropdown
+																	a(href="#brand-products3"  data-toggle="collapse").c-catalog-menu__link-wrap
+																		span.c-catalog-menu__link Душевые кабины и боксы
+																	ul.collapse.c-catalog-menu__submenu#brand-products3
+																		li.c-catalog-menu__item
+																			a(href="#").c-catalog-menu__link Душевые углы
+																		li.c-catalog-menu__item
+																			a(href="#").c-catalog-menu__link Душевые двери
+																		li.c-catalog-menu__item
+																			a(href="#").c-catalog-menu__link Душевые ограждения
+																		li.c-catalog-menu__item
+																			a(href="#").c-catalog-menu__link Шторки для ванны
+																		li.c-catalog-menu__item
+																.c-catalog-menu__item.c-catalog-menu__item_dropdown
+																	a(href="#brand-products4"  data-toggle="collapse").c-catalog-menu__link-wrap
+																		span.c-catalog-menu__link Мебель для ванной
+																	ul.collapse.c-catalog-menu__submenu#brand-products4
+																		li.c-catalog-menu__item
+																			a(href="#").c-catalog-menu__link Душевые углы
+																		li.c-catalog-menu__item
+																			a(href="#").c-catalog-menu__link Душевые двери
+																		li.c-catalog-menu__item
+																			a(href="#").c-catalog-menu__link Душевые ограждения
+																		li.c-catalog-menu__item
+																			a(href="#").c-catalog-menu__link Шторки для ванны
+																		li.c-catalog-menu__item
+																.c-catalog-menu__item.c-catalog-menu__item_dropdown
+																	a(href="#brand-products5"  data-toggle="collapse").c-catalog-menu__link-wrap
+																		span.c-catalog-menu__link Унитазы
+																	ul.collapse.c-catalog-menu__submenu#brand-products5
+																		li.c-catalog-menu__item
+																			a(href="#").c-catalog-menu__link Душевые углы
+																		li.c-catalog-menu__item
+																			a(href="#").c-catalog-menu__link Душевые углы
+																.c-catalog-menu__item.c-catalog-menu__item_dropdown
+																	a(href="#brand-products6"  data-toggle="collapse").c-catalog-menu__link-wrap
+																		span.c-catalog-menu__link Душевые ограждения
+																	ul.collapse.c-catalog-menu__submenu#brand-products6
+																		li.c-catalog-menu__item
+																			a(href="#").c-catalog-menu__link Душевые углы
+																		li.c-catalog-menu__item
+																			a(href="#").c-catalog-menu__link Душевые углы
+																.c-catalog-menu__item.c-catalog-menu__item_dropdown
+																	a(href="#brand-products7"  data-toggle="collapse").c-catalog-menu__link-wrap
+																		span.c-catalog-menu__link Душевые ограждения
+																	ul.collapse.c-catalog-menu__submenu#brand-products7
+																		li.c-catalog-menu__item
+																			a(href="#").c-catalog-menu__link Душевые углы
+																		li.c-catalog-menu__item
+																			a(href="#").c-catalog-menu__link Душевые углы
+															a(href="#brand-products-filter" data-toggle="collapse" aria-expanded="false") показать еще
+														.c-filter
+															.c-filter__header
+																a(href="#choosed-filters" data-toggle="collapse" aria-expanded="false").c-filter__title По коллекциям
+															.c-filter__body.collapse.d-flex.align-items-start.flex-column#choosed-filters
+																a(href="#").mb-2 Alira
+																a(href="#").mb-2 Allure
+																a(href="#").mb-2 Allure Brilliant
+																a(href="#").mb-2 Allure E
+														.c-filter
+															.c-filter__header
+																.c-filter__title Цена
+															.c-filter__body
+																.d-flex.align-items-center.justify-content-between
+																	.c-price-field
+																		.c-price-field__inner
+																			span.c-price-field__prefix от
+																			span(contenteditable="true" maxlength="3").c-price-field__input.js-price-field 4000
+																			span.c-price-field__postfix a
+																	span.ml-1.mr-1 -
+																	.c-price-field
+																		.c-price-field__inner
+																			span.c-price-field__prefix от
+																			span(contenteditable="true" maxlength="3").c-price-field__input.js-price-field 150000
+																			span.c-price-field__postfix a
+														.c-filter.c-filter_sizes
+															.c-filter__header
+																a(href="#filter-sizes" data-toggle="collapse" aria-expanded="false").c-filter__title По размеру
+															.c-filter__body.collapse#filter-sizes
+																.c-filter__body-inner.collapse#more-filter-sizes.mb-2
+																	.d-flex.flex-wrap.mb-3
+																		.c-tag-checkbox
+																			input(type="checkbox").c-tag-checkbox__input
+																			.c-tag-checkbox__label 70 x 70
+																		.c-tag-checkbox
+																			input(type="checkbox").c-tag-checkbox__input
+																			.c-tag-checkbox__label 70 x 70
+																	.d-flex.flex-wrap.mb-3
+																		.c-tag-checkbox
+																			input(type="checkbox").c-tag-checkbox__input
+																			.c-tag-checkbox__label 80 x 80
+																		.c-tag-checkbox
+																			input(type="checkbox").c-tag-checkbox__input
+																			.c-tag-checkbox__label 80 x 80
+																	.d-flex.flex-wrap.mb-3
+																		.c-tag-checkbox
+																			input(type="checkbox").c-tag-checkbox__input
+																			.c-tag-checkbox__label 90 x 90
+																		.c-tag-checkbox
+																			input(type="checkbox").c-tag-checkbox__input
+																			.c-tag-checkbox__label 90 x 90
+																		.c-tag-checkbox
+																			input(type="checkbox").c-tag-checkbox__input
+																			.c-tag-checkbox__label 90 x 90
+																		.c-tag-checkbox
+																			input(type="checkbox").c-tag-checkbox__input
+																			.c-tag-checkbox__label 90 x 90
+																	.d-flex.flex-wrap.mb-3
+																		.c-tag-checkbox
+																			input(type="checkbox").c-tag-checkbox__input
+																			.c-tag-checkbox__label 100 x 100
+																		.c-tag-checkbox
+																			input(type="checkbox").c-tag-checkbox__input
+																			.c-tag-checkbox__label 100 x 100
+																		.c-tag-checkbox
+																			input(type="checkbox").c-tag-checkbox__input
+																			.c-tag-checkbox__label 100 x 100
+																a(href="#more-filter-sizes" data-toggle="collapse" aria-expanded="false") показать еще
+										.col-6
+											.c-sort-mobile.dropdown.c-dropdown.d-lg-none
+												.dropdown-toggle.c-dropdown-toggle(data-toggle="dropdown" data-flip="false")
+													span.c-sort-mobile__title Сортировка
+													span.c-sort-mobile__choosed-sort По названию
+												.dropdown-menu.c-dropdown__menu
+													ul
+														li.c-sort-mobile__item.c-sort-mobile__item_down По названию
+															input(type="radio" name="sort-mobile" value="name").c-sort-mobile__input
+														li.c-sort-mobile__item.c-sort-mobile__item_up По цене
+															input(type="radio" name="sort-mobile" value="price").c-sort-mobile__input
+
+									.c-posts-showed.d-none.d-lg-flex
+										.c-posts-showed__title Показать:
+										form.c-posts-showed__body
+											.c-posts-showed__count.is-active 24
+												input(type="radio" name="posts-showed" value="24" checked).c-posts-showed__count-input
+											.c-posts-showed__count 48
+												input(type="radio" name="posts-showed" value="48").c-posts-showed__count-input
+									.c-pagination.d-none.d-lg-flex
+										a(href="#").c-pagination__nav.c-pagination__nav_left
+										.c-pagination__pages
+											a(href="#").c-pagination__page 1
+											a(href="#").c-pagination__page.is-active 2
+											a(href="#").c-pagination__page 3
+											a(href="#").c-pagination__page 4
+										a(href="#").c-pagination__nav.c-pagination__nav_right
+								.c-filtered-products__body
+									.row
+										.col-sm-6.col-lg-4
+											.c-filtered-product.is-active
+												a(href="#").c-filtered-product__image
+													img(src=require("../img/content/filtered-product.jpg"), alt="")
+													.c-filtered-product__label
+														span.c-filtered-product__label-txt 5 вариантов модели
+												.c-filtered-product__body
+													.d-block.text-center.pr-3.pl-3.mb-3
+														a(href="#").c-filtered-product__link ванна акриловая riho Line ADIGE ADI -LVM25-CRM
+													.d-flex.justify-content-between.mb-2
+														.c-filtered-product__availability.c-filtered-product__availability_true.d-flex.align-items-center
+															img(src=require("../img/icons/check-success.png"), alt="")
+															span В наличии
+														.c-filtered-product__price 13 400
+													.c-filtered-product__code.mb-2 Код товара: 1234566JL
+													.d-flex.flex-column.align-items-center
+														.mb-2 Размер: 1500х700
+														.d-flex.align-items-center.mb-2 Цвет профиля:
+															.d-inline.d-lg-none.ml-2 черный, серый
+															.d-none.d-lg-block.dropdown.c-dropdown.c-dropdown_link.c-filtered-product__dropdown
+																.dropdown-toggle.c-dropdown-toggle(data-toggle="dropdown" data-flip="false")
+																	.c-dropdown-toggle__link 2 варианта
+																.dropdown-menu.c-dropdown__menu
+																	ul
+																		li 
+																			a(href="#") Серый 
+																		li 
+																			a(href="#") Розовый
+														.d-flex.align-items-center.mb-2 Цвет стекла:
+															.d-inline.d-lg-none.ml-2 черный, серый
+															.d-none.d-lg-block.dropdown.c-dropdown.c-dropdown_link.c-filtered-product__dropdown
+																.dropdown-toggle.c-dropdown-toggle(data-toggle="dropdown" data-flip="false")
+																	.c-dropdown-toggle__link 3 варианта
+																.dropdown-menu.c-dropdown__menu
+																	ul
+																		li 
+																			a(href="#") Серый 
+																		li 
+																			a(href="#") Розовый
+														.d-block
+															.d-inline-block Бренд:
+																a(href="#").ml-1 Grohe
+															.d-inline-block Страна: Германия
+
+										.col-sm-6.col-lg-4
+											.c-filtered-product.is-active
+												a(href="#").c-filtered-product__image
+													img(src=require("../img/content/filtered-product.jpg"), alt="")
+													.c-filtered-product__label
+														span.c-filtered-product__label-txt 5 вариантов модели
+												.c-filtered-product__body
+													.d-block.text-center.pr-3.pl-3.mb-3
+														a(href="#").c-filtered-product__link ванна акриловая riho Line ADIGE ADI -LVM25-CRM
+													.d-flex.justify-content-between.mb-2
+														.c-filtered-product__availability.c-filtered-product__availability_true.d-flex.align-items-center
+															img(src=require("../img/icons/check-success.png"), alt="")
+															span В наличии
+														.c-filtered-product__price 13 400
+													.c-filtered-product__code.mb-2 Код товара: 1234566JL
+													.d-flex.flex-column.align-items-center
+														.mb-2 Размер: 1500х700
+														.d-flex.align-items-center.mb-2 Цвет профиля:
+															.d-inline.d-lg-none.ml-2 черный, серый
+															.d-none.d-lg-block.dropdown.c-dropdown.c-dropdown_link.c-filtered-product__dropdown
+																.dropdown-toggle.c-dropdown-toggle(data-toggle="dropdown" data-flip="false")
+																	.c-dropdown-toggle__link 2 варианта
+																.dropdown-menu.c-dropdown__menu
+																	ul
+																		li 
+																			a(href="#") Серый 
+																		li 
+																			a(href="#") Розовый
+														.d-flex.align-items-center.mb-2 Цвет стекла:
+															.d-inline.d-lg-none.ml-2 черный, серый
+															.d-none.d-lg-block.dropdown.c-dropdown.c-dropdown_link.c-filtered-product__dropdown
+																.dropdown-toggle.c-dropdown-toggle(data-toggle="dropdown" data-flip="false")
+																	.c-dropdown-toggle__link 3 варианта
+																.dropdown-menu.c-dropdown__menu
+																	ul
+																		li 
+																			a(href="#") Серый 
+																		li 
+																			a(href="#") Розовый
+														.d-block
+															.d-inline-block Бренд:
+																a(href="#").ml-1 Grohe
+															.d-inline-block Страна: Германия
+										.col-sm-6.col-lg-4
+											.c-filtered-product.is-active
+												a(href="#").c-filtered-product__image
+													img(src=require("../img/content/filtered-product.jpg"), alt="")
+													.c-filtered-product__label
+														span.c-filtered-product__label-txt 5 вариантов модели
+												.c-filtered-product__body
+													.d-block.text-center.pr-3.pl-3.mb-3
+														a(href="#").c-filtered-product__link ванна акриловая riho Line ADIGE ADI -LVM25-CRM
+													.d-flex.justify-content-between.mb-2
+														.c-filtered-product__availability.c-filtered-product__availability_true.d-flex.align-items-center
+															img(src=require("../img/icons/check-success.png"), alt="")
+															span В наличии
+														.c-filtered-product__price 13 400
+													.c-filtered-product__code.mb-2 Код товара: 1234566JL
+													.d-flex.flex-column.align-items-center
+														.mb-2 Размер: 1500х700
+														.d-flex.align-items-center.mb-2 Цвет профиля:
+															.d-inline.d-lg-none.ml-2 черный, серый
+															.d-none.d-lg-block.dropdown.c-dropdown.c-dropdown_link.c-filtered-product__dropdown
+																.dropdown-toggle.c-dropdown-toggle(data-toggle="dropdown" data-flip="false")
+																	.c-dropdown-toggle__link 2 варианта
+																.dropdown-menu.c-dropdown__menu
+																	ul
+																		li 
+																			a(href="#") Серый 
+																		li 
+																			a(href="#") Розовый
+														.d-flex.align-items-center.mb-2 Цвет стекла:
+															.d-inline.d-lg-none.ml-2 черный, серый
+															.d-none.d-lg-block.dropdown.c-dropdown.c-dropdown_link.c-filtered-product__dropdown
+																.dropdown-toggle.c-dropdown-toggle(data-toggle="dropdown" data-flip="false")
+																	.c-dropdown-toggle__link 3 варианта
+																.dropdown-menu.c-dropdown__menu
+																	ul
+																		li 
+																			a(href="#") Серый 
+																		li 
+																			a(href="#") Розовый
+														.d-block
+															.d-inline-block Бренд:
+																a(href="#").ml-1 Grohe
+															.d-inline-block Страна: Германия
+										.col-sm-6.col-lg-4
+											.c-filtered-product.is-active
+												a(href="#").c-filtered-product__image
+													img(src=require("../img/content/filtered-product.jpg"), alt="")
+													.c-filtered-product__label
+														span.c-filtered-product__label-txt 5 вариантов модели
+												.c-filtered-product__body
+													.d-block.text-center.pr-3.pl-3.mb-3
+														a(href="#").c-filtered-product__link ванна акриловая riho Line ADIGE ADI -LVM25-CRM
+													.d-flex.justify-content-between.mb-2
+														.c-filtered-product__availability.c-filtered-product__availability_true.d-flex.align-items-center
+															img(src=require("../img/icons/check-success.png"), alt="")
+															span В наличии
+														.c-filtered-product__price 13 400
+													.c-filtered-product__code.mb-2 Код товара: 1234566JL
+													.d-flex.flex-column.align-items-center
+														.mb-2 Размер: 1500х700
+														.d-flex.align-items-center.mb-2 Цвет профиля:
+															.d-inline.d-lg-none.ml-2 черный, серый
+															.d-none.d-lg-block.dropdown.c-dropdown.c-dropdown_link.c-filtered-product__dropdown
+																.dropdown-toggle.c-dropdown-toggle(data-toggle="dropdown" data-flip="false")
+																	.c-dropdown-toggle__link 2 варианта
+																.dropdown-menu.c-dropdown__menu
+																	ul
+																		li 
+																			a(href="#") Серый 
+																		li 
+																			a(href="#") Розовый
+														.d-flex.align-items-center.mb-2 Цвет стекла:
+															.d-inline.d-lg-none.ml-2 черный, серый
+															.d-none.d-lg-block.dropdown.c-dropdown.c-dropdown_link.c-filtered-product__dropdown
+																.dropdown-toggle.c-dropdown-toggle(data-toggle="dropdown" data-flip="false")
+																	.c-dropdown-toggle__link 3 варианта
+																.dropdown-menu.c-dropdown__menu
+																	ul
+																		li 
+																			a(href="#") Серый 
+																		li 
+																			a(href="#") Розовый
+														.d-block
+															.d-inline-block Бренд:
+																a(href="#").ml-1 Grohe
+															.d-inline-block Страна: Германия
+										
+										.col-sm-6.col-lg-4
+											.c-filtered-product.is-active
+												a(href="#").c-filtered-product__image
+													img(src=require("../img/content/filtered-product.jpg"), alt="")
+													.c-filtered-product__label
+														span.c-filtered-product__label-txt 5 вариантов модели
+												.c-filtered-product__body
+													.d-block.text-center.pr-3.pl-3.mb-3
+														a(href="#").c-filtered-product__link ванна акриловая riho Line ADIGE ADI -LVM25-CRM
+													.d-flex.justify-content-between.mb-2
+														.c-filtered-product__availability.c-filtered-product__availability_true.d-flex.align-items-center
+															img(src=require("../img/icons/check-success.png"), alt="")
+															span В наличии
+														.c-filtered-product__price 13 400
+													.c-filtered-product__code.mb-2 Код товара: 1234566JL
+													.d-flex.flex-column.align-items-center
+														.mb-2 Размер: 1500х700
+														.d-flex.align-items-center.mb-2 Цвет профиля:
+															.d-inline.d-lg-none.ml-2 черный, серый
+															.d-none.d-lg-block.dropdown.c-dropdown.c-dropdown_link.c-filtered-product__dropdown
+																.dropdown-toggle.c-dropdown-toggle(data-toggle="dropdown" data-flip="false")
+																	.c-dropdown-toggle__link 2 варианта
+																.dropdown-menu.c-dropdown__menu
+																	ul
+																		li 
+																			a(href="#") Серый 
+																		li 
+																			a(href="#") Розовый
+														.d-flex.align-items-center.mb-2 Цвет стекла:
+															.d-inline.d-lg-none.ml-2 черный, серый
+															.d-none.d-lg-block.dropdown.c-dropdown.c-dropdown_link.c-filtered-product__dropdown
+																.dropdown-toggle.c-dropdown-toggle(data-toggle="dropdown" data-flip="false")
+																	.c-dropdown-toggle__link 3 варианта
+																.dropdown-menu.c-dropdown__menu
+																	ul
+																		li 
+																			a(href="#") Серый 
+																		li 
+																			a(href="#") Розовый
+														.d-block
+															.d-inline-block Бренд:
+																a(href="#").ml-1 Grohe
+															.d-inline-block Страна: Германия
+										.col-sm-6.col-lg-4
+											.c-filtered-product.is-active
+												a(href="#").c-filtered-product__image
+													img(src=require("../img/content/filtered-product.jpg"), alt="")
+													.c-filtered-product__label
+														span.c-filtered-product__label-txt 5 вариантов модели
+												.c-filtered-product__body
+													.d-block.text-center.pr-3.pl-3.mb-3
+														a(href="#").c-filtered-product__link ванна акриловая riho Line ADIGE ADI -LVM25-CRM
+													.d-flex.justify-content-between.mb-2
+														.c-filtered-product__availability.c-filtered-product__availability_true.d-flex.align-items-center
+															img(src=require("../img/icons/check-success.png"), alt="")
+															span В наличии
+														.c-filtered-product__price 13 400
+													.c-filtered-product__code.mb-2 Код товара: 1234566JL
+													.d-flex.flex-column.align-items-center
+														.mb-2 Размер: 1500х700
+														.d-flex.align-items-center.mb-2 Цвет профиля:
+															.d-inline.d-lg-none.ml-2 черный, серый
+															.d-none.d-lg-block.dropdown.c-dropdown.c-dropdown_link.c-filtered-product__dropdown
+																.dropdown-toggle.c-dropdown-toggle(data-toggle="dropdown" data-flip="false")
+																	.c-dropdown-toggle__link 2 варианта
+																.dropdown-menu.c-dropdown__menu
+																	ul
+																		li 
+																			a(href="#") Серый 
+																		li 
+																			a(href="#") Розовый
+														.d-flex.align-items-center.mb-2 Цвет стекла:
+															.d-inline.d-lg-none.ml-2 черный, серый
+															.d-none.d-lg-block.dropdown.c-dropdown.c-dropdown_link.c-filtered-product__dropdown
+																.dropdown-toggle.c-dropdown-toggle(data-toggle="dropdown" data-flip="false")
+																	.c-dropdown-toggle__link 3 варианта
+																.dropdown-menu.c-dropdown__menu
+																	ul
+																		li 
+																			a(href="#") Серый 
+																		li 
+																			a(href="#") Розовый
+														.d-block
+															.d-inline-block Бренд:
+																a(href="#").ml-1 Grohe
+															.d-inline-block Страна: Германия
+												.c-filtered-product__footer
+													a(href="#").c-filtered-product__action
+														img(src=require("../img/icons/vesi.png"), alt="")
+														| К сравнению
+													a(href="#").c-filtered-product__action
+														img(src=require("../img/icons/fav.png"), alt="")
+														| В закладки
+									a(href="#").c-filtered-products__load-more.c-load-more
+										span.c-filtered-products__load-more-txt.c-load-more__txt показать еще 18
+										.c-load-more__preloader
+											.c-load-more__preloader-square
+											.c-load-more__preloader-square
+											.c-load-more__preloader-square
+											.c-load-more__preloader-square
+								.c-filtered-products__footer.d-flex.justify-content-center.justify-content-lg-between.align-items-center
+									.c-posts-showed.d-none.d-lg-flex
+										.c-posts-showed__title Показать:
+										form.c-posts-showed__body
+											.c-posts-showed__count.is-active 24
+												input(type="radio" name="posts-showed" value="24" checked).c-posts-showed__count-input
+											.c-posts-showed__count 48
+												input(type="radio" name="posts-showed" value="48").c-posts-showed__count-input
+									.c-pagination
+										a(href="#").c-pagination__nav.c-pagination__nav_left
+										.c-pagination__pages
+											a(href="#").c-pagination__page 1
+											a(href="#").c-pagination__page.is-active 2
+											a(href="#").c-pagination__page 3
+											a(href="#").c-pagination__page 4
+										a(href="#").c-pagination__nav.c-pagination__nav_right
+				include templates/footer.pug

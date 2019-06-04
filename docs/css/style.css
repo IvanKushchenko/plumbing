@@ -16234,6 +16234,72 @@ a:hover {
   border-bottom: 1px solid #ecf2f6;
 }
 
+.c-filter_catalog > a[data-toggle="collapse"] {
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.c-filter_catalog .c-filter__body.collapsing {
+  height: auto !important;
+  min-height: 200px;
+}
+
+.c-filter_catalog .c-filter__body.collapse {
+  max-height: 300px;
+  overflow: hidden;
+  display: block !important;
+}
+
+.c-filter_catalog .c-filter__body.collapse.show {
+  max-height: initial;
+}
+
+.c-filter_catalog .c-catalog-menu__link {
+  color: #6493ad;
+  background: none;
+  box-shadow: 0 1px 0 0 rgba(100, 147, 173, 0.3);
+  display: inline;
+  padding: 0;
+}
+
+.c-filter_catalog .c-catalog-menu__link:hover {
+  background: none;
+  color: #f1ca49;
+}
+
+.c-filter_catalog .c-catalog-menu__submenu {
+  margin-top: 10px;
+}
+
+.c-filter_catalog .c-catalog-menu__link-wrap {
+  padding-right: 40px;
+  position: relative;
+  box-shadow: none;
+  display: block;
+  width: 100%;
+}
+
+.c-filter_catalog .c-catalog-menu__link-wrap:after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 20px;
+  top: 40%;
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: url(../img/icons/right-arrow.svg);
+  transform: rotate(90deg) translateY(-50%);
+}
+
+.c-filter_catalog .c-catalog-menu__item {
+  margin-bottom: 15px;
+}
+
+.c-filter_catalog .c-catalog-menu__submenu .c-catalog-menu__item {
+  margin-bottom: 5px;
+}
+
 .c-filter_sizes .c-tag-checkbox {
   width: calc(33.33% - 5px);
   margin: 0 2.5px;
@@ -16380,7 +16446,7 @@ a:hover {
 
 .c-checkbox__input {
   position: absolute;
-  z-index: 22;
+  z-index: 5;
   width: 100%;
   height: 100%;
   opacity: 0;
@@ -17270,6 +17336,163 @@ a:hover {
 
 .c-call a {
   border-radius: 50%;
+}
+
+.c-brand-info {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.c-brand-info__title {
+  text-transform: uppercase;
+  font-family: 'Roboto Slab';
+  font-size: 31px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.c-brand-info__description {
+  max-height: 120px;
+  position: relative;
+  line-height: 30px;
+  font-size: 14px;
+}
+
+.c-brand-info__description:after {
+  display: none;
+}
+
+.c-brand-info__description.is-active {
+  max-height: 900px;
+}
+
+.c-brand-logo {
+  margin-top: 45px;
+  margin-bottom: 30px;
+}
+
+.c-brand-logo img {
+  display: block;
+  margin: 0 auto;
+}
+
+.c-brands-list__section {
+  margin-bottom: 20px;
+}
+
+.c-brands-list__inner {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.c-brands-list__wrap {
+  margin-bottom: 30px;
+}
+
+.c-brands-list__letter-wrap {
+  border-top: 1px solid #8cafc2;
+  opacity: 0.42;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.c-brands-list__letter {
+  font-size: 17px;
+  font-weight: 700;
+  color: #8cafc2;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  padding-right: 10px;
+}
+
+.c-brands-list__item {
+  margin: 5px;
+  margin-bottom: 20px;
+  padding: 30px;
+  padding-bottom: 40px;
+  border-radius: 3px;
+  border: 1px solid #ecf2f6;
+}
+
+.c-brands-list__item:hover {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.09);
+}
+
+.c-brands-list__item a[data-toggle="collapse"] {
+  position: absolute;
+  bottom: -25px;
+}
+
+.c-brands-list__item-img {
+  margin-bottom: 25px;
+  max-width: 100%;
+}
+
+.c-brands-list__item-link {
+  margin-bottom: 5px;
+}
+
+.c-brands-list__item-products {
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.c-brands-list__item-products.collapsing {
+  height: 160px;
+}
+
+.c-brands-list__item-products.collapse {
+  height: 160px;
+  display: block !important;
+  overflow: hidden;
+}
+
+.c-brands-list__item-products.collapse.show {
+  height: auto;
+}
+
+.c-brands-list__item-products li {
+  margin-bottom: 6px;
+}
+
+.c-alphabet-filter {
+  background-color: #dce7ed;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.c-alphabet-filter__item {
+  width: calc(100% / 28);
+  height: 30px;
+  color: #8cafc2;
+  font-size: 17px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: none;
+}
+
+@media (max-width: 992px) {
+  .c-alphabet-filter__item {
+    width: calc(100% / 14);
+  }
+}
+
+@media (max-width: 450px) {
+  .c-alphabet-filter__item {
+    width: calc(100% / 7);
+  }
+}
+
+.c-alphabet-filter__item.is-active {
+  user-select: none;
+  pointer-events: none;
+  background-color: #8cafc2;
+  color: #fff;
 }
 
 .s-shares {

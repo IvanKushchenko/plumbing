@@ -1,0 +1,73 @@
+.c-brands-list {
+	&__section{
+		margin-bottom: 20px;
+	}
+	&__inner{
+		margin-right: -15px;
+		margin-left: -15px;
+	}
+	&__wrap {
+		margin-bottom: 30px;
+	}
+
+	&__letter-wrap {
+		border-top: 1px solid #8cafc2;
+		opacity: 0.42;
+		margin-bottom: 40px;
+		position: relative;
+	}
+
+	&__letter {
+		font-size: 17px;
+		font-weight: 700;
+		color: #8cafc2;
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		background: #fff;
+		padding-right: 10px;
+	}
+
+	&__item {
+		margin: 5px;
+		margin-bottom: 20px;
+		padding: 30px;
+		padding-bottom: 40px;
+		border-radius: 3px;
+		border: 1px solid #ecf2f6;
+		&:hover{
+			box-shadow: 0 0 8px rgba(0, 0, 0, 0.09);
+		}
+		a[data-toggle="collapse"]{
+			position: absolute;
+			bottom: -25px;
+		}
+	}
+	&__item-img{
+		margin-bottom: 25px;
+		max-width: 100%;
+	}
+	&__item-link{
+		margin-bottom: 5px;
+	}
+	&__item-products{
+		text-transform: uppercase;
+		font-size: 12px;
+		&.collapsing{
+			height: 160px;
+		}
+		&.collapse{
+			height: 160px;
+			display: block !important;
+			overflow: hidden;
+			&.show{
+				height: auto;
+			}
+		}
+		li{
+			margin-bottom: 6px;
+		}
+	}
+
+}

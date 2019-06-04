@@ -108,13 +108,12 @@ $(function() {
 		})
 	})
 
-
-	$('.c-filters-mobile .dropdown-menu').click(function(e) {
-	    e.stopPropagation();
-	});
+	$('.js-dropdown-filters').click(function(){
+		$(this).parent().find('.c-dropdown__menu').show();
+	})
 
 	$('.js-dropdown-filters-close').click(function(){
-		$('.js-dropdown-filters').dropdown('toggle');
+		$(this).parent().hide();
 	})
 
 	/* Breadcrumbs dropdown */

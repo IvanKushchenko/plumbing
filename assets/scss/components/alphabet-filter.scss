@@ -1,0 +1,28 @@
+.c-alphabet-filter{
+	background-color: #dce7ed;
+	display: flex;
+	flex-wrap: wrap;
+	&__item{
+		width: calc(100% / 28);
+		height: 30px;
+		color: #8cafc2;
+		font-size: 17px;
+		font-weight: 700;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		box-shadow: none;
+		@media (max-width: $bp-lg) {
+			width: calc(100% / 14);
+		}
+		@media (max-width: $bp-sm-2) {
+			width: calc(100% / 7);
+		}
+		&.is-active{
+			user-select: none;
+			pointer-events: none;
+			background-color: #8cafc2;
+			color: #fff;
+		}
+	}
+}

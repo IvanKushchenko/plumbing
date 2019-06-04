@@ -1,0 +1,23 @@
+.c-brand-info{
+	margin-bottom: 30px;
+	text-align: center;
+	&__title{
+		text-transform: uppercase;
+		font-family: 'Roboto Slab';
+		font-size: 31px;
+		font-weight: 400;
+		margin-bottom: 20px;
+	}
+	&__description{
+		max-height: 120px;
+		position: relative;
+		line-height: 30px;
+		font-size: 14px;
+		&:after{
+			display: none;
+		}
+		&.is-active{
+			max-height: 900px;
+		}
+	}
+}
