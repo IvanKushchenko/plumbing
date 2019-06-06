@@ -15773,7 +15773,6 @@ a:hover {
 
 .c-choose-by-property {
   border-radius: 3px 3px 0 0;
-  border: 2px solid #ecf2f6;
   border-bottom: none;
   margin-bottom: 35px;
 }
@@ -15862,6 +15861,7 @@ a:hover {
   border: none;
   justify-content: space-between;
   flex-wrap: nowrap;
+  border: 2px solid #ecf2f6;
 }
 
 .c-choose-by-property .nav-tabs .nav-item {

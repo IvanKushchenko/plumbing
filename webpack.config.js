@@ -35,18 +35,18 @@ module.exports = {
 		// 	minify: false,
 		// 	hash: true
 		// }),
-		new HtmlWebpackPlugin({
-			filename: 'brand.html',
-			template: './assets/pug/brand.pug',
-			minify: false,
-			hash: true
-		}),
-		new HtmlWebpackPlugin({
-			filename: 'brands.html',
-			template: './assets/pug/brands.pug',
-			minify: false,
-			hash: true
-		}),
+		// new HtmlWebpackPlugin({
+		// 	filename: 'brand.html',
+		// 	template: './assets/pug/brand.pug',
+		// 	minify: false,
+		// 	hash: true
+		// }),
+		// new HtmlWebpackPlugin({
+		// 	filename: 'brands.html',
+		// 	template: './assets/pug/brands.pug',
+		// 	minify: false,
+		// 	hash: true
+		// }),
 		// new HtmlWebpackPlugin({
 		// 	filename: 'kabinet.html',
 		// 	template: './assets/pug/kabinet.pug',
@@ -89,12 +89,12 @@ module.exports = {
 		// 	minify: false,
 		// 	hash: true
 		// }),
-		// new HtmlWebpackPlugin({
-		// 	filename: 'catalog.html',
-		// 	template: './assets/pug/catalog.pug',
-		// 	minify: false,
-		// 	hash: true
-		// }),
+		new HtmlWebpackPlugin({
+			filename: 'catalog.html',
+			template: './assets/pug/catalog.pug',
+			minify: false,
+			hash: true
+		}),
 		new FileManagerPlugin({
 			onEnd: {
 				copy: [
