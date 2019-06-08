@@ -1,3 +1,54 @@
+.modal.c-modal.c-modal_contact-us.fade#contact-us-modal(aria-hidden="false")
+	.modal-dialog.modal-dialog-centered
+		.modal-content
+			.modal-header
+				h5.modal-title Написать нам
+				button(type="button" data-dismiss="modal").close
+					span(aria-hidden="true") &times;
+			.modal-body
+				form.c-form
+					input(type="text" placeholder="Ваше имя*" required).c-form__field
+					input(type="text" placeholder="Ваше телефон*" required).c-form__field
+					input(type="text" placeholder="Ваше e-mail*" required).c-form__field
+					textarea(name="", cols="30", rows="10" placeholder="Ваш вопрос*" required).c-form__field.c-form__field_textarea
+					p *Обязательно для заполнения 
+					.c-form__action.c-form__action_attachment
+						input(type="file")
+						a(href="#") Добавить вложение
+			.modal-footer
+				button(type="button").c-btn.c-btn_secondary Отправить
+.modal.c-modal.c-modal_call.fade#call-modal(aria-hidden="false")
+	.modal-dialog.modal-dialog-centered
+		.modal-content
+			.modal-header
+				h5.modal-title Обратный звонок
+				button(type="button" data-dismiss="modal").close
+					span(aria-hidden="true") &times;
+			.modal-body
+				form.c-form
+					.row
+						.col-md-6.mb-3
+							.c-form__dropdown
+								select
+									option сегодня
+									option завтра
+								
+						.col-md-6.mb-3
+							.d-flex.align-items-center
+								span.mr-2 в
+								.c-form__dropdown.w-100
+									select
+										option 10:00
+										option 11:00
+										option 12:00
+										option 13:00
+										option 14:00
+										option 15:00
+					.c-form__field.c-form__field_phone
+						.c-form__field-flag.c-form__field-flag_russia
+						input(type="tel" placeholder="+7 (___) ___-__-__").js-phone-field
+			.modal-footer
+				button(type="button").c-btn.c-btn_secondary Жду звонка
 footer.c-footer
 	.c-footer__top.d-flex.flex-column.flex-xl-row
 		.d-flex.flex-column.flex-md-row

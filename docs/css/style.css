@@ -14833,6 +14833,28 @@ a:hover {
   z-index: 2;
 }
 
+.c-tip_filter {
+  max-width: initial;
+}
+
+@media (max-width: 1200px) {
+  .c-tip_filter {
+    display: none !important;
+  }
+}
+
+.c-tip_left {
+  padding-left: 15px;
+}
+
+.c-tip_left:after {
+  right: auto;
+  left: -9px;
+  border-top-color: #fff;
+  border-right-color: #fff;
+  box-shadow: 2px -2px 4px rgba(0, 0, 0, 0.18);
+}
+
 .c-modal__header {
   height: 0;
   padding: 0;
@@ -14847,6 +14869,7 @@ a:hover {
 }
 
 .c-modal .close {
+  opacity: .8;
   position: absolute;
   top: -10px;
   right: -10px;
@@ -14857,9 +14880,66 @@ a:hover {
   background: #ecf2f6 url(../img/icons/close.png) no-repeat center center;
 }
 
+@media (max-width: 576px) {
+  .c-modal .close {
+    top: -15px;
+    right: 10px;
+  }
+}
+
 .c-modal__body {
   padding: 30px;
   padding-bottom: 15px;
+}
+
+.c-modal .modal-dialog {
+  margin: 0 auto;
+}
+
+.c-modal .modal-title {
+  font-size: 18px;
+  font-family: "PT Sans";
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #8cafc2;
+}
+
+.c-modal .modal-content {
+  border: 2px solid #ecf2f6;
+  border-radius: 0 0 3px 3px;
+  box-shadow: 0 0 16px rgba(2, 0, 0, 0.3);
+}
+
+.c-modal .modal-footer {
+  border: none;
+}
+
+.c-modal .modal-header {
+  border: none;
+}
+
+.c-modal_call .c-btn_secondary {
+  font-size: 17px;
+  font-weight: 700;
+  width: 100%;
+  height: 42px;
+}
+
+.c-modal_call .modal-dialog,
+.c-modal_contact-us .modal-dialog {
+  max-width: 315px;
+}
+
+.c-modal_contact-us .c-form__field {
+  margin-bottom: 6px;
+}
+
+.c-modal_contact-us .c-form__field_textarea {
+  resize: none;
+}
+
+.modal-backdrop {
+  background-color: #8cafc2;
 }
 
 .c-preview-product .c-modal__header {
@@ -17008,6 +17088,7 @@ a:hover {
   align-items: center;
   position: relative;
   overflow: hidden;
+  padding-bottom: 1px;
 }
 
 .c-form__action_attachment input {
@@ -17332,6 +17413,7 @@ a:hover {
   right: 10px;
   box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4);
   border-radius: 50%;
+  z-index: 333;
 }
 
 .c-call a {

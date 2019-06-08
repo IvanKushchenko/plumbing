@@ -7,6 +7,9 @@ html(lang="ru")
 				include templates/navbar.pug
 				include templates/header.pug
 				main.o-page__content
+					.c-tip.c-tip_left.c-tip_filter Найдено товаров: 
+						span.mr-2 5
+						a(href="#").js-show-filtered-products Показать
 					.o-page__container
 						.o-page__sidebar
 							.c-filters.mb-5
@@ -337,15 +340,15 @@ html(lang="ru")
 											a(href="#").js-read-more-btn Развернуть
 									a(href="#").c-btn.c-choose-by-property__more-btn показать ещё
 							.c-filtered-products
-								.c-filtered-products__header.d-block.d-lg-flex.justify-content-between.mb-5
-									.c-sort.d-none.d-lg-flex
+								.c-filtered-products__header.d-block.d-xl-flex.justify-content-between.mb-5
+									.c-sort.d-none.d-xl-flex
 										.c-sort__txt сортировка:
 										select.c-sort__select
 											option Цена по возрастанию 
 											option Цена по возрастанию
 									.row
 										.col-6
-											.c-filters-mobile.dropdown.c-dropdown.d-lg-none
+											.c-filters-mobile.dropdown.c-dropdown.d-xl-none
 												.dropdown-toggle.c-dropdown-toggle.js-dropdown-filters(data-toggle="dropdown" data-flip="false") фильтр
 												.dropdown-menu.c-dropdown__menu
 													.c-dropdown__close.js-dropdown-filters-close
@@ -513,7 +516,7 @@ html(lang="ru")
 																	input(type="checkbox").c-checkbox__input
 																	.c-checkbox__label Акрил
 										.col-6
-											.c-sort-mobile.dropdown.c-dropdown.d-lg-none
+											.c-sort-mobile.dropdown.c-dropdown.d-xl-none
 												.dropdown-toggle.c-dropdown-toggle(data-toggle="dropdown" data-flip="false")
 													span.c-sort-mobile__title Сортировка
 													span.c-sort-mobile__choosed-sort По названию
@@ -524,14 +527,14 @@ html(lang="ru")
 														li.c-sort-mobile__item.c-sort-mobile__item_up По цене
 															input(type="radio" name="sort-mobile" value="price").c-sort-mobile__input
 
-									.c-posts-showed.d-none.d-lg-flex
+									.c-posts-showed.d-none.d-xl-flex
 										.c-posts-showed__title Показать:
 										form.c-posts-showed__body
 											.c-posts-showed__count.is-active 24
 												input(type="radio" name="posts-showed" value="24" checked).c-posts-showed__count-input
 											.c-posts-showed__count 48
 												input(type="radio" name="posts-showed" value="48").c-posts-showed__count-input
-									.c-pagination.d-none.d-lg-flex
+									.c-pagination.d-none.d-xl-flex
 										a(href="#").c-pagination__nav.c-pagination__nav_left
 										.c-pagination__pages
 											a(href="#").c-pagination__page 1
@@ -876,6 +879,6 @@ html(lang="ru")
 								.d-flex.justify-content-center.mb-3
 									a(href="#").js-read-more-btn Развернуть
 							.d-flex.justify-content-center.d-lg-none.c-call
-								a(href="#")
+								a(href="#" data-toggle="modal" data-target="#call-modal")
 									img(src=require("../img/icons/call-btn.png"), alt="")
 				include templates/footer.pug

@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>Template</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="css/style.css?70ca18d50b91064a2b9a" rel="stylesheet"></head>
+  <link href="css/style.css?d747bddd9d3b44887d35" rel="stylesheet"></head>
   <body>
     <div class="container">
       <div class="o-page js-page">
@@ -156,7 +156,7 @@
 <div class="c-navbar-wrap c-navbar-scrolled">
   <div class="container">
     <div class="c-navbar"><a class="h-no-link" href="/"><img class="c-navbar__logo" src="img/icons/logo.svg" alt=""></a>
-      <div class="c-navbar__item-phone">+7 (495) 565 35 88</div><a class="c-navbar__item-call" href="#">бесплатный звонок</a>
+      <div class="c-navbar__item-phone">+7 (495) 565 35 88</div><a class="c-navbar__item-call" href="#" data-toggle="modal" data-target="#call-modal">бесплатный звонок</a>
       <div class="d-flex justify-content-between c-navbar__actions-container">
         <div class="c-navbar__item">
           <div class="c-navbar__btn js-navbar-btn dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><img class="c-navbar__btn-icon" src="img/icons/vesi.png" alt=""><span class="c-navbar__txt">В сравнении </span><span class="c-navbar__counter">3</span><span class="c-navbar__txt">тов.</span>
@@ -305,7 +305,7 @@
   <div class="c-header__top"><a class="c-header__logo c-logo" href="/"><img class="c-logo__img" src="img/icons/logo.svg" alt=""><span class="c-logo__letter">Салон сантехники</span></a>
     <nav class="c-nav c-header__nav"><a class="c-nav__item" href="#">Бренды</a><a class="c-nav__item" href="#">Доставка и оплата</a><a class="c-nav__item" href="#">Акции</a><a class="c-nav__item" href="#">Контакты</a></nav><a class="c-phone" href="tel:99999">+7 (495) 565 35 88
       <div class="c-phone__text">Работаем круглосуточно</div></a>
-    <div class="c-header__actions d-flex align-items-center"><a class="c-btn c-btn_primary d-none d-md-flex" href="#">обратный звонок</a><a class="c-btn c-btn_primary" href="#">написать нам</a></div>
+    <div class="c-header__actions d-flex align-items-center"><a class="c-btn c-btn_primary d-none d-md-flex" href="#" data-toggle="modal" data-target="#call-modal">обратный звонок</a><a class="c-btn c-btn_primary" href="#" data-toggle="modal" data-target="#contact-us-modal">написать нам</a></div>
   </div>
   <div class="c-header__bottom">
     <div class="c-catalog-menu d-none d-md-block">
@@ -367,6 +367,7 @@
   </div>
 </header>
         <main class="o-page__content">
+          <div class="c-tip c-tip_left c-tip_filter">Найдено товаров: <span class="mr-2">5</span><a class="js-show-filtered-products" href="#">Показать</a></div>
           <div class="o-page__container">
             <div class="o-page__sidebar">
               <div class="c-filters mb-5">
@@ -726,8 +727,8 @@
                 </div>
               </div>
               <div class="c-filtered-products">
-                <div class="c-filtered-products__header d-block d-lg-flex justify-content-between mb-5">
-                  <div class="c-sort d-none d-lg-flex">
+                <div class="c-filtered-products__header d-block d-xl-flex justify-content-between mb-5">
+                  <div class="c-sort d-none d-xl-flex">
                     <div class="c-sort__txt">сортировка:</div>
                     <select class="c-sort__select">
                       <option>Цена по возрастанию </option>
@@ -736,7 +737,7 @@
                   </div>
                   <div class="row">
                     <div class="col-6">
-                      <div class="c-filters-mobile dropdown c-dropdown d-lg-none">
+                      <div class="c-filters-mobile dropdown c-dropdown d-xl-none">
                         <div class="dropdown-toggle c-dropdown-toggle js-dropdown-filters" data-toggle="dropdown" data-flip="false">фильтр</div>
                         <div class="dropdown-menu c-dropdown__menu">
                           <div class="c-dropdown__close js-dropdown-filters-close"></div>
@@ -949,7 +950,7 @@
                       </div>
                     </div>
                     <div class="col-6">
-                      <div class="c-sort-mobile dropdown c-dropdown d-lg-none">
+                      <div class="c-sort-mobile dropdown c-dropdown d-xl-none">
                         <div class="dropdown-toggle c-dropdown-toggle" data-toggle="dropdown" data-flip="false"><span class="c-sort-mobile__title">Сортировка</span><span class="c-sort-mobile__choosed-sort">По названию</span></div>
                         <div class="dropdown-menu c-dropdown__menu">
                           <ul>
@@ -964,7 +965,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="c-posts-showed d-none d-lg-flex">
+                  <div class="c-posts-showed d-none d-xl-flex">
                     <div class="c-posts-showed__title">Показать:</div>
                     <form class="c-posts-showed__body">
                       <div class="c-posts-showed__count is-active">24
@@ -975,7 +976,7 @@
                       </div>
                     </form>
                   </div>
-                  <div class="c-pagination d-none d-lg-flex"><a class="c-pagination__nav c-pagination__nav_left" href="#"></a>
+                  <div class="c-pagination d-none d-xl-flex"><a class="c-pagination__nav c-pagination__nav_left" href="#"></a>
                     <div class="c-pagination__pages"><a class="c-pagination__page" href="#">1</a><a class="c-pagination__page is-active" href="#">2</a><a class="c-pagination__page" href="#">3</a><a class="c-pagination__page" href="#">4</a></div><a class="c-pagination__nav c-pagination__nav_right" href="#"></a>
                   </div>
                 </div>
@@ -1327,10 +1328,80 @@
                 </div>
                 <div class="d-flex justify-content-center mb-3"><a class="js-read-more-btn" href="#">Развернуть</a></div>
               </div>
-              <div class="d-flex justify-content-center d-lg-none c-call"><a href="#"><img src="img/icons/call-btn.png" alt=""></a></div>
+              <div class="d-flex justify-content-center d-lg-none c-call"><a href="#" data-toggle="modal" data-target="#call-modal"><img src="img/icons/call-btn.png" alt=""></a></div>
             </div>
           </div>
         </main>
+<div class="modal c-modal c-modal_contact-us fade" id="contact-us-modal" aria-hidden="false">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Написать нам</h5>
+        <button class="close" type="button" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body">
+        <form class="c-form">
+          <input class="c-form__field" type="text" placeholder="Ваше имя*" required>
+          <input class="c-form__field" type="text" placeholder="Ваше телефон*" required>
+          <input class="c-form__field" type="text" placeholder="Ваше e-mail*" required>
+          <textarea class="c-form__field c-form__field_textarea" name="" cols="30" rows="10" placeholder="Ваш вопрос*" required></textarea>
+          <p>*Обязательно для заполнения </p>
+          <div class="c-form__action c-form__action_attachment">
+            <input type="file"><a href="#">Добавить вложение</a>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="c-btn c-btn_secondary" type="button">Отправить</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal c-modal c-modal_call fade" id="call-modal" aria-hidden="false">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Обратный звонок</h5>
+        <button class="close" type="button" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body">
+        <form class="c-form">
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <div class="c-form__dropdown">
+                <select>
+                  <option>сегодня</option>
+                  <option>завтра</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <div class="d-flex align-items-center"><span class="mr-2">в</span>
+                <div class="c-form__dropdown w-100">
+                  <select>
+                    <option>10:00</option>
+                    <option>11:00</option>
+                    <option>12:00</option>
+                    <option>13:00</option>
+                    <option>14:00</option>
+                    <option>15:00</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="c-form__field c-form__field_phone">
+            <div class="c-form__field-flag c-form__field-flag_russia"></div>
+            <input class="js-phone-field" type="tel" placeholder="+7 (___) ___-__-__">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="c-btn c-btn_secondary" type="button">Жду звонка</button>
+      </div>
+    </div>
+  </div>
+</div>
 <footer class="c-footer">
   <div class="c-footer__top d-flex flex-column flex-xl-row">
     <div class="d-flex flex-column flex-md-row">
@@ -1407,5 +1478,5 @@
 </footer>
       </div>
     </div>
-  <script type="text/javascript" src="js/script.js?70ca18d50b91064a2b9a"></script></body>
+  <script type="text/javascript" src="js/script.js?d747bddd9d3b44887d35"></script></body>
 </html>
