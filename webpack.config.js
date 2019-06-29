@@ -23,6 +23,12 @@ module.exports = {
 			minify: false,
 			hash: true
 		}),
+		new HtmlWebpackPlugin({
+			filename: 'jobs.html',
+			template: './assets/pug/jobs.pug',
+			minify: false,
+			hash: true
+		}),
 		// new HtmlWebpackPlugin({
 		// 	filename: 'basket.html',
 		// 	template: './assets/pug/basket.pug',
