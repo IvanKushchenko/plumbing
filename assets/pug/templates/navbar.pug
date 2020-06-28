@@ -5,117 +5,15 @@
 	.c-navbar__item
 		a(href="#").c-navbar__link личный кабинет 
 		span : User ID: 1
-	.c-navbar__item
+	.c-navbar__item.mr-auto
 		| Ваш город:
 		a(href="#").c-navbar__link  Санкт-Петербург
-	.c-navbar__item
-		div(href="#", data-toggle="dropdown", aria-expanded="false").c-navbar__btn.js-navbar-btn.dropdown-toggle
-			img(src=require("../../img/icons/vesi.png"), alt="").c-navbar__btn-icon
-			span.c-navbar__txt В сравнении 
-			span.c-navbar__counter 3
-			span.c-navbar__txt тов.
-
-			.dropdown-menu
-				.dropdown-menu__body
-					.c-navbar-product
-						.c-navbar-product__img
-							img(src=require("../../img/content/option8.jpg"), alt="")
-						.c-navbar-product__body
-							a(href="#").c-navbar-product__title Смеситель для раковины Belbagno Clima 80
-							.c-navbar-product__footer
-								.c-navbar-product__price 8650
-								.c-navbar-product__count x 2
-						a(href="#").c-navbar-product__close.js-navbar-product-remove
-							img(src=require("../../img/icons/close.png"), alt="")
-					.c-navbar-product
-						.c-navbar-product__img
-							img(src=require("../../img/content/option8.jpg"), alt="")
-						.c-navbar-product__body
-							a(href="#").c-navbar-product__title Смеситель для раковины Belbagno Clima 80
-							.c-navbar-product__footer
-								.c-navbar-product__price 8650
-								.c-navbar-product__count x 2
-						a(href="#").c-navbar-product__close.js-navbar-product-remove
-							img(src=require("../../img/icons/close.png"), alt="")
-					.c-navbar-product
-						.c-navbar-product__img
-							img(src=require("../../img/content/option8.jpg"), alt="")
-						.c-navbar-product__body
-							a(href="#").c-navbar-product__title Смеситель для раковины Belbagno Clima 80
-							.c-navbar-product__footer
-								.c-navbar-product__price 8650
-								.c-navbar-product__count x 2
-						a(href="#").c-navbar-product__close.js-navbar-product-remove
-							img(src=require("../../img/icons/close.png"), alt="")
-					.c-navbar-product
-						.c-navbar-product__img
-							img(src=require("../../img/content/option8.jpg"), alt="")
-						.c-navbar-product__body
-							a(href="#").c-navbar-product__title Смеситель для раковины Belbagno Clima 80
-							.c-navbar-product__footer
-								.c-navbar-product__price 8650
-								.c-navbar-product__count x 2
-						a(href="#").c-navbar-product__close.js-navbar-product-remove
-							img(src=require("../../img/icons/close.png"), alt="")
-				.dropdown-menu__footer
-					a.c-btn.c-btn_secondary(href="#") перейти в сравнение
-
-	.c-navbar__item
+	.c-navbar__item.c-navbar__item_cart
 		div(data-toggle="dropdown", aria-expanded="false").c-navbar__btn.js-navbar-btn.dropdown-toggle
-			img(src=require("../../img/icons/fav.png"), alt="").c-navbar__btn-icon
-			span.c-navbar__txt В закладках
-			span.c-navbar__counter.is-empty 0
-			span.c-navbar__txt тов.
-			.dropdown-menu
-				.dropdown-menu__body
-					.c-navbar-product
-						.c-navbar-product__img
-							img(src=require("../../img/content/option8.jpg"), alt="")
-						.c-navbar-product__body
-							a(href="#").c-navbar-product__title Смеситель для раковины Belbagno Clima 80
-							.c-navbar-product__footer
-								.c-navbar-product__price 8650
-								.c-navbar-product__count x 2
-						a(href="#").c-navbar-product__close.js-navbar-product-remove
-							img(src=require("../../img/icons/close.png"), alt="")
-					.c-navbar-product
-						.c-navbar-product__img
-							img(src=require("../../img/content/option8.jpg"), alt="")
-						.c-navbar-product__body
-							a(href="#").c-navbar-product__title Смеситель для раковины Belbagno Clima 80
-							.c-navbar-product__footer
-								.c-navbar-product__price 8650
-								.c-navbar-product__count x 2
-						a(href="#").c-navbar-product__close.js-navbar-product-remove
-							img(src=require("../../img/icons/close.png"), alt="")
-					.c-navbar-product
-						.c-navbar-product__img
-							img(src=require("../../img/content/option8.jpg"), alt="")
-						.c-navbar-product__body
-							a(href="#").c-navbar-product__title Смеситель для раковины Belbagno Clima 80
-							.c-navbar-product__footer
-								.c-navbar-product__price 8650
-								.c-navbar-product__count x 2
-						a(href="#").c-navbar-product__close.js-navbar-product-remove
-							img(src=require("../../img/icons/close.png"), alt="")
-					.c-navbar-product
-						.c-navbar-product__img
-							img(src=require("../../img/content/option8.jpg"), alt="")
-						.c-navbar-product__body
-							a(href="#").c-navbar-product__title Смеситель для раковины Belbagno Clima 80
-							.c-navbar-product__footer
-								.c-navbar-product__price 8650
-								.c-navbar-product__count x 2
-						a(href="#").c-navbar-product__close.js-navbar-product-remove
-							img(src=require("../../img/icons/close.png"), alt="")
-				.dropdown-menu__footer
-					a.c-btn.c-btn_secondary(href="#") перейти в закладки
-	.c-navbar__item
-		div(data-toggle="dropdown", aria-expanded="false").c-navbar__btn.js-navbar-btn.dropdown-toggle
-			img(src=require("../../img/icons/cart.png"), alt="").c-navbar__btn-icon
+			img(src=require("../../img/icons/basket.svg"), alt="").c-navbar__btn-icon
 			span.c-navbar__txt В корзине 
 			span.c-navbar__counter 3
-			span.c-navbar__txt тов.
+			span.c-navbar__txt шт.
 			.dropdown-menu
 				.dropdown-menu__body
 					.c-navbar-product
@@ -127,7 +25,8 @@
 								.c-navbar-product__price 8650
 								.c-navbar-product__count x 2
 						a(href="#").c-navbar-product__close.js-navbar-product-remove
-							img(src=require("../../img/icons/close.png"), alt="")
+							svg
+								use(href="#icon-close")
 					.c-navbar-product
 						.c-navbar-product__img
 							img(src=require("../../img/content/option8.jpg"), alt="")
@@ -137,7 +36,8 @@
 								.c-navbar-product__price 8650
 								.c-navbar-product__count x 2
 						a(href="#").c-navbar-product__close.js-navbar-product-remove
-							img(src=require("../../img/icons/close.png"), alt="")
+							svg
+								use(href="#icon-close")
 					.c-navbar-product
 						.c-navbar-product__img
 							img(src=require("../../img/content/option8.jpg"), alt="")
@@ -147,180 +47,61 @@
 								.c-navbar-product__price 8650
 								.c-navbar-product__count x 2
 						a(href="#").c-navbar-product__close.js-navbar-product-remove
-							img(src=require("../../img/icons/close.png"), alt="")
-					.c-navbar-product
-						.c-navbar-product__img
-							img(src=require("../../img/content/option8.jpg"), alt="")
-						.c-navbar-product__body
-							a(href="#").c-navbar-product__title Смеситель для раковины Belbagno Clima 80
-							.c-navbar-product__footer
-								.c-navbar-product__price 8650
-								.c-navbar-product__count x 2
-						a(href="#").c-navbar-product__close.js-navbar-product-remove
-							img(src=require("../../img/icons/close.png"), alt="")
+							svg
+								use(href="#icon-close")
 				.dropdown-menu__footer.d-flex.align-items-center.justify-content-between
-					.d-flex.align-items-center Итого
+					.d-flex.align-items-center Итого:
 						h4.h-price.ml-2 42 233
 					a.c-btn.c-btn_secondary(href="#") перейти в корзину
-	.c-navbar__item
-		a(href="#!").c-btn.c-btn_secondary.c-navbar__btn оформить заказ
 .c-navbar-wrap.c-navbar-scrolled
 	.container
 		.c-navbar
 			a(href="/").h-no-link
 				img(src=require("../../img/icons/logo.svg"), alt="").c-navbar__logo
 			.c-navbar__item-phone +7 (495) 565 35 88
-			a(href="#" data-toggle="modal" data-target="#call-modal").c-navbar__item-call бесплатный звонок
-			.d-flex.justify-content-between.c-navbar__actions-container
-				.c-navbar__item
-					div( data-toggle="dropdown", aria-expanded="false").c-navbar__btn.js-navbar-btn.dropdown-toggle
-						img(src=require("../../img/icons/vesi.png"), alt="").c-navbar__btn-icon
-						span.c-navbar__txt В сравнении 
-						span.c-navbar__counter 3
-						span.c-navbar__txt тов.
-						.dropdown-menu
-							.dropdown-menu__body
-								.c-navbar-product
-									.c-navbar-product__img
-										img(src=require("../../img/content/option8.jpg"), alt="")
-									.c-navbar-product__body
-										a(href="#").c-navbar-product__title Смеситель для раковины Belbagno Clima 80
-										.c-navbar-product__footer
-											.c-navbar-product__price 8650
-											.c-navbar-product__count x 2
-									a(href="#").c-navbar-product__close.js-navbar-product-remove.js-navbar-product-remove
-										img(src=require("../../img/icons/close.png"), alt="")
-								.c-navbar-product
-									.c-navbar-product__img
-										img(src=require("../../img/content/option8.jpg"), alt="")
-									.c-navbar-product__body
-										a(href="#").c-navbar-product__title Смеситель для раковины Belbagno Clima 80
-										.c-navbar-product__footer
-											.c-navbar-product__price 8650
-											.c-navbar-product__count x 2
-									a(href="#").c-navbar-product__close.js-navbar-product-remove
-										img(src=require("../../img/icons/close.png"), alt="")
-								.c-navbar-product
-									.c-navbar-product__img
-										img(src=require("../../img/content/option8.jpg"), alt="")
-									.c-navbar-product__body
-										a(href="#").c-navbar-product__title Смеситель для раковины Belbagno Clima 80
-										.c-navbar-product__footer
-											.c-navbar-product__price 8650
-											.c-navbar-product__count x 2
-									a(href="#").c-navbar-product__close.js-navbar-product-remove
-										img(src=require("../../img/icons/close.png"), alt="")
-								.c-navbar-product
-									.c-navbar-product__img
-										img(src=require("../../img/content/option8.jpg"), alt="")
-									.c-navbar-product__body
-										a(href="#").c-navbar-product__title Смеситель для раковины Belbagno Clima 80
-										.c-navbar-product__footer
-											.c-navbar-product__price 8650
-											.c-navbar-product__count x 2
-									a(href="#").c-navbar-product__close.js-navbar-product-remove
-										img(src=require("../../img/icons/close.png"), alt="")
-							.dropdown-menu__footer
-								a.c-btn.c-btn_secondary(href="#") перейти в сравнение
-				.c-navbar__item
-					div(data-toggle="dropdown", aria-expanded="false").c-navbar__btn.js-navbar-btn.dropdown-toggle
-						img(src=require("../../img/icons/fav.png"), alt="").c-navbar__btn-icon
-						span.c-navbar__txt В закладках
-						span.c-navbar__counter.is-empty 0
-						span.c-navbar__txt тов.
-						.dropdown-menu
-							.dropdown-menu__body
-								.c-navbar-product
-									.c-navbar-product__img
-										img(src=require("../../img/content/option8.jpg"), alt="")
-									.c-navbar-product__body
-										a(href="#").c-navbar-product__title Смеситель для раковины Belbagno Clima 80
-										.c-navbar-product__footer
-											.c-navbar-product__price 8650
-											.c-navbar-product__count x 2
-									a(href="#").c-navbar-product__close.js-navbar-product-remove
-										img(src=require("../../img/icons/close.png"), alt="")
-								.c-navbar-product
-									.c-navbar-product__img
-										img(src=require("../../img/content/option8.jpg"), alt="")
-									.c-navbar-product__body
-										a(href="#").c-navbar-product__title Смеситель для раковины Belbagno Clima 80
-										.c-navbar-product__footer
-											.c-navbar-product__price 8650
-											.c-navbar-product__count x 2
-									a(href="#").c-navbar-product__close.js-navbar-product-remove
-										img(src=require("../../img/icons/close.png"), alt="")
-								.c-navbar-product
-									.c-navbar-product__img
-										img(src=require("../../img/content/option8.jpg"), alt="")
-									.c-navbar-product__body
-										a(href="#").c-navbar-product__title Смеситель для раковины Belbagno Clima 80
-										.c-navbar-product__footer
-											.c-navbar-product__price 8650
-											.c-navbar-product__count x 2
-									a(href="#").c-navbar-product__close.js-navbar-product-remove
-										img(src=require("../../img/icons/close.png"), alt="")
-								.c-navbar-product
-									.c-navbar-product__img
-										img(src=require("../../img/content/option8.jpg"), alt="")
-									.c-navbar-product__body
-										a(href="#").c-navbar-product__title Смеситель для раковины Belbagno Clima 80
-										.c-navbar-product__footer
-											.c-navbar-product__price 8650
-											.c-navbar-product__count x 2
-									a(href="#").c-navbar-product__close.js-navbar-product-remove
-										img(src=require("../../img/icons/close.png"), alt="")
-							.dropdown-menu__footer
-								a.c-btn.c-btn_secondary(href="#") перейти в закладки
-				.c-navbar__item
-					div( data-toggle="dropdown", aria-expanded="false").c-navbar__btn.js-navbar-btn.dropdown-toggle
-						img(src=require("../../img/icons/cart.png"), alt="").c-navbar__btn-icon
-						span.c-navbar__txt В корзине 
-						span.c-navbar__counter 3
-						span.c-navbar__txt тов.
-						.dropdown-menu
-							.dropdown-menu__body
-								.c-navbar-product
-									.c-navbar-product__img
-										img(src=require("../../img/content/option8.jpg"), alt="")
-									.c-navbar-product__body
-										a(href="#").c-navbar-product__title Смеситель для раковины Belbagno Clima 80
-										.c-navbar-product__footer
-											.c-navbar-product__price 8650
-											.c-navbar-product__count x 2
-									a(href="#").c-navbar-product__close.js-navbar-product-remove
-										img(src=require("../../img/icons/close.png"), alt="")
-								.c-navbar-product
-									.c-navbar-product__img
-										img(src=require("../../img/content/option8.jpg"), alt="")
-									.c-navbar-product__body
-										a(href="#").c-navbar-product__title Смеситель для раковины Belbagno Clima 80
-										.c-navbar-product__footer
-											.c-navbar-product__price 8650
-											.c-navbar-product__count x 2
-									a(href="#").c-navbar-product__close.js-navbar-product-remove
-										img(src=require("../../img/icons/close.png"), alt="")
-								.c-navbar-product
-									.c-navbar-product__img
-										img(src=require("../../img/content/option8.jpg"), alt="")
-									.c-navbar-product__body
-										a(href="#").c-navbar-product__title Смеситель для раковины Belbagno Clima 80
-										.c-navbar-product__footer
-											.c-navbar-product__price 8650
-											.c-navbar-product__count x 2
-									a(href="#").c-navbar-product__close.js-navbar-product-remove
-										img(src=require("../../img/icons/close.png"), alt="")
-								.c-navbar-product
-									.c-navbar-product__img
-										img(src=require("../../img/content/option8.jpg"), alt="")
-									.c-navbar-product__body
-										a(href="#").c-navbar-product__title Смеситель для раковины Belbagno Clima 80
-										.c-navbar-product__footer
-											.c-navbar-product__price 8650
-											.c-navbar-product__count x 2
-									a(href="#").c-navbar-product__close.js-navbar-product-remove
-										img(src=require("../../img/icons/close.png"), alt="")
-							.dropdown-menu__footer.d-flex.align-items-center.justify-content-between
-								.d-flex.align-items-center Итого
-									h4.h-price.ml-2 42 233
-								a.c-btn.c-btn_secondary(href="#") перейти в корзину
+			a(href="#" data-toggle="modal" data-target="#call-modal").c-navbar__item-call.mr-auto бесплатный звонок
+			.c-navbar__item.c-navbar__item_cart
+				div( data-toggle="dropdown", aria-expanded="false").c-navbar__btn.js-navbar-btn.dropdown-toggle
+					img(src=require("../../img/icons/basket.svg"), alt="").c-navbar__btn-icon
+					span.c-navbar__txt В корзине 
+					span.c-navbar__counter 3
+					span.c-navbar__txt шт.
+					.dropdown-menu
+						.dropdown-menu__body
+							.c-navbar-product
+								.c-navbar-product__img
+									img(src=require("../../img/content/option8.jpg"), alt="")
+								.c-navbar-product__body
+									a(href="#").c-navbar-product__title Смеситель для раковины Belbagno Clima 80
+									.c-navbar-product__footer
+										.c-navbar-product__price 8650
+										.c-navbar-product__count x 2
+								a(href="#").c-navbar-product__close.js-navbar-product-remove
+									svg
+										use(href="#icon-close")
+							.c-navbar-product
+								.c-navbar-product__img
+									img(src=require("../../img/content/option8.jpg"), alt="")
+								.c-navbar-product__body
+									a(href="#").c-navbar-product__title Смеситель для раковины Belbagno Clima 80
+									.c-navbar-product__footer
+										.c-navbar-product__price 8650
+										.c-navbar-product__count x 2
+								a(href="#").c-navbar-product__close.js-navbar-product-remove
+									svg
+										use(href="#icon-close")
+							.c-navbar-product
+								.c-navbar-product__img
+									img(src=require("../../img/content/option8.jpg"), alt="")
+								.c-navbar-product__body
+									a(href="#").c-navbar-product__title Смеситель для раковины Belbagno Clima 80
+									.c-navbar-product__footer
+										.c-navbar-product__price 8650
+										.c-navbar-product__count x 2
+								a(href="#").c-navbar-product__close.js-navbar-product-remove
+									svg
+										use(href="#icon-close")
+						.dropdown-menu__footer.d-flex.align-items-center.justify-content-between
+							.d-flex.align-items-center Итого:
+								h4.h-price.ml-2 42 233
+							a.c-btn.c-btn_secondary(href="#") перейти в корзину

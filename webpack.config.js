@@ -9,12 +9,19 @@ module.exports = {
 		filename: 'js/script.js',
 		path: path.resolve(__dirname, 'public')
 	},
+	devServer: {
+		contentBase: path.join(__dirname, 'public'),
+		watchContentBase: true,
+		port: 4000
+	},
 	plugins: [
-		new BrowserSyncPlugin({
-			server: {baseDir: ['public/'] },
-			open: false,
-			notify: false,
-		}),
+		// new BrowserSyncPlugin({
+		// 	server: {baseDir: ['public/'] },
+		// 	ui: false,
+		// 	port: 4000,
+		// 	open: false,
+		// 	notify: false,
+		// }),
 		new MiniCssExtractPlugin({
 			filename: 'css/style.css'
 		}),
@@ -23,18 +30,18 @@ module.exports = {
 			minify: false,
 			hash: true
 		}),
-		new HtmlWebpackPlugin({
-			filename: 'jobs.html',
-			template: './assets/pug/jobs.pug',
-			minify: false,
-			hash: true
-		}),
 		// new HtmlWebpackPlugin({
-		// 	filename: 'basket.html',
-		// 	template: './assets/pug/basket.pug',
+		// 	filename: 'jobs.html',
+		// 	template: './assets/pug/jobs.pug',
 		// 	minify: false,
 		// 	hash: true
 		// }),
+		new HtmlWebpackPlugin({
+			filename: 'basket.html',
+			template: './assets/pug/basket.pug',
+			minify: false,
+			hash: true
+		}),
 		// new HtmlWebpackPlugin({
 		// 	filename: 'index-radio.html',
 		// 	template: './assets/pug/index-radio.pug',
@@ -95,12 +102,12 @@ module.exports = {
 		// 	minify: false,
 		// 	hash: true
 		// }),
-		new HtmlWebpackPlugin({
-			filename: 'catalog.html',
-			template: './assets/pug/catalog.pug',
-			minify: false,
-			hash: true
-		}),
+		// new HtmlWebpackPlugin({
+		// 	filename: 'catalog.html',
+		// 	template: './assets/pug/catalog.pug',
+		// 	minify: false,
+		// 	hash: true
+		// }),
 		new FileManagerPlugin({
 			onEnd: {
 				copy: [
