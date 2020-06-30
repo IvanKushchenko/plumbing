@@ -25,29 +25,29 @@ module.exports = {
 		new MiniCssExtractPlugin({
 			filename: 'css/style.css'
 		}),
-		new HtmlWebpackPlugin({
-			template: './assets/pug/index.pug',
-			minify: false,
-			hash: true
-		}),
+		// new HtmlWebpackPlugin({
+		// 	template: './assets/pug/index.pug',
+		// 	minify: false,
+		// 	hash: true
+		// }),
 		// new HtmlWebpackPlugin({
 		// 	filename: 'jobs.html',
 		// 	template: './assets/pug/jobs.pug',
 		// 	minify: false,
 		// 	hash: true
 		// }),
-		new HtmlWebpackPlugin({
-			filename: 'basket.html',
-			template: './assets/pug/basket.pug',
-			minify: false,
-			hash: true
-		}),
 		// new HtmlWebpackPlugin({
-		// 	filename: 'index-radio.html',
-		// 	template: './assets/pug/index-radio.pug',
+		// 	filename: 'basket.html',
+		// 	template: './assets/pug/basket.pug',
 		// 	minify: false,
 		// 	hash: true
 		// }),
+		new HtmlWebpackPlugin({
+			filename: 'index-radio.html',
+			template: './assets/pug/index-radio.pug',
+			minify: false,
+			hash: true
+		}),
 		// new HtmlWebpackPlugin({
 		// 	filename: 'brand.html',
 		// 	template: './assets/pug/brand.pug',

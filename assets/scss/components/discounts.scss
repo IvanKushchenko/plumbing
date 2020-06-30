@@ -1,17 +1,23 @@
 .c-discounts{
 	&__item{
-		display: flex;
-		align-items: center;
 		font-size: 0.875rem;
-	}
-	&__percent{
-		flex-basis: 60px;
-		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
 	}
 	&__price{
-		flex-basis: 70px;
-		text-decoration: line-through;
 		font-family: "Roboto Slab";
+		position: relative;
+		margin-bottom: -7px;
+		&:before{
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 100%;
+			height: 1px;
+			background: #333;
+		}
 		&:after{
 			content: 'a';
 			display: inline-block;

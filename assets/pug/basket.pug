@@ -11,46 +11,46 @@ html(lang="ru")
 						a(href="#!").c-breadcrumbs__item Главная
 						a(href="#!").c-breadcrumbs__item Корзина
 					.o-section.s-basket
-						.o-section__header
+						.o-section__header.s-basket__header
 							h3.o-section__title Корзина
 						.o-section__body
-							.row.s-basket__info
-								.col-lg-6
-									form(action="").c-form.s-basket__coupon.js-basket-discount(data-discount-percent="20")
-										label.row.d-flex.align-items-center
-											.col-md-6 Введите код купона для скидки:
-											.col-md-5
-												input(type="text").c-form__field.mb-0
-								.s-basket__total-info.s-basket__total-info_fixed
-									.container
-										.s-basket__total-info-inner.d-flex.justify-content-between.flex-wrap
-											.s-basket__total-price.c-total-price.mb-0
-												.c-total-price__txt Итого:
-												.c-total-price__number.c-total-price__number_old#main-total-price-fixed 0
-												.c-total-price__number.c-total-price__number_new#main-total-price-fixed-new 0
-											button.c-btn.c-btn_secondary.mt-2 оформить заказ
-								.col-lg-3.mb-3.mb-lg-0.s-basket__total-info.s-basket__total-info_static
-									.s-basket__total-price.c-total-price
-										.c-total-price__txt Итого:
-										.c-total-price__number.c-total-price__number_old#main-total-price 0
-										.c-total-price__number.c-total-price__number_new#main-total-price-new 0
-									.c-discounts
-										ul.c-discounts__list
-											li.c-discounts__item
-												.c-discounts__price 40612
-												.c-discounts__percent 10%
-												.c-discounts__info промокод
-											li.c-discounts__item
-												.c-discounts__price 45125
-												.c-discounts__percent 5%
-												.c-discounts__info скидка на товар
-											li.c-discounts__item
-												.c-discounts__price 47500
-												.c-discounts__percent 5%
-												.c-discounts__info скидка по типу оплаты
-								.col-lg-3
-									button.c-btn.c-btn_lg.c-btn_secondary оформить заказ
-							.s-basket__section
+							//- .row.s-basket__info
+							//- 	.col-lg-6
+							//- 		form(action="").c-form.s-basket__coupon.js-basket-discount(data-discount-percent="20")
+							//- 			label.row.d-flex.align-items-center
+							//- 				.col-md-6 Введите код купона для скидки:
+							//- 				.col-md-5
+							//- 					input(type="text").c-form__field.mb-0
+							//- 	.s-basket__total-info.s-basket__total-info_fixed
+							//- 		.container
+							//- 			.s-basket__total-info-inner.d-flex.justify-content-between.flex-wrap
+							//- 				.s-basket__total-price.c-total-price.mb-0
+							//- 					.c-total-price__txt Итого:
+							//- 					.c-total-price__number.c-total-price__number_old#main-total-price-fixed 0
+							//- 					.c-total-price__number.c-total-price__number_new#main-total-price-fixed-new 0
+							//- 				button.c-btn.c-btn_secondary.mt-2 оформить заказ
+							//- 	.col-lg-3.mb-3.mb-lg-0.s-basket__total-info.s-basket__total-info_static
+							//- 		.s-basket__total-price.c-total-price
+							//- 			.c-total-price__txt Итого:
+							//- 			.c-total-price__number.c-total-price__number_old#main-total-price 0
+							//- 			.c-total-price__number.c-total-price__number_new#main-total-price-new 0
+							//- 		.c-discounts
+							//- 			ul.c-discounts__list
+							//- 				li.c-discounts__item
+							//- 					.c-discounts__price 40612
+							//- 					.c-discounts__percent 10%
+							//- 					.c-discounts__info промокод
+							//- 				li.c-discounts__item
+							//- 					.c-discounts__price 45125
+							//- 					.c-discounts__percent 5%
+							//- 					.c-discounts__info скидка на товар
+							//- 				li.c-discounts__item
+							//- 					.c-discounts__price 47500
+							//- 					.c-discounts__percent 5%
+							//- 					.c-discounts__info скидка по типу оплаты
+							//- 	.col-lg-3
+							//- 		button.c-btn.c-btn_lg.c-btn_secondary оформить заказ
+							.s-basket__section.s-basket__section_products
 								.c-table.c-table_basket
 									.c-table__header
 										.c-table__header-cell Товар
@@ -66,169 +66,269 @@ html(lang="ru")
 													a(href="../img/content/option.jpg").c-product-card__img
 														img(src=require("../img/content/option.jpg"), alt="")
 											.c-table__cell
-												a(href="#!").c-product-card__title Гидромассаж название
-												.c-product-card__subtitle Арт.  23370001
-												.c-product-card__total.c-product-card__total_mobile.h-price#product-card-total-mobile-1  0
+												a(href="#!").c-product-card__title Кран хромированный BelBagno ADIGE ADI -LVM25-CRM
+												.c-product-card__articul Артикул:  23370001
+												.d-flex.row.mb-3.d-xl-none
+													.col-3.col-lg-2
+														span.mr-2.text-uppercase.h-text-sm Цена
+													.col-9.col-lg-10
+														.d-flex.flex-column.flex-lg-row
+															.c-product-card__price.c-product-card__cost.mr-4 7695
+															.c-discounts.mt-0
+																ul.c-discounts__list.d-flex.flex-column.flex-sm-row
+																	li.c-discounts__item.mr-3
+																		span.c-discounts__price 8500
+																		.d-block
+																			span.c-discounts__info.mr-1 промокод
+																			span.c-discounts__percent 10%
+																	li.c-discounts__item.d-flex.flex-column
+																		.c-discounts__price 9000
+																		.d-block
+																			span.c-discounts__info.mr-1 скидка на товар
+																			span.c-discounts__percent 5%
+												.d-flex.row.mb-4.d-xl-none
+													.col-3.col-lg-2
+														span.mr-2.text-uppercase.h-text-sm Кол-во
+													.col-9.col-lg-10
+														.c-number-counter
+															.c-number-counter__action.c-number-counter__action_down
+															input(type="number" value="0").form-control.c-number-counter__field 
+															.c-number-counter__action.c-number-counter__action_up
+												.d-flex.row.d-xl-none
+													.col-3.col-lg-2
+														span.mr-2.text-uppercase.h-text-sm Сумма
+													.col-9.col-lg-10
+														.c-product-card__price.c-product-card__total 7695
 											.c-table__cell
-												.c-product-card__price.c-product-card__cost 2772
+												.c-product-card__price.c-product-card__cost 7695
 												.c-discounts
 													ul.c-discounts__list
 														li.c-discounts__item
-															.c-discounts__price 8500
-															.c-discounts__percent 10%
-															.c-discounts__info промокод
-														li.c-discounts__item
+															span.c-discounts__price 8500
+															.d-block
+																span.c-discounts__info.mr-1 промокод
+																span.c-discounts__percent 10%
+														li.c-discounts__item.d-flex.flex-column
 															.c-discounts__price 9000
-															.c-discounts__percent 5%
-															.c-discounts__info скидка на товар
+															.d-block
+																span.c-discounts__info.mr-1 скидка на товар
+																span.c-discounts__percent 5%
+											.c-table__cell
+												.c-number-counter
+													.c-number-counter__action.c-number-counter__action_down
+													input(type="number" value="0").form-control.c-number-counter__field 
+													.c-number-counter__action.c-number-counter__action_up
+											.c-table__cell
+												.c-product-card__price.c-product-card__total#product-card-total-1 0
+											.c-table__cell
+												a(href="#").c-product-card__remove-btn.mt-md-2.ml-md-3
+										.c-table__row.c-product-card.c-product-card_basket
+											.c-table__cell
+												.c-product-card__img-wrap.js-product-lightbox
+													a(href="../img/content/option.jpg").c-product-card__img
+														img(src=require("../img/content/option.jpg"), alt="")
+											.c-table__cell
+												a(href="#!").c-product-card__title Кран хромированный BelBagno ADIGE ADI -LVM25-CRM
+												.c-product-card__articul Артикул: 23370001
+												.d-flex.row.mb-4.mt-2.d-xl-none
+													.col-3.col-lg-2
+														span.mr-2.text-uppercase.h-text-sm Цена
+													.col-9.col-lg-10
+														.d-flex.flex-column.flex-lg-row
+															.c-product-card__price.c-product-card__cost.mr-4 7695
+												.d-flex.row.mb-4.d-xl-none
+													.col-3.col-lg-2
+														span.mr-2.text-uppercase.h-text-sm Кол-во
+													.col-9.col-lg-10
+														.c-number-counter
+															.c-number-counter__action.c-number-counter__action_down
+															input(type="number" value="0").form-control.c-number-counter__field 
+															.c-number-counter__action.c-number-counter__action_up
+												.d-flex.row.d-xl-none
+													.col-3.col-lg-2
+														span.mr-2.text-uppercase.h-text-sm Сумма
+													.col-9.col-lg-10
+														.c-product-card__price.c-product-card__total 7695
+											.c-table__cell
+												.c-product-card__price.c-product-card__cost 8650
+												
 											.c-table__cell
 												.c-number-counter
 													.c-number-counter__action.c-number-counter__action_down
 													input(type="number" value="0").form-control.c-number-counter__field
 													.c-number-counter__action.c-number-counter__action_up
 											.c-table__cell
-												.c-product-card__price.c-product-card__total#product-card-total-1 0
+												.c-product-card__price.c-product-card__total.h-price#product-card-total-2 0
 											.c-table__cell
-												a(href="#").c-product-card__remove-btn
-										.c-table__row-wrap.c-table__row-wrap_kit
-											.c-table__row.c-product-card.c-product-card_basket
-												.c-table__cell
-													.c-product-card__img-wrap.js-product-lightbox
-														a(href="../img/content/option.jpg").c-product-card__img
-															img(src=require("../img/content/option.jpg"), alt="")
-												.c-table__cell
-													a(href="#!").c-product-card__title Гидромассаж название
-													.c-product-card__subtitle Арт.  23370001
-													.c-product-card__total.c-product-card__total_mobile.h-price#product-card-total-mobile-2 0
-												.c-table__cell
-													.c-product-card__price.c-product-card__cost 2772
-													
-												.c-table__cell
-													.c-number-counter
-														.c-number-counter__action.c-number-counter__action_down
-														input(type="number" value="0").form-control.c-number-counter__field
-														.c-number-counter__action.c-number-counter__action_up
-												.c-table__cell
-													.c-product-card__price.c-product-card__total.h-price#product-card-total-2 0
-												.c-table__cell
-													a(href="#").c-product-card__remove-btn
-											.c-table__row.c-product-card.c-product-card_basket.c-product-card_kit
-												.c-table__cell
-													.c-product-card__img-wrap.js-product-lightbox
-														a(href="../img/content/option.jpg").c-product-card__img
-															img(src=require("../img/content/option.jpg"), alt="")
-												.c-table__cell
-													.c-product-card__title Гидромассаж название
-													.c-product-card__subtitle Арт.  23370001
-													.c-product-card__total.c-product-card__total_mobile.h-price#product-card-total-mobile-3  0
-												.c-table__cell
-													.c-product-card__price.c-product-card__cost 2772
-												.c-table__cell
-													.c-number-counter
-														input(type="number" value="0").form-control.c-number-counter__field
-												.c-table__cell
-													.c-product-card__price.c-product-card__total#product-card-total-3 0
-												.c-table__cell
-											.c-table__row.c-product-card.c-product-card_basket.c-product-card_kit
-												.c-table__cell
-													.c-product-card__img-wrap.js-product-lightbox
-														a(href="../img/content/option.jpg").c-product-card__img
-															img(src=require("../img/content/option.jpg"), alt="")
-												.c-table__cell
-													.c-product-card__title Гидромассаж название
-													.c-product-card__subtitle Арт.  23370001
-													.c-product-card__total.c-product-card__total_mobile.h-price#product-card-total-mobile-4 0
-												.c-table__cell
-													.c-product-card__price.c-product-card__cost 2772
-												.c-table__cell
-													.c-number-counter
-														input(type="number" value="0").form-control.c-number-counter__field
-												.c-table__cell
-													.c-product-card__price.c-product-card__total#product-card-total-4 0
-												.c-table__cell
-							.s-basket__section
-								h3.s-basket__title Способ оплаты:
+												a(href="#").c-product-card__remove-btn.mt-2.ml-3
+										.c-table__row.c-product-card.c-product-card_basket
+											.c-table__cell
+												.c-product-card__img-wrap.js-product-lightbox
+													a(href="../img/content/option.jpg").c-product-card__img
+														img(src=require("../img/content/option.jpg"), alt="")
+											.c-table__cell
+												a(href="#!").c-product-card__title.mb-3 комплект для ванной Акватон Инфинити 65 Н
+												.c-product-card__articul Артикул: 23370001
+												.d-flex.row.mb-4.mt-2.d-xl-none
+													.col-3.col-lg-2
+														span.mr-2.text-uppercase.h-text-sm Цена
+													.col-9.col-lg-10
+														.d-flex.flex-column.flex-lg-row
+															.c-product-card__price.c-product-card__cost.mr-4 7695
+												.d-flex.row.mb-4.d-xl-none
+													.col-3.col-lg-2
+														span.mr-2.text-uppercase.h-text-sm Кол-во
+													.col-9.col-lg-10
+														.c-number-counter
+															.c-number-counter__action.c-number-counter__action_down
+															input(type="number" value="0").form-control.c-number-counter__field 
+															.c-number-counter__action.c-number-counter__action_up
+												.d-flex.row.d-xl-none.mb-4
+													.col-3.col-lg-2
+														span.mr-2.text-uppercase.h-text-sm Сумма
+													.col-9.col-lg-10
+														.c-product-card__price.c-product-card__total 7695
+												.c-product-card__kit.mt-2
+													p.c-product-card__kit-headline Состав комплекта:
+													.d-block.mb-3.h-position-relative
+														h6.c-product-card__kit-title Тумба под раковинуADIGE ADI -LVM25-CRM
+														span.c-product-card__articul.d-block.mb-2.mb-xl-1 Артикул: 23370001
+														.d-block
+															.d-lg-none.text-uppercase.h-text-sm Цена
+															span.c-product-card__price.c-product-card__kit-cost 8000
+													.d-block.mb-3.h-position-relative
+														h6.c-product-card__kit-title Раковина фаянсовая BelBagno ADIGE
+														span.c-product-card__articul.d-block.mb-2.mb-xl-1 Артикул: 23370001
+														.d-block
+															.d-lg-none.text-uppercase.h-text-sm Цена
+															span.c-product-card__price.c-product-card__kit-cost 8000
+													.d-block.h-position-relative
+														h6.c-product-card__kit-title Кран хромированный BelBagno ADIGE <br> ADI -LVM25-CRM
+														span.c-product-card__articul.d-block.mb-2.mb-xl-1 Артикул: 23370001
+														.d-block
+															.d-lg-none.text-uppercase.h-text-sm Цена
+															span.c-product-card__price.c-product-card__kit-cost 8000
+											.c-table__cell
+												.c-product-card__price.c-product-card__cost 2772
+											.c-table__cell
+												.c-number-counter
+													.c-number-counter__action.c-number-counter__action_down
+													input(type="number" value="0").form-control.c-number-counter__field
+													.c-number-counter__action.c-number-counter__action_up
+											.c-table__cell
+												.c-product-card__price.c-product-card__total#product-card-total-4 0
+											.c-table__cell
+												a(href="#").c-product-card__remove-btn.mt-2.ml-3
+							.s-basket__section.s-basket__section_result-price.d-flex.align-items-center.justify-content-center
+								.d-flex.flex-column.flex-md-row
+									.d-flex.align-items-center.mr-md-5.mt-md-2
+										span.mr-1.mr-md-3 Итого без скидки:
+										span.h-price 40612
+									.d-flex.align-items-center.mt-2
+										h5.mr-1.mr-md-3.mb-0 Итого со скидкой:
+										h2.h-price.d-inline 34299
+							.s-basket__section.pb-3
+								h3.s-basket__title Контактные данные
 								.s-basket__content
-									form(action="#").c-form
-										.c-form__group
-											.c-form__group-title Оплата физ.лица
-											.c-form__radio
-												input(type="radio" name="payment-method" checked).c-form__radio-input
-												.c-form__radio-label 
-													b Наличными 
-													.
-														(скидка от общей стоимости 5%)
-											.c-form__radio
-												input(type="radio" name="payment-method").c-form__radio-input
-												.c-form__radio-label 
-													b Картой курьеру  
-													.
-														(скидка от общей стоимости 5%)
-											.c-form__radio
-												input(type="radio" name="payment-method").c-form__radio-input
-												.c-form__radio-label 
-													b Картой на сайте  
-													.
-														(скидка от общей стоимости 5%)
-										.c-form__group
-											.c-form__group-title Оплата юр.лица
-											.c-form__radio
-												input(type="radio" name="payment-method" checked).c-form__radio-input
-												.c-form__radio-label 
-													b Наличными 
-													.
-														(скидка от общей стоимости 5%)
-											.c-form__radio
-												input(type="radio" name="payment-method").c-form__radio-input
-												.c-form__radio-label 
-													b Картой курьеру  
-													.
-														(скидка от общей стоимости 5%)
-											.c-form__radio
-												input(type="radio" name="payment-method").c-form__radio-input
-												.c-form__radio-label 
-													b Картой на сайте  
-													.
-														(скидка от общей стоимости 5%)
-							.s-basket__section
-								h3.s-basket__title Личные данные
+									.row
+										.col-xl-10.pr-xl-5
+											form(action="#").c-form
+												.c-form__item.c-form__item_horizontal.mb-4
+													label.c-form__label ФИО
+													input(type="text").form-control.c-form__field
+												.row
+													.col-md-6
+														.c-form__item.c-form__item_horizontal.mb-4
+															label.c-form__label E-mail
+															input(type="email").form-control.c-form__field
+													.col-md-6
+														.c-form__item.c-form__item_horizontal.mb-4
+															label.c-form__label Телефон
+															input(type="text" value="7").form-control.c-form__field.js-phone-field
+							.s-basket__section.s-basket__section_payment-method
+								h3.s-basket__title.mb-3 Способ оплаты:
 								.s-basket__content
+									form(action="#").c-form.row
+										.col-xl-7
+											.c-form__group
+												.c-form__group-title Оплата физ.лица
+												.c-form__radio
+													input(type="radio" name="payment-method" checked).c-form__radio-input
+													.c-form__radio-label 
+														b.mr-2 Наличными при получении (для Москвы и МО)
+														span.text-danger скидка 5%
+															
+												.c-form__radio
+													input(type="radio" name="payment-method").c-form__radio-input
+													.c-form__radio-label 
+														b.mr-2 Банковской картой
+														span.text-danger скидка 5%
+												.c-form__radio
+													input(type="radio" name="payment-method").c-form__radio-input
+													.c-form__radio-label 
+														b.mr-2 Онлайн оплата картой
+														span.text-danger скидка 5%
+												.c-form__radio
+													input(type="radio" name="payment-method").c-form__radio-input
+													.c-form__radio-label 
+														b.mr-2 Переводом на расчетный счет компании
+														span.text-danger скидка 5%
+												.c-form__radio
+													input(type="radio" name="payment-method").c-form__radio-input
+													.c-form__radio-label 
+														b В кредит без переплаты на срок 6-10 месяцев (Покупай о Сбербанком)
+												.c-form__radio
+													input(type="radio" name="payment-method").c-form__radio-input
+													.c-form__radio-label 
+														b В кредит на срок от 3 до 36 месяцев (Покупай о Сбербанком)
+
+										.col-xl-5
+											.c-form__group.ml-xl-3
+												.c-form__group-title Оплата юр.лица
+												.c-form__radio
+													input(type="radio" name="payment-method" checked).c-form__radio-input
+													.c-form__radio-label 
+														b Наличными 
+												.c-form__radio
+													input(type="radio" name="payment-method").c-form__radio-input
+													.c-form__radio-label 
+														b Счет на оплату без НДС  
+												.c-form__radio
+													input(type="radio" name="payment-method").c-form__radio-input
+													.c-form__radio-label 
+														b Счет на оплату с НДС
+												.c-form__radio
+													input(type="radio" name="payment-method").c-form__radio-input
+													.c-form__radio-label 
+														b Безналичный счет с НДС
+							.s-basket__section.s-basket__section_get-product-method
+								h3.s-basket__title.mb-4 Способ получения товара
+								.s-basket__content.pt-3
 									form(action="#").c-form
-										label.c-form__label ФИО
-											input(type="text").form-control.c-form__field
-										.row
-											.col-md-6
-												label.c-form__label E-mail
-													input(type="email").form-control.c-form__field
-											.col-md-6
-												label.c-form__label Телефон
-													input(type="text" value="7").form-control.c-form__field.js-phone-field
-							.s-basket__section
-								h3.s-basket__title Способ получения товара
-								.s-basket__content
-									form(action="#").c-form
-										.c-form__group
+										.c-form__group.mb-5.pb-3
 											.mb-4
 												.c-form__radio
 													input(type="radio" name="payment-method" checked).c-form__radio-input
 													.c-form__radio-label 
-														b Самовывоз 
+														b.d-block.mb-2 Самовывоз 
 														p.c-form__radio-txt
 															.
 																Адрес:  Посёлок Заречье, Торговая ул., стр. 2, ТЦ "Элитстройматериалы", 1 этаж, место А-18 <br>
 																Время работы салона:  10.00 - 20.00 без выходных<br>
-															a(href="#") Смотреть на карте
+															a(href="#").d-inline-block.mt-3 Смотреть на карте
 
 												.c-form__radio
 													input(type="radio" name="payment-method").c-form__radio-input
 													.c-form__radio-label 
 														b Доставка по адресу  
 											label.c-form__label Адрес доставки
-												textarea.form-control.c-form__field
+												input.form-control.c-form__field
 											label.c-form__label Комментарии
-												textarea(name="", rows="7").form-control.c-form__field.c-form__field_textarea
+												textarea(name="", rows="4").form-control.c-form__field.c-form__field_textarea
 											.c-form__action.c-form__action_attachment
 												input(type="file")
 												a(href="#") Прикрепить файл
+								.d-flex.justify-content-center.justify-content-xl-start
+									button.c-btn.c-btn_secondary.c-form__btn.c-form__btn_lg.mt-0 Оформить заказ
 							
 				include templates/footer.pug

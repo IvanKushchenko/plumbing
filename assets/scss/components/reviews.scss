@@ -1,0 +1,56 @@
+.c-reviews{
+	margin-bottom: 80px;
+	padding-bottom: 40px;
+	border-bottom: 1px solid #ecf2f6;
+
+	&__header{
+
+	}
+
+	&__headline{
+		font-family: 'Roboto Slab';
+		font-size: 1.4375rem;
+		margin-bottom: 30px;
+		padding-bottom: 23px;
+		border-bottom: 1px solid #ecf2f6;
+	}
+}
+
+.c-review{
+	display: flex;
+	align-items: flex-start;
+
+	&__content{
+		flex-grow: 1;
+	}
+
+	&__header{
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+	}
+
+	&__avatar{
+		flex-shrink: 0;
+		margin-right: 20px;
+	}
+
+	&__user{
+		font-weight: bold;
+		margin-bottom: 20px;
+
+	}
+
+	&__meta{
+		font-size: 13px;
+	}
+
+	&__text{
+		margin-top: 30px;
+		font-size: 0.875rem;
+	}
+
+	&__content{
+		margin-top: 20px;
+	}
+}

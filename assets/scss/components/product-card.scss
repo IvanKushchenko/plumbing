@@ -19,6 +19,14 @@
 			display: block;
 		}
 	}
+	
+
+	&__articul{
+		margin-top: 3px;
+	    margin-bottom: 2px;
+	    font-size: 0.875rem;
+		color: #989898;
+	}
 
 	&__img-wrap {
 		width: 115px;
@@ -48,11 +56,17 @@
 		background: url('../img/icons/close.png') center center no-repeat;
 		background-size: contain;
 		display: block;
+		flex-shrink: 0;
+
+		@media (max-width: $bp-xl) {
+			width: 20px;
+			height: 20px;
+		}
 	}
 
 	&_basket &__img-wrap {
-		width: 150px;
-		height: 150px;
+		width: 120px;
+		height: 120px;
 		@media (max-width: $bp-md) {
 			height: 100px;
 			width: 100px;
@@ -77,41 +91,54 @@
 			}
 		}
 	}
-	
-	&_kit &__img-wrap{
-		width: 130px;
-		height: 130px;
-		@media (max-width: $bp-md) {
-			height: 100px;
-			width: 100px;
+
+	&__kit{
+		@media (max-width: $bp-xl) {
+			max-width: 320px;
 		}
-		@media (max-width: $bp-sm-2) {
-			width: 80px;
-			height: 80px;
+
+		@media (max-width: $bp-md) {
+			max-width: initial;
 		}
 	}
 	
-	&_kit &__title{
-		font-size: 13px;
-		color: #222;
+	&__kit-headline{
+		font-size: 0.875rem;
+		margin-bottom: 5px;
 	}
 
+	&__kit-title{
+		font-size: 0.8125rem;
+		text-transform: uppercase;
+		position: relative;
+		margin-bottom: 0;
+	}
+
+	&__kit-cost{
+		position: absolute;
+		right: -20px;
+		top: -5px;
+		transform: translateX(100%);
+		font-size: 1rem !important;
+
+		@media (max-width: $bp-lg) {
+			position: static;
+			transform: none;
+		}
+	}
 
 	&_basket &__price{
 		font-size: 1.25rem;
-	}
-	
-	&_kit &__price{
-		font-size: 1rem;
 	}
 
 	&_basket .c-discounts{
 		margin-top: 10px;
 		&__price{
-			flex-basis: 60px;
+
+			// flex-basis: 60px;
 		}
 		&__percent{
-			flex-basis: 40px;
+			// flex-basis: 40px;
 		}
 	}
 
@@ -257,7 +284,7 @@
 		font-family: "Open Sans";
 		margin-bottom: 0;
 		position: relative;
-		z-index: 3;
+		z-index: 6;
 
 		// @media (max-width:$bp-md) {
 		// 	pointer-events: none;
@@ -309,6 +336,7 @@
 		font-family: "Roboto Slab";
 		font-size: 0.9375rem;
 		line-height: 1.2;
+		text-transform: lowercase;
 
 		&:after {
 			content: 'a';

@@ -28,6 +28,9 @@ html(lang="ru")
 							h1.c-product__title Смеситель для раковины Grohe Bauloop 23337 000
 							.c-product__actionsd.d-flex.align-items-center
 								a(href="#!").c-product__action
+									img(src=require("../img/icons/fav.png"), alt="").c-product__action-icon
+									span в закладки
+								a(href="#!").c-product__action
 									img(src=require("../img/icons/share.svg"), alt="").c-product__action-icon
 									span поделиться
 								a(href="#!").c-product__action
@@ -50,6 +53,13 @@ html(lang="ru")
 																img(src=require("../img/content/product.jpg"), alt="").c-product-preview__thumbnail
 														.swiper-pagination
 												.d-none.d-md-block.c-product-preview.js-product-preview-page
+													.c-product-info__labels
+														.c-product-info__label В наличии
+														.c-product-info__label Шоурум
+														.c-product-info__label.h-price -10 000
+														.c-product-info__label Скидка
+														.c-product-info__label.h-price Доставка 0
+														.c-product-info__label Подарок
 													.c-product-preview__main
 														.swiper-container.js-product-preview-main#js-product-preview-main
 															.swiper-wrapper
@@ -149,27 +159,27 @@ html(lang="ru")
 																	td (108-113)x(68-73)x190
 													.d-md-none.c-product-info__collapse-toggle.js-product-info-collapse-toggle
 														a(href="#product-info-body" data-toggle="collapse" aria-expanded="true") Свернуть характеристики
-													.c-product-info__actions.d-none.d-lg-block
-														a(href="#").c-product-info__action
-															.c-product-info__action-inner
-																.c-product-info__action-icon-wrap
-																	img(src=require("../img/icons/fav.png"), alt="").c-product-info__action-icon 
-																span.c-product-info__action-text поместить В закладкИ
-														a(href="#").c-product-info__action
-															.c-product-info__action-inner
-																.c-product-info__action-icon-wrap
-																	img(src=require("../img/icons/repair.png"), alt="").c-product-info__action-icon 
-																span.c-product-info__action-text установка от 5000
-														a(href="#").c-product-info__action
-															.c-product-info__action-inner
-																.c-product-info__action-icon-wrap
-																	img(src=require("../img/icons/vesi2.png"), alt="").c-product-info__action-icon 
-																span.c-product-info__action-text добавить к сравнениЮ
-														a(href="#").c-product-info__action
-															.c-product-info__action-inner
-																.c-product-info__action-icon-wrap
-																	img(src=require("../img/icons/fast.png"), alt="").c-product-info__action-icon 
-																span.c-product-info__action-text оформить кредит online
+													//- .c-product-info__actions.d-none.d-lg-block
+													//- 	a(href="#").c-product-info__action
+													//- 		.c-product-info__action-inner
+													//- 			.c-product-info__action-icon-wrap
+													//- 				img(src=require("../img/icons/fav.png"), alt="").c-product-info__action-icon 
+													//- 			span.c-product-info__action-text поместить В закладкИ
+													//- 	a(href="#").c-product-info__action
+													//- 		.c-product-info__action-inner
+													//- 			.c-product-info__action-icon-wrap
+													//- 				img(src=require("../img/icons/repair.png"), alt="").c-product-info__action-icon 
+													//- 			span.c-product-info__action-text установка от 5000
+													//- 	a(href="#").c-product-info__action
+													//- 		.c-product-info__action-inner
+													//- 			.c-product-info__action-icon-wrap
+													//- 				img(src=require("../img/icons/vesi2.png"), alt="").c-product-info__action-icon 
+													//- 			span.c-product-info__action-text добавить к сравнениЮ
+													//- 	a(href="#").c-product-info__action
+													//- 		.c-product-info__action-inner
+													//- 			.c-product-info__action-icon-wrap
+													//- 				img(src=require("../img/icons/fast.png"), alt="").c-product-info__action-icon 
+													//- 			span.c-product-info__action-text оформить кредит online
 
 									.c-product-info__actions.d-lg-none
 										.row
@@ -290,10 +300,6 @@ html(lang="ru")
 											.c-product__order-actions.d-flex
 												a(href="#").c-btn.c-btn_primary.c-btn_bordered В КОРЗИНУ
 												a(href="#").c-btn.c-btn_primary.c-btn_bordered КУПИТЬ В 1 КЛИК
-									.c-offer
-										.
-											При покупке от 20 000 c вы получите скидку 3 000 c на следующую покупку! 
-											+ бесплатную доставку по москве!
 									.c-table.c-table_product.js-table_product
 										.c-table__header ГИДРОМАССАЖ
 										form(action="")
@@ -586,6 +592,8 @@ html(lang="ru")
 												.swiper-scrollbar
 											.swiper-button-prev
 											.swiper-button-next
+									.c-share
+										img(src=require("../img/content/installment.jpg"), alt="")
 									.c-product-description
 										.c-product-description__title Описание товара
 										.c-product-description__body.c-read-more.js-read-more-container
@@ -610,9 +618,35 @@ html(lang="ru")
 											h5 Гарантия:  5 лет.
 										.d-flex.justify-content-center.mb-3
 											a(href="#").js-read-more-btn Читать полностью
-									.c-share
-										img(src=require("../img/content/installment.jpg"), alt="")
-											
+									.c-reviews
+										.c-reviews__header
+											h4.c-reviews__headline Отзывы
+										.c-review
+											img(src=require("../img/icons/user-placeholder.png"), alt="").c-review__avatar
+											.c-review__content
+												.c-review__header
+													.d-block
+														h6.c-review__user Олег Васильев
+														span.c-review__meta.text-muted Санкт-Петербург 20 апреля 2019
+													.c-review__rating
+														.c-rating
+															svg.c-rating__item
+																use(href="#icon-star")
+															svg.c-rating__item
+																use(href="#icon-star")
+															svg.c-rating__item
+																use(href="#icon-star")
+															svg.c-rating__item
+																use(href="#icon-star")
+															svg.c-rating__item
+																use(href="#icon-star")
+												.c-review__text
+													p Монтаж на 1 отверстие без донного клапана и без цепочки  высота до излива 87 мм,  вынос 90 мм  однорычажный  гибкая подводка с накидной гайкой 3/8  керамический картридж 28 мм  аэратор система быстрого монтажа
+													b Достоинства
+													p Высота до излива 87 мм,  вынос 90 мм  однорычажный  гибкая подводка с накидной гайкой 3/8  керамический картридж 28 мм  аэратор система быстрого монтажа 
+													b Недостатки
+													p Нет
+
 									.c-watch-earlier.js-watch-earlier
 										.c-watch-earlier__header Вы смотрели ранее
 											a(href="#").c-watch-earlier__header-link смотреть все
@@ -730,8 +764,8 @@ html(lang="ru")
 													img(src=require("../img/content/product-thumbnail.jpg"), alt="").c-product-preview__thumbnail
 										.swiper-button-next
 							.col-md-6.col-lg-5
-								.c-product-info__code Код товара:  B22528
-								.c-product-info__showroom.c-showroom Модель бренда есть в шоуруме
+								//- .c-product-info__code Код товара:  B22528
+								//- .c-product-info__showroom.c-showroom Модель бренда есть в шоуруме
 									
 								.c-product-info__description
 											table.c-table

@@ -1,6 +1,7 @@
 .c-number-counter{
 	display: flex;
 	align-items: center;
+
 	&__field{
 		max-width: 44px;
 		min-width: initial;
@@ -8,16 +9,23 @@
 		font-size: 1.125rem;
 		padding: 0 10px;
 		text-align: center;
+		
+		.c-table_basket &{
+			height: 30px;
+		}
+
 		&::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
 		    -webkit-appearance: none;
 		    margin: 0;
 		}
 	}
+
 	&__action{
 		width: 15px;
 		height: 15px;
 		display: block;
 		cursor: pointer;
+
 		&_up{
 			position: relative;
 			&:after{

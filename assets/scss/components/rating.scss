@@ -1,0 +1,10 @@
+.c-rating{
+	display: flex;
+
+	&__item{
+		width: 17px;
+		height: 17px;
+		margin: 0 1px;
+		fill: #f1bb00;
+	}
+}

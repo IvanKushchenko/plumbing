@@ -1,7 +1,21 @@
 .s-basket {
-	max-width: 961px;
 	margin: 0 auto;
 	
+	&__header{
+		padding: 0 100px;
+		margin-bottom: 33px !important;
+
+		@media (max-width: $bp-xl) {
+			padding: 0 15px;
+			margin-bottom: 0 !important;
+		}
+
+		@media (max-width: $bp-lg) {
+			padding: 0;
+			
+		}
+	}
+
 	&__total-info{
 		&_fixed{
 			display: none;
@@ -38,8 +52,21 @@
 		&:not(:last-child){
 			border-bottom: 1px solid #ecf2f6;
 		}
-		margin-bottom: 50px;
+	 
+	    padding: 0 128px;
+	    margin: 0 -30px;
+	    margin-bottom: 40px;
+
+	    @media (max-width: $bp-xl) {
+	    	padding: 0 35px;
+	    }
 		
+	    @media (max-width: $bp-lg) {
+			margin: 0 -20px;
+			margin-bottom: 40px;
+			padding: 0 20px;
+	    }
+
 		.c-form {
 			&__radio {
 				font-size: 1.125rem;
@@ -52,8 +79,30 @@
 
 			&__group {
 				margin-bottom: 80px;
+
+				@media (max-width: $bp-xl) {
+					margin-bottom: 40px;
+				}
 			}
 
+		}
+
+		&_products{
+			border-bottom: none !important;
+			margin-bottom: 10px;
+
+			@media (max-width: $bp-lg) {
+				padding: 0 35px;
+			}
+		}
+
+		&_result-price{
+			height: 122px;
+			background: #ecf2f6;
+			
+			@media (max-width: $bp-lg) {
+			    padding: 0 10px;
+			}
 		}
 
 	}
@@ -65,10 +114,6 @@
 	}
 
 	&__content {
-		padding-left: 100px;
-		@media (max-width: $bp-lg) {
-			padding-left: 0;
-		}
 	}
 
 }

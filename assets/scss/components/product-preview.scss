@@ -21,7 +21,7 @@
 	&__thumbnails {
 		position: relative;
 		.swiper-container{
-			padding: 0 40px;
+			padding-right: 80px;
 		}
 		.swiper-slide{
 			border: 2px solid transparent;
@@ -36,6 +36,7 @@
 			width: 23px;
 			height: 23px;
 			border-radius: 50%;
+			right: 30px;
 			background: #ecf2f6 url('../img/icons/arrow-right.png') no-repeat center center;
 		}
 

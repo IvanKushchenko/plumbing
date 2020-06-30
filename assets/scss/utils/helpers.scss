@@ -1,18 +1,32 @@
-.h-text-blue{
+.h-text-blue {
 	color: #3e7ce3 !important;
 }
-.h-text-black{
+
+.h-text-black {
 	color: #222 !important;
 }
-.h-no-link{
+
+.h-no-link {
 	box-shadow: none;
 }
-.h-price{
-	&:after{
-	    content: 'a';
-	    display: inline-block;
-	    margin-left: 5px;
-	    font-family: 'Rubl';
-	    text-transform: lowercase;
+
+.h-price {
+	font-family: 'Roboto Slab';
+
+	&:after {
+		content: 'a';
+		display: inline-block;
+		margin-left: 5px;
+		font-family: 'Rubl';
+		text-transform: lowercase;
 	}
+
+}
+
+.h-text-sm {
+	font-size: 0.8125rem;
+}
+
+.h-position-relative{
+	position: relative !important;
 }

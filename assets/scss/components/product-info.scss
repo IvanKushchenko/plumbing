@@ -59,6 +59,24 @@
 		opacity: 1;
 	}
 
+
+	&__labels{
+		position: absolute;
+		right: 80px;
+		top: 20px;
+		z-index: 2;
+	}
+
+	&__label{
+		margin-bottom: 8px;
+		background: #3e7ce3;
+		color: #fff;
+		text-transform: uppercase;
+		padding: 5px 9px;
+		text-align: center;
+		font-size: 0.75rem;
+	}
+
 	&__showroom-text {
 		position: absolute;
 		background-color: #fff;

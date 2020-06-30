@@ -12,16 +12,16 @@
 	height: 35px;
 	$parent: &;
 
-	@media (max-width:$bp-lg) {
-		padding-right: 20px;
-	}
+	// @media (max-width:$bp-lg) {
+	// 	padding-right: 20px;
+	// }
 
-	@media (max-width:$bp-sm-2) {
-		padding-right: 5px;
-	}
+	// @media (max-width:$bp-sm-2) {
+	// 	padding-right: 5px;
+	// }
 
 	&__txt {
-		@media (max-width:$bp-xl) {
+		@media (max-width:$bp-sm-2) {
 			display: none;
 		}
 
@@ -72,15 +72,15 @@
 	}
 
 	&__btn-icon {
-		margin-right: 13px;
+		margin-right: 8px;
 
-		@media (max-width:$bp-xl) {
-			margin-right: 33px;
-		}
+		// @media (max-width:$bp-xl) {
+		// 	margin-right: 33px;
+		// }
 
-		@media (max-width:$bp-lg) {
-			margin-right: 7px;
-		}
+		// @media (max-width:$bp-lg) {
+		// 	margin-right: 7px;
+		// }
 
 	}
 
@@ -91,7 +91,7 @@
 		justify-content: center;
 		text-align: center;
 		text-decoration: none;
-		margin: 0 5px;
+		margin: 0 3px;
 		line-height: 22px;
 
 		&.is-empty {
