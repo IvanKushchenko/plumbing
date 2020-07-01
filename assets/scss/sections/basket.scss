@@ -6,13 +6,8 @@
 		margin-bottom: 33px !important;
 
 		@media (max-width: $bp-xl) {
-			padding: 0 15px;
-			margin-bottom: 0 !important;
-		}
-
-		@media (max-width: $bp-lg) {
 			padding: 0;
-			
+			margin-bottom: 0 !important;
 		}
 	}
 
@@ -92,7 +87,7 @@
 			margin-bottom: 10px;
 
 			@media (max-width: $bp-lg) {
-				padding: 0 35px;
+				padding: 0 15px;
 			}
 		}
 

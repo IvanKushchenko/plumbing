@@ -124,6 +124,11 @@
 	&__radio-txt {
 		font-size: 1rem;
 		line-height: 1.8;
+
+		a{
+			position: relative;
+			z-index: 5;
+		}
 	}
 
 	&__radio-input {

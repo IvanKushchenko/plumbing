@@ -1,7 +1,5 @@
 .c-navbar.c-navbar-unscrolled
-	a(href="#").c-navbar__catalog-btn
-		<svg xmlns="http://www.w3.org/2000/svg" class="c-catalog-menu__toggle-menu-icon" viewBox="0 0 512 512"><path d="M491.318 235.318H20.682C9.26 235.318 0 244.577 0 256s9.26 20.682 20.682 20.682h470.636c11.423 0 20.682-9.259 20.682-20.682 0-11.422-9.259-20.682-20.682-20.682zM491.318 78.439H20.682C9.26 78.439 0 87.699 0 99.121c0 11.422 9.26 20.682 20.682 20.682h470.636c11.423 0 20.682-9.26 20.682-20.682 0-11.422-9.259-20.682-20.682-20.682zM491.318 392.197H20.682C9.26 392.197 0 401.456 0 412.879s9.26 20.682 20.682 20.682h470.636c11.423 0 20.682-9.259 20.682-20.682s-9.259-20.682-20.682-20.682z"/></svg>
-		| каталог
+	a(href="#").c-navbar__catalog-btn каталог
 	.c-navbar__item.mr-auto.mr-xl-0
 		a(href="#").c-navbar__link личный кабинет 
 		span : User ID: 1
@@ -11,7 +9,7 @@
 	.c-navbar__item.c-navbar__item_cart
 		div(data-toggle="dropdown", aria-expanded="false").c-navbar__btn.js-navbar-btn.dropdown-toggle
 			img(src=require("../../img/icons/basket.svg"), alt="").c-navbar__btn-icon
-			span.c-navbar__txt В корзине 
+			span.c-navbar__txt.flex-shrink-0 В корзине 
 			span.c-navbar__counter 3
 			span.c-navbar__txt шт.
 			.dropdown-menu

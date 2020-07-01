@@ -18,11 +18,11 @@
 
 	}
 
-	&_basket{
-		@media (max-width:$bp-lg) {
-		    width: calc(100% + 40px);
-		}
-	}
+	// &_basket{
+	// 	@media (max-width:$bp-lg) {
+	// 	    width: calc(100% + 40px);
+	// 	}
+	// }
 
 	&_basket &__cell{
 		flex-grow: 1;
@@ -51,6 +51,10 @@
 			.c-number-counter{
 				@media (max-width:$bp-xl) {
 					margin-left: -25px;
+				}
+
+				@media (max-width:$bp-sm) {
+					margin-left: 0;
 				}
 			}
 
