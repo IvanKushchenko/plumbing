@@ -1,4 +1,28 @@
 include icons.pug
+.modal.fade.c-modal#back-call-modal(aria-hidden="true").c-modal_form
+	.modal-dialog.modal-dialog-centered.c-modal__dialog
+		.modal-content.c-modal__content
+			.modal-header.c-modal__header
+				.modal-title.c-modal__title
+					h3.text-uppercase.text-secondary.font-weight-bold.mb-0 Всего 15 секунд!
+					p.h-text-xl.text-center.mb-0.c-modal__subtitle И наш консультант <br> перезвонит Вам!
+				button(data-dismiss="modal" aria-label="Close").close
+			.modal-body.c-modal__body
+				form.c-form.c-form_modal
+					.c-form__item.c-form__item_has-prepend.input-group.d-flex.align-items-start.mb-4
+						.input-group-prepend
+							img(src=require("../../img/icons/flag-russia.png"), alt="")
+						input(type="tel" placeholder="Ваш телефон").form-control.c-form__field.js-phone-field
+					.d-flex.align-items-center.justify-content-center.mb-2
+						img(src=require("../../img/icons/clock-yellow.png"), alt="").mr-3
+						h4.text-secondary.mb-0 00:15.00
+					p.text-center.h-text-sm.
+						Нажимая на кнопку “жду звонка” 
+						вы даете согласие с Политкой обработки 
+						персональных данных.
+					.d-flex.justify-content-center
+						button.c-btn.c-btn_secondary.c-form__btn.mt-0 жду звонка
+
 .modal.c-modal.c-modal_contact-us.fade#contact-us-modal(aria-hidden="false")
 	.modal-dialog.modal-dialog-centered
 		.modal-content

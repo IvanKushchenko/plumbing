@@ -38,10 +38,18 @@
 	.swiper-button-prev {
 		left: -20px;
 		transform: scaleX(-1);
+
+		@media (max-width: $bp-xl) {
+			left: -10px;
+		}
 	}
 
 	.swiper-button-next {
 		right: -20px;
+
+		@media (max-width: $bp-xl) {
+			right: -10px;
+		}
 	}
 
 	.c-checkout-product {

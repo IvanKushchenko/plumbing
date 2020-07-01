@@ -11,6 +11,11 @@
 		padding-left: 15px;
 		font-size: 0.9375rem;
 
+		&:focus{
+			border-color: #eabd28;
+			box-shadow: none;
+		}
+
 		&::-webkit-input-placeholder {
 			color: #222222;
 			font-size: 0.9375rem;
@@ -44,6 +49,24 @@
 
 		}
 
+	}
+	
+	&__item_has-prepend{
+		.input-group-prepend{
+			position: absolute;
+			left: 0;
+		}
+		.form-control{
+			padding-left: 45px;
+		}
+	}
+
+	.input-group-prepend{
+	    height: 50px;
+	    display: flex;
+	    align-items: center;
+	    padding: 0 10px;
+	    z-index: 10;
 	}
 
 	&__item_horizontal{
@@ -184,6 +207,27 @@
 
 		}
 
+	}
+	
+	&_modal &__btn{
+		padding: 0 30px;
+		font-size: 1.0625rem;
+		color: #222;
+		height: 48px;
+		border-radius: 50px;
+		text-transform: lowercase;
+		font-weight: bold;
+		width: auto;
+	}
+
+	&_modal &__field{
+		height: 50px;
+		font-size: 1.1rem;
+
+		&::placeholder{
+			font-size: 1.1rem;
+			
+		}
 	}
 
 	&__btn {

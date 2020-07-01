@@ -10,7 +10,7 @@ html(lang="ru")
 					.c-float-btn.c-float-btn_options.js-float-btn-options
 						p Выберите опции к этому товару
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490.4 490.4"><g fill="#3e7ce3"><path d="M490.4 245.2C490.4 110 380.4 0 245.2 0S0 110 0 245.2s110 245.2 245.2 245.2 245.2-110 245.2-245.2zm-465.9 0c0-121.7 99-220.7 220.7-220.7s220.7 99 220.7 220.7-99 220.7-220.7 220.7-220.7-99-220.7-220.7z"/><path d="M253.9 360.4l68.9-68.9c4.8-4.8 4.8-12.5 0-17.3s-12.5-4.8-17.3 0l-48 48V138.7c0-6.8-5.5-12.3-12.3-12.3s-12.3 5.5-12.3 12.3v183.4l-48-48c-4.8-4.8-12.5-4.8-17.3 0s-4.8 12.5 0 17.3l68.9 68.9c2.4 2.4 5.5 3.6 8.7 3.6s6.3-1.1 8.7-3.5z"/></g></svg>
-					.c-tip.c-tip_code Код товара
+					.c-tip.c-tip_left.c-tip_code Сообщите код товара 1233122 менеджеру
 					.c-tip.c-tip_products Вы можете выбрать дополнительные товары
 
 					.c-breadcrumbs
@@ -24,24 +24,24 @@ html(lang="ru")
 							a(href="#") Смесители для душа
 
 					.c-product
-						.c-product__header.d-flex.justify-content-between.align-items-start.align-items-lg-center
+						.c-product__header.d-flex.flex-column.flex-xl-row.justify-content-between.align-items-start.align-items-xl-center
 							h1.c-product__title Смеситель для раковины Grohe Bauloop 23337 000
-							.c-product__actionsd.d-flex.align-items-center
+							.c-product__actions.d-flex.align-items-center
 								a(href="#!").c-product__action
 									img(src=require("../img/icons/fav.png"), alt="").c-product__action-icon
 									span в закладки
 								a(href="#!").c-product__action
-									img(src=require("../img/icons/share.svg"), alt="").c-product__action-icon
-									span поделиться
+									img(src=require("../img/icons/vesi2.png"), alt="").c-product__action-icon
+									span к сравнению
 								a(href="#!").c-product__action
 									img(src=require("../img/icons/print.png"), alt="").c-product__action-icon
 									span версия для печати
 						.c-product__body
 							.row
-								.col-lg-4
+								.col-lg-6.col-xl-4
 									.c-product-info
 										.row
-											.col-md-6.col-lg-12
+											.col-12
 												.c-product-preview-mobile.d-md-none.js-product-preview-mobile
 													.swiper-container
 														.swiper-wrapper
@@ -58,7 +58,9 @@ html(lang="ru")
 														.c-product-info__label Шоурум
 														.c-product-info__label.h-price -10 000
 														.c-product-info__label Скидка
-														.c-product-info__label.h-price Доставка 0
+														.c-product-info__label 
+															| Доставка 
+															span.h-price 0
 														.c-product-info__label Подарок
 													.c-product-preview__main
 														.swiper-container.js-product-preview-main#js-product-preview-main
@@ -85,20 +87,8 @@ html(lang="ru")
 																.swiper-slide
 																	img(src=require("../img/content/product-thumbnail.jpg"), alt="").c-product-preview__thumbnail
 														.swiper-button-next
-											.col-md-6.col-lg-12
+											.col-12
 												.c-product-info__body
-													.c-product-info__code Код товара:  B22528
-													.c-product-info__showroom.c-showroom.js-showroom Модель бренда есть в шоуруме
-														.c-showroom__menu
-															a(href="#").c-showroom__close
-															a(href="#").c-showroom__title Мебель для ванной belgano
-															.c-showroom__text
-																h5 Можно посмотреть
-																p
-																	.
-																		Ассиметричная ванна Венеция подобна современному искусству в сочетании геометрических форм. 
-																a(href="#").mb-2 Схема проезда
-															a(href="#") Адреса всех шоурумов
 													.c-product-info__description.collapse.show#product-info-body
 														table.c-table
 															tbody
@@ -159,94 +149,64 @@ html(lang="ru")
 																	td (108-113)x(68-73)x190
 													.d-md-none.c-product-info__collapse-toggle.js-product-info-collapse-toggle
 														a(href="#product-info-body" data-toggle="collapse" aria-expanded="true") Свернуть характеристики
-													//- .c-product-info__actions.d-none.d-lg-block
-													//- 	a(href="#").c-product-info__action
-													//- 		.c-product-info__action-inner
-													//- 			.c-product-info__action-icon-wrap
-													//- 				img(src=require("../img/icons/fav.png"), alt="").c-product-info__action-icon 
-													//- 			span.c-product-info__action-text поместить В закладкИ
-													//- 	a(href="#").c-product-info__action
-													//- 		.c-product-info__action-inner
-													//- 			.c-product-info__action-icon-wrap
-													//- 				img(src=require("../img/icons/repair.png"), alt="").c-product-info__action-icon 
-													//- 			span.c-product-info__action-text установка от 5000
-													//- 	a(href="#").c-product-info__action
-													//- 		.c-product-info__action-inner
-													//- 			.c-product-info__action-icon-wrap
-													//- 				img(src=require("../img/icons/vesi2.png"), alt="").c-product-info__action-icon 
-													//- 			span.c-product-info__action-text добавить к сравнениЮ
-													//- 	a(href="#").c-product-info__action
-													//- 		.c-product-info__action-inner
-													//- 			.c-product-info__action-icon-wrap
-													//- 				img(src=require("../img/icons/fast.png"), alt="").c-product-info__action-icon 
-													//- 			span.c-product-info__action-text оформить кредит online
 
-									.c-product-info__actions.d-lg-none
-										.row
-											.col-6.c-product-info__action-container
-												a(href="#").c-product-info__action
-													.c-product-info__action-inner
-														.c-product-info__action-icon-wrap
-															img(src=require("../img/icons/fav.png"), alt="").c-product-info__action-icon 
-														span.c-product-info__action-text поместить В закладкИ
-												a(href="#").c-product-info__action
-													.c-product-info__action-inner
-														.c-product-info__action-icon-wrap
-															img(src=require("../img/icons/repair.png"), alt="").c-product-info__action-icon 
-														span.c-product-info__action-text установка от 5000
-											.col-6.c-product-info__action-container
-												a(href="#").c-product-info__action
-													.c-product-info__action-inner
-														.c-product-info__action-icon-wrap
-															img(src=require("../img/icons/vesi2.png"), alt="").c-product-info__action-icon 
-														span.c-product-info__action-text добавить к сравнениЮ
-												a(href="#").c-product-info__action
-													.c-product-info__action-inner
-														.c-product-info__action-icon-wrap
-															img(src=require("../img/icons/fast.png"), alt="").c-product-info__action-icon 
-														span.c-product-info__action-text оформить кредит online
-								.col-lg-8
-									.c-product__order-info.c-product__order-info_desktop.d-none.d-xl-block
-										.d-flex.align-items-center.justify-content-between.mb-3
-											.c-product__choosen
-												| Выбрано:
-												a(data-toggle="collapse", aria-expanded="false", href="#order-checkout-products-chosen").c-product__choosen-count.collapsed 0 товара
-											.c-product__price
-												.c-product__price-number.c-product__price-number_old#c-product__price-number_old 0
-												.c-product__price-number.c-product__price-number_new#c-product__price-number_new 0
-											.c-product__order-actions.d-flex
-												a(href="#").c-btn.c-btn_primary.c-btn_bordered В КОРЗИНУ
-												a(href="#").c-btn.c-btn_primary.c-btn_bordered КУПИТЬ В 1 КЛИК
-										.d-flex.justify-content-between
-											.c-promocode
-												.c-promocode__txt
-													.
-														При заказе сообщите менеджеру промокод 
-												.c-promocode__label CEZARES10
-											.c-counter
-												.c-counter__timer
-													.c-progress-radial
-														.c-progress-radial__left
-															.c-progress-radial__bar(style="transform:rotate(180deg)")
-														.c-progress-radial__right
-															.c-progress-radial__bar(style="transform:rotate(180deg)")
-														.c-progress-radial__value 5
-														.c-progress-radial__footer дней
-													.c-progress-radial
-														.c-progress-radial__left
-															.c-progress-radial__bar(style="transform:rotate(-135deg)")
-														.c-progress-radial__right
-															.c-progress-radial__bar
-														.c-progress-radial__value 16
-														.c-progress-radial__footer часов
-													.c-progress-radial
-														.c-progress-radial__left
-															.c-progress-radial__bar(style="transform:rotate(-180deg)")
-														.c-progress-radial__right
-															.c-progress-radial__bar(style="transform:rotate(-150deg)")
-														.c-progress-radial__value 59
-														.c-progress-radial__footer минут
-												.c-counter__txt осталось до конца акции
+								.col-lg-6.col-xl-8
+									.row.mb-5
+										.col-xl-6
+											.c-product__order-info.c-product__order-info_desktop
+												.d-flex.flex-column.align-items-center.justify-content-center
+													.c-product__code.d-flex.align-items-center.justify-content-center
+														span.c-product-info__code-txt.mr-2 Код товара № 
+														.c-info
+													.c-product__choosen
+														| Выбрано:
+														a(data-toggle="collapse", aria-expanded="false", href="#order-checkout-products-chosen").c-product__choosen-count.collapsed 0 товара
+													.c-product__price
+														p.h-text-sm.mb-0 Стоимость
+														.c-product__price-number.c-product__price-number_old#c-product__price-number_old 0
+														.c-product__price-number.c-product__price-number_new#c-product__price-number_new 0
+													.c-product__order-actions.d-flex.flex-column
+														a(href="#").c-btn.c-btn_secondary.c-product__order-action В КОРЗИНУ
+														a(href="#" data-toggle="modal" data-target="#order-modal").c-btn.c-btn_secondary.c-product__order-action КУПИТЬ В 1 КЛИК
+
+
+										.col-xl-6
+											.c-product__info.ml-xl-2
+												.c-product__meta
+													img(src=require("../img/icons/box.png"), alt="").mr-3
+													p.mb-0
+														a(href="#!" data-toggle="modal" data-target="#pickup-modal") Пункт замовывоза 
+														| 4 июня, бесплатно
+												.c-product__meta
+													img(src=require("../img/icons/delivery.png"), alt="").mr-3
+													p.mb-0
+														| Доставка 5 июня, бесплатно <br>
+														a(href="#!" data-toggle="modal" data-target="#fast-delivery-modal") нужно быстрее?
+												.c-product__meta
+													img(src=require("../img/icons/wallet.png"), alt="").mr-3
+													p.mb-0
+														| Оплата: наличные, карта, безналичный перевод
+												.c-product__meta
+													img(src=require("../img/icons/showroom.png"), alt="").mr-3
+													p.mb-0
+														| Модель бренда есть в шоуруме
+												.c-product__meta
+													img(src=require("../img/icons/repair.png"), alt="").mr-3
+													p.mb-0
+														| Установка от 5000
+											.c-product__loan.ml-xl-2
+												img(src=require("../img/icons/loan.png"), alt="").mr-3
+												p.mb-0
+													| Оформить онлайн рассрочку от «Покупай <br>
+													| со Сбербанком» 
+													strong.text-success.h-text-md от 
+													strong.h-price.text-success.h-text-md 0
+													|  в месяц <br>
+													| Первоначальный взнос 
+													strong.h-price.text-success.h-text-md 0
+													<br>
+													| Переплата 
+													strong.h-price.text-success.h-text-md 0
 									.c-checkout-products.collapse#order-checkout-products-chosen.js-product-order-checkout-static
 										.swiper-container.js-checkout-products-fixed
 											.swiper-wrapper
@@ -254,52 +214,7 @@ html(lang="ru")
 											.swiper-scrollbar
 										.swiper-button-prev
 										.swiper-button-next
-									.c-product__order-info.c-product__order-info_mobile.d-xl-none.d-flex.align-items-center.flex-column.justify-content-between
-										.d-flex.w-100.justify-content-between.justify-content-md-center.c-product__order-info-inner
-											.c-product__choosen
-												| Выбрано:
-												a(href="#!").c-product__choosen-count 0 товара
-											.c-product__price.d-md-none
-												.c-product__price-number.c-product__price-number_old#c-product__price-mobile-number_old 0
-												.c-product__price-number.c-product__price-number_new#c-product__price-mobile-number_new 0
-										.d-flex.w-100.justify-content-between.mb-4.c-product__order-info-inner
-											.c-promocode
-												.c-promocode__txt.d-md-none промокод 
-												.c-promocode__txt.d-none.d-md-block
-													.
-														При заказе сообщите менеджеру промокод 
-												.c-promocode__label CEZARES10
-											.c-counter
-												.c-counter__txt осталось
-												.c-counter__timer
-													.c-progress-radial
-														.c-progress-radial__left
-															.c-progress-radial__bar(style="transform:rotate(180deg)")
-														.c-progress-radial__right
-															.c-progress-radial__bar(style="transform:rotate(180deg)")
-														.c-progress-radial__value 5
-														.c-progress-radial__footer дней
-													.c-progress-radial
-														.c-progress-radial__left
-															.c-progress-radial__bar(style="transform:rotate(-135deg)")
-														.c-progress-radial__right
-															.c-progress-radial__bar
-														.c-progress-radial__value 16
-														.c-progress-radial__footer часов
-													.c-progress-radial
-														.c-progress-radial__left
-															.c-progress-radial__bar(style="transform:rotate(-180deg)")
-														.c-progress-radial__right
-															.c-progress-radial__bar(style="transform:rotate(-150deg)")
-														.c-progress-radial__value 59
-														.c-progress-radial__footer минут
-										.d-flex.align-items-center.justify-content-between
-											.c-product__price.d-none.d-md-flex
-												.c-product__price-number.c-product__price-number_old#c-product__price-mobile-bottom-number_old 0
-												.c-product__price-number.c-product__price-number_new#c-product__price-mobile-bottom-number_new 0
-											.c-product__order-actions.d-flex
-												a(href="#").c-btn.c-btn_primary.c-btn_bordered В КОРЗИНУ
-												a(href="#").c-btn.c-btn_primary.c-btn_bordered КУПИТЬ В 1 КЛИК
+
 									.c-table.c-table_product.js-table_product
 										.c-table__header ГИДРОМАССАЖ
 										form(action="")
@@ -525,73 +440,7 @@ html(lang="ru")
 														.c-table__cell.d-none.d-md-flex.align-items-end.flex-column
 															.c-product-card__price.c-product-card__price_old 2772
 															.c-product-card__price.c-product-card__price_new 1 990
-									.c-product__order-checkout.c-product__order-checkout_fixed.js-product-order-checkout-fixed
-										.c-product__order-checkout-top.collapsed(data-toggle="collapse", aria-expanded="false", href="#order-checkout-products-fixed")
-											a(href="#").c-product__order-checkout-top-close.js-order-checkout-expand-close
-											.d-none.d-md-flex.d-lg-none.d-xl-flex.align-items-center.justify-content-between.w-100
-												.c-product__choosen
-													| Выбрано:
-													a(href="#!").c-product__choosen-count 0 товара
-												.c-product__price
-													.c-product__price-number.c-product__price-number_old#c-product__price-number-fixed_old 0
-													.c-product__price-number.c-product__price-number_new#c-product__price-number-fixed_new 0
 
-
-												.c-product__order-actions.d-flex
-													a(href="#").c-btn.c-btn_primary.c-btn_bordered В КОРЗИНУ
-													a(href="#").c-btn.c-btn_primary.c-btn_bordered КУПИТЬ В 1 КЛИК
-											.d-flex.d-md-none.d-lg-flex.d-xl-none.flex-column.align-items-center.justify-content-between.w-100
-												.d-flex.mb-1
-													.c-product__choosen.mb-1
-														| Выбрано:
-														a(href="#!").c-product__choosen-count 0 товара
-												.d-flex.c-product__order-checkout-inner
-													.c-product__price
-														.c-product__price-number.c-product__price-number_old#c-product__price-number-fixed-mobile_old 0
-														.c-product__price-number.c-product__price-number_new#c-product__price-number-fixed-mobile_new 0
-
-													.c-product__order-actions.d-flex
-														a(href="#").c-btn.c-btn_primary.c-btn_bordered В КОРЗИНУ
-														a(href="#").c-btn.c-btn_primary.c-btn_bordered КУПИТЬ В 1 КЛИК
-										.c-checkout-products.collapse#order-checkout-products-fixed
-											.swiper-container.js-checkout-products-fixed
-												.swiper-wrapper
-													
-												.swiper-scrollbar
-											.swiper-button-prev
-											.swiper-button-next
-									.c-product__order-checkout.js-product-order-checkout-static
-										.c-product__order-checkout-top.collapsed(data-toggle="collapse", aria-expanded="false", href="#order-checkout-products")
-											a(href="#").c-product__order-checkout-top-close.js-order-checkout-expand-close
-											.d-none.d-md-flex.flex-column.flex-xl-row.align-items-center.justify-content-between.w-100
-												.c-product__choosen.mb-2.mb-xl-0
-													| Выбрано:
-													a(href="#!").c-product__choosen-count 0 товара
-												.c-product__price.mb-2.mb-xl-0
-													.c-product__price-number.c-product__price-number_old#c-product__price-number-static_old 0
-													.c-product__price-number.c-product__price-number_new#c-product__price-number-static_new 0
-												.c-product__order-actions.d-flex
-													a(href="#").c-btn.c-btn_primary.c-btn_bordered В КОРЗИНУ
-													a(href="#").c-btn.c-btn_primary.c-btn_bordered КУПИТЬ В 1 КЛИК
-											.d-flex.d-md-none.flex-column.align-items-center.justify-content-between.w-100
-												.d-flex.mb-1.mb-sm-3
-													.c-product__choosen
-														| Выбрано:
-														a(href="#!").c-product__choosen-count 0 товара
-												.d-flex.c-product__order-checkout-inner
-													.c-product__price
-														.c-product__price-number.c-product__price-number_old#c-product__price-number-static-mobile_old 0
-														.c-product__price-number.c-product__price-number_new#c-product__price-number-static-mobile_new 0
-													.c-product__order-actions.d-flex
-														a(href="#").c-btn.c-btn_primary.c-btn_bordered В КОРЗИНУ
-														a(href="#").c-btn.c-btn_primary.c-btn_bordered КУПИТЬ В 1 КЛИК
-										.c-checkout-products.collapse#order-checkout-products
-											.swiper-container.js-checkout-products-static
-												.swiper-wrapper
-													
-												.swiper-scrollbar
-											.swiper-button-prev
-											.swiper-button-next
 									.c-share
 										img(src=require("../img/content/installment.jpg"), alt="")
 									.c-product-description
@@ -727,6 +576,63 @@ html(lang="ru")
 											.swiper-button-prev
 											.swiper-button-next
 				include templates/footer.pug
+		.modal.fade.c-modal#pickup-modal(aria-hidden="true").c-modal_map
+			.modal-dialog.modal-dialog-centered.c-modal__dialog
+				.modal-content.c-modal__content
+					.modal-header.c-modal__header
+						button(data-dismiss="modal" aria-label="Close").close
+					.modal-body.c-modal__body
+						.row
+							.col-md-8
+								<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A2d83b20ffab53983a879aa5e747ccb35c97b85a0d0f19c104ff479d439f485eb&amp;width=100%25&amp;height=463&amp;lang=ru_RU&amp;scroll=false"></script>
+							.col-md-4.d-flex.align-items-center.pl-5
+								.d-block.pb-4.pt-4.pb-md-0.pt-md-0
+									h4.mb-5.pb-3 Пункт самовывоза
+									.mb-4.pb-2
+										b.d-block.mb-2 Адрес склада:
+										p.mb-0 43й км МКАД, 1а, ворота 5
+									.d-block
+										b.d-block.b.mb-1.pb-1 Время работы:
+										.d-flex.mb-2.pb-1
+											each day in [1,2,3,4,5,6]
+												.c-day-block.flex-shrink-0
+											-;
+											.c-day-block_holiday
+										.d-flex.align-items-center
+											.c-day-block.flex-shrink-0.mr-2
+											span.text-success 9:00 - 18:00
+										.d-flex.align-items-center
+											.c-day-block.c-day-block_holiday.flex-shrink-0.mr-2
+											span.text-danger выходной
+
+
+		.modal.fade.c-modal#fast-delivery-modal(aria-hidden="true").c-modal_form
+			.modal-dialog.modal-dialog-centered.c-modal__dialog
+				.modal-content.c-modal__content
+					.modal-header.c-modal__header
+						.modal-title.c-modal__title Ускорить доставку
+						button(data-dismiss="modal" aria-label="Close").close
+					.modal-body.c-modal__body
+						p.mb-4.text-center Укажите желаемую дату доставки <br> и мы свяжемся с Вами
+						form.c-form.c-form_modal
+							input(type="text" placeholder="Укажите желаемую дату").form-control.c-form__field.js-date-field
+							input(type="tel").form-control.c-form__field.js-phone-field.mb-4
+							.d-flex.justify-content-center
+								button.c-btn.c-btn_secondary.c-form__btn.mt-0 жду звонка
+		.modal.fade.c-modal#order-modal(aria-hidden="true").c-modal_form
+			.modal-dialog.modal-dialog-centered.c-modal__dialog
+				.modal-content.c-modal__content
+					.modal-header.c-modal__header
+						.modal-title.c-modal__title Оформление заказа
+						button(data-dismiss="modal" aria-label="Close").close
+					.modal-body.c-modal__body
+						p.mb-4.text-center Укажите желаемую дату доставки <br> и мы свяжемся с Вами
+						form.c-form.c-form_modal
+							input(type="tel" placeholder="Ваш телефон").form-control.c-form__field.js-phone-field.mb-4
+							input(type="text" placeholder="ФИО").form-control.c-form__field
+							input(type="email" placeholder="E-mail").form-control.c-form__field.mb-4
+							.d-flex.justify-content-center
+								button.c-btn.c-btn_secondary.c-form__btn.mt-0 жду звонка
 
 		.modal.fade.show.c-modal#preview-product-modal.c-preview-product(aria-hidden="true")
 			.modal-dialog.modal-dialog-centered.c-modal__dialog
@@ -764,9 +670,6 @@ html(lang="ru")
 													img(src=require("../img/content/product-thumbnail.jpg"), alt="").c-product-preview__thumbnail
 										.swiper-button-next
 							.col-md-6.col-lg-5
-								//- .c-product-info__code Код товара:  B22528
-								//- .c-product-info__showroom.c-showroom Модель бренда есть в шоуруме
-									
 								.c-product-info__description
 											table.c-table
 												tbody

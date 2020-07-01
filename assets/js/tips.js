@@ -4,22 +4,31 @@ $(function() {
     var productsHidden = false;
 
     function checkPosCodeTip() {
+    	var viewportWidth = window.innerWidth;
         var bottomPos = $(window).scrollTop() + $(window).height();
-        var codeContainer = $('.c-product-info__code');
+        var codeContainer = $('.c-product__code');
         if(!codeContainer.length) return;
-        $('.c-tip_code').css({
-            'top': ((codeContainer.offset().top - $(window).scrollTop()) - (codeContainer.height() / 2) + 10) + 'px',
-            'left': (codeContainer.offset().left - $('.c-tip_code').width() * 1.7) + 'px'
-        })
-        if (bottomPos >= codeContainer.offset().top) {
-            if ($('.c-tip_code').is(':hidden')) {
-                $('.c-tip_code').show();
-                
-                setTimeout(function() {
-                    $('.c-tip_code').css('opacity', 0);
-                }, 10000);
-            }
+
+        if(viewportWidth < 768){
+        	if(!$('.c-tip_code').hasClass('c-tip_top')) $('.c-tip_code').removeClass('c-tip_left').addClass('c-tip_top');
+        } else{
+        	if(!$('.c-tip_code').hasClass('c-tip_left')) $('.c-tip_code').removeClass('c-tip_top').addClass('c-tip_left');
         }
+
+        $('.c-tip_code').css({
+            'top': viewportWidth < 768 ? (codeContainer.offset().top - $(window).scrollTop()) + codeContainer.outerHeight() + 20 : ((codeContainer.offset().top - $(window).scrollTop()) - (codeContainer.height() / 2) + 10) + 'px',
+            'left': viewportWidth < 768 ? ((viewportWidth / 2) - (codeContainer.outerWidth() / 2) - 30) + 'px' : (codeContainer.offset().left + codeContainer.outerWidth() + 20) + 'px'
+        });
+
+        // if (bottomPos >= codeContainer.offset().top) {
+        //     if ($('.c-tip_code').is(':hidden')) {
+        //         $('.c-tip_code').show();
+                
+        //         setTimeout(function() {
+        //             $('.c-tip_code').css('opacity', 0);
+        //         }, 10000);
+        //     }
+        // }
     }
     setTimeout(function() {
         checkPosCodeTip();
