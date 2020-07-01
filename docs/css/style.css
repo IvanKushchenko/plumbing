@@ -11269,12 +11269,6 @@ h5 {
   height: 35px;
 }
 
-@media (max-width: 450px) {
-  .c-navbar__txt {
-    display: none;
-  }
-}
-
 .c-navbar__link {
   font-size: 0.75rem;
   line-height: 1.5;
@@ -11333,6 +11327,12 @@ h5 {
   margin-right: 8px;
 }
 
+@media (max-width: 450px) {
+  .c-navbar__btn-icon {
+    width: 14px;
+  }
+}
+
 .c-navbar__counter {
   display: block;
   display: flex;
@@ -11342,25 +11342,12 @@ h5 {
   text-decoration: none;
   margin: 0 3px;
   line-height: 22px;
+  padding: 0 5px;
 }
 
 .c-navbar__counter.is-empty {
   background-color: #d8e4ea;
   color: #222222;
-}
-
-@media (max-width: 992px) {
-  .c-navbar__counter {
-    width: 21px;
-    height: 21px;
-    margin: 0 9px;
-  }
-}
-
-@media (max-width: 768px) {
-  .c-navbar__counter {
-    margin: 0;
-  }
 }
 
 .c-navbar__catalog-btn {
@@ -11390,7 +11377,7 @@ h5 {
 
 @media (max-width: 450px) {
   .c-navbar__catalog-btn {
-    width: 35%;
+    width: 30%;
   }
 }
 
@@ -11625,6 +11612,12 @@ h5 {
 @media (max-width: 992px) {
   .c-navbar__item:nth-of-type(5) .c-navbar__btn-icon {
     margin-right: 0;
+  }
+}
+
+@media (max-width: 450px) {
+  .c-navbar__item_cart {
+    width: 38%;
   }
 }
 
@@ -12977,12 +12970,6 @@ h5 {
   }
 }
 
-@media (max-width: 992px) {
-  .c-table_basket {
-    width: calc(100% + 40px);
-  }
-}
-
 .c-table_basket .c-table__cell {
   flex-grow: 1;
 }
@@ -13016,6 +13003,12 @@ h5 {
 @media (max-width: 1200px) {
   .c-table_basket .c-table__cell:nth-child(2) .c-number-counter {
     margin-left: -25px;
+  }
+}
+
+@media (max-width: 576px) {
+  .c-table_basket .c-table__cell:nth-child(2) .c-number-counter {
+    margin-left: 0;
   }
 }
 
@@ -13746,7 +13739,7 @@ h5 {
 .c-product-card__remove-btn {
   width: 13px;
   height: 13px;
-  background: url(../img/icons/close.png) center center no-repeat;
+  background: url(../img/icons/close.svg) center center no-repeat;
   background-size: contain;
   display: block;
   flex-shrink: 0;
@@ -17166,6 +17159,11 @@ h5 {
   line-height: 1.8;
 }
 
+.c-form__radio-txt a {
+  position: relative;
+  z-index: 5;
+}
+
 .c-form__radio-input {
   position: absolute;
   z-index: 5;
@@ -17947,14 +17945,8 @@ h5 {
 
 @media (max-width: 1200px) {
   .s-basket__header {
-    padding: 0 15px;
-    margin-bottom: 0 !important;
-  }
-}
-
-@media (max-width: 992px) {
-  .s-basket__header {
     padding: 0;
+    margin-bottom: 0 !important;
   }
 }
 
@@ -18043,7 +18035,7 @@ h5 {
 
 @media (max-width: 992px) {
   .s-basket__section_products {
-    padding: 0 35px;
+    padding: 0 15px;
   }
 }
 
