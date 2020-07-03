@@ -39,6 +39,10 @@
 	font-size: 1.625rem;
 }
 
+.h-is-disabled{
+	pointer-events: none;
+}
+
 .h-position-relative{
 	position: relative !important;
 }

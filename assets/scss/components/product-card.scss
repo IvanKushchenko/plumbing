@@ -161,7 +161,8 @@
 	&_checkbox &__price:not(.c-product-card__price_old) {
 		font-size: 1.25rem;
 	}
-	
+
+
 	&_radio,
 	&_checkbox {
 		.c-table {
@@ -175,10 +176,20 @@
 					padding-left: 17px !important;
 					flex-basis: auto !important;
 					display: block !important;
+
 				}
 				&:nth-of-type(3){
 				    flex-basis: 50%;
+
+				    @media (max-width: $bp-md) and (min-width: $bp-sm) {
+				    	flex-basis: 70%;
+				    }
+				    
+				    @media (max-width: $bp-sm){
+						flex-basis: 70%;
+				    }
 				}
+
 				&:nth-of-type(3), &:nth-of-type(4), &:nth-of-type(5) {
 					padding-left: 24px;
 				}

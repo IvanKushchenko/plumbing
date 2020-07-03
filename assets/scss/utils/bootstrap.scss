@@ -5,3 +5,11 @@
 .collapse:not(.show){
 	display: none !important;
 }
+
+
+.container{
+	@media (max-width: $bp-lg) {
+		max-width: initial;
+		padding: 0;
+	}
+}

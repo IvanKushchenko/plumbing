@@ -25,6 +25,7 @@ $(function() {
     var productsStaticNewCostCounter = new CountUp("c-product__price-number-static_new", 0, 0, 0, 0, CountUpOptions);
     var productsStaticMobileNewCostCounter = new CountUp("c-product__price-number-static-mobile_new", 0, 0, 0, 0, CountUpOptions);
     var productsStaticMobileOldCostCounter = new CountUp("c-product__price-number-static-mobile_old", 0, 0, 0, 0, CountUpOptions);
+    var installementCost = new CountUp("installement-cost", 0, 0, 0, 0, CountUpOptions);
 
 
     $('.c-product-card__input:checked').parents('.c-product-card_radio').addClass('is-active');
@@ -32,7 +33,6 @@ $(function() {
 
     $('.c-table_product, .c-table_options').each(function(index, item){
     	var currentProducts = $(this).find('.c-product-card_radio.is-active, .c-product-card_checkbox.is-active');
-    	console.log(currentProducts);
     	if(!currentProducts.length) return;
     	currentProducts.each(function(index, item){
 	        var articul = $(item).attr('data-articul');
@@ -85,10 +85,7 @@ $(function() {
 	            name: currentActiveProductName,
 	            price: currentActiveProductPrice
 	        };
-	        console.log(currentActiveProductData);
-	        console.log(products);
 	        removeProductFromSlider(currentActiveProductData);
-	        console.log(products);
 		    product.removeClass('is-active');
         }else{
         	var currentProduct = $(this).parents('.c-product-card');
@@ -260,9 +257,14 @@ $(function() {
         $(this).parents('.c-checkout-product').remove();
         $('.c-product-card[data-articul="'+$(this).parents('.c-checkout-product').attr('data-articul')+'"]').find('.c-product-card__btn.is-active').removeClass('is-active').text('Выбрать');
         checkoutProducts();
-       		
-        	$('.js-checkout-products-fixed')[0].swiper.update();
-        	$('.js-checkout-products-static')[0].swiper.update();
+
+        if(!$('.js-checkout-products-fixed .c-checkout-product').length) {
+        	console.log("yeah");
+        	 $('.js-product-order-checkout-static').collapse("hide");
+        }
+       	
+    	$('.js-checkout-products-fixed')[0].swiper.update();
+    	// $('.js-checkout-products-static')[0].swiper.update();
     })
 
 
@@ -273,6 +275,9 @@ $(function() {
             if (item.articul == product.articul) products.splice(i, 1);
         })
         checkoutProducts();
+
+
+       
 
         $('.js-checkout-products-fixed')[0].swiper.update();
         $('.js-checkout-products-static')[0].swiper.update();
@@ -317,27 +322,30 @@ $(function() {
         var resultCost = 0;
         $(products).each(function(i, item) {
             resultCost = resultCost + +item['price'].replace(/\D+/g, '');
-        })
+        });
+
+        installementCost.update(+resultCost / 12);
+
         orderCheckoutBl.find('.c-product__choosen-count').text(products.length + " товара");
         // orderCheckoutBl.find('.c-product__price-number').text(resultCost);
-        	productsNewCostCounter.update(+resultCost);
-	        productsOldCostCounter.update(+resultCost);
-	        productsMobileOldCostCounter.update(+resultCost);
-	        productsMobileNewCostCounter.update(+resultCost);
-	        productsMobileBottomOldCostCounter.update(+resultCost);
-	        productsMobileBottomNewCostCounter.update(+resultCost);
-	        productsFixedCostCounter.update(+resultCost);
-	        productsFixedMobileCostCounter.update(+resultCost);
-	        productsStaticCostCounter.update(+resultCost);
-	        productsStaticMobileCostCounter.update(+resultCost);
-	        productsFixedOldCostCounter.update(+resultCost);
-			productsFixedNewCostCounter.update(+resultCost);
-			productsFixedMobileNewCostCounter.update(+resultCost);
-			productsFixedMobileOldCostCounter.update(+resultCost);
-			productsStaticOldCostCounter.update(+resultCost);
-			productsStaticNewCostCounter.update(+resultCost);
-			productsStaticMobileNewCostCounter.update(+resultCost);
-			productsStaticMobileOldCostCounter.update(+resultCost);
+    	productsNewCostCounter.update(+resultCost);
+        productsOldCostCounter.update(+resultCost);
+        productsMobileOldCostCounter.update(+resultCost);
+        productsMobileNewCostCounter.update(+resultCost);
+        productsMobileBottomOldCostCounter.update(+resultCost);
+        productsMobileBottomNewCostCounter.update(+resultCost);
+        productsFixedCostCounter.update(+resultCost);
+        productsFixedMobileCostCounter.update(+resultCost);
+        productsStaticCostCounter.update(+resultCost);
+        productsStaticMobileCostCounter.update(+resultCost);
+        productsFixedOldCostCounter.update(+resultCost);
+		productsFixedNewCostCounter.update(+resultCost);
+		productsFixedMobileNewCostCounter.update(+resultCost);
+		productsFixedMobileOldCostCounter.update(+resultCost);
+		productsStaticOldCostCounter.update(+resultCost);
+		productsStaticNewCostCounter.update(+resultCost);
+		productsStaticMobileNewCostCounter.update(+resultCost);
+		productsStaticMobileOldCostCounter.update(+resultCost);
         
     }
 

@@ -27,6 +27,11 @@
 			color: #fff;
 		}
 	}
+	
+	&_danger{
+		background: #dc3545;
+	}
+
 	&_primary{
 		&.is-active{
 			background-color: #f1ca49;

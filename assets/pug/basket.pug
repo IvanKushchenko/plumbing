@@ -10,7 +10,7 @@ html(lang="ru")
 					.c-breadcrumbs
 						a(href="#!").c-breadcrumbs__item Главная
 						a(href="#!").c-breadcrumbs__item Корзина
-					.o-section.s-basket
+					.o-section.s-basket.js-basket-discount(data-discount-percent="20")
 						.o-section__header.s-basket__header
 							h3.o-section__title Корзина
 						.o-section__body
@@ -56,13 +56,13 @@ html(lang="ru")
 													.col-8.col-sm-9.col-lg-10
 														.c-number-counter
 															.c-number-counter__action.c-number-counter__action_down
-															input(type="number" value="0").form-control.c-number-counter__field 
+															input(type="number" value="1").form-control.c-number-counter__field 
 															.c-number-counter__action.c-number-counter__action_up
 												.d-flex.row.d-xl-none
 													.col-4.col-sm-3.col-lg-2
 														span.mr-2.text-uppercase.h-text-sm Сумма
 													.col-8.col-sm-9.col-lg-10
-														.c-product-card__price.c-product-card__total 7695
+														.c-product-card__price.c-product-card__total#product-card-total-mobile-1 7695
 											.c-table__cell
 												.c-product-card__price.c-product-card__cost 7695
 												.c-discounts
@@ -80,7 +80,7 @@ html(lang="ru")
 											.c-table__cell
 												.c-number-counter
 													.c-number-counter__action.c-number-counter__action_down
-													input(type="number" value="0").form-control.c-number-counter__field 
+													input(type="number" value="1").form-control.c-number-counter__field 
 													.c-number-counter__action.c-number-counter__action_up
 											.c-table__cell
 												.c-product-card__price.c-product-card__total#product-card-total-1 0
@@ -106,20 +106,20 @@ html(lang="ru")
 													.col-8.col-sm-8.col-lg-10
 														.c-number-counter
 															.c-number-counter__action.c-number-counter__action_down
-															input(type="number" value="0").form-control.c-number-counter__field 
+															input(type="number" value="1").form-control.c-number-counter__field 
 															.c-number-counter__action.c-number-counter__action_up
 												.d-flex.row.d-xl-none
 													.col-4.col-sm-3.col-lg-2
 														span.mr-2.text-uppercase.h-text-sm Сумма
 													.col-8.col-sm-8.col-lg-10
-														.c-product-card__price.c-product-card__total 7695
+														.c-product-card__price.c-product-card__total#product-card-total-mobile-2 7695
 											.c-table__cell
 												.c-product-card__price.c-product-card__cost 8650
 												
 											.c-table__cell
 												.c-number-counter
 													.c-number-counter__action.c-number-counter__action_down
-													input(type="number" value="0").form-control.c-number-counter__field
+													input(type="number" value="1").form-control.c-number-counter__field
 													.c-number-counter__action.c-number-counter__action_up
 											.c-table__cell
 												.c-product-card__price.c-product-card__total.h-price#product-card-total-2 0
@@ -132,7 +132,6 @@ html(lang="ru")
 														img(src=require("../img/content/option.jpg"), alt="")
 											.c-table__cell
 												a(href="#!").c-product-card__title.mb-3 комплект для ванной Акватон Инфинити 65 Н
-												.c-product-card__articul Артикул: 23370001
 												.d-flex.row.mb-4.mt-2.d-xl-none
 													.col-4.col-sm-3.col-lg-2
 														span.mr-2.text-uppercase.h-text-sm Цена
@@ -145,14 +144,14 @@ html(lang="ru")
 													.col-8.col-sm-8.col-lg-10
 														.c-number-counter
 															.c-number-counter__action.c-number-counter__action_down
-															input(type="number" value="0").form-control.c-number-counter__field 
+															input(type="number" value="1").form-control.c-number-counter__field 
 															.c-number-counter__action.c-number-counter__action_up
 												.d-flex.row.d-xl-none.mb-4
 													.col-4.col-sm-3.col-lg-2
 														span.mr-2.text-uppercase.h-text-sm Сумма
 													.col-8.col-sm-8.col-lg-10
-														.c-product-card__price.c-product-card__total 7695
-												.c-product-card__kit.mt-2
+														.c-product-card__price.c-product-card__total#product-card-total-mobile-3 7695
+												.c-product-card__kit.mt-2.d-none.d-sm-block
 													p.c-product-card__kit-headline Состав комплекта:
 													.d-block.mb-3.h-position-relative
 														h6.c-product-card__kit-title Тумба под раковинуADIGE ADI -LVM25-CRM
@@ -177,20 +176,20 @@ html(lang="ru")
 											.c-table__cell
 												.c-number-counter
 													.c-number-counter__action.c-number-counter__action_down
-													input(type="number" value="0").form-control.c-number-counter__field
+													input(type="number" value="1").form-control.c-number-counter__field
 													.c-number-counter__action.c-number-counter__action_up
 											.c-table__cell
-												.c-product-card__price.c-product-card__total#product-card-total-4 0
+												.c-product-card__price.c-product-card__total#product-card-total-3 0
 											.c-table__cell
 												a(href="#").c-product-card__remove-btn.mt-2.ml-3
 							.s-basket__section.s-basket__section_result-price.d-flex.align-items-center.justify-content-center
 								.d-flex.flex-column.flex-md-row
 									.d-flex.align-items-center.mr-md-5.mt-md-2
 										span.mr-1.mr-md-3 Итого без скидки:
-										span.h-price 40612
+										span.h-price#main-total-price 0
 									.d-flex.align-items-center.mt-2
 										h5.mr-1.mr-md-3.mb-0 Итого со скидкой:
-										h2.h-price.d-inline 34299
+										h2.h-price.d-inline#main-total-price-new 0
 							.s-basket__section.pb-3
 								h3.s-basket__title Контактные данные
 								.s-basket__content
@@ -219,32 +218,32 @@ html(lang="ru")
 												.c-form__radio
 													input(type="radio" name="payment-method" checked).c-form__radio-input
 													.c-form__radio-label 
-														b.mr-2 Наличными при получении (для Москвы и МО)
+														span.mr-2 Наличными при получении (для Москвы и МО)
 														span.text-danger скидка 5%
 															
 												.c-form__radio
 													input(type="radio" name="payment-method").c-form__radio-input
 													.c-form__radio-label 
-														b.mr-2 Банковской картой
+														span.mr-2 Банковской картой
 														span.text-danger скидка 5%
 												.c-form__radio
 													input(type="radio" name="payment-method").c-form__radio-input
 													.c-form__radio-label 
-														b.mr-2 Онлайн оплата картой
+														span.mr-2 Онлайн оплата картой
 														span.text-danger скидка 5%
 												.c-form__radio
 													input(type="radio" name="payment-method").c-form__radio-input
 													.c-form__radio-label 
-														b.mr-2 Переводом на расчетный счет компании
+														span.mr-2 Переводом на расчетный счет компании
 														span.text-danger скидка 5%
 												.c-form__radio
 													input(type="radio" name="payment-method").c-form__radio-input
 													.c-form__radio-label 
-														b В кредит без переплаты на срок 6-10 месяцев (Покупай о Сбербанком)
+														span В кредит без переплаты на срок 6-10 месяцев (Покупай о Сбербанком)
 												.c-form__radio
 													input(type="radio" name="payment-method").c-form__radio-input
 													.c-form__radio-label 
-														b В кредит на срок от 3 до 36 месяцев (Покупай о Сбербанком)
+														span В кредит на срок от 3 до 36 месяцев (Покупай о Сбербанком)
 
 										.col-xl-5
 											.c-form__group.ml-xl-3
@@ -252,19 +251,19 @@ html(lang="ru")
 												.c-form__radio
 													input(type="radio" name="payment-method" checked).c-form__radio-input
 													.c-form__radio-label 
-														b Наличными 
+														span Наличными 
 												.c-form__radio
 													input(type="radio" name="payment-method").c-form__radio-input
 													.c-form__radio-label 
-														b Счет на оплату без НДС  
+														span Счет на оплату без НДС  
+												.c-form__spanradio
+													input(type="radio" name="payment-method").c-form__radio-input
+													.c-form__radio-label 
+														span Счет на оплату с НДС
 												.c-form__radio
 													input(type="radio" name="payment-method").c-form__radio-input
 													.c-form__radio-label 
-														b Счет на оплату с НДС
-												.c-form__radio
-													input(type="radio" name="payment-method").c-form__radio-input
-													.c-form__radio-label 
-														b Безналичный счет с НДС
+														span Безналичный счет с НДС
 							.s-basket__section.s-basket__section_get-product-method
 								h3.s-basket__title.mb-4 Способ получения товара
 								.s-basket__content.pt-3
@@ -289,9 +288,9 @@ html(lang="ru")
 												input.form-control.c-form__field
 											label.c-form__label Комментарии
 												textarea(name="", rows="4").form-control.c-form__field.c-form__field_textarea
-											.c-form__action.c-form__action_attachment
+											.c-form__action.c-form__action_attachment.js-file-uploader
 												input(type="file")
-												a(href="#") Прикрепить файл
+												a(href="#").js-file-uploader-action_attach Прикрепить файл
 								.d-flex.justify-content-center.justify-content-xl-start
 									button.c-btn.c-btn_secondary.c-form__btn.c-form__btn_lg.mt-0 Оформить заказ
 							

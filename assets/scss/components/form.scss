@@ -108,10 +108,10 @@
 
 	&__radio {
 		position: relative;
-		margin-bottom: 15px;
+		margin-bottom: 0.9375rem;
 
 		.s-basket__section_payment-method &{
-			margin-bottom: 23px;
+			margin-bottom: 1.4375rem;
 		}
 
 		
@@ -193,6 +193,12 @@
 			position: relative;
 			overflow: hidden;
 			padding-bottom: 1px;
+
+			&.is-uploaded{
+				input{
+					pointer-events: none;
+				}
+			}
 
 			input {
 				position: absolute;
