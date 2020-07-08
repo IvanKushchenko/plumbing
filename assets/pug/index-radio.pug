@@ -10,7 +10,7 @@ html(lang="ru")
 					.c-float-btn.c-float-btn_options.js-float-btn-options
 						p Выберите опции к этому товару
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490.4 490.4"><g fill="#3e7ce3"><path d="M490.4 245.2C490.4 110 380.4 0 245.2 0S0 110 0 245.2s110 245.2 245.2 245.2 245.2-110 245.2-245.2zm-465.9 0c0-121.7 99-220.7 220.7-220.7s220.7 99 220.7 220.7-99 220.7-220.7 220.7-220.7-99-220.7-220.7z"/><path d="M253.9 360.4l68.9-68.9c4.8-4.8 4.8-12.5 0-17.3s-12.5-4.8-17.3 0l-48 48V138.7c0-6.8-5.5-12.3-12.3-12.3s-12.3 5.5-12.3 12.3v183.4l-48-48c-4.8-4.8-12.5-4.8-17.3 0s-4.8 12.5 0 17.3l68.9 68.9c2.4 2.4 5.5 3.6 8.7 3.6s6.3-1.1 8.7-3.5z"/></g></svg>
-					.c-tip.c-tip_left.c-tip_code Сообщите код товара 32323 менеджеру
+					.c-tip.c-tip_left.c-tip_code Сообщите код менеджеру
 					.c-tip.c-tip_products Вы можете выбрать дополнительные товары
 
 					.c-breadcrumbs
@@ -39,16 +39,6 @@ html(lang="ru")
 									.c-product-info
 										.row
 											.col-12
-												//- .c-product-preview-mobile.d-md-none.js-product-preview-mobile
-												//- 	.swiper-container
-												//- 		.swiper-wrapper
-												//- 			.swiper-slide
-												//- 				img(src=require("../img/content/product.jpg"), alt="").c-product-preview__thumbnail
-												//- 			.swiper-slide
-												//- 				img(src=require("../img/content/product.jpg"), alt="").c-product-preview__thumbnail
-												//- 			.swiper-slide
-												//- 				img(src=require("../img/content/product.jpg"), alt="").c-product-preview__thumbnail
-												//- 		.swiper-pagination
 												.c-product-preview.js-product-preview-page
 													.c-product-info__labels
 														.c-product-info__label В наличии
@@ -72,8 +62,6 @@ html(lang="ru")
 																	div(data-src="../img/content/product.jpg").js-product-preview-item
 																		img(src=require("../img/content/product.jpg"), alt="").c-product-preview__thumbnail
 
-														button.c-product-preview__zoom.js-product-preview-btn
-
 													.c-product-preview__thumbnails
 														.swiper-container.js-product-preview-thumbnails
 															.swiper-wrapper
@@ -83,7 +71,7 @@ html(lang="ru")
 																	img(src=require("../img/content/product-thumbnail2.jpg"), alt="").c-product-preview__thumbnail
 																.swiper-slide
 																	img(src=require("../img/content/product-thumbnail.jpg"), alt="").c-product-preview__thumbnail
-														.swiper-button-next
+														.swiper-button-next.d-none.d-lg-bllock
 											.col-12
 												.c-product-info__body
 													.c-product-info__description.collapse.show#product-info-body
@@ -143,11 +131,8 @@ html(lang="ru")
 													.c-product__code.d-flex.align-items-center.justify-content-center
 														span.c-product-info__code-txt.mr-2 Код товара 32312
 														.c-info
-													.c-product__choosen
-														| Выбрано:
-														a(data-toggle="collapse", aria-expanded="false", href="#order-checkout-products-chosen").c-product__choosen-count.collapsed 0 товара
 													.c-product__price
-														p.h-text-sm.mb-0 Стоимость:
+														p.mb-0 Цена товара
 														.c-product__price-number.c-product__price-number_old#c-product__price-number_old 0
 														.c-product__price-number.c-product__price-number_new#c-product__price-number_new 0
 													.c-product__order-actions.d-flex.flex-column
@@ -193,13 +178,6 @@ html(lang="ru")
 													<br>
 													| Переплата 
 													strong.h-price.text-success.h-text-md 0
-									.c-checkout-products.collapse#order-checkout-products-chosen.js-product-order-checkout-static
-										.swiper-container.js-checkout-products-fixed
-											.swiper-wrapper
-												
-											.swiper-scrollbar
-										.swiper-button-prev
-										.swiper-button-next
 
 									.c-table.c-table_product.js-table_product
 										.c-table__header ГИДРОМАССАЖ
@@ -214,19 +192,26 @@ html(lang="ru")
 															.c-product-card__sale 15%
 															a(href="../img/content/option.jpg").c-product-card__img
 																img(src=require("../img/content/option.jpg"), alt="")
+															span.d-block.c-product-card__img-label В наличии
 													.c-table__cell
-														.c-product-card__img-wrap.js-product-lightbox.d-none.d-sm-block.d-md-none.mb-2
-															.c-product-card__sale 15%
-															a(href="../img/content/option.jpg").c-product-card__img
-																img(src=require("../img/content/option.jpg"), alt="")
+														
 														a(href="#!").c-product-card__title Раковина Cezares Laredo
-														b.h-text-sm.d-block.mt-2 Под заказ
-														.c-product-card__subtitle Арт.  23370001
-														.d-flex.flex-column.flex-sm-row.align-items-start.align-items-md-center.d-md-none.mb-2
-															.c-product-card__price.c-product-card__price_old 2772
-															.c-product-card__price.c-product-card__price_new 2 290
-														.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
-														span.text-success.d-block В наличии
+														.d-flex.mt-3
+															.d-block.pr-3.pr-lg-0
+																.c-product-card__img-wrap.js-product-lightbox.d-lg-none.mb-2
+																	.c-product-card__sale 15%
+																	a(href="../img/content/option.jpg").c-product-card__img
+																		img(src=require("../img/content/option.jpg"), alt="")
+																	span.d-block.c-product-card__img-label В наличии
+															.d-block
+																.d-block
+																	span.c-product-card__subtitle.d-inline-block.mr-2 Арт.  23370001
+																	span.mt-2.text-secondary Под заказ
+																.d-flex.flex-column.flex-sm-row.align-items-start.align-items-md-center.d-md-none.mb-2
+																	.c-product-card__price.c-product-card__price_old 2772
+																	.c-product-card__price.c-product-card__price_new 2 290
+																.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
+																
 													.c-table__cell.d-none.d-md-flex.align-items-end.flex-column.justify-content-center
 														.c-product-card__price.c-product-card__price_old 2772
 														.c-product-card__price.c-product-card__price_new 2 290
@@ -239,66 +224,22 @@ html(lang="ru")
 															.c-product-card__sale 15%
 															a(href="../img/content/option.jpg").c-product-card__img
 																img(src=require("../img/content/option.jpg"), alt="")
+															span.d-block.c-product-card__img-label.c-product-card__img-label_not-available Нет в наличии
 													.c-table__cell
-														.c-product-card__img-wrap.js-product-lightbox.d-none.d-sm-block.d-md-none.mb-2
-															.c-product-card__sale 15%
-															a(href="../img/content/option.jpg").c-product-card__img
-																img(src=require("../img/content/option.jpg"), alt="")
 														a(href="#!").c-product-card__title Смеситель для кухни Grohe Minta 32168 000
-														.c-product-card__subtitle Арт.  23370001
-														.d-flex.flex-column.flex-sm-row.align-items-start.align-items-md-center.d-md-none.mb-2
-															.c-product-card__price.c-product-card__price_old 2772
-															.c-product-card__price.c-product-card__price_new 1 990
-														.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
-														span.text-danger.d-block Нет в наличии
-													.c-table__cell.d-none.d-md-flex.align-items-end.flex-column.justify-content-center
-														.c-product-card__price.c-product-card__price_old 2772
-														.c-product-card__price.c-product-card__price_new 1 990
-												.c-table__row.c-product-card.c-product-card_radio(data-articul="23370002")
-													input(type="radio" name="product" value="23370003" ).c-product-card__input
-													.c-table__cell
-														.c-product-card__radio
-													.c-table__cell
-														.c-product-card__img-wrap.js-product-lightbox
-															.c-product-card__sale 15%
-															a(href="../img/content/option.jpg").c-product-card__img
-																img(src=require("../img/content/option.jpg"), alt="")
-													.c-table__cell
-														.c-product-card__img-wrap.js-product-lightbox.d-none.d-sm-block.d-md-none.mb-2
-															.c-product-card__sale 15%
-															a(href="../img/content/option.jpg").c-product-card__img
-																img(src=require("../img/content/option.jpg"), alt="")
-														a(href="#!").c-product-card__title Душевой угол Cezares MAGIC-R-1-ROYAL PALACE 90x90
-														.c-product-card__subtitle Арт.  23370001
-														.d-flex.flex-column.flex-sm-row.align-items-start.align-items-md-center.d-md-none.mb-2
-															.c-product-card__price.c-product-card__price_old 2772
-															.c-product-card__price.c-product-card__price_new 1 990
-														.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
-														span.text-danger.d-block Нет в наличии
-													.c-table__cell.d-none.d-md-flex.align-items-end.flex-column.justify-content-center
-														.c-product-card__price.c-product-card__price_old 2772
-														.c-product-card__price.c-product-card__price_new 1 990
-												.c-table__row.c-product-card.c-product-card_radio(data-articul="23370003")
-													input(type="radio" name="product" value="23370004" ).c-product-card__input
-													.c-table__cell
-														.c-product-card__radio
-													.c-table__cell
-														.c-product-card__img-wrap.js-product-lightbox
-															.c-product-card__sale 15%
-															a(href="../img/content/option.jpg").c-product-card__img
-																img(src=require("../img/content/option.jpg"), alt="")
-													.c-table__cell
-														.c-product-card__img-wrap.js-product-lightbox.d-none.d-sm-block.d-md-none.mb-2
-															.c-product-card__sale 15%
-															a(href="../img/content/option.jpg").c-product-card__img
-																img(src=require("../img/content/option.jpg"), alt="")
-														a(href="#!").c-product-card__title Раковина Cezares Laredo
-														.c-product-card__subtitle Арт.  23370001
-														.d-flex.flex-column.flex-sm-row.align-items-start.align-items-md-center.d-md-none.mb-2
-															.c-product-card__price.c-product-card__price_old 2772
-															.c-product-card__price.c-product-card__price_new 1 990
-														.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
-														span.text-success.d-block В наличии
+														.d-flex.mt-3
+															.d-block.pr-3.pr-lg-0
+																.c-product-card__img-wrap.js-product-lightbox.d-lg-none.mb-2
+																	.c-product-card__sale 15%
+																	a(href="../img/content/option.jpg").c-product-card__img
+																		img(src=require("../img/content/option.jpg"), alt="")
+																	span.d-block.c-product-card__img-label.c-product-card__img-label_not-available Нет в наличии
+															.d-block
+																.c-product-card__subtitle Арт.  23370001
+																.d-flex.flex-column.flex-sm-row.align-items-start.align-items-md-center.d-md-none.mb-2
+																	.c-product-card__price.c-product-card__price_old 2772
+																	.c-product-card__price.c-product-card__price_new 1 990
+																.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
 													.c-table__cell.d-none.d-md-flex.align-items-end.flex-column.justify-content-center
 														.c-product-card__price.c-product-card__price_old 2772
 														.c-product-card__price.c-product-card__price_new 1 990
@@ -311,47 +252,27 @@ html(lang="ru")
 															.c-product-card__sale 15%
 															a(href="../img/content/option.jpg").c-product-card__img
 																img(src=require("../img/content/option.jpg"), alt="")
+															span.d-block.c-product-card__img-label В наличии
 													.c-table__cell
-														.c-product-card__img-wrap.js-product-lightbox.d-none.d-sm-block.d-md-none.mb-2
-															.c-product-card__sale 15%
-															a(href="../img/content/option.jpg").c-product-card__img
-																img(src=require("../img/content/option.jpg"), alt="")
 														a(href="#!").c-product-card__title Душевой угол Cezares MAGIC-R-1-ROYAL PALACE 90x90
-														.c-product-card__subtitle Арт.  23370001
-														.d-flex.flex-column.flex-sm-row.align-items-start.align-items-md-center.d-md-none.mb-2
-															.c-product-card__price.c-product-card__price_old 2772
-															.c-product-card__price.c-product-card__price_new 1 990
-														.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
-														span.text-success.d-block В наличии
+														.d-flex.mt-3
+															.d-block.pr-3.pr-lg-0
+																.c-product-card__img-wrap.js-product-lightbox.d-lg-none.mb-2
+																	.c-product-card__sale 15%
+																	a(href="../img/content/option.jpg").c-product-card__img
+																		img(src=require("../img/content/option.jpg"), alt="")
+																	span.d-block.c-product-card__img-label В наличии
+															.d-block
+																.c-product-card__subtitle Арт.  23370001
+																.d-flex.flex-column.flex-sm-row.align-items-start.align-items-md-center.d-md-none.mb-2
+																	.c-product-card__price.c-product-card__price_old 2772
+																	.c-product-card__price.c-product-card__price_new 1 990
+																.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
 													.c-table__cell.d-none.d-md-flex.align-items-end.flex-column.justify-content-center
 														.c-product-card__price.c-product-card__price_old 2772
 														.c-product-card__price.c-product-card__price_new 1 990
-												.c-table__row.c-product-card.c-product-card_radio(data-articul="23370005")
-													input(type="radio" name="product" value="23370006" ).c-product-card__input
-													.c-table__cell
-														.c-product-card__radio
-													.c-table__cell
-														.c-product-card__img-wrap.js-product-lightbox
-															.c-product-card__sale 15%
-															a(href="../img/content/option.jpg").c-product-card__img
-																img(src=require("../img/content/option.jpg"), alt="")
-													.c-table__cell
-														.c-product-card__img-wrap.js-product-lightbox.d-none.d-sm-block.d-md-none.mb-2
-															.c-product-card__sale 15%
-															a(href="../img/content/option.jpg").c-product-card__img
-																img(src=require("../img/content/option.jpg"), alt="")
-														a(href="#!").c-product-card__title Раковина Cezares Laredo
-														.c-product-card__subtitle Арт.  23370001
-														.d-flex.flex-column.flex-sm-row.align-items-start.align-items-md-center.d-md-none.mb-2
-															.c-product-card__price.c-product-card__price_old 2772
-															.c-product-card__price.c-product-card__price_new 1 990
-														.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
-														span.text-success.d-block В наличии
-													.c-table__cell.d-none.d-md-flex.align-items-end.flex-column.justify-content-center
-														.c-product-card__price.c-product-card__price_old 2772
-														.c-product-card__price.c-product-card__price_new 1 990
-										a(href="#").c-filtered-products__load-more.c-load-more.d-block
-											span.c-filtered-products__load-more-txt.c-load-more__txt показать еще 10
+										a(href="#").c-load-more.c-load-more_block.c-load-more
+											span.c-load-more__txt показать еще 10
 											.c-load-more__preloader
 												.c-load-more__preloader-square
 												.c-load-more__preloader-square
@@ -370,16 +291,19 @@ html(lang="ru")
 															a(href="../img/content/option.jpg").c-product-card__img
 																img(src=require("../img/content/option.jpg"), alt="")
 													.c-table__cell
-														.c-product-card__img-wrap.js-product-lightbox.d-none.d-sm-block.d-md-none.mb-2
-															.c-product-card__sale 15%
-															a(href="../img/content/option.jpg").c-product-card__img
-																img(src=require("../img/content/option.jpg"), alt="")
 														a(href="#!").c-product-card__title Шторка для ванны Cezares Slider-VF-11-100/150 матовая
-														.c-product-card__subtitle Арт.  23370001
-														.d-flex.flex-column.flex-sm-row.align-items-start.align-items-md-center.d-md-none.mb-2
-															.c-product-card__price.c-product-card__price_old 2772
-															.c-product-card__price.c-product-card__price_new 1 990
-														.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
+														.d-flex.mt-3
+															.d-block.pr-3.pr-lg-0
+																.c-product-card__img-wrap.js-product-lightbox.d-lg-none.mb-2
+																	.c-product-card__sale 15%
+																	a(href="../img/content/option.jpg").c-product-card__img
+																		img(src=require("../img/content/option.jpg"), alt="")
+															.d-block
+																.c-product-card__subtitle Арт.  23370001
+																.d-flex.flex-column.flex-sm-row.align-items-start.align-items-md-center.d-md-none.mb-2
+																	.c-product-card__price.c-product-card__price_old 2772
+																	.c-product-card__price.c-product-card__price_new 1 990
+																.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
 													.c-table__cell.d-none.d-md-flex.align-items-end.flex-column.justify-content-center
 														.c-product-card__price.c-product-card__price_old 2772
 														.c-product-card__price.c-product-card__price_new 1 990
@@ -393,21 +317,24 @@ html(lang="ru")
 															a(href="../img/content/option.jpg").c-product-card__img
 																img(src=require("../img/content/option.jpg"), alt="")
 													.c-table__cell
-														.c-product-card__img-wrap.js-product-lightbox.d-none.d-sm-block.d-md-none.mb-2
-															.c-product-card__sale 15%
-															a(href="../img/content/option.jpg").c-product-card__img
-																img(src=require("../img/content/option.jpg"), alt="")
 														a(href="#!").c-product-card__title Раковина Cezares Laredo
-														.c-product-card__subtitle Арт.  23370001
-														.d-flex.flex-column.flex-sm-row.align-items-start.align-items-md-center.d-md-none.mb-2
-															.c-product-card__price.c-product-card__price_old 2772
-															.c-product-card__price.c-product-card__price_new 1 990
-														.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
+														.d-flex.mt-3
+															.d-block.pr-3.pr-lg-0
+																.c-product-card__img-wrap.js-product-lightbox.d-lg-none.mb-2
+																	.c-product-card__sale 15%
+																	a(href="../img/content/option.jpg").c-product-card__img
+																		img(src=require("../img/content/option.jpg"), alt="")
+															.d-block
+																.c-product-card__subtitle Арт.  23370001
+																.d-flex.flex-column.flex-sm-row.align-items-start.align-items-md-center.d-md-none.mb-2
+																	.c-product-card__price.c-product-card__price_old 2772
+																	.c-product-card__price.c-product-card__price_new 1 990
+																.c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
 													.c-table__cell.d-none.d-md-flex.align-items-end.flex-column.justify-content-center
 														.c-product-card__price.c-product-card__price_old 2772
 														.c-product-card__price.c-product-card__price_new 1 990
-										a(href="#").c-filtered-products__load-more.c-load-more.d-block
-											span.c-filtered-products__load-more-txt.c-load-more__txt показать еще 10
+										a(href="#").c-load-more.c-load-more_block
+											span.c-load-more__txt показать еще 10
 											.c-load-more__preloader
 												.c-load-more__preloader-square
 												.c-load-more__preloader-square
@@ -433,16 +360,18 @@ html(lang="ru")
 														.c-table__cell
 
 															a(href="#!").c-product-card__title Душевой угол Cezares MAGIC-R-1-ROYAL PALACE 90x90
-															.c-product-card__subtitle Арт.  23370001
-															.c-product-card__img-wrap.js-product-lightbox.mb-2.d-md-none
-																.c-product-card__sale 15%
-																a(href="../img/content/option.jpg").c-product-card__img
-																	img(src=require("../img/content/option.jpg"), alt="")
-															//- .d-flex.flex-column.flex-sm-row.align-items-start.align-items-md-center.d-md-none.mb-2
-															//- 	.c-product-card__price.c-product-card__price_old 2772
-															//- 	.c-product-card__price.c-product-card__price_new 1 990
-															//- .c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
-														.c-table__cell.d-flex.align-items-end.flex-column.justify-content-center
+															.d-flex.mt-3
+																.d-block.pr-3.pr-lg-0
+																	.c-product-card__img-wrap.js-product-lightbox.mb-2.d-lg-none
+																		.c-product-card__sale 15%
+																		a(href="../img/content/option.jpg").c-product-card__img
+																			img(src=require("../img/content/option.jpg"), alt="")
+																.d-block
+																	.c-product-card__subtitle Арт.  23370001
+																	.c-table__cell.d-flex.align-items-end.flex-column.justify-content-center.d-md-none
+																		.c-product-card__price.c-product-card__price_old 2772
+																		.c-product-card__price.c-product-card__price_new 1 990
+														.c-table__cell.d-none.d-md-flex.align-items-end.flex-column.justify-content-center
 															.c-product-card__price.c-product-card__price_old 2772
 															.c-product-card__price.c-product-card__price_new 1 990
 													.c-table__row.c-product-card.c-product-card_checkbox(data-articul="23370011")
@@ -456,16 +385,18 @@ html(lang="ru")
 																	img(src=require("../img/content/option.jpg"), alt="")
 														.c-table__cell
 															a(href="#!").c-product-card__title Душевой угол Cezares MAGIC-R-1-ROYAL PALACE 90x90
-															.c-product-card__subtitle Арт.  23370001
-															.c-product-card__img-wrap.js-product-lightbox.mb-2.d-sm-none
-																.c-product-card__sale 15%
-																a(href="../img/content/option.jpg").c-product-card__img
-																	img(src=require("../img/content/option.jpg"), alt="")
-															//- .d-flex.flex-column.flex-sm-row.align-items-start.align-items-md-center.d-md-none.mb-2
-															//- 	.c-product-card__price.c-product-card__price_old 2772
-															//- 	.c-product-card__price.c-product-card__price_new 1 990
-															//- .c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
-														.c-table__cell.d-flex.align-items-end.flex-column.justify-content-center
+															.d-flex.mt-3
+																.d-block.pr-3.pr-lg-0
+																	.c-product-card__img-wrap.js-product-lightbox.mb-2.d-lg-none
+																		.c-product-card__sale 15%
+																		a(href="../img/content/option.jpg").c-product-card__img
+																			img(src=require("../img/content/option.jpg"), alt="")
+																.d-block
+																	.c-product-card__subtitle Арт.  23370001
+																	.c-table__cell.d-flex.align-items-end.flex-column.justify-content-center.d-md-none
+																		.c-product-card__price.c-product-card__price_old 2772
+																		.c-product-card__price.c-product-card__price_new 1 990
+														.c-table__cell.d-none.d-md-flex.align-items-end.flex-column.justify-content-center
 															.c-product-card__price.c-product-card__price_old 2772
 															.c-product-card__price.c-product-card__price_new 1 990
 													.c-table__row.c-product-card.c-product-card_checkbox(data-articul="23370012")
@@ -479,25 +410,37 @@ html(lang="ru")
 																	img(src=require("../img/content/option.jpg"), alt="")
 														.c-table__cell
 															a(href="#!").c-product-card__title Душевой угол Cezares MAGIC-R-1-ROYAL PALACE 90x90
-															.c-product-card__subtitle Арт.  23370001
-															.c-product-card__img-wrap.js-product-lightbox.mb-2.d-sm-none
-																.c-product-card__sale 15%
-																a(href="../img/content/option.jpg").c-product-card__img
-																	img(src=require("../img/content/option.jpg"), alt="")
-															//- .d-flex.flex-column.flex-sm-row.align-items-start.align-items-md-center.d-md-none.mb-2
-															//- 	.c-product-card__price.c-product-card__price_old 2772
-															//- 	.c-product-card__price.c-product-card__price_new 1 990
-															//- .c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
-														.c-table__cell.d-flex.align-items-end.flex-column.justify-content-center
+															.d-flex.mt-3
+																.d-block.pr-3.pr-lg-0
+																	.c-product-card__img-wrap.js-product-lightbox.mb-2.d-lg-none
+																		.c-product-card__sale 15%
+																		a(href="../img/content/option.jpg").c-product-card__img
+																			img(src=require("../img/content/option.jpg"), alt="")
+																.d-block
+																	.c-product-card__subtitle Арт.  23370001
+																	.c-table__cell.d-flex.align-items-end.flex-column.justify-content-center.d-md-none
+																		.c-product-card__price.c-product-card__price_old 2772
+																		.c-product-card__price.c-product-card__price_new 1 990
+														.c-table__cell.d-none.d-md-flex.align-items-end.flex-column.justify-content-center
 															.c-product-card__price.c-product-card__price_old 2772
 															.c-product-card__price.c-product-card__price_new 1 990
-											a(href="#").c-filtered-products__load-more.c-load-more.d-block
-												span.c-filtered-products__load-more-txt.c-load-more__txt показать еще 10
+											a(href="#").c-load-more.c-load-more_block
+												span.c-load-more__txt показать еще 10
 												.c-load-more__preloader
 													.c-load-more__preloader-square
 													.c-load-more__preloader-square
 													.c-load-more__preloader-square
 													.c-load-more__preloader-square
+									.c-product__order-info.c-product__order-info_mobile.d-lg-none.d-flex.align-items-center.flex-column.justify-content-between
+											.d-flex.w-100.justify-content-center
+												.c-product__choosen
+													| Выбрано:
+													a(href="#!").c-product__choosen-count 0 товара
+											.d-flex.align-items-center.justify-content-center.w-100
+												a(href="#").c-btn.c-btn_primary.c-btn_bordered.mr-3 В КОРЗИНУ
+												.c-product__price.mb-0
+													.c-product__price-number.c-product__price-number_old#c-product__price-mobile-bottom-number_old 0
+													.c-product__price-number.c-product__price-number_new#c-product__price-mobile-bottom-number_new 0
 									.c-share
 										img(src=require("../img/content/installment.jpg"), alt="")
 									.c-product-description
@@ -632,35 +575,8 @@ html(lang="ru")
 												.swiper-pagination
 											.swiper-button-prev
 											.swiper-button-next
+
 				include templates/footer.pug
-		.modal.fade.c-modal#pickup-modal(aria-hidden="true").c-modal_map
-			.modal-dialog.modal-dialog-centered.c-modal__dialog
-				.modal-content.c-modal__content
-					.modal-header.c-modal__header
-						button(data-dismiss="modal" aria-label="Close").close
-					.modal-body.c-modal__body
-						.row
-							.col-md-8
-								<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A2d83b20ffab53983a879aa5e747ccb35c97b85a0d0f19c104ff479d439f485eb&amp;width=100%25&amp;height=463&amp;lang=ru_RU&amp;scroll=false"></script>
-							.col-md-4.d-flex.align-items-center.pl-5
-								.d-block.pb-4.pt-4.pb-md-0.pt-md-0
-									h4.mb-5.pb-3 Пункт самовывоза
-									.mb-4.pb-2
-										b.d-block.mb-2 Адрес склада:
-										p.mb-0 43й км МКАД, 1а, ворота 5
-									.d-block
-										b.d-block.b.mb-1.pb-1 Время работы:
-										.d-flex.mb-2.pb-1
-											each day in [1,2,3,4,5,6]
-												.c-day-block.flex-shrink-0
-											-;
-											.c-day-block_holiday
-										.d-flex.align-items-center
-											.c-day-block.flex-shrink-0.mr-2
-											span.text-success 9:00 - 18:00
-										.d-flex.align-items-center
-											.c-day-block.c-day-block_holiday.flex-shrink-0.mr-2
-											span.text-danger выходной
 
 
 		.modal.fade.c-modal#fast-delivery-modal(aria-hidden="true").c-modal_form
@@ -672,7 +588,7 @@ html(lang="ru")
 					.modal-body.c-modal__body
 						p.mb-4.text-center Укажите желаемую дату доставки <br> и мы свяжемся с Вами
 						form.c-form.c-form_modal
-							input(type="text" placeholder="Укажите желаемую дату").form-control.c-form__field.js-date-field
+							input(type="text" placeholder="Комментарий").form-control.c-form__field
 							input(type="tel").form-control.c-form__field.js-phone-field.mb-4
 							.d-flex.justify-content-center
 								button.c-btn.c-btn_secondary.c-form__btn.mt-0 жду звонка
@@ -714,8 +630,6 @@ html(lang="ru")
 													div(data-src="../img/content/product.jpg").js-product-preview-item
 														img(src=require("../img/content/product.jpg"), alt="").c-product-preview__thumbnail
 
-										button.c-product-preview__zoom.js-product-preview-btn
-
 									.c-product-preview__thumbnails
 										.swiper-container.js-product-preview-thumbnails
 											.swiper-wrapper
@@ -725,7 +639,7 @@ html(lang="ru")
 													img(src=require("../img/content/product-thumbnail2.jpg"), alt="").c-product-preview__thumbnail
 												.swiper-slide
 													img(src=require("../img/content/product-thumbnail.jpg"), alt="").c-product-preview__thumbnail
-										.swiper-button-next
+										.swiper-button-next.d-none.d-lg-bllock
 							.col-md-6.col-lg-5
 								.c-product-info__description
 											table.c-table

@@ -1,6 +1,9 @@
 .c-product {
 	&__header {
 		margin-bottom: 24px;
+		@media (max-width:$bp-sm) {
+			margin-bottom: 12px;
+		}
 	}
 
 	&__info{
@@ -30,11 +33,15 @@
 	}
 
 	&__title {
-		font-family: 'Roboto Slab';
+		font-family: 'Cuprum';
 		font-size: 1.4375rem;
 
 		@media (max-width:$bp-xl) {
 			margin-bottom: 35px;
+		}
+
+		@media (max-width:$bp-md) {
+			margin-bottom: 16px;
 		}
 
 	}
@@ -74,6 +81,10 @@
 		@media (max-width:$bp-xl) {
 			padding: 32px 0;
 			margin-bottom: 30px;
+		}
+
+		@media (max-width:$bp-xl) {
+			padding: 16px 0;
 		}
 
 		.c-product__choosen {
@@ -171,7 +182,7 @@
 		&_new {
 			font-size: 1.875rem;
 			line-height: 1;
-			color: #f14949;
+			color: #f3932c;
 		}
 
 	}

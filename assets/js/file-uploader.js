@@ -1,7 +1,7 @@
 import $ from 'jquery';
 
 $(function(){
-	var button = $('<button>').text('Удалить').addClass('c-btn c-btn_danger ml-2 js-file-uploader-action_remove');
+	var button = $('<span>').text('Удалить').addClass('ml-2 js-file-uploader-action_remove h-text-blue h-cursor-pointer');
 	$('.js-file-uploader input').on('change', function(event){
 		var file = event.target.files[0];
 		var actionRemove = $(this).parent().find('.js-file-uploader-action_remove');

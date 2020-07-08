@@ -3,11 +3,13 @@
 	margin-bottom: 32px;
 	position: relative;
 
-	@media (max-width:$bp-sm) {
+	@media (max-width:$bp-md) {
 		font-size: 0.6875rem;
 		display: flex;
 		padding: 5px 0;
+		margin-bottom: 16px;
 	}
+
 	@media (max-width:$bp-sm-2) {
 		align-items: center;
 	}

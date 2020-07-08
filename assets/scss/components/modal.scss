@@ -43,7 +43,12 @@
 
 	&_map{
 		.modal-body{
-			padding: 0;
+			padding: 40px 10px;
+			padding-bottom: 10px;
+		
+			@media (min-width: $bp-xl) {
+				padding: 0;
+			}
 		}
 		.modal-dialog{
 			max-width: 1170px;

@@ -14,7 +14,7 @@
 	}
 	&__sale{
 		background-color: #f3932c;
-		font-family: "Roboto Slab";
+		font-family: "Cuprum";
 		font-size: 1.125rem;
 		font-weight: 700;
 		width: 48px;
@@ -30,7 +30,7 @@
 	&__delivery{
 		display: flex;
 		align-items: center;
-		font-family: "Roboto Slab";
+		font-family: "Cuprum";
 		font-size: 1.0625rem;
 		font-weight: 700;
 		font-style: italic;
@@ -108,7 +108,7 @@
 	&__price{
 		font-size: 1.125rem;
 		font-weight: 700;
-		font-family: "Roboto Slab";
+		font-family: "Cuprum";
 		&:after{
 		    content: 'a';
 		    display: inline-block;

@@ -30,9 +30,9 @@
 	&__link {
 		font-size: 0.75rem;
 		line-height: 1.5;
-		@media (max-width: $bp-sm) {
-			font-size: 0.625rem;
-		}
+		// @media (max-width: $bp-sm) {
+		// 	font-size: 0.625rem;
+		// }
 	}
 
 	&__btn {
@@ -57,12 +57,12 @@
 			}
 		}
 		
-		@media (max-width:$bp-lg) {
-			font-size: 0.6875rem !important;
-		}
-		@media (max-width: $bp-sm) {
-			font-size: 0.5625rem !important;
-		}
+		// @media (max-width:$bp-lg) {
+		// 	font-size: 0.6875rem !important;
+		// }
+		// @media (max-width: $bp-sm) {
+		// 	font-size: 0.5625rem !important;
+		// }
 
 		#{$parent}__item_cart &{
 			padding-right: 15px;

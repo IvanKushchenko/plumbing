@@ -65,6 +65,10 @@
 		right: 80px;
 		top: 20px;
 		z-index: 2;
+
+		@media (max-width: $bp-md) {
+			right: 40px;
+		}
 	}
 
 	&__label{
