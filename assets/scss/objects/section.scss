@@ -8,11 +8,11 @@
 	&__title{
 		font-size: 1.4375rem;
 		color: #222222;
-		font-family: "Cuprum";
+		font-family: $ff-secondary;
 		margin: 0;
 	}
 	&__navigation{
-		font-family: "PT Sans";
+		font-family: $ff-secondary;
 		font-style: italic;
 		font-size: 1rem;
 		color: #6493ad;

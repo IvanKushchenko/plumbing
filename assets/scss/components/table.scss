@@ -319,7 +319,7 @@
 	
 
 	&__header {
-		font-family: 'Cuprum';
+		font-family: $ff-secondary;
 		height: 32px;
 		padding-left: 30px;
 		display: flex;
@@ -339,7 +339,7 @@
 		}
 		a {
 			margin-left: 15px;
-			font-family: "PT Sans";
+			font-family: $ff-secondary;
 			font-size: 0.75rem;
 			font-weight: 400;
 		}
@@ -368,7 +368,7 @@
 
 		@media (max-width:$bp-sm) {
 			padding-right: 0;
-			padding-top: 16px;
+			// padding-top: 16px;
 		}
 
 	}

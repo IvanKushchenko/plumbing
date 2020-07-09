@@ -8,7 +8,7 @@
 	}
 
 	&__headline{
-		font-family: 'Roboto Slab';
+		font-family: $ff-secondary;
 		font-size: 1.4375rem;
 		margin-bottom: 30px;
 		padding-bottom: 23px;
@@ -39,11 +39,12 @@
 	&__user{
 		font-weight: bold;
 		margin-bottom: 6px;
-		font-size: 20px;
+		font-size: 1.25rem;
+		font-family: $ff-primary;
 	}
 
 	&__meta{
-		font-size: 13px;
+		font-size: 0.8125rem;
 	}
 
 	&__text{

@@ -23,7 +23,7 @@
 	    font-size: 0.9rem;
 
 	    &_not-available{
-	    	background: #dc3545;
+	    	background: #f1ca49;
 	    }
 	}
 
@@ -339,7 +339,7 @@
 		position: absolute;
 		right: 4px;
 		top: 7px;
-		font-family: "Roboto Slab";
+		font-family: $ff-secondary;
 		font-size: 0.875rem;
 		font-weight: 700;
 		letter-spacing: 0.59px;
@@ -353,7 +353,7 @@
 	}
 
 	&__price {
-		font-family: "Roboto Slab";
+		font-family: $ff-secondary;
 		font-size: 0.9375rem;
 		line-height: 1.2;
 		text-transform: lowercase;

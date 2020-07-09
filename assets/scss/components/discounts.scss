@@ -6,7 +6,7 @@
 		align-items: flex-start;
 	}
 	&__price{
-		font-family: "Roboto Slab";
+		font-family: $ff-secondary;
 		position: relative;
 		margin-bottom: -7px;
 		&:before{

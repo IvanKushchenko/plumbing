@@ -6,8 +6,8 @@ import selectric from 'selectric';
 require('./products');
 require('./tips');
 require('./file-uploader');
-require('jquery-mask-plugin');
-import CountUp from 'countup.js';
+require('jquery-mask-plugin').default;
+import { CountUp } from 'countup.js';
 import Swiper from 'swiper';
 
 $(function() {
@@ -16,14 +16,16 @@ $(function() {
 
 	var totalPrices = [];
 	var CountUpOptions = {
-		separator: ' '
+		separator: ' ',
+		duration: 0
 	};
-	 $('.c-table_basket .c-product-card').each(function(index, item){
-	 	var elName = "product-card-total-" + (index + 1);
-	 	var elNameMobile = "product-card-total-mobile-" + (index + 1);
-	 	totalPrices[elName] = new CountUp(elName, 0, 0, 0, 0, CountUpOptions);
-	 	totalPrices[elNameMobile] = new CountUp(elNameMobile, 0, 0, 0, 0, CountUpOptions);
-	 })
+
+	 // $('.c-table_basket .c-product-card').each(function(index, item){
+	 // 	var elName = "product-card-total-" + (index + 1);
+	 // 	var elNameMobile = "product-card-total-mobile-" + (index + 1);
+	 // 	new CountUp(elName, 0, {duration: 0});
+	 // 	new CountUp(elNameMobile, 0, {duration: 0});
+	 // })
 
 
 	var mainTotalPrice = new CountUp('main-total-price', 0,0,0,0, CountUpOptions);
@@ -50,15 +52,18 @@ $(function() {
 			var discountPercents = $('.js-basket-discount').attr('data-discount-percent');
 			var price = +parent.find('.c-product-card__cost').eq(0).text();
 			parent.find('.c-product-card__total').attr('data-total', +field.val() * price);
-			totalPrices[parent.find('.c-product-card__total:visible').attr('id').replace('#', '')].update(+field.val() * price);
+			new CountUp(parent.find('.c-product-card__total:visible').attr('id').replace('#', ''), +field.val() * price, {duration: 0, separator: ' '}).start();
+	 		new CountUp(parent.find('.c-product-card__total:visible').attr('id').replace('#', '') + '-mobile', +field.val() * price, {duration: 0, separator: ' '}).start();
+			// totalPrices[parent.find('.c-product-card__total:visible').attr('id').replace('#', '')].update(+field.val() * price);
 			var totalPrice = 0;
 			$('.c-table_basket .c-product-card').each(function(index, item){
 				item = $(item).find('.c-product-card__total').eq(0);
 				if(!$(item).attr('data-total')) return;
 				totalPrice += +$(item).attr('data-total');
 			});
-			mainTotalPrice.update(totalPrice);
-			mainTotalPriceNew.update(totalPrice - ((totalPrice * discountPercents) / 100));	
+			new CountUp('main-total-price', totalPrice, {duration: 0, separator: ' '}).start();
+			new CountUp('main-total-price-new', totalPrice - ((totalPrice * discountPercents) / 100), {duration: 0, separator: ' '}).start();
+
 		}
 	})
 
@@ -68,17 +73,17 @@ $(function() {
 		var discountPercents = $('.js-basket-discount').attr('data-discount-percent');
 		var price = +parent.find('.c-product-card__cost').eq(0).text();
 		parent.find('.c-product-card__total').attr('data-total', +field.val() * price);
-		totalPrices[parent.find('.c-product-card__total:visible').attr('id').replace('#', '')].update(+field.val() * price);
+		// totalPrices[parent.find('.c-product-card__total:visible').attr('id').replace('#', '')].update(+field.val() * price);
+		new CountUp(parent.find('.c-product-card__total:visible').attr('id').replace('#', ''), +field.val() * price, {separator: ' '}).start();
+		new CountUp(parent.find('.c-product-card__total:visible').attr('id').replace('#', '') + '-mobile', +field.val() * price, {separator: ' '}).start();
 		var totalPrice = 0;
 		$('.c-table_basket .c-product-card').each(function(index, item){
 			item = $(item).find('.c-product-card__total').eq(0);
 			if(!$(item).attr('data-total')) return;
 			totalPrice += +$(item).attr('data-total');
 		});
-		mainTotalPrice.update(totalPrice);
-		mainTotalPriceNew.update(totalPrice - ((totalPrice * discountPercents) / 100));
-		// mainTotalPriceFixed.update(totalPrice);
-		// mainTotalPriceFixedNew.update(totalPrice - ((totalPrice * discountPercents) / 100));
+		new CountUp('main-total-price', totalPrice, {separator: ' '}).start();
+		new CountUp('main-total-price-new', totalPrice - ((totalPrice * discountPercents) / 100), {separator: ' '}).start();
 	});
 
 
@@ -90,17 +95,16 @@ $(function() {
 		var discountPercents = $('.js-basket-discount').attr('data-discount-percent');
 		var price = +parent.find('.c-product-card__cost').eq(0).text();
 		parent.find('.c-product-card__total').attr('data-total', +field.val() * price);
-		totalPrices[parent.find('.c-product-card__total:visible').attr('id').replace('#', '')].update(+field.val() * price);
+		new CountUp(parent.find('.c-product-card__total:visible').attr('id').replace('#', ''), 0, {separator: ' '}).update(+field.val() * price);
+		new CountUp(parent.find('.c-product-card__total:visible').attr('id').replace('#', '') + '-mobile', 0, {separator: ' '}).update(+field.val() * price);
 		var totalPrice = 0;
 		$('.c-table_basket .c-product-card').each(function(index, item){
 			item = $(item).find('.c-product-card__total').eq(0);
 			if(!$(item).attr('data-total')) return;
 			totalPrice += +$(item).attr('data-total');
 		})
-		mainTotalPrice.update(totalPrice);
-		mainTotalPriceNew.update(totalPrice - ((totalPrice * discountPercents) / 100));
-		// mainTotalPriceFixed.update(totalPrice);
-		// mainTotalPriceFixedNew.update(totalPrice - ((totalPrice * discountPercents) / 100));
+		new CountUp('main-total-price', totalPrice, {separator: ' '}).start();
+		new CountUp('main-total-price-new', totalPrice - ((totalPrice * discountPercents) / 100), {separator: ' '}).start();
 	})
 
 	$(".c-number-counter__action_up").click(function(){
@@ -112,20 +116,18 @@ $(function() {
 		var price = parseInt(parent.find('.c-product-card__cost').eq(0).text());
 		parent.find('.c-product-card__total').attr('data-total', +field.val() * price);
 
-		totalPrices[parent.find('.c-product-card__total:visible').attr('id').replace('#', '')].update(field.val() * price);
+		new CountUp(parent.find('.c-product-card__total:visible').attr('id').replace('#', ''), +field.val() * price, {separator: ' '}).start();
+		new CountUp(parent.find('.c-product-card__total:visible').attr('id').replace('#', '') + '-mobile', +field.val() * price, {separator: ' '}).start();
 
 		var totalPrice = 0;
 		$('.c-table_basket .c-product-card').each(function(index, item){
 			item = $(item).find('.c-product-card__total').eq(0);
 			if(!$(item).attr('data-total')) return;
 			totalPrice += +$(item).attr('data-total');
-		})
+		});
 
-		mainTotalPrice.update(totalPrice);
-	
-		mainTotalPriceNew.update(totalPrice - ((totalPrice * discountPercents) / 100));
-		mainTotalPriceFixed.update(totalPrice);
-		mainTotalPriceFixedNew.update(totalPrice - ((totalPrice * discountPercents) / 100));
+		new CountUp('main-total-price', totalPrice, {separator: ' '}).start();
+		new CountUp('main-total-price-new', totalPrice - ((totalPrice * discountPercents) / 100), { separator: ' '}).start();
 	})
 
 	$('.js-order-checkout-expand-close').click(function(e){
@@ -527,29 +529,31 @@ $(function() {
 
 
     function orderCheckoutInfo() {
-        var orderInfo = ($('.c-product__order-info_desktop').is(":visible")) ? $('.c-product__order-info_desktop') : $('.c-product__order-info_mobile');
+        var orderInfo =$('.c-product__order-info_desktop');
         if(!orderInfo.length) return true;
-        var productCheckoutStatic = $('.c-product__order-checkout.js-product-order-checkout-static');
+        var productCheckoutStatic = $('.js-product-order-checkout-static');
         var productCheckoutFixed = $('.js-product-order-checkout-fixed');
         productCheckoutFixed.css({
             'left': orderInfo.offset().left + 'px',
-            'width': ($(window).width() <= 992) ? orderInfo.parent().width() + 40 + 'px' : orderInfo.parent().width() + 'px'
+            'width': orderInfo.outerWidth() + 'px'
         })
 
         function checkPosAndHide() {
-            if ($(window).scrollTop() + $(window).height() < productCheckoutStatic.offset().top && $(window).scrollTop() > orderInfo.offset().top) {
+            if ($(window).scrollTop() > (productCheckoutStatic.offset().top + productCheckoutStatic.height())) {
                 productCheckoutFixed.show();
             } else {
                 productCheckoutFixed.hide();
             }
         }
+
         checkPosAndHide();
+
         $(window).scroll(function() {
             checkPosAndHide();
 
         })
     }
-    // orderCheckoutInfo();
+    orderCheckoutInfo();
 
     function floatBtnPos() {
         var page = $('.js-page');
@@ -561,7 +565,7 @@ $(function() {
     }
     floatBtnPos();
     $(window).resize(function() {
-    	// orderCheckoutInfo();
+    	orderCheckoutInfo();
         floatBtnPos();
     })
 

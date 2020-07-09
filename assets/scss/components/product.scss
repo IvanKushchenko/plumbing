@@ -27,13 +27,19 @@
 		font-size: 0.875rem;
 		line-height: 1.4;
 
+		&_loan{
+			img{
+				max-width: 23px;
+			}
+		}
+
 		&:not(:last-child){
 			margin-bottom: 14px;
 		}
 	}
 
 	&__title {
-		font-family: 'Cuprum';
+		font-family: $ff-secondary;
 		font-size: 1.4375rem;
 
 		@media (max-width:$bp-xl) {
@@ -87,6 +93,20 @@
 			padding: 16px 0;
 		}
 
+		&_mobile{
+		    cursor: default;
+		    position: fixed;
+		    bottom: 0;
+		    z-index: 240;
+		    margin: 0;
+		    display: flex;
+		    align-items: center;
+
+		    @media (min-width: $bp-md) {
+				display: none !important;
+		    }
+		}
+
 		.c-product__choosen {
 			@media (max-width:$bp-xl) {
 				margin-bottom: 20px;
@@ -107,7 +127,7 @@
 	}
 	&__choosen {
 		margin-top: 3px;
-		font-family: "Roboto Slab";
+		font-family: $ff-secondary;
 		display: flex;
 		align-items: flex-end;
 		line-height: 1;
@@ -126,7 +146,6 @@
 		border-radius: 20px;
 		height: 40px;
 		margin-bottom: 8px;
-		margin-top: 10px;
 		font-size: 0.875rem;
 	}
 
@@ -137,11 +156,10 @@
 	}
 
 	&__price {
-		font-family: "Roboto Slab";
+		font-family: $ff-secondary;
 		line-height: 27px;
 		display: flex;
 		align-items: center;
-		flex-direction: column;
 		// text-transform: uppercase;
 		line-height: 1.7;
 		margin-bottom: 25px;
@@ -149,7 +167,7 @@
 	}
 
 	&__price-number {
-		font-family: "Roboto Slab";
+		font-family: $ff-secondary;
 		font-size: 1rem;
 		text-transform: initial;
 

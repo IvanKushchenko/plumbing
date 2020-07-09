@@ -12,7 +12,7 @@
 		}
 	}
 	&__description-body {
-		font-family: "Open Sans";
+		font-family: $ff-primary;
 		font-size: 0.8125rem;
 		line-height: 23px;
 
@@ -39,7 +39,7 @@
 	}
 
 	&__description-title {
-		font-family: "Roboto Slab";
+		font-family: $ff-secondary;
 		font-size: 1.1875rem;
 		margin-bottom: 16px;
 	}

@@ -1,33 +1,17 @@
 import $ from 'jquery';
-import CountUp from 'countup.js';
+import { CountUp } from 'countup.js';
 import lightGallery from 'lightgallery';
 
 $(function() {
+
+
 	var CountUpOptions = {
-		separator: ' '
+		init: false,
+		separator: ' ',
 	};
+
     var products = [];
-    var productsNewCostCounter = new CountUp("c-product__price-number_new", 0, 0, 0, 0, CountUpOptions);
-    var productsOldCostCounter = new CountUp("c-product__price-number_old", 0, 0, 0, 0, CountUpOptions);
-    var productsMobileOldCostCounter = new CountUp("c-product__price-mobile-number_old", 0, 0, 0, 0, CountUpOptions);
-    var productsMobileNewCostCounter = new CountUp("c-product__price-mobile-number_new", 0, 0, 0, 0, CountUpOptions);
-    var productsMobileBottomOldCostCounter = new CountUp("c-product__price-mobile-bottom-number_old", 0, 0, 0, 0, CountUpOptions);
-    var productsMobileBottomNewCostCounter = new CountUp("c-product__price-mobile-bottom-number_new", 0, 0, 0, 0, CountUpOptions);
-    var productsFixedCostCounter = new CountUp("c-product__price-number-fixed", 0, 0, 0, 0, CountUpOptions);
-    var productsFixedMobileCostCounter = new CountUp("c-product__price-number-fixed-mobile", 0, 0, 0, 0, CountUpOptions);
-    var productsStaticCostCounter = new CountUp("c-product__price-number-static", 0, 0, 0, 0, CountUpOptions);
-    var productsStaticMobileCostCounter = new CountUp("c-product__price-number-static-mobile", 0, 0, 0, 0, CountUpOptions);
-    var productsFixedOldCostCounter = new CountUp("c-product__price-number-fixed_old", 0, 0, 0, 0, CountUpOptions);
-    var productsFixedNewCostCounter = new CountUp("c-product__price-number-fixed_new", 0, 0, 0, 0, CountUpOptions);
-    var productsFixedMobileNewCostCounter = new CountUp("c-product__price-number-fixed-mobile_new", 0, 0, 0, 0, CountUpOptions);
-    var productsFixedMobileOldCostCounter = new CountUp("c-product__price-number-fixed-mobile_old", 0, 0, 0, 0, CountUpOptions);
-    var productsStaticOldCostCounter = new CountUp("c-product__price-number-static_old", 0, 0, 0, 0, CountUpOptions);
-    var productsStaticNewCostCounter = new CountUp("c-product__price-number-static_new", 0, 0, 0, 0, CountUpOptions);
-    var productsStaticMobileNewCostCounter = new CountUp("c-product__price-number-static-mobile_new", 0, 0, 0, 0, CountUpOptions);
-    var productsStaticMobileOldCostCounter = new CountUp("c-product__price-number-static-mobile_old", 0, 0, 0, 0, CountUpOptions);
-    var installementCost = new CountUp("installement-cost", 0, 0, 0, 0, CountUpOptions);
-
-
+    
     $('.c-product-card__input:checked').parents('.c-product-card_radio').addClass('is-active');
     $('.c-product-card__input:checked').parents('.c-product-card_checkbox').addClass('is-active');
 
@@ -55,7 +39,7 @@ $(function() {
 		    products.push(product)
 		    addProductToSlider(product);
 		    setTimeout(function(){
-		    	checkoutProducts();
+		    	// checkoutProducts();
 
 		    }, 100)
     		
@@ -259,7 +243,6 @@ $(function() {
         checkoutProducts();
 
         if(!$('.js-checkout-products-fixed .c-checkout-product').length) {
-        	console.log("yeah");
         	 $('.js-product-order-checkout-static').collapse("hide");
         }
        	
@@ -276,11 +259,8 @@ $(function() {
         })
         checkoutProducts();
 
-
-       
-
-        $('.js-checkout-products-fixed')[0].swiper.update();
-        $('.js-checkout-products-static')[0].swiper.update();
+        // $('.js-checkout-products-fixed')[0].swiper.update();
+        // $('.js-checkout-products-static')[0].swiper.update();
     }
 
     function addProductToSlider(product) {
@@ -324,31 +304,65 @@ $(function() {
             resultCost = resultCost + +item['price'].replace(/\D+/g, '');
         });
 
-        installementCost.update(+resultCost / 12);
+        if(!CountUpOptions.init){
+	        new CountUp("installement-cost", +resultCost / 12, { duration: 0.00001, separator: ' '}).start();
+	    } else{
+	        new CountUp("installement-cost", +resultCost / 12, CountUpOptions).start();
+	    }
 
         orderCheckoutBl.find('.c-product__choosen-count').text(products.length + " товара");
-        // orderCheckoutBl.find('.c-product__price-number').text(resultCost);
-    	productsNewCostCounter.update(+resultCost);
-        productsOldCostCounter.update(+resultCost);
-        productsMobileOldCostCounter.update(+resultCost);
-        productsMobileNewCostCounter.update(+resultCost);
-        productsMobileBottomOldCostCounter.update(+resultCost);
-        productsMobileBottomNewCostCounter.update(+resultCost);
-        productsFixedCostCounter.update(+resultCost);
-        productsFixedMobileCostCounter.update(+resultCost);
-        productsStaticCostCounter.update(+resultCost);
-        productsStaticMobileCostCounter.update(+resultCost);
-        productsFixedOldCostCounter.update(+resultCost);
-		productsFixedNewCostCounter.update(+resultCost);
-		productsFixedMobileNewCostCounter.update(+resultCost);
-		productsFixedMobileOldCostCounter.update(+resultCost);
-		productsStaticOldCostCounter.update(+resultCost);
-		productsStaticNewCostCounter.update(+resultCost);
-		productsStaticMobileNewCostCounter.update(+resultCost);
-		productsStaticMobileOldCostCounter.update(+resultCost);
+        if(!CountUpOptions.init){
+	        [
+	        	'c-product__price-number_new',
+	        	'c-product__price-number_old',
+	        	'c-product__price-mobile-number_old',
+	        	'c-product__price-mobile-number_new',
+	        	'c-product__price-mobile-bottom-number_old',
+	        	'c-product__price-mobile-bottom-number_new',
+	        	'c-product__price-number-fixed',
+	        	'c-product__price-number-fixed-mobile',
+	        	'c-product__price-number-static',
+	        	'c-product__price-number-static-mobile',
+	        	'c-product__price-number-fixed_old',
+	        	'c-product__price-number-fixed_new',
+	        	'c-product__price-number-fixed-mobile_new',
+	        	'c-product__price-number-fixed-mobile_old',
+	        	'c-product__price-number-static_old',
+	        	'c-product__price-number-static_new',
+	        	'c-product__price-number-static-mobile_new',
+	        	'c-product__price-number-static-mobile_old',
+	        ].forEach(function(item){
+		        new CountUp(item, +resultCost, {useEasing: false, duration: 0.00001, separator: ' '}).start();
+	        });
+	        CountUpOptions.init = true;
+        } else{
+        	[
+        		'c-product__price-number_new',
+	        	'c-product__price-number_old',
+	        	'c-product__price-mobile-number_old',
+	        	'c-product__price-mobile-number_new',
+	        	'c-product__price-mobile-bottom-number_old',
+	        	'c-product__price-mobile-bottom-number_new',
+	        	'c-product__price-number-fixed',
+	        	'c-product__price-number-fixed-mobile',
+	        	'c-product__price-number-static',
+	        	'c-product__price-number-static-mobile',
+	        	'c-product__price-number-fixed_old',
+	        	'c-product__price-number-fixed_new',
+	        	'c-product__price-number-fixed-mobile_new',
+	        	'c-product__price-number-fixed-mobile_old',
+	        	'c-product__price-number-static_old',
+	        	'c-product__price-number-static_new',
+	        	'c-product__price-number-static-mobile_new',
+	        	'c-product__price-number-static-mobile_old',
+        	].forEach(function(item){
+		        new CountUp(item, +resultCost, CountUpOptions).start();
+	        });
+        }
+
         
     }
-
+    checkoutProducts();
 
 
     $('.c-product-card__remove-btn').click(function(){

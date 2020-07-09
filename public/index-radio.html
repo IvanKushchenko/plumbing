@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>Template</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="css/style.css?585fefb784668cc4e158" rel="stylesheet"></head>
+  <link href="css/style.css?bdba36e041221dad0622" rel="stylesheet"></head>
   <body>
     <div class="container">
       <div class="o-page js-page">
@@ -185,7 +185,7 @@
                       </div>
                       <div class="col-12">
                         <div class="c-product-info__body">
-                          <div class="c-product-info__description collapse show" id="product-info-body">
+                          <div class="c-product-info__description collapse" id="product-info-body">
                             <table class="c-table">
                               <tbody>
                                 <tr>
@@ -235,7 +235,7 @@
                               </tbody>
                             </table>
                           </div>
-                          <div class="d-md-none c-product-info__collapse-toggle js-product-info-collapse-toggle"><a href="#product-info-body" data-toggle="collapse" aria-expanded="true">Свернуть характеристики</a></div>
+                          <div class="d-md-none c-product-info__collapse-toggle js-product-info-collapse-toggle"><a href="#product-info-body" data-toggle="collapse">Показать характеристики</a></div>
                         </div>
                       </div>
                     </div>
@@ -244,14 +244,13 @@
                 <div class="col-sm-6 col-xl-8">
                   <div class="row mb-5">
                     <div class="col-xl-6">
-                      <div class="c-product__order-info c-product__order-info_desktop">
+                      <div class="c-product__order-info c-product__order-info_desktop js-product-order-checkout-static">
                         <div class="d-flex flex-column align-items-center justify-content-center">
                           <div class="c-product__code d-flex align-items-center justify-content-center"><span class="c-product-info__code-txt mr-2">Код товара 32312</span>
                             <div class="c-info"></div>
                           </div>
-                          <div class="c-product__price">
-                            <p class="mb-0">Цена товара</p>
-                            <div class="c-product__price-number c-product__price-number_old" id="c-product__price-number_old">0</div>
+                          <div class="c-product__price d-flex align-items-center">
+                            <div class="c-product__price-number c-product__price-number_old mr-2" id="c-product__price-number_old">0</div>
                             <div class="c-product__price-number c-product__price-number_new" id="c-product__price-number_new">0</div>
                           </div>
                           <div class="c-product__order-actions d-flex flex-column"><a class="c-btn c-btn_secondary c-product__order-action" href="#">В КОРЗИНУ</a><a class="c-btn c-btn_secondary c-product__order-action" href="#" data-toggle="modal" data-target="#order-modal">КУПИТЬ В 1 КЛИК</a></div>
@@ -269,19 +268,15 @@
                         <div class="c-product__meta"><img class="mr-3" src="img/icons/wallet.png" alt="">
                           <p class="mb-0">Оплата: наличные, карта, счет</p>
                         </div>
+                        <div class="c-product__meta c-product__meta_loan"><img class="mr-3" src="img/icons/loan.png" alt="">
+                          <p class="mb-0">Оформить рассрочку от <span class="h-price" id="installement-cost">0</span> в мес.</p>
+                        </div>
                         <div class="c-product__meta"><img class="mr-3" src="img/icons/showroom.png" alt="">
                           <p class="mb-0">Модель бренда <a href="#!" data-toggle="modal" data-target="#pickup-modal">есть в шоуруме</a></p>
                         </div>
                         <div class="c-product__meta"><img class="mr-3" src="img/icons/repair.png" alt="">
                           <p class="mb-0">Установка от 5000</p>
                         </div>
-                      </div>
-                      <div class="c-product__loan ml-xl-2"><img class="mr-3" src="img/icons/loan.png" alt="">
-                        <p class="mb-0">
-                          Оформить онлайн рассрочку от «Покупай <br>
-                          со Сбербанком» <strong class="text-success h-text-md">от </strong><strong class="h-price text-success h-text-md" id="installement-cost">0</strong> в месяц <br>
-                          Первоначальный взнос <strong class="h-price text-success h-text-md">0</strong><br>Переплата <strong class="h-price text-success h-text-md">0</strong>
-                        </p>
                       </div>
                     </div>
                   </div>
@@ -307,7 +302,9 @@
                                 </div>
                               </div>
                               <div class="d-block">
-                                <div class="d-block"><span class="c-product-card__subtitle d-inline-block mr-2">Арт.  23370001</span><span class="mt-2 text-secondary">Под заказ</span></div>
+                                <div class="d-block"><span class="c-product-card__subtitle d-inline-block mr-2">Арт.  23370001</span>
+                                  <div class="mt-2 c-achieve d-inline-block">Под заказ</div>
+                                </div>
                                 <div class="d-flex flex-column flex-sm-row align-items-start align-items-md-center d-md-none mb-2">
                                   <div class="c-product-card__price c-product-card__price_old">2772</div>
                                   <div class="c-product-card__price c-product-card__price_new">2 290</div>
@@ -578,16 +575,8 @@
                         </div></a>
                     </div>
                   </div>
-                  <div class="c-product__order-info c-product__order-info_mobile d-lg-none d-flex align-items-center flex-column justify-content-between">
-                    <div class="d-flex w-100 justify-content-center">
-                      <div class="c-product__choosen">Выбрано:<a class="c-product__choosen-count" href="#!">0 товара</a></div>
-                    </div>
-                    <div class="d-flex align-items-center justify-content-center w-100"><a class="c-btn c-btn_primary c-btn_bordered mr-3" href="#">В КОРЗИНУ</a>
-                      <div class="c-product__price mb-0">
-                        <div class="c-product__price-number c-product__price-number_old" id="c-product__price-mobile-bottom-number_old">0</div>
-                        <div class="c-product__price-number c-product__price-number_new" id="c-product__price-mobile-bottom-number_new">0</div>
-                      </div>
-                    </div>
+                  <div class="c-product__order-info c-product__order-info_mobile justify-content-between px-3 py-2 js-product-order-checkout-fixed">
+                    <div class="c-product__price-number c-product__price-number_new" id="c-product__price-mobile-bottom-number_new">0</div><a class="c-btn c-btn_primary c-btn_bordered" href="#">В КОРЗИНУ</a>
                   </div>
                   <div class="c-share"><img src="img/content/installment.jpg" alt=""></div>
                   <div class="c-product-description">
@@ -1097,5 +1086,5 @@
         </div>
       </div>
     </div>
-  <script type="text/javascript" src="js/script.js?585fefb784668cc4e158"></script></body>
+  <script type="text/javascript" src="js/script.js?bdba36e041221dad0622"></script></body>
 </html>
