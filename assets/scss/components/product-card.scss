@@ -25,6 +25,10 @@
 	    &_not-available{
 	    	background: #f1ca49;
 	    }
+
+	    &_under-order{
+	    	background: $primary;
+	    }
 	}
 
 	&__header {

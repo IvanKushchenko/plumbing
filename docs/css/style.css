@@ -12274,7 +12274,7 @@ h5 {
 
 .c-product__meta {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   font-size: 0.875rem;
   line-height: 1.4;
 }
@@ -12419,7 +12419,7 @@ h5 {
   display: flex;
   align-items: center;
   line-height: 1.7;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 
 .c-product__price-number {
@@ -13727,6 +13727,10 @@ h5 {
 
 .c-product-card__img-label_not-available {
   background: #f1ca49;
+}
+
+.c-product-card__img-label_under-order {
+  background: #007bff;
 }
 
 .c-product-card__header {
