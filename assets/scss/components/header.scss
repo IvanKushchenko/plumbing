@@ -60,7 +60,7 @@
 
 		&_mobile {
 			display: none !important;
-			margin-bottom: 13px;
+			margin: 10px 0;
 			justify-content: space-between;
 
 			.c-nav {
@@ -79,7 +79,7 @@
 				display: flex !important;
 			}
 
-			@media (max-width:$bp-md) {
+			@media (max-width: $bp-sm-2) {
 				margin-bottom: 0;
 			}
 

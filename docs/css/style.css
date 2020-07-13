@@ -11305,7 +11305,6 @@ h5 {
   text-align: center;
   text-decoration: none;
   margin: 0 3px;
-  line-height: 22px;
   padding: 0 5px;
 }
 
@@ -11789,7 +11788,7 @@ h5 {
 
 .c-header__nav_mobile {
   display: none !important;
-  margin-bottom: 13px;
+  margin: 10px 0;
   justify-content: space-between;
 }
 
@@ -11809,7 +11808,7 @@ h5 {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 450px) {
   .c-header__nav_mobile {
     margin-bottom: 0;
   }
