@@ -12355,6 +12355,7 @@ h5 {
   outline: none;
   height: auto;
   padding: 13px 22px;
+  color: initial;
 }
 
 @media (min-width: 767px) {
