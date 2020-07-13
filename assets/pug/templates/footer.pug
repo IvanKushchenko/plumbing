@@ -49,7 +49,7 @@ include icons.pug
 						вы даете согласие с Политкой обработки 
 						персональных данных.
 					.d-flex.justify-content-center
-						button.c-btn.c-btn_secondary.c-form__btn.mt-0 жду звонка
+						button.c-btn.c-btn_secondary.c-btn_lg.mt-0 жду звонка
 
 .modal.c-modal.c-modal_contact-us.fade#contact-us-modal(aria-hidden="false")
 	.modal-dialog.modal-dialog-centered
@@ -106,8 +106,8 @@ footer.c-footer
 	.c-footer__top.d-flex.flex-column.flex-xl-row
 		.d-flex.flex-column.flex-md-row
 			.d-flex.flex-column.align-items-center.align-items-md-start
-				img(src=require("../../img/icons/logo.svg"), alt="").c-footer__logo
-				.c-footer__copyright ®SanBest, 2019
+				img(src=require("../../img/icons/logo-sanbest.png"), alt="").c-footer__logo
+				.c-footer__copyright ®SanBest, 2020
 			
 			.d-flex.d-lg-none.flex-wrap.flex-md-nowrap.flex-row.align-items-center.align-md-items-start
 				.c-footer__col.w-100
@@ -132,7 +132,7 @@ footer.c-footer
 							.
 								Посёлок Заречье, Торговая ул., с2, ТЦ "Элитстройматериалы", 1 этаж, место А-18
 								с 10.00 - 20.00 без выходных
-						a(href="#map" data-toggle="collapse" aria-expanded="false") Показать на карте
+						a(href="#map" data-toggle="collapse" aria-expanded="false").c-footer__map-link Показать на карте
 					
 			.d-none.d-lg-flex
 				.c-footer__col.c-footer__col_nav
@@ -150,12 +150,12 @@ footer.c-footer
 						a(href="tel:74955653588") +7 (495) 565 35 88
 						a(href="mailto:sale@sanbest.ru") sale@sanbest.ru
 					a(href="#").c-footer__privacy-link Политика конфиденциальности
-				.c-footer__col.c-footer__col_placement.d-flex.flex-column.justify-content-between
+				.c-footer__col.c-footer__col_placement.d-flex.flex-column.justify-content-between.align-items-start
 					p
 						.
 							Посёлок Заречье, Торговая ул., с2, ТЦ "Элитстройматериалы", 1 этаж, место А-18
 							с 10.00 - 20.00 без выходных
-					a(href="#map" data-toggle="collapse" aria-expanded="true") Показать на карте
+					a(href="#map" data-toggle="collapse" aria-expanded="true").c-footer__map-link Показать на карте
 		.d-none.d-xl-flex
 			.c-footer__col.c-footer__col_cards
 				.row

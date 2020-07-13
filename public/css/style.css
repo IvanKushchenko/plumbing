@@ -11784,21 +11784,21 @@ h5 {
   font-size: 1rem;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 360px) {
   .c-header__nav_mobile .c-nav__item {
     font-size: 0.8125rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .c-header__nav_mobile .c-nav__item {
-    font-size: 0.75rem;
   }
 }
 
 @media (max-width: 1200px) {
   .c-header__nav_mobile {
     display: flex !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .c-header__nav_mobile {
+    margin-bottom: 0;
   }
 }
 
@@ -12354,6 +12354,18 @@ h5 {
   margin: 0;
   display: flex;
   align-items: center;
+  padding-top: 0;
+  padding-bottom: 0;
+  border: none;
+}
+
+.c-product__order-info_mobile .c-btn {
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  height: auto;
+  padding: 13px 22px;
 }
 
 @media (min-width: 767px) {
@@ -13719,6 +13731,7 @@ h5 {
   color: #fff;
   width: 100%;
   padding: 2px 0;
+  font-family: "Cuprum", "Arial", sans-serif;
   left: 0;
   bottom: 0;
   text-align: center;
@@ -14009,7 +14022,7 @@ h5 {
   font-size: 0.9375rem;
   text-transform: uppercase;
   color: #6493ad;
-  font-family: "Open Sans";
+  font-family: "Cuprum", "Arial", sans-serif;
   margin-bottom: 0;
   position: relative;
   z-index: 6;
@@ -14042,7 +14055,7 @@ h5 {
   position: absolute;
   right: 4px;
   top: 7px;
-  font-family: "Cuprum", "Arial", sans-serif;
+  font-family: "Open Sans", "Arial", sans-serif;
   font-size: 0.875rem;
   font-weight: 700;
   letter-spacing: 0.59px;
@@ -14598,7 +14611,7 @@ h5 {
   }
 }
 
-.c-footer a {
+.c-footer a:not(.c-footer__map-link) {
   margin-bottom: 15px;
   display: block;
   text-decoration: none;
@@ -15059,6 +15072,14 @@ h5 {
   .c-preview-product .close {
     top: 20px;
     right: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .c-preview-product .close {
+    width: 30px;
+    height: 30px;
+    background-size: 45%;
   }
 }
 

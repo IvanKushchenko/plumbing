@@ -67,11 +67,8 @@
 				&__item {
 					font-size: 1rem;
 
-					@media (max-width:$bp-lg) {
+					@media (max-width: 360px) {
 						font-size: 0.8125rem;
-					}
-					@media (max-width:$bp-sm) {
-						font-size: 0.75rem;
 					}
 
 				}
@@ -80,6 +77,10 @@
 
 			@media (max-width:$bp-xl) {
 				display: flex !important;
+			}
+
+			@media (max-width:$bp-md) {
+				margin-bottom: 0;
 			}
 
 		}
