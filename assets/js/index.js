@@ -294,7 +294,7 @@ $(function() {
 	})
 	$('.js-price-field').mask("# ##0 000", {reverse: true})
 	$('.js-date-field').mask("00.00.0000")
-	$('.js-phone-field').mask("+7 (000) 000-00-00", {placeholder: "+7"});
+	$('.js-phone-field').mask("+7 (000) 000-00-00", {placeholder: "+7", dataMask: true, watchInputs: true, watchDataMask: true});
 
 	$('.js-price-field').on('input', function(e){
 		var number = $(e.target).text();
