@@ -14645,6 +14645,7 @@ h5 {
   max-width: 120px;
   margin-bottom: 36px;
   margin-right: 60px;
+  width: 100%;
 }
 
 @media (max-width: 1200px) {
