@@ -12221,12 +12221,6 @@ h5 {
   margin-left: 20px !important;
 }
 
-.c-breadcrumbs__item_dropdown {
-  position: relative;
-  margin-right: 35px;
-  display: inline;
-}
-
 .c-breadcrumbs__item_dropdown[aria-expanded="true"] {
   border-bottom: none;
   box-shadow: none;

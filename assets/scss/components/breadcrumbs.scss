@@ -79,9 +79,6 @@
 			}
 		}
 		&_dropdown {
-			position: relative;
-			margin-right: 35px;
-			display: inline;
 			&[aria-expanded="true"]{
 				border-bottom: none;
 				box-shadow: none;
