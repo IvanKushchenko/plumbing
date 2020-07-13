@@ -43,6 +43,8 @@
 		box-shadow: none;
 		width: 100%;
 		height: 100%;
+		position: relative;
+
 		&:after{
 			display: none;
 		}
@@ -179,6 +181,7 @@
 		display: flex;
 		align-items: center;
 		background-image: linear-gradient(to right, rgba(114, 155, 178, 0.17) 0%, rgba(0, 0, 0, 0) 100%);
+		position: relative;
 
 		&_cart{
 			background: #f1ca49;
@@ -194,6 +197,13 @@
 			box-shadow: 1px 4px 16px rgba(2, 0, 0, 0.34);
 			right: 0 !important;
 			left: auto !important;
+			top: 35px !important;
+			width: 100vw;
+			transform: none !important;
+
+			@media (min-width: $bp-sm) {
+				width: 400px;
+			}
 			
 			&__body {
 				max-height: 600px;

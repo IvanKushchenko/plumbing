@@ -11263,6 +11263,7 @@ h5 {
   box-shadow: none;
   width: 100%;
   height: 100%;
+  position: relative;
 }
 
 .c-navbar__btn:after {
@@ -11415,6 +11416,7 @@ h5 {
   display: flex;
   align-items: center;
   background-image: linear-gradient(to right, rgba(114, 155, 178, 0.17) 0%, rgba(0, 0, 0, 0) 100%);
+  position: relative;
 }
 
 .c-navbar__item_cart {
@@ -11431,6 +11433,15 @@ h5 {
   box-shadow: 1px 4px 16px rgba(2, 0, 0, 0.34);
   right: 0 !important;
   left: auto !important;
+  top: 35px !important;
+  width: 100vw;
+  transform: none !important;
+}
+
+@media (min-width: 576px) {
+  .c-navbar__item .dropdown-menu {
+    width: 400px;
+  }
 }
 
 .c-navbar__item .dropdown-menu__body {
@@ -16973,6 +16984,7 @@ h5 {
 
 .c-navbar-product__body {
   max-width: 230px;
+  padding-right: 20px;
 }
 
 .c-navbar-product__footer {
