@@ -12657,10 +12657,6 @@ h5 {
   position: relative;
 }
 
-.c-product-preview__thumbnails .swiper-container {
-  padding-right: 80px;
-}
-
 .c-product-preview__thumbnails .swiper-slide {
   border: 2px solid transparent;
   border-radius: 2px;
