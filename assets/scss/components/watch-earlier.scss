@@ -92,8 +92,6 @@
 		}
 
 		&__title {
-			padding: 0 10px;
-
 			@media (max-width:$bp-md) {
 				display: none;
 			}

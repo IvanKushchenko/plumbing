@@ -305,12 +305,14 @@
 	&__title {
 		font-size: 0.9375rem;
 		text-transform: uppercase;
-		color: #6493ad;
 		font-family: $ff-secondary;
 		margin-bottom: 0;
 		position: relative;
 		z-index: 6;
 
+		a{
+			color: #6493ad;
+		}
 		// @media (max-width:$bp-md) {
 		// 	pointer-events: none;
 		// }
@@ -358,7 +360,7 @@
 	}
 
 	&__price {
-		font-family: $ff-secondary;
+		font-family: $ff-primary;
 		font-size: 0.9375rem;
 		line-height: 1.2;
 		text-transform: lowercase;

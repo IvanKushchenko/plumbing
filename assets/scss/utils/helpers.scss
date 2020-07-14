@@ -11,7 +11,8 @@
 }
 
 .h-price {
-	font-family: $ff-secondary;
+	font-family: $ff-primary;
+	font-weight: bold;
 
 	&:after {
 		content: 'a';

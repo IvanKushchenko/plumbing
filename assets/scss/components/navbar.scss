@@ -224,13 +224,17 @@
 
 			&__footer {
 				margin: 0 -30px;
-				padding: 30px;
+				padding-left: 30px;
 				background: #e9f0f4;
 			    text-transform: none;
+				height: 50px;
 
 				.c-btn {
-					height: 39px;
+					height: 100%;
+					border-radius: 0;
 					font-weight: 700;
+					padding: 0 15px;
+					color: initial;
 					font-size: 0.875rem;
 				}
 

@@ -169,7 +169,7 @@
 	}
 
 	&__price {
-		font-family: $ff-secondary;
+		font-family: $ff-primary;
 		line-height: 27px;
 		display: flex;
 		align-items: center;
@@ -180,7 +180,8 @@
 	}
 
 	&__price-number {
-		font-family: $ff-secondary;
+		font-weight: 700;
+		font-family: $ff-primary;
 		font-size: 1rem;
 		text-transform: initial;
 
