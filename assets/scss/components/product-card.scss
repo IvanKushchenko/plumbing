@@ -8,8 +8,12 @@
 
 	&__img {
 		padding: 10px 0;
-
 		box-shadow: none;
+		position: relative;
+		z-index: 6;
+		width: 100%;
+		display: flex;
+		justify-content: center;
 	}
 
 	&__img-label{
@@ -344,6 +348,7 @@
 
 	&__sale {
 		position: absolute;
+		z-index: 7;
 		right: 4px;
 		top: 7px;
 		font-family: $ff-primary;

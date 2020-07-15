@@ -564,6 +564,14 @@ $(function() {
         })
     }
     floatBtnPos();
+    $(window).scroll(function(){
+    	if($(window).scrollTop() + $(window).height() > $('.js-table_options').offset().top + ($('.js-table_options').height() / 2)) {
+    		$('.c-float-btn_options').hide();
+    	}else {
+    		$('.c-float-btn_options').show();
+    	}
+    });
+
     $(window).resize(function() {
     	orderCheckoutInfo();
         floatBtnPos();
