@@ -303,6 +303,7 @@ $(function() {
 		}
 	})
 
+
     var previewThumbnails = new Swiper('.js-product-preview-page .js-product-preview-thumbnails', {
         slidesPerView: 4,
         slidesPerColumn: 2,
