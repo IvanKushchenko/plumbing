@@ -12157,7 +12157,6 @@ h5 {
 @media (max-width: 767px) {
   .c-breadcrumbs {
     font-size: 0.6875rem;
-    display: flex;
     padding: 5px 0;
     margin-bottom: 16px;
   }
@@ -12243,8 +12242,8 @@ h5 {
 
 .c-breadcrumbs__item_dropdown {
   position: relative;
-  top: 2.5px;
-  margin: 0 10px;
+  top: 4px;
+  margin: 0 3px;
   cursor: pointer;
 }
 
@@ -12375,7 +12374,8 @@ h5 {
   box-shadow: none;
   outline: none;
   height: auto;
-  padding: 13px 22px;
+  padding: 15px 25px;
+  font-size: 1rem;
   color: initial;
 }
 
