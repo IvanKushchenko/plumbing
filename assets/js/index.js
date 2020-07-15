@@ -305,7 +305,8 @@ $(function() {
 
     var previewThumbnails = new Swiper('.js-product-preview-page .js-product-preview-thumbnails', {
         slidesPerView: 4,
-        spaceBetween: 15,
+        slidesPerColumn: 2,
+        spaceBetween: 1,
         shortSwipes: false,
         longSwipes: false,
         slideToClickedSlide: true,
