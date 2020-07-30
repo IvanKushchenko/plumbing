@@ -95,8 +95,8 @@ $(function() {
 		var discountPercents = $('.js-basket-discount').attr('data-discount-percent');
 		var price = +parent.find('.c-product-card__cost').eq(0).text();
 		parent.find('.c-product-card__total').attr('data-total', +field.val() * price);
-		new CountUp(parent.find('.c-product-card__total:visible').attr('id').replace('#', ''), 0, {separator: ' '}).update(+field.val() * price);
-		new CountUp(parent.find('.c-product-card__total:visible').attr('id').replace('#', '') + '-mobile', 0, {separator: ' '}).update(+field.val() * price);
+		new CountUp(parent.find('.c-product-card__total:visible').attr('id').replace('#', ''), +field.val() * price, {separator: ' '}).start();
+		new CountUp(parent.find('.c-product-card__total:visible').attr('id').replace('#', '') + '-mobile', +field.val() * price, {separator: ' '}).start();
 		var totalPrice = 0;
 		$('.c-table_basket .c-product-card').each(function(index, item){
 			item = $(item).find('.c-product-card__total').eq(0);
@@ -303,10 +303,10 @@ $(function() {
 		}
 	})
 
-
-    var previewThumbnails = new Swiper('.js-product-preview-page .js-product-preview-thumbnails', {
+    var previewThumbnails = new Swiper($('.js-product-preview-page .js-product-preview-thumbnails'), {
         slidesPerView: 4,
         slidesPerColumn: 2,
+        slidesPerColumnFill: 'row',
         spaceBetween: 1,
         shortSwipes: false,
         longSwipes: false,
