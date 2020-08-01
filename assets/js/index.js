@@ -542,7 +542,9 @@ $(function() {
 
         function checkPosAndHide() {
             if ($(window).scrollTop() > (productCheckoutStatic.offset().top + productCheckoutStatic.height())) {
-                productCheckoutFixed.show();
+                productCheckoutFixed.css({
+                	display: 'flex'
+                });
             } else {
                 productCheckoutFixed.hide();
             }
