@@ -21,43 +21,21 @@
 	}
 
 	&__action{
-		width: 15px;
-		height: 15px;
+		width: 17px;
+		height: 17px;
 		display: block;
 		cursor: pointer;
+		flex-shrink: 0;
 
 		&_up{
 			position: relative;
-			&:after{
-				content: '';
-				width: 15px;
-				height: 1px;
-				background: #000;
-				position: absolute;
-				transform: rotate(90deg) translate(0, -50%);
-				top: 50%;
-			}
-			&:before{
-				content: '';
-				width: 15px;
-				height: 2px;
-				background: #000;
-				position: absolute;
-				transform: translate(0, -50%);
-				top: 50%;
-			}
+			background: url('../img/icons/plus2.svg') center center no-repeat;
+			background-size: contain;
 		}
 		&_down{
 			position: relative;
-			&:after{
-				content: '';
-				width: 15px;
-				height: 1px;
-				background: #000;
-				position: absolute;
-				transform: translate(0, -50%);
-				top: 50%;
-			}
+			background: url('../img/icons/minus2.svg') center center no-repeat;
+			background-size: contain;
 		}
 	}
 }

@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>Template</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="css/style.css?585fefb784668cc4e158" rel="stylesheet"></head>
+  <link href="css/style.css?060a05441bed6a5c26b2" rel="stylesheet"></head>
   <body>
     <div class="container">
       <div class="o-page js-page">
@@ -12,8 +12,8 @@
   <div class="c-navbar__item mr-auto mr-xl-0"><a class="c-navbar__link" href="#">личный кабинет </a><span>: User ID: 2</span></div>
   <div class="c-navbar__item mr-xl-auto">Ваш город:<a class="c-navbar__link" href="#"> Санкт-Петербург</a></div>
   <div class="c-navbar__item c-navbar__item_cart">
-    <div class="c-navbar__btn js-navbar-btn dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><img class="c-navbar__btn-icon" src="img/icons/basket.svg" alt=""><span class="c-navbar__txt flex-shrink-0">В корзине </span><span class="c-navbar__counter">3</span><span class="c-navbar__txt">шт.</span>
-      <div class="dropdown-menu">
+    <div class="c-navbar__btn js-navbar-btn dropdown-toggle" data-toggle="dropdown" aria-expanded="false" data-flip="false" data-boundary="viewport"><img class="c-navbar__btn-icon" src="img/icons/basket.svg" alt=""><span class="c-navbar__txt flex-shrink-0">В корзине </span><span class="c-navbar__counter">3</span><span class="c-navbar__txt">шт.</span>
+      <div class="dropdown-menu dropdown-menu-right">
         <div class="dropdown-menu__body">
           <div class="c-navbar-product">
             <div class="c-navbar-product__img"><img src="img/content/option8.jpg" alt=""></div>
@@ -53,8 +53,8 @@
           </div>
         </div>
         <div class="dropdown-menu__footer d-flex align-items-center justify-content-between">
-          <div class="d-flex align-items-center">Итого:
-            <h4 class="h-price ml-2">42 233</h4>
+          <div class="d-flex align-items-baseline">Итого:
+            <h4 class="h-price ml-2 mb-0">42 233</h4>
           </div><a class="c-btn c-btn_secondary" href="#">перейти в корзину</a>
         </div>
       </div>
@@ -62,7 +62,7 @@
   </div>
 </div>
 <header class="c-header">
-  <div class="c-header__top"><a class="c-header__logo c-logo" href="/"><img class="c-logo__img" src="img/icons/logo-sanbest.png" alt=""></a>
+  <div class="c-header__top"><a class="c-header__logo c-logo" href="/"><img class="c-logo__img" src="img/icons/logo-sanbest.svg" alt=""></a>
     <nav class="c-nav c-header__nav"><a class="c-nav__item" href="#">Бренды</a><a class="c-nav__item" href="#">Доставка и оплата</a><a class="c-nav__item" href="#">Акции</a><a class="c-nav__item" href="#">Контакты</a></nav><a class="c-phone" href="tel:99999">+7 (495) 565 35 88
       <div class="c-phone__text">Работаем круглосуточно</div></a>
     <div class="c-header__actions d-flex align-items-center"><a class="c-btn c-btn_primary d-none d-md-flex" href="#" data-toggle="modal" data-target="#back-call-modal">обратный звонок</a><a class="c-btn c-btn_primary" href="#" data-toggle="modal" data-target="#contact-us-modal">написать нам</a></div>
@@ -889,7 +889,7 @@
         <form class="c-form c-form_modal">
           <div class="c-form__item c-form__item_has-prepend input-group d-flex align-items-start mb-4">
             <div class="input-group-prepend"><img src="img/icons/flag-russia.png" alt=""></div>
-            <input class="form-control c-form__field js-phone-field" type="tel" placeholder="Ваш телефон">
+            <input class="form-control c-form__field js-phone-field" type="tel" placeholder="Ваш телефон" value="+7 ">
           </div>
           <div class="d-flex align-items-center justify-content-center mb-2"><img class="mr-3" src="img/icons/clock-yellow.png" alt="">
             <h4 class="text-secondary mb-0">00:15.00</h4>
@@ -900,7 +900,7 @@
             персональных данных.
           </p>
           <div class="d-flex justify-content-center">
-            <button class="c-btn c-btn_secondary c-form__btn mt-0">жду звонка</button>
+            <button class="c-btn c-btn_secondary c-btn_lg mt-0">жду звонка</button>
           </div>
         </form>
       </div>
@@ -980,8 +980,8 @@
 <footer class="c-footer">
   <div class="c-footer__top d-flex flex-column flex-xl-row">
     <div class="d-flex flex-column flex-md-row">
-      <div class="d-flex flex-column align-items-center align-items-md-start"><img class="c-footer__logo" src="img/icons/logo.svg" alt="">
-        <div class="c-footer__copyright">®SanBest, 2019</div>
+      <div class="d-flex flex-column align-items-center align-items-md-start"><img class="c-footer__logo" src="img/icons/logo-sanbest.svg" alt="">
+        <div class="c-footer__copyright">®SanBest, 2020</div>
       </div>
       <div class="d-flex d-lg-none flex-wrap flex-md-nowrap flex-row align-items-center align-md-items-start">
         <div class="c-footer__col w-100">
@@ -1001,7 +1001,7 @@
             <p>
               Посёлок Заречье, Торговая ул., с2, ТЦ "Элитстройматериалы", 1 этаж, место А-18
               с 10.00 - 20.00 без выходных
-            </p><a href="#map" data-toggle="collapse" aria-expanded="false">Показать на карте</a>
+            </p><a class="c-footer__map-link" href="#pickup-modal" data-toggle="modal" aria-expanded="false">Показать на карте</a>
           </div>
         </div>
       </div>
@@ -1017,11 +1017,11 @@
         <div class="c-footer__col c-footer__col_contacts d-flex flex-column justify-content-between">
           <div><a href="tel:74955653588">+7 (495) 565 35 88</a><a href="mailto:sale@sanbest.ru">sale@sanbest.ru</a></div><a class="c-footer__privacy-link" href="#">Политика конфиденциальности</a>
         </div>
-        <div class="c-footer__col c-footer__col_placement d-flex flex-column justify-content-between">
+        <div class="c-footer__col c-footer__col_placement d-flex flex-column justify-content-between align-items-start">
           <p>
             Посёлок Заречье, Торговая ул., с2, ТЦ "Элитстройматериалы", 1 этаж, место А-18
             с 10.00 - 20.00 без выходных
-          </p><a href="#map" data-toggle="collapse" aria-expanded="true">Показать на карте</a>
+          </p><a class="c-footer__map-link" href="#pickup-modal" data-toggle="modal" aria-expanded="true">Показать на карте</a>
         </div>
       </div>
     </div>
@@ -1188,5 +1188,14 @@
         </div>
       </div>
     </div>
-  <script type="text/javascript" src="js/script.js?585fefb784668cc4e158"></script></body>
+
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/lightgallery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.selectric.min.js"></script>
+  <script type="text/javascript" src="js/jquery.mask.min.js"></script>
+  <script type="text/javascript" src="js/countUp.umd.js"></script>
+  <script type="text/javascript" src="js/swiper.min.js"></script>
+  <script type="text/javascript" src="js/script.js?060a05441bed6a5c26b2"></script>
+</body>
 </html>

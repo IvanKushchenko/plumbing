@@ -30,6 +30,8 @@
 		align-items: center;
 		&:after{
 			right: 0;
+		    top: 50%;
+		    transform: translateY(-50%);
 		}
 		&:before{
 			left: 0;

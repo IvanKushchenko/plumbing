@@ -9,7 +9,6 @@
 	&__info{
 		padding: 17px 30px;
 		border: 1px solid #8cafc2;
-		margin-bottom: 13px;
 	}
 
 	&__loan{
@@ -85,6 +84,7 @@
 		background-color: #ecf2f6;
 		border: 2px solid #e4edf2;
 
+
 		@media (max-width:$bp-xl) {
 			padding: 32px 0;
 			margin-bottom: 30px;
@@ -92,6 +92,13 @@
 
 		@media (max-width:$bp-xl) {
 			padding: 16px 0;
+		}
+	
+		&_desktop{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
 		}
 
 		&_mobile{
@@ -146,7 +153,7 @@
 		display: flex;
 		align-items: flex-end;
 		line-height: 1;
-		margin-bottom: 20px;
+		// margin-bottom: 20px;
 		font-size: 1.125rem;
 
 		@media (max-width:$bp-lg) {
@@ -160,7 +167,6 @@
 		background: #fff;
 		border-radius: 20px;
 		height: 40px;
-		margin-bottom: 8px;
 		font-size: 0.875rem;
 	}
 
@@ -217,6 +223,10 @@
 			font-size: 1.875rem;
 			line-height: 1;
 			color: #f3932c;
+
+			@media (max-width:$bp-xl) {
+				font-size: 1.3rem;
+			}
 		}
 
 	}
@@ -224,6 +234,10 @@
 	&__order-actions{
 		width: 100%;
 		max-width: 235px;
+
+		@media (max-width:$bp-xl) {
+			max-width: 180px;
+		}
 	}
 
 	&__order-action{
@@ -266,7 +280,10 @@
 		margin-bottom: 70px;
 		border-radius: 3px;
 		border: 2px solid #e4edf2;
+		display: block;
+
 		@media (max-width:$bp-md) {
+			display: none !important;
 			margin-left: -20px;
 			width: calc(100% + 40px);
 		}
@@ -279,7 +296,7 @@
 			margin: 0;
 
 			@media (max-width:$bp-lg) {
-				margin-left: -20px;
+				// margin-left: -20px;
 			}
 
 			.c-product__order-checkout-top {
@@ -320,15 +337,17 @@
 
 		.c-product__order-actions .c-btn:not(:last-child) {
 			margin-right: 15px;
+			white-space: nowrap;
 
-			@media (max-width:$bp-xl) {
-				margin-right: 10px;
+			@media (min-width: $bp-md) and (max-width: $bp-xl) {
+				margin-right: 0;
 			}
 
 		}
 
 		.c-product__order-actions .c-btn {
 			height: 32px;
+			white-space: nowrap;
 		}
 
 	}
@@ -352,7 +371,7 @@
 			padding: 10px 0;
 		}
 		@media (max-width:$bp-lg) {
-			padding: 10px 30px;
+			padding: 10px;
 		}
 
 		@media (max-width:$bp-md) {

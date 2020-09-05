@@ -1,0 +1,131 @@
+.с-product-buy-notify {
+  display: none;
+}
+
+.с-product-buy-notify:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: #0f0f11;
+  opacity: 0.87;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 1000;
+}
+
+.с-product-buy-notify .с-product-buy-notify_wrap {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: -160px;
+  width: 320px;
+  background-color: #fff;
+  border: 1px solid #ecf2f6;
+  padding: 24px;
+  text-align: center;
+  z-index: 1001;
+  margin-top: -60px;
+}
+
+.с-product-oneclick-notify .с-product-buy-notify_wrap {
+  margin-top: -265px;
+}
+
+.с-product-buy-notify .с-product-buy-notify_wrap h2 {
+  color: rgb(140, 175, 194);
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.с-product-buy-notify .с-product-buy-notify_wrap .c-btn {
+  display: block;
+  font-size: 17px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-transform: uppercase;
+  height: 42px;
+  line-height: 44px;
+  letter-spacing: 1px;
+  width: 100%;
+  padding: 0px 0px;
+  margin: 0px 0px 11px;
+  vertical-align: middle;
+  text-align: center;
+  border: none;
+}
+
+.с-product-buy-notify .с-product-buy-notify_wrap .c-btn:hover {
+  -webkit-box-shadow: 0 0 5px 0 rgba(50,50,50,0.75);
+  -moz-box-shadow: 0 0 5px 0 rgba(50,50,50,0.75);
+  box-shadow: 0 0 5px 0 rgba(50,50,50,0.75);
+}
+
+.с-product-buy-notify .с-product-buy-notify_wrap .c-close-btn {
+  position: absolute;
+  top: -25px;
+  right: -25px;
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: none;
+  z-index: 10;
+  cursor: pointer;
+  background: #ffffff;
+  border-radius: 25px;
+  font-size: 30px;
+  line-height: 0px;
+  color: #999;
+}
+
+.с-product-buy-notify .с-product-buy-notify_wrap .c-close-btn:hover {
+  color: #555;
+  background-color: #b6b6b6;
+}
+
+.с-product-buy-notify .с-product-buy-notify_wrap .c-close {
+  /*display: block;*/
+  font-size: 18px;
+  color: rgb(100, 147, 173);
+  font-style: italic;
+  /*text-decoration: underline;*/
+  text-align: center;
+}
+
+.с-product-buy-notify .с-product-buy-notify_wrap .label {
+  font-size: 14px;
+  color: rgb(34, 34, 34);
+  text-align: center;
+  font-weight: 700;
+}
+
+.с-product-buy-notify .с-product-buy-notify_wrap form {
+  display: block;
+  margin-top: 0em;
+}
+
+.с-product-buy-notify .с-product-buy-notify_wrap table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.с-product-buy-notify .с-product-buy-notify_wrap  input[type=text] {
+  width: 258px;
+  background: #fff;
+  border-radius: 5px;
+  line-height: 1;
+  font-size: 18px;
+  padding: 10px 5px;
+  border: 1px solid #bac5cb;
+  text-align: center;
+  margin: 15px 0px 20px;
+  color: #bac5cb;
+}

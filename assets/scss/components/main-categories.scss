@@ -1,6 +1,10 @@
 .c-main-categories{
 	margin-bottom: 45px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;	
 	&__item{
+		min-height: 170px;
 		border-radius: 3px;
 		border: 2px solid #ecf2f6;
 		display: flex;
@@ -8,6 +12,15 @@
 		@media (max-width: $bp-md) {
 			flex-direction: column;
 		}
+	}
+	&__item-small{
+		width: 270px;
+		@media (max-width: $bp-md) {
+			width: 100%;
+		}
+	}
+	&__item-big{
+		width: 100%;
 	}
 	&__info{
 		width: 270px;
@@ -17,6 +30,7 @@
 		justify-content: center;
 		position: relative;
 		background-size: cover;
+		cursor: pointer;
 		&:after{
 			content: '';
 			width: 100%;

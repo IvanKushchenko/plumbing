@@ -107,6 +107,7 @@
 		position: relative;
 		display: block;
 		padding: 15px 0;
+		font-family: $ff-secondary;
 
 		&[aria-expanded="false"]:after {
 			content: '+';

@@ -1,4 +1,4 @@
-.c-price-field{
+.c-price-field {
 	height: 31px;
 	width: 107px;
 	overflow: hidden;
@@ -7,27 +7,35 @@
 	padding: 5px 10px;
 	font-size: 0.875rem;
 	display: inline-block;
-	flex:1;
-	&__inner{
+	flex: 1;
+
+	&__inner {
 		display: flex;
 		align-items: center;
 	}
-	&__prefix,
-	&__postfix{
+
+	&__prefix, &__postfix {
 		user-select: none;
 		pointer-events: none;
 	}
-	&__postfix{
-	    font-family: 'Rubl';
-	    margin-top: -2px;
+
+	&__postfix {
+		font-family: 'Rubl';
+		margin-top: -2px;
 	}
-	&__input{
+
+	&__input {
 		margin: 0 5px;
-	    flex-shrink: 0;
-	    flex-grow: 1;
-	    text-align: center;
-		&:focus{
+		flex-shrink: 0;
+		flex-grow: 1;
+		text-align: center;
+		width: 50px;
+		border: none;
+
+		&:focus {
 			outline: none;
 		}
+
 	}
+
 }

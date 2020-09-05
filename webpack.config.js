@@ -4,9 +4,12 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FileManagerPlugin = require('filemanager-webpack-plugin');
 module.exports = {
-	entry: './assets/js/index.js',
+	entry: {
+		script: ['./assets/js/index.js', './assets/scss/index.scss']
+	},
+	// devtool: 'source-map',
 	output: {
-		filename: 'js/script.js',
+		filename: 'js/[name].js',
 		path: path.resolve(__dirname, 'public')
 	},
 	devServer: {
@@ -29,18 +32,18 @@ module.exports = {
 		// 	minify: false,
 		// 	hash: true
 		// }),
-		new HtmlWebpackPlugin({
-			filename: 'basket.html',
-			template: './assets/pug/basket.pug',
-			minify: false,
-			hash: true
-		}),
-		new HtmlWebpackPlugin({
-			filename: 'index-radio.html',
-			template: './assets/pug/index-radio.pug',
-			minify: false,
-			hash: true
-		}),
+		// new HtmlWebpackPlugin({
+		// 	filename: 'basket.html',
+		// 	template: './assets/pug/basket.pug',
+		// 	minify: false,
+		// 	hash: true
+		// }),
+		// new HtmlWebpackPlugin({
+		// 	filename: 'index-radio.html',
+		// 	template: './assets/pug/index-radio.pug',
+		// 	minify: false,
+		// 	hash: true
+		// }),
 		// new HtmlWebpackPlugin({
 		// 	filename: 'brand.html',
 		// 	template: './assets/pug/brand.pug',
@@ -126,14 +129,14 @@ module.exports = {
 					{
 						loader: 'css-loader',
 						options: {
-							sourceMap: true,
+							sourceMap: false,
 							url: true
 						}
 					},
 					{
 						loader: 'sass-loader',
 						options: {
-							sourceMap: true,
+							sourceMap: false,
 							outputStyle: 'expanded'
 						}
 					}

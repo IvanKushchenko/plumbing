@@ -1,6 +1,6 @@
 .c-header {
 	padding: 0 30px;
-	margin-bottom: 17px;
+	margin-bottom: 14px;
 	@media (max-width:$bp-lg) {
 		padding: 0 20px;
 	}
@@ -36,8 +36,7 @@
 	}
 
 	&__top {
-		padding: 7px 0;
-		padding-bottom: 3px;
+		padding: 21px 0;
 		display: flex;
 		align-items: center;
 		@media (max-width:$bp-sm) {
@@ -60,7 +59,7 @@
 
 		&_mobile {
 			display: none !important;
-			margin: 10px 0;
+			margin-bottom: 13px;
 			justify-content: space-between;
 
 			.c-nav {

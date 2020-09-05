@@ -23,11 +23,13 @@
 	}
 
 	.swiper-button-prev, .swiper-button-next {
-		width: 36px;
-		height: 36px;
 		border-radius: 50%;
-		background:#ecf2f6 url('../img/icons/right-arrow-white.svg') no-repeat center center;
-		background-size: 50%;
+		background: #fff url('../img/icons/arrow-right-secondary.svg') no-repeat center center;
+	    background-size: 22px auto;
+	    background-position: 50%;
+	    height: 42px;
+	    width: 42px;
+	    box-shadow: 0 6px 20px rgba(0,0,0,.15);
 
 		@media (max-width:$bp-md) {
 			display: none;
@@ -124,7 +126,6 @@
 			text-align: center;
 			text-transform: uppercase;
 			margin-bottom: 0;
-			font-family: $ff-secondary;
 			line-height: 1.4;
 		}
 

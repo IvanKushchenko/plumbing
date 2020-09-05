@@ -145,6 +145,12 @@
 		}
 	}
 
+	&_basket{
+		.modal-dialog{
+			max-width: 560px;
+		}
+	}
+
 }
 
 .modal-backdrop {

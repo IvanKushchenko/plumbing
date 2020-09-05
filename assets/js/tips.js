@@ -55,14 +55,14 @@ $(function() {
         }
 
     }
-    checkPosProductsTip();
-    $(window).scroll(function() {
-        checkPosProductsTip();
-        checkPosCodeTip();
-    })
+    // checkPosProductsTip();
+    // $(window).scroll(function() {
+    //     checkPosProductsTip();
+    //     checkPosCodeTip();
+    // })
 
-    $(window).resize(function() {
-        checkPosCodeTip();
-        checkPosProductsTip();
-    })
+    // $(window).resize(function() {
+    //     checkPosCodeTip();
+    //     checkPosProductsTip();
+    // })
 })
