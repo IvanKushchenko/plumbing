@@ -1,0 +1,9 @@
+.c-panel{
+    position: fixed;
+    cursor: default;
+    z-index: 400;
+
+    &_bottom{
+    	bottom: 0;
+    }
+}

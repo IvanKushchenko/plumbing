@@ -1,0 +1,21 @@
+.c-filters{
+	@media (max-width: $bp-xl) {
+	    position: fixed;
+	    top: 0;
+	    left: 0;
+	    z-index: 2500;
+	    width: 80%;
+	    height: 100%;
+	    background: #fff;
+	    padding: 0 20px;
+	    transform: translateX(-100%);
+	    transition: .3s ease-in-out;
+	    overflow-y: auto;
+	}
+
+	&.is-show{
+		@media (max-width: $bp-xl) {
+			transform: translateX(0);
+		}
+	}
+}

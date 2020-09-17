@@ -4,49 +4,49 @@
 <meta charset="UTF-8">
 <title>Template</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="css/style.css?756dc8b4135fae28b165" rel="stylesheet"></head>
+  <link href="css/style.css?7abf58a77186cad4a200" rel="stylesheet"></head>
   <body>
     <div class="container">
       <div class="o-page js-page">
 <div class="c-navbar c-navbar-unscrolled"><a class="c-navbar__catalog-btn" href="#">каталог</a>
   <div class="c-navbar__item mr-auto mr-xl-0"><a class="c-navbar__link" href="#">личный кабинет </a><span>: User ID: 2</span></div>
   <div class="c-navbar__item mr-xl-auto">Ваш город:<a class="c-navbar__link" href="#"> Санкт-Петербург</a></div>
-  <div class="c-navbar__item c-navbar__item_cart">
-    <div class="c-navbar__btn js-navbar-btn dropdown-toggle" data-toggle="dropdown" aria-expanded="false" data-flip="false" data-boundary="viewport"><img class="c-navbar__btn-icon" src="img/icons/basket.svg" alt=""><span class="c-navbar__txt flex-shrink-0">В корзине </span><span class="c-navbar__counter">3</span><span class="c-navbar__txt">шт.</span>
+  <div class="c-navbar__item c-navbar__item_cart js-navbar-cart">
+    <div class="c-navbar__btn js-navbar-cart-btn dropdown-toggle"><img class="c-navbar__btn-icon" src="img/icons/basket.svg" alt=""><span class="c-navbar__txt flex-shrink-0">В корзине </span><span class="c-navbar__counter">3</span><span class="c-navbar__txt">шт.</span>
       <div class="dropdown-menu dropdown-menu-right">
         <div class="dropdown-menu__body">
-          <div class="c-navbar-product">
+          <div class="c-navbar-product js-navbar-cart-product">
             <div class="c-navbar-product__img"><img src="img/content/option8.jpg" alt=""></div>
             <div class="c-navbar-product__body"><a class="c-navbar-product__title" href="#">Смеситель для раковины Belbagno Clima 80</a>
               <div class="c-navbar-product__footer">
                 <div class="c-navbar-product__price">8650</div>
                 <div class="c-navbar-product__count">x 2</div>
               </div>
-            </div><a class="c-navbar-product__close js-navbar-product-remove" href="#">
+            </div><a class="c-navbar-product__close js-navbar-cart-product-remove" href="#">
               <svg>
                 <use href="#icon-close"></use>
               </svg></a>
           </div>
-          <div class="c-navbar-product">
+          <div class="c-navbar-product js-navbar-cart-product">
             <div class="c-navbar-product__img"><img src="img/content/option8.jpg" alt=""></div>
             <div class="c-navbar-product__body"><a class="c-navbar-product__title" href="#">Смеситель для раковины Belbagno Clima 80</a>
               <div class="c-navbar-product__footer">
                 <div class="c-navbar-product__price">8650</div>
                 <div class="c-navbar-product__count">x 2</div>
               </div>
-            </div><a class="c-navbar-product__close js-navbar-product-remove" href="#">
+            </div><a class="c-navbar-product__close js-navbar-cart-product-remove" href="#">
               <svg>
                 <use href="#icon-close"></use>
               </svg></a>
           </div>
-          <div class="c-navbar-product">
+          <div class="c-navbar-product js-navbar-cart-product">
             <div class="c-navbar-product__img"><img src="img/content/option8.jpg" alt=""></div>
             <div class="c-navbar-product__body"><a class="c-navbar-product__title" href="#">Смеситель для раковины Belbagno Clima 80</a>
               <div class="c-navbar-product__footer">
                 <div class="c-navbar-product__price">8650</div>
                 <div class="c-navbar-product__count">x 2</div>
               </div>
-            </div><a class="c-navbar-product__close js-navbar-product-remove" href="#">
+            </div><a class="c-navbar-product__close js-navbar-cart-product-remove" href="#">
               <svg>
                 <use href="#icon-close"></use>
               </svg></a>
@@ -134,7 +134,7 @@
             </div>
             <div class="o-section__body">
               <div class="s-basket__section s-basket__section_products">
-                <div class="c-table c-table_basket">
+                <div class="c-table c-table_basket js-table-basket">
                   <div class="c-table__header">
                     <div class="c-table__header-cell">Товар</div>
                     <div class="c-table__header-cell">наименование </div>
@@ -144,7 +144,7 @@
                     <div class="c-table__header-cell">удалить</div>
                   </div>
                   <div class="c-table__body">
-                    <div class="c-table__row c-product-card c-product-card_basket">
+                    <div class="c-table__row c-product-card c-product-card_basket js-product-card">
                       <div class="c-table__cell">
                         <div class="c-product-card__img-wrap js-product-lightbox"><a class="c-product-card__img" href="../img/content/option.jpg"><img src="img/content/option.jpg" alt=""></a></div>
                       </div>
@@ -159,14 +159,14 @@
                               <div class="col-4 col-sm-3 col-lg-2"><span class="mr-2 text-uppercase h-text-sm">Цена</span></div>
                               <div class="col-8 col-sm-8 col-lg-10">
                                 <div class="d-flex flex-column flex-lg-row">
-                                  <div class="c-product-card__price c-product-card__cost mr-4">7695</div>
+                                  <div class="c-product-card__price c-product-card__cost mr-4 js-product-card-cost" data-total="7695">7695</div>
                                   <div class="c-discounts mt-0">
                                     <ul class="c-discounts__list d-flex flex-column flex-sm-row">
-                                      <li class="c-discounts__item mr-3"><span class="c-discounts__price">8500</span>
+                                      <li class="c-discounts__item mr-3"><span class="c-discounts__price js-discount-price" data-price="8500">8500</span>
                                         <div class="d-block"><span class="c-discounts__info mr-1">промокод</span><span class="c-discounts__percent">10%</span></div>
                                       </li>
                                       <li class="c-discounts__item d-flex flex-column">
-                                        <div class="c-discounts__price">9000</div>
+                                        <div class="c-discounts__price js-discount-price" data-price="9000">9000</div>
                                         <div class="d-block"><span class="c-discounts__info mr-1">скидка на товар</span><span class="c-discounts__percent">5%</span></div>
                                       </li>
                                     </ul>
@@ -177,49 +177,48 @@
                             <div class="d-flex row mb-4 d-xl-none">
                               <div class="col-4 col-sm-3 col-lg-2"><span class="mr-2 text-uppercase h-text-sm">Кол-во</span></div>
                               <div class="col-8 col-sm-9 col-lg-10">
-                                <div class="c-number-counter">
-                                  <div class="c-number-counter__action c-number-counter__action_down"></div>
-                                  <input class="form-control c-number-counter__field" type="number" value="1">
-                                  <div class="c-number-counter__action c-number-counter__action_up"></div>
+                                <div class="c-number-counter js-number-counter" data-count="1">
+                                  <div class="c-number-counter__action c-number-counter__action_down js-number-counter-down"></div>
+                                  <input class="form-control c-number-counter__field js-number-counter-input" type="number" value="1">
+                                  <div class="c-number-counter__action c-number-counter__action_up js-number-counter-up"></div>
                                 </div>
                               </div>
                             </div>
                             <div class="d-flex row d-xl-none">
                               <div class="col-4 col-sm-3 col-lg-2"><span class="mr-2 text-uppercase h-text-sm">Сумма</span></div>
                               <div class="col-8 col-sm-9 col-lg-10">
-                                <div class="c-product-card__price c-product-card__total" id="product-card-total-mobile-1">7695</div>
+                                <div class="c-product-card__price c-product-card__total js-product-card-total" id="product-card-total-mobile-1" data-total="7695">7695</div>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
                       <div class="c-table__cell">
-                        <div class="c-product-card__price c-product-card__cost">7695</div>
+                        <div class="c-product-card__price c-product-card__cost js-product-card-cost" data-total="7695">7695</div>
                         <div class="c-discounts">
                           <ul class="c-discounts__list">
-                            <li class="c-discounts__item"><span class="c-discounts__price">8500</span>
+                            <li class="c-discounts__item"><span class="c-discounts__price js-discount-price" data-price="8500">8500</span>
                               <div class="d-block"><span class="c-discounts__info mr-1">промокод</span><span class="c-discounts__percent">10%</span></div>
                             </li>
-                            <li class="c-discounts__item d-flex flex-column">
-                              <div class="c-discounts__price">9000</div>
+                            <li class="c-discounts__item d-flex flex-column"><span class="c-discounts__price js-discount-price" data-price="9000">9000</span>
                               <div class="d-block"><span class="c-discounts__info mr-1">скидка на товар</span><span class="c-discounts__percent">5%</span></div>
                             </li>
                           </ul>
                         </div>
                       </div>
                       <div class="c-table__cell">
-                        <div class="c-number-counter">
-                          <div class="c-number-counter__action c-number-counter__action_down"></div>
-                          <input class="form-control c-number-counter__field" type="number" value="1">
-                          <div class="c-number-counter__action c-number-counter__action_up"></div>
+                        <div class="c-number-counter js-number-counter" data-count="1">
+                          <div class="c-number-counter__action c-number-counter__action_down js-number-counter-down"></div>
+                          <input class="form-control c-number-counter__field js-number-counter-input" type="number" value="1">
+                          <div class="c-number-counter__action c-number-counter__action_up js-number-counter-up"></div>
                         </div>
                       </div>
                       <div class="c-table__cell">
-                        <div class="c-product-card__price c-product-card__total" id="product-card-total-1">0</div>
+                        <div class="c-product-card__price c-product-card__total js-product-card-total" id="product-card-total-1" data-total="7695">7695</div>
                       </div>
-                      <div class="c-table__cell"><a class="c-product-card__remove-btn mt-md-2 ml-md-3" href="#"></a></div>
+                      <div class="c-table__cell"><a class="c-product-card__remove-btn mt-md-2 ml-md-3 js-product-card-remove" href="#"></a></div>
                     </div>
-                    <div class="c-table__row c-product-card c-product-card_basket">
+                    <div class="c-table__row c-product-card c-product-card_basket js-product-card">
                       <div class="c-table__cell">
                         <div class="c-product-card__img-wrap js-product-lightbox"><a class="c-product-card__img" href="../img/content/option.jpg"><img src="img/content/option.jpg" alt=""></a></div>
                       </div>
@@ -229,50 +228,50 @@
                             <div class="c-product-card__img-wrap js-product-lightbox d-md-none"><a class="c-product-card__img" href="../img/content/option.jpg"><img src="img/content/option.jpg" alt=""></a></div>
                           </div>
                           <div class="d-block flex-grow-1">
-                            <div class="c-product-card__articul">Артикул: 23370001</div>
-                            <div class="d-flex row mb-4 mt-2 d-xl-none">
+                            <div class="c-product-card__articul">Артикул:  23370002</div>
+                            <div class="d-flex row mb-3 d-xl-none">
                               <div class="col-4 col-sm-3 col-lg-2"><span class="mr-2 text-uppercase h-text-sm">Цена</span></div>
                               <div class="col-8 col-sm-8 col-lg-10">
                                 <div class="d-flex flex-column flex-lg-row">
-                                  <div class="c-product-card__price c-product-card__cost mr-4">7695</div>
+                                  <div class="c-product-card__price c-product-card__cost mr-4 js-product-card-cost" data-total="8399">8399</div>
                                 </div>
                               </div>
                             </div>
                             <div class="d-flex row mb-4 d-xl-none">
                               <div class="col-4 col-sm-3 col-lg-2"><span class="mr-2 text-uppercase h-text-sm">Кол-во</span></div>
-                              <div class="col-8 col-sm-8 col-lg-10">
-                                <div class="c-number-counter">
-                                  <div class="c-number-counter__action c-number-counter__action_down"></div>
-                                  <input class="form-control c-number-counter__field" type="number" value="1">
-                                  <div class="c-number-counter__action c-number-counter__action_up"></div>
+                              <div class="col-8 col-sm-9 col-lg-10">
+                                <div class="c-number-counter js-number-counter" data-count="1">
+                                  <div class="c-number-counter__action c-number-counter__action_down js-number-counter-down"></div>
+                                  <input class="form-control c-number-counter__field js-number-counter-input" type="number" value="1">
+                                  <div class="c-number-counter__action c-number-counter__action_up js-number-counter-up"></div>
                                 </div>
                               </div>
                             </div>
                             <div class="d-flex row d-xl-none">
                               <div class="col-4 col-sm-3 col-lg-2"><span class="mr-2 text-uppercase h-text-sm">Сумма</span></div>
-                              <div class="col-8 col-sm-8 col-lg-10">
-                                <div class="c-product-card__price c-product-card__total" id="product-card-total-mobile-2">7695</div>
+                              <div class="col-8 col-sm-9 col-lg-10">
+                                <div class="c-product-card__price c-product-card__total js-product-card-total" id="product-card-total-mobile-2" data-total="8399">8399</div>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
                       <div class="c-table__cell">
-                        <div class="c-product-card__price c-product-card__cost">8650</div>
+                        <div class="c-product-card__price c-product-card__cost js-product-card-cost" data-total="8399">8399</div>
                       </div>
                       <div class="c-table__cell">
-                        <div class="c-number-counter">
-                          <div class="c-number-counter__action c-number-counter__action_down"></div>
-                          <input class="form-control c-number-counter__field" type="number" value="1">
-                          <div class="c-number-counter__action c-number-counter__action_up"></div>
+                        <div class="c-number-counter js-number-counter" data-count="1">
+                          <div class="c-number-counter__action c-number-counter__action_down js-number-counter-down"></div>
+                          <input class="form-control c-number-counter__field js-number-counter-input" type="number" value="1">
+                          <div class="c-number-counter__action c-number-counter__action_up js-number-counter-up"></div>
                         </div>
                       </div>
                       <div class="c-table__cell">
-                        <div class="c-product-card__price c-product-card__total h-price" id="product-card-total-2">0</div>
+                        <div class="c-product-card__price c-product-card__total js-product-card-total" id="product-card-total-2" data-total="8399">8399</div>
                       </div>
-                      <div class="c-table__cell"><a class="c-product-card__remove-btn mt-2 ml-3" href="#"></a></div>
+                      <div class="c-table__cell"><a class="c-product-card__remove-btn mt-md-2 ml-md-3 js-product-card-remove" href="#"></a></div>
                     </div>
-                    <div class="c-table__row c-product-card c-product-card_basket">
+                    <div class="c-table__row c-product-card c-product-card_basket js-product-card">
                       <div class="c-table__cell">
                         <div class="c-product-card__img-wrap js-product-lightbox"><a class="c-product-card__img" href="../img/content/option.jpg"><img src="img/content/option.jpg" alt=""></a></div>
                       </div>
@@ -343,17 +342,17 @@
                       <div class="c-table__cell">
                         <div class="c-product-card__price c-product-card__total" id="product-card-total-3">0</div>
                       </div>
-                      <div class="c-table__cell"><a class="c-product-card__remove-btn mt-2 ml-3" href="#"></a></div>
+                      <div class="c-table__cell"><a class="c-product-card__remove-btn mt-2 ml-3 js-product-card-remove" href="#"></a></div>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="s-basket__section s-basket__section_result-price d-flex align-items-center justify-content-center">
                 <div class="d-flex flex-column flex-md-row">
-                  <div class="d-flex align-items-center mr-md-5 mt-md-2"><span class="mr-1 mr-md-3">Итого без скидки:</span><span class="h-price" id="main-total-price">0</span></div>
+                  <div class="d-flex align-items-center mr-md-5 mt-md-2"><span class="mr-1 mr-md-3">Итого без скидки:</span><span class="h-price" id="basket-total-price-without-discount">0</span></div>
                   <div class="d-flex align-items-center mt-2">
                     <h5 class="mr-1 mr-md-3 mb-0">Итого со скидкой:</h5>
-                    <h2 class="h-price d-inline" id="main-total-price-new">0</h2>
+                    <h2 class="h-price d-inline" id="basket-total-price">0</h2>
                   </div>
                 </div>
               </div>
@@ -705,5 +704,5 @@
 </footer>
       </div>
     </div>
-  <script type="text/javascript" src="js/script.js?756dc8b4135fae28b165"></script></body>
+  <script type="text/javascript" src="js/script.js?7abf58a77186cad4a200"></script></body>
 </html>

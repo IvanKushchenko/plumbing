@@ -1,0 +1,45 @@
+.c-panel-order-checkout{
+	border-radius: 3px;
+    border: 2px solid #e4edf2;
+	background-color: #ecf2f6;
+	height: 65px;
+	display: flex;
+	align-items: center;
+	padding-left: 40px;
+	padding-right: 32px;
+
+	@media (max-width: $bp-xl) {
+		height: auto;
+		padding: 10px;
+	}
+
+	@media (max-width:$bp-md) {
+		border: none;
+		padding: 0;
+	}
+
+	.c-product{
+		&__choosen{
+			margin-top: 0;
+
+			@media (max-width:$bp-xl) {
+				font-size: 0.9375rem;
+			}
+		}
+
+		&__price-number{
+			@media (min-width: $bp-xl) {
+				margin-left: 8px;
+			}
+		}
+
+		&__price-count{
+			margin-left: 15px;
+
+			@media (max-width:$bp-xl) {
+				margin-left: 5px;
+				font-size: 1rem;
+			}
+		}
+	}
+}

@@ -7,9 +7,10 @@
 	transition: .3s;
 	
 	@media (max-width: $bp-sm) {
-		height: calc(100% - 20px);
+		height: calc(100% - 10px);
 		display: flex;
 		flex-direction: column;
+		margin-bottom: 0;
 	}
 
 	&:hover{
@@ -19,6 +20,14 @@
 		opacity: 1;
 		transform: translate3d(0, 0, 0);
 	}
+
+	&__labels{
+		@media (max-width: $bp-sm) {
+			right: 0;
+			top: 0;
+		}
+	}
+
 	&__sale{
 		background-color: #f3932c;
 		font-family: $ff-secondary;
@@ -136,12 +145,10 @@
 		font-family: $ff-secondary;
 	
 		@media (max-width: $bp-sm) {
-			background: #3e7ce3;
 		    width: calc(100% + 20px);
 		    margin: 0;
-		    margin-left: 10px;
+		    margin-left: 0;
 		    text-align: center;
-		    color: #fff;
 		}
 
 		&:after{
@@ -159,12 +166,10 @@
 		font-weight: bold;
 
 		@media (max-width: $bp-sm) {
-			background: #3e7ce3;
 		    width: calc(100% + 20px);
 		    margin: 0;
 		    margin-left: 10px;
 		    text-align: center;
-		    color: #fff;
 		}
 
 		&:after{

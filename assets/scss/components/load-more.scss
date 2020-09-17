@@ -1,61 +1,74 @@
-.c-load-more{
-	&.is-loading{
+.c-load-more {
+	&.is-loading {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 	}
-	&.is-loading &__preloader{
+
+	&.is-loading &__preloader {
 		display: flex;
 	}
-	&.is-loading &__txt{
+
+	&.is-loading &__txt {
 		display: none;
 	}
-	&__preloader{
+
+	&__preloader {
 		width: 30px;
 		height: 30px;
 		display: none;
 		flex-wrap: wrap;
 	}
-	&__preloader-square{
+
+	&__preloader-square {
 		width: 10px;
 		height: 10px;
 		margin: 1px;
 		opacity: 1;
-		background: rgba(100,147,173,.2);
+		background: rgba(100, 147, 173, .2);
 		animation: focusfade 2.8s infinite;
-		&:nth-child(2){
+
+		&:nth-child(2) {
 			animation-delay: .7s;
 		}
-		&:nth-child(3){
+
+		&:nth-child(3) {
 			animation-delay: 2.1s;
 		}
-		&:nth-child(4){
+
+		&:nth-child(4) {
 			animation-delay: 1.4s;
 		}
+
 	}
 
 	@keyframes focusfade {
-	  0% {
-	    opacity: 0.5;
-	    background: #6493ad;
-	  }
-	  30% {
-	    opacity: 0.5;
-	    background: rgba(100,147,173,.2);
-	  }
-	  60% {
-	    opacity: 0;
-	  }
-	  75% {
-	    opacity: 0;
-	  }
-	  100% {
-	    opacity: 0.5;
-	    background: #6493ad;
-	  }
+		0% {
+			opacity: 0.5;
+			background: #6493ad;
+		}
+
+		30% {
+			opacity: 0.5;
+			background: rgba(100, 147, 173, .2);
+		}
+
+		60% {
+			opacity: 0;
+		}
+
+		75% {
+			opacity: 0;
+		}
+
+		100% {
+			opacity: 0.5;
+			background: #6493ad;
+		}
+
 	}
 
-	&_block{
+	&_block {
 		width: 100%;
 		height: 52px;
 		border-radius: 3px;
@@ -67,7 +80,8 @@
 		display: block;
 	}
 
-	&_block &__txt{
+	&_block &__txt {
 		box-shadow: 0 1px 0 0 rgba(100, 147, 173, 0.3);
 	}
+
 }

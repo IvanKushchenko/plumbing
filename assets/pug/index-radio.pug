@@ -36,7 +36,7 @@ html(lang="ru")
 									span к сравнению
 						.c-product__body
 							.row
-								.col-sm-6.col-xl-4#product-left-column
+								.col-sm-5.col-xl-4#product-left-column
 									.c-product-info
 										.row
 											.col-12
@@ -100,7 +100,7 @@ html(lang="ru")
 														.swiper-button-next.d-none.d-lg-bllock
 											.col-12
 												.c-product-info__body
-													.c-product-info__description.collapse#product-info-body
+													.c-product-info__description.js-product-info-description.collapse
 														table.c-table
 															tbody
 																tr
@@ -147,12 +147,12 @@ html(lang="ru")
 																	td Размер(ДxШxВ), см:
 																	td (108-113)x(68-73)x190
 													.d-md-none.c-product-info__collapse-toggle.js-product-info-collapse-toggle
-														a(href="#product-info-body" data-toggle="collapse") Посмотреть характеристики
+														a(href=".js-product-info-description" data-toggle="collapse") Посмотреть характеристики
 
-								.col-sm-6.col-xl-8#product-right-column
+								.col-sm-7.col-xl-8#product-right-column
 									.row.mb-3
 										.col-xl-6
-											.c-product__order-info.c-product__order-info_desktop.js-product-order-checkout-static
+											.c-product__order-info.d-flex.align-items-center.justify-content-center.flex-column.js-product-order-info
 												.d-flex.flex-column.align-items-center.justify-content-center
 													.c-product__code.d-flex.align-items-center.justify-content-center
 														span.c-product-info__code-txt.mr-2 Код товара 32312
@@ -262,15 +262,25 @@ html(lang="ru")
 												.c-load-more__preloader-square
 												.c-load-more__preloader-square
 												.c-load-more__preloader-square
-									.c-product__order-info.c-product__order-info_mobile.justify-content-between.js-product-order-checkout-fixed
-											.c-product__price-number.c-product__price-number_new#c-product__price-mobile-bottom-number_new.flex-grow-1.text-center 0
-											a(href="#").c-btn.c-btn_secondary В КОРЗИНУ
+									<div class="c-panel c-panel_bottom c-panel-order-checkout js-panel-order-checkout">
+										<div class="d-flex align-items-center align-items-xl-end justify-content-center justify-content-md-between w-100">
+											<div class="c-product__choosen d-none d-md-flex flex-column flex-lg-row">Выбрано:<span id="c-product__choosen-count" class="c-product__choosen-count">0 товара</span></div>
+											<div class="d-flex align-items-center flex-column justify-content-center flex-xl-row flex-grow-1">
+												<div class="c-product__price-number c-product__price-number_old" id="c-product__price-number-fixed_old">12321</div>
+												<div class="c-product__price-number c-product__price-number_new" id="c-product__price-number-fixed_new">1231312</div>
+											</div>
+											<div class="c-product__order-actions d-flex flex-column flex-xl-row">
+												<a class="c-btn c-btn_primary c-btn_bordered c-btn-buy mb-md-2 mb-xl-0 c-product__order-action" href="javascript:void(0)" data-toggle="modal" data-target="#send-basket-modal" onclick="ga('send', 'event', 'Товар', 'КнопкаКупить'); yaCounter33367268.reachGoal('knopkakupit');">В КОРЗИНУ</a>
+												<a class="c-btn c-btn_primary c-btn_bordered c-product__order-action d-none d-md-flex" href="javascript:void(0)" data-toggle="modal" data-target="#order-modal" onclick="gtag('event', 'Купить в 1 клик', {'event_category': '1clic', 'event_action': 'click'});">КУПИТЬ В 1 КЛИК</a>
+											</div>
+										</div>
+									</div>
 													
 									.c-share
 										img(src=require("../img/content/installment.jpg"), alt="")
-									.c-product-description
+									.c-product-description.js-product-description.js-read-more
 										.c-product-description__title Описание товара
-										.c-product-description__body.c-read-more.js-read-more-container
+										.c-product-description__body.js-product-description-body.c-read-more.js-read-more-content
 											p Смеситель для раковины Bauloop 23337 000 от немецкой компании GROHE.
 											h5 Особенности:
 											p
@@ -425,98 +435,98 @@ html(lang="ru")
 							.d-flex.justify-content-center
 								button.c-btn.c-btn_secondary.c-btn_lg.mt-0 Оформить заказ
 
-		.modal.fade.show.c-modal#preview-product-modal.c-preview-product(aria-hidden="true")
-			.modal-dialog.modal-dialog-centered.c-modal__dialog
-				.modal-content.c-modal__content
-					.modal-header.c-modal__header
-						.modal-title.c-modal__title
-						button(data-dismiss="modal" aria-label="Close").close
-					.modal-body.c-modal__body
-						.row
-							.col-md-6.col-lg-4
-								.c-product-preview.js-product-preview-modal
-									.c-product-preview__main
-										.swiper-container.js-product-preview-main#js-product-preview-main
-											.swiper-wrapper
-												.swiper-slide
-													div(data-src="../img/content/product.jpg").js-product-preview-item
-														img(src=require("../img/content/product.jpg"), alt="").c-product-preview__thumbnail
-												.swiper-slide
-													div(data-src="../img/content/product.jpg").js-product-preview-item
-														img(src=require("../img/content/product.jpg"), alt="").c-product-preview__thumbnail
-												.swiper-slide
-													div(data-src="../img/content/product.jpg").js-product-preview-item
-														img(src=require("../img/content/product.jpg"), alt="").c-product-preview__thumbnail
+		//- .modal.fade.show.c-modal#preview-product-modal.c-preview-product(aria-hidden="true")
+		//- 	.modal-dialog.modal-dialog-centered.c-modal__dialog
+		//- 		.modal-content.c-modal__content
+		//- 			.modal-header.c-modal__header
+		//- 				.modal-title.c-modal__title
+		//- 				button(data-dismiss="modal" aria-label="Close").close
+		//- 			.modal-body.c-modal__body
+		//- 				.row
+		//- 					.col-md-6.col-lg-4
+		//- 						.c-product-preview.js-product-preview-modal
+		//- 							.c-product-preview__main
+		//- 								.swiper-container.js-product-preview-main#js-product-preview-main
+		//- 									.swiper-wrapper
+		//- 										.swiper-slide
+		//- 											div(data-src="../img/content/product.jpg").js-product-preview-item
+		//- 												img(src=require("../img/content/product.jpg"), alt="").c-product-preview__thumbnail
+		//- 										.swiper-slide
+		//- 											div(data-src="../img/content/product.jpg").js-product-preview-item
+		//- 												img(src=require("../img/content/product.jpg"), alt="").c-product-preview__thumbnail
+		//- 										.swiper-slide
+		//- 											div(data-src="../img/content/product.jpg").js-product-preview-item
+		//- 												img(src=require("../img/content/product.jpg"), alt="").c-product-preview__thumbnail
 
-									.c-product-preview__thumbnails
-										.swiper-container.js-product-preview-thumbnails
-											.swiper-wrapper
-												.swiper-slide
-													img(src=require("../img/content/product-thumbnail.jpg"), alt="").c-product-preview__thumbnail
-												.swiper-slide
-													img(src=require("../img/content/product-thumbnail2.jpg"), alt="").c-product-preview__thumbnail
-												.swiper-slide
-													img(src=require("../img/content/product-thumbnail.jpg"), alt="").c-product-preview__thumbnail
-										.swiper-button-next.d-none.d-lg-bllock
-							.col-md-6.col-lg-5
-								.c-product-info__description
-											table.c-table
-												tbody
-													tr
-														td Бренд:
-														td 
-															a(href="#") Vegas
-													tr
-														td Коллекция:
-														td 
-															a(href="#") ZP+ZPV
-													tr
-														td Страна:
-														td Россия
-													tr
-														td Материал витража:
-														td 
-															a(href="#") Стекло
-													tr
-														td Высота поддона:
-														td 
-															a(href="#") Низкий
-													tr
-														td Стиль:
-														td 
-															a(href="#") Современный
-													tr
-														td Тип дверей:
-														td 
-															a(href="#") Одна раздвижная
-													tr
-														td Форма:
-														td 
-															a(href="#") Прямоугольная
-													tr
-														td Цвет профиля:
-														td 
-															p Серый, Розовый
+		//- 							.c-product-preview__thumbnails
+		//- 								.swiper-container.js-product-preview-thumbnails
+		//- 									.swiper-wrapper
+		//- 										.swiper-slide
+		//- 											img(src=require("../img/content/product-thumbnail.jpg"), alt="").c-product-preview__thumbnail
+		//- 										.swiper-slide
+		//- 											img(src=require("../img/content/product-thumbnail2.jpg"), alt="").c-product-preview__thumbnail
+		//- 										.swiper-slide
+		//- 											img(src=require("../img/content/product-thumbnail.jpg"), alt="").c-product-preview__thumbnail
+		//- 								.swiper-button-next.d-none.d-lg-bllock
+		//- 					.col-md-6.col-lg-5
+		//- 						.c-product-info__description
+		//- 									table.c-table
+		//- 										tbody
+		//- 											tr
+		//- 												td Бренд:
+		//- 												td 
+		//- 													a(href="#") Vegas
+		//- 											tr
+		//- 												td Коллекция:
+		//- 												td 
+		//- 													a(href="#") ZP+ZPV
+		//- 											tr
+		//- 												td Страна:
+		//- 												td Россия
+		//- 											tr
+		//- 												td Материал витража:
+		//- 												td 
+		//- 													a(href="#") Стекло
+		//- 											tr
+		//- 												td Высота поддона:
+		//- 												td 
+		//- 													a(href="#") Низкий
+		//- 											tr
+		//- 												td Стиль:
+		//- 												td 
+		//- 													a(href="#") Современный
+		//- 											tr
+		//- 												td Тип дверей:
+		//- 												td 
+		//- 													a(href="#") Одна раздвижная
+		//- 											tr
+		//- 												td Форма:
+		//- 												td 
+		//- 													a(href="#") Прямоугольная
+		//- 											tr
+		//- 												td Цвет профиля:
+		//- 												td 
+		//- 													p Серый, Розовый
 
-													tr
-														td Витраж:
-														td 
-															span Витраж 1, Витраж 2 
-													tr
-														td Размер(ДxШxВ), см:
-														td (108-113)x(68-73)x190
-							.col-lg-3
-								.c-preview-product__description
-									h4.c-preview-product__description-title Описание товара
-									.c-preview-product__description-body.c-read-more.js-read-more-container
-										p Смеситель для раковины Bauloop 23337 000 от немецкой компании GROHE.
-										h5 Особенности:
-										p
-											.
-												монтаж на 1 отверстие без донного клапана и без цепочки  высота до излива 87 мм,  вынос 90 мм  однорычажный  гибкая подводка с накидной гайкой 3/8  керамический картридж 28 мм  аэратор система быстрого монтажа 
-										h5 Уход:
-										p
-											.
-												При очистке не применяйте абразивные чистящие средства, оставляющие царапины губки, чистящие средства с содержанием кислот или растворителей, средства для удаления извести, пищевой уксус и чистящие средства с содержанием уксусной кислоты.
-										h5 Гарантия:  5 лет.
-									a(href="#").c-preview-product__read-more.js-read-more-btn Читать полностью
+		//- 											tr
+		//- 												td Витраж:
+		//- 												td 
+		//- 													span Витраж 1, Витраж 2 
+		//- 											tr
+		//- 												td Размер(ДxШxВ), см:
+		//- 												td (108-113)x(68-73)x190
+		//- 					.col-lg-3
+		//- 						.c-preview-product__description
+		//- 							h4.c-preview-product__description-title Описание товара
+		//- 							.c-preview-product__description-body.c-read-more.js-read-more-container
+		//- 								p Смеситель для раковины Bauloop 23337 000 от немецкой компании GROHE.
+		//- 								h5 Особенности:
+		//- 								p
+		//- 									.
+		//- 										монтаж на 1 отверстие без донного клапана и без цепочки  высота до излива 87 мм,  вынос 90 мм  однорычажный  гибкая подводка с накидной гайкой 3/8  керамический картридж 28 мм  аэратор система быстрого монтажа 
+		//- 								h5 Уход:
+		//- 								p
+		//- 									.
+		//- 										При очистке не применяйте абразивные чистящие средства, оставляющие царапины губки, чистящие средства с содержанием кислот или растворителей, средства для удаления извести, пищевой уксус и чистящие средства с содержанием уксусной кислоты.
+		//- 								h5 Гарантия:  5 лет.
+		//- 							a(href="#").c-preview-product__read-more.js-read-more-btn Читать полностью

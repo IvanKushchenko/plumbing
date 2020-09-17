@@ -1,0 +1,38 @@
+.c-filters-panel{
+	&__background{
+
+		@media (max-width: $bp-xl ) {
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			background: rgba(0,0,0,.4);
+			left: 0;
+			top: 0;
+			z-index: 500;
+			display: none;
+		}
+	}
+
+	&__tip{
+		display: none;
+
+		@media (max-width: $bp-xl ) {
+			display: flex;
+			flex-direction: column;
+			position: absolute;
+		    right: 10px;
+		    top: 50%;
+		    transform: translateY(-50%);
+		    display: flex;
+		    flex-direction: column;
+		    color: #fff;
+		}
+		
+	}
+
+	&__icon{
+		width: 50px;
+		height: 50px;
+		margin-bottom: 10px;
+	}
+}

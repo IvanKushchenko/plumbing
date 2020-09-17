@@ -1,3 +1,4 @@
+@import "panels/index";
 @import "navbar";
 @import "btn";
 @import "header";
@@ -47,6 +48,8 @@
 @import "our-showroom-slider";
 @import "choose-by-property";
 @import "sort";
+@import "filters";
+@import "filters-panel";
 @import "filtered-product";
 @import "filtered-products";
 @import "filter";
@@ -80,3 +83,4 @@
 @import "catalog-menu-mobile";
 @import "product-buy-notify";
 @import "pages-content";
+

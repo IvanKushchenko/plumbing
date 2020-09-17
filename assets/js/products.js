@@ -1,14 +1,15 @@
 import $ from 'jquery';
-import { CountUp } from 'countup.js';
+import CountUp from 'countup.js';
 import lightGallery from 'lightgallery';
 
 $(function() {
-
 
 	var CountUpOptions = {
 		init: false,
 		separator: ' ',
 	};
+	var price_new_init = Number($(".c-product__order-info_desktop .c-product__price-number_new").text().replace(" ", ""));
+	var price_old_init = Number($(".c-product__order-info_desktop .c-product__price-number_old").text().replace(" ", ""));
 
     var products = window.products = [];
     
@@ -19,6 +20,26 @@ $(function() {
     var mainProductPriceOld = $("#c-product__price-number_old").length ? $("#c-product__price-number_old").html(): null;
     var mainProductName = productOrderInfoBlock.data('name');
     var mainProductImg = productOrderInfoBlock.data('img');
+
+    var productsNewCostCounter = new CountUp("c-product__price-number_new", price_new_init, 0, 0, 0.4, CountUpOptions);
+    var productsOldCostCounter = new CountUp("c-product__price-number_old", price_old_init, 0, 0, 0.4, CountUpOptions);
+    var productsMobileOldCostCounter = new CountUp("c-product__price-mobile-number_old", price_new_init, 0, 0, 0.4, CountUpOptions);
+    var productsMobileNewCostCounter = new CountUp("c-product__price-mobile-number_new", price_old_init, 0, 0, 0.4, CountUpOptions);
+    var productsMobileBottomOldCostCounter = new CountUp("c-product__price-mobile-bottom-number_old", price_old_init, 0, 0, 0.4, CountUpOptions);
+    var productsMobileBottomNewCostCounter = new CountUp("c-product__price-mobile-bottom-number_new", price_new_init, 0, 0, 0.4, CountUpOptions);
+    var productsFixedCostCounter = new CountUp("c-product__price-number-fixed", 0, 0, 0, 0.4, CountUpOptions);
+    var productsFixedMobileCostCounter = new CountUp("c-product__price-number-fixed-mobile", 0, 0, 0, 0.4, CountUpOptions);
+    var productsStaticCostCounter = new CountUp("c-product__price-number-static", 0, 0, 0, 0.4, CountUpOptions);
+    var productsStaticMobileCostCounter = new CountUp("c-product__price-number-static-mobile", 0, 0, 0, 0.4, CountUpOptions);
+    var productsFixedOldCostCounter = new CountUp("c-product__price-number-fixed_old", price_old_init, 0, 0, 0.4, CountUpOptions);
+    var productsFixedNewCostCounter = new CountUp("c-product__price-number-fixed_new", price_new_init, 0, 0, 0.4, CountUpOptions);
+    var productsFixedMobileNewCostCounter = new CountUp("c-product__price-number-fixed-mobile_new", price_new_init, 0, 0, 0.4, CountUpOptions);
+    var productsFixedMobileOldCostCounter = new CountUp("c-product__price-number-fixed-mobile_old", price_old_init, 0, 0, 0.4, CountUpOptions);
+    var productsStaticOldCostCounter = new CountUp("c-product__price-number-static_old", price_old_init, 0, 0, 0.4, CountUpOptions);
+    var productsStaticNewCostCounter = new CountUp("c-product__price-number-static_new", price_new_init, 0, 0, 0.4, CountUpOptions);
+    var productsStaticMobileNewCostCounter = new CountUp("c-product__price-number-static-mobile_new", price_new_init, 0, 0, 0.4, CountUpOptions);
+    var productsStaticMobileOldCostCounter = new CountUp("c-product__price-number-static-mobile_old", price_old_init, 0, 0, 0.4, CountUpOptions);
+    var installementCost = new CountUp("installement-cost", 0, 0, 0, 0.4, CountUpOptions);
 
 
     if(!$('.c-product .js-table_product').length){
@@ -66,99 +87,9 @@ $(function() {
     	})
     })
 
-
-    // $('.js-table_product .c-product-card_radio .c-product-card__input, .js-table_options .c-product-card_checkbox .c-product-card__input').on('change', function(e) {
-    //  	e.preventDefault();
-    //  	var table = $(this).parents('.c-table__body');
-        
-        
-    //     if($(this).parents('.c-product-card_checkbox').hasClass('is-active')){
-    //     	var product = $(this).parents('.c-product-card_checkbox');
-    //     	var currentActiveProductArticul = product.attr('data-articul');
-	   //      var currentActiveProductImg = product.find('.c-product-card__img img').attr('src');
-	   //      var currentActiveProductName = product.find('.c-product-card__title').text();
-	   //      var currentActiveProductPrice = (product.find('.c-product-card__price_new').eq(0).length) ? product.find('.c-product-card__price_new').eq(0).text() : currentActiveProduct.find('.c-product-card__price').eq(0).text();
-	   //  	if(products.length){
-		  //       $(products).each(function(i, item) {
-		  //       	if (item.articul == currentActiveProductArticul) products.splice(i, 1);
-		  //       });
-	   //     }
-	   //      var currentActiveProductData = {
-	   //          articul: currentActiveProductArticul,
-	   //          img: currentActiveProductImg,
-	   //          name: currentActiveProductName,
-	   //          price: currentActiveProductPrice
-	   //      };
-	   //      removeProductFromSlider(currentActiveProductData);
-		  //   product.removeClass('is-active');
-    //     }else{
-    //     	var currentProduct = $(this).parents('.c-product-card');
-	   //      var articul = currentProduct.attr('data-articul');
-	   //      var img = currentProduct.find('.c-product-card__img img').attr('src');
-	   //      var name = currentProduct.find('.c-product-card__title').text();
-	   //      var price = (currentProduct.find('.c-product-card__price_new').eq(0).length) ? currentProduct.find('.c-product-card__price_new').eq(0).text() : currentProduct.find('.c-product-card__price').eq(0).text();
-
-	   //      var product = {
-	   //          articul: articul,
-	   //          img: img,
-	   //          name: name,
-	   //          price: price
-	   //      };
-	   //      $(this).parents('.c-product-card_checkbox').addClass('is-active');
-		  //   products.push(product)
-		  //   addProductToSlider(product);
-		  //   setTimeout(function(){
-		  //   	checkoutProducts();
-
-		  //   }, 100)
-    //     }
-    //     var currentActiveProduct = table.find('.c-product-card_radio.is-active');
-    //     if(currentActiveProduct.length){
-	   //      // var currentActiveProductArticul = currentActiveProduct.find('.c-product-card__subtitle').text().replace(/^\D+/g, '');
-	   //      var currentActiveProductArticul = currentActiveProduct.attr('data-articul');
-	   //      var currentActiveProductImg = currentActiveProduct.find('.c-product-card__img img').attr('src');
-	   //      var currentActiveProductName = currentActiveProduct.find('.c-product-card__title').text();
-	   //      var currentActiveProductPrice = (currentActiveProduct.find('.c-product-card__price_new').eq(0).length) ? currentActiveProduct.find('.c-product-card__price_new').eq(0).text() : currentActiveProduct.find('.c-product-card__price').eq(0).text();
-	   //  	if(products.length){
-		  //       $(products).each(function(i, item) {
-		  //       	if (item.articul == currentActiveProductArticul) products.splice(i, 1);
-		  //       });
-	   //     }
-	   //      var currentActiveProductData = {
-	   //          articul: currentActiveProductArticul,
-	   //          img: currentActiveProductImg,
-	   //          name: currentActiveProductName,
-	   //          price: currentActiveProductPrice
-	   //      };
-	   //      removeProductFromSlider(currentActiveProductData);
-		  //    currentActiveProduct.removeClass('is-active');
-	   //  }else if(!$(this).parents('.c-product-card_radio').hasClass('is-active') && !$(this).parents('.c-product-card_checkbox').length){
-	   //  	var currentProduct = $(this).parents('.c-product-card');
-	   //      var articul = currentProduct.attr('data-articul');
-	   //      var img = currentProduct.find('.c-product-card__img img').attr('src');
-	   //      var name = currentProduct.find('.c-product-card__title').text();
-	   //      var price = (currentProduct.find('.c-product-card__price_new').eq(0).length) ? currentProduct.find('.c-product-card__price_new').eq(0).text() : currentProduct.find('.c-product-card__price').eq(0).text();
-
-	   //      var product = {
-	   //          articul: articul,
-	   //          img: img,
-	   //          name: name,
-	   //          price: price
-	   //      };
-	   //      $(this).parents('.c-product-card_radio').addClass('is-active');
-		  //   products.push(product)
-		  //   addProductToSlider(product);
-		  //   setTimeout(function(){
-		  //   	checkoutProducts();
-
-		  //   }, 100)
-	   //  }
-
-    //  })
-
     $('.js-table_product .c-product-card_radio .c-product-card__input, .js-table_options .c-product-card_checkbox .c-product-card__input').on('change', function(e) {
 		e.preventDefault();
-		if($(this).parents('.c-product-card_checkbox').length && $(this).parents('.c-product-card_radio').length) return;
+		// if($(this).parents('.c-product-card_checkbox').length && $(this).parents('.c-product-card_radio').length) return;
 
 		var tableBody = $(this).parents('.c-table__body');
 
@@ -347,6 +278,10 @@ $(function() {
     	});
     })
 
+    function declOfNum(number, titles) {
+		var cases = [2, 0, 1, 1, 1, 2];
+		return titles[ (number%100>4 && number%100<20)? 2 : cases[(number%10<5)?number%10:5] ];
+	}
 
     function checkoutProducts() {
         var orderCheckoutBl = $('.js-product-order-checkout-static, .js-product-order-checkout-fixed, .c-product__order-info');
@@ -357,70 +292,38 @@ $(function() {
             resultOldCost = item['price_old'] ? resultOldCost + +item['price_old'].replace(/\D+/g, '') : null;
         });
 
-        if(!CountUpOptions.init){
-	        new CountUp("installement-cost", +resultCost / 12, { duration: 0.00001, separator: ' '}).start();
-	    } else{
-	        new CountUp("installement-cost", +resultCost / 12, CountUpOptions).start();
-	    }
 
-        orderCheckoutBl.find('.c-product__choosen-count').text(products.length + " товара");
-        if(!CountUpOptions.init){
-	        [
-	        	'c-product__price-number_new',
-	        	'c-product__price-mobile-number_new',
-	        	'c-product__price-mobile-bottom-number_new',
-	        	'c-product__price-number-fixed',
-	        	'c-product__price-number-fixed-mobile',
-	        	'c-product__price-number-static',
-	        	'c-product__price-number-static-mobile',
-	        	'c-product__price-number-fixed_new',
-	        	'c-product__price-number-fixed-mobile_new',
-	        	'c-product__price-number-static_new',
-	        	'c-product__price-number-static-mobile_new',
-	        ].forEach(function(item){
-		        new CountUp(item, +resultCost, {useEasing: false, duration: 0.00001, separator: ' '}).start();
-	        });
+        var resultCost = 0;
+        var resultCost_old = 0;
 
-	        [
-	        	'c-product__price-number_old',
-	        	'c-product__price-mobile-number_old',
-	        	'c-product__price-mobile-bottom-number_old',
-	        	'c-product__price-number-fixed_old',
-	        	'c-product__price-number-fixed-mobile_old',
-	        	'c-product__price-number-static_old',
-	        	'c-product__price-number-static-mobile_old',
-	        ].forEach(function(item){
-	        	if(!resultOldCost) return;
-		        new CountUp(item, +resultOldCost, {useEasing: false, duration: 0.00001, separator: ' '}).start();
-	        });
-	        CountUpOptions.init = true;
-        } else{
-        	[
-        		'c-product__price-number_new',
-	        	'c-product__price-mobile-number_new',
-	        	'c-product__price-mobile-bottom-number_new',
-	        	'c-product__price-number-static',
-	        	'c-product__price-number-static-mobile',
-	        	'c-product__price-number-fixed_new',
-	        	'c-product__price-number-fixed-mobile_new',
-	        	'c-product__price-number-static_new',
-	        	'c-product__price-number-static-mobile_new',
-        	].forEach(function(item){
-		        new CountUp(item, +resultCost, CountUpOptions).start();
-	        });
+        $(products).each(function(i, item) {
+            resultCost = resultCost + Number(item['price'].replace(/\D+/g, ''));
+			resultCost_old = resultCost_old + (item['price_old'] ? Number(item['price_old'].replace(/\D+/g, '')) : 0 );
+        });
+        
+        $('.js-product-order-checkout .c-product__choosen-count').text(products.length + " " + declOfNum(products.length, ['товар', 'товара', 'товаров']));
 
-	        [
-	        	'c-product__price-number_old',
-	        	'c-product__price-mobile-number_old',
-	        	'c-product__price-mobile-bottom-number_old',
-	        	'c-product__price-number-fixed_old',
-	        	'c-product__price-number-fixed-mobile_old',
-	        	'c-product__price-number-static_old',
-	        	'c-product__price-number-static-mobile_old',
-	        ].forEach(function(item){
-		        new CountUp(item, +resultOldCost, CountUpOptions).start();
-	        });
-        }
+        // orderCheckoutBl.find('.c-product__price-number').text(resultCost);
+        installementCost.update(+resultCost / 12);
+		productsNewCostCounter.update(+resultCost);
+		productsOldCostCounter.update(+resultCost_old);
+		productsMobileOldCostCounter.update(+resultCost_old);
+		productsMobileNewCostCounter.update(+resultCost);
+		productsMobileBottomOldCostCounter.update(+resultCost_old);
+		productsMobileBottomNewCostCounter.update(+resultCost);
+		productsFixedCostCounter.update(+resultCost);
+		productsFixedMobileCostCounter.update(+resultCost);
+		productsStaticCostCounter.update(+resultCost);
+		productsStaticMobileCostCounter.update(+resultCost);
+		productsFixedOldCostCounter.update(+resultCost_old);
+		productsFixedNewCostCounter.update(+resultCost);
+		productsFixedMobileNewCostCounter.update(+resultCost);
+		productsFixedMobileOldCostCounter.update(+resultCost_old);
+		productsStaticOldCostCounter.update(+resultCost_old);
+		productsStaticNewCostCounter.update(+resultCost);
+		productsStaticMobileNewCostCounter.update(+resultCost);
+		productsStaticMobileOldCostCounter.update(+resultCost_old);
+
 
         
     }

@@ -15,7 +15,7 @@ html(lang="ru")
 							h3.o-section__title Корзина
 						.o-section__body
 							.s-basket__section.s-basket__section_products
-								.c-table.c-table_basket
+								.c-table.c-table_basket.js-table-basket
 									.c-table__header
 										.c-table__header-cell Товар
 										.c-table__header-cell наименование 
@@ -24,7 +24,7 @@ html(lang="ru")
 										.c-table__header-cell сумма
 										.c-table__header-cell удалить
 									.c-table__body
-										.c-table__row.c-product-card.c-product-card_basket
+										.c-table__row.c-product-card.c-product-card_basket.js-product-card
 											.c-table__cell
 												.c-product-card__img-wrap.js-product-lightbox
 													a(href="../img/content/option.jpg").c-product-card__img
@@ -43,16 +43,16 @@ html(lang="ru")
 																span.mr-2.text-uppercase.h-text-sm Цена
 															.col-8.col-sm-8.col-lg-10
 																.d-flex.flex-column.flex-lg-row
-																	.c-product-card__price.c-product-card__cost.mr-4 7695
+																	.c-product-card__price.c-product-card__cost.mr-4.js-product-card-cost(data-total="7695") 7695
 																	.c-discounts.mt-0
 																		ul.c-discounts__list.d-flex.flex-column.flex-sm-row
 																			li.c-discounts__item.mr-3
-																				span.c-discounts__price 8500
+																				span.c-discounts__price.js-discount-price(data-price="8500") 8500
 																				.d-block
 																					span.c-discounts__info.mr-1 промокод
 																					span.c-discounts__percent 10%
 																			li.c-discounts__item.d-flex.flex-column
-																				.c-discounts__price 9000
+																				.c-discounts__price.js-discount-price(data-price="9000") 9000
 																				.d-block
 																					span.c-discounts__info.mr-1 скидка на товар
 																					span.c-discounts__percent 5%
@@ -60,39 +60,39 @@ html(lang="ru")
 															.col-4.col-sm-3.col-lg-2
 																span.mr-2.text-uppercase.h-text-sm Кол-во
 															.col-8.col-sm-9.col-lg-10
-																.c-number-counter
-																	.c-number-counter__action.c-number-counter__action_down
-																	input(type="number" value="1").form-control.c-number-counter__field 
-																	.c-number-counter__action.c-number-counter__action_up
+																.c-number-counter.js-number-counter(data-count="1")
+																	.c-number-counter__action.c-number-counter__action_down.js-number-counter-down
+																	input(type="number" value="1").form-control.c-number-counter__field.js-number-counter-input
+																	.c-number-counter__action.c-number-counter__action_up.js-number-counter-up
 														.d-flex.row.d-xl-none
 															.col-4.col-sm-3.col-lg-2
 																span.mr-2.text-uppercase.h-text-sm Сумма
 															.col-8.col-sm-9.col-lg-10
-																.c-product-card__price.c-product-card__total#product-card-total-mobile-1 7695
+																.c-product-card__price.c-product-card__total.js-product-card-total#product-card-total-mobile-1(data-total="7695") 7695
 											.c-table__cell
-												.c-product-card__price.c-product-card__cost 7695
+												.c-product-card__price.c-product-card__cost.js-product-card-cost(data-total="7695") 7695
 												.c-discounts
 													ul.c-discounts__list
 														li.c-discounts__item
-															span.c-discounts__price 8500
+															span.c-discounts__price.js-discount-price(data-price="8500") 8500
 															.d-block
 																span.c-discounts__info.mr-1 промокод
 																span.c-discounts__percent 10%
 														li.c-discounts__item.d-flex.flex-column
-															.c-discounts__price 9000
+															span.c-discounts__price.js-discount-price(data-price="9000") 9000
 															.d-block
 																span.c-discounts__info.mr-1 скидка на товар
 																span.c-discounts__percent 5%
 											.c-table__cell
-												.c-number-counter
-													.c-number-counter__action.c-number-counter__action_down
-													input(type="number" value="1").form-control.c-number-counter__field 
-													.c-number-counter__action.c-number-counter__action_up
+												.c-number-counter.js-number-counter(data-count="1")
+													.c-number-counter__action.c-number-counter__action_down.js-number-counter-down
+													input(type="number" value="1").form-control.c-number-counter__field.js-number-counter-input
+													.c-number-counter__action.c-number-counter__action_up.js-number-counter-up
 											.c-table__cell
-												.c-product-card__price.c-product-card__total#product-card-total-1 0
+												.c-product-card__price.c-product-card__total.js-product-card-total#product-card-total-1(data-total="7695") 7695
 											.c-table__cell
-												a(href="#").c-product-card__remove-btn.mt-md-2.ml-md-3
-										.c-table__row.c-product-card.c-product-card_basket
+												a(href="#").c-product-card__remove-btn.mt-md-2.ml-md-3.js-product-card-remove
+										.c-table__row.c-product-card.c-product-card_basket.js-product-card
 											.c-table__cell
 												.c-product-card__img-wrap.js-product-lightbox
 													a(href="../img/content/option.jpg").c-product-card__img
@@ -105,39 +105,38 @@ html(lang="ru")
 															a(href="../img/content/option.jpg").c-product-card__img
 																img(src=require("../img/content/option.jpg"), alt="")
 													.d-block.flex-grow-1
-														.c-product-card__articul Артикул: 23370001
-														.d-flex.row.mb-4.mt-2.d-xl-none
+														.c-product-card__articul Артикул:  23370002
+														.d-flex.row.mb-3.d-xl-none
 															.col-4.col-sm-3.col-lg-2
 																span.mr-2.text-uppercase.h-text-sm Цена
 															.col-8.col-sm-8.col-lg-10
 																.d-flex.flex-column.flex-lg-row
-																	.c-product-card__price.c-product-card__cost.mr-4 7695
+																	.c-product-card__price.c-product-card__cost.mr-4.js-product-card-cost(data-total="8399") 8399
 														.d-flex.row.mb-4.d-xl-none
 															.col-4.col-sm-3.col-lg-2
 																span.mr-2.text-uppercase.h-text-sm Кол-во
-															.col-8.col-sm-8.col-lg-10
-																.c-number-counter
-																	.c-number-counter__action.c-number-counter__action_down
-																	input(type="number" value="1").form-control.c-number-counter__field 
-																	.c-number-counter__action.c-number-counter__action_up
+															.col-8.col-sm-9.col-lg-10
+																.c-number-counter.js-number-counter(data-count="1")
+																	.c-number-counter__action.c-number-counter__action_down.js-number-counter-down
+																	input(type="number" value="1").form-control.c-number-counter__field.js-number-counter-input
+																	.c-number-counter__action.c-number-counter__action_up.js-number-counter-up
 														.d-flex.row.d-xl-none
 															.col-4.col-sm-3.col-lg-2
 																span.mr-2.text-uppercase.h-text-sm Сумма
-															.col-8.col-sm-8.col-lg-10
-																.c-product-card__price.c-product-card__total#product-card-total-mobile-2 7695
+															.col-8.col-sm-9.col-lg-10
+																.c-product-card__price.c-product-card__total.js-product-card-total#product-card-total-mobile-2(data-total="8399") 8399
 											.c-table__cell
-												.c-product-card__price.c-product-card__cost 8650
-												
+												.c-product-card__price.c-product-card__cost.js-product-card-cost(data-total="8399") 8399
 											.c-table__cell
-												.c-number-counter
-													.c-number-counter__action.c-number-counter__action_down
-													input(type="number" value="1").form-control.c-number-counter__field
-													.c-number-counter__action.c-number-counter__action_up
+												.c-number-counter.js-number-counter(data-count="1")
+													.c-number-counter__action.c-number-counter__action_down.js-number-counter-down
+													input(type="number" value="1").form-control.c-number-counter__field.js-number-counter-input
+													.c-number-counter__action.c-number-counter__action_up.js-number-counter-up
 											.c-table__cell
-												.c-product-card__price.c-product-card__total.h-price#product-card-total-2 0
+												.c-product-card__price.c-product-card__total.js-product-card-total#product-card-total-2(data-total="8399") 8399
 											.c-table__cell
-												a(href="#").c-product-card__remove-btn.mt-2.ml-3
-										.c-table__row.c-product-card.c-product-card_basket
+												a(href="#").c-product-card__remove-btn.mt-md-2.ml-md-3.js-product-card-remove
+										.c-table__row.c-product-card.c-product-card_basket.js-product-card
 											.c-table__cell
 												.c-product-card__img-wrap.js-product-lightbox
 													a(href="../img/content/option.jpg").c-product-card__img
@@ -200,15 +199,15 @@ html(lang="ru")
 											.c-table__cell
 												.c-product-card__price.c-product-card__total#product-card-total-3 0
 											.c-table__cell
-												a(href="#").c-product-card__remove-btn.mt-2.ml-3
+												a(href="#").c-product-card__remove-btn.mt-2.ml-3.js-product-card-remove
 							.s-basket__section.s-basket__section_result-price.d-flex.align-items-center.justify-content-center
 								.d-flex.flex-column.flex-md-row
 									.d-flex.align-items-center.mr-md-5.mt-md-2
 										span.mr-1.mr-md-3 Итого без скидки:
-										span.h-price#main-total-price 0
+										span.h-price#basket-total-price-without-discount 0
 									.d-flex.align-items-center.mt-2
 										h5.mr-1.mr-md-3.mb-0 Итого со скидкой:
-										h2.h-price.d-inline#main-total-price-new 0
+										h2.h-price.d-inline#basket-total-price 0
 							.s-basket__section.pb-3
 								h3.s-basket__title Контактные данные
 								.s-basket__content

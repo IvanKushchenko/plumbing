@@ -4,49 +4,49 @@
 <meta charset="UTF-8">
 <title>Template</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="css/style.css?756dc8b4135fae28b165" rel="stylesheet"></head>
+  <link href="css/style.css?7abf58a77186cad4a200" rel="stylesheet"></head>
   <body>
     <div class="container">
       <div class="o-page js-page">
 <div class="c-navbar c-navbar-unscrolled"><a class="c-navbar__catalog-btn" href="#">каталог</a>
   <div class="c-navbar__item mr-auto mr-xl-0"><a class="c-navbar__link" href="#">личный кабинет </a><span>: User ID: 2</span></div>
   <div class="c-navbar__item mr-xl-auto">Ваш город:<a class="c-navbar__link" href="#"> Санкт-Петербург</a></div>
-  <div class="c-navbar__item c-navbar__item_cart">
-    <div class="c-navbar__btn js-navbar-btn dropdown-toggle" data-toggle="dropdown" aria-expanded="false" data-flip="false" data-boundary="viewport"><img class="c-navbar__btn-icon" src="img/icons/basket.svg" alt=""><span class="c-navbar__txt flex-shrink-0">В корзине </span><span class="c-navbar__counter">3</span><span class="c-navbar__txt">шт.</span>
+  <div class="c-navbar__item c-navbar__item_cart js-navbar-cart">
+    <div class="c-navbar__btn js-navbar-cart-btn dropdown-toggle"><img class="c-navbar__btn-icon" src="img/icons/basket.svg" alt=""><span class="c-navbar__txt flex-shrink-0">В корзине </span><span class="c-navbar__counter">3</span><span class="c-navbar__txt">шт.</span>
       <div class="dropdown-menu dropdown-menu-right">
         <div class="dropdown-menu__body">
-          <div class="c-navbar-product">
+          <div class="c-navbar-product js-navbar-cart-product">
             <div class="c-navbar-product__img"><img src="img/content/option8.jpg" alt=""></div>
             <div class="c-navbar-product__body"><a class="c-navbar-product__title" href="#">Смеситель для раковины Belbagno Clima 80</a>
               <div class="c-navbar-product__footer">
                 <div class="c-navbar-product__price">8650</div>
                 <div class="c-navbar-product__count">x 2</div>
               </div>
-            </div><a class="c-navbar-product__close js-navbar-product-remove" href="#">
+            </div><a class="c-navbar-product__close js-navbar-cart-product-remove" href="#">
               <svg>
                 <use href="#icon-close"></use>
               </svg></a>
           </div>
-          <div class="c-navbar-product">
+          <div class="c-navbar-product js-navbar-cart-product">
             <div class="c-navbar-product__img"><img src="img/content/option8.jpg" alt=""></div>
             <div class="c-navbar-product__body"><a class="c-navbar-product__title" href="#">Смеситель для раковины Belbagno Clima 80</a>
               <div class="c-navbar-product__footer">
                 <div class="c-navbar-product__price">8650</div>
                 <div class="c-navbar-product__count">x 2</div>
               </div>
-            </div><a class="c-navbar-product__close js-navbar-product-remove" href="#">
+            </div><a class="c-navbar-product__close js-navbar-cart-product-remove" href="#">
               <svg>
                 <use href="#icon-close"></use>
               </svg></a>
           </div>
-          <div class="c-navbar-product">
+          <div class="c-navbar-product js-navbar-cart-product">
             <div class="c-navbar-product__img"><img src="img/content/option8.jpg" alt=""></div>
             <div class="c-navbar-product__body"><a class="c-navbar-product__title" href="#">Смеситель для раковины Belbagno Clima 80</a>
               <div class="c-navbar-product__footer">
                 <div class="c-navbar-product__price">8650</div>
                 <div class="c-navbar-product__count">x 2</div>
               </div>
-            </div><a class="c-navbar-product__close js-navbar-product-remove" href="#">
+            </div><a class="c-navbar-product__close js-navbar-cart-product-remove" href="#">
               <svg>
                 <use href="#icon-close"></use>
               </svg></a>
@@ -138,7 +138,7 @@
             </div>
             <div class="c-product__body">
               <div class="row">
-                <div class="col-sm-6 col-xl-4" id="product-left-column">
+                <div class="col-sm-5 col-xl-4" id="product-left-column">
                   <div class="c-product-info">
                     <div class="row">
                       <div class="col-12">
@@ -201,7 +201,7 @@
                       </div>
                       <div class="col-12">
                         <div class="c-product-info__body">
-                          <div class="c-product-info__description collapse" id="product-info-body">
+                          <div class="c-product-info__description js-product-info-description collapse">
                             <table class="c-table">
                               <tbody>
                                 <tr>
@@ -251,16 +251,16 @@
                               </tbody>
                             </table>
                           </div>
-                          <div class="d-md-none c-product-info__collapse-toggle js-product-info-collapse-toggle"><a href="#product-info-body" data-toggle="collapse">Посмотреть характеристики</a></div>
+                          <div class="d-md-none c-product-info__collapse-toggle js-product-info-collapse-toggle"><a href=".js-product-info-description" data-toggle="collapse">Посмотреть характеристики</a></div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-6 col-xl-8" id="product-right-column">
+                <div class="col-sm-7 col-xl-8" id="product-right-column">
                   <div class="row mb-3">
                     <div class="col-xl-6">
-                      <div class="c-product__order-info c-product__order-info_desktop js-product-order-checkout-static">
+                      <div class="c-product__order-info d-flex align-items-center justify-content-center flex-column js-product-order-info">
                         <div class="d-flex flex-column align-items-center justify-content-center">
                           <div class="c-product__code d-flex align-items-center justify-content-center"><span class="c-product-info__code-txt mr-2">Код товара 32312</span>
                             <div class="c-info"></div>
@@ -379,14 +379,23 @@
                         <div class="c-load-more__preloader-square"></div>
                         <div class="c-load-more__preloader-square"></div>
                       </div></a>
-                  </div>
-                  <div class="c-product__order-info c-product__order-info_mobile justify-content-between js-product-order-checkout-fixed">
-                    <div class="c-product__price-number c-product__price-number_new flex-grow-1 text-center" id="c-product__price-mobile-bottom-number_new">0</div><a class="c-btn c-btn_secondary" href="#">В КОРЗИНУ</a>
-                  </div>
+                  </div><div class="c-panel c-panel_bottom c-panel-order-checkout js-panel-order-checkout">
+<div class="d-flex align-items-center align-items-xl-end justify-content-center justify-content-md-between w-100">
+<div class="c-product__choosen d-none d-md-flex flex-column flex-lg-row">Выбрано:<span id="c-product__choosen-count" class="c-product__choosen-count">0 товара</span></div>
+<div class="d-flex align-items-center flex-column justify-content-center flex-xl-row flex-grow-1">
+<div class="c-product__price-number c-product__price-number_old" id="c-product__price-number-fixed_old">12321</div>
+<div class="c-product__price-number c-product__price-number_new" id="c-product__price-number-fixed_new">1231312</div>
+</div>
+<div class="c-product__order-actions d-flex flex-column flex-xl-row">
+<a class="c-btn c-btn_primary c-btn_bordered c-btn-buy mb-md-2 mb-xl-0 c-product__order-action" href="javascript:void(0)" data-toggle="modal" data-target="#send-basket-modal" onclick="ga('send', 'event', 'Товар', 'КнопкаКупить'); yaCounter33367268.reachGoal('knopkakupit');">В КОРЗИНУ</a>
+<a class="c-btn c-btn_primary c-btn_bordered c-product__order-action d-none d-md-flex" href="javascript:void(0)" data-toggle="modal" data-target="#order-modal" onclick="gtag('event', 'Купить в 1 клик', {'event_category': '1clic', 'event_action': 'click'});">КУПИТЬ В 1 КЛИК</a>
+</div>
+</div>
+</div>
                   <div class="c-share"><img src="img/content/installment.jpg" alt=""></div>
-                  <div class="c-product-description">
+                  <div class="c-product-description js-product-description js-read-more">
                     <div class="c-product-description__title">Описание товара</div>
-                    <div class="c-product-description__body c-read-more js-read-more-container">
+                    <div class="c-product-description__body js-product-description-body c-read-more js-read-more-content">
                       <p>Смеситель для раковины Bauloop 23337 000 от немецкой компании GROHE.</p>
                       <h5>Особенности:</h5>
                       <p>монтаж на 1 отверстие без донного клапана и без цепочки  высота до излива 87 мм,  вынос 90 мм  однорычажный  гибкая подводка с накидной гайкой 3/8  керамический картридж 28 мм  аэратор система быстрого монтажа </p>
@@ -767,122 +776,5 @@
         </div>
       </div>
     </div>
-    <div class="modal fade show c-modal c-preview-product" id="preview-product-modal" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered c-modal__dialog">
-        <div class="modal-content c-modal__content">
-          <div class="modal-header c-modal__header">
-            <div class="modal-title c-modal__title"></div>
-            <button class="close" data-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body c-modal__body">
-            <div class="row">
-              <div class="col-md-6 col-lg-4">
-                <div class="c-product-preview js-product-preview-modal">
-                  <div class="c-product-preview__main">
-                    <div class="swiper-container js-product-preview-main" id="js-product-preview-main">
-                      <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                          <div class="js-product-preview-item" data-src="../img/content/product.jpg"><img class="c-product-preview__thumbnail" src="img/content/product.jpg" alt=""></div>
-                        </div>
-                        <div class="swiper-slide">
-                          <div class="js-product-preview-item" data-src="../img/content/product.jpg"><img class="c-product-preview__thumbnail" src="img/content/product.jpg" alt=""></div>
-                        </div>
-                        <div class="swiper-slide">
-                          <div class="js-product-preview-item" data-src="../img/content/product.jpg"><img class="c-product-preview__thumbnail" src="img/content/product.jpg" alt=""></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="c-product-preview__thumbnails">
-                    <div class="swiper-container js-product-preview-thumbnails">
-                      <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img class="c-product-preview__thumbnail" src="img/content/product-thumbnail.jpg" alt=""></div>
-                        <div class="swiper-slide"><img class="c-product-preview__thumbnail" src="img/content/product-thumbnail2.jpg" alt=""></div>
-                        <div class="swiper-slide"><img class="c-product-preview__thumbnail" src="img/content/product-thumbnail.jpg" alt=""></div>
-                      </div>
-                    </div>
-                    <div class="swiper-button-next d-none d-lg-bllock"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-5">
-                <div class="c-product-info__description">
-                  <table class="c-table">
-                    <tbody>
-                      <tr>
-                        <td>Бренд:</td>
-                        <td> <a href="#">Vegas</a></td>
-                      </tr>
-                      <tr>
-                        <td>Коллекция:</td>
-                        <td> <a href="#">ZP+ZPV</a></td>
-                      </tr>
-                      <tr>
-                        <td>Страна:</td>
-                        <td>Россия</td>
-                      </tr>
-                      <tr>
-                        <td>Материал витража:</td>
-                        <td> <a href="#">Стекло</a></td>
-                      </tr>
-                      <tr>
-                        <td>Высота поддона:</td>
-                        <td> <a href="#">Низкий</a></td>
-                      </tr>
-                      <tr>
-                        <td>Стиль:</td>
-                        <td> <a href="#">Современный</a></td>
-                      </tr>
-                      <tr>
-                        <td>Тип дверей:</td>
-                        <td> <a href="#">Одна раздвижная</a></td>
-                      </tr>
-                      <tr>
-                        <td>Форма:</td>
-                        <td> <a href="#">Прямоугольная</a></td>
-                      </tr>
-                      <tr>
-                        <td>Цвет профиля:</td>
-                        <td> 
-                          <p>Серый, Розовый</p>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Витраж:</td>
-                        <td> <span>Витраж 1, Витраж 2 </span></td>
-                      </tr>
-                      <tr>
-                        <td>Размер(ДxШxВ), см:</td>
-                        <td>(108-113)x(68-73)x190</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              <div class="col-lg-3">
-                <div class="c-preview-product__description">
-                  <h4 class="c-preview-product__description-title">Описание товара</h4>
-                  <div class="c-preview-product__description-body c-read-more js-read-more-container">
-                    <p>Смеситель для раковины Bauloop 23337 000 от немецкой компании GROHE.</p>
-                    <h5>Особенности:</h5>
-                    <p>монтаж на 1 отверстие без донного клапана и без цепочки  высота до излива 87 мм,  вынос 90 мм  однорычажный  гибкая подводка с накидной гайкой 3/8  керамический картридж 28 мм  аэратор система быстрого монтажа </p>
-                    <h5>Уход:</h5>
-                    <p>При очистке не применяйте абразивные чистящие средства, оставляющие царапины губки, чистящие средства с содержанием кислот или растворителей, средства для удаления извести, пищевой уксус и чистящие средства с содержанием уксусной кислоты.</p>
-                    <h5>Гарантия:  5 лет.</h5>
-                  </div><a class="c-preview-product__read-more js-read-more-btn" href="#">Читать полностью</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  <script defer type="text/javascript" src="js/jquery.min.js"></script>
-  <script defer type="text/javascript" src="js/bootstrap.min.js"></script>
-  <script defer type="text/javascript" src="js/lightgallery.min.js"></script>
-  <script defer type="text/javascript" src="js/jquery.selectric.min.js"></script>
-  <script defer type="text/javascript" src="js/jquery.mask.min.js"></script>
-  <script defer type="text/javascript" src="js/countUp.umd.js"></script>
-  <script defer type="text/javascript" src="js/swiper.min.js"></script>
-  <script defer type="text/javascript" src="js/script.js"></script></body>
+  <script type="text/javascript" src="js/script.js?7abf58a77186cad4a200"></script></body>
 </html>

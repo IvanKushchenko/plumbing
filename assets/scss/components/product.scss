@@ -93,41 +93,6 @@
 		@media (max-width:$bp-xl) {
 			padding: 16px 0;
 		}
-	
-		&_desktop{
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-		}
-
-		&_mobile{
-		    cursor: default;
-		    position: fixed;
-		    bottom: 0;
-		    z-index: 240;
-		    margin: 0;
-		    display: flex;
-		    align-items: center;
-		    padding-top: 0;
-		    padding-bottom: 0;
-		    border: none;
-
-		    .c-btn{
-		    	border-radius: 0;
-			    border: none;
-			    box-shadow: none;
-			    outline: none;
-			    height: auto;
-			    padding: 15px 25px;
-			    font-size: 1rem;
-			    color: initial;
-		    }
-
-		    @media (min-width: $bp-md) {
-				display: none !important;
-		    }
-		}
 
 		.c-product__choosen {
 			@media (max-width:$bp-xl) {
@@ -232,158 +197,47 @@
 	}
 
 	&__order-actions{
-		width: 100%;
-		max-width: 235px;
+		@media (min-width: $bp-md ) {
+			width: 100%;
+			max-width: 235px;
+		}
 
-		@media (max-width:$bp-xl) {
+		@media (max-width: $bp-xl) {
 			max-width: 180px;
 		}
 	}
 
 	&__order-action{
-		width: 100%;
-		max-width: 235px;
-		color: #222;
-		font-weight: bold;
-		height: 45px;
-		font-size: 0.9375rem;
-		border-radius: 2px;
-		box-shadow: 0 0 14px 4px rgba(0,0,0,0.15);
-	    letter-spacing: 3px;
+	    height: 32px;
+		white-space: nowrap;
 
-		&:not(:last-child) {
-			margin-bottom: 10px;
-		}
-	}
-
-
-	&__order-checkout-inner{
-		@media (max-width:$bp-sm-2) {
-			flex-direction: column;
-			align-items: center;
-		}
-	}
-	&__order-checkout-top-close{
-		position: absolute;
-		display: none;
-		width: 15px;
-		height: 15px;
-		position: absolute;
-		right: 5px;
-		top: 5px;
-		background: url('../img/icons/close.png') no-repeat;
-		background-size: contain;
-		cursor: pointer;
-	}
-	&__order-checkout {
-		position: relative;
-		margin-bottom: 70px;
-		border-radius: 3px;
-		border: 2px solid #e4edf2;
-		display: block;
-
-		@media (max-width:$bp-md) {
-			display: none !important;
-			margin-left: -20px;
-			width: calc(100% + 40px);
-		}
-	
-		&_fixed {
-			cursor: default;
-			position: fixed;
-			bottom: 0;
-			z-index: 240;
-			margin: 0;
-
-			@media (max-width:$bp-lg) {
-				// margin-left: -20px;
-			}
-
-			.c-product__order-checkout-top {
-				cursor: default;
-			}
-
-		}
-
-		.c-product__price {
-			margin-left: 0;
-			@media (max-width:$bp-sm-2) {
-				margin-right: 0;
-				margin-bottom: 10px;
-			}
-		}
-
-		.c-product__choosen {
-			margin-top: 0;
-
-			@media (max-width:$bp-xl) {
-				font-size: 0.9375rem;
-			}
-
-		}
-
-		.c-product__price-number {
-			margin-left: 8px;
-		}
-
-		.c-product__choosen-count {
-			margin-left: 15px;
-
-			@media (max-width:$bp-xl) {
-				font-size: 1rem;
-			}
-
-		}
-
-		.c-product__order-actions .c-btn:not(:last-child) {
+		&:not(:last-child){
 			margin-right: 15px;
+			margin-bottom: 10px;
 			white-space: nowrap;
+
+			@media (max-width: $bp-md) {
+				margin: 0;
+			}
 
 			@media (min-width: $bp-md) and (max-width: $bp-xl) {
 				margin-right: 0;
 			}
-
 		}
 
-		.c-product__order-actions .c-btn {
-			height: 32px;
-			white-space: nowrap;
+		@media (max-width: $bp-md) {
+			height: 100%;
+			background: $secondary;
+			border-radius: 0;
+			border: none;
+		    box-shadow: none;
+		    outline: none;
+		    padding: 15px 25px;
+		    font-size: 1rem;
+		    color: initial;
+
 		}
-
-	}
-
-
-	&__order-checkout-top {
-		cursor: pointer;
-		display: flex;
-		align-items: center;
-		background-color: #ecf2f6;
-		height: 65px;
-		padding-left: 40px;
-		padding-right: 32px;
-		&[aria-expanded="true"] > &-close{
-			display: block;
-		}
-		@media (max-width:$bp-xl) {
-			padding-left: 15px;
-			padding-right: 15px;
-			height: auto;
-			padding: 10px 0;
-		}
-		@media (max-width:$bp-lg) {
-			padding: 10px;
-		}
-
-		@media (max-width:$bp-md) {
-			height: 100px;
-			padding: 10px 0;
-		}
-
-		@media (max-width:$bp-sm-2) {
-			height: 110px;
-		}
-
-
+		
 	}
 
 }

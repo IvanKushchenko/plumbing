@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -21,6 +22,9 @@ module.exports = {
 		new MiniCssExtractPlugin({
 			filename: 'css/style.css'
 		}),
+		new webpack.ProvidePlugin({
+			$: 'jquery'
+		}),
 		// new HtmlWebpackPlugin({
 		// 	template: './assets/pug/index.pug',
 		// 	minify: false,
@@ -32,18 +36,18 @@ module.exports = {
 		// 	minify: false,
 		// 	hash: true
 		// }),
-		// new HtmlWebpackPlugin({
-		// 	filename: 'basket.html',
-		// 	template: './assets/pug/basket.pug',
-		// 	minify: false,
-		// 	hash: true
-		// }),
-		// new HtmlWebpackPlugin({
-		// 	filename: 'index-radio.html',
-		// 	template: './assets/pug/index-radio.pug',
-		// 	minify: false,
-		// 	hash: true
-		// }),
+		new HtmlWebpackPlugin({
+			filename: 'basket.html',
+			template: './assets/pug/basket.pug',
+			minify: false,
+			hash: true
+		}),
+		new HtmlWebpackPlugin({
+			filename: 'index-radio.html',
+			template: './assets/pug/index-radio.pug',
+			minify: false,
+			hash: true
+		}),
 		// new HtmlWebpackPlugin({
 		// 	filename: 'brand.html',
 		// 	template: './assets/pug/brand.pug',
@@ -86,24 +90,24 @@ module.exports = {
 		// 	minify: false,
 		// 	hash: true
 		// }),
-		// new HtmlWebpackPlugin({
-		// 	filename: 'contacts.html',
-		// 	template: './assets/pug/contacts.pug',
-		// 	minify: false,
-		// 	hash: true
-		// }),
+		new HtmlWebpackPlugin({
+			filename: 'contacts.html',
+			template: './assets/pug/contacts.pug',
+			minify: false,
+			hash: true
+		}),
 		// new HtmlWebpackPlugin({
 		// 	filename: '404.html',
 		// 	template: './assets/pug/404.pug',
 		// 	minify: false,
 		// 	hash: true
 		// }),
-		// new HtmlWebpackPlugin({
-		// 	filename: 'catalog.html',
-		// 	template: './assets/pug/catalog.pug',
-		// 	minify: false,
-		// 	hash: true
-		// }),
+		new HtmlWebpackPlugin({
+			filename: 'catalog.html',
+			template: './assets/pug/catalog.pug',
+			minify: false,
+			hash: true
+		}),
 		new FileManagerPlugin({
 			onEnd: {
 				copy: [

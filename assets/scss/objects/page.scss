@@ -28,7 +28,9 @@
 		flex-shrink: 0;
 
 		@media (max-width:$bp-xl) {
-			display: none;
+			width: 0;
+			margin-right: 0;
+			overflow: hidden;
 		}
 
 	}

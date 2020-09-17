@@ -6,15 +6,15 @@
 	.c-navbar__item.mr-xl-auto
 		| Ваш город:
 		a(href="#").c-navbar__link  Санкт-Петербург
-	.c-navbar__item.c-navbar__item_cart
-		div(data-toggle="dropdown", aria-expanded="false" data-flip="false" data-boundary="viewport").c-navbar__btn.js-navbar-btn.dropdown-toggle
+	.c-navbar__item.c-navbar__item_cart.js-navbar-cart
+		div.c-navbar__btn.js-navbar-cart-btn.dropdown-toggle
 			img(src=require("../../img/icons/basket.svg"), alt="").c-navbar__btn-icon
 			span.c-navbar__txt.flex-shrink-0 В корзине 
 			span.c-navbar__counter 3
 			span.c-navbar__txt шт.
 			.dropdown-menu.dropdown-menu-right
 				.dropdown-menu__body
-					.c-navbar-product
+					.c-navbar-product.js-navbar-cart-product
 						.c-navbar-product__img
 							img(src=require("../../img/content/option8.jpg"), alt="")
 						.c-navbar-product__body
@@ -22,10 +22,10 @@
 							.c-navbar-product__footer
 								.c-navbar-product__price 8650
 								.c-navbar-product__count x 2
-						a(href="#").c-navbar-product__close.js-navbar-product-remove
+						a(href="#").c-navbar-product__close.js-navbar-cart-product-remove
 							svg
 								use(href="#icon-close")
-					.c-navbar-product
+					.c-navbar-product.js-navbar-cart-product
 						.c-navbar-product__img
 							img(src=require("../../img/content/option8.jpg"), alt="")
 						.c-navbar-product__body
@@ -33,10 +33,10 @@
 							.c-navbar-product__footer
 								.c-navbar-product__price 8650
 								.c-navbar-product__count x 2
-						a(href="#").c-navbar-product__close.js-navbar-product-remove
+						a(href="#").c-navbar-product__close.js-navbar-cart-product-remove
 							svg
 								use(href="#icon-close")
-					.c-navbar-product
+					.c-navbar-product.js-navbar-cart-product
 						.c-navbar-product__img
 							img(src=require("../../img/content/option8.jpg"), alt="")
 						.c-navbar-product__body
@@ -44,7 +44,7 @@
 							.c-navbar-product__footer
 								.c-navbar-product__price 8650
 								.c-navbar-product__count x 2
-						a(href="#").c-navbar-product__close.js-navbar-product-remove
+						a(href="#").c-navbar-product__close.js-navbar-cart-product-remove
 							svg
 								use(href="#icon-close")
 				.dropdown-menu__footer.d-flex.align-items-center.justify-content-between
