@@ -36,7 +36,7 @@
     "bootstrap": "^4.2.1",
     "countup.js": "^1.9.3",
     "hammerjs": "^2.0.8",
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "jquery-mask-plugin": "^1.14.15",
     "lg-fullscreen": "^1.0.1",
     "lg-pager": "^1.0.2",
