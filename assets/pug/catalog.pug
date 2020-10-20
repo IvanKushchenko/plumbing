@@ -17,59 +17,60 @@ html(lang="ru")
 								.c-tip.c-tip_left.c-tip_filter.js-tip-filter Найдено товаров: 
 									span.mr-2 5
 									a(href="#").js-show-filtered-products Показать
-								.c-filters.mb-5.js-filters
+								.c-filters.mb-5.js-filters.js-filters-catalog
+									input(type="hidden" name="section_id" value="143")#section_code
 									.c-filter.c-filter_choosed-filters.js-filter
 										.c-filter__header
 											.c-filter__title Вы выбрали
 										.c-filter__body
 											.c-choosed-tag BURLINGTON
-												.c-choosed-tag__close
+												.c-choosed-tag__close.js-choosed-tag-close
 											.c-choosed-tag cezared
-												.c-choosed-tag__close
+												.c-choosed-tag__close.js-choosed-tag-close
 											.c-choosed-tag edelform
-												.c-choosed-tag__close
+												.c-choosed-tag__close.js-choosed-tag-close
 											.c-choosed-tag eleganza
-												.c-choosed-tag__close
+												.c-choosed-tag__close.js-choosed-tag-close
 											.c-choosed-tag Цена от 3000 до 15000
 												.c-choosed-tag__close
 										.c-filter__footer
-											a(href="#").c-btn.c-filter__btn сбросить фильтр
+											a(href="#").c-btn.c-filter__btn.js-reset-filter сбросить фильтр
 									.c-filter.js-filter
 										.c-filter__body
-											.c-checkbox.c-checkbox_theme-yellow
-												input(type="checkbox").c-checkbox__input
+											.c-checkbox.c-checkbox_theme-yellow.js-checkbox
+												input(type="checkbox" name="sizes" value="150-x-70").c-checkbox__input.js-checkbox-input
 												.c-checkbox__label товары со скидкой %
 									.c-filter.js-filter
 										.c-filter__header
 											a(href="#choosed-filters" data-toggle="collapse" aria-expanded="false").c-filter__title Бренд
 										.c-filter__body.collapse#choosed-filters
-											.c-checkbox
-												input(type="checkbox").c-checkbox__input
+											.c-checkbox.js-checkbox
+												input(type="checkbox" name="brand" value="111").c-checkbox__input.js-checkbox-input
 												.c-checkbox__label Grohe
-											.c-checkbox
-												input(type="checkbox").c-checkbox__input
+											.c-checkbox.js-checkbox
+												input(type="checkbox" name="brand" value="333").c-checkbox__input.js-checkbox-input
 												.c-checkbox__label Grohe
-											.c-checkbox
-												input(type="checkbox").c-checkbox__input
+											.c-checkbox.js-checkbox
+												input(type="checkbox" name="brand" value="24443132").c-checkbox__input.js-checkbox-input
 												.c-checkbox__label Grohe
-											.c-checkbox
-												input(type="checkbox").c-checkbox__input
+											.c-checkbox.js-checkbox
+												input(type="checkbox" name="brand" value="555").c-checkbox__input.js-checkbox-input
 												.c-checkbox__label Grohe
 									.c-filter.js-filter
 										.c-filter__header
 											.c-filter__title Цена
 										.c-filter__body
 											.d-flex.align-items-center.justify-content-between
-												.c-price-field
+												.c-price-field.js-price-field
 													.c-price-field__inner
 														span.c-price-field__prefix от
-														span(contenteditable="true" maxlength="3").c-price-field__input.js-price-field 4000
+														input( value="4000" name="arFilter[FILTER][MINMAX][length]" data-begin="4000").c-price-field__input.js-price-field-input
 														span.c-price-field__postfix a
 												span.ml-1.mr-1 -
 												.c-price-field
 													.c-price-field__inner
-														span.c-price-field__prefix от
-														span(contenteditable="true" maxlength="3").c-price-field__input.js-price-field 150000
+														span.c-price-field__prefix до
+														input( value="150000" name="arFilter[FILTER][MINMAX][length_to]" data-begin="150000").c-price-field__input.js-price-field-input
 														span.c-price-field__postfix a
 									.c-filter.c-filter_sizes.js-filter
 										.c-filter__header
@@ -146,31 +147,31 @@ html(lang="ru")
 										.c-filter__header
 											a(href="#filter-shape" data-toggle="collapse" aria-expanded="false").c-filter__title По форме
 										.c-filter__body.collapse.c-filter__body_scrolled#filter-shape
-											.c-checkbox.mb-1
+											.c-checkbox.mb-1.js-checkbox
 												input(type="checkbox").c-checkbox__input
 												.c-checkbox__label Прямоугольные
-											.c-checkbox.mb-1
+											.c-checkbox.mb-1.js-checkbox
 												input(type="checkbox").c-checkbox__input
 												.c-checkbox__label Прямоугольные
-											.c-checkbox.mb-1
+											.c-checkbox.mb-1.js-checkbox
 												input(type="checkbox").c-checkbox__input
 												.c-checkbox__label Прямоугольные
-											.c-checkbox.mb-1
+											.c-checkbox.mb-1.js-checkbox
 												input(type="checkbox").c-checkbox__input
 												.c-checkbox__label Прямоугольные
-											.c-checkbox.mb-1
+											.c-checkbox.mb-1.js-checkbox
 												input(type="checkbox").c-checkbox__input
 												.c-checkbox__label Прямоугольные
-											.c-checkbox.mb-1
+											.c-checkbox.mb-1.js-checkbox
 												input(type="checkbox").c-checkbox__input
 												.c-checkbox__label Прямоугольные
-											.c-checkbox.mb-1
+											.c-checkbox.mb-1.js-checkbox
 												input(type="checkbox").c-checkbox__input
 												.c-checkbox__label Прямоугольные
-											.c-checkbox.mb-1
+											.c-checkbox.mb-1.js-checkbox
 												input(type="checkbox").c-checkbox__input
 												.c-checkbox__label Прямоугольные
-											.c-checkbox.mb-1
+											.c-checkbox.mb-1.js-checkbox
 												input(type="checkbox").c-checkbox__input
 												.c-checkbox__label Прямоугольные
 									.c-filter.js-filter
@@ -243,302 +244,84 @@ html(lang="ru")
 											a(href="#") Наборы
 										li
 											a(href="#") Смесители для душа
-							.c-choose-by-property
-								ul.nav.nav-tabs
-									li.nav-item
-										a(href="#popular-property-content" data-toggle="tab").nav-link.active#popular-property-tab популярное
-									li.nav-item.d-none.d-lg-block
-										a(href="#size-property-content" data-toggle="tab").nav-link#size-property-tab Размер
-									li.nav-item
-										a(href="#size-property-content" data-toggle="tab").nav-link#size-property-tab Форма
-									li.nav-item
-										a(href="#size-property-content" data-toggle="tab").nav-link#size-property-tab Страна
-									li.nav-item
-										a(href="#size-property-content" data-toggle="tab").nav-link#size-property-tab Бренд
-									li.nav-item.d-none.d-sm-block
-										a(href="#size-property-content" data-toggle="tab").nav-link#size-property-tab Тип дверей
-									li.nav-item.d-none.d-lg-block
-										a(href="#size-property-content" data-toggle="tab").nav-link#size-property-tab Высота поддона
-									li.nav-item.d-none.d-lg-block
-										a(href="#size-property-content" data-toggle="tab").nav-link#size-property-tab Цена
-								.tab-content
-									.tab-pane.fade.show.active#popular-property-content
-										.c-choose-by-property__list.row.js-read-more-container.c-read-more
-											.col-6.col-md-4.c-choose-by-property__item
-												.c-choose-by-property__footer
-													a(href="#").c-choose-by-property__link Душевые кабины прямоугольные
-											.col-6.col-md-4.c-choose-by-property__item
-												.c-choose-by-property__footer
-													a(href="#").c-choose-by-property__link Душевые кабины прямоугольные
-											.col-6.col-md-4.c-choose-by-property__item
-												.c-choose-by-property__footer
-													a(href="#").c-choose-by-property__link Душевые кабины прямоугольные
-											.col-6.col-md-4.c-choose-by-property__item
-												.c-choose-by-property__footer
-													a(href="#").c-choose-by-property__link Душевые кабины прямоугольные
-											.col-6.col-md-4.c-choose-by-property__item
-												.c-choose-by-property__footer
-													a(href="#").c-choose-by-property__link Душевые кабины прямоугольные
-											.col-6.col-md-4.c-choose-by-property__item
-												.c-choose-by-property__footer
-													a(href="#").c-choose-by-property__link Душевые кабины прямоугольные
-											.col-6.col-md-4.c-choose-by-property__item
-												.c-choose-by-property__footer
-													a(href="#").c-choose-by-property__link Душевые кабины прямоугольные
-											.col-6.col-md-4.c-choose-by-property__item
-												.c-choose-by-property__footer
-													a(href="#").c-choose-by-property__link Душевые кабины прямоугольные
-											.col-6.col-md-4.c-choose-by-property__item
-												.c-choose-by-property__footer
-													a(href="#").c-choose-by-property__link Душевые кабины прямоугольные
-											.col-6.col-md-4.c-choose-by-property__item
-												.c-choose-by-property__footer
-													a(href="#").c-choose-by-property__link Душевые кабины прямоугольные
-											.col-6.col-md-4.c-choose-by-property__item
-												.c-choose-by-property__footer
-													a(href="#").c-choose-by-property__link Душевые кабины прямоугольные
-											.col-6.col-md-4.c-choose-by-property__item
-												.c-choose-by-property__footer
-													a(href="#").c-choose-by-property__link Душевые кабины прямоугольные
-										.d-flex.justify-content-center.align-items-center.d-sm-none
-											a(href="#").js-read-more-btn Развернуть
-											
-									.tab-pane.fade#size-property-content
-										.c-choose-by-property__list.row.js-read-more-container.c-read-more
-											.col-6.col-md-4.c-choose-by-property__item
-												.c-choose-by-property__footer
-													a(href="#").c-choose-by-property__link Душевые кабины прямоугольные
-											.col-6.col-md-4.c-choose-by-property__item
-												.c-choose-by-property__footer
-													a(href="#").c-choose-by-property__link Душевые кабины прямоугольные
-											.col-6.col-md-4.c-choose-by-property__item
-												.c-choose-by-property__footer
-													a(href="#").c-choose-by-property__link Душевые кабины прямоугольные
-											.col-6.col-md-4.c-choose-by-property__item
-												.c-choose-by-property__footer
-													a(href="#").c-choose-by-property__link Душевые кабины прямоугольные
-											.col-6.col-md-4.c-choose-by-property__item
-												.c-choose-by-property__footer
-													a(href="#").c-choose-by-property__link Душевые кабины прямоугольные
-											.col-6.col-md-4.c-choose-by-property__item
-												.c-choose-by-property__footer
-													a(href="#").c-choose-by-property__link Душевые кабины прямоугольные
-											.col-6.col-md-4.c-choose-by-property__item
-												.c-choose-by-property__footer
-													a(href="#").c-choose-by-property__link Душевые кабины прямоугольные
-											.col-6.col-md-4.c-choose-by-property__item
-												.c-choose-by-property__footer
-													a(href="#").c-choose-by-property__link Душевые кабины прямоугольные
-											.col-6.col-md-4.c-choose-by-property__item
-												.c-choose-by-property__footer
-													a(href="#").c-choose-by-property__link Душевые кабины прямоугольные
-											.col-6.col-md-4.c-choose-by-property__item
-												.c-choose-by-property__footer
-													a(href="#").c-choose-by-property__link Душевые кабины прямоугольные
-											.col-6.col-md-4.c-choose-by-property__item
-												.c-choose-by-property__footer
-													a(href="#").c-choose-by-property__link Душевые кабины прямоугольные
-											.col-6.col-md-4.c-choose-by-property__item
-												.c-choose-by-property__footer
-													a(href="#").c-choose-by-property__link Душевые кабины прямоугольные
-										.d-flex.justify-content-center.align-items-center.d-sm-none
-											a(href="#").js-read-more-btn Развернуть
-									a(href="#").c-btn.c-choose-by-property__more-btn показать ещё
+							.c-filter-detail.mb-5
+								.c-filter-detail__body
+									p.c-filter-detail__title Материал
+									.row
+										-
+											var currentFilter = [
+												{ title: 'Акриловые', img: 'img/content/filter/1.png' },
+												{ title: 'Стальные', img: 'img/content/filter/2.png' },
+												{ title: 'Чугунные', img: 'img/content/filter/3.png' },
+												{ title: 'Искуственный камень', img: 'img/content/filter/4.png' },
+												{ title: 'Экран для ванны', img: 'img/content/filter/5.png' },
+												{ title: 'Ванны-бассейны', img: 'img/content/filter/6.png' }
+											]
+										each item in currentFilter
+											.col-4.col-sm-3.col-md-2.d-flex.align-items-stretch.mb-3.mb-md-0
+												a(href="#").c-filter-detail__item.d-flex.flex-column
+													.c-filter-detail__preview
+														img(src=item.img)
+													h4.c-filter-detail__name.d-flex.align-items-center.justify-content-center.flex-grow-1=item.title
+										-;
+								.c-filter-detail__footer
+									.row
+										-
+											var deepFilter = [
+												{
+													title: 'Форма',
+													list: ['Прямоугольная', 'Асимметричная', 'Овальная']
+												},
+												{
+													title: 'Монтаж',
+													list: ['Пристенная', 'Встраиваемая', 'Отдельно стоящая']
+												},
+												{
+													title: 'Зона гидромассажа',
+													list: ['Гидромассаж боковой', 'Гидромассаж спины', 'Гидромассаж ног', 'Аэромассаж']
+												},
+												{
+													title: 'Расположение перелива',
+													list: ['Стандартное', 'По центру']
+												}
+											]
+										each deepItem in deepFilter
+											.col-6.col-sm-4.col-md-3.mb-3.mb-md-0
+												p.c-filter-detail__subtitle=deepItem.title
+												ul
+													each deepItemList in deepItem.list
+														li
+															a(href="#").c-filter-detail__link=deepItemList
+										-;			
 							.c-filtered-products
 								.c-filtered-products__header.d-block.d-xl-flex.justify-content-between.mb-5
 									.c-sort.d-none.d-xl-flex
 										.c-sort__txt сортировка:
-										select.c-sort__select
+										select.c-sort__select.js-sort-select
 											option Цена по возрастанию 
 											option Цена по возрастанию
 									.row
 										.col-6
-											.c-filters-mobile.dropdown.c-dropdown.d-xl-none
-												.dropdown-toggle.c-dropdown-toggle.js-dropdown-filters фильтр
-												//- .dropdown-menu.c-dropdown__menu
-												//- 	.c-dropdown__close.js-dropdown-filters-close
-												//- 	.c-filters.mb-5
-												//- 		.c-filter.c-filter_choosed-filters
-												//- 			.c-filter__header
-												//- 				.c-filter__title Вы выбрали
-												//- 			.c-filter__body
-												//- 				.c-choosed-tag BURLINGTON
-												//- 					.c-choosed-tag__close
-												//- 				.c-choosed-tag cezared
-												//- 					.c-choosed-tag__close
-												//- 				.c-choosed-tag edelform
-												//- 					.c-choosed-tag__close
-												//- 				.c-choosed-tag eleganza
-												//- 					.c-choosed-tag__close
-												//- 				.c-choosed-tag Цена от 3000 до 15000
-												//- 					.c-choosed-tag__close
-												//- 			.c-filter__footer
-												//- 				a(href="#").c-btn.c-filter__btn сбросить фильтр
-												//- 		.c-filter
-												//- 			.c-filter__body
-												//- 				.c-checkbox.c-checkbox_theme-yellow
-												//- 					input(type="checkbox").c-checkbox__input
-												//- 					.c-checkbox__label товары со скидкой %
-												//- 		.c-filter
-												//- 			.c-filter__header
-												//- 				a(href="#choosed-filters" data-toggle="collapse" aria-expanded="false").c-filter__title Бренд
-												//- 			.c-filter__body.collapse#choosed-filters
-												//- 				.c-checkbox
-												//- 					input(type="checkbox").c-checkbox__input
-												//- 					.c-checkbox__label Grohe
-												//- 				.c-checkbox
-												//- 					input(type="checkbox").c-checkbox__input
-												//- 					.c-checkbox__label Grohe
-												//- 				.c-checkbox
-												//- 					input(type="checkbox").c-checkbox__input
-												//- 					.c-checkbox__label Grohe
-												//- 				.c-checkbox
-												//- 					input(type="checkbox").c-checkbox__input
-												//- 					.c-checkbox__label Grohe
-												//- 		.c-filter
-												//- 			.c-filter__header
-												//- 				.c-filter__title Цена
-												//- 			.c-filter__body
-												//- 				.d-flex.align-items-center.justify-content-between
-												//- 					.c-price-field
-												//- 						.c-price-field__inner
-												//- 							span.c-price-field__prefix от
-												//- 							span(contenteditable="true" maxlength="3").c-price-field__input.js-price-field 4000
-												//- 							span.c-price-field__postfix a
-												//- 					span.ml-1.mr-1 -
-												//- 					.c-price-field
-												//- 						.c-price-field__inner
-												//- 							span.c-price-field__prefix от
-												//- 							span(contenteditable="true" maxlength="3").c-price-field__input.js-price-field 150000
-												//- 							span.c-price-field__postfix a
-												//- 		.c-filter.c-filter_sizes
-												//- 			.c-filter__header
-												//- 				a(href="#filter-sizes" data-toggle="collapse" aria-expanded="false").c-filter__title По размеру
-												//- 			.c-filter__body.collapse#filter-sizes
-												//- 				.c-filter__body-inner.collapse#more-filter-sizes.mb-2
-												//- 					.d-flex.flex-wrap.mb-3
-												//- 						.c-tag-checkbox
-												//- 							input(type="checkbox").c-tag-checkbox__input
-												//- 							.c-tag-checkbox__label 70 x 70
-												//- 						.c-tag-checkbox
-												//- 							input(type="checkbox").c-tag-checkbox__input
-												//- 							.c-tag-checkbox__label 70 x 70
-												//- 					.d-flex.flex-wrap.mb-3
-												//- 						.c-tag-checkbox
-												//- 							input(type="checkbox").c-tag-checkbox__input
-												//- 							.c-tag-checkbox__label 80 x 80
-												//- 						.c-tag-checkbox
-												//- 							input(type="checkbox").c-tag-checkbox__input
-												//- 							.c-tag-checkbox__label 80 x 80
-												//- 					.d-flex.flex-wrap.mb-3
-												//- 						.c-tag-checkbox
-												//- 							input(type="checkbox").c-tag-checkbox__input
-												//- 							.c-tag-checkbox__label 90 x 90
-												//- 						.c-tag-checkbox
-												//- 							input(type="checkbox").c-tag-checkbox__input
-												//- 							.c-tag-checkbox__label 90 x 90
-												//- 						.c-tag-checkbox
-												//- 							input(type="checkbox").c-tag-checkbox__input
-												//- 							.c-tag-checkbox__label 90 x 90
-												//- 						.c-tag-checkbox
-												//- 							input(type="checkbox").c-tag-checkbox__input
-												//- 							.c-tag-checkbox__label 90 x 90
-												//- 					.d-flex.flex-wrap.mb-3
-												//- 						.c-tag-checkbox
-												//- 							input(type="checkbox").c-tag-checkbox__input
-												//- 							.c-tag-checkbox__label 100 x 100
-												//- 						.c-tag-checkbox
-												//- 							input(type="checkbox").c-tag-checkbox__input
-												//- 							.c-tag-checkbox__label 100 x 100
-												//- 						.c-tag-checkbox
-												//- 							input(type="checkbox").c-tag-checkbox__input
-												//- 							.c-tag-checkbox__label 100 x 100
-												//- 				a(href="#more-filter-sizes" data-toggle="collapse" aria-expanded="false") показать еще
-												//- 		.c-filter
-												//- 			.c-filter__header
-												//- 				.c-filter__title По размеру
-												//- 			.c-filter__body
-												//- 				.d-block.mb-3
-												//- 					span.d-block.mb-1 Длина, см
-												//- 					.d-flex.align-items-center.justify-content-between
-												//- 						.c-price-field
-												//- 							.c-price-field__inner
-												//- 								span.c-price-field__prefix от
-												//- 								span(contenteditable="true" maxlength="3").c-price-field__input.js-price-field 120
-												//- 						span.ml-1.mr-1 -
-												//- 						.c-price-field
-												//- 							.c-price-field__inner
-												//- 								span.c-price-field__prefix от
-												//- 								span(contenteditable="true" maxlength="3").c-price-field__input.js-price-field 180
-												//- 				.d-block.mb-3
-												//- 					span.d-block.mb-1 Ширина, см
-												//- 					.d-flex.align-items-center.justify-content-between
-												//- 						.c-price-field
-												//- 							.c-price-field__inner
-												//- 								span.c-price-field__prefix от
-												//- 								span(contenteditable="true" maxlength="3").c-price-field__input.js-price-field 120
-												//- 						span.ml-1.mr-1 -
-												//- 						.c-price-field
-												//- 							.c-price-field__inner
-												//- 								span.c-price-field__prefix от
-												//- 								span(contenteditable="true" maxlength="3").c-price-field__input.js-price-field 180
-												//- 		.c-filter
-												//- 			.c-filter__header
-												//- 				a(href="#filter-shape" data-toggle="collapse" aria-expanded="false").c-filter__title По форме
-												//- 			.c-filter__body.collapse.c-filter__body_scrolled#filter-shape
-												//- 				.c-checkbox.mb-1
-												//- 					input(type="checkbox").c-checkbox__input
-												//- 					.c-checkbox__label Прямоугольные
-												//- 				.c-checkbox.mb-1
-												//- 					input(type="checkbox").c-checkbox__input
-												//- 					.c-checkbox__label Прямоугольные
-												//- 				.c-checkbox.mb-1
-												//- 					input(type="checkbox").c-checkbox__input
-												//- 					.c-checkbox__label Прямоугольные
-												//- 				.c-checkbox.mb-1
-												//- 					input(type="checkbox").c-checkbox__input
-												//- 					.c-checkbox__label Прямоугольные
-												//- 				.c-checkbox.mb-1
-												//- 					input(type="checkbox").c-checkbox__input
-												//- 					.c-checkbox__label Прямоугольные
-												//- 				.c-checkbox.mb-1
-												//- 					input(type="checkbox").c-checkbox__input
-												//- 					.c-checkbox__label Прямоугольные
-												//- 				.c-checkbox.mb-1
-												//- 					input(type="checkbox").c-checkbox__input
-												//- 					.c-checkbox__label Прямоугольные
-												//- 				.c-checkbox.mb-1
-												//- 					input(type="checkbox").c-checkbox__input
-												//- 					.c-checkbox__label Прямоугольные
-												//- 				.c-checkbox.mb-1
-												//- 					input(type="checkbox").c-checkbox__input
-												//- 					.c-checkbox__label Прямоугольные
-												//- 		.c-filter
-												//- 			.c-filter__header
-												//- 				a(href="#filter-material" data-toggle="collapse" aria-expanded="false").c-filter__title Материал
-												//- 			.c-filter__body.collapse.c-filter__body_scrolled#filter-material
-												//- 				.c-checkbox.mb-1
-												//- 					input(type="checkbox").c-checkbox__input
-												//- 					.c-checkbox__label Акрил
+											button.c-filters-button.d-xl-none.js-filters-button фильтр
 										.col-6
-											.c-sort-mobile.dropdown.c-dropdown.d-xl-none
+											.c-sort-button.dropdown.c-dropdown.d-xl-none.js-sort-button
 												.dropdown-toggle.c-dropdown-toggle(data-toggle="dropdown" data-flip="false")
-													span.c-sort-mobile__title Сортировка
-													span.c-sort-mobile__choosed-sort По названию
+													span.c-sort-button__title Сортировка
+													span.c-sort-button__choosed-sort По названию
 												.dropdown-menu.c-dropdown__menu
 													ul
-														li.c-sort-mobile__item.c-sort-mobile__item_down По названию
-															input(type="radio" name="sort-mobile" value="name").c-sort-mobile__input
-														li.c-sort-mobile__item.c-sort-mobile__item_up По цене
-															input(type="radio" name="sort-mobile" value="price").c-sort-mobile__input
+														li.c-sort-button__item.c-sort-button__item_down.js-sort-button-item По названию
+															input(type="radio" name="sort-button" value="name").c-sort-button__input.js-sort-button-input
+														li.c-sort-button__item.c-sort-button__item_up.js-sort-button-item По цене
+															input(type="radio" name="sort-button" value="price").c-sort-button__input.js-sort-button-input
 
-									.c-posts-showed.d-none.d-xl-flex
+									.c-posts-showed.d-none.d-xl-flex.js-posts-showed
 										.c-posts-showed__title Показать:
 										form.c-posts-showed__body
 											.c-posts-showed__count.is-active 24
-												input(type="radio" name="posts-showed" value="24" checked).c-posts-showed__count-input
+												input(type="radio" name="posts-showed" value="24" checked).c-posts-showed__count-input.js-posts-showed-input
 											.c-posts-showed__count 48
-												input(type="radio" name="posts-showed" value="48").c-posts-showed__count-input
+												input(type="radio" name="posts-showed" value="48").c-posts-showed__count-input.js-posts-showed-input
 									.c-pagination.d-none.d-xl-flex
 										a(href="#").c-pagination__nav.c-pagination__nav_left
 										.c-pagination__pages

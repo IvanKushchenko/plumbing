@@ -9,13 +9,13 @@ html(lang="ru")
 				main.o-page__content
 					.o-page__container
 						.o-page__sidebar.d-none.d-md-block
-							.c-filters.mb-5
-								.c-filter
+							.c-filters.mb-5.js-filters-brands
+								.c-filter.js-filter
 									.c-filter__header
 										a(href="#choosed-filters" data-toggle="collapse" aria-expanded="true").c-filter__title Страна-производитель
 									.c-filter__body.collapse.show#choosed-filters
 										.c-checkbox
-											input(type="checkbox").c-checkbox__input
+											input(type="checkbox" value="test").c-checkbox__input
 											.c-checkbox__label Австрия
 										.c-checkbox
 											input(type="checkbox").c-checkbox__input
@@ -124,184 +124,96 @@ html(lang="ru")
 												.c-checkbox
 													input(type="checkbox").c-checkbox__input
 													.c-checkbox__label Швеция
-							.c-alphabet-filter.mb-5
-								a(href="#").c-alphabet-filter__item.is-active Все
-								a(href="#").c-alphabet-filter__item A
-								a(href="#").c-alphabet-filter__item B
-								a(href="#").c-alphabet-filter__item C
-								a(href="#").c-alphabet-filter__item D
-								a(href="#").c-alphabet-filter__item E
-								a(href="#").c-alphabet-filter__item F
-								a(href="#").c-alphabet-filter__item G
-								a(href="#").c-alphabet-filter__item H
-								a(href="#").c-alphabet-filter__item I
-								a(href="#").c-alphabet-filter__item J
-								a(href="#").c-alphabet-filter__item K
-								a(href="#").c-alphabet-filter__item L
-								a(href="#").c-alphabet-filter__item M
-								a(href="#").c-alphabet-filter__item N
-								a(href="#").c-alphabet-filter__item O
-								a(href="#").c-alphabet-filter__item P
-								a(href="#").c-alphabet-filter__item Q
-								a(href="#").c-alphabet-filter__item R
-								a(href="#").c-alphabet-filter__item S
-								a(href="#").c-alphabet-filter__item T
-								a(href="#").c-alphabet-filter__item U
-								a(href="#").c-alphabet-filter__item V
-								a(href="#").c-alphabet-filter__item W
-								a(href="#").c-alphabet-filter__item X
-								a(href="#").c-alphabet-filter__item Y
-								a(href="#").c-alphabet-filter__item Z
-								a(href="#").c-alphabet-filter__item А-я
-							.c-brands-list
-								.c-brands-list__section
-									.c-brands-list__letter-wrap
-										.c-brands-list__letter A
-									.row.c-brands-list__inner
-										.col-md-12.col-xl-6
-											.c-brands-list__item.row
-												.col-md-5.d-flex.flex-column.align-items-start
-													img(src=require("../img/content/brand.jpg"), alt="").c-brands-list__item-img
-													a(href="#").c-brands-list__item-link.font-italic A. e T. Italia 
-													.c-brands-list__item-country.font-italic Португалия
-												.col-md-7
-													ul.c-brands-list__item-products.collapse#brands-item-products1
-														li
-															a(href="#") Ванны
-														li
-															a(href="#") Душ
-														li
-															a(href="#") Подключения для шланга
-														li
-															a(href="#") Душевые ограждения
-														li
-															a(href="#") Душевые поддоны, каналы, плиты
-														li
-															a(href="#") Душевые кабины и боксы
-										.col-md-12.col-xl-6
-											.c-brands-list__item.row
-												.col-md-5.d-flex.flex-column.align-items-start
-													img(src=require("../img/content/brand2.jpg"), alt="").c-brands-list__item-img
-													a(href="#").c-brands-list__item-link.font-italic A. e T. Italia 
-													.c-brands-list__item-country.font-italic Португалия
-												.col-md-7
-													ul.c-brands-list__item-products.collapse#brands-item-products2
-														li
-															a(href="#") Ванны
-														li
-															a(href="#") Душ
-														li
-															a(href="#") Подключения для шланга
-														li
-															a(href="#") Душевые ограждения
-														li
-															a(href="#") Душевые поддоны, каналы, плиты
-														li
-															a(href="#") Душевые кабины и боксы
-														li
-															a(href="#") Душевые ограждения
-														li
-															a(href="#") Душевые поддоны, каналы, плиты
-														li
-															a(href="#") Душевые кабины и боксы
-													a(href="#brands-item-products2" data-toggle="collapse" aria-expanded="false") Показать все
-										.col-md-12.col-xl-6
-											.c-brands-list__item.row
-												.col-md-5.d-flex.flex-column.align-items-start
-													img(src=require("../img/content/brand3.jpg"), alt="").c-brands-list__item-img
-													a(href="#").c-brands-list__item-link.font-italic A. e T. Italia 
-													.c-brands-list__item-country.font-italic Португалия
-												.col-md-7
-													ul.c-brands-list__item-products.collapse#brands-item-products3
-														li
-															a(href="#") Ванны
-														li
-															a(href="#") Душ
-														li
-															a(href="#") Подключения для шланга
-														li
-															a(href="#") Душевые ограждения
-														li
-															a(href="#") Душевые поддоны, каналы, плиты
-														li
-															a(href="#") Душевые кабины и боксы
-														li
-															a(href="#") Душевые ограждения
-														li
-															a(href="#") Душевые поддоны, каналы, плиты
-														li
-															a(href="#") Душевые кабины и боксы
-													a(href="#brands-item-products3" data-toggle="collapse" aria-expanded="false") Показать все
-								.c-brands-list__section
-									.c-brands-list__letter-wrap
-										.c-brands-list__letter B
-									.row.c-brands-list__inner
-										.col-md-12.col-xl-6
-											.c-brands-list__item.row
-												.col-md-5.d-flex.flex-column.align-items-start
-													img(src=require("../img/content/brand3.jpg"), alt="").c-brands-list__item-img
-													a(href="#").c-brands-list__item-link.font-italic A. e T. Italia 
-													.c-brands-list__item-country.font-italic Португалия
-												.col-md-7
-													ul.c-brands-list__item-products.collapse#brands-item-products4
-														li
-															a(href="#") Ванны
-														li
-															a(href="#") Душ
-														li
-															a(href="#") Подключения для шланга
-														li
-															a(href="#") Душевые ограждения
-														li
-															a(href="#") Душевые поддоны, каналы, плиты
-														li
-															a(href="#") Душевые кабины и боксы
-										.col-md-12.col-xl-6
-											.c-brands-list__item.row
-												.col-md-5.d-flex.flex-column.align-items-start
-													img(src=require("../img/content/brand2.jpg"), alt="").c-brands-list__item-img
-													a(href="#").c-brands-list__item-link.font-italic A. e T. Italia 
-													.c-brands-list__item-country.font-italic Португалия
-												.col-md-7
-													ul.c-brands-list__item-products.collapse#brands-item-products5
-														li
-															a(href="#") Ванны
-														li
-															a(href="#") Душ
-														li
-															a(href="#") Подключения для шланга
-														li
-															a(href="#") Душевые ограждения
-														li
-															a(href="#") Душевые поддоны, каналы, плиты
-														li
-															a(href="#") Душевые кабины и боксы
-														li
-															a(href="#") Душевые ограждения
-														li
-															a(href="#") Душевые поддоны, каналы, плиты
-														li
-															a(href="#") Душевые кабины и боксы
-													a(href="#brands-item-products5" data-toggle="collapse" aria-expanded="false") Показать все
-										.col-md-12.col-xl-6
-											.c-brands-list__item.row
-												.col-md-5.d-flex.flex-column.align-items-start
-													img(src=require("../img/content/brand.jpg"), alt="").c-brands-list__item-img
-													a(href="#").c-brands-list__item-link.font-italic A. e T. Italia 
-													.c-brands-list__item-country.font-italic Португалия
-												.col-md-7
-													ul.c-brands-list__item-products.collapse#brands-item-products6
-														li
-															a(href="#") Ванны
-														li
-															a(href="#") Душ
-														li
-															a(href="#") Подключения для шланга
-														li
-															a(href="#") Душевые ограждения
-														li
-															a(href="#") Душевые поддоны, каналы, плиты
-														li
-															a(href="#") Душевые кабины и боксы
+							.c-alphabet-filter.js-alphabet-filter.mb-5
+								button(data-letter="Все" data-noindex="true").c-alphabet-filter__item.is-active.js-alphabet-filter-item Все
+								
+								-
+									var letters = ['A', 'B', 'C', 'D', 'E'];
+								each letter in letters
+									button(data-letter=letter).c-alphabet-filter__item.js-alphabet-filter-item=letter
+								-;
+								button(data-letter="А-я" data-noindex="true").c-alphabet-filter__item.js-alphabet-filter-item А-я
 
+							.c-brands-list
+								-
+									var sectionLetters = ['A', 'B', 'П'];
+								each letterSection in sectionLetters
+									.c-brands-list__section(data-letter=letterSection).js-brands-list-section
+										.c-brands-list__letter-wrap
+											.c-brands-list__letter=letterSection
+										.row.c-brands-list__inner
+											.col-md-12.col-xl-6
+												.c-brands-list__item.row
+													.col-md-5.d-flex.flex-column.align-items-start
+														img(src=require("../img/content/brand.jpg"), alt="").c-brands-list__item-img
+														a(href="#").c-brands-list__item-link.font-italic A. e T. Italia 
+														.c-brands-list__item-country.font-italic Португалия
+													.col-md-7
+														ul.c-brands-list__item-products.collapse#brands-item-products1
+															li
+																a(href="#") Ванны
+															li
+																a(href="#") Душ
+															li
+																a(href="#") Подключения для шланга
+															li
+																a(href="#") Душевые ограждения
+															li
+																a(href="#") Душевые поддоны, каналы, плиты
+															li
+																a(href="#") Душевые кабины и боксы
+											.col-md-12.col-xl-6
+												.c-brands-list__item.row
+													.col-md-5.d-flex.flex-column.align-items-start
+														img(src=require("../img/content/brand2.jpg"), alt="").c-brands-list__item-img
+														a(href="#").c-brands-list__item-link.font-italic A. e T. Italia 
+														.c-brands-list__item-country.font-italic Португалия
+													.col-md-7
+														ul.c-brands-list__item-products.collapse#brands-item-products2
+															li
+																a(href="#") Ванны
+															li
+																a(href="#") Душ
+															li
+																a(href="#") Подключения для шланга
+															li
+																a(href="#") Душевые ограждения
+															li
+																a(href="#") Душевые поддоны, каналы, плиты
+															li
+																a(href="#") Душевые кабины и боксы
+															li
+																a(href="#") Душевые ограждения
+															li
+																a(href="#") Душевые поддоны, каналы, плиты
+															li
+																a(href="#") Душевые кабины и боксы
+														a(href="#brands-item-products2" data-toggle="collapse" aria-expanded="false") Показать все
+											.col-md-12.col-xl-6
+												.c-brands-list__item.row
+													.col-md-5.d-flex.flex-column.align-items-start
+														img(src=require("../img/content/brand3.jpg"), alt="").c-brands-list__item-img
+														a(href="#").c-brands-list__item-link.font-italic A. e T. Italia 
+														.c-brands-list__item-country.font-italic Португалия
+													.col-md-7
+														ul.c-brands-list__item-products.collapse#brands-item-products3
+															li
+																a(href="#") Ванны
+															li
+																a(href="#") Душ
+															li
+																a(href="#") Подключения для шланга
+															li
+																a(href="#") Душевые ограждения
+															li
+																a(href="#") Душевые поддоны, каналы, плиты
+															li
+																a(href="#") Душевые кабины и боксы
+															li
+																a(href="#") Душевые ограждения
+															li
+																a(href="#") Душевые поддоны, каналы, плиты
+															li
+																a(href="#") Душевые кабины и боксы
+														a(href="#brands-item-products3" data-toggle="collapse" aria-expanded="false") Показать все
 				include templates/footer.pug

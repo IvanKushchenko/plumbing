@@ -1,0 +1,23 @@
+.c-file-uploader{
+	display: flex;
+	align-items: center;
+	position: relative;
+	overflow: hidden;
+	padding-bottom: 1px;
+
+	input {
+		position: absolute;
+		width: 2000px;
+		left: -1000px;
+		cursor: pointer;
+	}
+
+	&:before {
+		content: '';
+		display: block;
+		width: 15px;
+		height: 16px;
+		background: url('../img/icons/attach.png');
+		margin-right: 5px;
+	}
+}

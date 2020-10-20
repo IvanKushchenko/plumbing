@@ -1,20 +1,25 @@
 .c-timer {
-  text-align: center;
+	text-align: center;
+	padding-left: 30px;
+	color: #F1CA49;
+	text-transform: uppercase;
+	font-size: 24px;
+	display: inline-block;
+	vertical-align: middle;
+	font-family: $ff-secondary;
+	position: relative;
+	width: 140px;
 
-  &__clock {
-    display: inline-block;
-    vertical-align: -9px;
-    background: url("../img/icons/clock.svg") no-repeat top left;
-    width: 27px;
-    height: 27px;
-    margin-right: 10px;
-  }
+	&:before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		display: inline-block;
+		background: url("../img/icons/clock.svg") no-repeat top left;
+		width: 27px;
+		height: 27px;
+	}
 
-  &__text {
-    color: #F1CA49;
-    text-transform: uppercase;
-    font-size: 24px;
-    display: inline-block;
-    vertical-align: middle;
-  }
 }

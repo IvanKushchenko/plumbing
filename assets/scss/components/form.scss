@@ -185,46 +185,6 @@
 		background: url('../img/icons/flag-russia.png');
 		flex-shrink: 0;
 	}
-
-	&__action {
-		&_attachment {
-			display: flex;
-			align-items: center;
-			position: relative;
-			overflow: hidden;
-			padding-bottom: 1px;
-
-			&.is-uploaded{
-				input{
-					pointer-events: none;
-				}
-			}
-
-			input {
-				position: absolute;
-				width: 2000px;
-				left: -1000px;
-				cursor: pointer;
-			}
-
-			&:before {
-				content: '';
-				display: block;
-				width: 15px;
-				height: 16px;
-				background: url('../img/icons/attach.png');
-				margin-right: 5px;
-			}
-			
-			&-txt{
-				max-width: 250px;
-				white-space: nowrap;
-				overflow: hidden;
-				text-overflow: ellipsis;
-			}
-		}
-
-	}
 	
 	&_modal &__btn{
 		padding: 0 30px;

@@ -22,7 +22,8 @@
 	}
 
 	&__img-label{
-	    background: #3e7ce3;
+		background: $success;
+	    
 	    color: #fff;
 	    width: 100%;
 	    padding: 2px 0;
@@ -37,7 +38,7 @@
 	    }
 
 	    &_under-order{
-	    	background: $success;
+	    	background: #3e7ce3;
 	    }
 	}
 

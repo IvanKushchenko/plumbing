@@ -1,13 +1,21 @@
 .c-catalog-menu-mobile {
-	display: none;
 	background-color: #fff;
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	z-index: 1000;
-	max-height: 100%;
-	width: 70%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2500;
+	padding: 0 20px;
+	height: 100%;
+	width: 80%;
 	overflow: auto;
+	overflow-y: auto;
+	transform: translateX(-100%);
+    transition: .3s ease-in-out;
+
+    &.is-show{
+	    transform: translateX(0);
+    }
+
 	.c-navbar__catalog-btn {
 		width: 100%;
 	}

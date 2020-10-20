@@ -17,8 +17,28 @@ $container-max-widths: (
     lg: 960px,
     xl: 1260px
     ) !default;
+
+/*=============================
+=            Color            =
+=============================*/
+
+$zidrihr: #ecf2f6;
+$srerpo: #989898;
+$clr: #8cafc2;
+
+$primary: $clr;
 $success: #01bf62;
 $secondary: #f1ca49;
+
+$filter-detail-name-bg: $zidrihr;
+$filter-detail-border-color: $zidrihr;
+$filter-detail-title-color: $srerpo;
+$filter-detail-group-title: $srerpo;
+
+/*=====  End of Color  ======*/
+
+
+
 $bp-xs: 0;
 $bp-sm-2: 450px;
 $bp-sm: 576px;

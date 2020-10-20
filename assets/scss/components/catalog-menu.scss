@@ -3,12 +3,16 @@
 
 	
 
-	&:hover &__nav {
-		display: block;
-	}
+	// &:hover &__nav {
+	// 	display: block;
+	// }
 
 	&:hover &__toggle-icon {
 		transform: translateY(-50%) rotate(180deg);
+	}
+
+	&__subitem{
+		position: relative;
 	}
 
 	&__item_dropdown > &__link[aria-expanded="true"] {
@@ -62,6 +66,7 @@
 		font-size: 1.125rem;
 		cursor: pointer;
 		font-weight: bold;
+	    z-index: 20;
 
 		@media (max-width:$bp-lg) {
 			width: 240px;
@@ -85,9 +90,56 @@
 	}
 
 	&__nav {
+		display: block;
 		z-index: 22;
 		width: 100%;
 		background-color: #fff;
+	}
+
+	&__detail-title{
+		box-shadow: none;
+	}
+
+	
+
+	&__detail{
+		display: none;
+		padding: 20px;
+		box-shadow: 5px 2.5px 5px 0 rgba(0,0,0,0.25), inset 1px 0 0 0 #eee;
+		background: #fff;
+		position: absolute;
+		left: 270px;
+		width: calc(1230px - 300px);
+		top: 0;
+	    // transform: translateY(-40%);
+	}
+
+	&__item:hover > &__detail{
+		display: block;
+	}
+
+	&__detail-top,
+	&__detail-body{
+		margin-bottom: 20px;
+	}
+
+	&__detail-group{
+		padding-left: 2rem;
+	}
+
+	&__detail-group-link{
+		font-size: .9rem;
+	}
+
+	&__detail-group-title{
+		text-transform: uppercase;
+		font-size: .8rem;
+		margin-bottom: 0;
+		box-shadow: none;
+	}
+
+	&__detail-group-item{
+		margin-top: .2rem;
 	}
 
 }

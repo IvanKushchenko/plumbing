@@ -1,59 +1,97 @@
-ul.c-catalog-menu__nav
-	li.c-catalog-menu__item
-		a(href="#").c-catalog-menu__link Ванны
-	li.c-catalog-menu__item
-		a(href="#").c-catalog-menu__link Унитазы
-	li.c-catalog-menu__item
-		a(href="#").c-catalog-menu__link Душевые кабины
-	li.c-catalog-menu__item
-		a(href="#").c-catalog-menu__link Душевые углы
-	li.c-catalog-menu__item
-		a(href="#").c-catalog-menu__link Душевые двери
-	li.c-catalog-menu__item
-		a(href="#").c-catalog-menu__link Душевые поддоны
-	li.c-catalog-menu__item.c-catalog-menu__item_dropdown
-		a(href="#submenu1" data-toggle="collapse").c-catalog-menu__link Мебель для ванной
-		ul.collapse.c-catalog-menu__submenu#submenu1
-			li.c-catalog-menu__item
-				a(href="#").c-catalog-menu__link Мебель для ванной
-			li.c-catalog-menu__item
-				a(href="#").c-catalog-menu__link Мебель для ванной
-			li.c-catalog-menu__item
-				a(href="#").c-catalog-menu__link Мебель для ванной
-	li.c-catalog-menu__item.c-catalog-menu__item_dropdown
-		a(href="#submenu2" data-toggle="collapse").c-catalog-menu__link Смесители
-		ul.collapse.c-catalog-menu__submenu#submenu2
-			li.c-catalog-menu__item
-				a(href="#").c-catalog-menu__link Смесители
-			li.c-catalog-menu__item
-				a(href="#").c-catalog-menu__link Смесители
-			li.c-catalog-menu__item
-				a(href="#").c-catalog-menu__link Смесители
-	li.c-catalog-menu__item.c-catalog-menu__item_dropdown
-		a(href="#submenu3" data-toggle="collapse").c-catalog-menu__link Душевая программа
-		ul.collapse.c-catalog-menu__submenu#submenu3
-			li.c-catalog-menu__item
-				a(href="#").c-catalog-menu__link Душевая программа
-			li.c-catalog-menu__item
-				a(href="#").c-catalog-menu__link Душевая программа
-			li.c-catalog-menu__item
-				a(href="#").c-catalog-menu__link Душевая программа
-	li.c-catalog-menu__item
-		a(href="#").c-catalog-menu__link Раковины
-	li.c-catalog-menu__item
-		a(href="#").c-catalog-menu__link Полотенцесушители
-	li.c-catalog-menu__item
-		a(href="#").c-catalog-menu__link Биде
-	li.c-catalog-menu__item.c-catalog-menu__item_dropdown
-		a(href="#submenu4" data-toggle="collapse").c-catalog-menu__link Аксессуары для ванной
-		ul.collapse.c-catalog-menu__submenu#submenu4
-			li.c-catalog-menu__item
-				a(href="#").c-catalog-menu__link Аксессуары для ванной
-			li.c-catalog-menu__item
-				a(href="#").c-catalog-menu__link Аксессуары для ванной
-	li.c-catalog-menu__item
-		a(href="#").c-catalog-menu__link Шторки для ванны
-	li.c-catalog-menu__item
-		a(href="#").c-catalog-menu__link Инсталляции
-	li.c-catalog-menu__item
-		a(href="#").c-catalog-menu__link Полотенцесушители
+ul.c-catalog-menu__nav.js-catalog-menu-nav
+	-
+		var items = ['Ванны', 'Унитазы', 'Душевые кабины', 'Душевые углы', 'Душевые двери', 'Душевые поддоны', 'Мебель для ванной', 'Смесители', 'Душевая программа', 'Раковины', 'Полотенцесушители', 'Биде', 'Аксессуары для ванной', 'Шторки для ванны', 'Инсталляции'];
+	each item in items
+		li.c-catalog-menu__item
+			a(href="#").c-catalog-menu__link=item
+			.c-catalog-menu__detail
+				.c-catalog-menu__detail-top
+					h4
+						a(href="#").c-catalog-menu__detail-title=item
+				.c-catalog-menu__detail-body
+					-
+						var groups = [
+							{
+								title: 'Акриловые',
+								list: ['Длина 150 см', 'Длина 150 см', 'Длина 150 см', 'Длина 150 см', 'Длина 150 см']
+							},
+							{
+								title: 'Чугунные',
+								list: ['Длина 150 см', 'Длина 150 см', 'Длина 150 см', 'Длина 150 см', 'Длина 150 см']
+							},
+							{
+								title: 'Чугунные',
+								list: ['Длина 150 см', 'Длина 150 см', 'Длина 150 см', 'Длина 150 см', 'Длина 150 см']
+							}
+						];
+						var types = ['Стальные', 'Гидромассажные', 'Дизайнерские'];
+					.row
+						each group in groups
+							.col-md-3
+								.c-catalog-menu__detail-group
+									h5
+										a(href="#").c-catalog-menu__detail-group-title=group.title
+									each groupItem in group.list
+										.c-catalog-menu__detail-group-item
+											a(href="#").c-catalog-menu__detail-group-link=groupItem
+						.col-md-3
+							each type in types
+								h5.mb-2
+									a(href="#").h-box-shadow-none=type
+				.c-catalog-menu__detail-footer
+	//- li.c-catalog-menu__item
+	//- 	a(href="#").c-catalog-menu__link Унитазы
+	//- li.c-catalog-menu__item
+	//- 	a(href="#").c-catalog-menu__link Душевые кабины
+	//- li.c-catalog-menu__item
+	//- 	a(href="#").c-catalog-menu__link Душевые углы
+	//- li.c-catalog-menu__item
+	//- 	a(href="#").c-catalog-menu__link Душевые двери
+	//- li.c-catalog-menu__item
+	//- 	a(href="#").c-catalog-menu__link Душевые поддоны
+	//- li.c-catalog-menu__item.c-catalog-menu__item_dropdown
+	//- 	a(href="#submenu1" data-toggle="collapse").c-catalog-menu__link Мебель для ванной
+	//- 	ul.collapse.c-catalog-menu__submenu#submenu1
+	//- 		li.c-catalog-menu__subitem
+	//- 			a(href="#").c-catalog-menu__link Мебель для ванной
+	//- 		li.c-catalog-menu__subitem
+	//- 			a(href="#").c-catalog-menu__link Мебель для ванной
+	//- 		li.c-catalog-menu__subitem
+	//- 			a(href="#").c-catalog-menu__link Мебель для ванной
+	//- li.c-catalog-menu__item.c-catalog-menu__item_dropdown
+	//- 	a(href="#submenu2" data-toggle="collapse").c-catalog-menu__link Смесители
+	//- 	ul.collapse.c-catalog-menu__submenu#submenu2
+	//- 		li.c-catalog-menu__item
+	//- 			a(href="#").c-catalog-menu__link Смесители
+	//- 		li.c-catalog-menu__item
+	//- 			a(href="#").c-catalog-menu__link Смесители
+	//- 		li.c-catalog-menu__item
+	//- 			a(href="#").c-catalog-menu__link Смесители
+	//- li.c-catalog-menu__item.c-catalog-menu__item_dropdown
+	//- 	a(href="#submenu3" data-toggle="collapse").c-catalog-menu__link Душевая программа
+	//- 	ul.collapse.c-catalog-menu__submenu#submenu3
+	//- 		li.c-catalog-menu__item
+	//- 			a(href="#").c-catalog-menu__link Душевая программа
+	//- 		li.c-catalog-menu__item
+	//- 			a(href="#").c-catalog-menu__link Душевая программа
+	//- 		li.c-catalog-menu__item
+	//- 			a(href="#").c-catalog-menu__link Душевая программа
+	//- li.c-catalog-menu__item
+	//- 	a(href="#").c-catalog-menu__link Раковины
+	//- li.c-catalog-menu__item
+	//- 	a(href="#").c-catalog-menu__link Полотенцесушители
+	//- li.c-catalog-menu__item
+	//- 	a(href="#").c-catalog-menu__link Биде
+	//- li.c-catalog-menu__item.c-catalog-menu__item_dropdown
+	//- 	a(href="#submenu4" data-toggle="collapse").c-catalog-menu__link Аксессуары для ванной
+	//- 	ul.collapse.c-catalog-menu__submenu#submenu4
+	//- 		li.c-catalog-menu__item
+	//- 			a(href="#").c-catalog-menu__link Аксессуары для ванной
+	//- 		li.c-catalog-menu__item
+	//- 			a(href="#").c-catalog-menu__link Аксессуары для ванной
+	//- li.c-catalog-menu__item
+	//- 	a(href="#").c-catalog-menu__link Шторки для ванны
+	//- li.c-catalog-menu__item
+	//- 	a(href="#").c-catalog-menu__link Инсталляции
+	//- li.c-catalog-menu__item
+	//- 	a(href="#").c-catalog-menu__link Полотенцесушители

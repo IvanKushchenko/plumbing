@@ -10,7 +10,7 @@ html(lang="ru")
 					//- .c-float-btn.c-float-btn_options.js-float-btn-options
 					//- 	p Выберите опции к этому товару
 					//- 	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490.4 490.4"><g fill="#3e7ce3"><path d="M490.4 245.2C490.4 110 380.4 0 245.2 0S0 110 0 245.2s110 245.2 245.2 245.2 245.2-110 245.2-245.2zm-465.9 0c0-121.7 99-220.7 220.7-220.7s220.7 99 220.7 220.7-99 220.7-220.7 220.7-220.7-99-220.7-220.7z"/><path d="M253.9 360.4l68.9-68.9c4.8-4.8 4.8-12.5 0-17.3s-12.5-4.8-17.3 0l-48 48V138.7c0-6.8-5.5-12.3-12.3-12.3s-12.3 5.5-12.3 12.3v183.4l-48-48c-4.8-4.8-12.5-4.8-17.3 0s-4.8 12.5 0 17.3l68.9 68.9c2.4 2.4 5.5 3.6 8.7 3.6s6.3-1.1 8.7-3.5z"/></g></svg>
-					.c-tip.c-tip_left.c-tip_code Сообщите код менеджеру
+					.c-tip.c-tip_left.c-tip_code.js-tip-code Сообщите код менеджеру
 					//- .c-tip.c-tip_products Вы можете выбрать дополнительные товары
 
 					.c-breadcrumbs
@@ -154,9 +154,9 @@ html(lang="ru")
 										.col-xl-6
 											.c-product__order-info.d-flex.align-items-center.justify-content-center.flex-column.js-product-order-info
 												.d-flex.flex-column.align-items-center.justify-content-center
-													.c-product__code.d-flex.align-items-center.justify-content-center
+													.c-product__code.d-flex.align-items-center.justify-content-center.js-product-code
 														span.c-product-info__code-txt.mr-2 Код товара 32312
-														.c-info
+														.c-info.js-product-code-hint
 													.c-product__price.d-flex.align-items-center
 														.c-product__price-number.c-product__price-number_old#c-product__price-number_old.mr-2 0
 														.c-product__price-number.c-product__price-number_new#c-product__price-number_new 0
@@ -170,7 +170,7 @@ html(lang="ru")
 										form(action="")
 											.c-table__body
 												.c-table__row.c-product-card.c-product-card_radio(data-articul="23370001")
-													input(type="radio" name="product" value="23370001" checked).c-product-card__input
+													input(type="radio" name="product" value="23370001" checked).c-product-card__input.js-product-card-input
 													.c-table__cell
 													.c-table__cell
 														.c-product-card__img-wrap.js-product-lightbox
@@ -200,7 +200,7 @@ html(lang="ru")
 														.c-product-card__price.c-product-card__price_old 2772
 														.c-product-card__price.c-product-card__price_new 2 290
 												.c-table__row.c-product-card.c-product-card_radio(data-articul="23370001")
-													input(type="radio" name="product" value="23370002" ).c-product-card__input
+													input(type="radio" name="product" value="23370002" ).c-product-card__input.js-product-card-input
 													.c-table__cell
 													.c-table__cell
 														.c-product-card__img-wrap.js-product-lightbox
@@ -228,7 +228,7 @@ html(lang="ru")
 														.c-product-card__price.c-product-card__price_old 2772
 														.c-product-card__price.c-product-card__price_new 1 990
 												.c-table__row.c-product-card.c-product-card_radio(data-articul="23370004")
-													input(type="radio" name="product" value="23370005" ).c-product-card__input
+													input(type="radio" name="product" value="23370005" ).c-product-card__input.js-product-card-input
 													.c-table__cell
 													.c-table__cell
 														.c-product-card__img-wrap.js-product-lightbox
@@ -420,7 +420,7 @@ html(lang="ru")
 							input(type="tel" value="+7 ").form-control.c-form__field.js-phone-field.mb-4
 							.d-flex.justify-content-center
 								button.c-btn.c-btn_secondary.c-btn_lg.mt-0 жду звонка
-		.modal.fade.c-modal#order-modal(aria-hidden="true").c-modal_form
+		.modal.fade.c-modal#order-modal(aria-hidden="true").c-modal_form.js-modal-oneclick
 			.modal-dialog.modal-dialog-centered.c-modal__dialog
 				.modal-content.c-modal__content
 					.modal-header.c-modal__header
@@ -428,10 +428,10 @@ html(lang="ru")
 						button(data-dismiss="modal" aria-label="Close").close
 					.modal-body.c-modal__body
 						p.mb-4.text-center Укажите желаемую дату доставки <br> и мы свяжемся с Вами
-						form.c-form.c-form_modal
+						form.c-form.c-form_modal.js-form-oneclick
 							input(type="tel" placeholder="Ваш телефон").form-control.c-form__field.js-phone-field.mb-4
-							input(type="text" placeholder="ФИО").form-control.c-form__field
-							input(type="email" placeholder="E-mail").form-control.c-form__field.mb-4
+							input(type="text" placeholder="ФИО").form-control.c-form__field.js-name-field
+							input(type="email" placeholder="E-mail").form-control.c-form__field.mb-4.js-email-field
 							.d-flex.justify-content-center
 								button.c-btn.c-btn_secondary.c-btn_lg.mt-0 Оформить заказ
 

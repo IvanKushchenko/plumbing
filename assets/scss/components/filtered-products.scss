@@ -1,5 +1,10 @@
 .c-filtered-products{
 	margin-bottom: 60px;
+	
+	@media (max-width: $bp-md) {
+		margin-top: -15px;
+	}
+
 	&__body{
 		margin-bottom: 35px;
 	}
