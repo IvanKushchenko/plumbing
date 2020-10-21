@@ -94,33 +94,86 @@ html(lang="ru")
 										{
 											'name': 'Ванны',
 											'image': 'background-image: url(img/content/adjustable-image5.jpg)',
-											'links': ['Акриловые ванны', 'Классические ванны', 'Прямоугольные ванны', 'Угловые равносторонние ванны', 'Стальные ванны', 'Чугунные ванны','Мраморные ванны', 'Ассиметричные ванны']
+											list: [
+												{
+													title: 'Форма',
+													list: ['Прямоугольная', 'Асимметричная', 'Овальная']
+												},
+												{
+													title: 'Материал',
+													list: ['Акриловые', 'Стальные', 'Чугунные', 'Искуственный камень']
+												},
+												{
+													title: 'Монтаж',
+													list: ['Пристенная', 'Встраиваемая', 'Отдельно стоящая']
+												}
+											]
+											// links: ['Акриловые ванны', 'Классические ванны', 'Прямоугольные ванны', 'Угловые равносторонние ванны', 'Стальные ванны', 'Чугунные ванны','Мраморные ванны', 'Ассиметричные ванны']
 										},
 										{
 											'name': 'Душевые кабины',
 											'image': 'background-image: url(img/content/share-content-image.jpg)',
-											'links': ['Душевые кабины прямоугольные', 'Душевые боксы', 'Душевые кабины без гидромассажа', 'Душевые кабины с гидромассажем', 'Душевые кабины с глубоким поддоном', 'Душевые кабины с низмим поддоном','Душевые кабины средний поддон', 'Душевые кабины полукруглые','Душевые кабины ассиметричные',"Душевые кабины квадратные","Душевые кабины с турецой баней"]
+											list: [
+												{
+													title: 'Форма',
+													list: ['Прямоугольная', 'Асимметричная', 'Овальная']
+												},
+												{
+													title: 'Материал',
+													list: ['Акриловые', 'Стальные', 'Чугунные', 'Искуственный камень']
+												},
+												{
+													title: 'Монтаж',
+													list: ['Пристенная', 'Встраиваемая', 'Отдельно стоящая']
+												}
+											]
 										},
 										{
 											'name': 'Душевые углы',
 											'image': 'background-image: url(img/content/share-content-image-2.jpg)',
-											'links': ['Душевые углы 90х90', 'Душевые углы 120х80', 'Душевые углы 70х75', 'Душевые углы полукруглые']
+											list: [
+												{
+													title: 'Форма',
+													list: ['Прямоугольная', 'Асимметричная', 'Овальная']
+												},
+												{
+													title: 'Материал',
+													list: ['Акриловые', 'Стальные', 'Чугунные', 'Искуственный камень']
+												},
+												{
+													title: 'Монтаж',
+													list: ['Пристенная', 'Встраиваемая', 'Отдельно стоящая']
+												}
+											]
 										},
 										{
 											'name': 'Мебель для ванной',
 											'image': 'background-image: url(img/content/category.jpg)',
-											'links': ['Нижние тумбы', 'Тумбы с раковинами', 'Зеркала', 'Пеналы, шкафы', 'комоды']
+											list: [
+												{
+													title: 'Форма',
+													list: ['Прямоугольная', 'Асимметричная', 'Овальная']
+												},
+												{
+													title: 'Материал',
+													list: ['Акриловые', 'Стальные', 'Чугунные', 'Искуственный камень']
+												},
+												{
+													title: 'Монтаж',
+													list: ['Пристенная', 'Встраиваемая', 'Отдельно стоящая']
+												}
+											]
 										},
-										{
-											'name': 'Шторки для ванны',
-											'image': 'background-image: url(img/content/category.jpg)',
-											'links': ['Шторки для ванны 120х140', 'Шторки для ванны 75', 'Шторки для ванны 80']
-										},
-										{
-											'name': 'Душевые двери',
-											'image': 'background-image: url(img/content/category3.jpg)',
-											'links': ['Душевые двери 125х185', 'Шторки для ванны 128х195', 'Шторки для ванны 119х195']
-										},
+										// {
+										// 	'name': 'Шторки для ванны',
+										// 	'image': 'background-image: url(img/content/category.jpg)',
+										// 	'links': ['Шторки для ванны 120х140', 'Шторки для ванны 75', 'Шторки для ванны 80']
+										// },
+										// {
+										// 	'name': 'Душевые двери',
+										// 	'image': 'background-image: url(img/content/category3.jpg)',
+										// 	'links': ['Душевые двери 125х185', 'Шторки для ванны 128х195', 'Шторки для ванны 119х195']
+										// },
 									]
 								each category in categories 
 									.c-main-categories__item
@@ -128,178 +181,180 @@ html(lang="ru")
 											.c-main-categories__title=category.name
 										.c-main-categories__body
 											.row
-												each link in category.links
-													.col-sm-6.col-md-4
-														.c-main-categories__link
-															a(href="#")=link
-								
-							.c-checkout-products.c-sale-day
-								.c-sale-day__header
-									h4.c-sale-day__title Скидка выходного дня
-									.c-counter
-										.c-counter__txt.h-text-black.ml-0.mr-3 до конца акции
-										.c-counter__timer
-											.c-progress-radial.c-progress-radial_horizontal
-												div
-													.c-progress-radial__left
-														.c-progress-radial__bar(style="transform:rotate(-135deg)")
-													.c-progress-radial__right
-														.c-progress-radial__bar
-													.c-progress-radial__value 16
-												.c-progress-radial__footer часов
-											.c-progress-radial.c-progress-radial_horizontal
-												div
-													.c-progress-radial__left
-														.c-progress-radial__bar(style="transform:rotate(-180deg)")
-													.c-progress-radial__right
-														.c-progress-radial__bar(style="transform:rotate(-150deg)")
-													.c-progress-radial__value 59
-												.c-progress-radial__footer минут
-								.swiper-container.js-sale-day-slider 
-									.swiper-wrapper
-										.swiper-slide.c-checkout-product.c-sale-day__product
-											.c-checkout-product__img
-												img(src=require("../img/content/option6.jpg"), alt="")
-											.c-checkout-product__title
-												.
-													Смеситель для 
-													раковины BelBagno
-											.c-checkout-product__price.c-sale-day__price.c-sale-day__price_old 3 400
-											.c-checkout-product__pricec-sale-day__price.c-sale-day__price_new 3 400
-										.swiper-slide.c-checkout-product.c-sale-day__product
-											.c-checkout-product__img
-												img(src=require("../img/content/option6.jpg"), alt="")
-											.c-checkout-product__title
-												.
-													Смеситель для 
-													раковины 
-											.c-checkout-product__price.c-sale-day__price.c-sale-day__price_old 3 400
-											.c-checkout-product__pricec-sale-day__price.c-sale-day__price_new 3 400
-										.swiper-slide.c-checkout-product.c-sale-day__product
-											.c-checkout-product__img
-												img(src=require("../img/content/option6.jpg"), alt="")
-											.c-checkout-product__title
-												.
-													Смеситель для 
-													раковины 
-											.c-checkout-product__price.c-sale-day__price.c-sale-day__price_old 3 400
-											.c-checkout-product__pricec-sale-day__price.c-sale-day__price_new 3 400
-										.swiper-slide.c-checkout-product.c-sale-day__product
-											.c-checkout-product__img
-												img(src=require("../img/content/option6.jpg"), alt="")
-											.c-checkout-product__title
-												.
-													Смеситель для 
-													раковины 
-											.c-checkout-product__price.c-sale-day__price.c-sale-day__price_old 3 400
-											.c-checkout-product__pricec-sale-day__price.c-sale-day__price_new 3 400
-										.swiper-slide.c-checkout-product.c-sale-day__product
-											.c-checkout-product__img
-												img(src=require("../img/content/option6.jpg"), alt="")
-											.c-checkout-product__title
-												.
-													Смеситель для 
-													раковины 
-											.c-checkout-product__price.c-sale-day__price.c-sale-day__price_old 3 400
-											.c-checkout-product__pricec-sale-day__price.c-sale-day__price_new 3 400
-										.swiper-slide.c-checkout-product.c-sale-day__product
-											.c-checkout-product__img
-												img(src=require("../img/content/option6.jpg"), alt="")
-											.c-checkout-product__title
-												.
-													Смеситель для 
-													раковины 
-											.c-checkout-product__price.c-sale-day__price.c-sale-day__price_old 3 400
-											.c-checkout-product__pricec-sale-day__price.c-sale-day__price_new 3 400
-										.swiper-slide.c-checkout-product.c-sale-day__product
-											.c-checkout-product__img
-												img(src=require("../img/content/option7.jpg"), alt="")
-											.c-checkout-product__title
-												.
-													Смеситель для 
-													раковины BelBagno
-											.c-checkout-product__price.c-sale-day__price.c-sale-day__price_old 3 400
-											.c-checkout-product__pricec-sale-day__price.c-sale-day__price_new 3 400
-								.swiper-pagination.d-md-none
-								.swiper-button-prev
-								.swiper-button-next
-							.c-checkout-products.c-top-product
-								.c-top-product__header
-									h4.c-top-product__title Ванны
-								.swiper-container.js-top-product-slider 
-									.swiper-wrapper
-										.swiper-slide.c-checkout-product.c-top-product__product
-											.c-checkout-product__img
-												img(src=require("../img/content/option6.jpg"), alt="")
-											.c-checkout-product__title
-												.
-													Смеситель для 
-													раковины BelBagno
-											.c-checkout-product__price 3 400
-										.swiper-slide.c-checkout-product.c-top-product__product
-											.c-checkout-product__img
-												img(src=require("../img/content/option6.jpg"), alt="")
-											.c-checkout-product__title
-												.
-													Смеситель для 
-													раковины 
-											.c-checkout-product__price 3 400
-										.swiper-slide.c-checkout-product.c-top-product__product
-											.c-checkout-product__img
-												img(src=require("../img/content/option6.jpg"), alt="")
-											.c-checkout-product__title
-												.
-													Смеситель для 
-													раковины 
-											.c-checkout-product__price 3 400
-										.swiper-slide.c-checkout-product.c-top-product__product
-											.c-checkout-product__img
-												img(src=require("../img/content/option6.jpg"), alt="")
-											.c-checkout-product__title
-												.
-													Смеситель для 
-													раковины 
-											.c-checkout-product__price 3 400
-										.swiper-slide.c-checkout-product.c-top-product__product
-											.c-checkout-product__img
-												img(src=require("../img/content/option6.jpg"), alt="")
-											.c-checkout-product__title
-												.
-													Смеситель для 
-													раковины 
-											.c-checkout-product__price 3 400
-										.swiper-slide.c-checkout-product.c-top-product__product
-											.c-checkout-product__img
-												img(src=require("../img/content/option6.jpg"), alt="")
-											.c-checkout-product__title
-												.
-													Смеситель для 
-													раковины 
-											.c-checkout-product__price 3 400
-										.swiper-slide.c-checkout-product.c-top-product__product
-											.c-checkout-product__img
-												img(src=require("../img/content/option7.jpg"), alt="")
-											.c-checkout-product__title
-												.
-													Смеситель для 
-													раковины BelBagno
-											.c-checkout-product__price 3 400
-								.swiper-pagination.d-md-none
-								.swiper-button-prev
-								.swiper-button-next
-							.c-checkout-products.c-our-brands
-								.c-our-brands__header
-									h4.c-our-brands__title Наши бренды
-								.swiper-container.js-our-brands
-									.swiper-wrapper.align-items-center
-										.swiper-slide.c-checkout-product.c-our-brands__product
-											img(src=require("../img/content/brand.jpg"), alt="")
-										.swiper-slide.c-checkout-product.c-our-brands__product
-											img(src=require("../img/content/brand2.jpg"), alt="")
-										.swiper-slide.c-checkout-product.c-our-brands__product
-											img(src=require("../img/content/brand3.jpg"), alt="")
+												each item in category.list
+													.col-6.col-sm-4
+														p.text-muted.mb-2.text-uppercase.c-main-categories__group-title=item.title
+														each link in item.list
+															.c-main-categories__link
+																a(href="#")=link
+								-;
+							//- .c-checkout-products.c-sale-day
+							//- 	.c-sale-day__header
+							//- 		h4.c-sale-day__title Скидка выходного дня
+							//- 		.c-counter
+							//- 			.c-counter__txt.h-text-black.ml-0.mr-3 до конца акции
+							//- 			.c-counter__timer
+							//- 				.c-progress-radial.c-progress-radial_horizontal
+							//- 					div
+							//- 						.c-progress-radial__left
+							//- 							.c-progress-radial__bar(style="transform:rotate(-135deg)")
+							//- 						.c-progress-radial__right
+							//- 							.c-progress-radial__bar
+							//- 						.c-progress-radial__value 16
+							//- 					.c-progress-radial__footer часов
+							//- 				.c-progress-radial.c-progress-radial_horizontal
+							//- 					div
+							//- 						.c-progress-radial__left
+							//- 							.c-progress-radial__bar(style="transform:rotate(-180deg)")
+							//- 						.c-progress-radial__right
+							//- 							.c-progress-radial__bar(style="transform:rotate(-150deg)")
+							//- 						.c-progress-radial__value 59
+							//- 					.c-progress-radial__footer минут
+							//- 	.swiper-container.js-sale-day-slider 
+							//- 		.swiper-wrapper
+							//- 			.swiper-slide.c-checkout-product.c-sale-day__product
+							//- 				.c-checkout-product__img
+							//- 					img(src=require("../img/content/option6.jpg"), alt="")
+							//- 				.c-checkout-product__title
+							//- 					.
+							//- 						Смеситель для 
+							//- 						раковины BelBagno
+							//- 				.c-checkout-product__price.c-sale-day__price.c-sale-day__price_old 3 400
+							//- 				.c-checkout-product__pricec-sale-day__price.c-sale-day__price_new 3 400
+							//- 			.swiper-slide.c-checkout-product.c-sale-day__product
+							//- 				.c-checkout-product__img
+							//- 					img(src=require("../img/content/option6.jpg"), alt="")
+							//- 				.c-checkout-product__title
+							//- 					.
+							//- 						Смеситель для 
+							//- 						раковины 
+							//- 				.c-checkout-product__price.c-sale-day__price.c-sale-day__price_old 3 400
+							//- 				.c-checkout-product__pricec-sale-day__price.c-sale-day__price_new 3 400
+							//- 			.swiper-slide.c-checkout-product.c-sale-day__product
+							//- 				.c-checkout-product__img
+							//- 					img(src=require("../img/content/option6.jpg"), alt="")
+							//- 				.c-checkout-product__title
+							//- 					.
+							//- 						Смеситель для 
+							//- 						раковины 
+							//- 				.c-checkout-product__price.c-sale-day__price.c-sale-day__price_old 3 400
+							//- 				.c-checkout-product__pricec-sale-day__price.c-sale-day__price_new 3 400
+							//- 			.swiper-slide.c-checkout-product.c-sale-day__product
+							//- 				.c-checkout-product__img
+							//- 					img(src=require("../img/content/option6.jpg"), alt="")
+							//- 				.c-checkout-product__title
+							//- 					.
+							//- 						Смеситель для 
+							//- 						раковины 
+							//- 				.c-checkout-product__price.c-sale-day__price.c-sale-day__price_old 3 400
+							//- 				.c-checkout-product__pricec-sale-day__price.c-sale-day__price_new 3 400
+							//- 			.swiper-slide.c-checkout-product.c-sale-day__product
+							//- 				.c-checkout-product__img
+							//- 					img(src=require("../img/content/option6.jpg"), alt="")
+							//- 				.c-checkout-product__title
+							//- 					.
+							//- 						Смеситель для 
+							//- 						раковины 
+							//- 				.c-checkout-product__price.c-sale-day__price.c-sale-day__price_old 3 400
+							//- 				.c-checkout-product__pricec-sale-day__price.c-sale-day__price_new 3 400
+							//- 			.swiper-slide.c-checkout-product.c-sale-day__product
+							//- 				.c-checkout-product__img
+							//- 					img(src=require("../img/content/option6.jpg"), alt="")
+							//- 				.c-checkout-product__title
+							//- 					.
+							//- 						Смеситель для 
+							//- 						раковины 
+							//- 				.c-checkout-product__price.c-sale-day__price.c-sale-day__price_old 3 400
+							//- 				.c-checkout-product__pricec-sale-day__price.c-sale-day__price_new 3 400
+							//- 			.swiper-slide.c-checkout-product.c-sale-day__product
+							//- 				.c-checkout-product__img
+							//- 					img(src=require("../img/content/option7.jpg"), alt="")
+							//- 				.c-checkout-product__title
+							//- 					.
+							//- 						Смеситель для 
+							//- 						раковины BelBagno
+							//- 				.c-checkout-product__price.c-sale-day__price.c-sale-day__price_old 3 400
+							//- 				.c-checkout-product__pricec-sale-day__price.c-sale-day__price_new 3 400
+							//- 	.swiper-pagination.d-md-none
+							//- 	.swiper-button-prev
+							//- 	.swiper-button-next
+							//- .c-checkout-products.c-top-product
+							//- 	.c-top-product__header
+							//- 		h4.c-top-product__title Ванны
+							//- 	.swiper-container.js-top-product-slider 
+							//- 		.swiper-wrapper
+							//- 			.swiper-slide.c-checkout-product.c-top-product__product
+							//- 				.c-checkout-product__img
+							//- 					img(src=require("../img/content/option6.jpg"), alt="")
+							//- 				.c-checkout-product__title
+							//- 					.
+							//- 						Смеситель для 
+							//- 						раковины BelBagno
+							//- 				.c-checkout-product__price 3 400
+							//- 			.swiper-slide.c-checkout-product.c-top-product__product
+							//- 				.c-checkout-product__img
+							//- 					img(src=require("../img/content/option6.jpg"), alt="")
+							//- 				.c-checkout-product__title
+							//- 					.
+							//- 						Смеситель для 
+							//- 						раковины 
+							//- 				.c-checkout-product__price 3 400
+							//- 			.swiper-slide.c-checkout-product.c-top-product__product
+							//- 				.c-checkout-product__img
+							//- 					img(src=require("../img/content/option6.jpg"), alt="")
+							//- 				.c-checkout-product__title
+							//- 					.
+							//- 						Смеситель для 
+							//- 						раковины 
+							//- 				.c-checkout-product__price 3 400
+							//- 			.swiper-slide.c-checkout-product.c-top-product__product
+							//- 				.c-checkout-product__img
+							//- 					img(src=require("../img/content/option6.jpg"), alt="")
+							//- 				.c-checkout-product__title
+							//- 					.
+							//- 						Смеситель для 
+							//- 						раковины 
+							//- 				.c-checkout-product__price 3 400
+							//- 			.swiper-slide.c-checkout-product.c-top-product__product
+							//- 				.c-checkout-product__img
+							//- 					img(src=require("../img/content/option6.jpg"), alt="")
+							//- 				.c-checkout-product__title
+							//- 					.
+							//- 						Смеситель для 
+							//- 						раковины 
+							//- 				.c-checkout-product__price 3 400
+							//- 			.swiper-slide.c-checkout-product.c-top-product__product
+							//- 				.c-checkout-product__img
+							//- 					img(src=require("../img/content/option6.jpg"), alt="")
+							//- 				.c-checkout-product__title
+							//- 					.
+							//- 						Смеситель для 
+							//- 						раковины 
+							//- 				.c-checkout-product__price 3 400
+							//- 			.swiper-slide.c-checkout-product.c-top-product__product
+							//- 				.c-checkout-product__img
+							//- 					img(src=require("../img/content/option7.jpg"), alt="")
+							//- 				.c-checkout-product__title
+							//- 					.
+							//- 						Смеситель для 
+							//- 						раковины BelBagno
+							//- 				.c-checkout-product__price 3 400
+							//- 	.swiper-pagination.d-md-none
+							//- 	.swiper-button-prev
+							//- 	.swiper-button-next
+							//- .c-checkout-products.c-our-brands
+							//- 	.c-our-brands__header
+							//- 		h4.c-our-brands__title Наши бренды
+							//- 	.swiper-container.js-our-brands
+							//- 		.swiper-wrapper.align-items-center
+							//- 			.swiper-slide.c-checkout-product.c-our-brands__product
+							//- 				img(src=require("../img/content/brand.jpg"), alt="")
+							//- 			.swiper-slide.c-checkout-product.c-our-brands__product
+							//- 				img(src=require("../img/content/brand2.jpg"), alt="")
+							//- 			.swiper-slide.c-checkout-product.c-our-brands__product
+							//- 				img(src=require("../img/content/brand3.jpg"), alt="")
 											
-								.swiper-pagination.d-md-none
-								.swiper-button-prev
-								.swiper-button-next
+							//- 	.swiper-pagination.d-md-none
+							//- 	.swiper-button-prev
+							//- 	.swiper-button-next
 				include templates/footer.pug

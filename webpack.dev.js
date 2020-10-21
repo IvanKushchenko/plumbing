@@ -74,12 +74,12 @@ module.exports = merge(common, {
 		// 	minify: false,
 		// 	hash: true
 		// }),
-		// new HtmlWebpackPlugin({
-		// 	filename: 'main.html',
-		// 	template: './assets/pug/main.pug',
-		// 	minify: false,
-		// 	hash: true
-		// }),
+		new HtmlWebpackPlugin({
+			filename: 'main.html',
+			template: './assets/pug/main.pug',
+			minify: false,
+			hash: true
+		}),
 		// new HtmlWebpackPlugin({
 		// 	filename: 'contacts.html',
 		// 	template: './assets/pug/contacts.pug',
