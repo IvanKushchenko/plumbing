@@ -1,7 +1,5 @@
 import 'bootstrap';
 
-require('./products');
-
 import Basket from '@js/pages/basket';
 import Catalog from '@js/pages/catalog';
 import Common from '@js/pages/common';

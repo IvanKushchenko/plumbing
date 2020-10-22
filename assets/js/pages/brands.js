@@ -38,40 +38,20 @@ const Brands = (function () {
 		})
 	}
 
-	// function initFilter(){
-	// 	if( !filterElements ) return;
-	// 	let filters = filterElements.map( (idx, el) => new Filter(el) );
-
-	// 	filters.each((idx, filter) => {
-	// 		filter.init();
-
-	// 		filter.on('input', (val) => {
-	// 			let link = [...filter.getChecked().map((idx, el) => $(el).val())].reduce( (accum, val) => `${accum}_${val}` );
-	// 			setFilter(link);
-	// 		} ) 
-	// 	})
-	// }
-
     function setFilter(link) {
         if (!link) {
             window.location.href = "/brands/";
             return;
         };
-        link = "/brands/filter/uf_country-is-" + link.substr(0, link.length - 1) + "/apply/";
-        window.location.href = link;
+        window.location.href = `/brands/filter/uf_country-is-${link}/apply/`;
     }
 
 
     function initFilters(){
+    	filters.init();
 		filters.on('change', (val) => {
-			console.log(val);
-		})
-
-		filters.on('input', (val) => {
-			console.log(val);
-
-			// let link = [...filter.getChecked().map((idx, el) => $(el).val())].reduce( (accum, val) => `${accum}_${val}` );
-			// 	setFilter(link);
+			let link = [...filters.getAllCheckedInputs().map((idx, el) => $(el).val())].reduce( (accum, val) => `${accum}_${val}` );
+			setFilter(link);
 		})
 	}
 

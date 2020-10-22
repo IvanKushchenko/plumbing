@@ -23,9 +23,9 @@ const Tip = (function(tipName){
 		tip.css({top, left});
 	}
 
-	function setPlacement(placement){
+	function setPlacement(direction){
 		if(!isString(placement)) return;
-		placement = placement;
+		placement = direction;
 	}
 
 	function setContent(content){

@@ -55,6 +55,11 @@ const Filters = (function(element){
 		return filtersElement.find('input');
 	}
 
+	function getAllCheckedInputs(){
+		if(!filtersElement) return;
+		return filtersElement.find('input:checked');
+	}
+
 	function getSerialized (elements) {
 		if(!(elements instanceof $)) return;
 		return elements.serialize();
@@ -125,6 +130,7 @@ const Filters = (function(element){
 		getSerialized,
 		generatedFilterUrl,
 		getSectionCode,
+		getAllCheckedInputs,
 		getAllCheckboxes,
 		on
 	}

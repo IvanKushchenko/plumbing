@@ -163,6 +163,29 @@ const Sliders = (function(){
         }
     });
 
+    var collectionSlider = new Swiper('.js-collection-slider', {
+        slidesPerView: 4,
+        spaceBetween: 25,
+        slidesPerGroup: 4,
+        breakpoints: {
+            992:{
+                slidesPerView: 3
+            },
+            450:{
+                slidesPerView: 2,
+                slidesPerGroup: 2
+            }
+        },
+        navigation: {
+            nextEl: '.js-collection .swiper-button-next',
+            prevEl: '.js-collection .swiper-button-prev'
+        },
+        pagination: {
+            clickable: true,
+            el: '.js-collection-slider .swiper-pagination'
+        }
+    });
+
 
 	function init(){
 

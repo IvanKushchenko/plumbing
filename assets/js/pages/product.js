@@ -1,8 +1,10 @@
 import lightGallery from 'lightgallery';
 import Panel from '@js/components/panel';
 import ReadMore from '@js/components/readMore';
-import { getElement } from '@js/helpers';
+import { getElement, removeSpaces, getDeclentionWord } from '@js/helpers';
 import Tip from '@js/components/tip';
+import CountUp from 'countup.js';
+import _throttle from 'lodash/throttle';
 const Product = (function(){
 	const columnLeftElement = getElement('#product-left-column'),
 		  columnRightElement = getElement('#product-right-column'),
@@ -11,17 +13,87 @@ const Product = (function(){
 		  productInfoDescriptionElement = getElement('.js-product-info-description'),
 		  productDescriptionElement = getElement('.js-product-description'),
 		  panelOrderCheckoutElement = getElement('.js-panel-order-checkout'),
+		  panelOrderCheckoutCounterElement = getElement('.js-panel-order-checkout-counter'),
 		  productCodeElement = getElement('.js-product-code'),
 		  productCodeHintElement = getElement('.js-product-code-hint'),
 		  addToBasketBtnElement = getElement('.c-btn-buy'),
 		  productsCardsInputsElements = getElement('.js-product-card-input'),
 		  tipCodeElement = getElement('.js-tip-code'),
-		  modalOneclickElement = $('.js-modal-oneclick'),
-		  formOneclickElement = $('.js-form-oneclick'),
+		  modalOneclickElement = getElement('.js-modal-oneclick'),
+		  formOneclickElement = getElement('.js-form-oneclick'),
+		  productPriceNewElement = getElement('.js-product-price-new'),
+		  productPriceOldElement = getElement('.js-product-price-old'),
+		  tableProductElement = getElement('.js-table-products'),
+		  productLightboxElements = getElement('.js-product-lightbox'),
 		  buyInputElement = getElement('#buy_input');
 	let productDescription = new ReadMore( productDescriptionElement,  976);
 	let panelOrderCheckout = new Panel( panelOrderCheckoutElement );
 	let tipCode = tipCodeElement ? new Tip('code') : null;
+
+	let products = [];
+
+	const product = {
+		articul: productOrderInfoElement ? productOrderInfoElement.data('articul') : 0,
+		name: productOrderInfoElement ? productOrderInfoElement.data('name') : 0,
+		img: productOrderInfoElement ? productOrderInfoElement.data('img') : 0,
+		price: productPriceNewElement ? removeSpaces(productPriceNewElement.text()) : 0,
+		priceOld: productPriceOldElement ? removeSpaces(productPriceOldElement.text()) : productPriceNewElement
+	}
+	
+	/**
+	 * Добавляем главный продукт, если нет таблицы с продуктами
+	 */
+	function addInitialProduct(){
+		if(tableProductElement) return;
+
+		products.push(product);
+	}
+
+	function addChosenProducts(){
+		const allChosenProducts = getAllChosenProducts();
+
+		allChosenProducts.each((idx, product) => {
+			product = $(product);
+			let productData = {
+				articul: product.data('articul'),
+				img: product.data('img'),
+	            name: product.data('name'),
+	            price: parseInt( removeSpaces(product.data('price')) ) || 0,
+	            priceOld: parseInt( removeSpaces(product.data('price-old')) ) || parseInt( removeSpaces(product.data('price')) )
+			}
+
+			products.push(productData);
+		})
+	}
+
+	function refreshProducts(){
+		products = [];
+		addInitialProduct();
+		addChosenProducts();
+		refreshAllProductsActiveClass();
+		refreshAllPrices();
+	}
+
+	const CountUpOptions = {
+		init: false,
+		separator: ' ',
+	};
+
+	const installementCost = new CountUp("installement-cost", 0, 0, 0, 0.4, CountUpOptions);
+
+	let productPriceCountUpInstances = {
+		new: [],
+		old: []
+	};
+
+	function createProductPricesCountUp() {
+		$(['product-price', 'panel-order-checkout-price']).each((index, element) => {
+			let countUpPriceNew = new CountUp(`${element}-new`, Number(product.price), 0, 0, .4, CountUpOptions);
+			let countUpPriceOld = new CountUp(`${element}-old`, Number(product.priceOld), 0, 0, .4, CountUpOptions);
+			productPriceCountUpInstances['new'].push( countUpPriceNew );
+			productPriceCountUpInstances['old'].push( countUpPriceOld );
+		});
+	}
 
     function hideLeftColumn(){
     	if($(window).width() >= 1200) return;
@@ -35,7 +107,7 @@ const Product = (function(){
 	    	}
     }
 
-	function setLightGallery(){
+	function initProductPreviewLightgallery(){
 		if( !productPreviewElement ) return;
 
 		productPreviewElement.lightGallery({
@@ -125,7 +197,11 @@ const Product = (function(){
 	}
 
 	function getAllChosenProducts(){
-		return $('input:checked');
+		return $('.js-table-products input:checked, .js-table-options input:checked');
+	}
+
+	function getAllProducts(){
+		return $('.js-table-products input, .js-table-options input');
 	}
 
 
@@ -210,6 +286,16 @@ const Product = (function(){
 	    });
 
 	    return productData;
+    }
+
+    function refreshAllProductsActiveClass(){
+    	const allProducts = getAllProducts();
+    	allProducts.each((idx, product) => {
+    		const isChecked = $(product).is(':checked');
+    		const parent = $(product).parent();
+    		isChecked ? parent.addClass('is-active') : parent.removeClass('is-active')
+    		
+    	})
     }
 
 	function addToBasketHandler(){
@@ -425,9 +511,9 @@ const Product = (function(){
 		$(document).ready(showPanelOrderCheckout);
 		$(window).scroll(showPanelOrderCheckout);
 		$(window).scroll(checkHidePosProductOrderPanel);
-		$(window).resize(showPanelOrderCheckout);
+		$(window).resize( _throttle(showPanelOrderCheckout, 100) );
 		$(window).scroll(setCoordsTipCode);
-		$(window).resize(setCoordsTipCode);
+		$(window).resize( _throttle(setCoordsTipCode, 100) );
 		$(window).on('load', initialShowTipCode);
 
 		if(columnLeftElement) $(window).scroll(hideLeftColumn);
@@ -439,16 +525,47 @@ const Product = (function(){
 
 		if ( productsCardsInputsElements ) productsCardsInputsElements.each((idx, input) => {
 			$(input).on('change', setProductsChosenIds)
+			$(input).on('change', refreshProducts)
 		});
 
-		formOneclickElement.submit(formOneClickSubmitHandler);
+		if(formOneclickElement) formOneclickElement.submit(formOneClickSubmitHandler);
+	}
+
+	function initProductCardLightgallery(){
+		if(!productLightboxElements) return;
+		productLightboxElements.each((index, item) => {
+	    	$(item).lightGallery({
+	    		controls: false,
+	    		download: false,
+	    		counter: false,
+	    		enableDrag: false,
+	    		enableSwipe: false
+	    	});
+	    })
 	}
 
 
+	function refreshAllPrices(){
+
+        const price = products.reduce((acc, item) => acc + item.price, 0),
+        	  priceOld = products.reduce((acc, item) => acc + item.priceOld, 0),
+        	  productsLength = products.length,
+        	  getDeclentionOfProducts = (num) => getDeclentionWord(num, {nom: 'Товар', gen: 'Товара', plu: 'Товаров'})
+        if(panelOrderCheckoutCounterElement) panelOrderCheckoutCounterElement.text(`${productsLength} ${getDeclentionOfProducts(productsLength)}`);
+        
+        $(productPriceCountUpInstances['new']).each((idx, item) => item.update(price) );
+        $(productPriceCountUpInstances['old']).each((idx, item) => item.update(priceOld) );
+        installementCost.update(price / 12);
+	}
+
 	function init(){
+		createProductPricesCountUp();
 		setDOMEvents();
-		setLightGallery();
 		productDescription.init();
+		refreshProducts();
+		refreshAllProductsActiveClass();
+		initProductPreviewLightgallery();
+		initProductCardLightgallery();
 	}
 
 	return {

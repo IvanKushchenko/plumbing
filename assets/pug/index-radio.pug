@@ -152,26 +152,26 @@ html(lang="ru")
 								.col-sm-7.col-xl-8#product-right-column
 									.row.mb-3
 										.col-xl-6
-											.c-product__order-info.d-flex.align-items-center.justify-content-center.flex-column.js-product-order-info
+											.c-product__order-info.d-flex.align-items-center.justify-content-center.flex-column.js-product-order-info(data-articul="12345" data-name="productName" data-img="../img/content/option.jpg")
 												.d-flex.flex-column.align-items-center.justify-content-center
 													.c-product__code.d-flex.align-items-center.justify-content-center.js-product-code
 														span.c-product-info__code-txt.mr-2 Код товара 32312
 														.c-info.js-product-code-hint
 													.c-product__price.d-flex.align-items-center
-														.c-product__price-number.c-product__price-number_old#c-product__price-number_old.mr-2 0
-														.c-product__price-number.c-product__price-number_new#c-product__price-number_new 0
+														.c-product__price-number.c-product__price-number_old.js-product-price-old#product-price-old.mr-2 0
+														.c-product__price-number.c-product__price-number_new.js-product-price-new#product-price-new 0
 										.col-xl-6
 											.c-product__info.d-flex.align-items-center.justify-content-center.mb-0.h-100
 												p.mb-0.text-center Данная позиция является комплектующей. Продаётся исключительно в составе комплектов.
 										
-
-									.c-table.c-table_product.js-table_product
+									.c-table.c-table_product.js-table-options
 										.c-table__header Данная комплектующая содержится в наборах:
 										form(action="")
 											.c-table__body
 												.c-table__row.c-product-card.c-product-card_radio(data-articul="23370001")
-													input(type="radio" name="product" value="23370001" checked).c-product-card__input.js-product-card-input
+													input(type="radio" name="product" value="23370001" checked data-price-old="2500" data-price="1200" data-name="Раковина Cezares Laredo6" data-img="../img/content/option.jpg"  data-articul="23370006").c-product-card__input.js-product-card-input
 													.c-table__cell
+														.c-product-card__radio
 													.c-table__cell
 														.c-product-card__img-wrap.js-product-lightbox
 															.c-product-card__sale 15%
@@ -200,8 +200,9 @@ html(lang="ru")
 														.c-product-card__price.c-product-card__price_old 2772
 														.c-product-card__price.c-product-card__price_new 2 290
 												.c-table__row.c-product-card.c-product-card_radio(data-articul="23370001")
-													input(type="radio" name="product" value="23370002" ).c-product-card__input.js-product-card-input
+													input(type="radio" name="product" value="23370002" data-price-old="2500" data-price="1200" data-name="Раковина Cezares Laredo5" data-img="../img/content/option.jpg"  data-articul="233700015").c-product-card__input.js-product-card-input
 													.c-table__cell
+														.c-product-card__radio
 													.c-table__cell
 														.c-product-card__img-wrap.js-product-lightbox
 															.c-product-card__sale 15%
@@ -228,8 +229,109 @@ html(lang="ru")
 														.c-product-card__price.c-product-card__price_old 2772
 														.c-product-card__price.c-product-card__price_new 1 990
 												.c-table__row.c-product-card.c-product-card_radio(data-articul="23370004")
-													input(type="radio" name="product" value="23370005" ).c-product-card__input.js-product-card-input
+													input(type="radio" name="product" value="23370005" data-price="1200" data-name="Раковина Cezares Laredo4" data-img="../img/content/option.jpg"  data-articul="23370004").c-product-card__input.js-product-card-input
 													.c-table__cell
+														.c-product-card__radio
+													.c-table__cell
+														.c-product-card__img-wrap.js-product-lightbox
+															.c-product-card__sale 15%
+															a(data-src=require("../img/content/option.jpg") href="../img/content/option.jpg").c-product-card__img.js-product-preview-item
+																img(src=require("../img/content/option.jpg"), alt="")
+															span.d-block.c-product-card__img-label В наличии
+													.c-table__cell
+														.d-block
+															a(href="#!").c-product-card__title Душевой угол Cezares MAGIC-R-1-ROYAL PALACE 90x90
+														.d-flex.mt-3
+															.d-block.pr-3.pr-lg-0
+																.c-product-card__img-wrap.js-product-lightbox.d-lg-none.mb-2
+																	.c-product-card__sale 15%
+																	a(data-src=require("../img/content/option.jpg") href="../img/content/option.jpg").c-product-card__img.js-product-preview-item
+																		img(src=require("../img/content/option.jpg"), alt="")
+																	span.d-block.c-product-card__img-label В наличии
+															.d-block
+																//- .c-product-card__subtitle Арт.  23370001
+																.d-flex.flex-column.flex-sm-row.align-items-start.align-items-md-center.d-md-none.mb-2
+																	.c-product-card__price.c-product-card__price_old 2772
+																	.c-product-card__price.c-product-card__price_new 1 990
+																//- .c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
+													.c-table__cell.d-none.d-md-flex.align-items-end.flex-column.justify-content-center
+														.c-product-card__price.c-product-card__price_old 2772
+														.c-product-card__price.c-product-card__price_new 1 990
+										a(href="#").c-load-more.c-load-more_block.c-load-more
+											span.c-load-more__txt показать все
+											.c-load-more__preloader
+												.c-load-more__preloader-square
+												.c-load-more__preloader-square
+												.c-load-more__preloader-square
+												.c-load-more__preloader-square
+									.c-table.c-table_product.js-table-products
+										.c-table__header Данная комплектующая содержится в наборах:
+										form(action="")
+											.c-table__body
+												.c-table__row.c-product-card.c-product-card_checkbox
+													input(type="checkbox" name="product" value="23370001" checked data-price-old="2500" data-price="1200" data-name="Раковина Cezares Laredo" data-img="../img/content/option.jpg"  data-articul="23370001").c-product-card__input.js-product-card-input
+													.c-table__cell
+														.c-product-card__checkbox
+													.c-table__cell
+														.c-product-card__img-wrap.js-product-lightbox
+															.c-product-card__sale 15%
+															a(data-src=require("../img/content/option.jpg") href="../img/content/option.jpg").c-product-card__img.js-product-preview-item
+																img(src=require("../img/content/option.jpg"), alt="")
+															span.d-block.c-product-card__img-label.c-product-card__img-label_under-order Под заказ
+													.c-table__cell
+														.d-block
+															a(href="#!").c-product-card__title Раковина Cezares Laredo
+														.d-flex.mt-3
+															.d-block.pr-3.pr-lg-0
+																.c-product-card__img-wrap.js-product-lightbox.d-lg-none.mb-2
+																	.c-product-card__sale 15%
+																	a(data-src=require("../img/content/option.jpg") href="../img/content/option.jpg").c-product-card__img.js-product-preview-item
+																		img(src=require("../img/content/option.jpg"), alt="")
+																	span.d-block.c-product-card__img-label В наличии
+															.d-block
+																.d-block
+																	//- span.c-product-card__subtitle.d-inline-block.mr-2 Арт.  23370001
+																	.d-flex.flex-column.flex-sm-row.align-items-start.align-items-md-center.d-md-none.mb-2
+																		.c-product-card__price.c-product-card__price_old 2772
+																		.c-product-card__price.c-product-card__price_new 2 290
+																//- .c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
+																
+													.c-table__cell.d-none.d-md-flex.align-items-end.flex-column.justify-content-center
+														.c-product-card__price.c-product-card__price_old 2772
+														.c-product-card__price.c-product-card__price_new 2 290
+												.c-table__row.c-product-card.c-product-card_checkbox
+													input(type="checkbox" name="product" value="23370002" data-price-old="2500" data-price="1200" data-name="Раковина Cezares Laredo2" data-img="../img/content/option.jpg"  data-articul="23370002").c-product-card__input.js-product-card-input
+													.c-table__cell
+														.c-product-card__checkbox
+													.c-table__cell
+														.c-product-card__img-wrap.js-product-lightbox
+															.c-product-card__sale 15%
+															a(data-src=require("../img/content/option.jpg") href="../img/content/option.jpg").c-product-card__img.js-product-preview-item
+																img(src=require("../img/content/option.jpg"), alt="")
+															span.d-block.c-product-card__img-label.c-product-card__img-label_not-available Нет в наличии
+													.c-table__cell
+														.d-block
+															a(href="#!").c-product-card__title Смеситель для кухни Grohe Minta 32168 000
+														.d-flex.mt-3
+															.d-block.pr-3.pr-lg-0
+																.c-product-card__img-wrap.js-product-lightbox.d-lg-none.mb-2
+																	.c-product-card__sale 15%
+																	a(data-src=require("../img/content/option.jpg") href="../img/content/option.jpg").c-product-card__img.js-product-preview-item
+																		img(src=require("../img/content/option.jpg"), alt="")
+																	span.d-block.c-product-card__img-label.c-product-card__img-label_not-available Нет в наличии
+															.d-block
+																//- .c-product-card__subtitle Арт.  23370001
+																.d-flex.flex-column.flex-sm-row.align-items-start.align-items-md-center.d-md-none.mb-2
+																	.c-product-card__price.c-product-card__price_old 2772
+																	.c-product-card__price.c-product-card__price_new 1 990
+																//- .c-product-card__size Размер (ДxШxВ), см: (108-113) x (68-73) x 190
+													.c-table__cell.d-none.d-md-flex.align-items-end.flex-column.justify-content-center
+														.c-product-card__price.c-product-card__price_old 2772
+														.c-product-card__price.c-product-card__price_new 1 990
+												.c-table__row.c-product-card.c-product-card_checkbox
+													input(type="checkbox" name="product" value="23370005" data-price-old="2500" data-price="1200" data-name="Раковина Cezares Laredo3" data-img="../img/content/option.jpg"  data-articul="23370003").c-product-card__input.js-product-card-input
+													.c-table__cell
+														.c-product-card__checkbox
 													.c-table__cell
 														.c-product-card__img-wrap.js-product-lightbox
 															.c-product-card__sale 15%
@@ -264,10 +366,10 @@ html(lang="ru")
 												.c-load-more__preloader-square
 									<div class="c-panel c-panel_bottom c-panel-order-checkout js-panel-order-checkout">
 										<div class="d-flex align-items-center align-items-xl-end justify-content-center justify-content-md-between w-100">
-											<div class="c-product__choosen d-none d-md-flex flex-column flex-lg-row">Выбрано:<span id="c-product__choosen-count" class="c-product__choosen-count">0 товара</span></div>
+											<div class="c-product__choosen d-none d-md-flex flex-column flex-lg-row">Выбрано:<span class="c-product__choosen-count js-panel-order-checkout-counter">0 товара</span></div>
 											<div class="d-flex align-items-center flex-column justify-content-center flex-xl-row flex-grow-1">
-												<div class="c-product__price-number c-product__price-number_old" id="c-product__price-number-fixed_old">12321</div>
-												<div class="c-product__price-number c-product__price-number_new" id="c-product__price-number-fixed_new">1231312</div>
+												<div class="c-product__price-number c-product__price-number_old" id="panel-order-checkout-price-old">12321</div>
+												<div class="c-product__price-number c-product__price-number_new" id="panel-order-checkout-price-new">1231312</div>
 											</div>
 											<div class="c-product__order-actions d-flex flex-column flex-xl-row">
 												<a class="c-btn c-btn_primary c-btn_bordered c-btn-buy mb-md-2 mb-xl-0 c-product__order-action" href="javascript:void(0)" data-toggle="modal" data-target="#send-basket-modal" onclick="ga('send', 'event', 'Товар', 'КнопкаКупить'); yaCounter33367268.reachGoal('knopkakupit');">В КОРЗИНУ</a>
