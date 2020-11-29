@@ -32,12 +32,12 @@ module.exports = merge(common, {
 		// 	minify: false,
 		// 	hash: true
 		// }),
-		new HtmlWebpackPlugin({
-			filename: 'index-radio.html',
-			template: './assets/pug/index-radio.pug',
-			minify: false,
-			hash: true
-		}),
+		// new HtmlWebpackPlugin({
+		// 	filename: 'index-radio.html',
+		// 	template: './assets/pug/index-radio.pug',
+		// 	minify: false,
+		// 	hash: true
+		// }),
 		// new HtmlWebpackPlugin({
 		// 	filename: 'brand.html',
 		// 	template: './assets/pug/brand.pug',
@@ -92,12 +92,18 @@ module.exports = merge(common, {
 		// 	minify: false,
 		// 	hash: true
 		// }),
-		// new HtmlWebpackPlugin({
-		// 	filename: 'catalog.html',
-		// 	template: './assets/pug/catalog.pug',
-		// 	minify: false,
-		// 	hash: true
-		// }),
+		new HtmlWebpackPlugin({
+			filename: 'catalog-sub.html',
+			template: './assets/pug/catalog-sub.pug',
+			minify: false,
+			hash: true
+		}),
+		new HtmlWebpackPlugin({
+			filename: 'catalog-sub-graphic.html',
+			template: './assets/pug/catalog-sub-graphic.pug',
+			minify: false,
+			hash: true
+		}),
 		new FileManagerPlugin({
 			onEnd: {
 				copy: [

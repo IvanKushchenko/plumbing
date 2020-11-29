@@ -2,6 +2,7 @@
 	border: 1px solid $filter-detail-border-color;
 	padding: 20px;
 	border-radius: 3px;
+	$parent: &;
 
 	&__body{
 		margin-bottom: 15px;
@@ -23,6 +24,20 @@
 
 	&__link{
 		font-size: .9rem;
+		
+		#{$parent}_graphic &{
+			text-align: center;
+			box-shadow: none;
+			font-size: .8rem;
+		}
+	}
+
+	&__icon{
+		#{$parent}_graphic &{
+			width: 38px;
+			height: 38px;
+			opacity: .5;
+		}
 	}
 
 	&__item{
