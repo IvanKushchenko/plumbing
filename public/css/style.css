@@ -11202,6 +11202,18 @@ h5 {
   text-transform: lowercase;
 }
 
+.h-text-transform-base {
+  text-transform: initial !important;
+}
+
+.h-ff-primary {
+  font-family: "Open Sans", "Arial", sans-serif;
+}
+
+.h-bg-blue {
+  background: #FAFBFC;
+}
+
 .h-text-sm {
   font-size: 0.8125rem;
 }
@@ -11510,6 +11522,18 @@ h5 {
 
 .c-btn_secondary:hover {
   color: #fff;
+}
+
+.c-btn_outline {
+  background: transparent;
+  border: 1px solid #000;
+  color: #000;
+}
+
+.c-btn_outline:hover {
+  background: #8cafc2;
+  color: #fff;
+  border-color: #8cafc2;
 }
 
 .c-btn_danger {
@@ -12110,6 +12134,15 @@ h5 {
   border-bottom-color: #fff;
   border-left-color: #fff;
   box-shadow: -3px 3px 3px rgba(0, 0, 0, 0.15);
+}
+
+.c-order-number {
+  font-size: 48px;
+  line-height: 56px;
+  color: #474D51;
+  border-radius: 5px;
+  border: 1px solid #474D51;
+  padding: 13px 40px;
 }
 
 .c-catalog-menu {

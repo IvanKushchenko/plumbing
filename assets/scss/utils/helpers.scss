@@ -24,8 +24,21 @@
 		margin-left: 5px;
 		font-family: 'Rubl';
 		text-transform: lowercase;
+
 	}
 
+}
+
+.h-text-transform-base{
+	text-transform: initial !important;
+}
+
+.h-ff-primary{
+	font-family: $ff-primary;
+}
+
+.h-bg-blue{
+	background: $clr-haothuc;
 }
 
 .h-text-sm {

@@ -1,0 +1,42 @@
+html(lang="ru")
+	head
+		include templates/head.pug
+	body
+		.container
+			.o-page.js-page
+				include templates/navbar.pug
+				include templates/header.pug
+				main.o-page__content
+					.o-page__container
+						.o-page__sidebar
+							.c-catalog-menu.d-none.d-md-block
+								include templates/catalog-menu.pug
+						.o-page__body
+							.d-flex.flex-column.align-items-center
+								
+								h5.font-weight-bold.h-ff-primary.text-center.mb-3 Заказ сформирован
+								h6.h-ff-primary.text-center НОМЕР ВАШЕГО ЗАКАЗА
+								.c-order-number.mb-2 №6885
+								h6.h-ff-primary 19.11.2020 19:27:21
+								div.mt-2.w-100.mb-4
+									div.d-flex.align-items.justify-content-center.mb-3
+										img(src='/img/icons/mail.svg').mr-3
+										p.m-0 В ближайшие минуты вам придёт письмо с подтвреждением на почту.
+									.row
+										.offset-md-2.col-md-8
+											.row
+												.col-sm-6.mb-2.mb-sm-0
+													button.c-btn.c-btn_primary.c-btn_lg.h-text-transform-base.font-weight-normal Посмотреть заказ
+												.col-sm-6
+													button.c-btn.c-btn_outline.c-btn_lg.h-text-transform-base.font-weight-normal Вернуться в каталог
+									p.text-center.mt-3 Статус заказа Вы можете уточнить по телефону <b>+7 (499) 110 42 34</b> <br> Либо по почте: <b> sale+742041@sanbest.ru</b>
+								div.h-bg-blue.py-5.w-100
+									h5.text-center.h-ff-primary.font-weight-bold.mb-4 Требуется ли подтверждение заказа звонком от нашего менеджера?
+									.row
+										.offset-md-2.col-md-8
+											.row
+												.col-sm-6.mb-2.mb-sm-0
+													button.c-btn.c-btn_primary.c-btn_lg.h-text-transform-base.font-weight-normal Да
+												.col-sm-6
+													button.c-btn.c-btn_outline.c-btn_lg.h-text-transform-base.font-weight-normal Нет
+				include templates/footer.pug

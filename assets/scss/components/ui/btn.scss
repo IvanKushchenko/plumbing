@@ -39,6 +39,18 @@
 
 	}
 
+	&_outline{
+		background: transparent;
+		border: 1px solid #000;
+		color: #000;
+
+		&:hover{
+			background: #8cafc2;
+			color: #fff;
+			border-color: #8cafc2;
+		}
+	}
+
 	&_danger {
 		background: #dc3545;
 	}

@@ -92,15 +92,21 @@ module.exports = merge(common, {
 		// 	minify: false,
 		// 	hash: true
 		// }),
+		// new HtmlWebpackPlugin({
+		// 	filename: 'catalog-sub.html',
+		// 	template: './assets/pug/catalog-sub.pug',
+		// 	minify: false,
+		// 	hash: true
+		// }),
+		// new HtmlWebpackPlugin({
+		// 	filename: 'catalog-sub-graphic.html',
+		// 	template: './assets/pug/catalog-sub-graphic.pug',
+		// 	minify: false,
+		// 	hash: true
+		// }),
 		new HtmlWebpackPlugin({
-			filename: 'catalog-sub.html',
-			template: './assets/pug/catalog-sub.pug',
-			minify: false,
-			hash: true
-		}),
-		new HtmlWebpackPlugin({
-			filename: 'catalog-sub-graphic.html',
-			template: './assets/pug/catalog-sub-graphic.pug',
+			filename: 'confirm-order.html',
+			template: './assets/pug/confirm-order.pug',
 			minify: false,
 			hash: true
 		}),
