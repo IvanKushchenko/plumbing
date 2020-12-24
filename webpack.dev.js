@@ -14,6 +14,13 @@ module.exports = merge(common, {
 		port: 4000
 	},
 	plugins: [
+		new HtmlWebpackPlugin({
+			filename: 'email.html',
+			template: './assets/pug/email.pug',
+			inject: false,
+			minify: false,
+			hash: true
+		}),
 		// new BundleAnalyzerPlugin(),
 		// new HtmlWebpackPlugin({
 		// 	template: './assets/pug/index.pug',
